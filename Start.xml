@@ -3,13 +3,39 @@
 Start Profile
 At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 -->
+<!--
+Blank Profile
+-->
+<!DOCTYPE Profile [
+<!-- Profile Settings -->
+<!ENTITY crp "1"> 		
+<!ENTITY bsm "1"> 		
+<!ENTITY arm "1"> 
+<!ENTITY gsm "1"> 
+<!ENTITY ltw "1"> 		
+<!ENTITY wvr "1"> 		
+<!ENTITY alc "1"> 
+<!ENTITY cul "1"> 
+<!ENTITY min "1"> 
+<!ENTITY btn "1"> 
+<!ENTITY meld "1"> 	 <!-- Change meld option to 0 when you have crafted and melded the items
+<!--		Items required for meld  [Level 20 Quest // Level 50 Quest]
+			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
+			BSM - [Iron Cross-Pein Hammer (Materia Enhanced) // HQ Cobalt Winglet (Melded with: Savage Might Materia III)]
+			ARM - [Iron Hoplon (Materia-Enhanced) // HQ Cobalt Haubergeon (Melded with: Heaven’s Eye III Materia)]
+			GSM - [Staghorn Staff (Materia Enhanced) // HQ Black Pearl Ring (Melded with: Piety III Materia)]
+			LTW - [Goatskin Leggings (Materia-Enhanced) // Raptorskin Jerkin (Melded with: Gatherers Grasp III Materia)]
+			WVR - [Cotton Acton (Materia-enhanced) // None]
+			ALC - [Engraved Hard Leather Grimoire (Materia Enhanced) // HQ Budding Rosewood Wand (Melded with: Quicktongue III Materia)]
+			CUL - [None]
+-->
+]>
 <Profile>
 	<Name>Start Profile</Name>
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
 	<Order>	
 	
-	<!-- Check to see if we have unlock all Crafting Profiles -->
-	
+	<!-- Check to see if we have unlock all Crafting Profiles -->	
 			<If Condition="not (IsQuestCompleted(65807) and IsQuestCompleted(65809) 
 							and IsQuestCompleted(65827) and IsQuestCompleted(65674) 
 							and IsQuestCompleted(65641) and IsQuestCompleted(65539) 
@@ -17,174 +43,206 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 							and IsQuestCompleted(66111) and IsQuestCompleted(66133))">
 				<LogMessage Message="Going to learn Classes!" />
 				<RunCode Name="classes"/>
-				<LoadProfile Path="UnlockDoHDoLClasses.xml"/>	
-			</If>
-			
-			
+				<LoadProfile Path="Quests/UnlockDoHDoLClasses.xml"/>	
+			</If>		
 			
 		
-	<!-- Check to see if we have Gathering at level 21 -->			
-						
+		<!-- Check to see if we have Gathering at level 21 -->	
+		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66139) or Core.Me.Levels[ClassJobType.Miner] &lt; 30">
 				<LoadProfile Path="Gathering/1-21 Miner.xml"/>
 			</If>
+		</If>
+		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(65542) or Core.Me.Levels[ClassJobType.Botanist] &lt; 20">
 				<LoadProfile Path="Gathering/1-21 Botanist.xml"/>
 			</If>
+		</If>	
+	
+	
+		<!-- Check to see if we have Crafting at level 21 -->	
+			<If Condition="&crp; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">	
+					<LoadProfile Path="Crafting/1-21 Culinarian.xml"/>
+				</If>
+			</If>
 			
-	
-	
-	
-	<!-- Check to see if we have Crafting at level 21 -->	
-			
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Carpenter.xml"/>
-			</If>			
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Blacksmith.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Armorer.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Goldsmith.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Leatherworker.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Weaver.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Alchemist.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">	
-				<LoadProfile Path="Crafting/1-21 Culinarian.xml"/>
-			</If>		
-			
-					
-	
-		
+							
 		<!-- Craft Gathering and Crafting Gear 21 -->
 		
 		
 		
 		
-		<!-- Unlock Ishgard -->
-		
+		<!-- Unlock Ishgard -->		
 			<!-- <If Condition="not IsQuestCompleted(67783)"> --> <!-- Check to See if Litany of Peace is completed. -->
 				<!-- <RunCode Name="Profile2"/>	
 			</If>	
 			<If Condition="IsQuestCompleted(67783) and not IsQuestCompleted(69208)">
-				<LoadProfile Path="Unlock Ishgard Firmament.xml"/>
-			</If> -->
-				
+				<LoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
+			</If> -->			
 		
-		
-		
+	<If Condition="IsQuestCompleted(69208)">	
 		<!-- 21-51 Ishgard Crafting -->
+			<If Condition="&crp; == 1">
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 51">	
+					<LoadProfile Path="Crafting/21-51 Culinarian.xml"/>
+				</If>
+			</If>
+		</If>		
 		
-		<If Condition="IsQuestCompleted(69208)">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Carpenter.xml"/>
-			</If>			
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Blacksmith.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Armorer.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Goldsmith.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Leatherworker.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Weaver.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Alchemist.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 51">	
-				<LoadProfile Path="Crafting/21-51 Culinarian.xml"/>
-			</If>
-		</If>
-		
-		
-		
-		
+	
 		<!-- Gatherer's to 40 -->
-		
-		<If Condition="not IsQuestCompleted(66179) or Core.Me.Levels[ClassJobType.Miner] &lt; 40">
+		<If Condition="&min; == 1">
+			<If Condition="not IsQuestCompleted(66179) or Core.Me.Levels[ClassJobType.Miner] &lt; 40">
 				<LoadProfile Path="Gathering/21-40 Miner.xml"/>
+			</If>
 		</If>
-		<If Condition="not IsQuestCompleted(65546) or Core.Me.Levels[ClassJobType.Botanist] &lt; 40">
-			<LoadProfile Path="Gathering/21-40 Botanist.xml"/>
+		<If Condition="&btn; == 1">
+			<If Condition="not IsQuestCompleted(65546) or Core.Me.Levels[ClassJobType.Botanist] &lt; 40">
+				<LoadProfile Path="Gathering/21-40 Botanist.xml"/>
+			</If>
 		</If>
 			
 		
-		
-		
+	<If Condition="IsQuestCompleted(69208)">	
 		<!-- Craft Level 40 Gathering Gear -->
 		
 		
 		
 		<!-- Gatherer's to 51 -->
-		
-		<If Condition="not IsQuestCompleted(66182) or Core.Me.Levels[ClassJobType.Miner] &lt; 51">
-			<LoadProfile Path="Gathering/40-51 Miner.xml"/>
+		<If Condition="&min; == 1">
+			<If Condition="not IsQuestCompleted(66182) or Core.Me.Levels[ClassJobType.Miner] &lt; 51">
+				<LoadProfile Path="Gathering/40-51 Miner.xml"/>
+			</If>
 		</If>
-		<If Condition="not IsQuestCompleted(65549) or Core.Me.Levels[ClassJobType.Botanist] &lt; 51">
-			<LoadProfile Path="Gathering/40-51 Botanist.xml"/>
+		<If Condition="&btn; == 1">
+			<If Condition="not IsQuestCompleted(65549) or Core.Me.Levels[ClassJobType.Botanist] &lt; 51">
+				<LoadProfile Path="Gathering/40-51 Botanist.xml"/>
+			</If>
 		</If>
-			
 				
-		
-		
+				
 		<!-- Craft Gathering and Crafting Gear 51 -->
 		
 		
 		
 		<!-- 51-63 Ishgard Crafting -->
+			<If Condition="&crp; == 1">			
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">	
+					<LoadProfile Path="Crafting/51-63 Culinarian.xml"/>
+				</If>
+			</If>				
 		
-		<If Condition="IsQuestCompleted(69208)">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Carpenter.xml"/>
-			</If>			
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Blacksmith.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Armorer.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Goldsmith.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Leatherworker.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Weaver.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Alchemist.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">	
-				<LoadProfile Path="Crafting/51-63 Culinarian.xml"/>
-			</If>
-		</If>
 		
-		
-		
-		
-		<!-- Heavensward Aether Currents -->
-		
+		<!-- Heavensward Aether Currents -->		
 		<!--<If Condition=""> Systematic Exploration??? 67200 
 			<LoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
-		</If>-->
-		
-		
+		</If>-->	
 		
 		
 		<!-- Craft 53 BTN/MIN MH & OH -->
@@ -192,63 +250,170 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		
 		<!-- Gatherer's to 63 -->
-		
-		<If Condition="not IsQuestCompleted(68090) or Core.Me.Levels[ClassJobType.Miner] &lt; 63">
-			<LoadProfile Path="Gathering/51-63 Miner.xml"/>
+		<If Condition="&min; == 1">
+			<If Condition="not IsQuestCompleted(68090) or Core.Me.Levels[ClassJobType.Miner] &lt; 63">
+				<LoadProfile Path="Gathering/51-63 Miner.xml"/>
+			</If>
 		</If>
-		<If Condition="not IsQuestCompleted(68156) or Core.Me.Levels[ClassJobType.Botanist] &lt; 63">
-			<LoadProfile Path="Gathering/51-63 Botanist.xml"/>
-		</If>
-		
-		
+		<If Condition="&btn; == 1">
+			<If Condition="not IsQuestCompleted(68156) or Core.Me.Levels[ClassJobType.Botanist] &lt; 63">
+				<LoadProfile Path="Gathering/51-63 Botanist.xml"/>
+			</If>
+		</If>		
 		
 		
 		<!-- Craft Gathering and Crafting Gear 63 -->
 		
 		
 		
-		<!-- Do DoH Quests -->	
-		
-		
-		<!-- 63-70 Ishgard Crafting -->
-		
-		<If Condition="IsQuestCompleted(69208)">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Carpenter.xml"/>
+		<!-- Do DoH Quests -->
+		<!-- Craft Melded Class Quest Items First -->
+		<If Condition="&meld; == 1">
+			<If Condition="&crp; == 1">
+				<If Condition="not HasItem(1827) and not IsQuestCompleted(65678) and Core.Me.Levels[ClassJobType.Carpenter] &gt; 49">
+					<Lisbeth Json="[{'Item': 1827,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 1942,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="not HasHqItem(1942) and not IsQuestCompleted(66075) and Core.Me.Levels[ClassJobType.Carpenter] &gt; 49">
+					<Lisbeth Json="[{'Item': 1942,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">
+				<If Condition="not HasItem(2344) and not IsQuestCompleted(65832) and Core.Me.Levels[ClassJobType.Blacksmith] &gt; 49">
+					<Lisbeth Json="[{'Item': 2344,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 1663,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="not HasHqItem(1663) and not IsQuestCompleted(65838) and Core.Me.Levels[ClassJobType.Blacksmith] &gt; 49">
+					<Lisbeth Json="[{'Item': 1663,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">
+				<If Condition="not HasItem(2236) and not IsQuestCompleted(65814) and Core.Me.Levels[ClassJobType.Armorer] &gt; 49">
+					<Lisbeth Json="[{'Item': 2236,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 3203,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="not HasHqItem(3203) and not IsQuestCompleted(65820) and Core.Me.Levels[ClassJobType.Armorer] &gt; 49">
+					<Lisbeth Json="[{'Item': 3203,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">
+				<If Condition="not HasItem(2111) and not IsQuestCompleted(66151) and Core.Me.Levels[ClassJobType.Goldsmith] &gt; 49">
+					<Lisbeth Json="[{'Item': 2111,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 2876,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="not HasHqItem(4514) and not IsQuestCompleted(66194) and Core.Me.Levels[ClassJobType.Goldsmith] &gt; 49">
+					<Lisbeth Json="[{'Item': 2876,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">
+				<If Condition="not HasItem(3784) and not IsQuestCompleted(65673) and Core.Me.Levels[ClassJobType.Leatherworker] &gt; 49">
+					<Lisbeth Json="[{'Item': 3784,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 3206,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="not HasHqItem(3206) and not IsQuestCompleted(65602) and Core.Me.Levels[ClassJobType.Leatherworker] &gt; 49">
+					<Lisbeth Json="[{'Item': 3206,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">
+				<If Condition="not HasItem(3039) and not IsQuestCompleted(66127) and Core.Me.Levels[ClassJobType.Weaver] &gt; 49">
+					<Lisbeth Json="[{'Item': 3039,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">
+				<If Condition="not HasItem(2149) and not IsQuestCompleted(66118) and Core.Me.Levels[ClassJobType.Alchemist] &gt; 49">
+					<Lisbeth Json="[{'Item': 2149,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 1987,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="not HasHqItem(1987) and not IsQuestCompleted(66186) and Core.Me.Levels[ClassJobType.Alchemist] &gt; 49">
+					<Lisbeth Json="[{'Item': 1987,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+			</If>		
+			<RunCode Name="meld"/>
+		</If>		
+		<!-- Start Class Quest Profiles -->	
+		<If Condition="&crp; == 1">		
+				<If Condition="not IsQuestCompleted(67981)">	
+					<LoadProfile Path="Quests/Carpenter Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">				
+				<If Condition="not IsQuestCompleted(68155)">	
+					<LoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="not IsQuestCompleted(68134)">	
+					<LoadProfile Path="Quests/Armorer Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="not IsQuestCompleted(68139)">	
+					<LoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="not IsQuestCompleted(68151)">	
+					<LoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="not IsQuestCompleted(67971)">	
+					<LoadProfile Path="Quests/Weaver Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="not IsQuestCompleted(67976)">	
+				<LoadProfile Path="Quests/Alchemist Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="not IsQuestCompleted(68144)">	
+					<LoadProfile Path="Quests/Culinarian Class Quests.xml"/>
+				</If>
 			</If>			
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Blacksmith.xml"/>
+		
+		
+		<!-- 63-70 Ishgard Crafting -->		
+			<If Condition="&crp; == 1">		
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
+					<LoadProfile Path="Crafting/63-70 Carpenter.xml"/>
+				</If>
 			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Armorer.xml"/>
+			<If Condition="&bsm; == 1">				
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">	
+					<LoadProfile Path="Crafting/63-70 Blacksmith.xml"/>
+				</If>
 			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Goldsmith.xml"/>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 70">	
+					<LoadProfile Path="Crafting/63-70 Armorer.xml"/>
+				</If>
 			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Leatherworker.xml"/>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 70">	
+					<LoadProfile Path="Crafting/63-70 Goldsmith.xml"/>
+				</If>
 			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Weaver.xml"/>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 70">	
+					<LoadProfile Path="Crafting/63-70 Leatherworker.xml"/>
+				</If>
 			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 70">	
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 70">	
+					<LoadProfile Path="Crafting/63-70 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 70">	
 				<LoadProfile Path="Crafting/63-70 Alchemist.xml"/>
+				</If>
 			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Culinarian.xml"/>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">	
+					<LoadProfile Path="Crafting/63-70 Culinarian.xml"/>
+				</If>
 			</If>
-		</If>
-		
-		
-		
-		
-		<!-- Stormblood Aether Currents -->
-		
+				
+				
+		<!-- Stormblood Aether Currents -->		
 		<!--<If Condition="">  Stormblood(Quest)????? 68089
 			<LoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
-		</If>-->
-		
-		
+		</If>-->		
 		
 		
 		<!-- Farm Gatherer's Yellow Scrip Level 70 Set --> 
@@ -259,20 +424,23 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		
 		
-		<!-- Gatherer's to 70 -->		
-		
-		<If Condition="not IsQuestCompleted(68094) or Core.Me.Levels[ClassJobType.Miner] &lt; 70">
-			<LoadProfile Path="Gathering/51-63 Miner.xml"/>
+		<!-- Gatherer's to 70 -->
+		<If Condition="&min; == 1">		
+			<If Condition="not IsQuestCompleted(68094) or Core.Me.Levels[ClassJobType.Miner] &lt; 70">
+				<LoadProfile Path="Gathering/51-63 Miner.xml"/>
+			</If>
 		</If>
-		<If Condition="not IsQuestCompleted(68160) or Core.Me.Levels[ClassJobType.Botanist] &lt; 70">
-			<LoadProfile Path="Gathering/51-63 Botanist.xml"/>
+		<If Condition="&btn; == 1">
+			<If Condition="not IsQuestCompleted(68160) or Core.Me.Levels[ClassJobType.Botanist] &lt; 70">
+				<LoadProfile Path="Gathering/51-63 Botanist.xml"/>
+			</If>
 		</If>
 		
 		
 		<!-- 70-80 Ishgard Crafting -->
 		
 		
-		
+	</If>
 		<!-- Gatherer's to 80 -->	
 	
 	
@@ -372,6 +540,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<![CDATA[ 
 			Core.OverlayManager.AddToast(() => "You have not completed the quest Litany of Peace HW Patch 3.3.\n Please run through Heavensward MSQ to complete the quest!", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="meld">
+		<![CDATA[
+			Core.OverlayManager.AddToast(() => "Please set the meld setting atop of Start profile to 0\n and meld any items you crafted and restart the profile.\n Info on required materia atop of Start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(40000);
 		]]>
 		</CodeChunk>
 	</CodeChunks>
