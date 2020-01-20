@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Unlock The Ishgard Firmament by Angels & Kayla
+
+Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to crafting log.
+-->
+<Profile>
+	<Name>Unlock The Ishgard Firmament</Name>
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<Order>	
+
+		<RunCode Name="SwitchCombatJob"/>
+		
+	<If Condition="not IsQuestCompleted(67783)"> <!-- Check to See if Litany of Peace is completed. -->
+		<RunCode Name="Profile2"/>	
+	</If>	
+		<If Condition="IsQuestCompleted(67783) and not HasQuest(69208) and not IsQuestCompleted(69208)"> <!-- Pickup Firmament Quest -->
+			<GetTo ZoneId="418" XYZ="-73.0267, 9.244665, 17.78088"/>
+			<RunCode Name="SwitchCombatJob"/>
+				<If Condition="IsQuestAcceptQualified(69208)">
+					<PickupQuest NpcId="2010850" QuestId="69208" XYZ="-73.0267, 9.244665, 17.78088"/>
+				</If>
+		</If>
+		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 1"> <!-- Talk to Thomelin -->
+			<GetTo ZoneId="418" XYZ="151.4828, -20, 63.83766"/>
+				<TalkTo NpcId="1031682" XYZ="151.4828, -20, 63.83766" QuestId="69208" StepId="1"/>
+		</If>		
+		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 2"> <!-- Wait for passerby @ Jewel Crozier -->
+			<GetTo ZoneId="419" XYZ="-141.4035, -12.63491, -32.7417"/>
+				<UseTransport NpcId="2010920" XYZ="-141.4035, -12.63491, -32.7417" QuestId="69208" StepId="2" />
+		</If>		
+		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 3"> <!-- Talk to Francel -->
+			<GetTo ZoneId="419" XYZ="-140.007, -12.63491, -33.14103"/>
+				<TalkTo NpcId="1031989" XYZ="-140.007, -12.63491, -33.14103" QuestId="69208" StepId="3"/>
+		</If>		
+		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 4"> <!-- LLHandOver mulled wine to Thomelin -->
+			<GetTo ZoneId="418" XYZ="151.4828, -20, 63.83766"/>
+				<LLLLHandOver ItemId="2002954" QuestId="69208" StepId="4" NpcId="1031682" XYZ="151.4828, -20, 63.83766"/>
+				<WaitTimer WaitTime="10" />
+		</If>		
+		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 255"> <!-- Hand in Quest to Francel -->
+			<If Condition="not IsOnMap(886)">
+					<GetTo ZoneId="418" XYZ="-56.22199, 8.113304, 43.31803"/>
+					<RunCode Name="MoveToFirmament"/>	
+			</If>
+				<MoveTo Name="Francel" XYZ="-7.472548, -16, 162.5581" UseMesh="False" /> 
+				<LLTurnIn QuestId="69208" NpcId="1031684" XYZ="-7.472548, -16, 162.5581" UseMesh="False"/>
+				<WaitTimer WaitTime="3" />
+				<MoveTo Name="Augebert" XYZ="8.266967, -16, 147.535" UseMesh="False" /> 	
+				<TalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
+				<WaitTimer WaitTime="3" />
+				<MoveTo Name="Potkin" XYZ="50.83703, -16, 168.3313" UseMesh="False" /> 	
+				<TalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
+				<WaitTimer WaitTime="3" />
+				<MoveTo Name="Enie" XYZ="38.6591, -16, 139.6498" UseMesh="False" /> 	
+				<TalkTo NpcId="1031680" XYZ="38.6591, -16, 139.6498" InteractDistance="5" UseMesh="False"/>
+				<WaitTimer WaitTime="3" />
+				<MoveTo Name="Augebert" XYZ="8.266967, -16, 147.535" UseMesh="False" /> 	
+				<TalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
+				<WaitTimer WaitTime="3" />
+				<MoveTo Name="Francel" XYZ="-7.472548, -16, 162.5581" UseMesh="False" /> 	
+				<TalkTo NpcId="1031684" XYZ="-7.472548, -16, 162.5581" InteractDistance="5" UseMesh="False"/>
+				<WaitTimer WaitTime="3" />
+				<RunCode Name="SwitchDohJob"/>
+				<MoveTo Name="Potkin" XYZ="50.83703, -16, 168.3313" UseMesh="False" /> 	
+				<TalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
+		</If>
+		
+		<LoadProfile Path="../Start.xml"/>
+		
+	</Order>
+	<CodeChunks>
+		<CodeChunk Name="Profile">
+			<![CDATA[ 
+				Core.OverlayManager.AddToast(() => "Make sure your doing quest as a Combat Class!", TimeSpan.FromMilliseconds(10000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+				await Coroutine.Sleep(6000);
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="Profile2">
+			<![CDATA[ 
+				Core.OverlayManager.AddToast(() => "You have not completed the quest Litany of Peace HW Patch 3.3.\n Please run through Heavensward MSQ to complete the quest!", TimeSpan.FromMilliseconds(10000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+				await Coroutine.Sleep(6000);
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="MoveToFirmament">
+			<![CDATA[ 
+                var unit = GameObjectManager.GetObjectByNPCId(70);
+                unit.Target();
+                unit.Interact();				
+                await Coroutine.Wait(5000, () => SelectString.IsOpen);
+				
+                if (SelectString.IsOpen)
+                    SelectString.ClickSlot(1);
+
+                await Coroutine.Sleep(5000);
+
+                if (CommonBehaviors.IsLoading)
+                {
+                    await Coroutine.Wait(-1, () => !CommonBehaviors.IsLoading);
+                }
+				
+                await Coroutine.Sleep(3000);
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchDohJob">
+			<![CDATA[ 
+				var DoH = Enumerable.Range(8, 8);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 20);
+
+				if (gearSets.Any())
+				{
+					gearSets.First().Activate();
+					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+	</CodeChunks>
+</Profile>

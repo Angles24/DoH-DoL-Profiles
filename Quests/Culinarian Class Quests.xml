@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<!DOCTYPE Profile [
+<!-- Profile Settings -->
+<!ENTITY meld "1"> 
+ 	 
+<!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
+			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
+			BSM - [Iron Cross-Pein Hammer (Materia Enhanced) // HQ Cobalt Winglet (Melded with: Savage Might Materia III)]
+			ARM - [Iron Hoplon (Materia-Enhanced) // HQ Cobalt Haubergeon (Melded with: Heaven’s Eye III Materia)]
+			GSM - [Staghorn Staff (Materia Enhanced) // HQ Black Pearl Ring (Melded with: Piety III Materia)]
+			LTW - [Goatskin Leggings (Materia-Enhanced) // Raptorskin Jerkin (Melded with: Gatherers Grasp III Materia)]
+			WVR - [Cotton Acton (Materia-enhanced) // None]
+			ALC - [Engraved Hard Leather Grimoire (Materia Enhanced) // HQ Budding Rosewood Wand (Melded with: Quicktongue III Materia)]
+			CUL - [None]
+-->
+]>
+<Profile>
+	<Name>Carpenter Class Quests</Name>
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
+	<Order>	
+	
+	<If Condition="not IsQuestCompleted(68144)">
+	<ChangeClass Job="Culinarian" />
+	<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+	</If>
+    <If Condition="ClassName == ClassJobType.Culinarian">      
+      <!-- Releasing a Burden (Level 20) -->
+      <If Condition="IsQuestCompleted(65794) and not HasQuest(65795) and not IsQuestCompleted(65795) and Core.Player.ClassLevel &gt; 19">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65795)">
+          <PickupQuest QuestId="65795" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65795) and not IsQuestCompleted(65795) and GetQuestStep(65795) == 255">
+        <If Condition="not HasItem(4730)">
+          <Lisbeth Json="[{'Item': 4730,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
+        <LLTurnIn QuestId="65795" ItemId="4730" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Winning Friends with Aldgoat (Level 25) -->
+      <If Condition="IsQuestCompleted(65795) and not HasQuest(65796) and not IsQuestCompleted(65796) and Core.Player.ClassLevel &gt; 24">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65796)">
+          <PickupQuest QuestId="65796" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65796) and not IsQuestCompleted(65796) and GetQuestStep(65796) == 255">
+        <If Condition="not HasItem(4644)">
+          <Lisbeth Json="[{'Item': 4644,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
+        <LLTurnIn QuestId="65796" ItemId="4644" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- The Chefsbane Cometh (Level 30) -->
+      <If Condition="IsQuestCompleted(65796) and not HasQuest(65802) and not IsQuestCompleted(65802) and Core.Player.ClassLevel &gt; 29">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65802)">
+          <PickupQuest QuestId="65802" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65802) and not IsQuestCompleted(65802) and GetQuestStep(65802) == 1">
+        <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
+        <TalkTo NpcId="1000956" XYZ="-52.65894, 42.69984, -160.235" QuestId="65802" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(65802) and not IsQuestCompleted(65802) and GetQuestStep(65802) == 2">
+        <GetTo ZoneId="128" XYZ="-91.23376, 40.99999, -154.7723"/>
+        <TalkTo NpcId="1000973" XYZ="-91.23376, 40.99999, -154.7723" QuestId="65802" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(65802) and not IsQuestCompleted(65802) and GetQuestStep(65802) == 3">
+        <If Condition="not HasHqItem(4645)">
+          <Lisbeth Json="[{'Item': 4645,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-91.23376, 40.99999, -154.7723"/>
+        <LLHandOver ItemId="4645" NpcId="1000973" RequiresHq="True" XYZ="-91.23376, 40.99999, -154.7723" QuestId="65802" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(65802) and not IsQuestCompleted(65802) and GetQuestStep(65802) == 255">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <LLTurnIn QuestId="65802" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Of Cooks and Books (Level 35) -->
+      <If Condition="IsQuestCompleted(65802) and not HasQuest(65803) and not IsQuestCompleted(65803) and Core.Player.ClassLevel &gt; 34">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65803)">
+          <PickupQuest QuestId="65803" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65803) and not IsQuestCompleted(65803) and GetQuestStep(65803) == 1">
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <TalkTo NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" QuestId="65803" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(65803) and not IsQuestCompleted(65803) and GetQuestStep(65803) == 255">
+        <If Condition="not HasHqItem(4677)">
+          <Lisbeth Json="[{'Item': 4677,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <LLTurnIn QuestId="65803" ItemId="4677" RequiresHq="True" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Diplomacy of the Skillet (Level 40) -->
+      <If Condition="IsQuestCompleted(65803) and not HasQuest(65804) and not IsQuestCompleted(65804) and Core.Player.ClassLevel &gt; 49">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65804)">
+          <PickupQuest QuestId="65804" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65804) and not IsQuestCompleted(65804) and GetQuestStep(65804) == 1">
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <TalkTo NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" QuestId="65804" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(65804) and not IsQuestCompleted(65804) and GetQuestStep(65804) == 255">
+        <If Condition="not HasHqItem(4712)">
+          <Lisbeth Json="[{'Item': 4712,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(4733)">
+          <Lisbeth Json="[{'Item': 4733,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(4749)">
+          <Lisbeth Json="[{'Item': 4749,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <LLTurnIn QuestId="65804" ItemId="4712,4733,4749" RequiresHq="true,true,true" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- A Taste of Home (Level 45) -->
+      <If Condition="IsQuestCompleted(65804) and not HasQuest(65805) and not IsQuestCompleted(65805) and Core.Player.ClassLevel &gt; 44">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65805)">
+          <PickupQuest QuestId="65805" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65805) and not IsQuestCompleted(65805) and GetQuestStep(65805) == 1">
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <TalkTo NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" QuestId="65805" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(65805) and not IsQuestCompleted(65805) and GetQuestStep(65805) == 255">
+        <If Condition="not HasHqItem(4679)">
+          <Lisbeth Json="[{'Item': 4679,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <LLTurnIn QuestId="65805" ItemId="4679" RequiresHq="True" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Revenge of the Chefsbane (Level 50) -->
+      <If Condition="IsQuestCompleted(65805) and not HasQuest(65806) and not IsQuestCompleted(65806) and Core.Player.ClassLevel &gt; 49">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65806)">
+          <PickupQuest QuestId="65806" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 1">
+        <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
+        <TalkTo NpcId="1000956" XYZ="-52.65894, 42.69984, -160.235" QuestId="65806" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 2">
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <TalkTo NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" QuestId="65806" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 3 and GetQuestById(65806).GetTodoArgs(3, 0).Item1 == 0">
+        <GetTo ZoneId="128" XYZ="-85.16064, 40.99998, -141.0392"/>
+        <TalkTo NpcId="1000962" XYZ="-85.16064, 40.99998, -141.0392" QuestId="65806"/>
+      </If>
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 3 and GetQuestById(65806).GetTodoArgs(3, 0).Item1 == 1">
+        <GetTo ZoneId="128" XYZ="-5.69165, 44.00137, -102.2507"/>
+        <TalkTo NpcId="1002079" XYZ="-5.69165, 44.00137, -102.2507" QuestId="65806"/>
+      </If>
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 3 and GetQuestById(65806).GetTodoArgs(3, 0).Item1 == 2">
+        <GetTo ZoneId="129" XYZ="-136.6751, 18.2, 16.495"/>
+        <TalkTo NpcId="1003277" XYZ="-136.6751, 18.2, 16.495" QuestId="65806"/>
+      </If>
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 3 and GetQuestById(65806).GetTodoArgs(3, 0).Item1 == 3">
+        <GetTo ZoneId="129" XYZ="-344.7776, 12.8938, 5.81366"/>
+        <TalkTo NpcId="1000899" XYZ="-344.7776, 12.8938, 5.81366" QuestId="65806"/>
+      </If>
+	  
+	  <!--1-1
+	  2-0
+	  3-2
+	  4-3 -->
+	  
+	  
+	  <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 3">
+		<GetTo ZoneId="128" XYZ="-85.16064, 40.99998, -141.0392"/>
+        <TalkTo NpcId="1000962" XYZ="-85.16064, 40.99998, -141.0392" QuestId="65806"/>
+		<GetTo ZoneId="128" XYZ="-5.69165, 44.00137, -102.2507"/>
+        <TalkTo NpcId="1002079" XYZ="-5.69165, 44.00137, -102.2507" QuestId="65806"/>
+		<GetTo ZoneId="129" XYZ="-136.6751, 18.2, 16.495"/>
+        <TalkTo NpcId="1003277" XYZ="-136.6751, 18.2, 16.495" QuestId="65806"/>
+		<GetTo ZoneId="129" XYZ="-343.8453, 12.89976, 8.684866"/>
+        <TalkTo NpcId="1000899" XYZ="-343.8453, 12.89976, 8.684866" QuestId="65806"/>
+	   </If>
+	  
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 4">
+        <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
+        <TalkTo NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" QuestId="65806" StepId="4"/>
+      </If>	  
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 5">
+        <If Condition="not HasHqItem(4647)">
+          <Lisbeth Json="[{'Item': 4647,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(4678)">
+          <Lisbeth Json="[{'Item': 4678,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(4715)">
+          <Lisbeth Json="[{'Item': 4715,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(4713)">
+          <Lisbeth Json="[{'Item': 4713,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="129" XYZ="9.170593, 20.9994, -15.21332"/>
+        <LLHandOver ItemIds="4647, 4678, 4715, 4713" RequiresHq="True, True, True, True" NpcId="1001029" XYZ="9.170593, 20.9994, -15.21332" QuestId="65806" StepId="5"/>
+      </If>
+      <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 255">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <LLTurnIn QuestId="65806" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Wait on Me (Level 50) -->
+      <If Condition="IsQuestCompleted(65806) and not HasQuest(67579) and not IsQuestCompleted(67579) and Core.Player.ClassLevel &gt; 49">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(67579)">
+          <PickupQuest QuestId="67579" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(67579) and not IsQuestCompleted(67579) and GetQuestStep(67579) == 1">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <SoTalkTo NpcId="1012568" XYZ="69.7248, 44.3999, 135.967" QuestId="67579" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(67579) and not IsQuestCompleted(67579) and GetQuestStep(67579) == 2">
+        <GetTo ZoneId="128" XYZ="83.7798, 44.4076, 129.228"/>
+        <SoTalkTo NpcId="1012569" XYZ="83.7798, 44.4076, 129.228" QuestId="67579" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(67579) and not IsQuestCompleted(67579) and GetQuestStep(67579) == 255">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <LLTurnIn QuestId="67579" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- A Spoonful Less Sugar (Level 53) -->
+      <If Condition="IsQuestCompleted(67579) and not HasQuest(67580) and not IsQuestCompleted(67580) and Core.Player.ClassLevel &gt; 52">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <If Condition="IsQuestAcceptQualified(67580)">
+          <PickupQuest QuestId="67580" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(67580) and not IsQuestCompleted(67580) and GetQuestStep(67580) == 1">
+        <GetTo ZoneId="128" XYZ="-74.4754, 42, -153.719"/>
+        <SoTalkTo NpcId="1012570" XYZ="-74.4754, 42, -153.719" QuestId="67580" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(67580) and not IsQuestCompleted(67580) and GetQuestStep(67580) == 2">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <SoTalkTo NpcId="1012568" XYZ="69.7248, 44.3999, 135.967" QuestId="67580" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(67580) and not IsQuestCompleted(67580) and GetQuestStep(67580) == 3">
+        <GetTo ZoneId="128" XYZ="80.2607, 44.3884, 136.586"/>
+        <SoTalkTo NpcId="1012571" XYZ="80.2607, 44.3884, 136.586" QuestId="67580" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(67580) and not IsQuestCompleted(67580) and GetQuestStep(67580) == 4">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <SoTalkTo NpcId="1012568" XYZ="69.7248, 44.3999, 135.967" QuestId="67580" StepId="4"/>
+      </If>
+      <If Condition="HasQuest(67580) and not IsQuestCompleted(67580) and GetQuestStep(67580) == 255">
+        <If Condition="not HasHqItem(12842)">
+          <Lisbeth Json="[{'Item': 12842,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasItem(12846)">
+          <Lisbeth Json="[{'Item': 12846,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <LLTurnIn NpcId="1012568" ItemId="12842, 12846" RequiresHq="True, False" QuestId="67580" XYZ="69.7248, 44.3999, 135.967"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Looking for Some Hot Stuff (Level 55) -->
+      <If Condition="IsQuestCompleted(67580) and not HasQuest(67581) and not IsQuestCompleted(67581) and Core.Player.ClassLevel &gt; 54">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <If Condition="IsQuestAcceptQualified(67581)">
+          <PickupQuest QuestId="67581" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(67581) and not IsQuestCompleted(67581) and GetQuestStep(67581) == 1">
+        <GetTo ZoneId="128" XYZ="-54.6426, 43.9917, -151.202"/>
+        <SoTalkTo NpcId="1000947" XYZ="-54.6426, 43.9917, -151.202" QuestId="67581" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(67581) and not IsQuestCompleted(67581) and GetQuestStep(67581) == 2">
+        <GetTo ZoneId="128" XYZ="84.1143, 44.428, 132.36"/>
+        <SoTalkTo NpcId="1000918" XYZ="84.1143, 44.428, 132.36" QuestId="67581" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(67581) and not IsQuestCompleted(67581) and GetQuestStep(67581) == 3">
+        <GetTo ZoneId="128" XYZ="18.3871, 47.5929, -162.097"/>
+        <LLHandOver ItemId="2001676" NpcId="1000915" RequiresHq="False" XYZ="18.3871, 47.5929, -162.097" QuestId="67581" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(67581) and not IsQuestCompleted(67581) and GetQuestStep(67581) == 4">
+        <GetTo ZoneId="419" XYZ="-153.74, -0.234931, -46.7513"/>
+        <LLHandOver ItemId="2001677" NpcId="1012572" RequiresHq="False" XYZ="-153.74, -0.234931, -46.7513" QuestId="67581" StepId="4"/>
+      </If>
+      <If Condition="HasQuest(67581) and not IsQuestCompleted(67581) and GetQuestStep(67581) == 255">
+        <If Condition="not HasHqItem(12849)">
+          <Lisbeth Json="[{'Item': 12849,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(12862)">
+          <Lisbeth Json="[{'Item': 12862,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(12855)">
+          <Lisbeth Json="[{'Item': 12855,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <LLTurnIn NpcId="1012568" ItemId="12849, 12862, 12855" RequiresHq="True, True, True" QuestId="67581" XYZ="69.7248, 44.3999, 135.967"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Love Meat Tender (Level 58) -->
+      <If Condition="IsQuestCompleted(67581) and not HasQuest(67582) and not IsQuestCompleted(67582) and Core.Player.ClassLevel &gt; 57">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <If Condition="IsQuestAcceptQualified(67582)">
+          <PickupQuest QuestId="67582" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(67582) and not IsQuestCompleted(67582) and GetQuestStep(67582) == 1">
+        <GetTo ZoneId="128" XYZ="-54.6426, 43.9917, -151.202"/>
+        <SoTalkTo NpcId="1000947" XYZ="-54.6426, 43.9917, -151.202" QuestId="67582" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(67582) and not IsQuestCompleted(67582) and GetQuestStep(67582) == 255">
+        <If Condition="not HasHqItem(12858)">
+          <Lisbeth Json="[{'Item': 12858,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-54.6426, 43.9917, -151.202"/>
+        <LLTurnIn NpcId="1000947" ItemId="12858" RequiresHq="True" QuestId="67582" XYZ="-54.6426, 43.9917, -151.202"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- The Spirit of Hospitality (Level 60) -->
+      <If Condition="IsQuestCompleted(67582) and not HasQuest(67583) and not IsQuestCompleted(67583) and Core.Player.ClassLevel &gt; 59">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <If Condition="IsQuestAcceptQualified(67583)">
+          <PickupQuest QuestId="67583" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(67583) and not IsQuestCompleted(67583) and GetQuestStep(67583) == 1">
+        <GetTo ZoneId="128" XYZ="-84.3991, 41, -136.797"/>
+        <SoTalkTo NpcId="1012575" XYZ="-84.3991, 41, -136.797" QuestId="67583" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(67583) and not IsQuestCompleted(67583) and GetQuestStep(67583) == 2">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <SoTalkTo NpcId="1012568" XYZ="69.7248, 44.3999, 135.967" QuestId="67583" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(67583) and not IsQuestCompleted(67583) and GetQuestStep(67583) == 3">
+        <If Condition="not HasHqItem(12854)">
+          <Lisbeth Json="[{'Item': 12854,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(12860)">
+          <Lisbeth Json="[{'Item': 12860,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasHqItem(12847)">
+          <Lisbeth Json="[{'Item': 12887,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-80.906, 41, -139.3"/>
+        <LLHandOver ItemId="12854, 12860, 12847" NpcId="1012576" RequiresHq="True, True, True" XYZ="-80.906, 41, -139.3" QuestId="67583" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(67583) and not IsQuestCompleted(67583) and GetQuestStep(67583) == 255">
+        <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
+        <LLTurnIn NpcId="1012568" QuestId="67583" XYZ="69.7248, 44.3999, 135.967"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Flavors of the Far East (Level 60) -->
+      <If Condition="IsQuestCompleted(67583) and not HasQuest(68140) and not IsQuestCompleted(68140) and Core.Player.ClassLevel &gt; 59">
+        <GetTo ZoneId="128" XYZ="-54.43162, 44.17484, -148.676"/>
+        <If Condition="IsQuestAcceptQualified(68140)">
+          <PickupQuest QuestId="68140" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(68140) and not IsQuestCompleted(68140) and GetQuestStep(68140) == 1">
+        <GetTo ZoneId="128" XYZ="-68.67906, 42.02002, -135.5598"/>
+        <TalkTo NpcId="1020143" XYZ="-68.16211, 41.99949, -135.0271" QuestId="68140" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(68140) and not IsQuestCompleted(68140) and GetQuestStep(68140) == 255">
+        <GetTo ZoneId="156" XYZ="31.90068, 50.99996, -819.4875"/>
+        <LLTurnIn QuestId="68140" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Rice to the Occasion (Level 63) -->
+      <If Condition="IsQuestCompleted(68140) and not HasQuest(68141) and not IsQuestCompleted(68141) and Core.Player.ClassLevel &gt; 62">
+        <GetTo ZoneId="156" XYZ="31.90068, 50.99996, -819.4875"/>
+        <If Condition="IsQuestAcceptQualified(68141)">
+          <PickupQuest QuestId="68141" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 1 and GetQuestById(68141).GetTodoArgs(1, 0).Item1 == 0">
+        <GetTo ZoneId="156" XYZ="38.23156, 29.33916, -729.8356"/>
+        <TalkTo NpcId="1020147" XYZ="39.96338, 29.62614, -730.1289" QuestId="68141"/>
+      </If>
+      <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 1 and GetQuestById(68141).GetTodoArgs(1, 0).Item1 == 1">
+        <GetTo ZoneId="156" XYZ="57.31068, 20.90524, -683.5251"/>
+        <TalkTo NpcId="1020146" XYZ="58.54883, 20.97351, -683.6194" QuestId="68141"/>
+      </If>
+      <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 1 and GetQuestById(68141).GetTodoArgs(1, 0).Item1 == 2">
+        <GetTo ZoneId="156" XYZ="19.86762, 28.62071, -689.5173"/>
+        <TalkTo NpcId="1020145" XYZ="20.52332, 28.6207, -689.9672" QuestId="68141"/>
+      </If>
+      <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 2">
+        <GetTo ZoneId="156" XYZ="32.37804, 50.99997, -820.4221"/>
+        <TalkTo NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" QuestId="68141" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 3">
+        <If Condition="not HasHqItem(17934)">
+          <Lisbeth Json="[{'Item': 17934,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="156" XYZ="68.3251, 33.06653, -702.5699"/>
+        <LLHandOver ItemIds="17934" NpcId="1020149" XYZ="69.13855, 33.06653, -701.8082" QuestId="68141" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 255">
+        <GetTo ZoneId="156" XYZ="32.3839, 50.99997, -820.7322"/>
+        <LLTurnIn QuestId="68141" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- A Broth from the Brine (Level 65) -->
+      <If Condition="IsQuestCompleted(68141) and not HasQuest(68142) and not IsQuestCompleted(68142) and Core.Player.ClassLevel &gt; 64">
+        <GetTo ZoneId="156" XYZ="32.3839, 50.99997, -820.7322"/>
+        <If Condition="IsQuestAcceptQualified(68142)">
+          <PickupQuest QuestId="68142" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 1">
+        <GetTo ZoneId="128" XYZ="-55.29026, 44.17499, -148.9233"/>
+        <TalkTo NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322" QuestId="68142" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 2">
+        <GetTo ZoneId="128" XYZ="16.78167, 47.60001, -160.7489"/>
+        <TalkTo NpcId="1000915" XYZ="18.38708, 47.6, -162.1271" QuestId="68142" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 3">
+        <GetTo ZoneId="128" XYZ="81.59174, 44.39997, 132.2122"/>
+        <TalkTo NpcId="1000918" XYZ="84.09241, 44.39991, 132.3414" QuestId="68142" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 4">
+        <GetTo ZoneId="156" XYZ="32.37473, 50.99997, -821.4847"/>
+        <TalkTo NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" QuestId="68142" StepId="4"/>
+      </If>
+      <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 5">
+        <If Condition="not HasHqItem(17936)">
+          <Lisbeth Json="[{'Item': 17936,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="156" XYZ="32.37473, 50.99997, -821.4847"/>
+        <LLHandOver ItemIds="17936" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" QuestId="68142" StepId="5"/>
+      </If>
+      <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 255">
+        <GetTo ZoneId="156" XYZ="32.37473, 50.99997, -821.4847"/>
+        <LLTurnIn QuestId="68142" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- Teach a Man to Make Fish (Lvel 68) -->
+      <If Condition="IsQuestCompleted(68142) and not HasQuest(68143) and not IsQuestCompleted(68143) and Core.Player.ClassLevel &gt; 67">
+        <GetTo ZoneId="156" XYZ="32.37473, 50.99997, -821.4847"/>
+        <If Condition="IsQuestAcceptQualified(68143)">
+          <SoPickupQuest QuestId="68143" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 1">
+        <GetTo ZoneId="628" XYZ="-83.34457, 18.05, -190.018"/>
+        <TalkTo NpcId="1018982" XYZ="-83.08539, 18.04999, -191.1498" QuestId="68143" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 2">
+        <TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
+        <NoCombatMoveTo XYZ="327.994, -120.3422, -306.8709"/>
+        <RunCode Name="Move_Forward"/>
+        <NoCombatMoveTo XYZ="300.4709, -117.914, -376.2548" Distance="1"/>
+        <TalkTo NpcId="1020157" XYZ="300.2212, -117.2961, -378.2559" QuestId="68143" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 3">
+        <GetTo ZoneId="628" XYZ="-87.50599, 18.05, -186.1191"/>
+        <TalkTo NpcId="1020158" XYZ="-88.4566, 18.05, -187.4877" QuestId="68143" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 4">
+        <GetTo ZoneId="156" XYZ="32.76991, 50.99997, -821.1919"/>
+        <TalkTo NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" QuestId="68143" StepId="4"/>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 5">
+        <If Condition="not HasHqItem(17938)">
+          <Lisbeth Json="[{'Item': 17938,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="156" XYZ="32.76991, 50.99997, -821.1919"/>
+        <LLHandOver ItemIds="17938" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" QuestId="68143" StepId="5"/>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 6">
+        <GetTo ZoneId="156" XYZ="49.12649, 50, -778.4787"/>
+        <TalkTo NpcId="1020160" XYZ="49.60706, 50, -779.6597" QuestId="68143" StepId="6"/>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 7">
+        <GetTo ZoneId="156" XYZ="50.45387, 50, -778.4848"/>
+        <TalkTo NpcId="1020159" XYZ="51.31604, 50, -779.2935" QuestId="68143" StepId="7"/>
+      </If>
+      <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 255">
+        <GetTo ZoneId="156" XYZ="34.23852, 50.99996, -821.674"/>
+        <LLTurnIn QuestId="68143" NpcId="1020161" XYZ="33.98181, 50.99997, -823.0869"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+      <!-- The Way to a Father's Heart (Level 70) -->
+      <If Condition="IsQuestCompleted(68143) and not HasQuest(68144) and not IsQuestCompleted(68144) and Core.Player.ClassLevel &gt; 69">
+        <GetTo ZoneId="156" XYZ="34.23852, 50.99996, -821.674"/>
+        <If Condition="IsQuestAcceptQualified(68144)">
+          <PickupQuest QuestId="68144" NpcId="1020161" XYZ="33.98181, 50.99997, -823.0869"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 1">
+        <GetTo ZoneId="620" XYZ="-298.8984, 257.5265, 733.9676"/>
+        <TalkTo NpcId="1020162" XYZ="-299.5804, 257.5265, 733.4248" QuestId="68144" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 2 and GetQuestById(68144).GetTodoArgs(2, 0).Item1 == 0">
+        <GetTo ZoneId="620" XYZ="-229.2122, 257.5265, 777.7189"/>
+        <TalkTo NpcId="1020163" XYZ="-228.5344, 257.5265, 778.7747" QuestId="68144"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 2 and GetQuestById(68144).GetTodoArgs(2, 0).Item1 == 1">
+        <GetTo ZoneId="620" XYZ="-215.1168, 257.5265, 776.5719"/>
+        <TalkTo NpcId="1020164" XYZ="-214.4656, 257.5265, 778.0728" QuestId="68144"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 2 and GetQuestById(68144).GetTodoArgs(2, 0).Item1 == 2">
+        <GetTo ZoneId="620" XYZ="-207.0327, 257.8063, 747.6904"/>
+        <TalkTo NpcId="1020165" XYZ="-205.7374, 257.8063, 748.4702" QuestId="68144"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 3">
+        <GetTo ZoneId="620" XYZ="-298.7448, 257.5265, 734.0599"/>
+        <TalkTo NpcId="1020162" XYZ="-299.5804, 257.5265, 733.4248" QuestId="68144" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 4">
+        <GetTo ZoneId="620" XYZ="-334.747, 258.9065, 778.6182"/>
+        <TalkTo NpcId="1020167" XYZ="-335.9274, 258.9065, 777.7369" QuestId="68144" StepId="4"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 5">
+        <GetTo ZoneId="620" XYZ="-442.8228, 259.8879, 661.9426"/>
+        <TalkTo NpcId="1020168" XYZ="-441.825, 260.0884, 662.1958" QuestId="68144" StepId="5"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 6">
+        <GetTo ZoneId="620" XYZ="-562.0519, 266.2191, 526.7198"/>
+        <NoCombatMoveTo XYZ="-562.0519, 266.2191, 526.7198"/>
+        <TalkTo NpcId="1020169" XYZ="-561.4557, 266.2381, 525.4443" QuestId="68144" StepId="6"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 7">
+        <GetTo ZoneId="156" XYZ="32.38362, 50.99997, -820.6827"/>
+        <TalkTo NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" QuestId="68144" StepId="7"/>
+      </If>
+      <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 255">
+        <If Condition="not HasHqItem(17940)">
+          <Lisbeth Json="[{'Item': 17940,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="156" XYZ="32.38362, 50.99997, -820.6827"/>
+        <LLTurnIn ItemIds="17940" QuestId="68144" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+    </If>
+	
+	<LoadProfile Path="../Start.xml"/>
+	
+	</Order>
+	<CodeChunks>
+		<CodeChunk Name="AutoEquip">
+            <![CDATA[ 
+            var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+            IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+            int id = AgentModule.FindAgentIdByVtable(agentVtable);
+
+            AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+
+            if (windowByName == null)
+            {
+                AgentModule.GetAgentInterfaceById(id).Toggle();
+            }
+
+            await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
+            
+            windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+            
+            if (windowByName != null)
+            {
+                windowByName.SendAction(1, 3, 0);
+            }
+			
+			await Coroutine.Sleep(2000);					
+           		
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="UpdateGearSet">
+		<![CDATA[ 
+		   var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+            IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+			int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+
+			AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+			if (windowByName == null)
+			{
+				AgentModule.GetAgentInterfaceById(idChar).Toggle();
+			}
+
+			await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+
+			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+			if (windowByName != null)
+			{
+				windowByName.SendAction(1, 3, 0xF);
+			}
+            
+            await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
+
+            if (SelectYesno.IsOpen)
+                SelectYesno.Yes();
+
+			await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
+			
+            await Coroutine.Sleep(200);
+			
+			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+			if (windowByName != null)
+			{
+				AgentModule.GetAgentInterfaceById(idChar).Toggle();
+			}
+			
+			]]>
+		</CodeChunk>
+    <CodeChunk Name="Requires_Melding">
+		<![CDATA[
+        Core.OverlayManager.AddToast(() => "Please complete the current quest step manually.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+        await Coroutine.Sleep(26000);
+      ]]>
+	  </CodeChunk>
+    <CodeChunk Name="Move_Forward"><![CDATA[
+        await Coroutine.Sleep(500);
+        MovementManager.SetFacing(3.76f);
+        await Coroutine.Sleep(500);
+        MovementManager.MoveForwardStart();
+        await Coroutine.Sleep(3000);
+        MovementManager.MoveStop();
+        await Coroutine.Sleep(500);
+      ]]></CodeChunk>
+	</CodeChunks>
+</Profile>
