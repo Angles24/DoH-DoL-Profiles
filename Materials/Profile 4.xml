@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Blank Profile
+-->
+<Profile>
+	<Name>Blank Profile</Name>
+	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<CodeChunks>	
+	</CodeChunks>	
+	<Order>	
+	
+		<RunCode Name="Dance"/>
+		<WaitTimer WaitTime="2"/>
+		<LoadProfile Path="Profile 2.xml"/>	
+	
+	</Order>
+	<CodeChunks>
+	<CodeChunk Name="Dance">
+		<![CDATA[ 
+			await Coroutine.Sleep(2000);
+		   
+			ff14bot.Managers.ChatManager.SendChat("/dance");
+			
+			await Coroutine.Sleep(2000);
+			
+			]]>
+	</CodeChunk>
+	</CodeChunks>
+</Profile>

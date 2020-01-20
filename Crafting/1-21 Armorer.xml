@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Blank Profile
+CRP - 1 Maple Lumber 5361 // 10 Ash Lumber 5364 // 16 Elm Lumber 5367
+BSM - 1 Bronze Ingot 5056 // 5 Bronze Rivets 5091 // 16 Iron Ingot 5057
+ARM - 1 Bronze Rivet 5091 // 14 Iron Ingot 5057
+GSM - 1 Copper Ingot 5062 // 5 Ragstone Whetstone 5258 // 14 Brass Ingot 5063
+LTW - 1 Leather 5257 // 8 Hard Leather 5276 // 17 Aldgoat Leather 5277 // 17 Hard Leather Eye Patch 2669
+WVR - 1 Hempen Yarn60 5333 // 5 Undyed Hempen Cloth 5324 // 12 Cotton Yarn60 5334 // 17 Undyed Cotton Cloth 5325
+ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856
+CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 Gelatin150 4863
+
+
+-->
+<Profile>
+	<Name>Crafting Armorer to 21</Name>
+	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<Order>	
+	
+	<!-- Change Class ARM - 1 Bronze Rivet 5091 // 14 Iron Rivets 5092 -->
+	<If Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer" />
+	</If>
+	<If Condition="ClassName == ClassJobType.Armorer">
+	<If Condition="Core.Player.ClassLevel &lt; 21">
+		<RunCode Name="AutoEquip"/>
+		<RunCode Name="UpdateGearSet"/>
+	
+	<!-- Do Level 1 Quest -->
+	<!-- My First Doming Hammer (Lvl 1) -->
+      <If Condition="IsQuestCompleted(65809) and not HasQuest(65810) and not IsQuestCompleted(65810)">
+        <GetTo ZoneId="128" XYZ="-32.23862, 41.49998, 207.5451"/>
+        <If Condition="IsQuestAcceptQualified(65810)">
+          <PickupQuest QuestId="65810" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65810) and not IsQuestCompleted(65810) and GetQuestStep(65810) == 255">
+        <If Condition="not HasItem(5056)">
+          <Lisbeth Json="[{'Item': 5056,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-32.23862, 41.49998, 207.5451"/>
+        <LLTurnIn QuestId="65810" ItemId="5056" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+	
+	<!-- Grind to 5 -->
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 5">
+				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</If>
+	
+	<!-- Do Level 5 Quest -->
+	<!-- From Thigh to Neck (Level 5) -->
+      <If Condition="IsQuestCompleted(65810) and not HasQuest(65811) and not IsQuestCompleted(65811) and Core.Player.ClassLevel &gt; 4">
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <If Condition="IsQuestAcceptQualified(65811)">
+          <PickupQuest QuestId="65811" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65811) and not IsQuestCompleted(65811) and GetQuestStep(65811) == 255">
+        <If Condition="not (HqHasAtLeast(2226, 3) | NqHasAtLeast(2226, 3))">
+          <Lisbeth Json="[{'Item': 2226,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <LLTurnIn QuestId="65811" ItemIds="2226, 2226, 2226" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+	
+	<!-- Grind to 10 -->
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 10">
+				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</If>
+	
+	<!-- Do Level 10 Quest -->
+	<If Condition="IsQuestCompleted(65811) and not HasQuest(65812) and not IsQuestCompleted(65812) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <If Condition="IsQuestAcceptQualified(65812)">
+          <PickupQuest QuestId="65812" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65812) and not IsQuestCompleted(65812) and GetQuestStep(65812) == 255">
+        <If Condition="not (HqHasAtLeast(5071, 12) | NqHasAtLeast(5071, 12))">
+          <Lisbeth Json="[{'Item': 5071,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <LLTurnIn QuestId="65812" ItemId="5071" NpcId="1001009" XYZ="-29.71688, 41.5, 210.7288"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+	
+	<!-- Grind to 15 -->
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 14">
+				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</If>
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 15">
+				<Lisbeth Json="[{'Item': 5057,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</If>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- One's Own Worst Critic (Level 15) -->
+      <If Condition="IsQuestCompleted(65812) and not HasQuest(65813) and not IsQuestCompleted(65813) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <If Condition="IsQuestAcceptQualified(65813)">
+          <PickupQuest QuestId="65813" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 1">
+        <GetTo ZoneId="128" XYZ="-61.99744, 42.49878, 201.8616"/>
+        <TalkTo NpcId="1001011" XYZ="-61.99744, 42.49878, 201.8616" QuestId="65813" StepId="1"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 2">
+        <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
+        <TalkTo NpcId="1001001" XYZ="-56.44318, 39.97361, 178.7289" QuestId="65813" StepId="2"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 3">
+        <If Condition="not HasItem(2680)">
+          <Lisbeth Json="[{'Item': 2680,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <If Condition="not HasItem(2231)">
+          <Lisbeth Json="[{'Item': 2231,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
+        <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
+        <LLHandOver ItemIds="2680, 2231" NpcId="1001001" XYZ="-56.44318, 39.97361, 178.7289" QuestId="65813" StepId="3"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 4">
+        <GetTo ZoneId="128" XYZ="-61.99744, 42.49878, 201.8616"/>
+        <TalkTo NpcId="1001011" XYZ="-61.99744, 42.49878, 201.8616" QuestId="65813" StepId="4"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 255">
+        <GetTo ZoneId="128" XYZ="-32.02869, 41.49999, 208.3923"/>
+        <LLTurnIn NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923" QuestId="65813"/>
+        <WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="UpdateGearSet"/>	
+        <WaitTimer WaitTime="2"/>
+      </If>
+	
+	<!-- Grind to 21 -->
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21">
+				<Lisbeth Json="[{'Item': 5057,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</If>
+	</If>
+	
+	<If Condition="Core.Player.ClassLevel &gt; 20">
+		<LogMessage Message="Congrats on Level 21, moving on." />
+		<RunCode Name="AutoEquip"/>	
+		<RunCode Name="UpdateGearSet"/>												
+	</If>	
+	</If>
+	
+	<LoadProfile Path="../Start.xml"/>	
+	
+	</Order>
+	<CodeChunks>
+		<CodeChunk Name="AutoEquip">
+            <![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+				int id = AgentModule.FindAgentIdByVtable(agentVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(id).Toggle();
+				}
+
+				await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
+            
+				windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+            
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0);
+				}
+        ]]>
+        </CodeChunk>
+		<CodeChunk Name="UpdateGearSet">
+			<![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+				int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}
+
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0xF);
+				}
+            
+				await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
+
+				if (SelectYesno.IsOpen)
+					SelectYesno.Yes();
+
+				await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
+			
+				await Coroutine.Sleep(200);
+			
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}			
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+</Profile>

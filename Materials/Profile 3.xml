@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Blank Profile
+-->
+<Profile>
+	<Name>Blank Profile</Name>
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<CodeChunks>	
+	</CodeChunks>	
+	<Order>	
+	
+	
+	
+	</Order>
+</Profile>

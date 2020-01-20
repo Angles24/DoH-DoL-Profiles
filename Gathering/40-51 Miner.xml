@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<Profile>
+	<Name>40-51 Miner</Name>
+	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<KillRadius>90</KillRadius>
+	
+	<Order>		
+		      
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />		  
+	
+	<If Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner" />
+	</If> 
+				
+    <If Condition="ClassName == ClassJobType.Miner">
+		<If Condition="Core.Player.ClassLevel &lt; 51">		
+		<RunCode Name="AutoEquip"/>
+		<RunCode Name="UpdateGearSet"/>
+		<RunCode Name="Prospect" />
+				  
+		<WaitWhile Condition="Managers.QuestLogManager.InCutscene" />
+		
+		<!--Level 40 - To Die For-->
+		  <If Condition="not IsQuestCompleted(66180)">
+			  <If Condition="not HasQuest(66180)">
+				  <LogMessage Message="Picking up Level 40 - To Die For." />
+				  <If Condition="not IsOnMap(131)">
+					  <GetTo ZoneId="131" XYZ="-3.683439, 15.00001, -8.834866" /> <!-- Ul'dah - Steps of Thal -->
+				  </If>
+				  <If Condition="IsOnMap(130)">
+					  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
+				  </If>
+				  <If Condition="IsOnMap(131)">
+					  <MoveTo Name="Adalberta" Distance="1" UseMesh="True" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+					  <If Condition="IsQuestAcceptQualified(66180)">
+						  <PickupQuest NpcId="1002298" QuestId="66180" XYZ="-16.45324, 6.2, 157.4644" />
+					  </If>
+				  </If>
+			  </If>
+			  <If Condition="GetQuestStep(66180) == 1">
+				  <TalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229" />
+			  </If>
+			  <If Condition="not HqHasAtLeast(5168,20)">
+				  <If Condition="not IsOnMap(155)">
+					  <GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+				  </If>
+				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not HqHasAtLeast(5168,20)">
+					  <GatherObject>Mineral Deposit</GatherObject>
+					  <HotSpots>
+						  <Hotspot Radius="90" XYZ="154.5971, 283.6168, -76.77094" />
+					  </HotSpots>
+					  <Slot>6</Slot>
+					  <GatheringSkillOrder>
+						  <GatheringSkill SpellName="Unearth" TimesToCast="1" />
+					  </GatheringSkillOrder>
+				  </ExGather>
+			  </If>
+			  <If Condition="HqHasAtLeast(5168,20)">
+				  <If Condition="GetQuestStep(66180) == 255">
+					  <If Condition="not IsOnMap(131)">
+						  <GetTo ZoneId="131" XYZ="-3.683439, 15.00001, -8.834866" /> <!-- Ul'dah - Steps of Thal -->
+					  </If>
+					  <If Condition="IsOnMap(130)">
+						  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
+					  </If>
+					  <If Condition="IsOnMap(131)">
+						  <LLTurnIn ItemId="5168" QuestId="66180" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+						  <LogMessage Message="Level 40 - To Die For - Completed." />						  
+						<RunCode Name="AutoEquip"/>	
+						<RunCode Name="UpdateGearSet"/>
+					  </If>
+				  </If>
+			  </If>
+		  </If>
+		  <!--End Level 40-->
+
+		  <!--Start - Grind to Level 46-->
+		  <If Condition="Core.Player.ClassLevel &lt; 46">
+			  <LogMessage Message="Starting the Grind to Level 46." />
+			  <If Condition="not IsOnMap(153)">
+				  <GetTo ZoneId="153" XYZ="181.2881, 8.417254, -63.92673" /> <!-- Quarrymill -->
+			  </If>
+			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 46">
+				  <GatherObject>Mineral Deposit</GatherObject>
+				  <HotSpots>
+					  <HotSpot Radius="60" XYZ="353.7134, -3.617686, 58.73518" />
+				  </HotSpots>
+				  <Slot>1</Slot>
+				  <GatheringSkillOrder>
+					  <GatheringSkill SpellName="Sharp Vision II" TimesToCast="1" />
+				  </GatheringSkillOrder>
+			  </ExGather>
+		  </If>
+		  <If Condition="Core.Player.ClassLevel == 46">
+			  <LogMessage Message="Congrats on Level 46, moving on." />			  
+						<RunCode Name="AutoEquip"/>	
+						<RunCode Name="UpdateGearSet"/>
+		  </If>
+		  <!--End Level 46 Grind-->
+
+		  <!--Level 45 - Gulley of Woes-->
+		  <If Condition="not IsQuestCompleted(66181)">
+			  <If Condition="not HasQuest(66181)">
+				  <LogMessage Message="Picking up Level 45 - Gulley of Woes." />
+				  <If Condition="not IsOnMap(131)">
+					  <GetTo ZoneId="131" XYZ="-3.683439, 15.00001, -8.834866" /> <!-- Ul'dah - Steps of Thal -->
+				  </If>
+				  <If Condition="IsOnMap(130)">
+					  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
+				  </If>
+				  <If Condition="IsOnMap(131)">
+					  <MoveTo Name="Adalberta" Distance="1" UseMesh="True" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+					  <If Condition="IsQuestAcceptQualified(66181)">
+						  <PickupQuest NpcId="1002298" QuestId="66181" XYZ="-16.45324, 6.2, 157.4644" />
+					  </If>
+				  </If>
+			  </If>
+			  <If Condition="GetQuestStep(66181) == 1">
+				  <TalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229" />
+			  </If>
+			  <If Condition="not HqHasAtLeast(5115,20)">
+				  <If Condition="not IsOnMap(139)">
+					  <GetTo ZoneId="139" XYZ="426.6154, 4.171807, 90.07837" /> <!-- Camp Bronze Lake -->
+				  </If>
+				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not HqHasAtLeast(5115,20)">
+					  <GatherObject>Mineral Deposit</GatherObject>
+					  <HotSpots>
+						  <Hotspot Radius="90" XYZ="431.7673, -3.4, 181.5331" />
+					  </HotSpots>
+					  <Slot>5</Slot>
+					  <GatheringSkillOrder>
+						  <GatheringSkill SpellName="Unearth" TimesToCast="1" />
+					  </GatheringSkillOrder>
+				  </ExGather>
+			  </If>
+			  <If Condition="HqHasAtLeast(5115,20)">
+				  <If Condition="GetQuestStep(66181) == 255">
+					  <If Condition="not IsOnMap(131)">
+						  <GetTo ZoneId="131" XYZ="-3.683439, 15.00001, -8.834866" /> <!-- Ul'dah - Steps of Thal -->
+					  </If>
+					  <If Condition="IsOnMap(130)">
+						  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
+					  </If>
+					  <If Condition="IsOnMap(131)">
+						  <LLTurnIn ItemId="5115" QuestId="66181" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229" />
+						  <LogMessage Message="Level 45 - Gulley of Woes - Completed." />						  
+						<RunCode Name="AutoEquip"/>	
+						<RunCode Name="UpdateGearSet"/>
+					  </If>
+				  </If>
+			  </If>
+		  </If>
+		  <!--End Level 45-->
+
+		  <!--Start - Grind to Level 50-->
+		  <If Condition="Core.Player.ClassLevel &lt; 50">
+			  <LogMessage Message="Starting the Grind to Level 50." />
+			  <If Condition="not IsOnMap(139)">
+				  <GetTo ZoneId="139" XYZ="426.6154, 4.171807, 90.07837" /> <!-- Camp Bronze Lake -->
+			  </If>
+			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 50">
+				  <GatherObject>Mineral Deposit</GatherObject>
+				  <HotSpots>
+					  <HotSpot Radius="95" XYZ="425.5676, -2.748671, 180.2855" />
+				  </HotSpots>
+				  <Slot>5</Slot>
+				  <GatheringSkillOrder>
+					  <GatheringSkill SpellName="Sharp Vision II" TimesToCast="1" />
+				  </GatheringSkillOrder>
+			  </ExGather>
+		  </If>
+		  <If Condition="Core.Player.ClassLevel == 50">
+			  <LogMessage Message="Congrats on Level 50, moving on." />			  
+						<RunCode Name="AutoEquip"/>	
+						<RunCode Name="UpdateGearSet"/>
+		  </If>
+		  <!--End Level 50 Grind-->
+
+		  <!--Level 50 - Canyon of Regret-->
+		  <If Condition="not IsQuestCompleted(66182)">
+			  <If Condition="not HasQuest(66182)">
+				  <LogMessage Message="Picking up Level 50 - Canyon of Regret." />
+				  <If Condition="not IsOnMap(131)">
+					  <GetTo ZoneId="131" XYZ="-3.683439, 15.00001, -8.834866" /> <!-- Ul'dah - Steps of Thal -->
+				  </If>
+				  <If Condition="IsOnMap(130)">
+					  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
+				  </If>
+				  <If Condition="IsOnMap(131)">
+					  <MoveTo Name="Adalberta" Distance="1" UseMesh="True" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+					  <If Condition="IsQuestAcceptQualified(66182)">
+						  <PickupQuest NpcId="1002298" QuestId="66182" XYZ="-16.45324, 6.2, 157.4644" />
+					  </If>
+				  </If>
+			  </If>
+			  <If Condition="GetQuestStep(66182) == 1">
+				  <TalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229" />
+			  </If>
+			  <If Condition="GetQuestStep(66182) == 2">
+				  <TalkTo NpcId="1003909" InteractDistance="1.0" XYZ="18.15764, 9.009788, 168.1369" />
+			  </If>
+			  <If Condition="GetQuestStep(66182) == 3">
+				  <TalkTo NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+			  </If>
+			  <If Condition="GetQuestStep(66182) == 4">
+				  <TalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229" />
+			  </If>
+			  <If Condition="GetQuestStep(66182) == 5">
+				  <If Condition="not IsTimeBetween(1,2) and not NqHasAtLeast(5121,3)">
+					  <LogMessage Message="Waiting until 1am for node" />
+					  <WaitWhile Condition ="not IsTimeBetween(1,3)" />
+				  </If>
+			  </If>
+			  <If Condition="GetQuestStep(66182) == 5">
+				  <If Condition="not NqHasAtLeast(5121,3)">
+					  <If Condition="IsTimeBetween(1,3)">
+						  <If Condition="not IsOnMap(155)">
+							  <GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+						  </If>
+						  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" While="not NqHasAtLeast(5121,3)">
+							  <GatherObject>Unspoiled Mineral Deposit</GatherObject>
+							  <HotSpots>
+								  <Hotspot Radius="500" XYZ="274.5798, 295.1528, -71.25455" />
+							  </HotSpots>
+							  <Slot>2</Slot>
+							  <GatheringSkillOrder>
+								  <GatheringSkill SpellName="Sharp Vision III" TimesToCast="1" />
+							  </GatheringSkillOrder>
+						  </ExGather>
+					  </If>
+				  </If>
+			  </If>
+			  <If Condition="NqHasAtLeast(5121,3)">
+				  <If Condition="GetQuestStep(66182) == 5">
+					  <If Condition="not IsOnMap(131)">
+						  <GetTo ZoneId="131" XYZ="-3.683439, 15.00001, -8.834866" /> <!-- Ul'dah - Steps of Thal -->
+					  </If>
+					  <If Condition="IsOnMap(130)">
+						  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
+					  </If>
+					  <If Condition="IsOnMap(131)">
+						  <LLTurnInPlus ItemId="5121" QuestId="66182" StepId="5" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+						  <LLTurnIn QuestId="66182" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+						  
+						  <RunCode Name="MINWeapon2" />
+						  
+						  <LogMessage Message="Level 50 - Canyon of Regret - Completed." />
+						  <LogMessage Message="Congrats! You are now complete with all Mining Quests &amp; Level 50!" />						  
+						<RunCode Name="AutoEquip"/>	
+						<RunCode Name="UpdateGearSet"/>
+					  </If>
+				  </If>
+			  </If>
+		  </If>
+		  <!--End Level 50-->
+		  
+		  <!--Start - Grind to Level 50-->
+		  <If Condition="Core.Player.ClassLevel &lt; 51">
+			  <LogMessage Message="Starting the Grind to Level 51." />
+			  <If Condition="not IsOnMap(139)">
+				  <GetTo ZoneId="139" XYZ="426.6154, 4.171807, 90.07837" /> <!-- Camp Bronze Lake -->
+			  </If>
+			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 50">
+				  <GatherObject>Mineral Deposit</GatherObject>
+				  <HotSpots>
+					  <HotSpot Radius="95" XYZ="425.5676, -2.748671, 180.2855" />
+				  </HotSpots>
+				  <Slot>5</Slot>
+				  <GatheringSkillOrder>
+					  <GatheringSkill SpellName="Sharp Vision II" TimesToCast="1" />
+				  </GatheringSkillOrder>
+			  </ExGather>
+		  </If>
+		  <If Condition="Core.Player.ClassLevel &gt; 50">
+			  <LogMessage Message="Congrats on Level 50, moving on." />			  
+						<RunCode Name="AutoEquip"/>
+						<RunCode Name="UpdateGearSet"/>
+		  </If>
+		  <!--End Level 50 Grind-->
+	</If>
+	</If>
+	
+	<LoadProfile Path="../Start.xml"/>
+	
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+	<CodeChunks>
+
+		<CodeChunk Name="DisableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = false;
+    	]]>
+		</CodeChunk>
+		<CodeChunk Name="Dismount">
+			<![CDATA[
+				ff14bot.Managers.ActionManager.Dismount();
+    	]]>
+		</CodeChunk>
+		<CodeChunk Name="EnableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
+    	]]>
+		</CodeChunk>
+		<CodeChunk Name="MINWeapon">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.MainHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="MINWeapon2">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Secondary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.OffHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Prospect">
+			<![CDATA[
+				SpellData data;
+				if (!Core.Me.HasAura(225) && ActionManager.CurrentActions.TryGetValue(227, out data) && ActionManager.CanCast(data, Core.Me)) ActionManager.DoAction(227, Core.Me);
+    	]]>
+		</CodeChunk>
+		<CodeChunk Name="Stealth">
+			<![CDATA[ 
+				if(!Core.Player.HasAura(47)) 
+				{ 
+					ff14bot.Managers.ActionManager.DoAction("Stealth",Core.Player); 
+					await Coroutine.Wait(5000, () => Core.Player.HasAura(47)); 
+				} 
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="AutoEquip">
+            <![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+				int id = AgentModule.FindAgentIdByVtable(agentVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(id).Toggle();
+				}
+
+				await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
+            
+				windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+            
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0);
+				}
+        ]]>
+        </CodeChunk>
+		<CodeChunk Name="UpdateGearSet">
+			<![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+				int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName == null)
+				{
+				AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}
+
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0xF);
+				}
+            
+				await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
+
+				if (SelectYesno.IsOpen)
+					SelectYesno.Yes();
+
+				await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
+			
+				await Coroutine.Sleep(200);
+			
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}
+			
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SetGearSet">
+		<![CDATA[ 
+			if  (!GearsetManager.GearSets.Any(i => i.InUse && i.Class == Core.Me.CurrentJob))
+                ff14bot.Managers.ChatManager.SendChat("/gs save");			
+		]]>
+		</CodeChunk>		
+	</CodeChunks>
+</Profile>

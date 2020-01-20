@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<Profile>
+	<Name>40-51 Botanist</Name>
+	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<KillRadius>90</KillRadius>
+	
+	<Order>
+		
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />		
+			
+	<If Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist" />
+	</If> 
+				
+    <If Condition="ClassName == ClassJobType.Botanist">
+		<If Condition="Core.Player.ClassLevel &lt; 51">		
+		<RunCode Name="AutoEquip"/>
+		<RunCode Name="UpdateGearSet"/>
+		<RunCode Name="Triangulate" />
+				
+		<WaitWhile Condition="Managers.QuestLogManager.InCutscene" />
+		
+		<!--Level 40 - Crisis of Faith-->
+		<If Condition="not IsQuestCompleted(65547)">
+			<If Condition="not HasQuest(65547)">
+				<LogMessage Message="Picking Up Level 40 - Crisis of Faith." />
+				<If Condition="not IsOnMap(133)">
+					<TeleportTo Name="New Gridania" AetheryteId="2" />
+				</If>
+				<If Condition="IsOnMap(132)">
+					<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+				</If>
+				<If Condition="IsOnMap(133)">
+					<MoveTo Name="Fufucha" Distance="1" UseMesh="True" XYZ="-232.9017, 6.263501, -169.7613" />
+					<If Condition="IsQuestAcceptQualified(65547)">
+						<PickupQuest NpcId="1000815" QuestId="65547" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65547) == 1">
+				<If Condition="not HqHasAtLeast(4792,20)">
+					<If Condition="not IsOnMap(137)">
+						<TeleportTo Name="Wineport" AetheryteId="12" />
+					</If>
+					<Gather while="not HqHasAtLeast(4792,20)">
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+						<HotSpots>
+							<HotSpot Radius="90" XYZ="-12.24748, 39.47254, 376.0267" />
+						</HotSpots>
+						<Slot>1</Slot>
+						<GatheringSkillOrder>
+							<GatheringSkill SpellName="Leaf Turn II" TimesToCast="1" />
+						</GatheringSkillOrder>
+					</Gather>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65547) == 1">
+				<If Condition="HqHasAtLeast(4792,20)">
+					<If Condition="not IsOnMap(133)">
+						<TeleportTo Name="New Gridania" AetheryteId="2" />
+					</If>
+					<If Condition="IsOnMap(132)">
+						<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+					</If>
+					<If Condition="IsOnMap(133)">
+						<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65547) == 2">
+				<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="2" NpcId="1000775" InteractDistance="1.0" XYZ="-239.5238, 8, -146.7241" />
+			</If>
+			<If Condition="GetQuestStep(65547) == 255">
+				<LLTurnIn ItemId="2000569" QuestId="65547" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644" />
+				<LogMessage Message="Level 40 - Crisis of Faith - Completed." />				
+						<RunCode Name="AutoEquip"/>		
+						<RunCode Name="UpdateGearSet"/>
+			</If>
+		</If>
+		<!--End Level 40-->
+
+		<!--Start Grind to Level 46-->
+		<If Condition="Core.Player.ClassLevel &lt; 46">
+			<LogMessage Message="Starting the Grind to Level 46" />
+			<If Condition="not IsOnMap(155)">
+				<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+			</If>
+			<Gather while="Core.Player.ClassLevel &lt; 46">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="100" XYZ="78.58948, 285.141, -191.1144" />
+				</HotSpots>
+				<Slot>7</Slot>
+				<GatheringSkillOrder>
+					<GatheringSkill SpellName="Field Mastery II" TimesToCast="1" />
+				</GatheringSkillOrder>
+			</Gather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 46">
+			<LogMessage Message="Congrats on Level 46, moving on." />			
+						<RunCode Name="AutoEquip"/>	
+						<RunCode Name="UpdateGearSet"/>
+		</If>
+		<!--End Grind to Level 46-->
+
+		<!--Level 45 - Botanist in a Bind-->
+		<If Condition="not IsQuestCompleted(65548)">
+			<If Condition="not HasQuest(65548)">
+				<LogMessage Message="Picking Up Level 45 - Botanist in a Bind." />
+				<If Condition="not IsOnMap(133)">
+					<TeleportTo Name="New Gridania" AetheryteId="2" />
+				</If>
+				<If Condition="IsOnMap(132)">
+					<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+				</If>
+				<If Condition="IsOnMap(133)">
+					<MoveTo Name="Fufucha" Distance="1" UseMesh="True" XYZ="-232.9017, 6.263501, -169.7613" />
+					<If Condition="IsQuestAcceptQualified(65548)">
+						<PickupQuest NpcId="1000815" QuestId="65548" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65548) == 1">
+				<MoveTo Name="New Gridania" Distance="0" XYZ="-128.1364, 5.588079, -34.55502" />
+				<TalkTo InteractDistance="3.0" NpcId="1000193" XYZ="-56.474, -1.717168, 9.29583" />
+			</If>
+			<If Condition="GetQuestStep(65548) == 255">
+				<If Condition="not HqHasAtLeast(5536,20)">
+					<If Condition="not IsOnMap(155)">
+						<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+					</If>
+					<Gather while="not HqHasAtLeast(5536,20)">
+						<GatherObject>Mature Tree</GatherObject>
+						<HotSpots>
+							<HotSpot Radius="90" XYZ="64.29866, 286.3346, -186.0071" />
+						</HotSpots>
+						<Slot>7</Slot>
+						<GatheringSkillOrder>
+							<GatheringSkill SpellName="Leaf Turn II" TimesToCast="1" />
+						</GatheringSkillOrder>
+					</Gather>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65548) == 255">
+				<If Condition="HqHasAtLeast(5536,20)">
+					<If Condition="not IsOnMap(133)">
+						<TeleportTo Name="New Gridania" AetheryteId="2" />
+					</If>
+					<If Condition="IsOnMap(132)">
+						<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+					</If>
+					<If Condition="IsOnMap(133)">
+						<LLTurnIn ItemId="5536" RequiresHq="true" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613" />
+						<LogMessage Message="Level 45 - Botanist in a Bind - Completed." />
+												<RunCode Name="AutoEquip"/>	
+												<RunCode Name="UpdateGearSet"/>
+					</If>
+				</If>
+			</If>
+		</If>
+		<!--End Level 45-->
+
+		<!--Start Grind to Level 50-->
+		<If Condition="Core.Player.ClassLevel &lt; 50">
+			<LogMessage Message="Starting the Grind to Level 50." />
+			<If Condition="not IsOnMap(152)">
+				<GetTo ZoneId="152" XYZ="-192.3292, 3.769932, 291.1943" /> <!-- The Hawthorne Hut -->
+			</If>
+			<Gather while="Core.Player.ClassLevel &lt; 50">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="95" XYZ="-244.6034, 5.874526, 83.33171" />
+				</HotSpots>
+				<Slot>5</Slot>
+				<GatheringSkillOrder>
+					<GatheringSkill SpellName="Field Mastery II" TimesToCast="1" />
+				</GatheringSkillOrder>
+			</Gather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 50">
+			<LogMessage Message="Congrats on Level 50, moving to final quest." />			
+						<RunCode Name="AutoEquip"/>	
+						<RunCode Name="UpdateGearSet"/>
+		</If>
+		<!--End Grind to Level 50-->
+
+		<!--Level 50 - Seeds of Hope-->
+		<If Condition="not IsQuestCompleted(65549)">
+			<If Condition="not HasQuest(65549)">
+				<LogMessage Message="Picking Up Level 50 - Seeds of Hope." />
+				<If Condition="not IsOnMap(133)">
+					<TeleportTo Name="New Gridania" AetheryteId="2" />
+				</If>
+				<If Condition="IsOnMap(132)">
+					<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+				</If>
+				<If Condition="IsOnMap(133)">
+					<MoveTo Name="Fufucha" Distance="1" UseMesh="True" XYZ="-232.9017, 6.263501, -169.7613" />
+					<If Condition="IsQuestAcceptQualified(65549)">
+						<PickupQuest NpcId="1000815" QuestId="65549" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65549) == 1">
+				<TalkTo InteractDistance="2.0" NpcId="1000774" XYZ="-297.7843, 7.369169, -168.7761" />
+			</If>
+			<If Condition="GetQuestStep(65549) == 2">
+				<If Condition="not IsOnMap(155)">
+					<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+				</If>
+				<TalkTo InteractDistance="2.0" NpcId="1000776" XYZ="118.2649, 285.9804, 140.2907" />
+			</If>
+			<If Condition="GetQuestStep(65549) == 3">
+				<If Condition="not HasAtLeast(5395,3)">
+					<If Condition="not IsTimeBetween(9,11)">
+						<LogMessage Message="Waiting until 9am for node" />
+						<WaitWhile Condition="not IsTimeBetween(9,11)" />
+					</If>
+					<If Condition="IsTimeBetween(9,11)">
+						<If Condition="not IsOnMap(155)">
+							<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+						</If>
+						<MoveTo Name="Unspoiled Mature Tree" XYZ="354.2818, 303.052, -348.1232" />
+						<Gather Loops="1">
+							<GatherObject>Unspoiled Mature Tree</GatherObject>
+							<HotSpots>
+								<Hotspot Radius="700" XYZ="354.2818, 303.052, -348.1232" />
+							</HotSpots>
+							<Slot>5</Slot>
+							<GatheringSkillOrder>
+								<GatheringSkill SpellName="Field Mastery III" TimesToCast="1" />
+							</GatheringSkillOrder>
+						</Gather>
+					</If>
+				</If>
+				<If Condition="HasAtLeast(5395,3)">
+					<If Condition="not IsOnMap(155)">
+						<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+					</If>
+					<LLHandOver ItemId="5395" QuestId="65549" StepId="4" NpcId="1000776" InteractDistance="1.0" XYZ="118.2649, 285.9804, 140.2907" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65549) == 4">
+				<If Condition="not IsOnMap(155)">
+					<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+				</If>
+				<TalkTo InteractDistance="2.0" NpcId="1000777" XYZ="7.677456, 207.2478, 434.1476" />
+				<WaitWhile Condition="Managers.QuestLogManager.InCutscene" />
+			</If>
+			<If Condition="GetQuestStep(65549) == 255">
+				<If Condition="not IsOnMap(133)">
+					<TeleportTo Name="New Gridania" AetheryteId="2" />
+				</If>
+				<If Condition="IsOnMap(132)">
+					<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+				</If>
+				<If Condition="IsOnMap(133)">
+					<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					
+					<RunCode Name="BTNWeapon2" />
+					
+					<LogMessage Message="Level 50 - Seeds of Hope - Completed." />
+							<RunCode Name="AutoEquip"/>	
+							<RunCode Name="UpdateGearSet"/>
+					<!-- <LogMessage Message="Congrats! You are now complete with all Botany Quests &amp; Level 50!" /> -->
+				</If>
+			</If>
+		</If>
+		<!--End Level 50-->	
+		
+		<!--Start Grind to Level 50-->
+		<If Condition="Core.Player.ClassLevel &lt; 51">
+			<LogMessage Message="Starting the Grind to Level 51." />
+			<If Condition="not IsOnMap(152)">
+				<GetTo ZoneId="152" XYZ="-192.3292, 3.769932, 291.1943" /> <!-- The Hawthorne Hut -->
+			</If>
+			<Gather while="Core.Player.ClassLevel &lt; 51">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="95" XYZ="-244.6034, 5.874526, 83.33171" />
+				</HotSpots>
+				<Slot>5</Slot>
+				<GatheringSkillOrder>
+					<GatheringSkill SpellName="Field Mastery II" TimesToCast="1" />
+				</GatheringSkillOrder>
+			</Gather>
+		</If>
+		<If Condition="Core.Player.ClassLevel &gt; 50">
+			<LogMessage Message="Congrats on Level 51, moving to final quest." />			
+			<RunCode Name="AutoEquip"/>
+			<RunCode Name="UpdateGearSet"/>				
+		</If>
+		<!--End Grind to Level 51-->
+	</If>
+	</If>
+	
+	<LoadProfile Path="../Start.xml"/>
+	
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+	<CodeChunks>		
+		<CodeChunk Name="BTNWeapon">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.MainHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BTNWeapon2">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Secondary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.OffHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="DisableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = false;
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Dismount">
+			<![CDATA[
+				ff14bot.Managers.ActionManager.Dismount();
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="EnableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Stealth">
+			<![CDATA[ if(!Core.Player.HasAura(47)) { ff14bot.Managers.ActionManager.DoAction("Stealth",Core.Player); await Coroutine.Wait(5000, () => Core.Player.HasAura(47)); } ]]>
+		</CodeChunk>
+		<CodeChunk Name="Triangulate">
+			<![CDATA[ SpellData data;
+				if (!Core.Me.HasAura(217) && ActionManager.CurrentActions.TryGetValue(210, out data) && ActionManager.CanCast(data, Core.Me)) ActionManager.DoAction(210, Core.Me);
+    	]]>
+		</CodeChunk>
+		<CodeChunk Name="GoSwimming">
+			<![CDATA[
+				var esc = new Vector3(-251.1348f, -73.0573f, -268.9804f);
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				Navigator.PlayerMover.MoveTowards(esc);
+				await Buddy.Coroutines.Coroutine.Sleep(10000);
+				Navigator.PlayerMover.MoveStop();	
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="AutoEquip">
+            <![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+				int id = AgentModule.FindAgentIdByVtable(agentVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(id).Toggle();
+				}
+
+				await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
+            
+				windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+            
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0);
+				}
+        ]]>
+        </CodeChunk>
+		<CodeChunk Name="UpdateGearSet">
+			<![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+				int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}
+
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0xF);
+				}
+            
+				await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
+
+				if (SelectYesno.IsOpen)
+					SelectYesno.Yes();
+
+				await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
+			
+				await Coroutine.Sleep(200);
+			
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}			
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SetGearSet">
+		<![CDATA[ 
+			await Coroutine.Sleep(2000);
+		   
+			ff14bot.Managers.ChatManager.SendChat("/gs save");
+			
+			await Coroutine.Sleep(2000);
+			
+			]]>
+		</CodeChunk>
+	</CodeChunks>
+</Profile>

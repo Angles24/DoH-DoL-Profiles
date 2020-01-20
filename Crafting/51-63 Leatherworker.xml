@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Profile:  [OrderBot] Lisbeth Tester 
+Authors:  Kayla
+Notes:    
+-->
+<Profile>
+  <Name>Crafting Leatherworker to 63</Name>
+  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
+	<Order>
+		 <!-- Turn your shit in. -->
+        <If Condition="HasIshgardItem() &gt; 0 and GetSkybuilderScrips() &lt; 9000">
+			<RunCode Name="TurnIn"/>
+        </If>
+		
+		<If Condition="GetSkybuilderScrips &gt; 9000">
+			<LogMessage Message="SkyBuilders' Scripts Full." />
+			<RunCode Name="ScripFull"/>
+        </If>
+		
+		<!-- Skybuilders' Leather Straps -->
+		<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &gt; 50 and  Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63 and FreeItemSlots() &gt; 15">
+			<If Condition="ClassName != ClassJobType.Leatherworker">
+				<ChangeClass Job="Leatherworker" />
+			</If>
+		
+			<If Condition="ClassName == ClassJobType.Leatherworker">
+				<RunCode Name="AutoEquip"/>
+				<RunCode Name="UpdateGearSet"/>
+				
+					<If Condition="HasAtLeast(4632,1)">
+						<Lisbeth Json="[{'Group':1,'Item':28737,'Amount':10,'Enabled':true,'Type':'Leatherworker','Collectable':false,'Manual':4632}]"/>
+					</If>
+					<If Condition="not HasAtLeast(4632,1)">
+						<Lisbeth Json="[{'Group':1,'Item':28737,'Amount':10,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+					</If>
+			</If> 
+		</If>
+		
+		<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &gt; 62">
+			<LogMessage Message="Congrats on Level 63 on Leatherworker, moving on." />
+		</If>
+		
+		
+		<LoadProfile Path="../Start.xml"/>
+			
+	</Order>
+	
+	<CodeChunks>
+		<CodeChunk Name="TurnIn">
+		<![CDATA[
+			Logging.Write("[Handin] calling");
+			await LlamaLibrary.IshgardHandinBase.Handin();
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="ScripFull">
+		<![CDATA[
+			Core.OverlayManager.AddToast(() => "SkyBuilder's Scrips Full.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(26000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="AutoEquip">
+		<![CDATA[ 
+			var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+            IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+            int id = AgentModule.FindAgentIdByVtable(agentVtable);
+
+            AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+
+            if (windowByName == null)
+            {
+                AgentModule.GetAgentInterfaceById(id).Toggle();
+            }
+
+            await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
+            
+            windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+            
+            if (windowByName != null)
+            {
+                windowByName.SendAction(1, 3, 0);
+            }
+            
+            await Coroutine.Sleep(1000);
+			
+        ]]>
+		</CodeChunk>		
+		<CodeChunk Name="UpdateGearSet">
+		<![CDATA[ 
+			var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+            IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+			int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+
+			AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+			if (windowByName == null)
+			{
+				AgentModule.GetAgentInterfaceById(idChar).Toggle();
+			}
+
+			await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+
+			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+			if (windowByName != null)
+			{
+				windowByName.SendAction(1, 3, 0xF);
+			}
+            
+            await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
+
+            if (SelectYesno.IsOpen)
+                SelectYesno.Yes();
+
+			await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);
+			
+            await Coroutine.Sleep(200);
+			
+			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+			if (windowByName != null)
+			{
+				AgentModule.GetAgentInterfaceById(idChar).Toggle();
+			}
+			
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BagsFull">
+		<![CDATA[
+			Core.OverlayManager.AddToast(() => "Bags are Full please empty and hit start to continue.", TimeSpan.FromMilliseconds(300000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(300000);
+		]]>
+		</CodeChunk>
+  </CodeChunks>
+</Profile>
