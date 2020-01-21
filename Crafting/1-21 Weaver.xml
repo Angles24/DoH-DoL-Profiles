@@ -14,7 +14,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Weaver to 21</Name>
-	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
 	
 	<!-- Change Class WVR - 1 Hempen Yarn60 5333 // 5 Undyed Hempen Cloth 5324 // 12 Cotton Yarn60 5334 // 17 Undyed Cotton Cloth 5325 -->

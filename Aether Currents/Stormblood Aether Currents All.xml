@@ -5,7 +5,7 @@ Profile and fixes by Anges
 -->
 <Profile>
 	<Name>Stormblood Aether Currents All</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	<Order>	
 	

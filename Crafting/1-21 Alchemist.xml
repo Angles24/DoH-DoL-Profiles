@@ -14,7 +14,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Alchemist to 21</Name>
-	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
 	
 	<!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->

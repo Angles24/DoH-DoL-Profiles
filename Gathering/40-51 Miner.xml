@@ -4,7 +4,7 @@ Angles24
 -->
 <Profile>
 	<Name>40-51 Miner</Name>
-	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	
 	<Order>		

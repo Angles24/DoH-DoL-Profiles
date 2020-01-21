@@ -5,7 +5,7 @@ Profile and fixes by Anges
 -->
 <Profile>
 	<Name>Heavensward Aether Currents All</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	<Order>	
 	
@@ -188,9 +188,9 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006193).IsVisible">
 			<UseObject NpcId="2006193" XYZ="375.326, 161.6388, -159.35" Radius="10" UseTimes="1" BlacklistAfter="True" />
 		</If> -->
-		<If Condition="not IsAetherCurrentCompleted(397,13)">
+		<If Condition="not IsAetherCurrentCompleted(397,6)">
         <GetTo ZoneId="397" XYZ="375.326, 161.6388, -159.35"/>
-			<UseObject NpcId="2006193" XYZ="375.326, 161.6388, -159.35" Condition="not IsAetherCurrentCompleted(397,13)"/>
+			<UseObject NpcId="2006193" XYZ="375.326, 161.6388, -159.35" Condition="not IsAetherCurrentCompleted(397,6)"/>
 		</If>
 
 		<!-- Aether Current #3 -->
@@ -199,9 +199,9 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006192).IsVisible">
 			<UseObject NpcId="2006192" XYZ="328.5114, 168.6274, 183.1539" Radius="10" UseTimes="1" BlacklistAfter="True" />
 		</If> -->
-		<If Condition="not IsAetherCurrentCompleted(397,12)">
+		<If Condition="not IsAetherCurrentCompleted(397,7)">
         <GetTo ZoneId="397" XYZ="328.5114, 168.6274, 183.1539"/>
-			<UseObject NpcId="2006192" XYZ="328.5114, 168.6274, 183.1539" Condition="not IsAetherCurrentCompleted(397,12)"/>
+			<UseObject NpcId="2006192" XYZ="328.5114, 168.6274, 183.1539" Condition="not IsAetherCurrentCompleted(397,7)"/>
 		</If>
 
 		<!-- Aether Current #4 -->
@@ -210,9 +210,9 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006186).IsVisible">
 			<UseObject NpcId="2006186" XYZ="627.2831, 78.41602, 225.9403" Radius="10" UseTimes="1" BlacklistAfter="True" />
 		</If> -->
-		<If Condition="not IsAetherCurrentCompleted(397,11)">
+		<If Condition="not IsAetherCurrentCompleted(397,13)">
         <GetTo ZoneId="397" XYZ="627.2831, 78.41602, 225.9403"/>
-			<UseObject NpcId="2006186" XYZ="627.2831, 78.41602, 225.9403" Condition="not IsAetherCurrentCompleted(397,11)"/>
+			<UseObject NpcId="2006186" XYZ="627.2831, 78.41602, 225.9403" Condition="not IsAetherCurrentCompleted(397,13)"/>
 		</If>
 
 		<!-- Aether Current #5 -->
@@ -228,8 +228,8 @@ Profile and fixes by Anges
 			<UseObject NpcId="2006187" XYZ="451.5297, 171.2214, -535.6985" Radius="10" UseTimes="1" BlacklistAfter="True" />
 		</If>
 		<RunCode Name="AetherCurrent5Complete" /> -->
-		<If Condition="not IsAetherCurrentCompleted(397,10)">
-        <GetTo ZoneId="401" XYZ="435.6338, 171.2269, -554.9074"/>
+		<If Condition="not IsAetherCurrentCompleted(397,12)">
+        <GetTo ZoneId="397" XYZ="435.6338, 171.2269, -554.9074"/>
 		<Dismount/>
 		<WaitTimer WaitTime="1" />
 		<RunCode Name="AetherCurrent5" />
@@ -242,7 +242,7 @@ Profile and fixes by Anges
 		<WaitTimer WaitTime="1" />
 		<MoveTo Name="Aether Current #5" XYZ="450.0945, 171.2269, -536.9135" UseMesh="False" />
 		<WaitTimer WaitTime="1" />
-			<UseObject NpcId="2006187" XYZ="451.5297, 171.2214, -535.6985" Condition="not IsAetherCurrentCompleted(397,10)"/>
+			<UseObject NpcId="2006187" XYZ="451.5297, 171.2214, -535.6985" Condition="not IsAetherCurrentCompleted(397,12)"/>
 		<RunCode Name="AetherCurrent5Complete" />
 		</If>
 
@@ -263,9 +263,9 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006188).IsVisible">
 			<UseObject NpcId="2006188" XYZ="-100.4807, 88.09033, -682.2462" Radius="10" UseTimes="1" BlacklistAfter="True" />
 		</If> -->
-		<If Condition="not IsAetherCurrentCompleted(397,8)">
+		<If Condition="not IsAetherCurrentCompleted(397,11)">
         <GetTo ZoneId="397" XYZ="-100.4807, 88.09033, -682.2462"/>
-			<UseObject NpcId="2006188" XYZ="-100.4807, 88.09033, -682.2462" Condition="not IsAetherCurrentCompleted(397,8)"/>
+			<UseObject NpcId="2006188" XYZ="-100.4807, 88.09033, -682.2462" Condition="not IsAetherCurrentCompleted(397,11)"/>
 		</If>
 
 		<!-- Aether Current #8 -->
@@ -274,9 +274,9 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006189).IsVisible">
 			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Radius="10" UseTimes="1" BlacklistAfter="True" />
 		</If> -->
-		<If Condition="not IsAetherCurrentCompleted(397,7)">
+		<If Condition="not IsAetherCurrentCompleted(397,10)">
         <GetTo ZoneId="397" XYZ="-334.0353, 133.9894, -10.14728"/>
-			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Condition="not IsAetherCurrentCompleted(397,7)"/>
+			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Condition="not IsAetherCurrentCompleted(397,10)"/>
 		</If>
 
 		<!-- Aether Current #9 -->
@@ -285,9 +285,9 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006191).IsVisible">
 			<UseObject NpcId="2006191" XYZ="-311.4824, 96.20813, -191.6381" Radius="10" UseTimes="1" BlacklistAfter="True" />
 		</If> -->
-		<If Condition="not IsAetherCurrentCompleted(397,6)">
+		<If Condition="not IsAetherCurrentCompleted(397,8)">
         <GetTo ZoneId="397" XYZ="-311.4824, 96.20813, -191.6381"/>
-			<UseObject NpcId="2006191" XYZ="-311.4824, 96.20813, -191.6381" Condition="not IsAetherCurrentCompleted(397,6)"/>
+			<UseObject NpcId="2006191" XYZ="-311.4824, 96.20813, -191.6381" Condition="not IsAetherCurrentCompleted(397,8)"/>
 		</If>
 		
 		<!-- Aether Current #10 -->
@@ -1705,7 +1705,6 @@ Profile and fixes by Anges
             }
             ]]>
         </CodeChunk>
-		<CodeChunks>
 		<CodeChunk Name="Disable_Flight">
       <![CDATA[
         foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))

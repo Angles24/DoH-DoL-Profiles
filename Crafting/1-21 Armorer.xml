@@ -14,7 +14,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Armorer to 21</Name>
-	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
 	
 	<!-- Change Class ARM - 1 Bronze Rivet 5091 // 14 Iron Rivets 5092 -->

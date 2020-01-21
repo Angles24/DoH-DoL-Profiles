@@ -34,7 +34,7 @@
 <!-- End User Configuration -->
 <Profile>
 	<Name>[O] [MIN] Leveling 1-80 + 1-70 Quests (v1.0)</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	<CodeChunks>
 

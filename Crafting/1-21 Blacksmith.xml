@@ -14,7 +14,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Blacksmith to 21</Name>
-	<BehaviorDirectory>../../Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
 	
 	<!-- Change Class BSM - 1 Bronze Ingot 5056 // 5 Bronze Rivets 5091 // 16 Iron Ingot 5057-->
