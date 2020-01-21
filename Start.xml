@@ -8,6 +8,7 @@ Blank Profile
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
+<!ENTITY craft21 "1"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
 <!ENTITY crp "1"> 		
 <!ENTITY bsm "1"> 		
 <!ENTITY arm "1"> 
@@ -19,7 +20,7 @@ Blank Profile
 <!ENTITY min "1"> 
 <!ENTITY btn "1"> 
 <!ENTITY meld "1"> 	 <!-- Change meld option to 0 when you have crafted and melded the items
-<!--		Items required for meld  [Level 20 Quest // Level 50 Quest]
+			Items required for meld  [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
 			BSM - [Iron Cross-Pein Hammer (Materia Enhanced) // HQ Cobalt Winglet (Melded with: Savage Might Materia III)]
 			ARM - [Iron Hoplon (Materia-Enhanced) // HQ Cobalt Haubergeon (Melded with: Heaven’s Eye III Materia)]
@@ -49,7 +50,7 @@ Blank Profile
 		
 		<!-- Check to see if we have Gathering at level 21 -->	
 		<If Condition="&min; == 1">
-			<If Condition="not IsQuestCompleted(66139) or Core.Me.Levels[ClassJobType.Miner] &lt; 30">
+			<If Condition="not IsQuestCompleted(66139) or Core.Me.Levels[ClassJobType.Miner] &lt; 20">
 				<LoadProfile Path="Gathering/1-21 Miner.xml"/>
 			</If>
 		</If>
@@ -103,18 +104,25 @@ Blank Profile
 			</If>
 			
 							
-		<!-- Craft Gathering and Crafting Gear 21 -->
+		<!-- Craft Gathering and Crafting Gear 21 -->			
+			<If Condition="&craft21; == 1">
+				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile." />
+				<RunCode Name="craft21"/>
+				<StopBot/>
+			</If>
+			
 		
 		
 		
 		
 		<!-- Unlock Ishgard -->		
-			<!-- <If Condition="not IsQuestCompleted(67783)"> --> <!-- Check to See if Litany of Peace is completed. -->
-				<!-- <RunCode Name="Profile2"/>	
+			<If Condition="not IsQuestCompleted(67783)">  <!-- Check to See if Litany of Peace is completed. -->
+				<RunCode Name="Profile2"/>	
+				<StopBot/>
 			</If>	
-			<If Condition="IsQuestCompleted(67783) and not IsQuestCompleted(69208)">
+			<If Condition="IsQuestCompleted(67783) and not IsQuestCompleted(69208)"> 
 				<LoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
-			</If> -->			
+			</If>		
 		
 	<If Condition="IsQuestCompleted(69208)">	
 		<!-- 21-51 Ishgard Crafting -->
@@ -267,6 +275,7 @@ Blank Profile
 		
 		
 		<!-- Do DoH Quests -->
+		<!-- Dondition Check Expansion Window -->
 		<!-- Craft Melded Class Quest Items First -->
 		<If Condition="&meld; == 1">
 			<If Condition="&crp; == 1">
@@ -546,6 +555,12 @@ Blank Profile
 		<![CDATA[
 			Core.OverlayManager.AddToast(() => "Please set the meld setting atop of Start profile to 0\n and meld any items you crafted and restart the profile.\n Info on required materia atop of Start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(40000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="craft21">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder,\n remove any items you don't want to craft and set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
 	</CodeChunks>
