@@ -50,7 +50,7 @@ Angles24
 				  <RunCode Name="Stealth" />
 				  
 				  <RunCode Name="DisableMount" />
-				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not NqHasAtLeast(5599,99)">
+				  <ExGather while="not NqHasAtLeast(5599,99)">
 					  <GatherObject>Rocky Outcrop</GatherObject>
 					  <HotSpots>
 						  <Hotspot Radius="90" XYZ="-304.4127, 28.75821, -558.8754" />
@@ -87,7 +87,7 @@ Angles24
 			  <If Condition="not IsOnMap(145)">
 				  <GetTo ZoneId="145" XYZ="-386.3481, -59, 134.0927" /> <!-- Camp Drybone -->
 			  </If>
-			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 26">
+			  <ExGather while="Core.Player.ClassLevel &lt; 26">
 				  <GatherObject>Mineral Deposit</GatherObject>
 				  <HotSpots>
 					  <HotSpot Radius="95" XYZ="-183.1978, -34.69329, -37.8227" />
@@ -132,7 +132,7 @@ Angles24
 				  <RunCode Name="Stealth" />
 				  
 				  <RunCode Name="DisableMount" />
-				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not HqHasAtLeast(5491,15)">
+				  <ExGather while="not HqHasAtLeast(5491,15)">
 					  <GatherObject>Mineral Deposit</GatherObject>
 					  <HotSpots>
 						  <Hotspot Radius="90" XYZ="-272.7955, 14.0949, -96.55045" />
@@ -169,7 +169,7 @@ Angles24
 			  <If Condition="not IsOnMap(146)">
 				  <GetTo ZoneId="146" XYZ="-321.7947, 8.260907, 408.605" /> <!-- Forgotten Springs -->
 			  </If>
-			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 31">
+			  <ExGather while="Core.Player.ClassLevel &lt; 31">
 				  <GatherObject>Rocky Outcrop</GatherObject>
 				  <HotSpots>
 					  <HotSpot Radius="95" XYZ="26.02704, 8.851164, 399.923" />
@@ -220,7 +220,7 @@ Angles24
 				  <RunCode Name="Stealth" />
 				  
 				  <RunCode Name="DisableMount" />
-				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not HqHasAtLeast(5125,15)">
+				  <ExGather while="not HqHasAtLeast(5125,15)">
 					  <GatherObject>Mineral Deposit</GatherObject>
 					  <HotSpots>
 						  <Hotspot Radius="90" XYZ="246.3232, 1.898447, -217.2365" />
@@ -260,7 +260,7 @@ Angles24
 			  <If Condition="not IsOnMap(146)">
 				  <GetTo ZoneId="146" XYZ="-321.7947, 8.260907, 408.605" /> <!-- Forgotten Springs -->
 			  </If>
-			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 36">
+			  <ExGather while="Core.Player.ClassLevel &lt; 36">
 				  <GatherObject>Mineral Deposit</GatherObject>
 				  <HotSpots>
 					  <Hotspot Radius="80" X="151.5022" Y="3.113048" Z="956.2474" />
@@ -311,7 +311,7 @@ Angles24
 				  <RunCode Name="Dismount" />				  
 				  <RunCode Name="Stealth" />				  
 				  <RunCode Name="DisableMount" />
-				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not HqHasAtLeast(5138,20)">
+				  <ExGather while="not HqHasAtLeast(5138,20)">
 					  <GatherObject>Mineral Deposit</GatherObject>
 					  <HotSpots>
 						  <Hotspot Radius="90" XYZ="-362.8043, 54.60392, 5.231353" />
@@ -348,7 +348,7 @@ Angles24
 			  <If Condition="not IsOnMap(153)">
 				  <GetTo ZoneId="153" XYZ="181.2881, 8.417254, -63.92673" /> <!-- Quarrymill -->
 			  </If>
-			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 41">
+			  <ExGather while="Core.Player.ClassLevel &lt; 41">
 				  <GatherObject>Mineral Deposit</GatherObject>
 				  <HotSpots>
 					  <HotSpot Radius="60" XYZ="353.7134, -3.617686, 58.73518" />
