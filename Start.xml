@@ -9,6 +9,7 @@ Blank Profile
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
 <!ENTITY craft21 "1"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
+<!ENTITY craft40 "1">
 <!ENTITY crp "1"> 		
 <!ENTITY bsm "1"> 		
 <!ENTITY arm "1"> 
@@ -33,7 +34,7 @@ Blank Profile
 ]>
 <Profile>
 	<Name>Start Profile</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
+	<BehaviorDirectory>Quest Behaviors</BehaviorDirectory>		
 	<Order>	
 	
 	<!-- Check to see if we have unlock all Crafting Profiles -->	
@@ -109,9 +110,7 @@ Blank Profile
 				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile." />
 				<RunCode Name="craft21"/>
 				<StopBot/>
-			</If>
-			
-		
+			</If>	
 		
 		
 		
@@ -184,6 +183,11 @@ Blank Profile
 		
 	<If Condition="IsQuestCompleted(69208)">	
 		<!-- Craft Level 40 Gathering Gear -->
+			<If Condition="&craft40; == 1">
+				<LogMessage Message="Craft level 40 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile." />
+				<RunCode Name="craft40"/>
+				<StopBot/>
+			</If>
 		
 		
 		
@@ -561,7 +565,13 @@ Blank Profile
 		</CodeChunk>
 		<CodeChunk Name="craft21">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder,\n remove any items you don't want to craft and set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 21 crafter and gather gear, import order into lisbeth. You can find it under Gear Sets folder,\n remove any items you don't want to craft and set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="craft40">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder,\n remove any items you don't want to craft and set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
