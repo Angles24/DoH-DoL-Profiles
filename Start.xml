@@ -8,8 +8,9 @@ Blank Profile
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY craft21 "1"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
+<!ENTITY craft21 "0"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
 <!ENTITY craft40 "1">
+<!ENTITY craft51 "1">
 <!ENTITY crp "1"> 		
 <!ENTITY bsm "1"> 		
 <!ENTITY arm "1"> 
@@ -110,7 +111,9 @@ Blank Profile
 				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile." />
 				<RunCode Name="craft21"/>
 				<StopBot/>
-			</If>	
+			</If>
+			
+		
 		
 		
 		
@@ -183,8 +186,8 @@ Blank Profile
 		
 	<If Condition="IsQuestCompleted(69208)">	
 		<!-- Craft Level 40 Gathering Gear -->
-			<If Condition="&craft40; == 1">
-				<LogMessage Message="Craft level 40 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile." />
+			<If Condition="&craft40; == 0">
+				<LogMessage Message="Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft40 setting to 0 on start profile." />
 				<RunCode Name="craft40"/>
 				<StopBot/>
 			</If>
@@ -205,6 +208,11 @@ Blank Profile
 				
 				
 		<!-- Craft Gathering and Crafting Gear 51 -->
+			<If Condition="&craft51; == 1">
+				<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft51 setting to 0 on start profile." />
+				<RunCode Name="craft51"/>
+				<StopBot/>
+			</If>
 		
 		
 		
@@ -252,7 +260,31 @@ Blank Profile
 		
 		
 		<!-- Heavensward Aether Currents -->		
-		<!--<If Condition=""> Systematic Exploration??? 67200 
+		<!--<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
+				and IsAetherCurrentCompleted(397,3) and IsAetherCurrentCompleted(397,4) and IsAetherCurrentCompleted(397,5)
+				and IsAetherCurrentCompleted(397,6)	and IsAetherCurrentCompleted(397,7) and IsAetherCurrentCompleted(397,8)
+				and IsAetherCurrentCompleted(397,9) and IsAetherCurrentCompleted(397,10) and IsAetherCurrentCompleted(397,11)
+				and IsAetherCurrentCompleted(397,12) and IsAetherCurrentCompleted(397,13) and IsAetherCurrentCompleted(397,14) 
+				and IsAetherCurrentCompleted(398,0) and IsAetherCurrentCompleted(398,1) and IsAetherCurrentCompleted(398,2) 
+				and IsAetherCurrentCompleted(398,3) and IsAetherCurrentCompleted(398,4) and IsAetherCurrentCompleted(398,5) 
+				and IsAetherCurrentCompleted(398,6) and IsAetherCurrentCompleted(398,7) and IsAetherCurrentCompleted(398,8) 
+				and IsAetherCurrentCompleted(398,9) and IsAetherCurrentCompleted(398,10) and IsAetherCurrentCompleted(398,11) 
+				and IsAetherCurrentCompleted(398,12) and IsAetherCurrentCompleted(398,13) and IsAetherCurrentCompleted(398,14) 
+				and IsAetherCurrentCompleted(400,0) and IsAetherCurrentCompleted(400,1) and IsAetherCurrentCompleted(400,2) 
+				and IsAetherCurrentCompleted(400,3) and IsAetherCurrentCompleted(400,4) and IsAetherCurrentCompleted(400,5) 
+				and IsAetherCurrentCompleted(400,6) and IsAetherCurrentCompleted(400,7) and IsAetherCurrentCompleted(400,8) 
+				and IsAetherCurrentCompleted(400,9) and IsAetherCurrentCompleted(400,10) and IsAetherCurrentCompleted(400,11) 
+				and IsAetherCurrentCompleted(400,12) and IsAetherCurrentCompleted(400,13) and IsAetherCurrentCompleted(400,14)
+				and IsAetherCurrentCompleted(401,0) and IsAetherCurrentCompleted(401,1) and IsAetherCurrentCompleted(401,2) 
+				and IsAetherCurrentCompleted(401,3) and IsAetherCurrentCompleted(401,4) and IsAetherCurrentCompleted(401,5) 
+				and IsAetherCurrentCompleted(401,6) and IsAetherCurrentCompleted(401,7) and IsAetherCurrentCompleted(401,8) 
+				and IsAetherCurrentCompleted(401,9) and IsAetherCurrentCompleted(401,10) and IsAetherCurrentCompleted(401,11) 
+				and IsAetherCurrentCompleted(401,12) and IsAetherCurrentCompleted(401,13) and IsAetherCurrentCompleted(401,14) 
+				and IsAetherCurrentCompleted(399,0) and IsAetherCurrentCompleted(399,1) and IsAetherCurrentCompleted(399,2) 
+				and IsAetherCurrentCompleted(399,3) and IsAetherCurrentCompleted(399,4) and IsAetherCurrentCompleted(399,5) 
+				and IsAetherCurrentCompleted(399,6) and IsAetherCurrentCompleted(399,7) and IsAetherCurrentCompleted(399,8) 
+				and IsAetherCurrentCompleted(399,9) and IsAetherCurrentCompleted(399,10) and IsAetherCurrentCompleted(399,11) 
+				and IsAetherCurrentCompleted(399,12) and IsAetherCurrentCompleted(399,13) and IsAetherCurrentCompleted(399,14))">
 			<LoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
 		</If>-->	
 		
@@ -426,7 +458,36 @@ Blank Profile
 				
 				
 		<!-- Stormblood Aether Currents -->		
-		<!--<If Condition="">  Stormblood(Quest)????? 68089
+		<!--<If Condition="not (IsAetherCurrentCompleted(613,0) and IsAetherCurrentCompleted(613,1) and IsAetherCurrentCompleted(613,2)
+				and IsAetherCurrentCompleted(613,3) and IsAetherCurrentCompleted(613,4) and IsAetherCurrentCompleted(613,5)
+				and IsAetherCurrentCompleted(613,6)	and IsAetherCurrentCompleted(613,7) and IsAetherCurrentCompleted(613,8)
+				and IsAetherCurrentCompleted(613,9) and IsAetherCurrentCompleted(613,10) and IsAetherCurrentCompleted(613,11)
+				and IsAetherCurrentCompleted(613,12) and IsAetherCurrentCompleted(613,13) and IsAetherCurrentCompleted(613,14) 
+				and IsAetherCurrentCompleted(614,0) and IsAetherCurrentCompleted(614,1) and IsAetherCurrentCompleted(614,2) 
+				and IsAetherCurrentCompleted(614,3) and IsAetherCurrentCompleted(614,4) and IsAetherCurrentCompleted(614,5) 
+				and IsAetherCurrentCompleted(614,6) and IsAetherCurrentCompleted(614,7) and IsAetherCurrentCompleted(614,8) 
+				and IsAetherCurrentCompleted(614,9) and IsAetherCurrentCompleted(614,10) and IsAetherCurrentCompleted(614,11) 
+				and IsAetherCurrentCompleted(614,12) and IsAetherCurrentCompleted(614,13) and IsAetherCurrentCompleted(614,14) 
+				and IsAetherCurrentCompleted(622,0) and IsAetherCurrentCompleted(622,1) and IsAetherCurrentCompleted(622,2) 
+				and IsAetherCurrentCompleted(622,3) and IsAetherCurrentCompleted(622,4) and IsAetherCurrentCompleted(622,5) 
+				and IsAetherCurrentCompleted(622,6) and IsAetherCurrentCompleted(622,7) and IsAetherCurrentCompleted(622,8) 
+				and IsAetherCurrentCompleted(622,9) and IsAetherCurrentCompleted(622,10) and IsAetherCurrentCompleted(622,11) 
+				and IsAetherCurrentCompleted(622,12) and IsAetherCurrentCompleted(622,13) and IsAetherCurrentCompleted(622,14)
+				and IsAetherCurrentCompleted(612,0) and IsAetherCurrentCompleted(612,1) and IsAetherCurrentCompleted(612,2) 
+				and IsAetherCurrentCompleted(612,3) and IsAetherCurrentCompleted(612,4) and IsAetherCurrentCompleted(612,5) 
+				and IsAetherCurrentCompleted(612,6) and IsAetherCurrentCompleted(612,7) and IsAetherCurrentCompleted(612,8) 
+				and IsAetherCurrentCompleted(612,9) and IsAetherCurrentCompleted(612,10) and IsAetherCurrentCompleted(612,11) 
+				and IsAetherCurrentCompleted(612,12) and IsAetherCurrentCompleted(612,13) and IsAetherCurrentCompleted(612,14) 
+				and IsAetherCurrentCompleted(620,0) and IsAetherCurrentCompleted(620,1) and IsAetherCurrentCompleted(620,2) 
+				and IsAetherCurrentCompleted(620,3) and IsAetherCurrentCompleted(620,4) and IsAetherCurrentCompleted(620,5) 
+				and IsAetherCurrentCompleted(620,6) and IsAetherCurrentCompleted(620,7) and IsAetherCurrentCompleted(620,8) 
+				and IsAetherCurrentCompleted(620,9) and IsAetherCurrentCompleted(620,10) and IsAetherCurrentCompleted(620,11) 
+				and IsAetherCurrentCompleted(620,12) and IsAetherCurrentCompleted(620,13) and IsAetherCurrentCompleted(620,14)
+				and IsAetherCurrentCompleted(621,0) and IsAetherCurrentCompleted(621,1) and IsAetherCurrentCompleted(621,2)
+				and IsAetherCurrentCompleted(621,3) and IsAetherCurrentCompleted(621,4) and IsAetherCurrentCompleted(621,5)
+				and IsAetherCurrentCompleted(621,6)	and IsAetherCurrentCompleted(621,7) and IsAetherCurrentCompleted(621,8)
+				and IsAetherCurrentCompleted(621,9) and IsAetherCurrentCompleted(621,10) and IsAetherCurrentCompleted(621,11)
+				and IsAetherCurrentCompleted(621,12) and IsAetherCurrentCompleted(621,13) and IsAetherCurrentCompleted(621,14))">
 			<LoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
 		</If>-->		
 		
@@ -565,13 +626,19 @@ Blank Profile
 		</CodeChunk>
 		<CodeChunk Name="craft21">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 21 crafter and gather gear, import order into lisbeth. You can find it under Gear Sets folder,\n remove any items you don't want to craft and set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 21 craft and gather gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="craft40">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder,\n remove any items you don't want to craft and set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 40 gathering gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft40 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="craft51">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Craft level 51 gear and gather gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft51 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
