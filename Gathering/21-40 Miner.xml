@@ -209,16 +209,14 @@ Angles24
 			  </If>
 			  <If Condition="GetQuestStep(66142) == 2">
 				  <TalkTo InteractDistance="1.0" NpcId="1003911" XYZ="-80.49365, 6.98457, 9.430854" />
-			  </If>
+			  </If>			  
 			  <If Condition="not HqHasAtLeast(5125,15)">
 				  <If Condition="not IsOnMap(145)">
 					  <GetTo ZoneId="145" XYZ="-386.3481, -59, 134.0927" /> <!-- Camp Drybone -->
 				  </If>
 				  <MoveTo Name="Quest Loc5" Distance="1" UseMesh="True" InteractDistance="1.0" XYZ="246.3232, 1.898447, -217.2365" />
-				  <RunCode Name="Dismount" />
-				  
-				  <RunCode Name="Stealth" />
-				  
+				  <RunCode Name="Dismount" />				  
+				  <RunCode Name="Stealth" />				  
 				  <RunCode Name="DisableMount" />
 				  <ExGather while="not HqHasAtLeast(5125,15)">
 					  <GatherObject>Mineral Deposit</GatherObject>
@@ -240,8 +238,8 @@ Angles24
 					  <If Condition="IsOnMap(130)">
 						  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
 					  </If>
-					  <If Condition="IsOnMap(131)">
-						  <LLTurnIn ItemId="5125" QuestId="66142" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.715219, 6.2, 165.6139" />
+					  <If Condition="IsOnMap(131)">						
+						  <LLHandOver ItemId="5125" QuestId="66142" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.64079, 6.2, 166.6474" />
 					  </If>
 				  </If>
 			  </If>

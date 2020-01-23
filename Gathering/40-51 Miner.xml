@@ -47,7 +47,7 @@ Angles24
 				  <If Condition="not IsOnMap(155)">
 					  <GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
 				  </If>
-				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not HqHasAtLeast(5168,20)">
+				  <ExGather while="not HqHasAtLeast(5168,20)">
 					  <GatherObject>Mineral Deposit</GatherObject>
 					  <HotSpots>
 						  <Hotspot Radius="90" XYZ="154.5971, 283.6168, -76.77094" />
@@ -83,7 +83,7 @@ Angles24
 			  <If Condition="not IsOnMap(153)">
 				  <GetTo ZoneId="153" XYZ="181.2881, 8.417254, -63.92673" /> <!-- Quarrymill -->
 			  </If>
-			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 46">
+			  <ExGather while="Core.Player.ClassLevel &lt; 46">
 				  <GatherObject>Mineral Deposit</GatherObject>
 				  <HotSpots>
 					  <HotSpot Radius="60" XYZ="353.7134, -3.617686, 58.73518" />
@@ -125,7 +125,7 @@ Angles24
 				  <If Condition="not IsOnMap(139)">
 					  <GetTo ZoneId="139" XYZ="426.6154, 4.171807, 90.07837" /> <!-- Camp Bronze Lake -->
 				  </If>
-				  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="not HqHasAtLeast(5115,20)">
+				  <ExGather while="not HqHasAtLeast(5115,20)">
 					  <GatherObject>Mineral Deposit</GatherObject>
 					  <HotSpots>
 						  <Hotspot Radius="90" XYZ="431.7673, -3.4, 181.5331" />
@@ -161,7 +161,7 @@ Angles24
 			  <If Condition="not IsOnMap(139)">
 				  <GetTo ZoneId="139" XYZ="426.6154, 4.171807, 90.07837" /> <!-- Camp Bronze Lake -->
 			  </If>
-			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 50">
+			  <ExGather while="Core.Player.ClassLevel &lt; 50">
 				  <GatherObject>Mineral Deposit</GatherObject>
 				  <HotSpots>
 					  <HotSpot Radius="95" XYZ="425.5676, -2.748671, 180.2855" />
@@ -220,7 +220,7 @@ Angles24
 						  <If Condition="not IsOnMap(155)">
 							  <GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
 						  </If>
-						  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" While="not NqHasAtLeast(5121,3)">
+						  <ExGather While="not NqHasAtLeast(5121,3)">
 							  <GatherObject>Unspoiled Mineral Deposit</GatherObject>
 							  <HotSpots>
 								  <Hotspot Radius="500" XYZ="274.5798, 295.1528, -71.25455" />
@@ -242,7 +242,7 @@ Angles24
 						  <MoveTo Name="Steps of Thal" Distance="1" UseMesh="True" XYZ="93.88152, 4, -102.9668" />
 					  </If>
 					  <If Condition="IsOnMap(131)">
-						  <LLTurnInPlus ItemId="5121" QuestId="66182" StepId="5" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
+						  <LLTurnIn ItemId="5121" QuestId="66182" StepId="5" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
 						  <LLTurnIn QuestId="66182" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
 						  
 						  <RunCode Name="MINWeapon2" />
@@ -263,7 +263,7 @@ Angles24
 			  <If Condition="not IsOnMap(139)">
 				  <GetTo ZoneId="139" XYZ="426.6154, 4.171807, 90.07837" /> <!-- Camp Bronze Lake -->
 			  </If>
-			  <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 50">
+			  <ExGather while="Core.Player.ClassLevel &lt; 50">
 				  <GatherObject>Mineral Deposit</GatherObject>
 				  <HotSpots>
 					  <HotSpot Radius="95" XYZ="425.5676, -2.748671, 180.2855" />

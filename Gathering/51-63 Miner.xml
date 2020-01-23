@@ -76,7 +76,7 @@ Angles24
           <!-- Camp Bronze Lake -->	
         </If>
         <NoCombatMoveTo Name="Farming Area" XYZ="425.5676, -2.748671, 180.2855" />
-        <ExGather DiscoverUnknowns="&DiscoverUnknowns;" while="Core.Player.ClassLevel &lt; 51">
+        <ExGather while="Core.Player.ClassLevel &lt; 51">
           <GatherObject>Mineral Deposit</GatherObject>
           <HotSpots>
             <HotSpot Radius="90" XYZ="425.5676, -2.748671, 180.2855" name="Mineral Deposits" />
@@ -94,7 +94,7 @@ Angles24
         <If Condition="not IsOnMap(397)">
           <GetTo ZoneId="397" XYZ="474.8097, 212.5399, 721.9003" />
         </If>
-        <ExGather DiscoverUnknowns="&DiscoverUnknowns;" Loops="1">
+        <ExGather Loops="1">
           <GatherObjects>
             <GatherObject>Rocky Outcrop</GatherObject>
           </GatherObjects>
@@ -123,7 +123,7 @@ Angles24
 						<RunCode Name="AutoEquip"/>	
 						<RunCode Name="UpdateGearSet"/>
         </If>
-        <ExGather DiscoverUnknowns="&DiscoverUnknowns;" Loops="1">
+        <ExGather Loops="1">
           <GatherObjects>
             <GatherObject>Mineral Deposit</GatherObject>
           </GatherObjects>
@@ -176,7 +176,7 @@ Angles24
               <!-- Falcon's Nest -->
             </If>
             <If Condition="not HqHasAtLeast(12534,10)">
-              <ExGather DiscoverUnknowns="&DiscoverUnknowns;" While="not HqHasAtLeast(12534,10)">
+              <ExGather While="not HqHasAtLeast(12534,10)">
                 <GatherObjects>
                   <GatherObject>Mineral Deposit</GatherObject>
                 </GatherObjects>
@@ -265,7 +265,7 @@ Angles24
               <!-- Tailfeather -->
             </If>
             <If Condition="not HqHasAtLeast(12537,10)">
-              <ExGather DiscoverUnknowns="&DiscoverUnknowns;" While="not HqHasAtLeast(12537,10)">
+              <ExGather While="not HqHasAtLeast(12537,10)">
                 <GatherObjects>
                   <GatherObject>Mineral Deposit</GatherObject>
                 </GatherObjects>
@@ -317,7 +317,7 @@ Angles24
           <!-- Tailfeather -->							
         </If>
         <NoCombatMoveTo Name="Farming Area" XYZ="336.5955, -43.11188, -245.9103" />
-        <ExGather DiscoverUnknowns="&DiscoverUnknowns;" Loops="1">
+        <ExGather Loops="1">
           <GatherObject>Mineral Deposit</GatherObject>
           <HotSpots>
             <HotSpot Radius="90" XYZ="336.5955, -43.11188, -245.9103" name="Mineral Deposits" />
@@ -331,7 +331,7 @@ Angles24
           </GatheringSkillOrder>
         </ExGather>
         <NoCombatMoveTo Name="Farming Area" XYZ="323.2359, -30.1728, -453.7088" />
-        <ExGather DiscoverUnknowns="&DiscoverUnknowns;" Loops="1">
+        <ExGather Loops="1">
           <GatherObject>Mineral Deposit</GatherObject>
           <HotSpots>
             <HotSpot Radius="90" XYZ="323.2359, -30.1728, -453.7088" name="Mineral Deposits" />
@@ -345,7 +345,7 @@ Angles24
           </GatheringSkillOrder>
         </ExGather>
         <NoCombatMoveTo Name="Farming Area" XYZ="500.7686, -32.96425, -434.2964" />
-        <ExGather DiscoverUnknowns="&DiscoverUnknowns;" Loops="1">
+        <ExGather Loops="1">
           <GatherObject>Mineral Deposit</GatherObject>
           <HotSpots>
             <HotSpot Radius="90" XYZ="500.7686, -32.96425, -434.2964" name="Mineral Deposits" />
@@ -408,7 +408,7 @@ Angles24
               <!-- Tailfeather -->
             </If>
             <If Condition="not HqHasAtLeast(12537,10)">
-              <ExGather DiscoverUnknowns="&DiscoverUnknowns;" While="not HqHasAtLeast(12537,10)">
+              <ExGather While="not HqHasAtLeast(12537,10)">
                 <GatherObjects>
                   <GatherObject>Mineral Deposit</GatherObject>
                 </GatherObjects>
@@ -545,7 +545,7 @@ Angles24
             </If>
             <If Condition="not HqHasAtLeast(12535,10)">
               <!-- Entrax -->
-              <ExGather DiscoverUnknowns="&DiscoverUnknowns;" While="not HqHasAtLeast(12535,10)">
+              <ExGather While="not HqHasAtLeast(12535,10)">
                 <GatherObjects>
                   <GatherObject>Mineral Deposit</GatherObject>>
                 </GatherObjects>
@@ -687,7 +687,7 @@ Angles24
               </If>
               <While Condition="IsTimeBetween(12,14) or IsTimeBetween(0,2) and not HqHasAtLeast(12538,3)">
                 <!-- Entrax -->
-                <ExGather DiscoverUnknowns="&DiscoverUnknowns;" While="not HqHasAtLeast(12538,3)">
+                <ExGather While="not HqHasAtLeast(12538,3)">
                   <GatherObjects>
                     <GatherObject>Unspoiled Mineral Deposit</GatherObject>
                   </GatherObjects>
