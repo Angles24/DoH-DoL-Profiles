@@ -807,7 +807,7 @@ Profile and fixes by Anges
 		<If Condition="not IsAetherCurrentCompleted(400,10)">
         <GetTo ZoneId="400" XYZ="-273.8715, 30.37311, 570.6412" />
 			<WaitTimer WaitTime="3" />
-			<RunCode Name="Dismount" />
+			<Dismount/>
 			<WaitTimer WaitTime="3" />
 			<MoveTo XYZ="-278.7672, 37.12512, 555.5656" Distance="1" UseMesh="False"/>
 			<UseObject NpcId="2006219" XYZ="-278.7672, 37.12512, 555.5656" Condition="not IsAetherCurrentCompleted(400,10)"/>
@@ -910,20 +910,7 @@ Profile and fixes by Anges
 
 		<If Condition="not IsQuestCompleted(67445)">
 			<If Condition="not HasQuest(67445)">
-				<If Condition="not IsOnMap(401)">
-					<If Condition="Managers.WorldManager.HasAetheryteId(73)">
-						<TeleportTo Name="Ok' Zundu" AetheryteId="73" />
-					</If>
-					<If Condition="not Managers.WorldManager.HasAetheryteId(73)">
-						<If Condition="not IsOnMap(419)">
-							<GetTo ZoneId="419" XYZ="-48.65455, -8.234923, -59.07746" /> <!-- The Pillars -->
-						</If>
-						<If Condition="IsOnMap(419)">
-							<UseTransport Name="Blue Window" InteractDistance="3.0" NpcId="1011212" XYZ="147.3258, -12.63491, -12.40564" />
-						</If>
-					</If>
-				</If>
-				<NoCombatMoveTo Name="Ganu Vali" XYZ="-647.0283, -51.05719, -417.7463" />
+				<GetTo ZoneId="401" XYZ="-647.0283, -51.05719, -417.7463"/>
 				<If Condition="IsQuestAcceptQualified(67445)">
 					<PickupQuest NpcId="1012069" QuestId="67445" XYZ="-647.0283, -51.05719, -417.7463" />
 				</If>
@@ -1229,6 +1216,7 @@ Profile and fixes by Anges
 							<HotSpot XYZ="458.7014, 83.7262, 34.74475" Radius="10" />
 						</HotSpots>
 					</UseObject>
+					<GetTo ZoneId="478" XYZ="68.67902, 207.3838, -6.457279" />
 				</If>
 				<If Condition="GetQuestStep(67481) == 255">
 					<If Condition="not IsOnMap(478)">

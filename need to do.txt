@@ -1,5 +1,0 @@
-change stealthing for gathering profiles
-disable agil pre craft, enable agil after turning in craft
-HW aether currents after getting 51 gathering?
-average ilvl condition for gear sets
-check enable and disable flight settings

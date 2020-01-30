@@ -18,9 +18,16 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Carpenter Class Quests</Name>
+	<Name>Armorer Class Quests</Name>
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
 	<Order>	
+	
+	<BotSettings BlockSkippingCutscenes="0"/>
+	
+	<If Condition="FreeItemSlots() &lt; 16">
+		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
+		<StopBot/>
+	</If>
 	
 	<If Condition="not IsQuestCompleted(68134)">
 	<ChangeClass Job="Armorer" />
@@ -48,7 +55,7 @@ Angles24
         <WaitWhile Condition="GetQuestStep(65814) == 255"/>
         </If>
 		</If>
-        <LLTurnIn QuestId="65814" ItemId="2236" NpcId="1001001"/>
+        <LLTurnIn QuestId="65814" ItemId="2236" NpcId="1001001" AllowHq="True" XYZ="-56.44318, 39.97361, 178.7289"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	

@@ -18,9 +18,16 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Carpenter Class Quests</Name>
+	<Name>Goldsmith Class Quests</Name>
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
 	<Order>	
+	
+	<BotSettings BlockSkippingCutscenes="0"/>
+	
+	<If Condition="FreeItemSlots() &lt; 16">
+		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
+		<StopBot/>
+	</If>
 	
 	<If Condition="not IsQuestCompleted(68139)">
 	<ChangeClass Job="Goldsmith" />

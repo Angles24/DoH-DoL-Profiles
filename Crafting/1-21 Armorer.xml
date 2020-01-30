@@ -17,6 +17,8 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
 	
+	<BotSettings BlockSkippingCutscenes="0"/>
+	
 	<!-- Change Class ARM - 1 Bronze Rivet 5091 // 14 Iron Rivets 5092 -->
 	<If Condition="ClassName != ClassJobType.Armorer">
 		<ChangeClass Job="Armorer" />
@@ -37,7 +39,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="HasQuest(65810) and not IsQuestCompleted(65810) and GetQuestStep(65810) == 255">
         <If Condition="not HasItem(5056)">
           <Lisbeth Json="[{'Item': 5056,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+		</If>
         <GetTo ZoneId="128" XYZ="-32.23862, 41.49998, 207.5451"/>
         <LLTurnIn QuestId="65810" ItemId="5056" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
         <WaitTimer WaitTime="2"/>
@@ -49,6 +51,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 5 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 5">
 				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Armorer.xml"/>
 			</If>
 	
 	<!-- Do Level 5 Quest -->
@@ -74,6 +77,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 10 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 10">
 				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Armorer.xml"/>
 			</If>
 	
 	<!-- Do Level 10 Quest -->
@@ -98,9 +102,11 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 15 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 14">
 				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Armorer.xml"/>
 			</If>
 			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 15">
 				<Lisbeth Json="[{'Item': 5057,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Armorer.xml"/>
 			</If>
 	
 	<!-- Do Level 15 Quest -->
@@ -145,6 +151,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 21 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21">
 				<Lisbeth Json="[{'Item': 5057,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Armorer.xml"/>
 			</If>
 	</If>
 	

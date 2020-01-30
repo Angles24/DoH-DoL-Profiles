@@ -127,7 +127,6 @@ Profile and fixes by Anges
       <TalkTo NpcId="1023293" XYZ="-955.9929, -899.5684, 757.0262" QuestId="68168" StepId="2"/>
     </If>
     <If Condition="HasQuest(68168) and not IsQuestCompleted(68168) and GetQuestStep(68168) == 3">
-      <RunCode Name="ManualCompletion"/>
     </If>
     <If Condition="HasQuest(68168) and not IsQuestCompleted(68168) and GetQuestStep(68168) == 4">
       <If Condition="not IsOnSubMap(2778)">
@@ -466,8 +465,6 @@ Profile and fixes by Anges
       </If>
     </If>
     <If Condition="HasQuest(68307) and not IsQuestCompleted(68307) and GetQuestStep(68307) == 1">
-      <GetTo ZoneId="622" XYZ="-83.96514, 33.66718, -213.9475"/>
-      <RunCode Name="Announce_Manual_Completion"/>
     </If>
     <If Condition="HasQuest(68307) and not IsQuestCompleted(68307) and GetQuestStep(68307) == 2">
       <GetTo ZoneId="622" XYZ="-83.79742, 27.63974, -148.4681"/>
@@ -828,6 +825,8 @@ Profile and fixes by Anges
     </If>
     <!-- A Hunger for Trade -->
     <If Condition="IsQuestCompleted(68079) and not HasQuest(68387) and not IsQuestCompleted(68387)">
+		<GetTo ZoneId="621" XYZ="-680.6262, 58.09087, -15.74572"/>
+		<MoveTo XYZ="-800.4244, 50.78772, -15.77226" UseMesh="False" />
       <GetTo ZoneId="620" XYZ="311.476, 324.3033, 361.2439"/>
       <If Condition="IsQuestAcceptQualified(68387)">
         <PickupQuest QuestId="68387" NpcId="1023167" XYZ="311.476, 324.3033, 361.2439"/>
@@ -842,6 +841,8 @@ Profile and fixes by Anges
       <LLHandOver ItemId="2002310" NpcId="1023169" XYZ="-201.2187, 258.9065, 781.106" QuestId="68387" StepId="2"/>
     </If>
     <If Condition="HasQuest(68387) and not IsQuestCompleted(68387) and GetQuestStep(68387) == 3">
+		<GetTo ZoneId="621" XYZ="-680.6262, 58.09087, -15.74572"/>
+		<MoveTo XYZ="-800.4244, 50.78772, -15.77226" UseMesh="False" />
       <GetTo ZoneId="620" XYZ="358.4203, 325.3905, 332.8086"/>
       <LLHandOver ItemId="2002311" NpcId="1023168" XYZ="358.4203, 325.3905, 332.8086" QuestId="68387" StepId="3"/>
     </If>
@@ -873,6 +874,8 @@ Profile and fixes by Anges
       <TalkTo NpcId="1020870" XYZ="-217.9739, 257.5265, 738.7597" QuestId="68396" StepId="2"/>
     </If>
     <If Condition="HasQuest(68396) and not IsQuestCompleted(68396) and GetQuestStep(68396) == 255">
+		<GetTo ZoneId="621" XYZ="-680.6262, 58.09087, -15.74572"/>
+		<MoveTo XYZ="-800.4244, 50.78772, -15.77226" UseMesh="False" />
       <GetTo ZoneId="620" XYZ="283.6925, 322.8716, 750.7115"/>
       <LLTurnIn QuestId="68396" NpcId="1020893" XYZ="283.6925, 322.8716, 750.7115"/>
     </If>
@@ -1109,6 +1112,18 @@ Profile and fixes by Anges
 		</If>		
 		<LogMessage Message="You've attuned to the Aether Currents in The Lochs!" />	
 		</If>	
+		
+		<If Condition="HasQuest(68307) and not IsQuestCompleted(68307) and GetQuestStep(68307) == 1">
+			<GetTo ZoneId="622" XYZ="-83.96514, 33.66718, -213.9475"/>
+			<LogMessage Message="Please complete Sheep Snatcher and The Palace of Lost Souls Quest Objective manually." />
+			<RunCode Name="Announce_Manual_Completion2"/>
+			<StopBot/>
+		</If>
+		<If Condition="HasQuest(68168) and not IsQuestCompleted(68168)">
+			<LogMessage Message="Please complete Sheep Snatcher and The Palace of Lost Souls Quest Objective manually." />
+			<RunCode Name="Announce_Manual_Completion2"/>
+			<StopBot/>
+		</If>
 
 		<LoadProfile Path="../Start.xml"/>
 		
@@ -1238,6 +1253,12 @@ Profile and fixes by Anges
 	<CodeChunk Name="Announce_Manual_Completion">
 	  <![CDATA[
         Core.OverlayManager.AddToast(() => "Please complete the next Quest Objective manually.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+        await Coroutine.Sleep(2000);
+      ]]>
+	</CodeChunk>
+	<CodeChunk Name="Announce_Manual_Completion2">
+	  <![CDATA[
+        Core.OverlayManager.AddToast(() => "Please complete Sheep Snatcher & The Palace of Lost Souls Quest Objective manually.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
         await Coroutine.Sleep(26000);
       ]]>
 	</CodeChunk>
@@ -1535,7 +1556,6 @@ Profile and fixes by Anges
             }
             ]]>
         </CodeChunk>
-		<CodeChunks>
 		<CodeChunk Name="Disable_Flight">
       <![CDATA[
         foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))

@@ -61,7 +61,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 				<MoveTo Name="Francel" XYZ="-7.472548, -16, 162.5581" UseMesh="False" /> 	
 				<TalkTo NpcId="1031684" XYZ="-7.472548, -16, 162.5581" InteractDistance="5" UseMesh="False"/>
 				<WaitTimer WaitTime="3" />
-				<RunCode Name="SwitchDohJob"/>
+				<RunCode Name="SwitchDoHJob"/>
 				<MoveTo Name="Potkin" XYZ="50.83703, -16, 168.3313" UseMesh="False" /> 	
 				<TalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
 		</If>
@@ -102,7 +102,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
                 await Coroutine.Sleep(3000);
 			]]>
 		</CodeChunk>
-		<CodeChunk Name="SwitchDohJob">
+		<CodeChunk Name="SwitchDoHJob">
 			<![CDATA[ 
 				var DoH = Enumerable.Range(8, 8);
 				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 20);

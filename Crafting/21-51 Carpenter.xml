@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Profile:  [OrderBot] Lisbeth Tester 
-Authors:  Kayla
-Notes:    
+Authors:  Kayla / Angles24 
 -->
 <Profile>
   <Name>Crafting Carpenter to 51</Name>
@@ -16,32 +14,42 @@ Notes:
 		<If Condition="GetSkybuilderScrips &gt; 9000">
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
+			<StopBot/>
         </If>
 		
 		<!-- Skybuilders' Plywood -->
 		<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &gt; 20 and  Core.Me.Levels[ClassJobType.Carpenter] &lt; 51 and FreeItemSlots() &gt; 15">
 			<If Condition="ClassName != ClassJobType.Carpenter">
 				<ChangeClass Job="Carpenter" />
-			</If>
-		
+			</If>		
 			<If Condition="ClassName == ClassJobType.Carpenter">
 				<RunCode Name="AutoEquip"/>
-				<RunCode Name="UpdateGearSet"/>
-				
-					<If Condition="HasAtLeast(4632,1)">
-						<Lisbeth Json="[{'Group':1,'Item':28725,'Amount':10,'Enabled':true,'Type':'Carpenter','Collectable':false,'Manual':4632}]"/>
-					</If>
-					<If Condition="not HasAtLeast(4632,1)">
-						<Lisbeth Json="[{'Group':1,'Item':28725,'Amount':10,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>
-					</If>
+				<RunCode Name="UpdateGearSet"/>				
+				<If Condition="HasAtLeast(4632,1)">
+					<Lisbeth Json="[{'Group':1,'Item':28725,'Amount':10,'Enabled':true,'Type':'Carpenter','Collectable':false,'Manual':4632}]"/>
+				</If>
+				<If Condition="not HasAtLeast(4632,1)">
+					<Lisbeth Json="[{'Group':1,'Item':28725,'Amount':10,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>
+				</If>
 			</If> 
 		</If>
 		
-		<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &gt; 50">
-			<LogMessage Message="Congrats on Level 51 on Carpenter, moving on." />
+		<!-- Turn your shit in. -->
+        <If Condition="HasIshgardItem() &gt; 0 and GetSkybuilderScrips() &lt; 9000">
+			<RunCode Name="TurnIn"/>
+        </If>
+		
+		<If Condition="GetSkybuilderScrips &gt; 9000">
+			<LogMessage Message="SkyBuilders' Scripts Full." />
+			<RunCode Name="ScripFull"/>
+			<StopBot/>
+        </If>
+		
+		<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">
+			<LoadProfile Path="21-51 Carpenter.xml"/>
 		</If>
 		
-		
+		<LogMessage Message="Congrats on Level 51 on Carpenter, moving on." />
 		<LoadProfile Path="../Start.xml"/>
 			
 	</Order>

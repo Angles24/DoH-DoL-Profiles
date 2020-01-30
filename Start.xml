@@ -8,9 +8,14 @@ Blank Profile
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY craft21 "0"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
+<!ENTITY pref "1"> <!-- 1 = preferred realm // 0 = non preferred realm -->
+<!ENTITY craft21 "1"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
 <!ENTITY craft40 "1">
 <!ENTITY craft51 "1">
+<!ENTITY craft63 "1">
+<!ENTITY craftClass "1"> <!-- Just remember after you finished crafting you meld items before restarting. -->
+<!ENTITY craftClass1 "1">
+<!ENTITY craft70 "1">
 <!ENTITY crp "1"> 		
 <!ENTITY bsm "1"> 		
 <!ENTITY arm "1"> 
@@ -65,42 +70,42 @@ Blank Profile
 	
 		<!-- Check to see if we have Crafting at level 21 -->	
 			<If Condition="&crp; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 or not IsQuestCompleted(65677)">	
 					<LoadProfile Path="Crafting/1-21 Carpenter.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21 or not IsQuestCompleted(65831)">	
 					<LoadProfile Path="Crafting/1-21 Blacksmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21 or not IsQuestCompleted(65813)">	
 					<LoadProfile Path="Crafting/1-21 Armorer.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21 or not IsQuestCompleted(66150)">	
 					<LoadProfile Path="Crafting/1-21 Goldsmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21 or not IsQuestCompleted(65672)">	
 					<LoadProfile Path="Crafting/1-21 Leatherworker.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21 or not IsQuestCompleted(66126)">	
 					<LoadProfile Path="Crafting/1-21 Weaver.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21 or not IsQuestCompleted(66117)">	
 					<LoadProfile Path="Crafting/1-21 Alchemist.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21 or not IsQuestCompleted(65794)">	
 					<LoadProfile Path="Crafting/1-21 Culinarian.xml"/>
 				</If>
 			</If>
@@ -112,8 +117,6 @@ Blank Profile
 				<RunCode Name="craft21"/>
 				<StopBot/>
 			</If>
-			
-		
 		
 		
 		
@@ -186,10 +189,10 @@ Blank Profile
 		
 	<If Condition="IsQuestCompleted(69208)">	
 		<!-- Craft Level 40 Gathering Gear -->
-			<If Condition="&craft40; == 0">
+			<If Condition="&craft40; == 1">
 				<LogMessage Message="Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft40 setting to 0 on start profile." />
 				<RunCode Name="craft40"/>
-				<StopBot/>
+				<StopBot/>				
 			</If>
 		
 		
@@ -205,7 +208,39 @@ Blank Profile
 				<LoadProfile Path="Gathering/40-51 Botanist.xml"/>
 			</If>
 		</If>
-				
+		
+		
+		
+		<!-- Heavensward Aether Currents -->		
+		<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
+				and IsAetherCurrentCompleted(397,3) and IsAetherCurrentCompleted(397,4) and IsAetherCurrentCompleted(397,5)
+				and IsAetherCurrentCompleted(397,6)	and IsAetherCurrentCompleted(397,7) and IsAetherCurrentCompleted(397,8)
+				and IsAetherCurrentCompleted(397,9) and IsAetherCurrentCompleted(397,10) and IsAetherCurrentCompleted(397,11)
+				and IsAetherCurrentCompleted(397,12) and IsAetherCurrentCompleted(397,13) and IsAetherCurrentCompleted(397,14)
+				and IsAetherCurrentCompleted(398,0) and IsAetherCurrentCompleted(398,1) and IsAetherCurrentCompleted(398,2)
+				and IsAetherCurrentCompleted(398,3) and IsAetherCurrentCompleted(398,4) and IsAetherCurrentCompleted(398,5)
+				and IsAetherCurrentCompleted(398,6) and IsAetherCurrentCompleted(398,7) and IsAetherCurrentCompleted(398,8)
+				and IsAetherCurrentCompleted(398,9) and IsAetherCurrentCompleted(398,10) and IsAetherCurrentCompleted(398,11)
+				and IsAetherCurrentCompleted(398,12) and IsAetherCurrentCompleted(398,13) and IsAetherCurrentCompleted(398,14)
+				and IsAetherCurrentCompleted(400,0) and IsAetherCurrentCompleted(400,1) and IsAetherCurrentCompleted(400,2)
+				and IsAetherCurrentCompleted(400,3) and IsAetherCurrentCompleted(400,4) and IsAetherCurrentCompleted(400,5)
+				and IsAetherCurrentCompleted(400,6) and IsAetherCurrentCompleted(400,7) and IsAetherCurrentCompleted(400,8)
+				and IsAetherCurrentCompleted(400,9) and IsAetherCurrentCompleted(400,10) and IsAetherCurrentCompleted(400,11)
+				and IsAetherCurrentCompleted(400,12) and IsAetherCurrentCompleted(400,13) and IsAetherCurrentCompleted(400,14)
+				and IsAetherCurrentCompleted(401,0) and IsAetherCurrentCompleted(401,1) and IsAetherCurrentCompleted(401,2)
+				and IsAetherCurrentCompleted(401,3) and IsAetherCurrentCompleted(401,4) and IsAetherCurrentCompleted(401,5)
+				and IsAetherCurrentCompleted(401,6) and IsAetherCurrentCompleted(401,7) and IsAetherCurrentCompleted(401,8)
+				and IsAetherCurrentCompleted(401,9) and IsAetherCurrentCompleted(401,10) and IsAetherCurrentCompleted(401,11)
+				and IsAetherCurrentCompleted(401,12) and IsAetherCurrentCompleted(401,13) and IsAetherCurrentCompleted(401,14)
+				and IsAetherCurrentCompleted(399,0) and IsAetherCurrentCompleted(399,1) and IsAetherCurrentCompleted(399,2)
+				and IsAetherCurrentCompleted(399,3) and IsAetherCurrentCompleted(399,4) and IsAetherCurrentCompleted(399,5)
+				and IsAetherCurrentCompleted(399,6) and IsAetherCurrentCompleted(399,7) and IsAetherCurrentCompleted(399,8)
+				and IsAetherCurrentCompleted(399,9) and IsAetherCurrentCompleted(399,10) and IsAetherCurrentCompleted(399,11)
+				and IsAetherCurrentCompleted(399,12) and IsAetherCurrentCompleted(399,13) and IsAetherCurrentCompleted(399,14))">
+			<LoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
+		</If>
+		
+		
 				
 		<!-- Craft Gathering and Crafting Gear 51 -->
 			<If Condition="&craft51; == 1">
@@ -256,42 +291,45 @@ Blank Profile
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">	
 					<LoadProfile Path="Crafting/51-63 Culinarian.xml"/>
 				</If>
-			</If>				
+			</If>
 		
 		
-		<!-- Heavensward Aether Currents -->		
-		<!--<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
-				and IsAetherCurrentCompleted(397,3) and IsAetherCurrentCompleted(397,4) and IsAetherCurrentCompleted(397,5)
-				and IsAetherCurrentCompleted(397,6)	and IsAetherCurrentCompleted(397,7) and IsAetherCurrentCompleted(397,8)
-				and IsAetherCurrentCompleted(397,9) and IsAetherCurrentCompleted(397,10) and IsAetherCurrentCompleted(397,11)
-				and IsAetherCurrentCompleted(397,12) and IsAetherCurrentCompleted(397,13) and IsAetherCurrentCompleted(397,14) 
-				and IsAetherCurrentCompleted(398,0) and IsAetherCurrentCompleted(398,1) and IsAetherCurrentCompleted(398,2) 
-				and IsAetherCurrentCompleted(398,3) and IsAetherCurrentCompleted(398,4) and IsAetherCurrentCompleted(398,5) 
-				and IsAetherCurrentCompleted(398,6) and IsAetherCurrentCompleted(398,7) and IsAetherCurrentCompleted(398,8) 
-				and IsAetherCurrentCompleted(398,9) and IsAetherCurrentCompleted(398,10) and IsAetherCurrentCompleted(398,11) 
-				and IsAetherCurrentCompleted(398,12) and IsAetherCurrentCompleted(398,13) and IsAetherCurrentCompleted(398,14) 
-				and IsAetherCurrentCompleted(400,0) and IsAetherCurrentCompleted(400,1) and IsAetherCurrentCompleted(400,2) 
-				and IsAetherCurrentCompleted(400,3) and IsAetherCurrentCompleted(400,4) and IsAetherCurrentCompleted(400,5) 
-				and IsAetherCurrentCompleted(400,6) and IsAetherCurrentCompleted(400,7) and IsAetherCurrentCompleted(400,8) 
-				and IsAetherCurrentCompleted(400,9) and IsAetherCurrentCompleted(400,10) and IsAetherCurrentCompleted(400,11) 
-				and IsAetherCurrentCompleted(400,12) and IsAetherCurrentCompleted(400,13) and IsAetherCurrentCompleted(400,14)
-				and IsAetherCurrentCompleted(401,0) and IsAetherCurrentCompleted(401,1) and IsAetherCurrentCompleted(401,2) 
-				and IsAetherCurrentCompleted(401,3) and IsAetherCurrentCompleted(401,4) and IsAetherCurrentCompleted(401,5) 
-				and IsAetherCurrentCompleted(401,6) and IsAetherCurrentCompleted(401,7) and IsAetherCurrentCompleted(401,8) 
-				and IsAetherCurrentCompleted(401,9) and IsAetherCurrentCompleted(401,10) and IsAetherCurrentCompleted(401,11) 
-				and IsAetherCurrentCompleted(401,12) and IsAetherCurrentCompleted(401,13) and IsAetherCurrentCompleted(401,14) 
-				and IsAetherCurrentCompleted(399,0) and IsAetherCurrentCompleted(399,1) and IsAetherCurrentCompleted(399,2) 
-				and IsAetherCurrentCompleted(399,3) and IsAetherCurrentCompleted(399,4) and IsAetherCurrentCompleted(399,5) 
-				and IsAetherCurrentCompleted(399,6) and IsAetherCurrentCompleted(399,7) and IsAetherCurrentCompleted(399,8) 
-				and IsAetherCurrentCompleted(399,9) and IsAetherCurrentCompleted(399,10) and IsAetherCurrentCompleted(399,11) 
-				and IsAetherCurrentCompleted(399,12) and IsAetherCurrentCompleted(399,13) and IsAetherCurrentCompleted(399,14))">
-			<LoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
-		</If>-->	
 		
+		<!-- Stormblood Aether Currents -->		
+		<If Condition="not (IsAetherCurrentCompleted(613,0) and IsAetherCurrentCompleted(613,1) and IsAetherCurrentCompleted(613,2)
+				and IsAetherCurrentCompleted(613,3) and IsAetherCurrentCompleted(613,4) and IsAetherCurrentCompleted(613,5)
+				and IsAetherCurrentCompleted(613,6)	and IsAetherCurrentCompleted(613,7) and IsAetherCurrentCompleted(613,8)
+				and IsAetherCurrentCompleted(613,9) and IsAetherCurrentCompleted(613,10) and IsAetherCurrentCompleted(613,11)
+				and IsAetherCurrentCompleted(613,12) and IsAetherCurrentCompleted(613,13) and IsAetherCurrentCompleted(613,14) 
+				and IsAetherCurrentCompleted(614,0) and IsAetherCurrentCompleted(614,1) and IsAetherCurrentCompleted(614,2) 
+				and IsAetherCurrentCompleted(614,3) and IsAetherCurrentCompleted(614,4) and IsAetherCurrentCompleted(614,5) 
+				and IsAetherCurrentCompleted(614,6) and IsAetherCurrentCompleted(614,7) and IsAetherCurrentCompleted(614,8) 
+				and IsAetherCurrentCompleted(614,9) and IsAetherCurrentCompleted(614,10) and IsAetherCurrentCompleted(614,11) 
+				and IsAetherCurrentCompleted(614,12) and IsAetherCurrentCompleted(614,13) and IsAetherCurrentCompleted(614,14) 
+				and IsAetherCurrentCompleted(622,0) and IsAetherCurrentCompleted(622,1) and IsAetherCurrentCompleted(622,2) 
+				and IsAetherCurrentCompleted(622,3) and IsAetherCurrentCompleted(622,4) and IsAetherCurrentCompleted(622,5) 
+				and IsAetherCurrentCompleted(622,6) and IsAetherCurrentCompleted(622,7) and IsAetherCurrentCompleted(622,8) 
+				and IsAetherCurrentCompleted(622,9) and IsAetherCurrentCompleted(622,10) and IsAetherCurrentCompleted(622,11) 
+				and IsAetherCurrentCompleted(622,12) and IsAetherCurrentCompleted(622,13) and IsAetherCurrentCompleted(622,14)
+				and IsAetherCurrentCompleted(612,0) and IsAetherCurrentCompleted(612,1) and IsAetherCurrentCompleted(612,2) 
+				and IsAetherCurrentCompleted(612,3) and IsAetherCurrentCompleted(612,4) and IsAetherCurrentCompleted(612,5) 
+				and IsAetherCurrentCompleted(612,6) and IsAetherCurrentCompleted(612,7) and IsAetherCurrentCompleted(612,8) 
+				and IsAetherCurrentCompleted(612,9) and IsAetherCurrentCompleted(612,10) and IsAetherCurrentCompleted(612,11) 
+				and IsAetherCurrentCompleted(612,12) and IsAetherCurrentCompleted(612,13) and IsAetherCurrentCompleted(612,14) 
+				and IsAetherCurrentCompleted(620,0) and IsAetherCurrentCompleted(620,1) and IsAetherCurrentCompleted(620,2) 
+				and IsAetherCurrentCompleted(620,3) and IsAetherCurrentCompleted(620,4) and IsAetherCurrentCompleted(620,5) 
+				and IsAetherCurrentCompleted(620,6) and IsAetherCurrentCompleted(620,7) and IsAetherCurrentCompleted(620,8) 
+				and IsAetherCurrentCompleted(620,9) and IsAetherCurrentCompleted(620,10) and IsAetherCurrentCompleted(620,11) 
+				and IsAetherCurrentCompleted(620,12) and IsAetherCurrentCompleted(620,13) and IsAetherCurrentCompleted(620,14)
+				and IsAetherCurrentCompleted(621,0) and IsAetherCurrentCompleted(621,1) and IsAetherCurrentCompleted(621,2)
+				and IsAetherCurrentCompleted(621,3) and IsAetherCurrentCompleted(621,4) and IsAetherCurrentCompleted(621,5)
+				and IsAetherCurrentCompleted(621,6)	and IsAetherCurrentCompleted(621,7) and IsAetherCurrentCompleted(621,8)
+				and IsAetherCurrentCompleted(621,9) and IsAetherCurrentCompleted(621,10) and IsAetherCurrentCompleted(621,11)
+				and IsAetherCurrentCompleted(621,12) and IsAetherCurrentCompleted(621,13) and IsAetherCurrentCompleted(621,14))">
+			<LoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
+		</If>		
 		
-		<!-- Craft 53 BTN/MIN MH & OH -->
-		
-		
+				
 		
 		<!-- Gatherer's to 63 -->
 		<If Condition="&min; == 1">
@@ -303,115 +341,143 @@ Blank Profile
 			<If Condition="not IsQuestCompleted(68156) or Core.Me.Levels[ClassJobType.Botanist] &lt; 63">
 				<LoadProfile Path="Gathering/51-63 Botanist.xml"/>
 			</If>
-		</If>		
-		
+		</If>
+
+
 		
 		<!-- Craft Gathering and Crafting Gear 63 -->
+			<If Condition="&craft63; == 1">
+				<LogMessage Message="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft63 setting to 0 on start profile." />
+				<RunCode Name="craft63"/>
+				<StopBot/>
+			</If>
+			
+			
+			
+		<!-- NoN Preferred Realm to 65 in Crafting -->
+		<If Condition="&pref; == 0">	
+			<If Condition="&crp; == 1">		
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 65">	
+					<LoadProfile Path="Crafting/63-65 CarpenterNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">				
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 65">	
+					<LoadProfile Path="Crafting/63-65 BlacksmithNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 65">	
+					<LoadProfile Path="Crafting/63-65 ArmorerNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 65">	
+					<LoadProfile Path="Crafting/63-65 GoldsmithNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 65">	
+					<LoadProfile Path="Crafting/63-65 LeatherworkerNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 65">	
+					<LoadProfile Path="Crafting/63-65 WeaverNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 65">	
+				<LoadProfile Path="Crafting/63-65 AlchemistNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 65">	
+					<LoadProfile Path="Crafting/63-65 CulinarianNP.xml"/>
+				</If>
+			</If>
+		</If>
 		
 		
 		
-		<!-- Do DoH Quests -->
-		<!-- Dondition Check Expansion Window -->
-		<!-- Craft Melded Class Quest Items First -->
-		<If Condition="&meld; == 1">
-			<If Condition="&crp; == 1">
-				<If Condition="not HasItem(1827) and not IsQuestCompleted(65678) and Core.Me.Levels[ClassJobType.Carpenter] &gt; 49">
-					<Lisbeth Json="[{'Item': 1827,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 1942,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not HasHqItem(1942) and not IsQuestCompleted(66075) and Core.Me.Levels[ClassJobType.Carpenter] &gt; 49">
-					<Lisbeth Json="[{'Item': 1942,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
+		<!-- Check to see if we have unlocked Collectables and More -->	
+			<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
+							and IsQuestCompleted(66957) and IsQuestCompleted(66958)
+							and IsQuestCompleted(67632) and IsQuestCompleted(67633)
+							and IsQuestCompleted(66174) and IsQuestCompleted(66175)
+							and IsQuestCompleted(66999) and IsQuestCompleted(67634)
+							and IsQuestCompleted(68477))">
+				<LogMessage Message="Going to learn Collectables and More!" />
+				<LoadProfile Path="Quests/Unlock Collectables and More.xml"/>	
 			</If>
-			<If Condition="&bsm; == 1">
-				<If Condition="not HasItem(2344) and not IsQuestCompleted(65832) and Core.Me.Levels[ClassJobType.Blacksmith] &gt; 49">
-					<Lisbeth Json="[{'Item': 2344,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 1663,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not HasHqItem(1663) and not IsQuestCompleted(65838) and Core.Me.Levels[ClassJobType.Blacksmith] &gt; 49">
-					<Lisbeth Json="[{'Item': 1663,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
-			<If Condition="&arm; == 1">
-				<If Condition="not HasItem(2236) and not IsQuestCompleted(65814) and Core.Me.Levels[ClassJobType.Armorer] &gt; 49">
-					<Lisbeth Json="[{'Item': 2236,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 3203,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not HasHqItem(3203) and not IsQuestCompleted(65820) and Core.Me.Levels[ClassJobType.Armorer] &gt; 49">
-					<Lisbeth Json="[{'Item': 3203,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
-			<If Condition="&gsm; == 1">
-				<If Condition="not HasItem(2111) and not IsQuestCompleted(66151) and Core.Me.Levels[ClassJobType.Goldsmith] &gt; 49">
-					<Lisbeth Json="[{'Item': 2111,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 2876,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not HasHqItem(4514) and not IsQuestCompleted(66194) and Core.Me.Levels[ClassJobType.Goldsmith] &gt; 49">
-					<Lisbeth Json="[{'Item': 2876,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
-			<If Condition="&ltw; == 1">
-				<If Condition="not HasItem(3784) and not IsQuestCompleted(65673) and Core.Me.Levels[ClassJobType.Leatherworker] &gt; 49">
-					<Lisbeth Json="[{'Item': 3784,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 3206,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not HasHqItem(3206) and not IsQuestCompleted(65602) and Core.Me.Levels[ClassJobType.Leatherworker] &gt; 49">
-					<Lisbeth Json="[{'Item': 3206,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
-			<If Condition="&wvr; == 1">
-				<If Condition="not HasItem(3039) and not IsQuestCompleted(66127) and Core.Me.Levels[ClassJobType.Weaver] &gt; 49">
-					<Lisbeth Json="[{'Item': 3039,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
-			<If Condition="&alc; == 1">
-				<If Condition="not HasItem(2149) and not IsQuestCompleted(66118) and Core.Me.Levels[ClassJobType.Alchemist] &gt; 49">
-					<Lisbeth Json="[{'Item': 2149,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0},{'Item': 1987,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not HasHqItem(1987) and not IsQuestCompleted(66186) and Core.Me.Levels[ClassJobType.Alchemist] &gt; 49">
-					<Lisbeth Json="[{'Item': 1987,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
-			<LogMessage Message="Please set the meld setting atop of Start profile to 0 and meld any items you crafted and restart the profile. Info on required materia atop of Start profile." />
-			<RunCode Name="meld"/>
-			<StopBot/>
-		</If>		
-		<!-- Start Class Quest Profiles -->	
-		<If Condition="&crp; == 1">		
-				<If Condition="not IsQuestCompleted(67981)">	
+			
+			
+		
+		<!-- Craft Class Quest Items and Get Master III Books -->
+			<If Condition="&craftClass; == 1">
+				<LogMessage Message="Get Master III books and then Craft class quest items, import orders into lisbeth. You can find it under Quest Items folder, clear bags before beginning and store items in a safe place for later and set craftClass setting to 0 on start profile." />
+				<RunCode Name="craftClass"/>
+				<StopBot/>
+			</If>			
+		
+		
+				
+		<!-- Start Class Quest Profiles -->		
+			<If Condition="&crp; == 1">		
+				<If Condition="not IsQuestCompleted(67979)">	
 					<LoadProfile Path="Quests/Carpenter Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
-				<If Condition="not IsQuestCompleted(68155)">	
+				<If Condition="not IsQuestCompleted(68153)">	
 					<LoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
-				<If Condition="not IsQuestCompleted(68134)">	
+				<If Condition="not IsQuestCompleted(68132)">	
 					<LoadProfile Path="Quests/Armorer Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
-				<If Condition="not IsQuestCompleted(68139)">	
+				<If Condition="not IsQuestCompleted(68137)">	
 					<LoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
 				</If>
 			</If>
+		<If Condition="&craftClass1; == 1">
+			<LogMessage Message="Clean inventory, set craftClass1 to 0 then restart start profile." />
+			<RunCode Name="craftClass1"/>
+			<StopBot/>
+		</If>		
 			<If Condition="&ltw; == 1">	
-				<If Condition="not IsQuestCompleted(68151)">	
+				<If Condition="not IsQuestCompleted(68147)">	
 					<LoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
-				<If Condition="not IsQuestCompleted(67971)">	
+				<If Condition="not IsQuestCompleted(67969)">	
 					<LoadProfile Path="Quests/Weaver Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
-				<If Condition="not IsQuestCompleted(67976)">	
+				<If Condition="not IsQuestCompleted(67974)">	
 				<LoadProfile Path="Quests/Alchemist Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
-				<If Condition="not IsQuestCompleted(68144)">	
+				<If Condition="not IsQuestCompleted(68142)">	
 					<LoadProfile Path="Quests/Culinarian Class Quests.xml"/>
 				</If>
-			</If>			
+			</If>
+			
+			
+
+		<!-- Farm Yellow Scrip Level 70 Gear --> 
+			<If Condition="&craft70; == 1">	
+				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and set craft70 setting to 0 on start profile." />
+				<RunCode Name="craft70"/>
+				<StopBot/>
+			</If>
+			
 		
 		
 		<!-- 63-70 Ishgard Crafting -->		
@@ -454,61 +520,63 @@ Blank Profile
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">	
 					<LoadProfile Path="Crafting/63-70 Culinarian.xml"/>
 				</If>
+			</If>	
+
+
+
+		<!-- NoN Preferred Realm Class Quest Profiles -->		
+			<If Condition="&crp; == 1">		
+				<If Condition="not IsQuestCompleted(67981)">	
+					<LoadProfile Path="Quests/Carpenter Class Quests.xml"/>
+				</If>
 			</If>
-				
-				
-		<!-- Stormblood Aether Currents -->		
-		<!--<If Condition="not (IsAetherCurrentCompleted(613,0) and IsAetherCurrentCompleted(613,1) and IsAetherCurrentCompleted(613,2)
-				and IsAetherCurrentCompleted(613,3) and IsAetherCurrentCompleted(613,4) and IsAetherCurrentCompleted(613,5)
-				and IsAetherCurrentCompleted(613,6)	and IsAetherCurrentCompleted(613,7) and IsAetherCurrentCompleted(613,8)
-				and IsAetherCurrentCompleted(613,9) and IsAetherCurrentCompleted(613,10) and IsAetherCurrentCompleted(613,11)
-				and IsAetherCurrentCompleted(613,12) and IsAetherCurrentCompleted(613,13) and IsAetherCurrentCompleted(613,14) 
-				and IsAetherCurrentCompleted(614,0) and IsAetherCurrentCompleted(614,1) and IsAetherCurrentCompleted(614,2) 
-				and IsAetherCurrentCompleted(614,3) and IsAetherCurrentCompleted(614,4) and IsAetherCurrentCompleted(614,5) 
-				and IsAetherCurrentCompleted(614,6) and IsAetherCurrentCompleted(614,7) and IsAetherCurrentCompleted(614,8) 
-				and IsAetherCurrentCompleted(614,9) and IsAetherCurrentCompleted(614,10) and IsAetherCurrentCompleted(614,11) 
-				and IsAetherCurrentCompleted(614,12) and IsAetherCurrentCompleted(614,13) and IsAetherCurrentCompleted(614,14) 
-				and IsAetherCurrentCompleted(622,0) and IsAetherCurrentCompleted(622,1) and IsAetherCurrentCompleted(622,2) 
-				and IsAetherCurrentCompleted(622,3) and IsAetherCurrentCompleted(622,4) and IsAetherCurrentCompleted(622,5) 
-				and IsAetherCurrentCompleted(622,6) and IsAetherCurrentCompleted(622,7) and IsAetherCurrentCompleted(622,8) 
-				and IsAetherCurrentCompleted(622,9) and IsAetherCurrentCompleted(622,10) and IsAetherCurrentCompleted(622,11) 
-				and IsAetherCurrentCompleted(622,12) and IsAetherCurrentCompleted(622,13) and IsAetherCurrentCompleted(622,14)
-				and IsAetherCurrentCompleted(612,0) and IsAetherCurrentCompleted(612,1) and IsAetherCurrentCompleted(612,2) 
-				and IsAetherCurrentCompleted(612,3) and IsAetherCurrentCompleted(612,4) and IsAetherCurrentCompleted(612,5) 
-				and IsAetherCurrentCompleted(612,6) and IsAetherCurrentCompleted(612,7) and IsAetherCurrentCompleted(612,8) 
-				and IsAetherCurrentCompleted(612,9) and IsAetherCurrentCompleted(612,10) and IsAetherCurrentCompleted(612,11) 
-				and IsAetherCurrentCompleted(612,12) and IsAetherCurrentCompleted(612,13) and IsAetherCurrentCompleted(612,14) 
-				and IsAetherCurrentCompleted(620,0) and IsAetherCurrentCompleted(620,1) and IsAetherCurrentCompleted(620,2) 
-				and IsAetherCurrentCompleted(620,3) and IsAetherCurrentCompleted(620,4) and IsAetherCurrentCompleted(620,5) 
-				and IsAetherCurrentCompleted(620,6) and IsAetherCurrentCompleted(620,7) and IsAetherCurrentCompleted(620,8) 
-				and IsAetherCurrentCompleted(620,9) and IsAetherCurrentCompleted(620,10) and IsAetherCurrentCompleted(620,11) 
-				and IsAetherCurrentCompleted(620,12) and IsAetherCurrentCompleted(620,13) and IsAetherCurrentCompleted(620,14)
-				and IsAetherCurrentCompleted(621,0) and IsAetherCurrentCompleted(621,1) and IsAetherCurrentCompleted(621,2)
-				and IsAetherCurrentCompleted(621,3) and IsAetherCurrentCompleted(621,4) and IsAetherCurrentCompleted(621,5)
-				and IsAetherCurrentCompleted(621,6)	and IsAetherCurrentCompleted(621,7) and IsAetherCurrentCompleted(621,8)
-				and IsAetherCurrentCompleted(621,9) and IsAetherCurrentCompleted(621,10) and IsAetherCurrentCompleted(621,11)
-				and IsAetherCurrentCompleted(621,12) and IsAetherCurrentCompleted(621,13) and IsAetherCurrentCompleted(621,14))">
-			<LoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
-		</If>-->		
-		
-		
-		<!-- Farm Gatherer's Yellow Scrip Level 70 Set --> 
-		
-		
-		
-		<!-- Farm Crafter's Yellow Scrip Level 70 Set -->
+			<If Condition="&bsm; == 1">				
+				<If Condition="not IsQuestCompleted(68155)">	
+					<LoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="not IsQuestCompleted(68134)">	
+					<LoadProfile Path="Quests/Armorer Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="not IsQuestCompleted(68139)">	
+					<LoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="not IsQuestCompleted(68151)">	
+					<LoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="not IsQuestCompleted(67971)">	
+					<LoadProfile Path="Quests/Weaver Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="not IsQuestCompleted(67976)">	
+				<LoadProfile Path="Quests/Alchemist Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="not IsQuestCompleted(68144)">	
+					<LoadProfile Path="Quests/Culinarian Class Quests.xml"/>
+				</If>
+			</If>
 		
 		
 		
 		<!-- Gatherer's to 70 -->
 		<If Condition="&min; == 1">		
 			<If Condition="not IsQuestCompleted(68094) or Core.Me.Levels[ClassJobType.Miner] &lt; 70">
-				<LoadProfile Path="Gathering/51-63 Miner.xml"/>
+				<LoadProfile Path="Gathering/63-70 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(68160) or Core.Me.Levels[ClassJobType.Botanist] &lt; 70">
-				<LoadProfile Path="Gathering/51-63 Botanist.xml"/>
+				<LoadProfile Path="Gathering/63-70 Botanist.xml"/>
 			</If>
 		</If>
 		
@@ -602,7 +670,7 @@ Blank Profile
 		</CodeChunk>
 		<CodeChunk Name="finish">
 		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Congrats on level 21 on BTN/MIN and all Crafters.\n More to come! :)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Congrats on level 70 on BTN/MIN and all Crafters.\n More to come! :)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(40000);
 		]]>
 		</CodeChunk>
@@ -638,7 +706,31 @@ Blank Profile
 		</CodeChunk>
 		<CodeChunk Name="craft51">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 51 gear and gather gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft51 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 51 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft51 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="craft63">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Craft level 63 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft63 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="craftClass">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Get Master III books and then Craft class quest items, import orders into lisbeth.\n You can find it under Quest Items folder, clear bags before beginning and store items in\n a safe place for later and set craftClass setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);		
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="craftClass1">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Clean inventory, set craftClass1 to 0 then restart start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);		
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="craft70">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Get level 70 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to get and\n set craft70 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>

@@ -18,9 +18,16 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Carpenter Class Quests</Name>
+	<Name>Culinarian Class Quests</Name>
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
 	<Order>	
+	
+	<BotSettings BlockSkippingCutscenes="0"/>
+	
+	<If Condition="FreeItemSlots() &lt; 41">
+		<LogMessage Message="Make Sure there is at least 40 or more free slots in your inventory then hit start on the bot." />
+		<StopBot/>
+	</If>
 	
 	<If Condition="not IsQuestCompleted(68144)">
 	<ChangeClass Job="Culinarian" />
@@ -43,10 +50,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
         <LLTurnIn QuestId="65795" ItemId="4730" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Winning Friends with Aldgoat (Level 25) -->
       <If Condition="IsQuestCompleted(65795) and not HasQuest(65796) and not IsQuestCompleted(65796) and Core.Player.ClassLevel &gt; 24">
@@ -61,10 +64,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
         <LLTurnIn QuestId="65796" ItemId="4644" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- The Chefsbane Cometh (Level 30) -->
       <If Condition="IsQuestCompleted(65796) and not HasQuest(65802) and not IsQuestCompleted(65802) and Core.Player.ClassLevel &gt; 29">
@@ -91,10 +90,6 @@ Angles24
       <If Condition="HasQuest(65802) and not IsQuestCompleted(65802) and GetQuestStep(65802) == 255">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
         <LLTurnIn QuestId="65802" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Of Cooks and Books (Level 35) -->
       <If Condition="IsQuestCompleted(65802) and not HasQuest(65803) and not IsQuestCompleted(65803) and Core.Player.ClassLevel &gt; 34">
@@ -113,10 +108,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTurnIn QuestId="65803" ItemId="4677" RequiresHq="True" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Diplomacy of the Skillet (Level 40) -->
       <If Condition="IsQuestCompleted(65803) and not HasQuest(65804) and not IsQuestCompleted(65804) and Core.Player.ClassLevel &gt; 49">
@@ -141,10 +132,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTurnIn QuestId="65804" ItemId="4712,4733,4749" RequiresHq="true,true,true" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- A Taste of Home (Level 45) -->
       <If Condition="IsQuestCompleted(65804) and not HasQuest(65805) and not IsQuestCompleted(65805) and Core.Player.ClassLevel &gt; 44">
@@ -163,10 +150,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTurnIn QuestId="65805" ItemId="4679" RequiresHq="True" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Revenge of the Chefsbane (Level 50) -->
       <If Condition="IsQuestCompleted(65805) and not HasQuest(65806) and not IsQuestCompleted(65806) and Core.Player.ClassLevel &gt; 49">
@@ -240,10 +223,6 @@ Angles24
       <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 255">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
         <LLTurnIn QuestId="65806" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Wait on Me (Level 50) -->
       <If Condition="IsQuestCompleted(65806) and not HasQuest(67579) and not IsQuestCompleted(67579) and Core.Player.ClassLevel &gt; 49">
@@ -263,10 +242,6 @@ Angles24
       <If Condition="HasQuest(67579) and not IsQuestCompleted(67579) and GetQuestStep(67579) == 255">
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
         <LLTurnIn QuestId="67579" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- A Spoonful Less Sugar (Level 53) -->
       <If Condition="IsQuestCompleted(67579) and not HasQuest(67580) and not IsQuestCompleted(67580) and Core.Player.ClassLevel &gt; 52">
@@ -300,10 +275,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
         <LLTurnIn NpcId="1012568" ItemId="12842, 12846" RequiresHq="True, False" QuestId="67580" XYZ="69.7248, 44.3999, 135.967"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Looking for Some Hot Stuff (Level 55) -->
       <If Condition="IsQuestCompleted(67580) and not HasQuest(67581) and not IsQuestCompleted(67581) and Core.Player.ClassLevel &gt; 54">
@@ -340,10 +311,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
         <LLTurnIn NpcId="1012568" ItemId="12849, 12862, 12855" RequiresHq="True, True, True" QuestId="67581" XYZ="69.7248, 44.3999, 135.967"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Love Meat Tender (Level 58) -->
       <If Condition="IsQuestCompleted(67581) and not HasQuest(67582) and not IsQuestCompleted(67582) and Core.Player.ClassLevel &gt; 57">
@@ -362,10 +329,6 @@ Angles24
         </If>
         <GetTo ZoneId="128" XYZ="-54.6426, 43.9917, -151.202"/>
         <LLTurnIn NpcId="1000947" ItemId="12858" RequiresHq="True" QuestId="67582" XYZ="-54.6426, 43.9917, -151.202"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- The Spirit of Hospitality (Level 60) -->
       <If Condition="IsQuestCompleted(67582) and not HasQuest(67583) and not IsQuestCompleted(67583) and Core.Player.ClassLevel &gt; 59">
@@ -398,10 +361,6 @@ Angles24
       <If Condition="HasQuest(67583) and not IsQuestCompleted(67583) and GetQuestStep(67583) == 255">
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
         <LLTurnIn NpcId="1012568" QuestId="67583" XYZ="69.7248, 44.3999, 135.967"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Flavors of the Far East (Level 60) -->
       <If Condition="IsQuestCompleted(67583) and not HasQuest(68140) and not IsQuestCompleted(68140) and Core.Player.ClassLevel &gt; 59">
@@ -417,10 +376,6 @@ Angles24
       <If Condition="HasQuest(68140) and not IsQuestCompleted(68140) and GetQuestStep(68140) == 255">
         <GetTo ZoneId="156" XYZ="31.90068, 50.99996, -819.4875"/>
         <LLTurnIn QuestId="68140" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Rice to the Occasion (Level 63) -->
       <If Condition="IsQuestCompleted(68140) and not HasQuest(68141) and not IsQuestCompleted(68141) and Core.Player.ClassLevel &gt; 62">
@@ -455,10 +410,6 @@ Angles24
       <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 255">
         <GetTo ZoneId="156" XYZ="32.3839, 50.99997, -820.7322"/>
         <LLTurnIn QuestId="68141" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- A Broth from the Brine (Level 65) -->
       <If Condition="IsQuestCompleted(68141) and not HasQuest(68142) and not IsQuestCompleted(68142) and Core.Player.ClassLevel &gt; 64">
@@ -493,10 +444,6 @@ Angles24
       <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 255">
         <GetTo ZoneId="156" XYZ="32.37473, 50.99997, -821.4847"/>
         <LLTurnIn QuestId="68142" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- Teach a Man to Make Fish (Lvel 68) -->
       <If Condition="IsQuestCompleted(68142) and not HasQuest(68143) and not IsQuestCompleted(68143) and Core.Player.ClassLevel &gt; 67">
@@ -542,10 +489,6 @@ Angles24
       <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 255">
         <GetTo ZoneId="156" XYZ="34.23852, 50.99996, -821.674"/>
         <LLTurnIn QuestId="68143" NpcId="1020161" XYZ="33.98181, 50.99997, -823.0869"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
       <!-- The Way to a Father's Heart (Level 70) -->
       <If Condition="IsQuestCompleted(68143) and not HasQuest(68144) and not IsQuestCompleted(68144) and Core.Player.ClassLevel &gt; 69">
@@ -597,10 +540,6 @@ Angles24
         </If>
         <GetTo ZoneId="156" XYZ="32.38362, 50.99997, -820.6827"/>
         <LLTurnIn ItemIds="17940" QuestId="68144" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
       </If>
     </If>
 	

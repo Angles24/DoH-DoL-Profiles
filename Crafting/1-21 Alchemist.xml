@@ -17,6 +17,8 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
 	
+	<BotSettings BlockSkippingCutscenes="0"/>
+	
 	<!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->
 	<If Condition="ClassName != ClassJobType.Alchemist">
 		<ChangeClass Job="Alchemist" />
@@ -49,6 +51,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 5 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 5">
 				<Lisbeth Json="[{'Item': 5487,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Alchemist.xml"/>
 			</If>
 	
 	<!-- Do Level 5 Quest -->
@@ -74,6 +77,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 10 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 10">
 				<Lisbeth Json="[{'Item': 4564,'Group': 0,'Amount': 30,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Alchemist.xml"/>
 			</If>
 	
 	<!-- Do Level 10 Quest -->
@@ -99,6 +103,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 15 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 15">
 				<Lisbeth Json="[{'Item': 5515,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Alchemist.xml"/>
 			</If>
 	
 	<!-- Do Level 15 Quest -->
@@ -135,6 +140,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 21 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21">
 				<Lisbeth Json="[{'Item': 4856,'Group': 0,'Amount': 30,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<LoadProfile Path="1-21 Alchemist.xml"/>
 			</If>
 	</If>
 	
