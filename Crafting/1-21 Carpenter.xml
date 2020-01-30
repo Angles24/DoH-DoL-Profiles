@@ -24,7 +24,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<ChangeClass Job="Carpenter" />
 	</If>
 	<If Condition="ClassName == ClassJobType.Carpenter">
-	<If Condition="Core.Player.ClassLevel &lt; 21">
 		<RunCode Name="AutoEquip"/>
 		<RunCode Name="UpdateGearSet"/>
 	
@@ -156,7 +155,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<LogMessage Message="Congrats on Level 21, moving on." />
 		<RunCode Name="AutoEquip"/>	
 		<RunCode Name="UpdateGearSet"/>												
-	</If>
 	</If>
 	
 	<LoadProfile Path="../Start.xml"/>
