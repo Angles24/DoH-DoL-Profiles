@@ -1,17 +1,9 @@
-# DoH80-DoL80 WIP
+# DoH80-DoL80
 Profiles to get 80 in all Crafters and Gatherers
 
-## Requirements
+## Currently upto 70 on all crafters and btn/min
 
-  [Exbuddy](https://github.com/Entrax643/ExBuddy)
+Head over to the [Wiki](https://github.com/Angles24/DoH80-DoL80/wiki) for info.
+
   
-   Clone / Download , place the folder in the Plugins folder and rename the folder to "__ExBuddy__".
-   
-   
-  
-  [LlamaLibrary](https://github.com/nt153133/LlamaLibrary)
-  
-   Clone / Download , place the folder in the BotBases folder and rename the folder to "__LlamaLibrary__".
-   
-   Lisbeth
-  
+
