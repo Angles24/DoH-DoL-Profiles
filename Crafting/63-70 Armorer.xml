@@ -29,7 +29,10 @@ Authors:  Kayla / Angles24
 				<If Condition="HasAtLeast(4632,1)">
 					<Lisbeth Json="[{'Group':1,'Item':28743,'Amount':10,'Enabled':true,'Type':'Armorer','Collectable':false,'Manual':4632}]"/>
 				</If>
-				<If Condition="not HasAtLeast(4632,1)">
+				<If Condition="HasAtLeast(12667,1)">
+					<Lisbeth Json="[{'Group':1,'Item':28754,'Amount':10,'Enabled':true,'Type':'Weaver','Collectable':false,'Manual':12667}]"/>
+				</If>
+				<If Condition="not HasAtLeast(4632,1) and not HasAtLeast(12667,1)">
 					<Lisbeth Json="[{'Group':1,'Item':28743,'Amount':10,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
 				</If>
 			</If> 
