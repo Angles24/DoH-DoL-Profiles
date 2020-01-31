@@ -19,6 +19,7 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="not HasAtLeast(28909,60)">
+			<ChangeClass Job="Botanist" />
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not IsOnSubMap(2753)">
 				<GetTo ZoneId="614" XYZ="-512.7462, 5.95612, 690.1656"/>
