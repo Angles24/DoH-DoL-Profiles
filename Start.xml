@@ -581,7 +581,87 @@ Blank Profile
 		</If>
 		
 		
+		
+		<!-- Shadowbringer's Aether Currents -->
+		<If Condition="not (IsAetherCurrentCompleted(813,0) and IsAetherCurrentCompleted(813,1) and IsAetherCurrentCompleted(813,2)
+				and IsAetherCurrentCompleted(813,3) and IsAetherCurrentCompleted(813,4) and IsAetherCurrentCompleted(813,5)
+				and IsAetherCurrentCompleted(813,6)	and IsAetherCurrentCompleted(813,7) and IsAetherCurrentCompleted(813,8)
+				and IsAetherCurrentCompleted(813,9) and IsAetherCurrentCompleted(813,10) and IsAetherCurrentCompleted(813,11)
+				and IsAetherCurrentCompleted(813,12) and IsAetherCurrentCompleted(813,13) and IsAetherCurrentCompleted(813,14) 
+				and IsAetherCurrentCompleted(816,0) and IsAetherCurrentCompleted(816,1) and IsAetherCurrentCompleted(816,2) 
+				and IsAetherCurrentCompleted(816,3) and IsAetherCurrentCompleted(816,4) and IsAetherCurrentCompleted(816,5) 
+				and IsAetherCurrentCompleted(816,6) and IsAetherCurrentCompleted(816,7) and IsAetherCurrentCompleted(816,8) 
+				and IsAetherCurrentCompleted(816,9) and IsAetherCurrentCompleted(816,10) and IsAetherCurrentCompleted(816,11) 
+				and IsAetherCurrentCompleted(816,12) and IsAetherCurrentCompleted(816,13) and IsAetherCurrentCompleted(816,14) 
+				and IsAetherCurrentCompleted(815,0) and IsAetherCurrentCompleted(815,1) and IsAetherCurrentCompleted(815,2) 
+				and IsAetherCurrentCompleted(815,3) and IsAetherCurrentCompleted(815,4) and IsAetherCurrentCompleted(815,5) 
+				and IsAetherCurrentCompleted(815,6) and IsAetherCurrentCompleted(815,7) and IsAetherCurrentCompleted(815,8) 
+				and IsAetherCurrentCompleted(815,9) and IsAetherCurrentCompleted(815,10) and IsAetherCurrentCompleted(815,11) 
+				and IsAetherCurrentCompleted(815,12) and IsAetherCurrentCompleted(815,13) and IsAetherCurrentCompleted(815,14)
+				and IsAetherCurrentCompleted(817,0) and IsAetherCurrentCompleted(817,1) and IsAetherCurrentCompleted(817,2) 
+				and IsAetherCurrentCompleted(817,3) and IsAetherCurrentCompleted(817,4) and IsAetherCurrentCompleted(817,5) 
+				and IsAetherCurrentCompleted(817,6) and IsAetherCurrentCompleted(817,7) and IsAetherCurrentCompleted(817,8) 
+				and IsAetherCurrentCompleted(817,9) and IsAetherCurrentCompleted(817,10) and IsAetherCurrentCompleted(817,11) 
+				and IsAetherCurrentCompleted(817,12) and IsAetherCurrentCompleted(817,13) and IsAetherCurrentCompleted(817,14) 
+				and IsAetherCurrentCompleted(814,0) and IsAetherCurrentCompleted(814,1) and IsAetherCurrentCompleted(814,2) 
+				and IsAetherCurrentCompleted(814,3) and IsAetherCurrentCompleted(814,4) and IsAetherCurrentCompleted(814,5) 
+				and IsAetherCurrentCompleted(814,6) and IsAetherCurrentCompleted(814,7) and IsAetherCurrentCompleted(814,8) 
+				and IsAetherCurrentCompleted(814,9) and IsAetherCurrentCompleted(814,10) and IsAetherCurrentCompleted(814,11) 
+				and IsAetherCurrentCompleted(814,12) and IsAetherCurrentCompleted(814,13) and IsAetherCurrentCompleted(814,14)
+				and IsAetherCurrentCompleted(818,0) and IsAetherCurrentCompleted(818,1) and IsAetherCurrentCompleted(818,2)
+				and IsAetherCurrentCompleted(818,3) and IsAetherCurrentCompleted(818,4) and IsAetherCurrentCompleted(818,5)
+				and IsAetherCurrentCompleted(818,6)	and IsAetherCurrentCompleted(818,7) and IsAetherCurrentCompleted(818,8)
+				and IsAetherCurrentCompleted(818,9) and IsAetherCurrentCompleted(818,10) and IsAetherCurrentCompleted(818,11)
+				and IsAetherCurrentCompleted(818,12) and IsAetherCurrentCompleted(818,13) and IsAetherCurrentCompleted(818,14))">
+			<LoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
+		</If>
+		
+		
+		<!-- Gatherer's to 80 -->
+		
+		
+				
 		<!-- 70-80 Ishgard Crafting -->
+			<If Condition="&crp; == 1">		
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
+					<LoadProfile Path="Crafting/70-80 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">				
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 80">	
+					<LoadProfile Path="Crafting/70-80 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">	
+					<LoadProfile Path="Crafting/70-80 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 80">	
+					<LoadProfile Path="Crafting/70-80 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 80">	
+					<LoadProfile Path="Crafting/70-80 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">	
+					<LoadProfile Path="Crafting/70-80 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">	
+				<LoadProfile Path="Crafting/70-80 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 80">	
+					<LoadProfile Path="Crafting/70-80 Culinarian.xml"/>
+				</If>
+			</If>	
 		
 		
 	</If>
