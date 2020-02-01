@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24 
+-->
+<Profile>
+  <Name>Skybuilders' Lamppost</Name>
+  <BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<Order>
+		
+		 <!-- Turn your shit in. -->
+        <If Condition="HasIshgardItem() &gt; 0 and GetSkybuilderScrips() &lt; 9000">
+			<RunCode Name="TurnIn"/>
+        </If>
+		
+		<!-- Check to see if we full on scrips -->
+		<If Condition="GetSkybuilderScrips &gt; 9000">
+			<LogMessage Message="SkyBuilders' Scripts Full." />
+			<RunCode Name="ScripFull"/>
+			<StopBot/>
+        </If>
+		
+		<!-- Check to see if need inventory space -->
+		<If Condition="FreeItemSlots() &lt; 26">
+			<LogMessage Message="Empty bag so there is at least 25 slots free." />
+			<RunCode Name="BagsFull"/>
+			<StopBot/>
+		</If>
+		
+		<!-- Check to see if we can at least craft 15 collectables -->
+		<If Condition="not HasAtLeast(5113,15) and not HasAtLeast(27699,60) and not HasAtLeast(28791,120) and not HasAtLeast(28796,120) and not HasAtLeast(28792,120)">
+			<LogMessage Message="Going to farm mats for 165 Skybuilders' Lampposts." />
+			<Lisbeth Json="[{'Group':1,'Item':5113,'Amount':165,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':27699,'Amount':660,'Enabled':true,'Type':'Gather'},{'Id':2,'Group':1,'Item':28791,'Amount':1320,'Enabled':true,'Type':'Gather'},{'Id':3,'Group':1,'Item':28796,'Amount':1320,'Enabled':true,'Type':'Gather'},{'Id':4,'Group':1,'Item':28792,'Amount':1320,'Enabled':true,'Type':'Gather'}]"/>
+		</If>
+		
+		<!-- Skybuilders' Lamppost -->
+		<If Condition="HasAtLeast(5113,15) and HasAtLeast(27699,60) and HasAtLeast(28791,120) and HasAtLeast(28796,120) and HasAtLeast(28792,120)">
+			<LogMessage Message="Going to craft 15 Skybuilders' Lamppost." />
+			<Lisbeth Json="[{'Group':1,'Item':28759,'Amount':15,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
+		</If>
+		
+		<!-- Turn your shit in. -->
+        <If Condition="HasIshgardItem() &gt; 0 and GetSkybuilderScrips() &lt; 9000">
+			<RunCode Name="TurnIn"/>
+        </If>
+		
+		<!-- Check to see if we full on scrips -->
+		<If Condition="GetSkybuilderScrips &gt; 9000">
+			<LogMessage Message="SkyBuilders' Scripts Full." />
+			<RunCode Name="ScripFull"/>
+			<StopBot/>
+        </If>
+		
+		<LoadProfile Path="Skybuilders' Lamppost.xml"/>
+			
+	</Order>	
+	<CodeChunks>
+		<CodeChunk Name="TurnIn">
+		<![CDATA[
+			Logging.Write("[Handin] calling");
+			await LlamaLibrary.IshgardHandinBase.Handin();
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="ScripFull">
+		<![CDATA[
+			Core.OverlayManager.AddToast(() => "SkyBuilder's Scrips Full.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(26000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BagsFull">
+		<![CDATA[
+			Core.OverlayManager.AddToast(() => "Bags are Full please empty and hit start to continue.", TimeSpan.FromMilliseconds(300000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(300000);
+		]]>
+		</CodeChunk>	
+  </CodeChunks>
+</Profile>
