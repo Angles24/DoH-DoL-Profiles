@@ -12,34 +12,11 @@ Authors:  Kayla / Angles24
 			<RunCode Name="TurnIn"/>
         </If>
 		
-		<If Condition="GetSkybuilderScrips &gt; 9000">
+		<If Condition="GetSkybuilderScrips() &gt; 9000">
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
 			<StopBot/>
         </If>
-		
-		<If Condition="not HasAtLeast(28909,60)">
-			<ChangeClass Job="Botanist" />
-			<RunCode Name="Enable_Flight"/>
-			<If Condition="not IsOnSubMap(2753)">
-				<GetTo ZoneId="614" XYZ="-512.7462, 5.95612, 690.1656"/>
-				<RunCode Name="GoSwimming"/>
-			</If>			
-			<If Condition="IsOnSubMap(2753)">				
-				<ExGather while="not HasAtLeast(28909,60)">
-					<GatherObject>Lush Vegetation Patch</GatherObject>
-					<HotSpots>
-						<HotSpot Radius="90" XYZ="-558.8938, -81.76813, 673.1323" name="Lush Vegetation Patches" />
-						<HotSpot Radius="90" XYZ="-495.9904, -98.06711, 723.451" name="Lush Vegetation Patches" />
-						<HotSpot Radius="90" XYZ="-618.1484, -110.4759, 777.9429" name="Lush Vegetation Patches" />
-					</HotSpots>
-					<ItemNames>
-						<ItemName>Skybuilders' Cocoon</ItemName>
-					</ItemNames>
-					<GatherRotation>Yield</GatherRotation>
-				</ExGather>
-			</If>
-		</If>
 		
 		<!-- Skybuilders' Barrel -->
 		<If Condition="Core.Me.Levels[ClassJobType.Weaver] &gt; 69 and  Core.Me.Levels[ClassJobType.Weaver] &lt; 80 and FreeItemSlots() &gt; 15">
@@ -67,7 +44,7 @@ Authors:  Kayla / Angles24
 			<RunCode Name="TurnIn"/>
         </If>
 		
-		<If Condition="GetSkybuilderScrips &gt; 9000">
+		<If Condition="GetSkybuilderScrips() &gt; 9000">
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
 			<StopBot/>

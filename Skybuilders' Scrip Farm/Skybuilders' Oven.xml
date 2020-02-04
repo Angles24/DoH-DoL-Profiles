@@ -13,7 +13,7 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<!-- Check to see if we full on scrips -->
-		<If Condition="GetSkybuilderScrips &gt; 9000">
+		<If Condition="GetSkybuilderScrips() &gt; 9000">
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
 			<StopBot/>
@@ -44,7 +44,7 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<!-- Check to see if we full on scrips -->
-		<If Condition="GetSkybuilderScrips &gt; 9000">
+		<If Condition="GetSkybuilderScrips() &gt; 9000">
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
 			<StopBot/>

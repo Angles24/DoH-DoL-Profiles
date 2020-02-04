@@ -12,7 +12,7 @@ Authors:  Kayla / Angles24
 			<RunCode Name="TurnIn"/>
         </If>
 		
-		<If Condition="GetSkybuilderScrips &gt; 9000">
+		<If Condition="GetSkybuilderScrips() &gt; 9000">
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
 			<StopBot/>
@@ -40,7 +40,7 @@ Authors:  Kayla / Angles24
 			<RunCode Name="TurnIn"/>
         </If>
 		
-		<If Condition="GetSkybuilderScrips &gt; 9000">
+		<If Condition="GetSkybuilderScrips() &gt; 9000">
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
 			<StopBot/>
