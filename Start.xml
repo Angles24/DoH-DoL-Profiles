@@ -582,45 +582,6 @@ Blank Profile
 		
 		
 		
-		<!-- Shadowbringer's Aether Currents -->
-		<If Condition="not (IsAetherCurrentCompleted(813,0) and IsAetherCurrentCompleted(813,1) and IsAetherCurrentCompleted(813,2)
-				and IsAetherCurrentCompleted(813,3) and IsAetherCurrentCompleted(813,4) and IsAetherCurrentCompleted(813,5)
-				and IsAetherCurrentCompleted(813,6)	and IsAetherCurrentCompleted(813,7) and IsAetherCurrentCompleted(813,8)
-				and IsAetherCurrentCompleted(813,9) and IsAetherCurrentCompleted(813,10) and IsAetherCurrentCompleted(813,11)
-				and IsAetherCurrentCompleted(813,12) and IsAetherCurrentCompleted(813,13) and IsAetherCurrentCompleted(813,14) 
-				and IsAetherCurrentCompleted(816,0) and IsAetherCurrentCompleted(816,1) and IsAetherCurrentCompleted(816,2) 
-				and IsAetherCurrentCompleted(816,3) and IsAetherCurrentCompleted(816,4) and IsAetherCurrentCompleted(816,5) 
-				and IsAetherCurrentCompleted(816,6) and IsAetherCurrentCompleted(816,7) and IsAetherCurrentCompleted(816,8) 
-				and IsAetherCurrentCompleted(816,9) and IsAetherCurrentCompleted(816,10) and IsAetherCurrentCompleted(816,11) 
-				and IsAetherCurrentCompleted(816,12) and IsAetherCurrentCompleted(816,13) and IsAetherCurrentCompleted(816,14) 
-				and IsAetherCurrentCompleted(815,0) and IsAetherCurrentCompleted(815,1) and IsAetherCurrentCompleted(815,2) 
-				and IsAetherCurrentCompleted(815,3) and IsAetherCurrentCompleted(815,4) and IsAetherCurrentCompleted(815,5) 
-				and IsAetherCurrentCompleted(815,6) and IsAetherCurrentCompleted(815,7) and IsAetherCurrentCompleted(815,8) 
-				and IsAetherCurrentCompleted(815,9) and IsAetherCurrentCompleted(815,10) and IsAetherCurrentCompleted(815,11) 
-				and IsAetherCurrentCompleted(815,12) and IsAetherCurrentCompleted(815,13) and IsAetherCurrentCompleted(815,14)
-				and IsAetherCurrentCompleted(817,0) and IsAetherCurrentCompleted(817,1) and IsAetherCurrentCompleted(817,2) 
-				and IsAetherCurrentCompleted(817,3) and IsAetherCurrentCompleted(817,4) and IsAetherCurrentCompleted(817,5) 
-				and IsAetherCurrentCompleted(817,6) and IsAetherCurrentCompleted(817,7) and IsAetherCurrentCompleted(817,8) 
-				and IsAetherCurrentCompleted(817,9) and IsAetherCurrentCompleted(817,10) and IsAetherCurrentCompleted(817,11) 
-				and IsAetherCurrentCompleted(817,12) and IsAetherCurrentCompleted(817,13) and IsAetherCurrentCompleted(817,14) 
-				and IsAetherCurrentCompleted(814,0) and IsAetherCurrentCompleted(814,1) and IsAetherCurrentCompleted(814,2) 
-				and IsAetherCurrentCompleted(814,3) and IsAetherCurrentCompleted(814,4) and IsAetherCurrentCompleted(814,5) 
-				and IsAetherCurrentCompleted(814,6) and IsAetherCurrentCompleted(814,7) and IsAetherCurrentCompleted(814,8) 
-				and IsAetherCurrentCompleted(814,9) and IsAetherCurrentCompleted(814,10) and IsAetherCurrentCompleted(814,11) 
-				and IsAetherCurrentCompleted(814,12) and IsAetherCurrentCompleted(814,13) and IsAetherCurrentCompleted(814,14)
-				and IsAetherCurrentCompleted(818,0) and IsAetherCurrentCompleted(818,1) and IsAetherCurrentCompleted(818,2)
-				and IsAetherCurrentCompleted(818,3) and IsAetherCurrentCompleted(818,4) and IsAetherCurrentCompleted(818,5)
-				and IsAetherCurrentCompleted(818,6)	and IsAetherCurrentCompleted(818,7) and IsAetherCurrentCompleted(818,8)
-				and IsAetherCurrentCompleted(818,9) and IsAetherCurrentCompleted(818,10) and IsAetherCurrentCompleted(818,11)
-				and IsAetherCurrentCompleted(818,12) and IsAetherCurrentCompleted(818,13) and IsAetherCurrentCompleted(818,14))">
-			<LoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
-		</If>
-		
-		
-		<!-- Gatherer's to 80 -->
-		
-		
-				
 		<!-- 70-80 Ishgard Crafting -->
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
@@ -661,27 +622,66 @@ Blank Profile
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 80">	
 					<LoadProfile Path="Crafting/70-80 Culinarian.xml"/>
 				</If>
-			</If>	
+			</If>
+
+		</If>
 		
 		
-	</If>
-		<!-- Gatherer's to 80 -->	
-	
-	
+		
+		<!-- Shadowbringer's Aether Currents -->
+		<If Condition="not (IsAetherCurrentCompleted(813,0) and IsAetherCurrentCompleted(813,1) and IsAetherCurrentCompleted(813,2)
+				and IsAetherCurrentCompleted(813,3) and IsAetherCurrentCompleted(813,4) and IsAetherCurrentCompleted(813,5)
+				and IsAetherCurrentCompleted(813,6)	and IsAetherCurrentCompleted(813,7) and IsAetherCurrentCompleted(813,8)
+				and IsAetherCurrentCompleted(813,9) and IsAetherCurrentCompleted(813,10) and IsAetherCurrentCompleted(813,11)
+				and IsAetherCurrentCompleted(813,12) and IsAetherCurrentCompleted(813,13) and IsAetherCurrentCompleted(813,14) 
+				and IsAetherCurrentCompleted(816,0) and IsAetherCurrentCompleted(816,1) and IsAetherCurrentCompleted(816,2) 
+				and IsAetherCurrentCompleted(816,3) and IsAetherCurrentCompleted(816,4) and IsAetherCurrentCompleted(816,5) 
+				and IsAetherCurrentCompleted(816,6) and IsAetherCurrentCompleted(816,7) and IsAetherCurrentCompleted(816,8) 
+				and IsAetherCurrentCompleted(816,9) and IsAetherCurrentCompleted(816,10) and IsAetherCurrentCompleted(816,11) 
+				and IsAetherCurrentCompleted(816,12) and IsAetherCurrentCompleted(816,13) and IsAetherCurrentCompleted(816,14) 
+				and IsAetherCurrentCompleted(815,0) and IsAetherCurrentCompleted(815,1) and IsAetherCurrentCompleted(815,2) 
+				and IsAetherCurrentCompleted(815,3) and IsAetherCurrentCompleted(815,4) and IsAetherCurrentCompleted(815,5) 
+				and IsAetherCurrentCompleted(815,6) and IsAetherCurrentCompleted(815,7) and IsAetherCurrentCompleted(815,8) 
+				and IsAetherCurrentCompleted(815,9) and IsAetherCurrentCompleted(815,10) and IsAetherCurrentCompleted(815,11) 
+				and IsAetherCurrentCompleted(815,12) and IsAetherCurrentCompleted(815,13) and IsAetherCurrentCompleted(815,14)
+				and IsAetherCurrentCompleted(817,0) and IsAetherCurrentCompleted(817,1) and IsAetherCurrentCompleted(817,2) 
+				and IsAetherCurrentCompleted(817,3) and IsAetherCurrentCompleted(817,4) and IsAetherCurrentCompleted(817,5) 
+				and IsAetherCurrentCompleted(817,6) and IsAetherCurrentCompleted(817,7) and IsAetherCurrentCompleted(817,8) 
+				and IsAetherCurrentCompleted(817,9) and IsAetherCurrentCompleted(817,10) and IsAetherCurrentCompleted(817,11) 
+				and IsAetherCurrentCompleted(817,12) and IsAetherCurrentCompleted(817,13) and IsAetherCurrentCompleted(817,14) 
+				and IsAetherCurrentCompleted(814,0) and IsAetherCurrentCompleted(814,1) and IsAetherCurrentCompleted(814,2) 
+				and IsAetherCurrentCompleted(814,3) and IsAetherCurrentCompleted(814,4) and IsAetherCurrentCompleted(814,5) 
+				and IsAetherCurrentCompleted(814,6) and IsAetherCurrentCompleted(814,7) and IsAetherCurrentCompleted(814,8) 
+				and IsAetherCurrentCompleted(814,9) and IsAetherCurrentCompleted(814,10) and IsAetherCurrentCompleted(814,11) 
+				and IsAetherCurrentCompleted(814,12) and IsAetherCurrentCompleted(814,13) and IsAetherCurrentCompleted(814,14)
+				and IsAetherCurrentCompleted(818,0) and IsAetherCurrentCompleted(818,1) and IsAetherCurrentCompleted(818,2)
+				and IsAetherCurrentCompleted(818,3) and IsAetherCurrentCompleted(818,4) and IsAetherCurrentCompleted(818,5)
+				and IsAetherCurrentCompleted(818,6)	and IsAetherCurrentCompleted(818,7) and IsAetherCurrentCompleted(818,8)
+				and IsAetherCurrentCompleted(818,9) and IsAetherCurrentCompleted(818,10) and IsAetherCurrentCompleted(818,11)
+				and IsAetherCurrentCompleted(818,12) and IsAetherCurrentCompleted(818,13) and IsAetherCurrentCompleted(818,14))">
+			<LoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
+		</If>
+		
+		
 			
+		<!-- Gatherer's to 80 -->	
+		<If Condition="&min; == 1">		
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 80">
+				<LoadProfile Path="Gathering/70-80 Miner.xml"/>
+			</If>
+		</If>
+		<If Condition="&btn; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 80">
+				<LoadProfile Path="Gathering/70-80 Botanist.xml"/>
+			</If>
+		</If>
 	
-	
-	
-	
-	
-	<RunCode Name="finish"/>
-	
-	
-	
-	
-	
-	
-	
+		<If Condition="not IsOnMap(129)">
+			<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393" /> <!-- Limsa Lominsa Lower Decks -->	
+		</If>
+
+		<LogMessage Message="Congrats on level 80 on BTN/MIN and all Crafters." />
+		<RunCode Name="finish"/>
 	
 	</Order>
 	<CodeChunks>
@@ -750,7 +750,7 @@ Blank Profile
 		</CodeChunk>
 		<CodeChunk Name="finish">
 		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Congrats on level 70 on BTN/MIN and all Crafters.\n More to come! :)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Congrats on level 80 on BTN/MIN and all Crafters.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(40000);
 		]]>
 		</CodeChunk>
