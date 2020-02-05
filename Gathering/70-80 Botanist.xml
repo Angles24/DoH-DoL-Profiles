@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<Profile>
+	<Name>63-70 Botanist</Name>
+	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
+	<KillRadius>90</KillRadius>
+	
+	<Order>
+		
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
+
+	<BotSettings BlockSkippingCutscenes="0"/>
+			
+	<If Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist" />
+	</If> 
+				
+    <If Condition="ClassName == ClassJobType.Botanist">
+		<RunCode Name="Enable_Flight" />
+		<RunCode Name="AutoEquip"/>
+		<RunCode Name="UpdateGearSet"/>		
+  
+		<!-- Level 70-71 -->
+		<If Condition="Core.Player.ClassLevel &lt; 71">
+			<LogMessage Message="Starting the Grind to Level 71." />
+			<GetTo ZoneId="621" XYZ="359.1889, 23.22657, -513.6865" /> <!-- Farming Area --> 			
+			<ExGather while="Core.Player.ClassLevel &lt; 71">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="359.1889, 23.22657, -513.6865" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="402.8835, 24.62416, -621.6635" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="290.0562, 17.74888, -623.6727" name="Mature Trees" />
+				</HotSpots>
+				<Slot>5</Slot>>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 71">
+			<LogMessage Message="Congrats on Level 71, moving on." />			
+			<RunCode Name="AutoEquip"/>
+			<RunCode Name="UpdateGearSet"/>	
+		</If>
+		<!--End Level 71-->
+		
+		<!-- Level 71-73 -->
+		<If Condition="Core.Player.ClassLevel &lt; 73">
+			<LogMessage Message="Starting the Grind to Level 73." />
+			<GetTo ZoneId="813" XYZ="-409.8083, 3.721667, -28.28305" /> <!-- Farming Area --> 			
+			<ExGather while="Core.Player.ClassLevel &lt; 73">
+				<GatherObject>Lush Vegetation Patch</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="-409.8083, 3.721667, -28.28305" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-426.5502, -0.6516011, 107.2197" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-263.0041, -1.592852, 133.1774" name="Lush Vegetation Patches" />
+				</HotSpots>
+				<Slot>6</Slot>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 73">
+			<LogMessage Message="Congrats on Level 73, moving on." />			
+			<RunCode Name="AutoEquip"/>
+			<RunCode Name="UpdateGearSet"/>	
+		</If>
+		<!--End Level 73-->
+		
+		<!-- Level 73-75 -->
+		<If Condition="Core.Player.ClassLevel &lt; 75">
+			<LogMessage Message="Starting the Grind to Level 75." />
+			<GetTo ZoneId="816" XYZ="432.7688, 98.30019, -812.1121" /> <!-- Farming Area -->	 			
+			<ExGather while="Core.Player.ClassLevel &lt; 75">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="432.7688, 98.30019, -812.1121" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="563.6588, 113.2783, -900.4473" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="562.5984, 108.4222, -733.1039" name="Mature Trees" />
+				</HotSpots>
+				<Slot>1</Slot>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 75">
+			<LogMessage Message="Congrats on Level 75, moving on." />			
+			<RunCode Name="AutoEquip"/>
+			<RunCode Name="UpdateGearSet"/>	
+		</If>
+		<!--End Level 75-->
+		
+		<!-- Level 75-76 -->
+		<If Condition="Core.Player.ClassLevel &lt; 76">
+			<LogMessage Message="Starting the Grind to Level 76." />
+			<GetTo ZoneId="816" XYZ="-503.7161, 13.69754, -49.07911" /> <!-- Farming Area -->	 			
+			<ExGather while="Core.Player.ClassLevel &lt; 76">
+				<GatherObject>Lush Vegetation Patch</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="-503.7161, 13.69754, -49.07911" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-488.6248, 42.82056, 127.1283" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-376.0564, 14.89134, 90.93565" name="Lush Vegetation Patches" />
+				</HotSpots>
+				<Slot>2</Slot>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 76">
+			<LogMessage Message="Congrats on Level 76, moving on." />			
+			<RunCode Name="AutoEquip"/>
+			<RunCode Name="UpdateGearSet"/>	
+		</If>
+		<!--End Level 76-->
+		
+		<!-- Level 76-78 -->
+		<If Condition="Core.Player.ClassLevel &lt; 78">
+			<LogMessage Message="Starting the Grind to Level 78." />
+			<GetTo ZoneId="813" XYZ="-549.0365, 77.36881, -501.8888" /> <!-- Farming Area -->		 			
+			<ExGather while="Core.Player.ClassLevel &lt; 78">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="-549.0365, 77.36881, -501.8888" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="-390.9851, 104.1269, -541.2751" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="-437.5013, 102.3822, -634.5474" name="Mature Trees" />
+				</HotSpots>
+				<Slot>1</Slot>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 78">
+			<LogMessage Message="Congrats on Level 78, moving on." />			
+			<RunCode Name="AutoEquip"/>
+			<RunCode Name="UpdateGearSet"/>	
+		</If>
+		<!--End Level 78-->
+		
+		<!-- Level 78-80 -->
+		<If Condition="Core.Player.ClassLevel &lt; 80">
+			<LogMessage Message="Starting the Grind to Level 80." />
+			<GetTo ZoneId="813" XYZ="-549.0365, 77.36881, -501.8888" /> <!-- Farming Area -->	 			
+			<ExGather while="Core.Player.ClassLevel &lt; 80">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="-549.0365, 77.36881, -501.8888" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="-390.9851, 104.1269, -541.2751" name="Mature Trees" />
+					<HotSpot Radius="90" XYZ="-437.5013, 102.3822, -634.5474" name="Mature Trees" />
+				</HotSpots>
+				<Slot>5</Slot>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 80">
+			<LogMessage Message="Congrats on Level 80, moving on." />			
+			<RunCode Name="AutoEquip"/>
+			<RunCode Name="UpdateGearSet"/>	
+		</If>
+		<!--End Level 80-->		
+	</If>
+	
+	<LoadProfile Path="../Start.xml"/>
+	
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+	<CodeChunks>		
+		<CodeChunk Name="BTNWeapon">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.MainHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BTNWeapon2">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Secondary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.OffHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="AutoEquip">
+            <![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+				int id = AgentModule.FindAgentIdByVtable(agentVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(id).Toggle();
+				}
+
+				await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
+            
+				windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+            
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0);
+				}
+        ]]>
+        </CodeChunk>
+		<CodeChunk Name="UpdateGearSet">
+			<![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+				int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}
+
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0xF);
+				}
+            
+				await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
+
+				if (SelectYesno.IsOpen)
+					SelectYesno.Yes();
+
+				await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
+			
+				await Coroutine.Sleep(200);
+			
+				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+
+				if (windowByName != null)
+				{
+					AgentModule.GetAgentInterfaceById(idChar).Toggle();
+				}			
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+		</CodeChunk>
+		<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	</CodeChunks>
+</Profile>
