@@ -1,5 +1,5 @@
 # DoH80-DoL80
-Profiles to get 80 in all Crafters and Gatherers
+Profiles to get 80 in all Crafters and BTN/MIN
 
 ## Currently upto 80 on all crafters and 70 btn/min
 
