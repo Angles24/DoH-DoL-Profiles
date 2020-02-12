@@ -396,22 +396,9 @@ Blank Profile
 					<LoadProfile Path="Crafting/63-65 CulinarianNP.xml"/>
 				</If>
 			</If>
-		</If>
-		
-		
-		
-		<!-- Check to see if we have unlocked Collectables and More -->	
-			<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
-							and IsQuestCompleted(66957) and IsQuestCompleted(66958)
-							and IsQuestCompleted(67632) and IsQuestCompleted(67633)
-							and IsQuestCompleted(66174) and IsQuestCompleted(66175)
-							and IsQuestCompleted(66999) and IsQuestCompleted(67634)
-							and IsQuestCompleted(68477))">
-				<LogMessage Message="Going to learn Collectables and More!" />
-				<LoadProfile Path="Quests/Unlock Collectables and More.xml"/>	
-			</If>
+		</If>			
 			
-			
+		
 		
 		<!-- Craft Class Quest Items and Get Master III Books -->
 			<If Condition="&craftClass; == 1">
