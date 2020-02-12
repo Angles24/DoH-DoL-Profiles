@@ -91,6 +91,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <If Condition="not (HqHasAtLeast(5324, 12) | NqHasAtLeast(5324, 12))">
           <Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
+	<If Condition="not (HqHasAtLeast(5324, 12) | NqHasAtLeast(5324, 12))">
+          <Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </If>
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66125" ItemId="5324" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
