@@ -140,8 +140,8 @@ Authors:  Kayla / Angles24
 		</CodeChunk>
 		<CodeChunk Name="BagsFull">
 		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Bags are Full please empty and hit start to continue.", TimeSpan.FromMilliseconds(300000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(300000);
+			Core.OverlayManager.AddToast(() => "Bags are Full please empty and hit start to continue.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="GoSwimming">
