@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 Code used from Sodimm
-Profile and fixes by Anges
+Profile and fixes by Angles
 -->
 <Profile>
 	<Name>Stormblood Aether Currents All</Name>
@@ -125,8 +125,6 @@ Profile and fixes by Anges
       <MoveTo XYZ="15.6932, -197.987, -151.7496"/>
       <RunCode Name="ShisuiOfTheVioletTides"/>
       <TalkTo NpcId="1023293" XYZ="-955.9929, -899.5684, 757.0262" QuestId="68168" StepId="2"/>
-    </If>
-    <If Condition="HasQuest(68168) and not IsQuestCompleted(68168) and GetQuestStep(68168) == 3">
     </If>
     <If Condition="HasQuest(68168) and not IsQuestCompleted(68168) and GetQuestStep(68168) == 4">
       <If Condition="not IsOnSubMap(2778)">
@@ -463,8 +461,6 @@ Profile and fixes by Anges
       <If Condition="IsQuestAcceptQualified(68307)">
         <PickupQuest QuestId="68307" NpcId="1019405" XYZ="344.6132, 26.26397, -326.2001"/>
       </If>
-    </If>
-    <If Condition="HasQuest(68307) and not IsQuestCompleted(68307) and GetQuestStep(68307) == 1">
     </If>
     <If Condition="HasQuest(68307) and not IsQuestCompleted(68307) and GetQuestStep(68307) == 2">
       <GetTo ZoneId="622" XYZ="-83.79742, 27.63974, -148.4681"/>
@@ -1253,7 +1249,7 @@ Profile and fixes by Anges
 	<CodeChunk Name="Announce_Manual_Completion">
 	  <![CDATA[
         Core.OverlayManager.AddToast(() => "Please complete the next Quest Objective manually.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-        await Coroutine.Sleep(2000);
+        await Coroutine.Sleep(26000);
       ]]>
 	</CodeChunk>
 	<CodeChunk Name="Announce_Manual_Completion2">
