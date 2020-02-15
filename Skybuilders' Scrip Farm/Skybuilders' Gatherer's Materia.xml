@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Profile [<!-- Profile Settings -->
+
+<!ENTITY gatherers_grasp_7 "10">
+<!ENTITY gatherers_grasp_8 "10">
+<!ENTITY gatherers_guerdon_7 "10">
+<!ENTITY gatherers_guerdon_8 "10">
+<!ENTITY gatherers_guile_7 "10">
+<!ENTITY gatherers_guile_8 "10">
+]>
+<!--
+Authors:  Angles24 / Ken_512 / Kayla
+-->
+<Profile>
+	<Name>Skybuilders' Gatherer's Materia</Name>
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<Order>
+	
+		<While Condition="(ItemCount(25193) &lt; &gatherers_grasp_7;) or (ItemCount(26734) &lt; &gatherers_grasp_8;) or (ItemCount(25191) &lt; &gatherers_guerdon_7;) or (ItemCount(26732) &lt; &gatherers_guerdon_8;) or (ItemCount(25192) &lt; &gatherers_guile_7;) or (ItemCount(26733) &lt; &gatherers_guile_8;)">
+						
+			<!-- Buy -->
+			<If Condition="(ItemCount(25193) &lt; &gatherers_grasp_7;) and (ItemCount(28063) &gt; 240)">
+				<BuyWhiteScriptItem ItemId="25193" />
+			</If>
+			<If Condition="(ItemCount(26734) &lt; &gatherers_grasp_8;) and (ItemCount(28063) &gt; 300)">
+				<BuyWhiteScriptItem ItemId="26734" />
+			</If>
+			<If Condition="(ItemCount(25191) &lt; &gatherers_guerdon_7;) and (ItemCount(28063) &gt; 240)">
+				<BuyWhiteScriptItem ItemId="25191" />
+			</If>
+			<If Condition="(ItemCount(26732) &lt; &gatherers_guerdon_8;) and (ItemCount(28063) &gt; 300)">
+				<BuyWhiteScriptItem ItemId="26732" />
+			</If>
+			<If Condition="(ItemCount(25192) &lt; &gatherers_guile_7;) and (ItemCount(28063) &gt; 240)">
+				<BuyWhiteScriptItem ItemId="25192" />
+			</If>
+			<If Condition="(ItemCount(26733) &lt; &gatherers_guile_8;) and (ItemCount(28063) &gt; 300)">
+				<BuyWhiteScriptItem ItemId="26733" />
+			</If>
+			
+			<!-- Skybuilders' Scrip -->
+			<If Condition="ItemCount(28063) &lt; 2400">
+				<Lisbeth Json="[{'Group':1,'Item':28063,'Amount':2400,'Enabled':true,'Type':'CraftMasterpiece'}]"/>
+			</If>
+			
+		</While>
+		
+	</Order>	
+	<CodeChunks>			
+	</CodeChunks>
+</Profile>
