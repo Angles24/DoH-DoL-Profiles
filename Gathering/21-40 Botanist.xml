@@ -117,7 +117,7 @@ Angles24
 		<!--End Grind to Level 31-->
 
 		<!--Level 30 - What Nature Giveth-->
-		<If Condition="IsQuestCompleted(65544) and not IsQuestCompleted(65545)">
+		<!--<If Condition="IsQuestCompleted(65544) and not IsQuestCompleted(65545)">
 			<If Condition="not HasQuest(65545)">
 				<LogMessage Message="Picking Up Level 30 - What Nature Giveth." />
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
@@ -140,6 +140,59 @@ Angles24
 				<LogMessage Message="Level 30 - What Nature Giveth - Completed." />						
 				<RunCode Name="AutoEquip"/>	
 				<RunCode Name="UpdateGearSet"/>
+			</If>
+		</If>-->
+		<If Condition="not IsQuestCompleted(65545)">
+			<If Condition="not HasQuest(65545)">
+				<LogMessage Message="Picking Up Level 30 - What Nature Giveth." />
+				<If Condition="not IsOnMap(133)">
+					<TeleportTo Name="New Gridania" AetheryteId="2" />
+				</If>
+				<If Condition="IsOnMap(132)">
+					<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+				</If>
+				<If Condition="IsOnMap(133)">
+					<MoveTo Name="Fufucha" Distance="1" UseMesh="True" XYZ="-232.9017, 6.263501, -169.7613" />
+					<If Condition="IsQuestAcceptQualified(65545)">
+						<PickupQuest NpcId="1000815" QuestId="65545" XYZ="-232.9017, 6.263501, -169.7613" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(65545) == 1">
+				<If Condition="not IsOnMap(148)">
+					<TeleportTo Name="Bentbranch Meadows" AetheryteId="3" />
+				</If>
+				<TalkTo InteractDistance="3.0" NpcId="1000129" XYZ="-45.41326, 0.551909, -29.84514" />
+			</If>
+			<If Condition="not HqHasAtLeast(4813,15)">
+				<If Condition="not IsOnMap(153)">
+					<GetTo ZoneId="153" XYZ="181.2881, 8.417254, -63.92673" /> <!-- Quarrymill -->
+				</If>
+				<Gather while="not HqHasAtLeast(4813,15)">
+					<GatherObject>Mature Tree</GatherObject>
+					<HotSpots>
+						<HotSpot Radius="90" XYZ="253.4341, 15.48578, -126.8392" />
+					</HotSpots>
+					<Slot>1</Slot>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Leaf Turn" TimesToCast="1" />
+					</GatheringSkillOrder>
+				</Gather>
+			</If>
+			<If Condition="HqHasAtLeast(4813,15)">
+				<If Condition="GetQuestStep(65545) == 255">
+					<If Condition="not IsOnMap(133)">
+						<TeleportTo Name="New Gridania" AetheryteId="2" />
+					</If>
+					<If Condition="IsOnMap(132)">
+						<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772" />
+					</If>
+					<If Condition="IsOnMap(133)">
+						<LLTurnIn ItemId="4813" RequiresHq="true" QuestId="65545" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644" />
+						<LogMessage Message="Level 30 - What Nature Giveth - Completed." />						
+						<RunCode Name="AutoEquip"/>							
+					</If>
+				</If>
 			</If>
 		</If>
 		<!--End What Nature Giveth-->
