@@ -62,7 +62,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65675) and not IsQuestCompleted(65675) and GetQuestStep(65675) == 255">
-        <If Condition="not (HqHasAtLeast(2219,3) | NqHasAtLeast(2219,3)">
+        <If Condition="not (HqHasAtLeast(2219,3) | NqHasAtLeast(2219,3))">
           <Lisbeth Json="[{'Item': 2219,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -88,10 +88,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65676) and not IsQuestCompleted(65676) and GetQuestStep(65676) == 255">
-        <If Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12)">
+        <If Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12))">
           <Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
-		<If Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12)">
+		<If Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12))">
           <Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
