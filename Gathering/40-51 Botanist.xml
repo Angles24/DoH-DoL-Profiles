@@ -134,15 +134,15 @@ Angles24
 					<PickupQuest NpcId="1000815" QuestId="65549" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
 				</If>
 			</If>
-			<If Condition="GetQuestStep(65549) == 1">
-				<GetTo ZoneId="133" XYZ="-297.7843, 7.369169, -168.7761"/>
-				<TalkTo InteractDistance="2.0" NpcId="1000774" XYZ="-297.7843, 7.369169, -168.7761" />
-			</If>
-			<If Condition="GetQuestStep(65549) == 2">
-				<GetTo ZoneId="155" XYZ="118.2649, 285.9804, 140.2907" /> <!-- Camp Dragonhead -->
-				<TalkTo InteractDistance="2.0" NpcId="1000776" XYZ="118.2649, 285.9804, 140.2907" />
-			</If>
-			<If Condition="GetQuestStep(65549) == 3">
+			<If Condition="HasQuest(65549)">
+				<If Condition="GetQuestStep(65549) == 1">
+					<GetTo ZoneId="133" XYZ="-297.7843, 7.369169, -168.7761"/>
+					<TalkTo InteractDistance="2.0" NpcId="1000774" XYZ="-297.7843, 7.369169, -168.7761" />
+				</If>
+				<If Condition="GetQuestStep(65549) == 2">
+					<GetTo ZoneId="155" XYZ="118.2649, 285.9804, 140.2907" /> <!-- Camp Dragonhead -->
+					<TalkTo InteractDistance="2.0" NpcId="1000776" XYZ="118.2649, 285.9804, 140.2907" />
+				</If>			
 				<If Condition="not HasAtLeast(5395,3)">
 					<Lisbeth Json="[{'Item': 5395,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 				</If>
@@ -150,17 +150,17 @@ Angles24
 					<GetTo ZoneId="155" XYZ="118.2649, 285.9804, 140.2907"/>
 					<LLHandOver ItemId="5395" QuestId="65549" StepId="4" NpcId="1000776" InteractDistance="1.0" XYZ="118.2649, 285.9804, 140.2907" />
 				</If>
-			</If>
-			<If Condition="GetQuestStep(65549) == 4">
-				<GetTo ZoneId="155" XYZ="7.677456, 207.2478, 434.1476"/>
-				<TalkTo InteractDistance="2.0" NpcId="1000777" XYZ="7.677456, 207.2478, 434.1476" />
-			</If>
-			<If Condition="GetQuestStep(65549) == 255">
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-				<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613" />				
-				<LogMessage Message="Level 50 - Seeds of Hope - Completed." />
-				<RunCode Name="AutoEquip"/>	
-				<RunCode Name="UpdateGearSet"/>
+				<If Condition="GetQuestStep(65549) == 4">
+					<GetTo ZoneId="155" XYZ="7.677456, 207.2478, 434.1476"/>
+					<TalkTo InteractDistance="2.0" NpcId="1000777" XYZ="7.677456, 207.2478, 434.1476" />
+				</If>
+				<If Condition="GetQuestStep(65549) == 255">
+					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613" />				
+					<LogMessage Message="Level 50 - Seeds of Hope - Completed." />
+					<RunCode Name="AutoEquip"/>	
+					<RunCode Name="UpdateGearSet"/>
+				</If>
 			</If>
 		</If>
 		<!--End Seeds of Hope-->	
