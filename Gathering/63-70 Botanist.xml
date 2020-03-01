@@ -378,7 +378,7 @@ Angles24
 		<!--End Edgyth's Winning Streak-->
 	</If>
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<GrindAreas>

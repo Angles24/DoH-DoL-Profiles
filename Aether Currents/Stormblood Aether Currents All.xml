@@ -1121,7 +1121,7 @@ Profile and fixes by Angles
 			<StopBot/>
 		</If>
 
-		<LoadProfile Path="../Start.xml"/>
+		<ALoadProfile Path="../Start.xml"/>
 		
 	</Order>
 	<GrindAreas>

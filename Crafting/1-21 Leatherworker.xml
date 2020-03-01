@@ -36,9 +36,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65745) and not IsQuestCompleted(65745) and GetQuestStep(65745) == 255">
-        <If Condition="not HasItem(5275)">
+        <While Condition="not HasItem(5275)">
           <Lisbeth Json="[{'Item': 5275,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65745" ItemId="5275" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <WaitTimer WaitTime="2"/>
@@ -48,10 +48,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 5 -->
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 5">
+			<While Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 5">
 				<Lisbeth Json="[{'Item': 5275,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Leatherworking.xml"/>
-			</If>
+			</While>
 	
 	<!-- Do Level 5 Quest -->
 	<!-- A Test of Technique (Level 5) -->
@@ -62,9 +61,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65642) and not IsQuestCompleted(65642) and GetQuestStep(65642) == 255">
-        <If Condition="not (HqHasAtLeast(4304, 3) | NqHasAtLeast(4304, 3))">
+        <While Condition="not (HqHasAtLeast(4304, 3) | NqHasAtLeast(4304, 3))">
           <Lisbeth Json="[{'Item': 4304,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <WaitTimer WaitTime="2"/>
@@ -76,11 +75,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Grind to 10 -->
 			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 8">
 				<Lisbeth Json="[{'Item': 5257,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Leatherworking.xml"/>
 			</If>
 			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 10">
 				<Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Leatherworking.xml"/>
 			</If>
 	
 	<!-- Do Level 10 Quest -->
@@ -92,12 +89,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65671) and not IsQuestCompleted(65671) and GetQuestStep(65671) == 255">
-        <If Condition="not (HqHasAtLeast(5276, 12) | NqHasAtLeast(5276, 12))">
+        <While Condition="not (HqHasAtLeast(5276, 12) | NqHasAtLeast(5276, 12))">
           <Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-		<If Condition="not (HqHasAtLeast(5276, 12) | NqHasAtLeast(5276, 12))">
+        </While>
+		<!--<If Condition="not (HqHasAtLeast(5276, 12) | NqHasAtLeast(5276, 12))">
           <Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </If>-->
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65671" ItemId="5276" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <WaitTimer WaitTime="2"/>
@@ -107,10 +104,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 15 -->
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 15">
+			<While Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 15">
 				<Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Leatherworking.xml"/>
-			</If>
+			</While>
 	
 	<!-- Do Level 15 Quest -->
 	<!-- Working Hells for Leather (Level 15) -->
@@ -121,12 +117,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65672) and not IsQuestCompleted(65672) and GetQuestStep(65672) == 1">
-        <If Condition="not HasItem(3772)">
+        <While Condition="not HasItem(3772)">
           <Lisbeth Json="[{'Item': 3772,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-        <If Condition="not HasItem(4308)">
+        </While>
+        <While Condition="not HasItem(4308)">
           <Lisbeth Json="[{'Item': 4308,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn ItemIds="3772, 4308" AllowHq="True" NpcId="1000691" XYZ="71.97681, 8, -166.5217" QuestId="65672" StepId="1"/>
         <WaitTimer WaitTime="2"/>
@@ -144,14 +140,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 21 -->
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 17">
+			<While Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 17">
 				<Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Leatherworking.xml"/>
-			</If>
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21">
+			</While>
+			<While Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21">
 				<Lisbeth Json="[{'Item': 2669,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Leatherworking.xml"/>
-			</If>
+			</While>
 	</If>
 
 	<If Condition="Core.Player.ClassLevel &gt; 20">
@@ -160,7 +154,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<RunCode Name="UpdateGearSet"/>													
 	</If>
 	
-	<LoadProfile Path="../Start.xml"/>	
+	<ALoadProfile Path="../Start.xml"/>	
 	
 	</Order>
 	<CodeChunks>

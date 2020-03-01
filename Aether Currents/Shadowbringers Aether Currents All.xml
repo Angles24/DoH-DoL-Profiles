@@ -1025,7 +1025,7 @@ Authors:  Sodimm
       </If>
     </If>
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
   </Order>
   <GrindAreas/>

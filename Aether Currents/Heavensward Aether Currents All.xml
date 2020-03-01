@@ -1406,7 +1406,7 @@ Profile and fixes by Anges
 		<LogMessage Message="You've attuned to the Aether Currents in The Dravanian Hinterlands!" />		
 		</If>
 		
-		<LoadProfile Path="../Start.xml"/>
+		<ALoadProfile Path="../Start.xml"/>
 		
 	</Order>
 	<GrindAreas>

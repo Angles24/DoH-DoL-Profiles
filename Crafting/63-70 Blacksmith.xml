@@ -50,11 +50,11 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">
-			<LoadProfile Path="63-70 Blacksmith.xml"/>
+			<ALoadProfile Path="63-70 Blacksmith.xml"/>
 		</If>
 		
 		<LogMessage Message="Congrats on Level 70 on Blacksmith, moving on." />
-		<LoadProfile Path="../Start.xml"/>
+		<ALoadProfile Path="../Start.xml"/>
 			
 	</Order>
 	

@@ -36,9 +36,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65741) and not IsQuestCompleted(65741) and GetQuestStep(65741) == 255">
-        <If Condition="not HasItem(5361)">
+        <While Condition="not HasItem(5361)">
           <Lisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65741" ItemId="5361" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
 		<WaitTimer WaitTime="2"/>
@@ -48,10 +48,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 5 -->	
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 5">
+			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 5">
 				<Lisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Carpenter.xml"/>
-			</If> 
+			</While> 
 	
 	<!-- Do Level 5 Quest -->
 	<!-- To Be the Wood (Level 5) -->
@@ -62,9 +61,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65675) and not IsQuestCompleted(65675) and GetQuestStep(65675) == 255">
-        <If Condition="not (HqHasAtLeast(2219,3) | NqHasAtLeast(2219,3))">
+        <While Condition="not (HqHasAtLeast(2219,3) | NqHasAtLeast(2219,3)">
           <Lisbeth Json="[{'Item': 2219,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65675" ItemIds="2219, 2219, 2219" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <WaitTimer WaitTime="2"/>
@@ -74,10 +73,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 10 -->	
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 10">
+			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 10">
 				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Carpenter.xml"/>
-			</If>
+			</While>
 	
 	<!-- Do Level 10 Quest -->
 	<!-- Supplies for the Sick (Level 10) -->
@@ -88,12 +86,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65676) and not IsQuestCompleted(65676) and GetQuestStep(65676) == 255">
-        <If Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12))">
+        <While Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12)">
           <Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-		<If Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12))">
+        </While>
+		<!--<If Condition="not (HqHasAtLeast(5364, 12) | NqHasAtLeast(5364, 12)">
           <Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </If>-->
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65676" ItemId="5364" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <WaitTimer WaitTime="2"/>
@@ -103,10 +101,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 15 -->	
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 15">
+			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 15">
 				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Carpenter.xml"/>
-			</If>
+			</While>
 	
 	<!-- Do Level 15 Quest -->
 	<!-- A Carpenter in Need (Level 15) -->
@@ -121,16 +118,16 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <TalkTo NpcId="1000149" XYZ="-9.720032, -3.25, 52.47571" QuestId="65677" StepId="1"/>
       </If>
       <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 2 and not IsTodoChecked(65677, 2, 1)">
-        <If Condition="not HasItem(1895)">
+        <While Condition="not HasItem(1895)">
           <Lisbeth Json="[{'Item': 1895,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="132" XYZ="209.5521, 0.9999819, 35.01941"/>
         <LLHandOver ItemId="1895" AllowHq="True" NpcId="1000200" XYZ="209.5521, 0.9999819, 35.01941" QuestId="65677"/>
       </If>
       <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 2 and not IsTodoChecked(65677, 2, 0)">
-        <If Condition="not HasItem(1823)">
+        <While Condition="not HasItem(1823)">
           <Lisbeth Json="[{'Item': 1823,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="133" XYZ="157.7019, 15.90038, -270.3442"/>
         <LLHandOver ItemId="1823" AllowHq="True" NpcId="1000254" XYZ="157.7019, 15.90038, -270.3442" QuestId="65677"/>
       </If>
@@ -144,14 +141,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 21 -->	
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 16">
+			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 16">
 				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Carpenter.xml"/>
-			</If>	
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21">
+			</While>	
+			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21">
 				<Lisbeth Json="[{'Item': 5367,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Carpenter.xml"/>
-			</If>
+			</While>
 	</If>
 
 	<If Condition="Core.Player.ClassLevel &gt; 20">
@@ -160,7 +155,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<RunCode Name="UpdateGearSet"/>												
 	</If>
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>

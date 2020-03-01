@@ -374,7 +374,7 @@ Angles24
 		<!--End A Miner Success-->
 	</If>
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<GrindAreas>

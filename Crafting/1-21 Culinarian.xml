@@ -36,9 +36,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65790) and not IsQuestCompleted(65790) and GetQuestStep(65790) == 255">
-        <If Condition="not HasItem(4849)">
+        <While Condition="not HasItem(4849)">
           <Lisbeth Json="[{'Item': 4849,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
         <LLTurnIn QuestId="65790" ItemId="4849" NpcId="1000947" AllowHq="True" XYZ="-54.64258, 43.99998, -151.2322"/>
         <WaitTimer WaitTime="2"/>
@@ -48,10 +48,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 5 -->
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 5">
+			<While Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 5">
 				<Lisbeth Json="[{'Item': 4849,'Group': 0,'Amount': 30,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Culinarian.xml"/>
-			</If>
+			</While>
 	
 	<!-- Do Level 5 Quest -->
 	<!-- A Treat of Trout (Level 5) -->
@@ -62,9 +61,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65791) and not IsQuestCompleted(65791) and GetQuestStep(65791) == 255">
-        <If Condition="not HasItem(4660)">
+        <While Condition="not HasItem(4660)">
           <Lisbeth Json="[{'Item': 4660,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="128" XYZ="-66.26996, 42.29999, -162.9207"/>
         <LLTurnIn QuestId="65791" ItemId="4660" NpcId="1000950" AllowHq="True" XYZ="-66.26996, 42.29999, -162.9207"/>
         <WaitTimer WaitTime="2"/>
@@ -74,10 +73,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 10 -->
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 10">
+			<While Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 10">
 				<Lisbeth Json="[{'Item': 4850,'Group': 0,'Amount': 30,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Culinarian.xml"/>
-			</If>
+			</While>
 	
 	<!-- Do Level 10 Quest -->
 	<!-- Dodo it Yourself (Level 10) -->
@@ -88,9 +86,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(65793) and not IsQuestCompleted(65793) and GetQuestStep(65793) == 255">
-        <If Condition="not (HqHasAtLeast(4640, 3) | NqHasAtLeast(4640, 3))">
+        <While Condition="not (HqHasAtLeast(4640, 3) | NqHasAtLeast(4640, 3))">
           <Lisbeth Json="[{'Item': 4640,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="128" XYZ="-66.26996, 42.29999, -162.9207"/>
         <LLTurnIn QuestId="65793" ItemId="4640" NpcId="1000950" AllowHq="True" XYZ="-66.26996, 42.29999, -162.9207"/>
         <WaitTimer WaitTime="2"/>
@@ -100,10 +98,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 15 -->
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 15">
+			<While Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 15">
 				<Lisbeth Json="[{'Item': 4853,'Group': 0,'Amount': 50,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Culinarian.xml"/>
-			</If>
+			</While>
 	
 	<!-- Do Level 15 Quest -->
 	<!-- On a Skewer Tip (Level 15) -->
@@ -122,9 +119,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <TalkTo NpcId="1000965" XYZ="-76.98181, 40.99999, -136.2173" QuestId="65794" StepId="2"/>
       </If>
       <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 3">
-        <If Condition="not HasItem(4642)">
+        <While Condition="not HasItem(4642)">
           <Lisbeth Json="[{'Item': 4642,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        </While>
         <GetTo ZoneId="128" XYZ="-76.98181, 40.99999, -136.2173"/>
         <LLHandOver ItemId="4642" NpcId="1000965" AllowHq="True" XYZ="-76.98181, 40.99999, -136.2173" QuestId="65794" StepId="3"/>
       </If>
@@ -138,10 +135,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
 	
 	<!-- Grind to 21 -->
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">
+			<While Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">
 				<Lisbeth Json="[{'Item': 4863,'Group': 0,'Amount': 50,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				<LoadProfile Path="1-21 Culinarian.xml"/>
-			</If>
+			</While>
 	</If>
 		
 	<If Condition="Core.Player.ClassLevel &gt; 20">
@@ -150,7 +146,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<RunCode Name="UpdateGearSet"/>														
 	</If>	
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>

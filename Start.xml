@@ -51,19 +51,19 @@ Blank Profile
 							and IsQuestCompleted(66111) and IsQuestCompleted(66133))">
 				<LogMessage Message="Going to learn Classes!" />
 				<RunCode Name="classes"/>
-				<LoadProfile Path="Quests/UnlockDoHDoLClasses.xml"/>	
+				<ALoadProfile Path="Quests/UnlockDoHDoLClasses.xml"/>	
 			</If>		
 			
 		
 		<!-- Check to see if we have Gathering at level 21 -->	
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66139) or Core.Me.Levels[ClassJobType.Miner] &lt; 20">
-				<LoadProfile Path="Gathering/1-21 Miner.xml"/>
+				<ALoadProfile Path="Gathering/1-21 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(65542) or Core.Me.Levels[ClassJobType.Botanist] &lt; 20">
-				<LoadProfile Path="Gathering/1-21 Botanist.xml"/>
+				<ALoadProfile Path="Gathering/1-21 Botanist.xml"/>
 			</If>
 		</If>	
 	
@@ -71,42 +71,42 @@ Blank Profile
 		<!-- Check to see if we have Crafting at level 21 -->	
 			<If Condition="&crp; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 or not IsQuestCompleted(65677)">	
-					<LoadProfile Path="Crafting/1-21 Carpenter.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Carpenter.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21 or not IsQuestCompleted(65831)">	
-					<LoadProfile Path="Crafting/1-21 Blacksmith.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Blacksmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21 or not IsQuestCompleted(65813)">	
-					<LoadProfile Path="Crafting/1-21 Armorer.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Armorer.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21 or not IsQuestCompleted(66150)">	
-					<LoadProfile Path="Crafting/1-21 Goldsmith.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Goldsmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21 or not IsQuestCompleted(65672)">	
-					<LoadProfile Path="Crafting/1-21 Leatherworker.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Leatherworker.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21 or not IsQuestCompleted(66126)">	
-					<LoadProfile Path="Crafting/1-21 Weaver.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Weaver.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21 or not IsQuestCompleted(66117)">	
-					<LoadProfile Path="Crafting/1-21 Alchemist.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Alchemist.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21 or not IsQuestCompleted(65794)">	
-					<LoadProfile Path="Crafting/1-21 Culinarian.xml"/>
+					<ALoadProfile Path="Crafting/1-21 Culinarian.xml"/>
 				</If>
 			</If>
 			
@@ -126,49 +126,49 @@ Blank Profile
 				<StopBot/>
 			</If>	
 			<If Condition="IsQuestCompleted(67783) and not IsQuestCompleted(69208)"> 
-				<LoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
+				<ALoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
 			</If>		
 		
 	<If Condition="IsQuestCompleted(69208)">	
 		<!-- 21-51 Ishgard Crafting -->
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Carpenter.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Carpenter.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Blacksmith.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Blacksmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Armorer.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Armorer.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Goldsmith.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Goldsmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Leatherworker.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Leatherworker.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Weaver.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Weaver.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Alchemist.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Alchemist.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 51">	
-					<LoadProfile Path="Crafting/21-51 Culinarian.xml"/>
+					<ALoadProfile Path="Crafting/21-51 Culinarian.xml"/>
 				</If>
 			</If>
 		</If>		
@@ -177,12 +177,12 @@ Blank Profile
 		<!-- Gatherer's to 40 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66179) or Core.Me.Levels[ClassJobType.Miner] &lt; 40">
-				<LoadProfile Path="Gathering/21-40 Miner.xml"/>
+				<ALoadProfile Path="Gathering/21-40 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(65546) or Core.Me.Levels[ClassJobType.Botanist] &lt; 40">
-				<LoadProfile Path="Gathering/21-40 Botanist.xml"/>
+				<ALoadProfile Path="Gathering/21-40 Botanist.xml"/>
 			</If>
 		</If>
 			
@@ -200,12 +200,12 @@ Blank Profile
 		<!-- Gatherer's to 51 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66182) or Core.Me.Levels[ClassJobType.Miner] &lt; 51">
-				<LoadProfile Path="Gathering/40-51 Miner.xml"/>
+				<ALoadProfile Path="Gathering/40-51 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(65549) or Core.Me.Levels[ClassJobType.Botanist] &lt; 51">
-				<LoadProfile Path="Gathering/40-51 Botanist.xml"/>
+				<ALoadProfile Path="Gathering/40-51 Botanist.xml"/>
 			</If>
 		</If>
 		
@@ -237,7 +237,7 @@ Blank Profile
 				and IsAetherCurrentCompleted(399,6) and IsAetherCurrentCompleted(399,7) and IsAetherCurrentCompleted(399,8)
 				and IsAetherCurrentCompleted(399,9) and IsAetherCurrentCompleted(399,10) and IsAetherCurrentCompleted(399,11)
 				and IsAetherCurrentCompleted(399,12) and IsAetherCurrentCompleted(399,13) and IsAetherCurrentCompleted(399,14))">
-			<LoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
+			<ALoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
 		</If>
 		
 		
@@ -254,44 +254,44 @@ Blank Profile
 		<!-- 51-63 Ishgard Crafting -->
 			<If Condition="&crp; == 1">			
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Carpenter.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Carpenter.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Blacksmith.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Blacksmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Armorer.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Armorer.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Goldsmith.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Goldsmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Leatherworker.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Leatherworker.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Weaver.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Weaver.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Alchemist.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Alchemist.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">	
-					<LoadProfile Path="Crafting/51-63 Culinarian.xml"/>
+					<ALoadProfile Path="Crafting/51-63 Culinarian.xml"/>
 				</If>
-			</If>
+			</If>			
 		
 		
 		
@@ -326,7 +326,7 @@ Blank Profile
 				and IsAetherCurrentCompleted(621,6)	and IsAetherCurrentCompleted(621,7) and IsAetherCurrentCompleted(621,8)
 				and IsAetherCurrentCompleted(621,9) and IsAetherCurrentCompleted(621,10) and IsAetherCurrentCompleted(621,11)
 				and IsAetherCurrentCompleted(621,12) and IsAetherCurrentCompleted(621,13) and IsAetherCurrentCompleted(621,14))">
-			<LoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
+			<ALoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
 		</If>		
 		
 				
@@ -334,14 +334,27 @@ Blank Profile
 		<!-- Gatherer's to 63 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(68090) or Core.Me.Levels[ClassJobType.Miner] &lt; 63">
-				<LoadProfile Path="Gathering/51-63 Miner.xml"/>
+				<ALoadProfile Path="Gathering/51-63 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(68156) or Core.Me.Levels[ClassJobType.Botanist] &lt; 63">
-				<LoadProfile Path="Gathering/51-63 Botanist.xml"/>
+				<ALoadProfile Path="Gathering/51-63 Botanist.xml"/>
 			</If>
 		</If>
+		
+		
+		
+		<!-- Check to see if we have unlocked Collectables and More -->	
+			<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
+							and IsQuestCompleted(66957) and IsQuestCompleted(66958)
+							and IsQuestCompleted(67632) and IsQuestCompleted(67633)
+							and IsQuestCompleted(66174) and IsQuestCompleted(66175)
+							and IsQuestCompleted(66999) and IsQuestCompleted(67634)
+							and IsQuestCompleted(68477))">
+				<LogMessage Message="Going to learn Collectables and More!" />
+				<ALoadProfile Path="Quests/Unlock Collectables and More.xml"/>	
+			</If>
 
 
 		
@@ -358,47 +371,47 @@ Blank Profile
 		<If Condition="&pref; == 0">	
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 65">	
-					<LoadProfile Path="Crafting/63-65 CarpenterNP.xml"/>
+					<ALoadProfile Path="Crafting/63-65 CarpenterNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 65">	
-					<LoadProfile Path="Crafting/63-65 BlacksmithNP.xml"/>
+					<ALoadProfile Path="Crafting/63-65 BlacksmithNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 65">	
-					<LoadProfile Path="Crafting/63-65 ArmorerNP.xml"/>
+					<ALoadProfile Path="Crafting/63-65 ArmorerNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 65">	
-					<LoadProfile Path="Crafting/63-65 GoldsmithNP.xml"/>
+					<ALoadProfile Path="Crafting/63-65 GoldsmithNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 65">	
-					<LoadProfile Path="Crafting/63-65 LeatherworkerNP.xml"/>
+					<ALoadProfile Path="Crafting/63-65 LeatherworkerNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 65">	
-					<LoadProfile Path="Crafting/63-65 WeaverNP.xml"/>
+					<ALoadProfile Path="Crafting/63-65 WeaverNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 65">	
-				<LoadProfile Path="Crafting/63-65 AlchemistNP.xml"/>
+				<ALoadProfile Path="Crafting/63-65 AlchemistNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 65">	
-					<LoadProfile Path="Crafting/63-65 CulinarianNP.xml"/>
+					<ALoadProfile Path="Crafting/63-65 CulinarianNP.xml"/>
 				</If>
 			</If>
-		</If>			
+		</If>
 			
-		
+			
 		
 		<!-- Craft Class Quest Items and Get Master III Books -->
 			<If Condition="&craftClass; == 1">
@@ -412,22 +425,22 @@ Blank Profile
 		<!-- Start Class Quest Profiles -->		
 			<If Condition="&crp; == 1">		
 				<If Condition="not IsQuestCompleted(67979)">	
-					<LoadProfile Path="Quests/Carpenter Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Carpenter Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="not IsQuestCompleted(68153)">	
-					<LoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="not IsQuestCompleted(68132)">	
-					<LoadProfile Path="Quests/Armorer Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Armorer Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="not IsQuestCompleted(68137)">	
-					<LoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
 				</If>
 			</If>
 		<If Condition="&craftClass1; == 1">
@@ -437,22 +450,22 @@ Blank Profile
 		</If>		
 			<If Condition="&ltw; == 1">	
 				<If Condition="not IsQuestCompleted(68147)">	
-					<LoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="not IsQuestCompleted(67969)">	
-					<LoadProfile Path="Quests/Weaver Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Weaver Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="not IsQuestCompleted(67974)">	
-				<LoadProfile Path="Quests/Alchemist Class Quests.xml"/>
+				<ALoadProfile Path="Quests/Alchemist Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="not IsQuestCompleted(68142)">	
-					<LoadProfile Path="Quests/Culinarian Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Culinarian Class Quests.xml"/>
 				</If>
 			</If>
 			
@@ -470,42 +483,42 @@ Blank Profile
 		<!-- 63-70 Ishgard Crafting -->		
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
-					<LoadProfile Path="Crafting/63-70 Carpenter.xml"/>
+					<ALoadProfile Path="Crafting/63-70 Carpenter.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">	
-					<LoadProfile Path="Crafting/63-70 Blacksmith.xml"/>
+					<ALoadProfile Path="Crafting/63-70 Blacksmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 70">	
-					<LoadProfile Path="Crafting/63-70 Armorer.xml"/>
+					<ALoadProfile Path="Crafting/63-70 Armorer.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 70">	
-					<LoadProfile Path="Crafting/63-70 Goldsmith.xml"/>
+					<ALoadProfile Path="Crafting/63-70 Goldsmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 70">	
-					<LoadProfile Path="Crafting/63-70 Leatherworker.xml"/>
+					<ALoadProfile Path="Crafting/63-70 Leatherworker.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 70">	
-					<LoadProfile Path="Crafting/63-70 Weaver.xml"/>
+					<ALoadProfile Path="Crafting/63-70 Weaver.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 70">	
-				<LoadProfile Path="Crafting/63-70 Alchemist.xml"/>
+				<ALoadProfile Path="Crafting/63-70 Alchemist.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">	
-					<LoadProfile Path="Crafting/63-70 Culinarian.xml"/>
+					<ALoadProfile Path="Crafting/63-70 Culinarian.xml"/>
 				</If>
 			</If>	
 
@@ -514,42 +527,42 @@ Blank Profile
 		<!-- NoN Preferred Realm Class Quest Profiles -->		
 			<If Condition="&crp; == 1">		
 				<If Condition="not IsQuestCompleted(67981)">	
-					<LoadProfile Path="Quests/Carpenter Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Carpenter Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="not IsQuestCompleted(68155)">	
-					<LoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="not IsQuestCompleted(68134)">	
-					<LoadProfile Path="Quests/Armorer Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Armorer Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="not IsQuestCompleted(68139)">	
-					<LoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="not IsQuestCompleted(68151)">	
-					<LoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="not IsQuestCompleted(67971)">	
-					<LoadProfile Path="Quests/Weaver Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Weaver Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="not IsQuestCompleted(67976)">	
-				<LoadProfile Path="Quests/Alchemist Class Quests.xml"/>
+				<ALoadProfile Path="Quests/Alchemist Class Quests.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="not IsQuestCompleted(68144)">	
-					<LoadProfile Path="Quests/Culinarian Class Quests.xml"/>
+					<ALoadProfile Path="Quests/Culinarian Class Quests.xml"/>
 				</If>
 			</If>
 		
@@ -558,12 +571,12 @@ Blank Profile
 		<!-- Gatherer's to 70 -->
 		<If Condition="&min; == 1">		
 			<If Condition="not IsQuestCompleted(68094) or Core.Me.Levels[ClassJobType.Miner] &lt; 70">
-				<LoadProfile Path="Gathering/63-70 Miner.xml"/>
+				<ALoadProfile Path="Gathering/63-70 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(68160) or Core.Me.Levels[ClassJobType.Botanist] &lt; 70">
-				<LoadProfile Path="Gathering/63-70 Botanist.xml"/>
+				<ALoadProfile Path="Gathering/63-70 Botanist.xml"/>
 			</If>
 		</If>
 		
@@ -572,42 +585,42 @@ Blank Profile
 		<!-- 70-80 Ishgard Crafting -->
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
-					<LoadProfile Path="Crafting/70-80 Carpenter.xml"/>
+					<ALoadProfile Path="Crafting/70-80 Carpenter.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 80">	
-					<LoadProfile Path="Crafting/70-80 Blacksmith.xml"/>
+					<ALoadProfile Path="Crafting/70-80 Blacksmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">	
-					<LoadProfile Path="Crafting/70-80 Armorer.xml"/>
+					<ALoadProfile Path="Crafting/70-80 Armorer.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 80">	
-					<LoadProfile Path="Crafting/70-80 Goldsmith.xml"/>
+					<ALoadProfile Path="Crafting/70-80 Goldsmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 80">	
-					<LoadProfile Path="Crafting/70-80 Leatherworker.xml"/>
+					<ALoadProfile Path="Crafting/70-80 Leatherworker.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">	
-					<LoadProfile Path="Crafting/70-80 Weaver.xml"/>
+					<ALoadProfile Path="Crafting/70-80 Weaver.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">	
-				<LoadProfile Path="Crafting/70-80 Alchemist.xml"/>
+				<ALoadProfile Path="Crafting/70-80 Alchemist.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 80">	
-					<LoadProfile Path="Crafting/70-80 Culinarian.xml"/>
+					<ALoadProfile Path="Crafting/70-80 Culinarian.xml"/>
 				</If>
 			</If>
 
@@ -646,7 +659,7 @@ Blank Profile
 				and IsAetherCurrentCompleted(818,6)	and IsAetherCurrentCompleted(818,7) and IsAetherCurrentCompleted(818,8)
 				and IsAetherCurrentCompleted(818,9) and IsAetherCurrentCompleted(818,10) and IsAetherCurrentCompleted(818,11)
 				and IsAetherCurrentCompleted(818,12) and IsAetherCurrentCompleted(818,13) and IsAetherCurrentCompleted(818,14))">
-			<LoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
+			<ALoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
 		</If>
 		
 		
@@ -654,12 +667,12 @@ Blank Profile
 		<!-- Gatherer's to 80 -->	
 		<If Condition="&min; == 1">		
 			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 80">
-				<LoadProfile Path="Gathering/70-80 Miner.xml"/>
+				<ALoadProfile Path="Gathering/70-80 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 80">
-				<LoadProfile Path="Gathering/70-80 Botanist.xml"/>
+				<ALoadProfile Path="Gathering/70-80 Botanist.xml"/>
 			</If>
 		</If>
 	

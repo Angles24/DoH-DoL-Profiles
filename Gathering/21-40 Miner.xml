@@ -223,7 +223,7 @@ Angles24
 		<!--End Level 40 Grind-->		  
 	</If>
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<GrindAreas>

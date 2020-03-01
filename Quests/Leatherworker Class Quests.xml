@@ -514,7 +514,7 @@ Angles24
       </If>
     </If>
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>

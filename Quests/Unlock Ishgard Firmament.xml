@@ -66,7 +66,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 				<TalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
 		</If>
 		
-		<LoadProfile Path="../Start.xml"/>
+		<ALoadProfile Path="../Start.xml"/>
 		
 	</Order>
 	<CodeChunks>

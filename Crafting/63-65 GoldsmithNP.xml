@@ -47,11 +47,11 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 65">
-			<LoadProfile Path="63-65 GoldsmithNP.xml"/>
+			<ALoadProfile Path="63-65 GoldsmithNP.xml"/>
 		</If>
 		
 		<LogMessage Message="Congrats on Level 65 on Goldsmith, moving on." />
-		<LoadProfile Path="../Start.xml"/>
+		<ALoadProfile Path="../Start.xml"/>
 			
 	</Order>
 	

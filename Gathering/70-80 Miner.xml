@@ -136,7 +136,7 @@ Angles24
 		<!--End Level 80-->	
 	</If>
 	
-	<LoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<GrindAreas>
