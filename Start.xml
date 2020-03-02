@@ -347,7 +347,6 @@ Blank Profile
 		
 		<!-- Check to see if we have unlocked Collectables and More -->	
 			<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
-							and IsQuestCompleted(66957) and IsQuestCompleted(66958)
 							and IsQuestCompleted(67632) and IsQuestCompleted(67633)
 							and IsQuestCompleted(66174) and IsQuestCompleted(66175)
 							and IsQuestCompleted(66999) and IsQuestCompleted(67634)
