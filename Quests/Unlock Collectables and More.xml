@@ -39,7 +39,7 @@ Kayla / Angles24
 		<!-- End - Just Tooling Around -->
 		
 		<!-- A Self-improving Man -->
-		<If Condition="not IsQuestCompleted(68554) and not IsQuestCompleted(68553) not IsQuestCompleted(66957) and not HasQuest(66957)">
+		<If Condition="not IsQuestCompleted(68554) and not IsQuestCompleted(68553) and not IsQuestCompleted(66957) and not HasQuest(66957)">
 			<LogMessage Message="Picking Up - A Self-improving Man!" />
 			<GetTo ZoneId="156" XYZ="32.37394, 28.99997, -736.4222" />
 			<PickupQuest NpcId="1006969" QuestId="66957" />
