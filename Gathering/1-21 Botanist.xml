@@ -30,20 +30,17 @@ Angles24
 					<PickupQuest NpcId="1000815" QuestId="65744" XYZ="-232.9017, 6.263501, -169.7613" />
 				</If>
 			</If>
-			<If Condition="GetQuestStep(65744) == 1">
-				<If Condition="not NqHasAtLeast(5509,10)">	
-					<Lisbeth Json="[{'Item': 5509,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not NqHasAtLeast(5509,10)">	
-					<Lisbeth Json="[{'Item': 5509,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
 			<If Condition="GetQuestStep(65744) == 255">
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-				<LLTurnIn ItemId="5509" QuestId="65744" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
-				<LogMessage Message="Level 1 - My First Hatchet - Completed." />						
-				<RunCode Name="AutoEquip"/>	
-				<RunCode Name="UpdateGearSet"/>
+				<While Condition="not NqHasAtLeast(5509,10)">	
+					<Lisbeth Json="[{'Item': 5509,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</While>
+				<If Condition="NqHasAtLeast(5509,10)">
+					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLTurnIn ItemId="5509" QuestId="65744" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					<LogMessage Message="Level 1 - My First Hatchet - Completed." />						
+					<RunCode Name="AutoEquip"/>	
+					<RunCode Name="UpdateGearSet"/>
+				</If>
 			</If>
 		</If>
 		<!--End My First Hatchet-->
@@ -77,23 +74,17 @@ Angles24
 					<PickupQuest NpcId="1000815" QuestId="65540" XYZ="-232.9017, 6.263501, -169.7613" />
 				</If>
 			</If>
-			<If Condition="GetQuestStep(65540) == 1">
-				<If Condition="not NqHasAtLeast(5498,50)">
-					<Lisbeth Json="[{'Item': 5498,'Group': 0,'Amount': 25,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not NqHasAtLeast(5498,50)">
-					<Lisbeth Json="[{'Item': 5498,'Group': 0,'Amount': 25,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-				<If Condition="not NqHasAtLeast(5498,50)">
-					<Lisbeth Json="[{'Item': 5498,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
-			</If>
 			<If Condition="GetQuestStep(65540) == 255">
-				<GetTo ZoneId="133" XYZ="-236.451, 8.000312, -155.7238"/>
-				<LLTurnIn ItemId="5498" QuestId="65540" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238" />
-				<LogMessage Message="Level 5 - Sap for Smiles - Completed." />						
-				<RunCode Name="AutoEquip"/>	
-				<RunCode Name="UpdateGearSet"/>
+				<While Condition="not NqHasAtLeast(5498,50)">
+					<Lisbeth Json="[{'Item': 5498,'Group': 0,'Amount': 25,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</While>
+				<If Condition="NqHasAtLeast(5498,50)">
+					<GetTo ZoneId="133" XYZ="-236.451, 8.000312, -155.7238"/>
+					<LLTurnIn ItemId="5498" QuestId="65540" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238" />
+					<LogMessage Message="Level 5 - Sap for Smiles - Completed." />						
+					<RunCode Name="AutoEquip"/>	
+					<RunCode Name="UpdateGearSet"/>
+				</If>
 			</If>
 		</If>
 		<!--End Sap for Smiles-->
@@ -127,15 +118,9 @@ Angles24
 						<PickupQuest NpcId="1000815" QuestId="65541" XYZ="-232.9017, 6.263501, -169.7613" />
 					</If>
 			</If>
-			<If Condition="not NqHasAtLeast(5352,99)">
+			<While Condition="not NqHasAtLeast(5352,99)">
 				<Lisbeth Json="[{'Item': 5352,'Group': 0,'Amount': 50,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-			</If>
-			<If Condition="not NqHasAtLeast(5352,99)">
-				<Lisbeth Json="[{'Item': 5352,'Group': 0,'Amount': 50,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-			</If>
-			<If Condition="not NqHasAtLeast(5352,99)">
-				<Lisbeth Json="[{'Item': 5352,'Group': 0,'Amount': 25,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-			</If>
+			</While>
 			<If Condition="NqHasAtLeast(5352,99)">
 				<If Condition="GetQuestStep(65541) == 255">
 					<GetTo ZoneId="133" XYZ="-236.451, 8.000312, -155.7238"/>
@@ -183,9 +168,9 @@ Angles24
 				<TalkTo InteractDistance="3.0" NpcId="1000239" XYZ="167.8746, 15.69992, -117.8252" />
 			</If>
 			<If Condition="GetQuestStep(65542) == 2">
-				<If Condition="not HqHasAtLeast(4832,10)">
+				<While Condition="not HqHasAtLeast(4832,10)">
 					<Lisbeth Json="[{'Item': 4832,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>
+				</While>
 			</If>				
 			<If Condition="GetQuestStep(65542) == 2">
 				<GetTo ZoneId="133" XYZ="167.8746, 15.69992, -117.8252"/>
