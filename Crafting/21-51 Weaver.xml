@@ -45,7 +45,7 @@ Authors:  Kayla / Angles24
 			<StopBot/>
         </If>
 		
-		<If Condition="Core.Me.Levels[ClassJobType.Weaver] &gt; 51">
+		<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">
 			<ALoadProfile Path="21-51 Weaver.xml"/>
 		</If>
 		
