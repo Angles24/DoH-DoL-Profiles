@@ -61,7 +61,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(66147) and not IsQuestCompleted(66147) and GetQuestStep(66147) == 255">
-        <While Condition="not (HqHasAtLeast(4305, 3) | NqHasAtLeast(4305, 3))">
+        <While Condition="not (HqHasAtLeast(4305, 3) or NqHasAtLeast(4305, 3))">
           <Lisbeth Json="[{'Item': 4305,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
@@ -86,12 +86,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </If>
       </If>
       <If Condition="HasQuest(66149) and not IsQuestCompleted(66149) and GetQuestStep(66149) == 1">
-        <While Condition="not (HqHasAtLeast(5086, 12) | NqHasAtLeast(5086, 12))">
+        <While Condition="not (HqHasAtLeast(5086, 12) or NqHasAtLeast(5086, 12))">
           <Lisbeth Json="[{'Item': 5086,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': true,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-		<!--<If Condition="not (HqHasAtLeast(5086, 12) | NqHasAtLeast(5086, 12))">
-          <Lisbeth Json="[{'Item': 5086,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': true,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>-->
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
         <LLHandOver ItemId="5086" AllowHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" QuestId="66149" StepId="1"/>
       </If>
