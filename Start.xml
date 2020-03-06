@@ -446,12 +446,7 @@ Blank Profile
 			<LogMessage Message="Clean inventory, set craftClass1 to 0 then restart start profile." />
 			<RunCode Name="craftClass1"/>
 			<StopBot/>
-		</If>		
-			<If Condition="&ltw; == 1">	
-				<If Condition="not IsQuestCompleted(68147)">	
-					<ALoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
-				</If>
-			</If>
+		</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="not IsQuestCompleted(67969)">	
 					<ALoadProfile Path="Quests/Weaver Class Quests.xml"/>
@@ -465,6 +460,11 @@ Blank Profile
 			<If Condition="&cul; == 1">	
 				<If Condition="not IsQuestCompleted(68142)">	
 					<ALoadProfile Path="Quests/Culinarian Class Quests.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="not IsQuestCompleted(68147)">	
+					<ALoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
 				</If>
 			</If>
 			
