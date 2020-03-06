@@ -22,12 +22,12 @@ Angles24
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
 	<Order>	
 	
-	<BotSettings BlockSkippingCutscenes="0"/>
-	
 	<If Condition="FreeItemSlots() &lt; 16">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
 		<StopBot/>
 	</If>
+	
+	<RunCode Name="SmallTalk"/>
 	
 	<If Condition="not IsQuestCompleted(68139)">
 	<ChangeClass Job="Goldsmith" />
@@ -55,8 +55,9 @@ Angles24
           <WaitWhile Condition="GetQuestStep(66151) == 255"/>
         </If>
 		</If>
-        <LLTurnIn QuestId="66151" ItemId="2111" NpcId="1004093" AllowHq="True" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66151" ItemId="2111" NpcId="1004093" AllowHq="True" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -73,8 +74,9 @@ Angles24
           <Lisbeth Json="[{'Item': 5064,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66152" ItemId="5064" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66152" ItemId="5064" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -102,8 +104,9 @@ Angles24
       </If>
       <If Condition="HasQuest(66153) and not IsQuestCompleted(66153) and GetQuestStep(66153) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn ItemId="2000509" QuestId="66153" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn ItemId="2000509" QuestId="66153" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -120,8 +123,9 @@ Angles24
           <Lisbeth Json="[{'Item': 2078,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66191" ItemId="2078" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66191" ItemId="2078" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -149,8 +153,9 @@ Angles24
       </If>
       <If Condition="HasQuest(66192) and not IsQuestCompleted(66192) and GetQuestStep(66192) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66192" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66192" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -194,8 +199,9 @@ Angles24
       </If>
       <If Condition="HasQuest(66193) and not IsQuestCompleted(66193) and GetQuestStep(66193) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66193" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66193" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -231,8 +237,9 @@ Angles24
       <If Condition="HasQuest(66194) and not IsQuestCompleted(66194) and GetQuestStep(66194) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
 		
-        <LLTurnIn QuestId="66194" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66194" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -262,6 +269,7 @@ Angles24
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLTurnIn NpcId="1012528" QuestId="67606" XYZ="-57.406, 18.5041, 66.5633"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -286,8 +294,9 @@ Angles24
           <Lisbeth Json="[{'Item': 11068,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" ItemId="11068" QuestId="67607" XYZ="-57.406, 18.5041, 66.5633"/>
+        <LLTurnIn NpcId="1012528" ItemId="11068" QuestId="67607" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -320,8 +329,9 @@ Angles24
       </If>
       <If Condition="HasQuest(67608) and not IsQuestCompleted(67608) and GetQuestStep(67608) == 255">
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" ItemId="2001722" QuestId="67608" XYZ="-57.406, 18.5041, 66.5633"/>
+        <LLTurnIn NpcId="1012528" ItemId="2001722" QuestId="67608" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -352,6 +362,7 @@ Angles24
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLTurnIn NpcId="1012528" QuestId="67609" XYZ="-57.406, 18.5041, 66.5633"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -383,8 +394,9 @@ Angles24
       </If>
       <If Condition="HasQuest(67610) and not IsQuestCompleted(67610) and GetQuestStep(67610) == 255">
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" QuestId="676010" XYZ="-57.406, 18.5041, 66.5633"/>
+        <TurnIn NpcId="1012528" QuestId="676010" XYZ="-57.406, 18.5041, 66.5633"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -416,6 +428,7 @@ Angles24
         <GetTo ZoneId="131" XYZ="-33.10773, 13.59999, 98.55938"/>
         <LLTurnIn QuestId="68135" NpcId="1002280" XYZ="-35.38574, 13.59997, 97.24573"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -456,8 +469,9 @@ Angles24
           <Lisbeth Json="[{'Item': 17902,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="635" XYZ="-76.9677, 0.01000077, 46.56393"/>
-        <LLTurnIn ItemIds="17902" QuestId="68136" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
+        <LLTurnIn ItemIds="17902" QuestId="68136" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -494,8 +508,9 @@ Angles24
           <Lisbeth Json="[{'Item': 17904,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="635" XYZ="-77.05145, 0.01000082, 46.10489"/>
-        <LLTurnIn ItemIds="17904" QuestId="68137" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
+        <LLTurnIn ItemIds="17904" QuestId="68137" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -542,6 +557,7 @@ Angles24
         <GetTo ZoneId="635" XYZ="-76.95066, 0.01000094, 45.4845"/>
         <LLTurnIn ItemIds="17906" QuestId="68138" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -584,6 +600,7 @@ Angles24
         <GetTo ZoneId="131" XYZ="-38.23554, 13.5, 111.0385"/>
         <LLTurnIn QuestId="68139" NpcId="1021158" XYZ="-38.65112, 13.5, 111.4366"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -594,6 +611,12 @@ Angles24
 	
 	</Order>
 	<CodeChunks>
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="AutoEquip">
             <![CDATA[ 
             var patternFinder = new GreyMagic.PatternFinder(Core.Memory);

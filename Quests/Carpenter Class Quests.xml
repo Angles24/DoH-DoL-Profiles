@@ -22,16 +22,18 @@ Angles24
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
 	<Order>	
 	
-	<BotSettings BlockSkippingCutscenes="0"/>
+	<!--<BotSettings BlockSkippingCutscenes="0"/>-->
 	
 	<If Condition="FreeItemSlots() &lt; 16">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
 		<StopBot/>
 	</If>
 	
+	<RunCode Name="SmallTalk"/>
+	
 	<If Condition="not IsQuestCompleted(67981)">
-	<ChangeClass Job="Carpenter" />
-	<WaitTimer WaitTime="2"/>
+		<ChangeClass Job="Carpenter" />
+		<WaitTimer WaitTime="2"/>	
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -55,8 +57,9 @@ Angles24
           <WaitWhile Condition="GetQuestStep(65678) == 255"/>
         </If>
 		</If>
-        <LLTurnIn QuestId="65678" ItemId="1827" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="65678" ItemId="1827" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -77,8 +80,9 @@ Angles24
           <Lisbeth Json="[{'Item': 5371,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </If>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="65704" ItemId="5371" RequiresHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="65704" ItemId="5371" RequiresHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -111,8 +115,9 @@ Angles24
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 255">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="65705" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="65705" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -137,8 +142,9 @@ Angles24
       </If>
       <If Condition="HasQuest(66072) and not IsQuestCompleted(66072) and GetQuestStep(66072) == 255">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="66072" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="66072" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -163,8 +169,9 @@ Angles24
       </If>
       <If Condition="HasQuest(66073) and not IsQuestCompleted(66073) and GetQuestStep(66073) == 255">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="66073" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="66073" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -203,8 +210,9 @@ Angles24
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 255">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="66074" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="66074" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -242,8 +250,9 @@ Angles24
       </If>
       <If Condition="HasQuest(66075) and not IsQuestCompleted(66075) and GetQuestStep(66075) == 255">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="66075" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="66075" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -263,6 +272,7 @@ Angles24
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
         <LLTurnIn QuestId="67533" ItemId="2001681" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -287,8 +297,9 @@ Angles24
       </If>
       <If Condition="HasQuest(67534) and not IsQuestCompleted(67534) and GetQuestStep(67534) == 255">
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
-        <LLTurnIn QuestId="67534" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LLTurnIn QuestId="67534" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -313,8 +324,9 @@ Angles24
       </If>
       <If Condition="HasQuest(67535) and not IsQuestCompleted(67535) and GetQuestStep(67535) == 255">
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
-        <LLTurnIn QuestId="67535" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LLTurnIn QuestId="67535" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -345,6 +357,7 @@ Angles24
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
         <LLTurnIn QuestId="67536" ItemId="12583" RequireHq="True" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -388,6 +401,7 @@ Angles24
 	    <GetTo ZoneId="397" XYZ="542.2294, 176.8043, -554.4976"/>
         <LLTurnIn QuestId="67537" NpcId="1013686" XYZ="542.2294, 176.8043, -554.4976"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -423,6 +437,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-45.10997, -1.250017, 57.86028"/>
         <LLTurnIn QuestId="67977" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -467,8 +482,9 @@ Angles24
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 255">
         <GetTo ZoneId="628" XYZ="-46.65266, 3.013504, -69.99533"/>
-        <LLTurnIn QuestId="67978" NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166"/>
+        <LLTurnIn QuestId="67978" NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -509,8 +525,9 @@ Angles24
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 255">
         <GetTo ZoneId="628" XYZ="-50.98821, -2.9, -51.92702"/>
-        <LLTurnIn QuestId="67979" NpcId="1020994" XYZ="-51.89594, -2.9, -50.91937"/>
+        <LLTurnIn QuestId="67979" NpcId="1020994" XYZ="-51.89594, -2.9, -50.91937" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -561,6 +578,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-22.08097, -3.25, 35.43846"/>
         <LLTurnIn QuestId="67980" NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -603,6 +621,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-45.06167, -1.250014, 57.76295"/>
         <LLTurnIn QuestId="67981" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <WaitTimer WaitTime="2"/>
+		<RunCode Name="SmallTalk"/>	
 		<RunCode Name="AutoEquip" />						  
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
@@ -613,6 +632,12 @@ Angles24
 	
 	</Order>
 	<CodeChunks>
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="AutoEquip">
             <![CDATA[ 
             var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
