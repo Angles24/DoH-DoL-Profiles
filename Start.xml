@@ -247,56 +247,49 @@ Blank Profile
 				<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft51 setting to 0 on start profile." />
 				<RunCode Name="craft51"/>
 				<StopBot/>
-			</If>
-			
-			
-			
-		<!-- Diadem 51-63 not ready -->
-		<LogMessage Message="Diadem 51-63 Not Ready Yet." />
-		<StopBot/>
-			
+			</If>	
 		
 		
 		
 		<!-- 51-63 Ishgard Crafting -->
 			<If Condition="&crp; == 1">			
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Carpenter.xml"/>
+					<ALoadProfile Path="Diadem/51-63 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Blacksmith.xml"/>
+					<ALoadProfile Path="Diadem/51-63 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Armorer.xml"/>
+					<ALoadProfile Path="Diadem/51-63 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Goldsmith.xml"/>
+					<ALoadProfile Path="Diadem/51-63 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Leatherworker.xml"/>
+					<ALoadProfile Path="Diadem/51-63 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Weaver.xml"/>
+					<ALoadProfile Path="Diadem/51-63 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Alchemist.xml"/>
+					<ALoadProfile Path="Diadem/51-63 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">	
-					<ALoadProfile Path="Crafting/51-63 Culinarian.xml"/>
+					<ALoadProfile Path="Diadem/51-63 CulinarianD.xml"/>
 				</If>
 			</If>			
 		
@@ -370,6 +363,12 @@ Blank Profile
 				<RunCode Name="craft63"/>
 				<StopBot/>
 			</If>
+			
+			
+			
+		<!-- Diadem 63-65 nonPref not ready -->
+		<LogMessage Message="Diadem 63-65 nonPref Not Ready Yet." />
+		<StopBot/>		
 			
 			
 			
