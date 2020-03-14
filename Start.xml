@@ -133,42 +133,42 @@ Blank Profile
 		<!-- 21-51 Ishgard Crafting -->
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Carpenter.xml"/>
+					<ALoadProfile Path="Diadem/21-51 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Blacksmith.xml"/>
+					<ALoadProfile Path="Diadem/21-51 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Armorer.xml"/>
+					<ALoadProfile Path="Diadem/21-51 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Goldsmith.xml"/>
+					<ALoadProfile Path="Diadem/21-51 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Leatherworker.xml"/>
+					<ALoadProfile Path="Diadem/21-51 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Weaver.xml"/>
+					<ALoadProfile Path="Diadem/21-51 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Alchemist.xml"/>
+					<ALoadProfile Path="Diadem/21-51 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 51">	
-					<ALoadProfile Path="Crafting/21-51 Culinarian.xml"/>
+					<ALoadProfile Path="Diadem/21-51 CulinarianD.xml"/>
 				</If>
 			</If>
 		</If>		
@@ -248,6 +248,13 @@ Blank Profile
 				<RunCode Name="craft51"/>
 				<StopBot/>
 			</If>
+			
+			
+			
+		<!-- Diadem 51-63 not ready -->
+		<LogMessage Message="Diadem 51-63 Not Ready Yet." />
+		<StopBot/>
+			
 		
 		
 		
