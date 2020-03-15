@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24 
 -->
 <Profile>
-<Name>Crafting Leatherworker to 51</Name>
+<Name>Crafting Leatherworker to 63</Name>
 <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 <Order>
 	
@@ -19,7 +19,7 @@ Authors:  Kayla / Angles24
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
 		</While>		
-		<While Condition="(ItemCount(29844) &gt; 24) and (ItemCount(29845) &gt; 24) and (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 50) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63)">
+		<While Condition="(ItemCount(29844) &gt; 24) and (ItemCount(29845) &gt; 24) and (Core.Me.Levels[ClassJobType.Leatherworker] &gt; 50) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63)">
 			<!-- Grade 2 Plywood -->
 			<Lisbeth Json="[{'Group':1,'Item':29804,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 		</While>
@@ -30,7 +30,7 @@ Authors:  Kayla / Angles24
 	</If>
 	
 	<!-- Gather Materials -->	
-	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &lt; 50) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63)">
+	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 50) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63)">
 		<If Condition="(ItemCount(29844) &lt; 24) and (ItemCount(29845) &lt; 24)">
 			<Lisbeth Json="[{'Id':1,'Group':1,'Item':29898,'Amount':50,'Enabled':true,'Type':'Gather'},{'Group':1,'Item':29899,'Amount':50,'Enabled':true,'Type':'Gather'},{'Group':1,'Item':5306,'Amount':20,'Enabled':true,'Type':'Gather'}]"/>		
 		</If>
