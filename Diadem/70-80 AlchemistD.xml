@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24 
+-->
+<Profile>
+<Name>Crafting Alchemist to 80</Name>
+<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
+<Order>
+	
+	<!-- Leave Diadem -->
+	<If Condition="(WorldManager.ZoneId == 901)">
+		<RunCode Name="Leave"/>
+		<WaitTimer waitTime="7"/>
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+	</If>
+		
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<RunCode Name="TurnIn"/>
+		</While>			
+	</If>
+	
+	<!-- Gather Materials -->	
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 69) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 80)">
+		<Lisbeth Json="[{'Group':1,'Item':29822,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>		
+	</If>
+	
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<RunCode Name="TurnIn"/>
+		</While>			
+	</If>
+	
+	<!-- Reload Profile -->
+	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">
+		<ALoadProfile Path="70-80 AlchemistD.xml"/>
+	</If>
+	
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 80 on Alchemist, moving on." />	
+	<ALoadProfile Path="../Start.xml"/>
+		
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.IshgardHandinBase.HandinNew();
+		await LlamaLibrary.IshgardHandinBase.GatheringHandin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>

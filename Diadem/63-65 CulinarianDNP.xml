@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24 
+-->
+<Profile>
+<Name>Crafting Culinarian to 65</Name>
+<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
+<Order>
+	
+	<!-- Leave Diadem -->
+	<If Condition="(WorldManager.ZoneId == 901)">
+		<RunCode Name="Leave"/>
+		<WaitTimer waitTime="7"/>
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+	</If>
+		
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<RunCode Name="TurnIn"/>
+		</While>			
+	</If>
+	
+	<!-- Gather Materials -->	
+	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 62) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 65)">
+		<Lisbeth Json="[{'Group':1,'Item':29815,'Amount':15,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>
+	</If>
+	
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<RunCode Name="TurnIn"/>
+		</While>			
+	</If>
+	
+	<!-- Reload Profile -->
+	<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 65">
+		<ALoadProfile Path="63-65 CulinarianDNP.xml"/>
+	</If>
+	
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 65 on Culinarian, moving on." />	
+	<ALoadProfile Path="../Start.xml"/>
+		
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.IshgardHandinBase.HandinNew();
+		await LlamaLibrary.IshgardHandinBase.GatheringHandin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>
