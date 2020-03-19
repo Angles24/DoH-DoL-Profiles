@@ -362,13 +362,7 @@ Blank Profile
 				<LogMessage Message="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft63 setting to 0 on start profile." />
 				<RunCode Name="craft63"/>
 				<StopBot/>
-			</If>
-			
-			
-			
-		<!-- Diadem 63-65 nonPref not ready -->
-		<LogMessage Message="Diadem 63-65 nonPref Not Ready Yet." />
-		<StopBot/>		
+			</If>	
 			
 			
 			
@@ -376,42 +370,42 @@ Blank Profile
 		<If Condition="&pref; == 0">	
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 65">	
-					<ALoadProfile Path="Crafting/63-65 CarpenterNP.xml"/>
+					<ALoadProfile Path="Diadem/63-65 CarpenterDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 65">	
-					<ALoadProfile Path="Crafting/63-65 BlacksmithNP.xml"/>
+					<ALoadProfile Path="Diadem/63-65 BlacksmithDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 65">	
-					<ALoadProfile Path="Crafting/63-65 ArmorerNP.xml"/>
+					<ALoadProfile Path="Diadem/63-65 ArmorerDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 65">	
-					<ALoadProfile Path="Crafting/63-65 GoldsmithNP.xml"/>
+					<ALoadProfile Path="Diadem/63-65 GoldsmithDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 65">	
-					<ALoadProfile Path="Crafting/63-65 LeatherworkerNP.xml"/>
+					<ALoadProfile Path="Diadem/63-65 LeatherworkerDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 65">	
-					<ALoadProfile Path="Crafting/63-65 WeaverNP.xml"/>
+					<ALoadProfile Path="Diadem/63-65 WeaverDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 65">	
-				<ALoadProfile Path="Crafting/63-65 AlchemistNP.xml"/>
+				<ALoadProfile Path="Diadem/63-65 AlchemistDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 65">	
-					<ALoadProfile Path="Crafting/63-65 CulinarianNP.xml"/>
+					<ALoadProfile Path="Diadem/63-65 CulinarianDNP.xml"/>
 				</If>
 			</If>
 		</If>
@@ -488,42 +482,42 @@ Blank Profile
 		<!-- 63-70 Ishgard Crafting -->		
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
-					<ALoadProfile Path="Crafting/63-70 Carpenter.xml"/>
+					<ALoadProfile Path="Diadem/63-70 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">	
-					<ALoadProfile Path="Crafting/63-70 Blacksmith.xml"/>
+					<ALoadProfile Path="Diadem/63-70 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 70">	
-					<ALoadProfile Path="Crafting/63-70 Armorer.xml"/>
+					<ALoadProfile Path="Diadem/63-70 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 70">	
-					<ALoadProfile Path="Crafting/63-70 Goldsmith.xml"/>
+					<ALoadProfile Path="Diadem/63-70 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 70">	
-					<ALoadProfile Path="Crafting/63-70 Leatherworker.xml"/>
+					<ALoadProfile Path="Diadem/63-70 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 70">	
-					<ALoadProfile Path="Crafting/63-70 Weaver.xml"/>
+					<ALoadProfile Path="Diadem/63-70 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 70">	
-				<ALoadProfile Path="Crafting/63-70 Alchemist.xml"/>
+				<ALoadProfile Path="Diadem/63-70 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">	
-					<ALoadProfile Path="Crafting/63-70 Culinarian.xml"/>
+					<ALoadProfile Path="Diadem/63-70 CulinarianD.xml"/>
 				</If>
 			</If>	
 
@@ -590,42 +584,42 @@ Blank Profile
 		<!-- 70-80 Ishgard Crafting -->
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
-					<ALoadProfile Path="Crafting/70-80 Carpenter.xml"/>
+					<ALoadProfile Path="Diadem/70-80 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 80">	
-					<ALoadProfile Path="Crafting/70-80 Blacksmith.xml"/>
+					<ALoadProfile Path="Diadem/70-80 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">	
-					<ALoadProfile Path="Crafting/70-80 Armorer.xml"/>
+					<ALoadProfile Path="Diadem/70-80 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 80">	
-					<ALoadProfile Path="Crafting/70-80 Goldsmith.xml"/>
+					<ALoadProfile Path="Diadem/70-80 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 80">	
-					<ALoadProfile Path="Crafting/70-80 Leatherworker.xml"/>
+					<ALoadProfile Path="Diadem/70-80 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">	
-					<ALoadProfile Path="Crafting/70-80 Weaver.xml"/>
+					<ALoadProfile Path="Diadem/70-80 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">	
-				<ALoadProfile Path="Crafting/70-80 Alchemist.xml"/>
+				<ALoadProfile Path="Diadem/70-80 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 80">	
-					<ALoadProfile Path="Crafting/70-80 Culinarian.xml"/>
+					<ALoadProfile Path="Diadem/70-80 CulinarianD.xml"/>
 				</If>
 			</If>
 
