@@ -18,35 +18,19 @@ Authors:  Kayla / Angles24
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>		
-		<While Condition="(ItemCount(29849) &gt; 24) and (ItemCount(29847) &gt; 24) and (Core.Me.Levels[ClassJobType.Goldsmith] &gt; 50) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63)">
-			<!-- Grade 2 Plywood -->
-			<Lisbeth Json="[{'Group':1,'Item':29803,'Amount':5,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>
-		</While>
-		<!-- Turn in-->
-		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
-			<RunCode Name="TurnIn"/>
-		</While>		
+		</While>			
 	</If>
 	
 	<!-- Gather Materials -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 50) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63)">
-		<If Condition="(ItemCount(29849) &lt; 24) and (ItemCount(29847) &lt; 24)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':29903,'Amount':50,'Enabled':true,'Type':'Gather'},{'Group':1,'Item':29901,'Amount':50,'Enabled':true,'Type':'Gather'},{'Group':1,'Item':5115,'Amount':20,'Enabled':true,'Type':'Gather'}]"/>		
-		</If>
-		<If Condition="(ItemCount(29849) &lt; 24)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':29903,'Amount':50,'Enabled':true,'Type':'Gather'},{'Group':1,'Item':5115,'Amount':20,'Enabled':true,'Type':'Gather'}]"/>		
-		</If>
-		<If Condition="(ItemCount(29847) &lt; 24)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':29901,'Amount':50,'Enabled':true,'Type':'Gather'},{'Group':1,'Item':5115,'Amount':20,'Enabled':true,'Type':'Gather'}]"/>		
-		</If>		
+		<Lisbeth Json="[{'Group':1,'Item':29803,'Amount':15,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>		
 	</If>
 	
-	<!-- Leave Diadem -->
-	<If Condition="(WorldManager.ZoneId == 901)">
-		<RunCode Name="Leave"/>
-		<WaitTimer waitTime="7"/>
-		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<RunCode Name="TurnIn"/>
+		</While>			
 	</If>
 	
 	<!-- Reload Profile -->

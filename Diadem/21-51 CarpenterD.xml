@@ -18,27 +18,19 @@ Authors:  Kayla / Angles24
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>		
-		<While Condition="(ItemCount(29840) &gt; 24) and (Core.Me.Levels[ClassJobType.Carpenter] &gt; 20) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 51)">
-			<!-- Grade 2 Plywood -->
-			<Lisbeth Json="[{'Group':1,'Item':29792,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>
-		</While>
-		<!-- Turn in-->
+		</While>	
+	</If>
+	
+	<!-- Grade 2 Plywood -->	
+	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 20) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 51)">
+		<Lisbeth Json="[{'Group':1,'Item':29792,'Amount':15,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>		
+	</If>
+	
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>		
-	</If>
-	
-	<!-- Gather Materials -->	
-	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 20) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 51) and (ItemCount(29840) &lt; 49)">
-		<Lisbeth Json="[{'Id':1,'Group':1,'Item':29894,'Amount':50,'Enabled':true,'Type':'Gather'},{'Group':1,'Item':5386,'Amount':10,'Enabled':true,'Type':'Gather'}]"/>		
-	</If>
-	
-	<!-- Leave Diadem -->
-	<If Condition="(WorldManager.ZoneId == 901)">
-		<RunCode Name="Leave"/>
-		<WaitTimer waitTime="7"/>
-		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+		</While>	
 	</If>
 	
 	<!-- Reload Profile -->
