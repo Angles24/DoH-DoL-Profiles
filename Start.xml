@@ -43,6 +43,8 @@ Blank Profile
 	<BehaviorDirectory>Quest Behaviors</BehaviorDirectory>		
 	<Order>	
 	
+	<RunCode Name="flying"/>
+	
 	<!-- Check to see if we have unlock all Crafting Profiles -->	
 			<If Condition="not (IsQuestCompleted(65807) and IsQuestCompleted(65809) 
 							and IsQuestCompleted(65827) and IsQuestCompleted(65674) 
@@ -811,6 +813,12 @@ Blank Profile
 		<![CDATA[ 
 			Core.OverlayManager.AddToast(() => "Get level 70 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to get and\n set craft70 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="flying">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Make sure you have Diadem flying enabled in Lisbeth.", TimeSpan.FromMilliseconds(5000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(5000);
 		]]>
 		</CodeChunk>
 	</CodeChunks>
