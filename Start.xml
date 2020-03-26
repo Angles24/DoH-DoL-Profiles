@@ -26,8 +26,7 @@ Blank Profile
 <!ENTITY cul "1"> 
 <!ENTITY min "1"> 
 <!ENTITY btn "1"> 
-<!ENTITY meld "1"> 	 <!-- Change meld option to 0 when you have crafted and melded the items
-			Items required for meld  [Level 20 Quest // Level 50 Quest]
+<!-- 		Items required for meld  [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
 			BSM - [Iron Cross-Pein Hammer (Materia Enhanced) // HQ Cobalt Winglet (Melded with: Savage Might Materia III)]
 			ARM - [Iron Hoplon (Materia-Enhanced) // HQ Cobalt Haubergeon (Melded with: Heaven’s Eye III Materia)]
@@ -44,6 +43,7 @@ Blank Profile
 	<Order>	
 	
 	<RunCode Name="flying"/>
+	<RunCode Name="Disable_Flight"/>
 	
 	<!-- Check to see if we have unlock all Crafting Profiles -->	
 			<If Condition="not (IsQuestCompleted(65807) and IsQuestCompleted(65809) 
@@ -470,15 +470,6 @@ Blank Profile
 				</If>
 			</If>
 			
-			
-
-		<!-- Farm Yellow Scrip Level 70 Gear --> 
-			<If Condition="&craft70; == 1">	
-				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and set craft70 setting to 0 on start profile." />
-				<RunCode Name="craft70"/>
-				<StopBot/>
-			</If>
-			
 		
 		
 		<!-- 63-70 Ishgard Crafting -->		
@@ -580,6 +571,15 @@ Blank Profile
 				<ALoadProfile Path="Gathering/63-70 Botanist.xml"/>
 			</If>
 		</If>
+			
+			
+
+		<!-- Farm Yellow Scrip Level 70 Gear --> 
+			<If Condition="&craft70; == 1">	
+				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and set craft70 setting to 0 on start profile." />
+				<RunCode Name="craft70"/>
+				<StopBot/>
+			</If>
 		
 		
 		
@@ -821,5 +821,17 @@ Blank Profile
 			await Coroutine.Sleep(5000);
 		]]>
 		</CodeChunk>
+		<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
 	</CodeChunks>
 </Profile>
