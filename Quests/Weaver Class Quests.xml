@@ -28,6 +28,7 @@ Angles24
 	</If>
 	
 	<RunCode Name="SmallTalk"/>
+	<RunCode Name="Enable_Flight"/>
 	
 	<If Condition="not IsQuestCompleted(67971)">
 	<ChangeClass Job="Weaver" />
@@ -651,5 +652,17 @@ Angles24
         MovementManager.MoveStop();
         await Coroutine.Sleep(500);
       ]]></CodeChunk>
+	  <CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
 	</CodeChunks>
 </Profile>
