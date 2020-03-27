@@ -371,43 +371,43 @@ Blank Profile
 		<!-- NoN Preferred Realm to 65 in Crafting -->
 		<If Condition="&pref; == 0">	
 			<If Condition="&crp; == 1">		
-				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 65">	
-					<ALoadProfile Path="Diadem/63-65 CarpenterDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 67">	
+					<ALoadProfile Path="Diadem/63-67 CarpenterDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">				
-				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 65">	
-					<ALoadProfile Path="Diadem/63-65 BlacksmithDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 67">	
+					<ALoadProfile Path="Diadem/63-67 BlacksmithDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 65">	
-					<ALoadProfile Path="Diadem/63-65 ArmorerDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 67">	
+					<ALoadProfile Path="Diadem/63-67 ArmorerDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 65">	
-					<ALoadProfile Path="Diadem/63-65 GoldsmithDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 67">	
+					<ALoadProfile Path="Diadem/63-67 GoldsmithDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 65">	
-					<ALoadProfile Path="Diadem/63-65 LeatherworkerDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 67">	
+					<ALoadProfile Path="Diadem/63-67 LeatherworkerDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 65">	
-					<ALoadProfile Path="Diadem/63-65 WeaverDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 67">	
+					<ALoadProfile Path="Diadem/63-67 WeaverDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 65">	
-				<ALoadProfile Path="Diadem/63-65 AlchemistDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 67">	
+				<ALoadProfile Path="Diadem/63-67 AlchemistDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
-				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 65">	
-					<ALoadProfile Path="Diadem/63-65 CulinarianDNP.xml"/>
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 67">	
+					<ALoadProfile Path="Diadem/63-67 CulinarianDNP.xml"/>
 				</If>
 			</If>
 		</If>
