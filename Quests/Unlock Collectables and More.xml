@@ -25,6 +25,12 @@ Kayla / Angles24
 		</If>
 		<!-- End - Inscrutable Tastes -->
 		
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="SwitchDoLJob"/>
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip"/>
+		<WaitTimer WaitTime="2"/>
+		
 		<!-- Just Tooling Around -->
 		<If Condition="not IsQuestCompleted(66959) and not HasQuest(66959)">
 			<LogMessage Message="Picking Up - Just Tooling Around!" />
@@ -37,6 +43,10 @@ Kayla / Angles24
 			<LogMessage Message="Completed Quest - Tooling Around!" />
 		</If>
 		<!-- End - Just Tooling Around -->
+		
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="SwitchDoHJob"/>
+		<WaitTimer WaitTime="2"/>
 		
 		<!-- A Self-improving Man -->
 		<If Condition="not IsQuestCompleted(68554) and not IsQuestCompleted(68553) and not IsQuestCompleted(66957) and not HasQuest(66957)">
@@ -203,6 +213,29 @@ Kayla / Angles24
 				}
 			]]>
 		</CodeChunk>
+		<CodeChunk Name="AutoEquip">
+            <![CDATA[ 
+				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+				IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+				int id = AgentModule.FindAgentIdByVtable(agentVtable);
+
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+
+				if (windowByName == null)
+				{
+					AgentModule.GetAgentInterfaceById(id).Toggle();
+				}
+
+				await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
+            
+				windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+            
+				if (windowByName != null)
+				{
+					windowByName.SendAction(1, 3, 0);
+				}
+        ]]>
+        </CodeChunk>
 	</CodeChunks>
 </Profile>
 
