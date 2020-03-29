@@ -112,7 +112,7 @@ Kayla / Angles24
 		<If Condition="IsQuestCompleted(67634) and not IsQuestCompleted(68477) and not HasQuest(68477)">
 			<LogMessage Message="Completed Quest - Reach Long and Prosper!" />
 			<GetTo ZoneId="635" XYZ="-69.19054, 0.00999999, 62.08514" />
-			<TalkTo NpcId="1019459" QuestId="68477" />
+			<TalkTo NpcId="1019459" XYZ="-69.19054, 0.00999999, 62.08514" QuestId="68477" />
 		</If>
 		<!-- End - Reach Long and Prosper -->		
 		
