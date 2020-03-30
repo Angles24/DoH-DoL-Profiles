@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24 
 -->
 <Profile>
-  <Name>Crafting Leatherworker to 65</Name>
+  <Name>Crafting Culinarian to 67</Name>
   <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 	
@@ -16,21 +16,21 @@ Authors:  Kayla / Angles24
 			<LogMessage Message="SkyBuilders' Scripts Full." />
 			<RunCode Name="ScripFull"/>
 			<StopBot/>
-        </If>
+        </If>		
 		
-		<!-- Skybuilders' Leather Rug -->
-		<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &gt; 62 and  Core.Me.Levels[ClassJobType.Leatherworker] &lt; 65 and FreeItemSlots() &gt; 15">
-			<If Condition="ClassName != ClassJobType.Leatherworker">
-				<ChangeClass Job="Leatherworker" />
+		<!-- Skybuilders' Tea -->
+		<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &gt; 62 and  Core.Me.Levels[ClassJobType.Culinarian] &lt; 67 and FreeItemSlots() &gt; 15">
+			<If Condition="ClassName != ClassJobType.Culinarian">
+				<ChangeClass Job="Culinarian" />
 			</If>		
-			<If Condition="ClassName == ClassJobType.Leatherworker">
+			<If Condition="ClassName == ClassJobType.Culinarian">
 				<RunCode Name="AutoEquip"/>
 				<RunCode Name="UpdateGearSet"/>				
 				<If Condition="HasAtLeast(4632,1)">
-					<Lisbeth Json="[{'Group':1,'Item':28745,'Amount':10,'Enabled':true,'Type':'Leatherworker','Collectable':false,'Manual':4632}]"/>
+					<Lisbeth Json="[{'Group':1,'Item':28748,'Amount':10,'Enabled':true,'Type':'Culinarian','Collectable':false,'Manual':4632}]"/>
 				</If>
 				<If Condition="not HasAtLeast(4632,1)">
-					<Lisbeth Json="[{'Group':1,'Item':28745,'Amount':10,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+					<Lisbeth Json="[{'Group':1,'Item':28748,'Amount':10,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>
 				</If>
 			</If> 
 		</If>
@@ -46,12 +46,12 @@ Authors:  Kayla / Angles24
 			<StopBot/>
         </If>
 		
-		<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 65">
-			<ALoadProfile Path="63-65 LeatherworkerNP.xml"/>
+		<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 67">
+			<ALoadProfile Path="63-67 CulinarianNP.xml"/>	
 		</If>
 		
-		<LogMessage Message="Congrats on Level 65 on Leatherworker, moving on." />
-		<ALoadProfile Path="../Start.xml"/>
+		<LogMessage Message="Congrats on Level 67 on Culinarian, moving on." />
+		<ALoadProfile Path="../Start.xml"/>				
 			
 	</Order>
 	

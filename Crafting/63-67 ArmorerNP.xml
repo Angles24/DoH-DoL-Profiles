@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24 
 -->
 <Profile>
-  <Name>Crafting Weaver to 70</Name>
+  <Name>Crafting Armorer to 67</Name>
   <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 	
@@ -18,19 +18,19 @@ Authors:  Kayla / Angles24
 			<StopBot/>
         </If>
 		
-		<!-- Skybuilders' Broom -->
-		<If Condition="Core.Me.Levels[ClassJobType.Weaver] &gt; 62 and  Core.Me.Levels[ClassJobType.Weaver] &lt; 70 and FreeItemSlots() &gt; 15">
-			<If Condition="ClassName != ClassJobType.Weaver">
-				<ChangeClass Job="Weaver" />
+		<!-- Skybuilders' Cooking Pot -->
+		<If Condition="Core.Me.Levels[ClassJobType.Armorer] &gt; 62 and  Core.Me.Levels[ClassJobType.Armorer] &lt; 67 and FreeItemSlots() &gt; 15">
+			<If Condition="ClassName != ClassJobType.Armorer">
+				<ChangeClass Job="Armorer" />
 			</If>		
-			<If Condition="ClassName == ClassJobType.Weaver">
+			<If Condition="ClassName == ClassJobType.Armorer">
 				<RunCode Name="AutoEquip"/>
 				<RunCode Name="UpdateGearSet"/>				
 				<If Condition="HasAtLeast(4632,1)">
-					<Lisbeth Json="[{'Group':1,'Item':28746,'Amount':10,'Enabled':true,'Type':'Weaver','Collectable':false,'Manual':4632}]"/>
+					<Lisbeth Json="[{'Group':1,'Item':28743,'Amount':10,'Enabled':true,'Type':'Armorer','Collectable':false,'Manual':4632}]"/>
 				</If>
 				<If Condition="not HasAtLeast(4632,1)">
-					<Lisbeth Json="[{'Group':1,'Item':28746,'Amount':10,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
+					<Lisbeth Json="[{'Group':1,'Item':28743,'Amount':10,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
 				</If>
 			</If> 
 		</If>
@@ -46,12 +46,12 @@ Authors:  Kayla / Angles24
 			<StopBot/>
         </If>
 		
-		<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 70">
-			<ALoadProfile Path="63-70 Weaver.xml"/>
+		<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 67">
+			<ALoadProfile Path="63-67 ArmorerNP.xml"/>
 		</If>
 		
-		<LogMessage Message="Congrats on Level 70 on Weaver, moving on." />
-		<ALoadProfile Path="../Start.xml"/>			
+		<LogMessage Message="Congrats on Level 67 on Armorer, moving on." />
+		<ALoadProfile Path="../Start.xml"/>
 			
 	</Order>
 	

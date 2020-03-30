@@ -8,6 +8,7 @@ Blank Profile
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
+<!ENTITY CN "0"> <!-- 1 = CN client // 0 = English Client -->
 <!ENTITY pref "1"> <!-- 1 = preferred realm // 0 = non preferred realm -->
 <!ENTITY craft21 "1"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
 <!ENTITY craft40 "1">
@@ -131,8 +132,8 @@ Blank Profile
 				<ALoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
 			</If>		
 		
-	<If Condition="IsQuestCompleted(69208)">	
 		<!-- 21-51 Ishgard Crafting -->
+		<If Condition="&CN; == 0">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
 					<ALoadProfile Path="Diadem/21-51 CarpenterD.xml"/>
@@ -173,7 +174,50 @@ Blank Profile
 					<ALoadProfile Path="Diadem/21-51 CulinarianD.xml"/>
 				</If>
 			</If>
-		</If>		
+		</If>
+		<If Condition="&CN; == 1">
+			<If Condition="&crp; == 1">
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 51">	
+					<ALoadProfile Path="Crafting/21-51 Culinarian.xml"/>
+				</If>
+			</If>
+		</If>
+	
 		
 	
 		<!-- Gatherer's to 40 -->
@@ -189,7 +233,6 @@ Blank Profile
 		</If>
 			
 		
-	<If Condition="IsQuestCompleted(69208)">	
 		<!-- Craft Level 40 Gathering Gear -->
 			<If Condition="&craft40; == 1">
 				<LogMessage Message="Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft40 setting to 0 on start profile." />
@@ -254,6 +297,7 @@ Blank Profile
 		
 		
 		<!-- 51-63 Ishgard Crafting -->
+		<If Condition="&CN; == 0">
 			<If Condition="&crp; == 1">			
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
 					<ALoadProfile Path="Diadem/51-63 CarpenterD.xml"/>
@@ -293,7 +337,50 @@ Blank Profile
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">	
 					<ALoadProfile Path="Diadem/51-63 CulinarianD.xml"/>
 				</If>
-			</If>			
+			</If>
+		</If>
+		<If Condition="&CN; == 1">
+			<If Condition="&crp; == 1">			
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">	
+					<ALoadProfile Path="Crafting/51-63 Culinarian.xml"/>
+				</If>
+			</If>
+		</If>
 		
 		
 		
@@ -368,8 +455,8 @@ Blank Profile
 			
 			
 			
-		<!-- NoN Preferred Realm to 65 in Crafting -->
-		<If Condition="&pref; == 0">	
+		<!-- NoN Preferred Realm to 67 in Crafting -->
+		<If Condition="&pref; == 0 and &CN; == 0">	
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 67">	
 					<ALoadProfile Path="Diadem/63-67 CarpenterDNP.xml"/>
@@ -408,6 +495,48 @@ Blank Profile
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 67">	
 					<ALoadProfile Path="Diadem/63-67 CulinarianDNP.xml"/>
+				</If>
+			</If>
+		</If>
+		<If Condition="&pref; == 0 and &CN; == 1">	
+			<If Condition="&crp; == 1">		
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 67">	
+					<ALoadProfile Path="Crafting/63-67 CarpenterNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">				
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 67">	
+					<ALoadProfile Path="Crafting/63-67 BlacksmithNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 67">	
+					<ALoadProfile Path="Crafting/63-67 ArmorerNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 67">	
+					<ALoadProfile Path="Crafting/63-67 GoldsmithNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 67">	
+					<ALoadProfile Path="Crafting/63-67 LeatherworkerNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 67">	
+					<ALoadProfile Path="Crafting/63-67 WeaverNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 67">	
+				<ALoadProfile Path="Crafting/63-67 AlchemistNP.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 67">	
+					<ALoadProfile Path="Crafting/63-67 CulinarianNP.xml"/>
 				</If>
 			</If>
 		</If>
@@ -472,7 +601,8 @@ Blank Profile
 			
 		
 		
-		<!-- 63-70 Ishgard Crafting -->		
+		<!-- 63-70 Ishgard Crafting -->	
+		<If Condition="&CN; == 0">
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
 					<ALoadProfile Path="Diadem/63-70 CarpenterD.xml"/>
@@ -512,7 +642,50 @@ Blank Profile
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">	
 					<ALoadProfile Path="Diadem/63-70 CulinarianD.xml"/>
 				</If>
-			</If>	
+			</If>
+		</If>
+		<If Condition="&CN; == 1">
+			<If Condition="&crp; == 1">		
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
+					<ALoadProfile Path="Crafting/63-70 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">				
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">	
+					<ALoadProfile Path="Crafting/63-70 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 70">	
+					<ALoadProfile Path="Crafting/63-70 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 70">	
+					<ALoadProfile Path="Crafting/63-70 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 70">	
+					<ALoadProfile Path="Crafting/63-70 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 70">	
+					<ALoadProfile Path="Crafting/63-70 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 70">	
+				<ALoadProfile Path="Crafting/63-70 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">	
+					<ALoadProfile Path="Crafting/63-70 Culinarian.xml"/>
+				</If>
+			</If>
+		</If>
 
 
 
@@ -584,6 +757,7 @@ Blank Profile
 		
 		
 		<!-- 70-80 Ishgard Crafting -->
+		<If Condition="&CN; == 0">
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
 					<ALoadProfile Path="Diadem/70-80 CarpenterD.xml"/>
@@ -624,7 +798,48 @@ Blank Profile
 					<ALoadProfile Path="Diadem/70-80 CulinarianD.xml"/>
 				</If>
 			</If>
-
+		</If>
+		<If Condition="&CN; == 1">
+			<If Condition="&crp; == 1">		
+				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
+					<ALoadProfile Path="Crafting/70-80 Carpenter.xml"/>
+				</If>
+			</If>
+			<If Condition="&bsm; == 1">				
+				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 80">	
+					<ALoadProfile Path="Crafting/70-80 Blacksmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&arm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">	
+					<ALoadProfile Path="Crafting/70-80 Armorer.xml"/>
+				</If>
+			</If>
+			<If Condition="&gsm; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 80">	
+					<ALoadProfile Path="Crafting/70-80 Goldsmith.xml"/>
+				</If>
+			</If>
+			<If Condition="&ltw; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 80">	
+					<ALoadProfile Path="Crafting/70-80 Leatherworker.xml"/>
+				</If>
+			</If>
+			<If Condition="&wvr; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">	
+					<ALoadProfile Path="Crafting/70-80 Weaver.xml"/>
+				</If>
+			</If>
+			<If Condition="&alc; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">	
+				<ALoadProfile Path="Crafting/70-80 Alchemist.xml"/>
+				</If>
+			</If>
+			<If Condition="&cul; == 1">	
+				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 80">	
+					<ALoadProfile Path="Crafting/70-80 Culinarian.xml"/>
+				</If>
+			</If>
 		</If>
 		
 		
