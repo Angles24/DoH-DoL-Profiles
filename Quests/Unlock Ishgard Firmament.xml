@@ -74,6 +74,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 		<TalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
 		<WaitTimer WaitTime="3" />
 		<RunCode Name="SwitchDoHJob"/>
+		<MoveTo XYZ="34.94659, -16, 154.2146" UseMesh="False" /> 	
 		<MoveTo Name="Potkin" XYZ="50.83703, -16, 168.3313" UseMesh="False" /> 	
 		<TalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
 		<WaitTimer WaitTime="3" />
