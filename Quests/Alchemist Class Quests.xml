@@ -27,13 +27,16 @@ Angles24
 		<StopBot/>
 	</If>
 	
+	<WaitTimer WaitTime="2"/>
 	<RunCode Name="SmallTalk"/>
+	<WaitTimer WaitTime="2"/>
 	<RunCode Name="Enable_Flight"/>
+	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(67976)">
 	<ChangeClass Job="Alchemist" />
 	<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="AutoEquip" />
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
 	</If>
@@ -59,7 +62,9 @@ Angles24
         <LLTurnIn QuestId="66118" ItemId="2149" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -78,7 +83,8 @@ Angles24
         <LLTurnIn QuestId="66119" ItemId="5522" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -108,7 +114,9 @@ Angles24
         <LLTurnIn QuestId="66120" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -135,7 +143,9 @@ Angles24
         <LLTurnIn QuestId="66183" ItemId="4556" RequiresHq="True" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -154,7 +164,9 @@ Angles24
         <LLTurnIn QuestId="66184" ItemId="4599" RequiresHq="True" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -179,7 +191,9 @@ Angles24
         <LLTurnIn ItemIds="4607,4608,4606" RequiresHq="true,true,true" QuestId="66185" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -228,7 +242,9 @@ Angles24
         <LLTurnIn QuestId="66186" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -248,7 +264,9 @@ Angles24
         <LLTurnIn QuestId="67601" ItemId="2001704" NpcId="1012558" XYZ="76.8951, 22.2367, -640.412"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -279,7 +297,9 @@ Angles24
         <LLTurnIn NpcId="1012560" QuestId="67602" XYZ="431.235, -5.50854, -440.635" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -314,7 +334,9 @@ Angles24
         <LLTurnIn ItemId="2001706" RequiresHq="False" NpcId="1012558" QuestId="67603" XYZ="76.8951, 22.2367, -640.412" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -345,7 +367,9 @@ Angles24
         <LLTurnIn ItemId="12622" RequireHq="True" NpcId="1012559" QuestId="67604" XYZ="78.2486, 22.2367, -640.01"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -388,7 +412,9 @@ Angles24
         <LLTurnIn NpcId="1012558" QuestId="67605" XYZ="76.8951, 22.2367, -640.412"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -416,7 +442,9 @@ Angles24
         <LLTurnIn QuestId="67972" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -451,7 +479,9 @@ Angles24
         <LLTurnIn QuestId="67973" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -490,7 +520,9 @@ Angles24
         <LLTurnIn ItemIds="17928" QuestId="67974" NpcId="1020098" XYZ="-157.5495, 14.048, 58.64038" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -533,7 +565,9 @@ Angles24
         <LLTurnIn QuestId="67975" NpcId="1020107" XYZ="133.5927, 4, -20.03516"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -576,7 +610,9 @@ Angles24
         <LLTurnIn QuestId="67976" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<RunCode Name="AutoEquip" />						  
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -631,7 +667,7 @@ Angles24
 				AgentModule.GetAgentInterfaceById(idChar).Toggle();
 			}
 
-			await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+			await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
 
 			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
 
@@ -640,12 +676,12 @@ Angles24
 				windowByName.SendAction(1, 3, 0xF);
 			}
             
-            await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
+            await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
 
             if (SelectYesno.IsOpen)
                 SelectYesno.Yes();
 
-			await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
+			await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);
 			
             await Coroutine.Sleep(200);
 			
@@ -656,7 +692,7 @@ Angles24
 				AgentModule.GetAgentInterfaceById(idChar).Toggle();
 			}
 			
-			]]>
+		]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">
 		<![CDATA[

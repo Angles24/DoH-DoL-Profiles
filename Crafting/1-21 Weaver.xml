@@ -42,7 +42,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66071" ItemId="5333" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="SmallTalk"/>	
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -67,7 +70,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66123" ItemIds="3274, 3274, 3274" AllowHq="True" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="SmallTalk"/>	
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>	
@@ -92,7 +98,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66125" ItemId="5324" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="SmallTalk"/>	
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -127,7 +136,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn ItemIds="2670,3322" AllowHq="True" QuestId="66126" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />						  
+		<RunCode Name="SmallTalk"/>	
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip" />
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="UpdateGearSet"/>	
         <WaitTimer WaitTime="2"/>
       </If>
@@ -144,7 +156,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<If Condition="Core.Player.ClassLevel &gt; 20">
 		<LogMessage Message="Congrats on Level 21, moving on." />
 		<RunCode Name="AutoEquip"/>	
-		<RunCode Name="UpdateGearSet"/>														
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="UpdateGearSet"/>	
+		<WaitTimer WaitTime="2"/>		
 	</If>
 	
 	<ALoadProfile Path="../Start.xml"/>
@@ -175,43 +189,50 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         ]]>
         </CodeChunk>
 		<CodeChunk Name="UpdateGearSet">
-			<![CDATA[ 
-				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-				IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-				int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+		<![CDATA[ 
+		   var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+            IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+			int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
 
-				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+			AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
 
-				if (windowByName == null)
-				{
-					AgentModule.GetAgentInterfaceById(idChar).Toggle();
-				}
+			if (windowByName == null)
+			{
+				AgentModule.GetAgentInterfaceById(idChar).Toggle();
+			}
 
-				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+			await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
 
-				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
 
-				if (windowByName != null)
-				{
-					windowByName.SendAction(1, 3, 0xF);
-				}
+			if (windowByName != null)
+			{
+				windowByName.SendAction(1, 3, 0xF);
+			}
             
-				await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
+            await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
 
-				if (SelectYesno.IsOpen)
-					SelectYesno.Yes();
+            if (SelectYesno.IsOpen)
+                SelectYesno.Yes();
 
-				await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
+			await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);
 			
-				await Coroutine.Sleep(200);
+            await Coroutine.Sleep(200);
 			
-				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
 
-				if (windowByName != null)
-				{
-					AgentModule.GetAgentInterfaceById(idChar).Toggle();
-				}			
+			if (windowByName != null)
+			{
+				AgentModule.GetAgentInterfaceById(idChar).Toggle();
+			}
+			
 		]]>
+		</CodeChunk>
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
 		</CodeChunk>
 	</CodeChunks>
 </Profile>

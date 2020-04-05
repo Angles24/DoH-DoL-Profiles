@@ -18,9 +18,13 @@ Angles24
 	</If> 
 				
     <If Condition="ClassName == ClassJobType.Botanist">
+		<WaitTimer WaitTime="2"/>
 		<RunCode Name="Enable_Flight" />
-		<RunCode Name="AutoEquip"/>
-		<RunCode Name="UpdateGearSet"/>
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="AutoEquip"/>	
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="UpdateGearSet"/>	
+		<WaitTimer WaitTime="2"/>
 		
 		<!--Level 63 - You Say Popoto, I Say...-->
 		<If Condition="not IsQuestCompleted(68157)">
@@ -64,8 +68,11 @@ Angles24
 				<LLTurnIn QuestId="68157" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/> 
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 63 - You Say Popoto, I Say.... - Completed" />
+				<WaitTimer WaitTime="2"/>
 				<RunCode Name="AutoEquip"/>	
-				<RunCode Name="UpdateGearSet"/>
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="UpdateGearSet"/>	
+				<WaitTimer WaitTime="2"/>
 			</If>
 		</If>
 		<!--End You Say Popoto, I Say...-->
@@ -89,8 +96,11 @@ Angles24
 		</If>
 		<If Condition="Core.Player.ClassLevel == 64">
 			<LogMessage Message="Congrats on Level 64, moving on." />			
-			<RunCode Name="AutoEquip"/>
+			<WaitTimer WaitTime="2"/>
+			<RunCode Name="AutoEquip"/>	
+			<WaitTimer WaitTime="2"/>
 			<RunCode Name="UpdateGearSet"/>	
+			<WaitTimer WaitTime="2"/>	
 		</If>
 		<!--End Level 64-->
 		
@@ -113,8 +123,11 @@ Angles24
 		</If>
 		<If Condition="Core.Player.ClassLevel == 65">
 			<LogMessage Message="Congrats on Level 65, moving on." />			
-			<RunCode Name="AutoEquip"/>
+			<WaitTimer WaitTime="2"/>
+			<RunCode Name="AutoEquip"/>	
+			<WaitTimer WaitTime="2"/>
 			<RunCode Name="UpdateGearSet"/>	
+			<WaitTimer WaitTime="2"/>
 		</If>
 		<!--End Level 65-->
 		
@@ -178,8 +191,11 @@ Angles24
 					<LLTurnIn ItemIds="17946" RequiresHq="True" QuestId="68158" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/> 
 					<WaitTimer WaitTime="2"/>	
 					<LogMessage Message="Level 65 - Walking for Walker's - Completed." />
+					<WaitTimer WaitTime="2"/>
 					<RunCode Name="AutoEquip"/>	
-					<RunCode Name="UpdateGearSet"/>
+					<WaitTimer WaitTime="2"/>
+					<RunCode Name="UpdateGearSet"/>	
+					<WaitTimer WaitTime="2"/>
 				</If>
 			</If>
 		</If>
@@ -204,8 +220,11 @@ Angles24
 		</If>
 		<If Condition="Core.Player.ClassLevel == 66">
 			<LogMessage Message="Congrats on Level 66, moving on." />			
-			<RunCode Name="AutoEquip"/>
+			<WaitTimer WaitTime="2"/>
+			<RunCode Name="AutoEquip"/>	
+			<WaitTimer WaitTime="2"/>
 			<RunCode Name="UpdateGearSet"/>	
+			<WaitTimer WaitTime="2"/>	
 		</If>
 		<!--End Level 66-->
   
@@ -228,8 +247,11 @@ Angles24
 		</If>
 		<If Condition="Core.Player.ClassLevel == 68">
 			<LogMessage Message="Congrats on Level 68, moving on." />			
-			<RunCode Name="AutoEquip"/>
+			<WaitTimer WaitTime="2"/>
+			<RunCode Name="AutoEquip"/>	
+			<WaitTimer WaitTime="2"/>
 			<RunCode Name="UpdateGearSet"/>	
+			<WaitTimer WaitTime="2"/>	
 		</If>
 		<!--End Level 68-->
 		
@@ -285,8 +307,11 @@ Angles24
 				<LLTurnIn ItemIds="2002168" QuestId="68159" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 68 - The White Death - Completed." />
-				<RunCode Name="AutoEquip"/>
-				<RunCode Name="UpdateGearSet"/>
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="AutoEquip"/>	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="UpdateGearSet"/>	
+				<WaitTimer WaitTime="2"/>
 			</If>
 		</If>
 		<!--End The White Death-->
@@ -312,8 +337,11 @@ Angles24
 		</If>
 		<If Condition="Core.Player.ClassLevel == 70">
 			<LogMessage Message="Congrats on Level 70, moving on." />			  
-			<RunCode Name="AutoEquip"/>
-			<RunCode Name="UpdateGearSet"/>
+			<WaitTimer WaitTime="2"/>
+			<RunCode Name="AutoEquip"/>	
+			<WaitTimer WaitTime="2"/>
+			<RunCode Name="UpdateGearSet"/>	
+			<WaitTimer WaitTime="2"/>
 		</If>
 		<!--End Level 70-->
 		
@@ -367,11 +395,13 @@ Angles24
 				<If Condition="HasAtLeast(17948,5)">
 					<RunCode Name="Enable_Flight" />
 					<GetTo ZoneId="478" XYZ="-44.54691, 209.2032, -89.48778"/>
-					<LLTurnIn ItemIds="17948" QuestId="68160" NpcId="1021349" XYZ="-44.54691, 209.2032, -89.48778"/>
-					<WaitTimer WaitTime="2"/>	
+					<LLTurnIn ItemIds="17948" QuestId="68160" NpcId="1021349" XYZ="-44.54691, 209.2032, -89.48778"/>	
 					<LogMessage Message="Level 70 - Edgyth's Winning Streak - Completed." />
-					<RunCode Name="AutoEquip"/>
-					<RunCode Name="UpdateGearSet"/>
+					<WaitTimer WaitTime="2"/>
+					<RunCode Name="AutoEquip"/>	
+					<WaitTimer WaitTime="2"/>
+					<RunCode Name="UpdateGearSet"/>	
+					<WaitTimer WaitTime="2"/>
 				</If>
 			</If>	  
 		</If>
@@ -405,67 +435,52 @@ Angles24
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="AutoEquip">
-            <![CDATA[ 
-				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-				IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-				int id = AgentModule.FindAgentIdByVtable(agentVtable);
-
-				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-
-				if (windowByName == null)
-				{
-					AgentModule.GetAgentInterfaceById(id).Toggle();
-				}
-
-				await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
-            
-				windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-            
-				if (windowByName != null)
-				{
-					windowByName.SendAction(1, 3, 0);
-				}
-        ]]>
-        </CodeChunk>
-		<CodeChunk Name="UpdateGearSet">
-			<![CDATA[ 
-				var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-				IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-				int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-
-				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-				if (windowByName == null)
-				{
-					AgentModule.GetAgentInterfaceById(idChar).Toggle();
-				}
-
-				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-
-				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-				if (windowByName != null)
-				{
-					windowByName.SendAction(1, 3, 0xF);
-				}
-            
-				await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
-
-				if (SelectYesno.IsOpen)
-					SelectYesno.Yes();
-
-				await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
-			
-				await Coroutine.Sleep(200);
-			
-				windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-				if (windowByName != null)
-				{
-					AgentModule.GetAgentInterfaceById(idChar).Toggle();
-				}			
-		]]>
-		</CodeChunk>
+    <![CDATA[ 
+		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+        IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
+        int id = AgentModule.FindAgentIdByVtable(agentVtable);
+        AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
+        if (windowByName == null)
+        {
+            AgentModule.GetAgentInterfaceById(id).Toggle();
+        }
+        await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);            
+        windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");            
+        if (windowByName != null)
+        {
+            windowByName.SendAction(1, 3, 0);
+        }			
+		await Coroutine.Sleep(2000);           		
+    ]]>
+	</CodeChunk>
+	<CodeChunk Name="UpdateGearSet">
+	<![CDATA[ 
+		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
+        IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
+		int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
+		AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+		if (windowByName == null)
+		{
+			AgentModule.GetAgentInterfaceById(idChar).Toggle();
+		}
+		await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
+		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+		if (windowByName != null)
+		{
+			windowByName.SendAction(1, 3, 0xF);
+		}            
+        await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
+        if (SelectYesno.IsOpen)
+        SelectYesno.Yes();
+		await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);			
+        await Coroutine.Sleep(200);			
+		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
+		if (windowByName != null)
+		{
+			AgentModule.GetAgentInterfaceById(idChar).Toggle();
+		}			
+	]]>
+	</CodeChunk>
 		<CodeChunk Name="Enable_Flight">
       <![CDATA[
         foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))

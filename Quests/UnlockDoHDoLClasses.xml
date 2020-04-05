@@ -9,6 +9,39 @@
   <CodeChunks>
   </CodeChunks>
   <Order>
+  
+<!--Unlocking Fisher-->
+		<If Condition="not IsQuestCompleted(66670)">
+			<If Condition="not HasQuest(66670)">
+				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919" /> <!-- N'nmulika-->
+				<If Condition="IsQuestAcceptQualified(66670)">
+					<ConfirmTalkTo NpcId="1000859" QuestId="66670" XYZ="-166.4096, 4.54997, 152.0395"/>
+				</If>
+			</If>
+		</If>
+		<If Condition="not IsQuestCompleted(66643)">
+			<If Condition="not HasQuest(66643)">
+				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919" /> <!-- N'nmulika-->
+				<If Condition="IsQuestAcceptQualified(66643)">
+					<PickupQuest NpcId="1000859" QuestId="66643" XYZ="-166.4096, 4.54997, 152.0395"/>
+				</If>
+			</If>
+			<If Condition="HasQuest(66643)">
+				<If Condition="GetQuestStep(66643) == 255">
+					<GetTo ZoneId="129" XYZ="-166.1612, 4.550006, 165.4742"/>
+					<ConfirmTurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
+					<WaitTimer WaitTime="2"/>
+					<If Condition="ClassName != ClassJobType.Fisher">
+						<ChangeClass Job="Fisher" />
+					</If>		
+					<If Condition="ClassName == ClassJobType.Fisher">
+						<RunCode Name="AutoEquip"/>
+						<RunCode Name="UpdateGearSet"/>
+					</If>
+				</If>
+			</If>
+		</If>
+<!--Done Unlocking Fisher-->
    	
 <!--Unlocking Culinarian-->
     <If Condition="not IsQuestCompleted(65727)">
