@@ -2152,5 +2152,17 @@ Angles24
 				}
 			]]>
 		</CodeChunk>
+		<CodeChunk Name="SwitchDoHJob">
+			<![CDATA[ 
+				var DoH = Enumerable.Range(8, 7);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 30);
+
+				if (gearSets.Any())
+				{
+					gearSets.First().Activate();
+					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
 	</CodeChunks>
 </Profile>
