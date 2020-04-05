@@ -29,7 +29,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Gather Materials -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 20) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51)">
-		<Lisbeth Json="[{'Group':1,'Item':29796,'Amount':35,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>		
+		<Lisbeth Json="[{'Group':1,'Item':29796,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>		
 	</If>
 	
 	<!-- Turn in-->
