@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Angles24
+Angles24		 and Core.Me.HasAura(1411)
 -->
 <!DOCTYPE Profile [
 
@@ -18,18 +18,18 @@ Angles24
 	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
 			
 	<While Condition="not IsQuestCompleted(65688)">
-		<While Condition="ClassName == ClassJobType.Carpenter or ClassJobType.Blacksmith or ClassJobType.Armorer or ClassJobType.Goldsmith or ClassJobType.Leatherworker or ClassJobType.Weaver or ClassJobType.Alchemist or ClassJobType.Culinarian">
+		<If Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian)">
 			<WaitTimer WaitTime="2"/>
 			<RunCode Name="SwitchDoHJob"/>
 			<WaitTimer WaitTime="2"/>
-		</While>		
+		</If>		
 	
 		<!-- Gone to Pieces -->
-		<While Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
+		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
 			<LogMessage Message="Going to Learn Desynth!" />
 			<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789" />
 			<PickupQuest NpcId="1001679" QuestId="65688" />
-		</While>
+		</If>
 		<While Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
 			<GetTo ZoneId="141" XYZ="96.27642, 27.04044, -352.4858" />
 			<LLTurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858" />
@@ -2155,7 +2155,7 @@ Angles24
 		<CodeChunk Name="SwitchDoHJob">
 			<![CDATA[ 
 				var DoH = Enumerable.Range(8, 7);
-				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 30);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 29);
 
 				if (gearSets.Any())
 				{
