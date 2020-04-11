@@ -9,16 +9,18 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
 	<Order>	
 
-		<RunCode Name="SwitchCombatJob"/>
+	<RunCode Name="SwitchCombatJob"/>
 		
 	<If Condition="not IsQuestCompleted(67783)"> <!-- Check to See if Litany of Peace is completed. -->
 		<RunCode Name="Profile2"/>	
+		<LogMessage Message="You have not completed the quest Litany of Peace HW Patch 3.3. Please run through Heavensward MSQ to complete the quest!" />
+		<StopBot/>
 	</If>	
 		<If Condition="IsQuestCompleted(67783) and not HasQuest(69208) and not IsQuestCompleted(69208)"> <!-- Pickup Firmament Quest -->
 			<GetTo ZoneId="418" XYZ="-73.0267, 9.244665, 17.78088"/>
 			<RunCode Name="SwitchCombatJob"/>
 				<If Condition="IsQuestAcceptQualified(69208)">
-					<PickupQuest NpcId="2010850" QuestId="69208" XYZ="-73.0267, 9.244665, 17.78088"/>
+					<LLPickupQuest NpcId="2010850" QuestId="69208" XYZ="-73.0267, 9.244665, 17.78088"/>
 				</If>
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 1"> <!-- Talk to Thomelin -->

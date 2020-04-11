@@ -15,11 +15,15 @@ Angles24
 			WVR - [Cotton Acton (Materia-enhanced) // None]
 			ALC - [Engraved Hard Leather Grimoire (Materia Enhanced) // HQ Budding Rosewood Wand (Melded with: Quicktongue III Materia)]
 			CUL - [None]
+			
+			HQ - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]
+			QS - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Leatherworker','QuickSynth':true}]
+			HQ - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]
 -->
 ]>
 <Profile>
-	<Name>Leatherworker Class Quests</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
+	<Name>Leatherworker Class Quests</Name>	
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
 	<Order>	
 	
 	<If Condition="FreeItemSlots() &lt; 16">
@@ -34,24 +38,24 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68151)">
-	<ChangeClass Job="Leatherworker" />
-	<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<ChangeClass Job="Leatherworker" />
+		<AutoEquip UpdateGearSet="true"/>
 	</If>
     <If Condition="ClassName == ClassJobType.Leatherworker">
       <!-- Aldgoat Everything (Level 20) -->
       <If Condition="IsQuestCompleted(65672) and not HasQuest(65673) and not IsQuestCompleted(65673) and Core.Player.ClassLevel &gt; 19">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65673)">		  
+        <If Condition="IsQuestAcceptQualified(65673)">		 
+			<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="65673" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
       <If Condition="HasQuest(65673) and not IsQuestCompleted(65673) and GetQuestStep(65673) == 255">
-        <If Condition="not HasItem(3784)">
-          <Lisbeth Json="[{'Item': 3784,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasItem(3784)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3784,'Amount':1,'Enabled':true,'Type':'Leatherworker','QuickSynth':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
 		<If Condition="&meld; == 0">
 		<If Condition="GetQuestStep(65673) == 255">
@@ -63,22 +67,22 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Skin in the Game (Level 25) -->
       <If Condition="IsQuestCompleted(65673) and not HasQuest(65587) and not IsQuestCompleted(65587) and Core.Player.ClassLevel &gt; 24">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65587)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="65587" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
       <If Condition="HasQuest(65587) and not IsQuestCompleted(65587) and GetQuestStep(65587) == 1">
-        <If Condition="not HasHqItem(5280)">
-          <Lisbeth Json="[{'Item': 5280,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(5280)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':5280,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLHandOver ItemId="5280" NpcId="1000691" RequiresHq="True" XYZ="71.97681, 8, -166.5217" QuestId="65587" StepId="1"/>
       </If>
@@ -92,15 +96,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Toadskins of the Father (Level 30) -->
       <If Condition="IsQuestCompleted(65587) and not HasQuest(65597) and not IsQuestCompleted(65597) and Core.Player.ClassLevel &gt; 29">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65597)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="65597" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
@@ -113,16 +115,20 @@ Angles24
         <TalkTo NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
       </If>
       <If Condition="HasQuest(65597) and not IsQuestCompleted(65597) and GetQuestStep(65597) == 3">
-        <If Condition="not HasHqItem(3100)">
-          <Lisbeth Json="[{'Item': 3100,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(3100)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3100,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLHandOver ItemId="3100" NpcId="1000691" RequiresHq="True" XYZ="71.97681, 8, -166.5217" QuestId="65597" StepId="3"/>
       </If>
       <If Condition="HasQuest(65597) and not IsQuestCompleted(65597) and GetQuestStep(65597) == 4">
-        <If Condition="not HasHqItem(3100)">
-          <Lisbeth Json="[{'Item': 3100,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(3100)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3100,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="72.84669, 14.06114, -254.8349"/>
         <LLHandOver ItemId="3100" NpcId="1000170" RequiresHq="True" XYZ="72.84669, 14.06114, -254.8349" QuestId="65597" StepId="4"/>
       </If>
@@ -132,43 +138,43 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Lead by the Empire (Level 35) -->
       <If Condition="IsQuestCompleted(65597) and not HasQuest(65599) and not IsQuestCompleted(65599) and Core.Player.ClassLevel &gt; 34">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65599)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="65599" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
       <If Condition="HasQuest(65599) and not IsQuestCompleted(65599) and GetQuestStep(65599) == 255">
-        <If Condition="not HasHqItem(3616)">
-          <Lisbeth Json="[{'Item': 3616,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(3616)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3616,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65599" ItemId="3616" RequiresHq="True" NpcId="1000691" XYZ="71.97681, 8, -166.5217" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Brand Loyalty (Level 40) -->
       <If Condition="IsQuestCompleted(65599) and not HasQuest(65600) and not IsQuestCompleted(65600) and Core.Player.ClassLevel &gt; 39">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65600)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="65600" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
       <If Condition="HasQuest(65600) and not IsQuestCompleted(65600) and GetQuestStep(65600) == 1">
-        <If Condition="not HasHqItem(3639)">
-          <Lisbeth Json="[{'Item': 3639,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(3639)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3639,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLHandOver ItemId="3639" NpcId="1000691" RequiresHq="True" XYZ="71.97681, 8, -166.5217" QuestId="65600" StepId="1"/>
       </If>
@@ -182,45 +188,55 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Dissension in the Ranks (Level 45) -->
       <If Condition="IsQuestCompleted(65600) and not HasQuest(65601) and not IsQuestCompleted(65601) and Core.Player.ClassLevel &gt; 44">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65601)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="65601" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
       <If Condition="HasQuest(65601) and not IsQuestCompleted(65601) and GetQuestStep(65601) == 1">
-        <If Condition="not HasHqItem(3651)">
-          <Lisbeth Json="[{'Item': 3651,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-        <If Condition="not HasHqItem(2270)">
-          <Lisbeth Json="[{'Item': 2270,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-        <If Condition="not HasHqItem(4360)">
-          <Lisbeth Json="[{'Item': 4360,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(3651)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3651,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
+        <While Condition="not HasHqItem(2270)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':2270,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
+        <While Condition="not HasHqItem(4360)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4360,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLHandOver ItemIds="3651,2270,4360" RequiresHq="true,true,true" QuestId="65601" StepId="1" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
       </If>
       <If Condition="HasQuest(65601) and not IsQuestCompleted(65601) and GetQuestStep(65601) == 2">
-        <If Condition="not HasHqItem(3651)">
-          <Lisbeth Json="[{'Item': 3651,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(3651)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3651,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="-153.1243, 4, -31.50995"/>
         <LLHandOver ItemId="3651" NpcId="1000179" RequiresHq="True" XYZ="-153.1243, 4, -31.50995" QuestId="65601" StepId="2"/>
-        <If Condition="not HasHqItem(2270)">
-          <Lisbeth Json="[{'Item': 2270,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(2270)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':2270,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="132" XYZ="38.10168, -8.011047, 112.5963"/>
         <LLHandOver ItemId="2270" NpcId="1000371" RequiresHq="True" XYZ="38.10168, -8.011047, 112.5963" QuestId="65601" StepId="2"/>
-        <If Condition="not HasHqItem(4360)">
-          <Lisbeth Json="[{'Item': 4360,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(4360)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4360,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="149.5841, 13.5714, -105.5466"/>
         <LLHandOver ItemId="4360" NpcId="1003675" RequiresHq="True" XYZ="149.5841, 13.5714, -105.5466" QuestId="65601" StepId="2"/>
       </If>
@@ -230,15 +246,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Accept No Imitations (Level 50) -->
       <If Condition="IsQuestCompleted(65601) and not HasQuest(65602) and not IsQuestCompleted(65602) and Core.Player.ClassLevel &gt; 49">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65602)">			  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="65602" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
@@ -251,9 +265,11 @@ Angles24
         <SoTalkTo NpcId="1000691" QuestId="65602" XYZ="71.97681, 8, -166.5217"/>
       </If>
       <If Condition="HasQuest(65602) and not IsQuestCompleted(65602) and GetQuestStep(65602) == 3">
-        <If Condition="not HasHqItem(3206)">
-          <Lisbeth Json="[{'Item': 3206,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(3206)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':3206,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="133" XYZ="-53.74765, 7.209941, -119.8365"/>
 		<If Condition="&meld; == 0">
 		<If Condition="GetQuestStep(65602) == 3">
@@ -269,15 +285,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Turndown Service (Level 50) -->
       <If Condition="IsQuestCompleted(65602) and not HasQuest(67611) and not IsQuestCompleted(67611) and Core.Player.ClassLevel &gt; 49">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(67611)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67611" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
@@ -299,15 +313,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- By Your Bootstraps (Level 53) -->
       <If Condition="IsQuestCompleted(67611) and not HasQuest(67612) and not IsQuestCompleted(67612) and Core.Player.ClassLevel &gt; 52">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <If Condition="IsQuestAcceptQualified(67612)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67612" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
       </If>
@@ -320,23 +332,23 @@ Angles24
         <SoTalkTo NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817" QuestId="67612" StepId="2"/>
       </If>
       <If Condition="HasQuest(67612) and not IsQuestCompleted(67612) and GetQuestStep(67612) == 255">
-        <If Condition="not HasHqItem(12007)">
-          <Lisbeth Json="[{'Item': 12007,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(12007)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':12007,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <LLTurnIn QuestId="67612" ItemId="12007" RequiresHq="True" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Perfect Pitch (Level 55) -->
       <If Condition="IsQuestCompleted(67612) and not HasQuest(67613) and not IsQuestCompleted(67613) and Core.Player.ClassLevel &gt; 54">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <If Condition="IsQuestAcceptQualified(67613)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67613" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
       </If>
@@ -349,9 +361,11 @@ Angles24
         <TalkTo NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817" QuestId="67613" StepId="2"/>
       </If>
       <If Condition="HasQuest(67613) and not IsQuestCompleted(67613) and GetQuestStep(67613) == 3">
-        <If Condition="not HasHqItem(10875)">
-          <Lisbeth Json="[{'Item': 10875,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(10875)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':10875,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <LLHandOver ItemId="10875" NpcId="1012538" RequiresHq="True" XYZ="-259.069, -20.0349, -84.3817" QuestId="67613" StepId="3"/>
       </If>
@@ -365,15 +379,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- From the Hoplon to the Brume (Level 58) -->
       <If Condition="IsQuestCompleted(67613) and not HasQuest(67614) and not IsQuestCompleted(67614) and Core.Player.ClassLevel &gt; 57">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <If Condition="IsQuestAcceptQualified(67614)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67614" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
       </If>
@@ -398,23 +410,23 @@ Angles24
         <LLHandOver ItemId="2001715" QuestId="67614" StepId="5" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
       </If>
       <If Condition="HasQuest(67614) and not IsQuestCompleted(67614) and GetQuestStep(67614) == 255">
-        <If Condition="not HasHqItem(12024)">
-          <Lisbeth Json="[{'Item': 12024,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(12024)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':12024,'Amount':1,'Enabled':true,'Type':'Leatherworker','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <LLTurnIn NpcId="1012538" ItemId="12024" RequiresHq="True" QuestId="67614" XYZ="-259.069, -20.0349, -84.3817"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- A Winter's Sale (Level 60) -->
       <If Condition="IsQuestCompleted(67614) and not HasQuest(67615) and not IsQuestCompleted(67615) and Core.Player.ClassLevel &gt; 59">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <If Condition="IsQuestAcceptQualified(67615)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67615" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
       </If>
@@ -427,9 +439,11 @@ Angles24
         <TalkTo NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817" QuestId="67615" StepId="2"/>
       </If>
       <If Condition="HasQuest(67615) and not IsQuestCompleted(67615) and GetQuestStep(67615) == 3">
-        <If Condition="not HasItem(12999)">
-          <Lisbeth Json="[{'Item': 12999,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasItem(12999)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':12999,'Amount':1,'Enabled':true,'Type':'Leatherworker','QuickSynth':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <LLHandOver ItemId="12999" QuestId="67615" StepId="3" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
       </If>
@@ -443,15 +457,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- A Taxing Request (Level 60) -->
       <If Condition="IsQuestCompleted(67615) and not HasQuest(68145) and not IsQuestCompleted(68145) and Core.Player.ClassLevel &gt; 59">
         <GetTo ZoneId="133" XYZ="71.00392, 8, -165.2372"/>
         <If Condition="IsQuestAcceptQualified(68145)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="68145" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
       </If>
@@ -469,15 +481,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Mounting Expectations (Level 63) -->
       <If Condition="IsQuestCompleted(68145) and not HasQuest(68146) and not IsQuestCompleted(68146) and Core.Player.ClassLevel &gt; 62">
         <GetTo ZoneId="133" XYZ="140.9785, 13.5714, -91.07951"/>
         <If Condition="IsQuestAcceptQualified(68146)">		  
+		<RunCode Name="SmallTalk"/>
           <SoPickupQuest QuestId="68146" NpcId="1020929" XYZ="141.7106, 13.5714, -90.44025"/>
         </If>
       </If>
@@ -503,23 +513,29 @@ Angles24
         <TalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68146" StepId="5"/>
       </If>
       <If Condition="HasQuest(68146) and not IsQuestCompleted(68146) and GetQuestStep(68146) == 255">
-        <If Condition="not HasHqItem(17910)">
-          <Lisbeth Json="[{'Item': 17910,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17910)">
+			<If Condition="not HasItem(17909)">
+			<GetTo ZoneId="133" XYZ="77.47551, 0, -123.9072"/>
+			 <TalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68146"/>
+			 </If>
+			 <If Condition="HasItem(17909)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17910,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="133" XYZ="76.32645, 0, -125.24"/>
         <LLTurnIn ItemIds="17910" QuestId="68146" NpcId="1020941" XYZ="75.7915, 0, -125.8107" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- The Value of Life (Level 65) -->
       <If Condition="IsQuestCompleted(68146) and not HasQuest(68147) and not IsQuestCompleted(68147) and Core.Player.ClassLevel &gt; 64">
         <GetTo ZoneId="133" XYZ="77.00484, 0, -124.3662"/>
         <If Condition="IsQuestAcceptQualified(68147)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="68147" NpcId="1020940" XYZ="76.15771, 0, -124.4068"/>
         </If>
       </If>
@@ -548,23 +564,29 @@ Angles24
         <LLHandOver ItemIds="2002185" NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68147" StepId="6"/>
       </If>
       <If Condition="HasQuest(68147) and not IsQuestCompleted(68147) and GetQuestStep(68147) == 255">
-        <If Condition="not HasHqItem(17912)">
-          <Lisbeth Json="[{'Item': 17912,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17912)">
+			<If Condition="not HasItem(17911)">
+			<GetTo ZoneId="133" XYZ="76.87234, 0, -124.0057"/>
+			 <TalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68147"/>
+			 </If>
+			 <If Condition="HasItem(17911)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17912,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="133" XYZ="76.51757, 0, -125.0596"/>
         <LLTurnIn ItemIds="17912" QuestId="68147" NpcId="1020941" XYZ="75.7915, 0, -125.8107" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- The Trouble with Taxidermy (Level 68) -->
       <If Condition="IsQuestCompleted(68147) and not HasQuest(68150) and not IsQuestCompleted(68150) and Core.Player.ClassLevel &gt; 67">
         <GetTo ZoneId="133" XYZ="76.77622, 0, -124.2678"/>
         <If Condition="IsQuestAcceptQualified(68150)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="68150" NpcId="1020940" XYZ="76.15771, 0, -124.4068"/>
         </If>
       </If>
@@ -581,9 +603,17 @@ Angles24
         <TalkTo NpcId="1000352" XYZ="65.69006, 8, -147.4174" QuestId="68150" StepId="3"/>
       </If>
       <If Condition="HasQuest(68150) and not IsQuestCompleted(68150) and GetQuestStep(68150) == 4">
-        <If Condition="not HasHqItem(17914)">
-          <Lisbeth Json="[{'Item': 17914,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17914)">
+			<If Condition="not HasItem(17913)">
+			<GetTo ZoneId="133" XYZ="62.80441, 8, -146.0064"/>
+			 <TalkTo NpcId="1000352" XYZ="62.80441, 8, -146.0064" QuestId="68150"/>
+			 </If>
+			 <If Condition="HasItem(17913)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17914,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="133" XYZ="71.66022, 8, -165.9775"/>
         <LLHandOver ItemIds="17914" NpcId="1000691" XYZ="71.97681, 8, -166.5217" QuestId="68150" StepId="4"/>
       </If>
@@ -593,15 +623,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- True to Life (Level 70) -->
       <If Condition="IsQuestCompleted(68150) and not HasQuest(68151) and not IsQuestCompleted(68151) and Core.Player.ClassLevel &gt; 69">
         <GetTo ZoneId="133" XYZ="76.80299, 0, -123.7812"/>
         <If Condition="IsQuestAcceptQualified(68151)">		  
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="68151" NpcId="1020940" XYZ="76.15771, 0, -124.4068"/>
         </If>
       </If>
@@ -622,20 +650,48 @@ Angles24
         <TalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68151" StepId="4"/>
       </If>
       <If Condition="HasQuest(68151) and not IsQuestCompleted(68151) and GetQuestStep(68151) == 255">
-        <If Condition="not HasHqItem(17916)">
-          <Lisbeth Json="[{'Item': 17916,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17916)">
+			<If Condition="not HasItem(17915)">
+			<GetTo ZoneId="133" XYZ="76.75292, 0, -123.9796"/>
+			 <TalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68151"/>
+			 </If>
+			 <If Condition="HasItem(17915)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17916,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="133" XYZ="77.39965, 0, -125.1896"/>
         <LLTurnIn ItemIds="17916" QuestId="68151" NpcId="1020947" XYZ="76.18823, 0, -126.1159"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
     </If>
+	
+	<EtxSellItem ItemIds="5824,2318,5388,5825,2332,2320,5346,5390,2322,5336,
+						  4766,2336,4767,5322,5405,2324,5492,5442,5499,
+						  5826,5524,5116,5551,5494,5391,
+						  12636,11915,5403,5384,12594,12531,12534,12604,5114,
+						  11872,11873,5449,12576,12630,
+						  19517,2344,2359,5359,2347,11919,
+						  5528,2362,11876,2351,12629,5553,12532,
+						  5436,5263,11877,12632,5448,12605,12533,19518,19507,
+						  19506,2370,2384,2373,5335,5320,2374,5115,2376,2387,
+						  11923,11880,12874,12578,11881,12614,19519,2395,2409,
+						  2398,2399,11884,5444,2412,2401,12615,12628,11927,11885,
+						  19520,13760,2446,11892,2448,2460,2452,2449,2463,4775,
+						  11935,12597,12596,5337,11893,12616,19522,2471,2485,
+						  2473,5489,5543,4556,2475,4796,2489,5564,4607,4608,4606,
+						  2477,12539,12601,11939,11896,12642,12622,11897,5113,12559,
+						  19523,19533,19565,19566,19534,19524,12847,12892,12872,12898,12854,12879,7594,
+						  11901,12858,4865,12878,12876,11900,12855,12894,12862,12885,12883,12873,
+						  12877,12849,12887,11943,4848,12891,12893,12880,4837,4842,5348,4715,4768,4756,
+						  4859,4678,12846,4647,2503,4679,2515,4749,4843,4861,4853,12842,4849,5542,4858,
+						  4733,4712,2501,4792,4677,5539,12860,2499,4811,4645,2511,4847,4644,2497,4730,
+						  4812,19563,19531,19521,5491,12613,11889,5336,11888,12595,12555,12598,12604,
+						  11931,12631,5116,2438,5321,2424,2422,2434,2426,2420"/>
 	
 	<ALoadProfile Path="../Start.xml"/>
 	
@@ -646,72 +702,6 @@ Angles24
 			    if (SelectString.IsOpen)
 				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
 			]]>
-		</CodeChunk>
-		<CodeChunk Name="AutoEquip">
-            <![CDATA[ 
-            var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-            int id = AgentModule.FindAgentIdByVtable(agentVtable);
-
-            AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-
-            if (windowByName == null)
-            {
-                AgentModule.GetAgentInterfaceById(id).Toggle();
-            }
-
-            await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
-            
-            windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-            
-            if (windowByName != null)
-            {
-                windowByName.SendAction(1, 3, 0);
-            }
-			
-			await Coroutine.Sleep(2000);					
-           		
-            ]]>
-        </CodeChunk>
-		<CodeChunk Name="UpdateGearSet">
-		<![CDATA[ 
-		   var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-			int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-
-			AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName == null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-
-			await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				windowByName.SendAction(1, 3, 0xF);
-			}
-            
-            await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
-
-            if (SelectYesno.IsOpen)
-                SelectYesno.Yes();
-
-			await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);
-			
-            await Coroutine.Sleep(200);
-			
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-			
-		]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">
 		<![CDATA[
@@ -740,5 +730,17 @@ Angles24
         }
       ]]>
     </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+		<![CDATA[
+			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+			{
+			try
+			{
+				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+			}
+			catch (Exception ex) {  }
+			}
+		]]>
+		</CodeChunk>
 	</CodeChunks>
 </Profile>

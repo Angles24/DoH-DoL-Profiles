@@ -1,0 +1,20 @@
+Changelog 10/04/2020
+
+Start Profile
+- Changed when start profile tells you to get level 70 gear, after Class quests but before leveling gathers to 70.
+- Removed setting that user need to edit to say if they had road to 70 buff or on CN client. Thanks Kayla!
+
+Crafting Profiles
+- Removed the Runcodes for AutoEquip and UpdateGearSet, there is now a orderbot tag that does this which I have added in every profile. Thanks Kayla!
+- Added auto detection for crafting profiles for if you have road to 70 buff so that you do half the crafts then without it.
+
+Quest Profiles
+- For the 63/65/68/70 quests, if for ever reason you DC/fail the craft and loose the supplied item for the craft you will now talk to the npc to get it back.
+- Added the selling of weapons you get from quests and some useless items. It sells from inventory not armory.
+
+Lisbeth Profiles
+- Added few extra profiles that people might find useful.
+
+Fishing
+- Added fishing standalone profile for non CN client users. It will use Diadem to farm, please read Instructions doc for more info.
+

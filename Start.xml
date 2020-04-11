@@ -3,19 +3,13 @@
 Start Profile
 At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 -->
-<!--
-Blank Profile
--->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY CN "0"> <!-- 1 = CN client // 0 = English Client -->
-<!ENTITY pref "1"> <!-- 1 = preferred realm // 0 = non preferred realm -->
 <!ENTITY craft21 "1"> <!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->	
 <!ENTITY craft40 "1">
 <!ENTITY craft51 "1">
 <!ENTITY craft63 "1">
 <!ENTITY craftClass "1"> <!-- Just remember after you finished crafting you meld items before restarting. -->
-<!ENTITY craftClass1 "1">
 <!ENTITY craft70 "1">
 <!ENTITY crp "1"> 		
 <!ENTITY bsm "1"> 		
@@ -112,14 +106,6 @@ Blank Profile
 					<ALoadProfile Path="Crafting/1-21 Culinarian.xml"/>
 				</If>
 			</If>
-			
-							
-		<!-- Craft Gathering and Crafting Gear 21 -->			
-			<If Condition="&craft21; == 1">
-				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile." />
-				<RunCode Name="craft21"/>
-				<StopBot/>
-			</If>
 		
 		
 		
@@ -130,10 +116,21 @@ Blank Profile
 			</If>	
 			<If Condition="IsQuestCompleted(67783) and not IsQuestCompleted(69208)"> 
 				<ALoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
-			</If>		
+			</If>
+			
+			
+							
+		<!-- Craft Gathering and Crafting Gear 21 -->			
+			<If Condition="&craft21; == 1">
+				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile." />
+				<RunCode Name="craft21"/>
+				<StopBot/>
+			</If>	
+
+			
 		
-		<!-- 21-51 Ishgard Crafting -->
-		<If Condition="&CN; == 0">
+		<!-- 21-51 Ishgard Crafting -->		
+		<If Condition="not IsCNClient()">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
 					<ALoadProfile Path="Diadem/21-51 CarpenterD.xml"/>
@@ -175,7 +172,7 @@ Blank Profile
 				</If>
 			</If>
 		</If>
-		<If Condition="&CN; == 1">
+		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">	
 					<ALoadProfile Path="Crafting/21-51 Carpenter.xml"/>
@@ -297,7 +294,7 @@ Blank Profile
 		
 		
 		<!-- 51-63 Ishgard Crafting -->
-		<If Condition="&CN; == 0">
+		<If Condition="not IsCNClient()">
 			<If Condition="&crp; == 1">			
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
 					<ALoadProfile Path="Diadem/51-63 CarpenterD.xml"/>
@@ -339,7 +336,7 @@ Blank Profile
 				</If>
 			</If>
 		</If>
-		<If Condition="&CN; == 1">
+		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">			
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">	
 					<ALoadProfile Path="Crafting/51-63 Carpenter.xml"/>
@@ -456,7 +453,12 @@ Blank Profile
 			
 			
 		<!-- NoN Preferred Realm to 67 in Crafting -->
-		<If Condition="&pref; == 0 and &CN; == 0">	
+		<If Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian) and (not Core.Player.ClassLevel &lt; 67)">
+			<WaitTimer WaitTime="2"/>
+			<RunCode Name="SwitchDoHJob"/>
+			<WaitTimer WaitTime="2"/>
+		</If>
+		<If Condition="not Core.Me.HasAura(1411) and not IsCNClient()">
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 67">	
 					<ALoadProfile Path="Diadem/63-67 CarpenterDNP.xml"/>
@@ -498,7 +500,7 @@ Blank Profile
 				</If>
 			</If>
 		</If>
-		<If Condition="&pref; == 0 and &CN; == 1">	
+		<If Condition="not Core.Me.HasAura(1411) and IsCNClient()">	
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 67">	
 					<ALoadProfile Path="Crafting/63-67 CarpenterNP.xml"/>
@@ -573,11 +575,6 @@ Blank Profile
 					<ALoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
 				</If>
 			</If>
-		<If Condition="&craftClass1; == 1">
-			<LogMessage Message="Clean inventory, set craftClass1 to 0 then restart start profile." />
-			<RunCode Name="craftClass1"/>
-			<StopBot/>
-		</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="not IsQuestCompleted(67969)">	
 					<ALoadProfile Path="Quests/Weaver Class Quests.xml"/>
@@ -602,7 +599,7 @@ Blank Profile
 		
 		
 		<!-- 63-70 Ishgard Crafting -->	
-		<If Condition="&CN; == 0">
+		<If Condition="not IsCNClient()">
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
 					<ALoadProfile Path="Diadem/63-70 CarpenterD.xml"/>
@@ -644,7 +641,7 @@ Blank Profile
 				</If>
 			</If>
 		</If>
-		<If Condition="&CN; == 1">
+		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">	
 					<ALoadProfile Path="Crafting/63-70 Carpenter.xml"/>
@@ -730,6 +727,15 @@ Blank Profile
 					<ALoadProfile Path="Quests/Culinarian Class Quests.xml"/>
 				</If>
 			</If>
+			
+			
+
+		<!-- Farm Yellow Scrip Level 70 Gear --> 
+			<If Condition="&craft70; == 1">	
+				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and set craft70 setting to 0 on start profile." />
+				<RunCode Name="craft70"/>
+				<StopBot/>
+			</If>
 		
 		
 		
@@ -744,20 +750,11 @@ Blank Profile
 				<ALoadProfile Path="Gathering/63-70 Botanist.xml"/>
 			</If>
 		</If>
-			
-			
-
-		<!-- Farm Yellow Scrip Level 70 Gear --> 
-			<If Condition="&craft70; == 1">	
-				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and set craft70 setting to 0 on start profile." />
-				<RunCode Name="craft70"/>
-				<StopBot/>
-			</If>
 		
 		
 		
 		<!-- 70-80 Ishgard Crafting -->
-		<If Condition="&CN; == 0">
+		<If Condition="not IsCNClient()">
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
 					<ALoadProfile Path="Diadem/70-80 CarpenterD.xml"/>
@@ -799,7 +796,7 @@ Blank Profile
 				</If>
 			</If>
 		</If>
-		<If Condition="&CN; == 1">
+		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">		
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">	
 					<ALoadProfile Path="Crafting/70-80 Carpenter.xml"/>
@@ -1037,16 +1034,27 @@ Blank Profile
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="Disable_Flight">
-      <![CDATA[
-        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
-        {
-          try
-          {
-            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
-          }
-          catch (Exception ex) {  }
-        }
-      ]]>
-    </CodeChunk>
+		<![CDATA[
+			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+			{
+			try
+			{
+				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+			}
+			catch (Exception ex) {  }
+			}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchDoHJob">
+		<![CDATA[ 
+			var DoH = Enumerable.Range(8, 7);
+			var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] < 67);
+			if (gearSets.Any())
+			{
+				gearSets.First().Activate();
+				await Coroutine.Sleep(2000);
+			}
+		]]>
+		</CodeChunk>
 	</CodeChunks>
 </Profile>

@@ -21,15 +21,20 @@ Authors:  Kayla / Angles24
 		</While>			
 	</If>
 	
-	<WaitTimer WaitTime="2"/>
-	<RunCode Name="AutoEquip" />
-	<WaitTimer WaitTime="2"/>
-	<RunCode Name="UpdateGearSet"/>	
-    <WaitTimer WaitTime="2"/>
-	
-	<!-- Gather Materials -->	
+	<!-- Grade 2 Skybuilders' Leather Straps -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 50) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63)">
-		<Lisbeth Json="[{'Group':1,'Item':29804,'Amount':60,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>		
+		<If Condition="ClassName != ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker" />
+		</If>		
+		<If Condition="ClassName == ClassJobType.Leatherworker">
+			<AutoEquip UpdateGearSet="true"/>	
+			<If Condition="Core.Me.HasAura(1411)">
+				<Lisbeth Json="[{'Group':1,'Item':29804,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+			</If>
+			<If Condition="not Core.Me.HasAura(1411)">
+				<Lisbeth Json="[{'Group':1,'Item':29804,'Amount':30,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+			</If>
+		</If>				
 	</If>
 	
 	<!-- Turn in-->
@@ -39,12 +44,6 @@ Authors:  Kayla / Angles24
 		</While>			
 	</If>
 	
-	<WaitTimer WaitTime="2"/>
-	<RunCode Name="AutoEquip" />
-	<WaitTimer WaitTime="2"/>
-	<RunCode Name="UpdateGearSet"/>	
-    <WaitTimer WaitTime="2"/>
-	
 	<!-- Reload Profile -->
 	<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">
 		<ALoadProfile Path="51-63 LeatherworkerD.xml"/>
@@ -52,57 +51,11 @@ Authors:  Kayla / Angles24
 	
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 63 on Leatherworker, moving on." />	
+	<AutoEquip UpdateGearSet="true"/>	
 	<ALoadProfile Path="../Start.xml"/>
 		
 </Order>
 <CodeChunks>
-	<CodeChunk Name="AutoEquip">
-    <![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-        int id = AgentModule.FindAgentIdByVtable(agentVtable);
-        AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-        if (windowByName == null)
-        {
-            AgentModule.GetAgentInterfaceById(id).Toggle();
-        }
-        await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);            
-        windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");            
-        if (windowByName != null)
-        {
-            windowByName.SendAction(1, 3, 0);
-        }			
-		await Coroutine.Sleep(2000);           		
-    ]]>
-	</CodeChunk>
-	<CodeChunk Name="UpdateGearSet">
-	<![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-		int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-		AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName == null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}
-		await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			windowByName.SendAction(1, 3, 0xF);
-		}            
-        await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
-        if (SelectYesno.IsOpen)
-        SelectYesno.Yes();
-		await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);			
-        await Coroutine.Sleep(200);			
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}			
-	]]>
-	</CodeChunk>
 	<CodeChunk name="Leave">
 	<![CDATA[
 		if (DutyManager.InInstance)

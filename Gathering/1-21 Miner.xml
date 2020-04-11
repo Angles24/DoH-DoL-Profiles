@@ -19,10 +19,7 @@ Angles24
 				
     <If Condition="ClassName == ClassJobType.Miner">		
 		<WaitTimer WaitTime="2"/>
-	<RunCode Name="AutoEquip" />
-	<WaitTimer WaitTime="2"/>
-	<RunCode Name="UpdateGearSet"/>	
-    <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
 
 		  <!--Level 1 - My First Pickaxe-->
 		  <If Condition="not IsQuestCompleted(66135)">
@@ -42,11 +39,8 @@ Angles24
 						  <LLTurnIn ItemId="5106" QuestId="66135" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
 						  <LogMessage Message="Level 1 - My First Pickaxe - Completed." />						  
 						<WaitTimer WaitTime="2"/>
-	<RunCode Name="AutoEquip" />
-	<WaitTimer WaitTime="2"/>
-	<RunCode Name="UpdateGearSet"/>	
-    <WaitTimer WaitTime="2"/>							
-					  </If>
+						<AutoEquip UpdateGearSet="true"/>							
+				</If>
 			  </If>
 		  </If>
 		  <!--End Level 1-->
@@ -67,10 +61,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 6">
 			<LogMessage Message="Congrats on Level 6, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
-		<WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 6 Grind-->
 
@@ -92,10 +83,7 @@ Angles24
 						  <LLTurnIn ItemId="5432" QuestId="66136" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
 						  <LogMessage Message="Level 5 - Know Thy Land - Completed." />						  
 						  <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
-		<WaitTimer WaitTime="2"/>							
+		<AutoEquip UpdateGearSet="true"/>							
 					  </If>
 			  </If>
 		  </If>
@@ -119,10 +107,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 11">
 			<LogMessage Message="Congrats on Level 11, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
-		<WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 11 Grind-->
 
@@ -146,10 +131,7 @@ Angles24
 							<WaitTimer WaitTime="2"/>
 						  <RunCode Name="MINWeapon2"/>
 						  <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
-		<WaitTimer WaitTime="2"/>							
+		<AutoEquip UpdateGearSet="true"/>						
 					  </If>
 			  </If>
 		  </If>
@@ -171,10 +153,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 16">
 			<LogMessage Message="Congrats on Level 16, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
-		<WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 16 Grind-->
 
@@ -202,10 +181,7 @@ Angles24
 						  <LLTurnIn ItemId="5519" QuestId="66139" RequiresHq="true" StepId="255" NpcId="1003909" InteractDistance="1.0" XYZ="18.72768, 9.00961, 168.2022" />
 						  <LogMessage Message="Level 15 - Getting in Deep - Completed." />						  
 						  <WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
-		<WaitTimer WaitTime="2"/>							
+		<AutoEquip UpdateGearSet="true"/>							
 					  </If>
 			  </If>
 		  </If>
@@ -228,10 +204,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 21">
 			<LogMessage Message="Congrats on Level 21, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
-		<WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 21 Grind-->		
 	</If>
@@ -270,53 +243,6 @@ Angles24
 					await Coroutine.Wait(5000, () => Core.Player.HasAura(47)); 
 				} 
 		]]>
-		</CodeChunk>
-		<CodeChunk Name="AutoEquip">
-    <![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-        int id = AgentModule.FindAgentIdByVtable(agentVtable);
-        AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-        if (windowByName == null)
-        {
-            AgentModule.GetAgentInterfaceById(id).Toggle();
-        }
-        await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);            
-        windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");            
-        if (windowByName != null)
-        {
-            windowByName.SendAction(1, 3, 0);
-        }			
-		await Coroutine.Sleep(2000);           		
-    ]]>
-	</CodeChunk>
-	<CodeChunk Name="UpdateGearSet">
-	<![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-		int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-		AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName == null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}
-		await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			windowByName.SendAction(1, 3, 0xF);
-		}            
-        await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
-        if (SelectYesno.IsOpen)
-        SelectYesno.Yes();
-		await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);			
-        await Coroutine.Sleep(200);			
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}			
-	]]>
-	</CodeChunk>	
+		</CodeChunk>	
 	</CodeChunks>
 </Profile>

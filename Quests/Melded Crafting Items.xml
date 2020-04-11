@@ -15,7 +15,6 @@ Angles24
 -->
 <Profile>
 	<Name>Blank Profile</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>	
 	<Order>	
 	
 	<If Condition="&crp; == 1">

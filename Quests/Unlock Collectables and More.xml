@@ -4,7 +4,7 @@ Kayla / Angles24
 -->
 <Profile>
 	<Name>Unlock Collectables</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	<Order>
 	
@@ -12,7 +12,7 @@ Kayla / Angles24
 		<RunCode Name="SwitchDoHJob"/>
 		<WaitTimer WaitTime="2"/>
 		
-	<If Condition="ClassName == ClassJobType.Carpenter or ClassJobType.Blacksmith or ClassJobType.Armorer or ClassJobType.Goldsmith or ClassJobType.Leatherworker or ClassJobType.Weaver or ClassJobType.Alchemist or ClassJobType.Culinarian">
+	<If Condition="ClassName == (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian)">
 		<!-- Gone to Pieces -->
 		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
 			<LogMessage Message="Going to Learn Desynth!" />
@@ -43,12 +43,10 @@ Kayla / Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SwitchDoLJob"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>
+		<AutoEquip UpdateGearSet="true"/>
 		<WaitTimer WaitTime="2"/>
 		
-	<If Condition="ClassName == ClassJobType.Miner or ClassJobType.Botanist or ClassJobType.Fisher">	
+	<If Condition="ClassName == (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)">	
 		<!-- Just Tooling Around -->
 		<If Condition="not IsQuestCompleted(66959) and not HasQuest(66959)">
 			<LogMessage Message="Picking Up - Just Tooling Around!" />
@@ -67,7 +65,7 @@ Kayla / Angles24
 		<RunCode Name="SwitchDoHJob"/>
 		<WaitTimer WaitTime="2"/>
 		
-	<If Condition="ClassName == ClassJobType.Carpenter or ClassJobType.Blacksmith or ClassJobType.Armorer or ClassJobType.Goldsmith or ClassJobType.Leatherworker or ClassJobType.Weaver or ClassJobType.Alchemist or ClassJobType.Culinarian">	
+	<If Condition="ClassName == (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian)">	
 		<!-- A Self-improving Man -->
 		<If Condition="not IsQuestCompleted(68554) and not IsQuestCompleted(68553) and not IsQuestCompleted(66957) and not HasQuest(66957)">
 			<LogMessage Message="Picking Up - A Self-improving Man!" />
@@ -141,7 +139,7 @@ Kayla / Angles24
 		<RunCode Name="SwitchDoLJob"/>
 		<WaitTimer WaitTime="2"/>
 		
-	<If Condition="ClassName == ClassJobType.Miner or ClassJobType.Botanist or ClassJobType.Fisher">	
+	<If Condition="ClassName == (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)">	
 		<!-- 56 No Longer a Collectable -->
 		<If Condition=" not IsQuestCompleted(67633) and not HasQuest(67633)">
 			<LogMessage Message="Picking Up - No Longer a Collectable!" />
@@ -186,7 +184,7 @@ Kayla / Angles24
 		<RunCode Name="SwitchDoHJob"/>
 		<WaitTimer WaitTime="2"/>
 		
-	<If Condition="ClassName == ClassJobType.Carpenter or ClassJobType.Blacksmith or ClassJobType.Armorer or ClassJobType.Goldsmith or ClassJobType.Leatherworker or ClassJobType.Weaver or ClassJobType.Alchemist or ClassJobType.Culinarian">
+	<If Condition="ClassName == (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian)">
 		<!-- Waking the Spirit -->
 		<If Condition="not IsQuestCompleted(66175) and not HasQuest(66175) and IsQuestCompleted(66174)">
 			<LogMessage Message="Picking Up - Waking the Spirit!" />
@@ -238,53 +236,6 @@ Kayla / Angles24
 				}
 			]]>
 		</CodeChunk>
-		<CodeChunk Name="AutoEquip">
-    <![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-        int id = AgentModule.FindAgentIdByVtable(agentVtable);
-        AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-        if (windowByName == null)
-        {
-            AgentModule.GetAgentInterfaceById(id).Toggle();
-        }
-        await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);            
-        windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");            
-        if (windowByName != null)
-        {
-            windowByName.SendAction(1, 3, 0);
-        }			
-		await Coroutine.Sleep(2000);           		
-    ]]>
-	</CodeChunk>
-	<CodeChunk Name="UpdateGearSet">
-	<![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-		int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-		AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName == null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}
-		await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			windowByName.SendAction(1, 3, 0xF);
-		}            
-        await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
-        if (SelectYesno.IsOpen)
-        SelectYesno.Yes();
-		await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);			
-        await Coroutine.Sleep(200);			
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}			
-	]]>
-	</CodeChunk>
 	</CodeChunks>
 </Profile>
 

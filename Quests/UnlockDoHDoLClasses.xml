@@ -4,8 +4,8 @@
 
 <Profile>
   <Name>Unlock DoH Classes</Name>
-  <KillRadius>50</KillRadius>
   <BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+  <KillRadius>50</KillRadius>
   <CodeChunks>
   </CodeChunks>
   <Order>
@@ -35,8 +35,7 @@
 						<ChangeClass Job="Fisher" />
 					</If>		
 					<If Condition="ClassName == ClassJobType.Fisher">
-						<RunCode Name="AutoEquip"/>
-						<RunCode Name="UpdateGearSet"/>
+						<AutoEquip UpdateGearSet="true"/>
 					</If>
 				</If>
 			</If>
@@ -68,8 +67,7 @@
 							<ChangeClass Job="Culinarian" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Culinarian">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -103,8 +101,7 @@
 							<ChangeClass Job="Armorer" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Armorer">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -138,8 +135,7 @@
 							<ChangeClass Job="Blacksmith" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Blacksmith">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -173,8 +169,7 @@
 							<ChangeClass Job="Carpenter" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Carpenter">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -208,8 +203,7 @@
 							<ChangeClass Job="Leatherworker" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Leatherworker">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -243,8 +237,7 @@
 							<ChangeClass Job="Botanist" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Botanist">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -276,8 +269,7 @@
 							<ChangeClass Job="Goldsmith" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Goldsmith">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -311,8 +303,7 @@
 							<ChangeClass Job="Weaver" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Weaver">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -346,8 +337,7 @@
 							<ChangeClass Job="Alchemist" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Alchemist">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -381,8 +371,7 @@
 							<ChangeClass Job="Miner" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Miner">
-							<RunCode Name="AutoEquip"/>
-							<RunCode Name="UpdateGearSet"/>
+							<AutoEquip UpdateGearSet="true"/>
 						</If>
 				</If>
 			</If>
@@ -395,72 +384,6 @@
 
   </Order>
   <CodeChunks>
-		<CodeChunk Name="AutoEquip">
-		<![CDATA[ 
-           var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-            int id = AgentModule.FindAgentIdByVtable(agentVtable);
-
-            AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-
-            if (windowByName == null)
-            {
-                AgentModule.GetAgentInterfaceById(id).Toggle();
-            }
-
-            await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
-            
-            windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-            
-            if (windowByName != null)
-            {
-                windowByName.SendAction(1, 3, 0);
-            }
-            
-            await Coroutine.Sleep(1000);
-			
-        ]]>
-		</CodeChunk>		
-		<CodeChunk Name="UpdateGearSet">
-		<![CDATA[ 
-		   var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-			int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-
-			AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName == null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-
-			await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				windowByName.SendAction(1, 3, 0xF);
-			}
-            
-            await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
-
-            if (SelectYesno.IsOpen)
-                SelectYesno.Yes();
-
-			await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);
-			
-            await Coroutine.Sleep(200);
-			
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-			
-		]]>
-		</CodeChunk>
 		<CodeChunk Name="Requires_Manual">
 		<![CDATA[
         Core.OverlayManager.AddToast(() => "Please redo Gear Sets on Lisbeth then run the Start Profile again.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));

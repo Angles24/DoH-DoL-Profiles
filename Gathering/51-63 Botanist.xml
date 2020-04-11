@@ -21,10 +21,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="Enable_Flight" />
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip"/>	
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-		<WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
 		
 		<!--Level 50 - Call From The Clouds-->
 		<If Condition="not IsQuestCompleted(67584)">
@@ -45,10 +42,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 50 - Call From The Clouds - Completed." 	/>				
 			    <WaitTimer WaitTime="2"/>
-				<RunCode Name="AutoEquip"/>	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="UpdateGearSet"/>	
-				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Call From The Clouds-->
@@ -69,10 +63,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 51">
 			<LogMessage Message="Congrats on Level 51, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>	
+			<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 51-->
 		
@@ -94,10 +85,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 52">
 			<LogMessage Message="Congrats on Level 52, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>	
+			<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 52-->
 		
@@ -119,10 +107,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 54">
 			<LogMessage Message="Congrats on Level 54, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>	
+			<AutoEquip UpdateGearSet="true"/>	
 		</If>
 		<!--End Level 54-->
 
@@ -161,10 +146,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 53 - Onions Of Life Bestowing - Completed." />						
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="AutoEquip"/>	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="UpdateGearSet"/>	
-				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Onion of Life Bestowing-->
@@ -199,10 +181,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 55">
 			<LogMessage Message="Congrats on Level 55, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 55-->
 
@@ -253,10 +232,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 55 - Two Nations, One Seed - Completed." />						
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="AutoEquip"/>	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="UpdateGearSet"/>	
-				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Two Nations, One Seed-->
@@ -283,10 +259,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 58">
 			<LogMessage Message="Congrats on Level 58, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>	
+			<AutoEquip UpdateGearSet="true"/>	
 		</If>
 		<!--End Level 58-->
 		
@@ -329,10 +302,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 58 - Love For Harmony - Completed." />						
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="AutoEquip"/>	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="UpdateGearSet"/>	
-				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Love For Harmony-->
@@ -359,10 +329,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 60">
 			<LogMessage Message="Congrats on Level 60, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>	
+			<AutoEquip UpdateGearSet="true"/>	
 		</If>
 		<!--End Level 60-->
 
@@ -386,7 +353,7 @@ Angles24
 			<If Condition="GetQuestStep(67588) == 3">
 				<If Condition="not HqHasAtLeast(12900,3)">
 					<If Condition="not IsOnMap(397)">
-						<GetTo ZoneId="397" XYZ="-692.3769, 124.5452, -608.2879" /> 
+						<GetTo ZoneId="397" XYZ="461.0736, 212.5399, 699.8669" /> 
 					</If>
 					<WaitWhile Condition="Condition.IsTimeBetween(22,8.1) or Condition.IsTimeBetween(10,20.1)"/>
 					<If Condition="Condition.IsTimeBetween(8,10) or Condition.IsTimeBetween(20,22)">
@@ -434,10 +401,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 60 - Seeds Know No Borders - Completed." />						
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="AutoEquip"/>	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="UpdateGearSet"/>	
-				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Seeds Know No Borders-->
@@ -461,10 +425,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 40 - Crisis of Faith - Completed." />
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="AutoEquip"/>	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="UpdateGearSet"/>	
-				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Never Meet Your Heroes-->
@@ -489,10 +450,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 62">
 			<LogMessage Message="Congrats on Level 62, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>	
+			<AutoEquip UpdateGearSet="true"/>	
 		</If>
 		<!--End Level 62-->
 		
@@ -516,10 +474,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 63">
 			<LogMessage Message="Congrats on Level 63, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="AutoEquip"/>	
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="UpdateGearSet"/>	
-			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>
 		</If>
 		<!--End Level 63-->
 		
@@ -551,53 +506,6 @@ Angles24
 				}
 		]]>
 		</CodeChunk>
-		<CodeChunk Name="AutoEquip">
-    <![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-        int id = AgentModule.FindAgentIdByVtable(agentVtable);
-        AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-        if (windowByName == null)
-        {
-            AgentModule.GetAgentInterfaceById(id).Toggle();
-        }
-        await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);            
-        windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");            
-        if (windowByName != null)
-        {
-            windowByName.SendAction(1, 3, 0);
-        }			
-		await Coroutine.Sleep(2000);           		
-    ]]>
-	</CodeChunk>
-	<CodeChunk Name="UpdateGearSet">
-	<![CDATA[ 
-		var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-        IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-		int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-		AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName == null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}
-		await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			windowByName.SendAction(1, 3, 0xF);
-		}            
-        await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
-        if (SelectYesno.IsOpen)
-        SelectYesno.Yes();
-		await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);			
-        await Coroutine.Sleep(200);			
-		windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-		if (windowByName != null)
-		{
-			AgentModule.GetAgentInterfaceById(idChar).Toggle();
-		}			
-	]]>
-	</CodeChunk>
 		<CodeChunk Name="Enable_Flight">
       <![CDATA[
         foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))

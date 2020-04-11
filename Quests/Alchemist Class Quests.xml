@@ -15,11 +15,15 @@ Angles24
 			WVR - [Cotton Acton (Materia-enhanced) // None]
 			ALC - [Engraved Hard Leather Grimoire (Materia Enhanced) // HQ Budding Rosewood Wand (Melded with: Quicktongue III Materia)]
 			CUL - [None]
+			
+			HQ - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]
+			QS - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Alchemist','QuickSynth':true}]
+			HQ - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Alchemist'}]
 -->
 ]>
 <Profile>
-	<Name>Alchemist Class Quests</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
+	<Name>Alchemist Class Quests</Name>	
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>	
 	<Order>	
 	
 	<If Condition="FreeItemSlots() &lt; 16">
@@ -34,24 +38,24 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(67976)">
-	<ChangeClass Job="Alchemist" />
-	<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<ChangeClass Job="Alchemist" />
+		<AutoEquip UpdateGearSet="true"/>
 	</If>
     <If Condition="ClassName == ClassJobType.Alchemist">
       <!-- The Arcanist's Tome (Level 20) -->
-      <If Condition="IsQuestCompleted(66117) and not HasQuest(66118) and not IsQuestCompleted(66118) and Core.Player.ClassLevel &gt; 29">
+      <If Condition="IsQuestCompleted(66117) and not HasQuest(66118) and not IsQuestCompleted(66118) and Core.Player.ClassLevel &gt; 19">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66118)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="66118" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
       <If Condition="HasQuest(66118) and not IsQuestCompleted(66118) and GetQuestStep(66118) == 255">
-        <If Condition="not HasItem(2149)">
-          <Lisbeth Json="[{'Item': 2149,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasItem(2149)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':2149,'Amount':1,'Enabled':true,'Type':'Alchemist','QuickSynth':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
 		<If Condition="&meld; == 0">
 		<If Condition="GetQuestStep(66118) == 255">
@@ -63,49 +67,52 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Practical Alchemy (Level 25) -->
       <If Condition="IsQuestCompleted(66118) and not HasQuest(66119) and not IsQuestCompleted(66119) and Core.Player.ClassLevel &gt; 24">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66119)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="66119" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
       <If Condition="HasQuest(66119) and not IsQuestCompleted(66119) and GetQuestStep(66119) == 255">
-        <If Condition="not HasHqItem(5522)">
-          <Lisbeth Json="[{'Item': 5522,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(5522)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':5522,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66119" ItemId="5522" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Baleful Brews (Level 30) -->
       <If Condition="IsQuestCompleted(66119) and not HasQuest(66120) and not IsQuestCompleted(66120) and Core.Player.ClassLevel &gt; 29">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66120)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="66120" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
       <If Condition="HasQuest(66120) and not IsQuestCompleted(66120) and GetQuestStep(66120) == 1">
-        <If Condition="not HasHqItem(4575)">
-          <Lisbeth Json="[{'Item': 4575,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(4575)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4575,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLHandOver ItemId="4575" NpcId="1002299" RequiresHq="True" XYZ="-98.8938, 40.19999, 120.8362" QuestId="66120" StepId="1"/>
       </If>
       <If Condition="HasQuest(66120) and not IsQuestCompleted(66120) and GetQuestStep(66120) == 2">
-        <If Condition="not HasHqItem(4575)">
-          <Lisbeth Json="[{'Item': 4575,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(4575)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4575,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="105.9434, 7.999993, -32.70007"/>
         <LLHandOver ItemId="4575" NpcId="1003927" RequiresHq="True" XYZ="105.9434, 7.999993, -32.70007" QuestId="66120" StepId="2"/>
       </If>
@@ -115,15 +122,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Cease and Assist (Level 35) -->
       <If Condition="IsQuestCompleted(66120) and not HasQuest(66183) and not IsQuestCompleted(66183) and Core.Player.ClassLevel &gt; 34">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66183)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="66183" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
@@ -136,71 +141,75 @@ Angles24
         <SoTalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="66183" StepId="2"/>
       </If>
       <If Condition="HasQuest(66183) and not IsQuestCompleted(66183) and GetQuestStep(66183) == 255">
-        <If Condition="not HasHqItem(4556)">
-          <Lisbeth Json="[{'Item': 4556,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(4556)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4556,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66183" ItemId="4556" RequiresHq="True" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Might Made Right (Level 40) -->
       <If Condition="IsQuestCompleted(66183) and not HasQuest(66184) and not IsQuestCompleted(66184) and Core.Player.ClassLevel &gt; 39">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66184)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="66184" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
       <If Condition="HasQuest(66184) and not IsQuestCompleted(66184) and GetQuestStep(66184) == 255">
-        <If Condition="not HasHqItem(4599)">
-          <Lisbeth Json="[{'Item': 4599,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(4599)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4599,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66184" ItemId="4599" RequiresHq="True" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Ultimate Alchemy (Level 45) -->
       <If Condition="IsQuestCompleted(66184) and not HasQuest(66185) and not IsQuestCompleted(66185) and Core.Player.ClassLevel &gt; 44">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66185)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="66185" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
       <If Condition="HasQuest(66185) and not IsQuestCompleted(66185) and GetQuestStep(66185) == 255">
-        <If Condition="not HasHqItem(4607)">
-          <Lisbeth Json="[{'Item': 4607,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-        <If Condition="not HasHqItem(4608)">
-          <Lisbeth Json="[{'Item': 4608,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-        <If Condition="not HasHqItem(4606)">
-          <Lisbeth Json="[{'Item': 4606,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(4607)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4607,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
+        <While Condition="not HasHqItem(4608)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4608,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
+        <While Condition="not HasHqItem(4606)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':4606,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn ItemIds="4607,4608,4606" RequiresHq="true,true,true" QuestId="66185" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" RewardSlot="3"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Momentary Miracle (Level 50) -->
       <If Condition="IsQuestCompleted(66185) and not HasQuest(66186) and not IsQuestCompleted(66186) and Core.Player.ClassLevel &gt; 49">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66186)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="66186" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
@@ -225,9 +234,11 @@ Angles24
         <TalkTo NpcId="1001354" XYZ="-34.16504, 9.099978, -87.44946" QuestId="66186"/>
 	   </If>	  
       <If Condition="HasQuest(66186) and not IsQuestCompleted(66186) and GetQuestStep(66186) == 3">
-        <If Condition="not HasHqItem(1987)">
-          <Lisbeth Json="[{'Item': 1987,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(1987)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':1987,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
 		<If Condition="&meld; == 0">
 		<If Condition="GetQuestStep(66186) == 3">
@@ -243,15 +254,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Without a Trace (Level 50) -->
       <If Condition="IsQuestCompleted(66186) and not HasQuest(67601) and not IsQuestCompleted(67601) and Core.Player.ClassLevel &gt; 49">
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(67601)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67601" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
@@ -265,15 +274,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Magic Marks the Spot (Level 53) -->
       <If Condition="IsQuestCompleted(67601) and not HasQuest(67602) and not IsQuestCompleted(67602) and Core.Player.ClassLevel &gt; 52">
         <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <If Condition="IsQuestAcceptQualified(67602)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67602" NpcId="1012558" XYZ="76.8951, 22.2367, -640.412"/>
         </If>
       </If>
@@ -286,9 +293,11 @@ Angles24
         <LLHandOver ItemId="2001705" NpcId="1012558" RequiresHq="False" XYZ="76.8951, 22.2367, -640.412" QuestId="67602" StepId="2"/>
       </If>
       <If Condition="HasQuest(67602) and not IsQuestCompleted(67602) and GetQuestStep(67602) == 3">
-        <If Condition="not HasHqItem(12601)">
-          <Lisbeth Json="[{'Item': 12601,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HqHasAtLeast(12601,3)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':12601,'Amount':3,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <LLHandOver ItemId="12601" NpcId="1012558" RequiresHq="True" XYZ="76.8951, 22.2367, -640.412" QuestId="67602" StepId="3"/>
       </If>
@@ -298,15 +307,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- From Hells (Level 55) -->
       <If Condition="IsQuestCompleted(67602) and not HasQuest(67603) and not IsQuestCompleted(67603) and Core.Player.ClassLevel &gt; 54">
         <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <If Condition="IsQuestAcceptQualified(67603)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67603" NpcId="1012558" XYZ="76.8951, 22.2367, -640.412"/>
         </If>
       </If>
@@ -315,10 +322,12 @@ Angles24
         <TalkTo NpcId="1012563" XYZ="24.0044, 29, -823.655" QuestId="67603" StepId="1"/>
       </If>
       <If Condition="HasQuest(67603) and not IsQuestCompleted(67603) and GetQuestStep(67603) == 2">
-        <If Condition="not HasHqItem(12615)">
-          <Lisbeth Json="[{'Item': 12615,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
-        <GetTo ZoneId="156" XYZ="25.5894, 28.9768, -825.376"/>
+        <While Condition="not HasHqItem(12615)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':12615,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
+        <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <LLHandOver ItemId="12615" NpcId="1001304" RequiresHq="True" XYZ="25.5894, 28.9768, -825.376" QuestId="67603" StepId="2"/>
       </If>
       <If Condition="HasQuest(67603) and not IsQuestCompleted(67603) and GetQuestStep(67603) == 3">
@@ -335,15 +344,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Burden of Proof (Level 58) -->
       <If Condition="IsQuestCompleted(67603) and not HasQuest(67604) and not IsQuestCompleted(67604) and Core.Player.ClassLevel &gt; 57">
         <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <If Condition="IsQuestAcceptQualified(67604)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67604" NpcId="1012558" XYZ="76.8951, 22.2367, -640.412"/>
         </If>
       </If>
@@ -356,27 +363,27 @@ Angles24
         <LLHandOver ItemId="2001707" NpcId="1013673" RequiresHq="False" XYZ="485.099, -51.1414, 40.2075" QuestId="67604" StepId="2"/>
       </If>
       <If Condition="HasQuest(67604) and not IsQuestCompleted(67604) and GetQuestStep(67604) == 3">
-        <GetTo ZoneId="156" XYZ="-232.23, -4.08927, -543.584"/>
+        <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <LLHandOver ItemId="2001707" NpcId="1012558" RequiresHq="False" XYZ="76.8951, 22.2367, -640.412" QuestId="67604" StepId="3"/>
       </If>
       <If Condition="HasQuest(67604) and not IsQuestCompleted(67604) and GetQuestStep(67604) == 255">
-        <If Condition="not HasHqItem(12622)">
-          <Lisbeth Json="[{'Item': 12622,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(12622)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':12622,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="156" XYZ="78.2486, 22.2367, -640.01"/>
         <LLTurnIn ItemId="12622" RequireHq="True" NpcId="1012559" QuestId="67604" XYZ="78.2486, 22.2367, -640.01"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- What Death can Join Together (Level 60) -->
       <If Condition="IsQuestCompleted(67604) and not HasQuest(67605) and not IsQuestCompleted(67605) and Core.Player.ClassLevel &gt; 59">
         <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <If Condition="IsQuestAcceptQualified(67605)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67605" NpcId="1012558" XYZ="76.8951, 22.2367, -640.412"/>
         </If>
       </If>
@@ -401,9 +408,11 @@ Angles24
         <LLHandOver ItemId="2001708" NpcId="1012558" RequiresHq="False" XYZ="76.8951, 22.2367, -640.412" QuestId="67605" StepId="5"/>
       </If>
       <If Condition="HasQuest(67605) and not IsQuestCompleted(67605) and GetQuestStep(67605) == 6">
-        <If Condition="not HasHqItem(10651)">
-          <Lisbeth Json="[{'Item': 10651,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-        </If>
+        <While Condition="not HasHqItem(10651)">
+		<RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':10651,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
+		  <RunCode Name="Enable_Flight"/>
+        </While>
         <GetTo ZoneId="156" XYZ="76.8951, 22.2367, -640.412"/>
         <LLHandOver ItemId="10651" NpcId="1012558" RequiresHq="True" XYZ="76.8951, 22.2367, -640.412" QuestId="67605" StepId="6"/>
       </If>
@@ -413,15 +422,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Not Quite Dead Yet (Level 60) -->
       <If Condition="IsQuestCompleted(67605) and not HasQuest(67972) and not IsQuestCompleted(67972) and Core.Player.ClassLevel &gt; 59">
         <GetTo ZoneId="131" XYZ="-99.19204, 40.2, 122.0304"/>
         <If Condition="IsQuestAcceptQualified(67972)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67972" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
@@ -443,15 +450,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- The Forbidden Blade (Level 63) -->
       <If Condition="IsQuestCompleted(67972) and not HasQuest(67973) and not IsQuestCompleted(67973) and Core.Player.ClassLevel &gt; 62">
         <GetTo ZoneId="131" XYZ="-99.88629, 40.2, 121.5309"/>
         <If Condition="IsQuestAcceptQualified(67973)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67973" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
@@ -464,9 +469,17 @@ Angles24
         <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67973" StepId="2"/>
       </If>
       <If Condition="HasQuest(67973) and not IsQuestCompleted(67973) and GetQuestStep(67973) == 3">
-        <If Condition="not HasHqItem(17926)">
-          <Lisbeth Json="[{'Item': 17926,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17926)">
+			<If Condition="not HasItem(17925)">
+			<GetTo ZoneId="131" XYZ="-99.22199, 40.2, 121.9082"/>
+			 <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67973"/>
+			 </If>
+			 <If Condition="HasItem(17925)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17926,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="130" XYZ="-212.6737, 18.5, 71.50591"/>
         <LLHandOver ItemId="17926" NpcId="1001294" XYZ="-214.2214, 18.5, 72.12939" QuestId="67973" StepId="3"/>
       </If>
@@ -480,15 +493,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- Do Goldsmiths Dream of Gilded Sheep (Level 65) -->
       <If Condition="IsQuestCompleted(67973) and not HasQuest(67974) and not IsQuestCompleted(67974) and Core.Player.ClassLevel &gt; 64">
         <GetTo ZoneId="131" XYZ="-99.41384, 40.2, 121.6572"/>
         <If Condition="IsQuestAcceptQualified(67974)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67974" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         </If>
       </If>
@@ -513,23 +524,29 @@ Angles24
         <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67974" StepId="5"/>
       </If>
       <If Condition="HasQuest(67974) and not IsQuestCompleted(67974) and GetQuestStep(67974) == 255">
-        <If Condition="not HasHqItem(17928)">
-          <Lisbeth Json="[{'Item': 17928,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17928)">
+			<If Condition="not HasItem(17927)">
+			<GetTo ZoneId="131" XYZ="-99.05065, 40.2, 122.052"/>
+			 <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67974"/>
+			 </If>
+			 <If Condition="HasItem(17927)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17928,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="130" XYZ="-157.2528, 14.0481, 59.74953"/>
         <LLTurnIn ItemIds="17928" QuestId="67974" NpcId="1020098" XYZ="-157.5495, 14.048, 58.64038" RewardSlot="4"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- No Sin Unpunished (Level 68) -->
       <If Condition="IsQuestCompleted(67974) and not HasQuest(67975) and not IsQuestCompleted(67975) and Core.Player.ClassLevel &gt; 67">
         <GetTo ZoneId="130" XYZ="-156.6509, 14.005, 59.14111"/>
         <If Condition="IsQuestAcceptQualified(67975)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67975" NpcId="1020098" XYZ="-157.5495, 14.048, 58.64038"/>
         </If>
       </If>
@@ -550,9 +567,17 @@ Angles24
         <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67975" StepId="4"/>
       </If>
       <If Condition="HasQuest(67975) and not IsQuestCompleted(67975) and GetQuestStep(67975) == 5">
-        <If Condition="not HasHqItem(17930)">
-          <Lisbeth Json="[{'Item': 17930,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17930)">
+			<If Condition="not HasItem(17929)">
+			<GetTo ZoneId="131" XYZ="-99.42353, 40.2, 122.1861"/>
+			 <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67975"/>
+			 </If>
+			 <If Condition="HasItem(17929)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17930,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="131" XYZ="67.24543, 7.992012, -31.89059"/>
         <LLHandOver ItemIds="17930" NpcId="1020103" XYZ="67.88733, 7.992012, -31.75409" QuestId="67975" StepId="5"/>
       </If>
@@ -566,15 +591,13 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
       <!-- A Love Beyond Lifetimes (Level 70) -->
       <If Condition="IsQuestCompleted(67975) and not HasQuest(67976) and not IsQuestCompleted(67976) and Core.Player.ClassLevel &gt; 69">
         <GetTo ZoneId="131" XYZ="134.1213, 4, -18.87574"/>
         <If Condition="IsQuestAcceptQualified(67976)">
+		<RunCode Name="SmallTalk"/>
           <PickupQuest QuestId="67976" NpcId="1020107" XYZ="133.5927, 4, -20.03516"/>
         </If>
       </If>
@@ -595,9 +618,17 @@ Angles24
         <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67976" StepId="4"/>
       </If>
       <If Condition="HasQuest(67976) and not IsQuestCompleted(67976) and GetQuestStep(67976) == 5">
-        <If Condition="not HasHqItem(17932)">
-          <Lisbeth Json="[{'Item': 17932,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        <While Condition="not HasHqItem(17932)">
+			<If Condition="not HasItem(17931)">
+			<GetTo ZoneId="131" XYZ="-99.18178, 40.2, 121.9973"/>
+			 <TalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67976"/>
+			 </If>
+			 <If Condition="HasItem(17931)">
+			 <RunCode Name="Disable_Flight"/>
+          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17932,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+		  <RunCode Name="Enable_Flight"/>
         </If>
+        </While>
         <GetTo ZoneId="130" XYZ="-119.2246, 10, 72.59454"/>
         <LLHandOver ItemIds="17932" NpcId="1020099" XYZ="-118.7305, 10, 71.7937" QuestId="67976" StepId="5"/>
       </If>
@@ -611,12 +642,26 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="AutoEquip" />
-		<WaitTimer WaitTime="2"/>
-		<RunCode Name="UpdateGearSet"/>	
-        <WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
       </If>
     </If>
+	
+	<EtxSellItem ItemIds="5824,2318,5388,5825,2332,2320,5346,5390,2322,5336,
+						  4766,2336,4767,5322,5405,2324,5492,5442,5499,
+						  5826,5524,5116,5551,5494,5391,
+						  12636,11915,5403,5384,12594,12531,12534,12604,5114,
+						  11872,11873,5449,12576,12630,
+						  19517,2344,2359,5359,2347,11919,
+						  5528,2362,11876,2351,12629,5553,12532,
+						  5436,5263,11877,12632,5448,12605,12533,19518,19507,
+						  19506,2370,2384,2373,5335,5320,2374,5115,2376,2387,
+						  11923,11880,12874,12578,11881,12614,19519,2395,2409,
+						  2398,2399,11884,5444,2412,2401,12615,12628,11927,11885,
+						  19520,13760,2446,11892,2448,2460,2452,2449,2463,4775,
+						  11935,12597,12596,5337,11893,12616,19522,2471,2485,
+						  2473,5489,5543,4556,2475,4796,2489,5564,4607,4608,4606,
+						  2477,12539,12601,11939,11896,12642,12622,11897,5113,12559,
+						  19523,19533,19565"/>
 	
 	<ALoadProfile Path="../Start.xml"/>
 	
@@ -627,72 +672,6 @@ Angles24
 			    if (SelectString.IsOpen)
 				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
 			]]>
-		</CodeChunk>
-		<CodeChunk Name="AutoEquip">
-            <![CDATA[ 
-            var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-            int id = AgentModule.FindAgentIdByVtable(agentVtable);
-
-            AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-
-            if (windowByName == null)
-            {
-                AgentModule.GetAgentInterfaceById(id).Toggle();
-            }
-
-            await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
-            
-            windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-            
-            if (windowByName != null)
-            {
-                windowByName.SendAction(1, 3, 0);
-            }
-			
-			await Coroutine.Sleep(2000);					
-           		
-            ]]>
-        </CodeChunk>
-		<CodeChunk Name="UpdateGearSet">
-		<![CDATA[ 
-		   var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-			int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-
-			AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName == null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-
-			await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				windowByName.SendAction(1, 3, 0xF);
-			}
-            
-            await Coroutine.Wait(5000, () => SelectYesno.IsOpen);
-
-            if (SelectYesno.IsOpen)
-                SelectYesno.Yes();
-
-			await Coroutine.Wait(5000, () => !SelectYesno.IsOpen);
-			
-            await Coroutine.Sleep(200);
-			
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-			
-		]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">
 		<![CDATA[
@@ -721,5 +700,17 @@ Angles24
         }
       ]]>
     </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+		<![CDATA[
+			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+			{
+			try
+			{
+				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+			}
+			catch (Exception ex) {  }
+			}
+		]]>
+		</CodeChunk>
 	</CodeChunks>
 </Profile>
