@@ -1676,15 +1676,15 @@ Angles24
 				<If Condition="GetQuestStep(68434) == 2">
 					<TeleportTo Name="Onokoro" Force="True" AetheryteId="106" />
 					<RunCode Name="Disable_Flight"/>
-					<LisbethTravel Area="The Ruby Sea" Position="-750.9728, 1.579246, -455.4971"/>						
-					<RunCode Name="Enable_Flight"/>
+					<LisbethTravel Area="The Ruby Sea" Position="-750.9728, 1.579246, -455.4971"/>				
 					<While Condition="not IsTodoChecked(68434, 2, 0)">
 						<TalkTo NpcId="1021403" XYZ="-750.9728, 1.579246, -455.4971" QuestId="68434" StepId="2" />
 						<TalkTo NpcId="1021404" XYZ="-776.8826, 4.785435, -481.5595" QuestId="68434" StepId="2" />
 						<TalkTo NpcId="1021405" XYZ="-778.6221, 4.763442, -499.9619" QuestId="68434" StepId="2" />
 					</While>
 				</If>
-				<If Condition="GetQuestStep(68434) == 3">	
+				<If Condition="GetQuestStep(68434) == 3">
+					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="628" XYZ="-74.6319, -6.999999, -41.9776" /> 
 					<TalkTo QuestId="68434" StepId="3" NpcId="1021406" XYZ="-74.6319, -6.999999, -41.9776" />
 				</If>
