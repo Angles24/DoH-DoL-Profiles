@@ -336,17 +336,28 @@ Angles24
 				<TalkTo NpcId="1002298" XYZ="-18.04254, 6.2, 157.418" QuestId="68094" StepId="2"/>
 			</If>
 			<If Condition="GetQuestStep(68094) == 3">
-				<If Condition="not HasAtLeast(17944,5)">
-					<RunCode Name="Disable_Flight" />
-					<If Condition="HasAtLeast(17944,5)">
-						<Lisbeth Json="[{'Item': 17944,'Group': 0,'Amount': 5,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 12668,'Medicine': 0}]"/>
+				<While Condition="not HasAtLeast(17944,5)">
+					<If Condition="not IsOnMap(620)">
+						<GetTo ZoneId="620" XYZ="119.5055, 118.1558, -753.5763"/>
 					</If>
-					<If Condition="not HasAtLeast(17944,5)">
-						<Lisbeth Json="[{'Item': 17944,'Group': 0,'Amount': 5,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-					</If>
-				</If>
+					<ExMoveTo XYZ="283.588, 140.9948, -461.9317"/>
+					<WaitWhile Condition="Condition.IsTimeBetween(22,8.1) or Condition.IsTimeBetween(10,20.1)"/>
+					<If Condition="IsTimeBetween(8,10) or IsTimeBetween(20,22)">
+						<ExGather loops="1" SpawnTimeout="5" While="not HasAtLeast(17994,5)">
+							<GatherObjects>
+								<GatherObject>Unspoiled Mineral Deposit</GatherObject>
+							</GatherObjects>
+							<ItemNames>
+								<ItemName>Pummelite</ItemName>
+							</ItemNames>
+							<GatherRotation>Yield</GatherRotation>
+							<HotSpots>
+								<HotSpot XYZ="283.588, 140.9948, -461.9317" Radius="200"/>
+							</HotSpots>
+					  </ExGather>
+					</If>					
+				</While>
 				<If Condition="HasAtLeast(17944,5)">
-					<RunCode Name="Enable_Flight" />
 					<GetTo ZoneId="478" XYZ="81.02125, 214.1, -92.38254"/>
 					<LLHandOver ItemIds="17944" NpcId="1019867" XYZ="81.02125, 214.1, -92.38254" QuestId="68094" StepId="3"/>
 				</If>

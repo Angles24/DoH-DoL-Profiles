@@ -361,12 +361,28 @@ Angles24
 				<TalkTo NpcId="1022381" XYZ="-243.6874, 257.5265, 744.6713" QuestId="68160" StepId="5"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 255">
-				<If Condition="not HasAtLeast(17948,5)">
-					<RunCode Name="Disable_Flight" />
-					<Lisbeth Json="[{'Item': 17948,'Group': 0,'Amount': 5,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-				</If>   
+				<While Condition="not HasAtLeast(17948,5)">
+					<If Condition="not IsOnMap(621)">
+						<GetTo ZoneId="621" XYZ="-651.8341, 50.00002, -5.081966"/>
+					</If>
+					<ExMoveTo XYZ="-739.371, 112.4997, -634.7165"/>
+					<WaitWhile Condition="Condition.IsTimeBetween(18,4.1) or Condition.IsTimeBetween(6,16.1)"/>
+					<If Condition="Condition.IsTimeBetween(4,6) or Condition.IsTimeBetween(16,18)">
+						<ExGather loops="1" SpawnTimeout="5" While="not HqHasAtLeast(17948,5)">
+							<GatherObjects>
+								<GatherObject>Unspoiled Lush Vegetation Patch</GatherObject>
+							</GatherObjects>
+							<ItemNames>
+								<ItemName>Rhalgr's Streak</ItemName>
+							</ItemNames>
+							<GatherRotation>Yield</GatherRotation>
+							<HotSpots>
+								<HotSpot XYZ="-739.371, 112.4997, -634.7165" Radius="120"/>
+							</HotSpots>
+						</ExGather>
+					</If>
+				</While>   
 				<If Condition="HasAtLeast(17948,5)">
-					<RunCode Name="Enable_Flight" />
 					<GetTo ZoneId="478" XYZ="-44.54691, 209.2032, -89.48778"/>
 					<LLTurnIn ItemIds="17948" QuestId="68160" NpcId="1021349" XYZ="-44.54691, 209.2032, -89.48778"/>	
 					<LogMessage Message="Level 70 - Edgyth's Winning Streak - Completed." />
