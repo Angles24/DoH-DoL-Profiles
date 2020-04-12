@@ -14,6 +14,8 @@ Angles24
 	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>	
 	<Order>
+	
+	<RunCode Name="Disable_Flight"/>
 		
 	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
 			
@@ -1673,7 +1675,9 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(68434) == 2">
 					<TeleportTo Name="Onokoro" Force="True" AetheryteId="106" />
+					<RunCode Name="Disable_Flight"/>
 					<LisbethTravel Area="The Ruby Sea" Position="-750.9728, 1.579246, -455.4971"/>						
+					<RunCode Name="Enable_Flight"/>
 					<While Condition="not IsTodoChecked(68434, 2, 0)">
 						<TalkTo NpcId="1021403" XYZ="-750.9728, 1.579246, -455.4971" QuestId="68434" StepId="2" />
 						<TalkTo NpcId="1021404" XYZ="-776.8826, 4.785435, -481.5595" QuestId="68434" StepId="2" />
