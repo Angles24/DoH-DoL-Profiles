@@ -4,7 +4,6 @@ Kayla / Angles24
 -->
 <Profile>
 	<Name>Unlock Collectables</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	<Order>
 	
@@ -17,7 +16,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
 			<LogMessage Message="Going to Learn Desynth!" />
 			<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789" />
-			<PickupQuest NpcId="1001679" QuestId="65688" />
+			<LLPickupQuest NpcId="1001679" QuestId="65688" />
 		</If>
 		<If Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
 			<GetTo ZoneId="141" XYZ="96.27642, 27.04044, -352.4858" />
@@ -30,7 +29,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(67631) and not HasQuest(67631)">
 			<LogMessage Message="Going to Learn Collectables!" />
 			<GetTo ZoneId="418" XYZ="-54.42902, 15.14058, -38.10181" />
-			<PickupQuest NpcId="1012161" QuestId="67631" />
+			<LLPickupQuest NpcId="1012161" QuestId="67631" />
 		</If>
 		<If Condition="HasQuest(67631) and not IsQuestCompleted(67631) and GetQuestStep(67631) == 255">
 			<GetTo ZoneId="156" XYZ="45.60925, 31.19533, -732.9061" />
@@ -51,7 +50,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(66959) and not HasQuest(66959)">
 			<LogMessage Message="Picking Up - Just Tooling Around!" />
 			<GetTo ZoneId="156" XYZ="24.42652, 28.99997, -729.7811" />
-			<PickupQuest NpcId="1006971" QuestId="66959" />
+			<LLPickupQuest NpcId="1006971" QuestId="66959" />
 		</If>
 		<If Condition="HasQuest(66959) and not IsQuestCompleted(66959) and GetQuestStep(66959) == 255">
 			<GetTo ZoneId="156" XYZ="24.42652, 28.99997, -729.7811" />
@@ -70,7 +69,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(68554) and not IsQuestCompleted(68553) and not IsQuestCompleted(66957) and not HasQuest(66957)">
 			<LogMessage Message="Picking Up - A Self-improving Man!" />
 			<GetTo ZoneId="156" XYZ="32.37394, 28.99997, -736.4222" />
-			<PickupQuest NpcId="1006969" QuestId="66957" />
+			<LLPickupQuest NpcId="1006969" QuestId="66957" />
 		</If>
 		<If Condition="HasQuest(66957) and GetQuestStep(66957) == 1">
 			<GetTo ZoneId="156" XYZ="25.62783, 29, -823.5121"/>
@@ -87,7 +86,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(66958) and not HasQuest(66958) and IsQuestCompleted(66957)">
 			<LogMessage Message="Picking Up - Submission Impossible!" />
 			<GetTo ZoneId="156" XYZ="32.37394, 28.99997, -736.4222" />
-			<PickupQuest NpcId="1006969" QuestId="66958" />
+			<LLPickupQuest NpcId="1006969" QuestId="66958" />
 		</If>
 		<If Condition="HasQuest(66958) and GetQuestStep(66958) == 1">
 			<GetTo ZoneId="156" XYZ="25.62783, 29, -823.5121"/>
@@ -104,7 +103,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(67632) and not HasQuest(67632)">
 			<LogMessage Message="Picking Up - Beloved of the Builder!" />
 			<GetTo ZoneId="156" XYZ="46.35824, 31.19733, -731.7603" />
-			<PickupQuest NpcId="1013395" QuestId="67632" />
+			<LLPickupQuest NpcId="1013395" QuestId="67632" />
 		</If>
 		<If Condition="HasQuest(67632) and not IsQuestCompleted(67632) and GetQuestStep(67632) == 255">
 			<GetTo ZoneId="419" XYZ="172.2491, -12.53903, -26.55138" />
@@ -117,7 +116,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(67634) and not HasQuest(67634)">
 			<LogMessage Message="Picking Up - Go West, Craftsman!" />
 			<GetTo ZoneId="156" XYZ="46.35824, 31.19733, -731.7603" />
-			<PickupQuest NpcId="1013395" QuestId="67634" />
+			<LLPickupQuest NpcId="1013395" QuestId="67634" />
 		</If>
 		<If Condition="HasQuest(67634) and not IsQuestCompleted(67634) and GetQuestStep(67634) == 255">
 			<GetTo ZoneId="478" XYZ="-16.45746, 206.4994, 47.3041" />
@@ -130,7 +129,7 @@ Kayla / Angles24
 		<If Condition="IsQuestCompleted(67634) and not IsQuestCompleted(68477) and not HasQuest(68477)">
 			<LogMessage Message="Completed Quest - Reach Long and Prosper!" />
 			<GetTo ZoneId="635" XYZ="-69.19054, 0.00999999, 62.08514" />
-			<TalkTo NpcId="1019459" XYZ="-69.19054, 0.00999999, 62.08514" QuestId="68477" />
+			<LLTalkTo NpcId="1019459" XYZ="-69.19054, 0.00999999, 62.08514" QuestId="68477" />
 		</If>
 		<!-- End - Reach Long and Prosper -->
 	</If>
@@ -144,7 +143,7 @@ Kayla / Angles24
 		<If Condition=" not IsQuestCompleted(67633) and not HasQuest(67633)">
 			<LogMessage Message="Picking Up - No Longer a Collectable!" />
 			<GetTo ZoneId="156" XYZ="46.35824, 31.19733, -731.7603" />
-			<PickupQuest NpcId="1013395" QuestId="67633" />
+			<LLPickupQuest NpcId="1013395" QuestId="67633" />
 		</If>
 		<If Condition="HasQuest(67633) and not IsQuestCompleted(67633) and GetQuestStep(67633) == 255">
 			<GetTo ZoneId="141" XYZ="115.89, 30.76108, -359.7155" />
@@ -157,7 +156,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(66999) and not HasQuest(66999)">
 			<LogMessage Message="Picking Up - Marvelously Mutable Materia!" />
 			<GetTo ZoneId="141" XYZ="115.8703, 30.70554, -360.6193" />
-			<PickupQuest NpcId="1001428" QuestId="66999" />
+			<LLPickupQuest NpcId="1001428" QuestId="66999" />
 		</If>
 		<If Condition="HasQuest(66999) and not IsQuestCompleted(66999) and GetQuestStep(66999) == 255">
 			<GetTo ZoneId="141" XYZ="115.5356, 31, -390.4169" />
@@ -170,7 +169,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(66174) and not HasQuest(66174)">
 			<LogMessage Message="Picking Up - Forging the Spirit!" />
 			<GetTo ZoneId="141" XYZ="123.1886, 30.99999, -383.7392" />
-			<PickupQuest NpcId="1001426" QuestId="66174" />
+			<LLPickupQuest NpcId="1001426" QuestId="66174" />
 		</If>
 		<If Condition="HasQuest(66174) and not IsQuestCompleted(66174) and GetQuestStep(66174) == 255">
 			<GetTo ZoneId="141" XYZ="123.1886, 30.99999, -383.7392" />
@@ -189,7 +188,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(66175) and not HasQuest(66175) and IsQuestCompleted(66174)">
 			<LogMessage Message="Picking Up - Waking the Spirit!" />
 			<GetTo ZoneId="141" XYZ="104.0803, 30.92101, -378.1381" />
-			<PickupQuest NpcId="1001427" QuestId="66175" />
+			<LLPickupQuest NpcId="1001427" QuestId="66175" />
 		</If>
 		<If Condition="HasQuest(66175) and not IsQuestCompleted(66175) and GetQuestStep(66175) == 255">
 			<GetTo ZoneId="141" XYZ="104.0803, 30.92101, -378.1381" />
@@ -202,7 +201,7 @@ Kayla / Angles24
 		<If Condition="not IsQuestCompleted(66176) and not HasQuest(66176) and IsQuestCompleted(66175)">
 			<LogMessage Message="Picking Up - Melding Materia Muchly!" />
 			<GetTo ZoneId="141" XYZ="115.5356, 31, -390.4169" />
-			<PickupQuest NpcId="1001425" QuestId="66176" />
+			<LLPickupQuest NpcId="1001425" QuestId="66176" />
 		</If>
 	</If>
 		

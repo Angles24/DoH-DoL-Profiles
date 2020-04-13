@@ -1,0 +1,8 @@
+Changelog 13/04/2020
+
+- Added Chocobo Flying Quest, this will run before you Learn DoH/DoL Classes on the Start Profile.
+- Added the selling of items after you complete level 21 on crafters. Yay bag space!
+- Removed Quest Behaviors, they now are integrated with LLamaLibrary, make sure you update also.
+
+
+

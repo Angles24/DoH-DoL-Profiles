@@ -4,14 +4,11 @@ Angles24
 -->
 <Profile>
 	<Name>1-21 Botanist</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	
 	<Order>
 		
 	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
-
-	<BotSettings BlockSkippingCutscenes="0"/>
 			
 	<If Condition="ClassName != ClassJobType.Botanist">
 		<ChangeClass Job="Botanist" />
@@ -27,7 +24,7 @@ Angles24
 				<LogMessage Message="Picking up Level 1 - My First Hatchet." />				
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65744)">
-					<PickupQuest NpcId="1000815" QuestId="65744" XYZ="-232.9017, 6.263501, -169.7613" />
+					<LLPickupQuest NpcId="1000815" QuestId="65744" XYZ="-232.9017, 6.263501, -169.7613" />
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65744) == 255">
@@ -71,7 +68,7 @@ Angles24
 				<LogMessage Message="Picking up Level 5 - Sap for Smiles." />
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65540)">
-					<PickupQuest NpcId="1000815" QuestId="65540" XYZ="-232.9017, 6.263501, -169.7613" />
+					<LLPickupQuest NpcId="1000815" QuestId="65540" XYZ="-232.9017, 6.263501, -169.7613" />
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65540) == 255">
@@ -115,7 +112,7 @@ Angles24
 				<LogMessage Message="Picking up Level 10 - Weapons of a Feather." />
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<If Condition="IsQuestAcceptQualified(65541)">
-						<PickupQuest NpcId="1000815" QuestId="65541" XYZ="-232.9017, 6.263501, -169.7613" />
+						<LLPickupQuest NpcId="1000815" QuestId="65541" XYZ="-232.9017, 6.263501, -169.7613" />
 					</If>
 			</If>
 			<While Condition="not NqHasAtLeast(5352,99)">
@@ -161,12 +158,12 @@ Angles24
 				<LogMessage Message="Picking up Level 15 - Haste Makes Waste." />
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65542)">
-					<PickupQuest NpcId="1000815" QuestId="65542" XYZ="-232.9017, 6.263501, -169.7613" />
+					<LLPickupQuest NpcId="1000815" QuestId="65542" XYZ="-232.9017, 6.263501, -169.7613" />
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65542) == 1">
 				<GetTo ZoneId="133" XYZ="167.8746, 15.69992, -117.8252"/>
-				<TalkTo InteractDistance="3.0" NpcId="1000239" XYZ="167.8746, 15.69992, -117.8252" />
+				<LLTalkTo InteractDistance="3.0" NpcId="1000239" XYZ="167.8746, 15.69992, -117.8252" />
 			</If>
 			<If Condition="GetQuestStep(65542) == 2">
 				<While Condition="not HqHasAtLeast(4832,10)">
@@ -208,7 +205,7 @@ Angles24
 		<!--End Level 21 Grind-->		
 	</If>
 	
-	<ALoadProfile Path="../Start.xml"/>
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<GrindAreas>

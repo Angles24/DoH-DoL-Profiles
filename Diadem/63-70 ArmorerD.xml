@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
 <Name>Crafting Armorer to 70</Name>
-<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 <Order>
 	
 	<!-- Leave Diadem -->
@@ -46,13 +45,13 @@ Authors:  Kayla / Angles24
 	
 	<!-- Reload Profile -->
 	<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 70">
-		<ALoadProfile Path="63-70 ArmorerD.xml"/>
+		<LLoadProfile Path="63-70 ArmorerD.xml"/>
 	</If>
 	
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 70 on Armorer, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>
-	<ALoadProfile Path="../Start.xml"/>
+	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>
 <CodeChunks>

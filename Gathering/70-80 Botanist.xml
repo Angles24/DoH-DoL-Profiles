@@ -4,14 +4,11 @@ Angles24
 -->
 <Profile>
 	<Name>63-70 Botanist</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	
 	<Order>
 		
 	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
-
-	<BotSettings BlockSkippingCutscenes="0"/>
 			
 	<If Condition="ClassName != ClassJobType.Botanist">
 		<ChangeClass Job="Botanist" />
@@ -156,7 +153,7 @@ Angles24
 		<!--End Level 80-->		
 	</If>
 	
-	<ALoadProfile Path="../Start.xml"/>
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<GrindAreas>

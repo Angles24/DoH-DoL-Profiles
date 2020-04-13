@@ -5,7 +5,6 @@ Authors:  Sodimm
 -->
 <Profile>
   <Name>[Orderbot] Shadowbringers Aether Currents</Name>
-  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
   <Order>
     <!-- Lakeland -->
     <If Condition="not IsAetherCurrentZoneComplete(813) and IsQuestCompleted(68840)">
@@ -13,48 +12,48 @@ Authors:  Sodimm
       <If Condition="IsQuestCompleted(68837) and not HasQuest(68916) and not IsQuestCompleted(68916)">
         <GetTo ZoneId="819" XYZ="41.78729, 2.232896, 262.3155"/>
         <If Condition="IsQuestAcceptQualified(68916)">
-          <PickupQuest QuestId="68916" NpcId="1027948" XYZ="40.42102, 2.232896, 261.4938"/>
+          <LLPickupQuest QuestId="68916" NpcId="1027948" XYZ="40.42102, 2.232896, 261.4938"/>
         </If>
       </If>
       <If Condition="HasQuest(68916) and not IsQuestCompleted(68916) and GetQuestStep(68916) == 1">
         <GetTo ZoneId="813" XYZ="781.7092, 21.41485, -9.937267"/>
-        <HandOver ItemId="2002848" NpcId="1028280" XYZ="784.0542, 21.41485, -9.414856" QuestId="68916" StepId="1"/>
+        <LLHandOver ItemId="2002848" NpcId="1028280" XYZ="784.0542, 21.41485, -9.414856" QuestId="68916" StepId="1"/>
       </If>
       <If Condition="HasQuest(68916) and not IsQuestCompleted(68916) and GetQuestStep(68916) == 2 and GetQuestById(68916).GetTodoArgs(1, 0).Item1 == 0">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="715.053, 21.41357, -26.93219"/>
         </If>
-        <HandOver ItemId="2002849" NpcId="1028279" XYZ="715.053, 21.41357, -26.93219" QuestId="68916"/>
+        <LLHandOver ItemId="2002849" NpcId="1028279" XYZ="715.053, 21.41357, -26.93219" QuestId="68916"/>
       </If>
       <If Condition="HasQuest(68916) and not IsQuestCompleted(68916) and GetQuestStep(68916) == 2 and GetQuestById(68916).GetTodoArgs(1, 0).Item1 == 1">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="709.6819, 24.19248, 1.815735"/>
         </If>
-        <HandOver ItemId="2002849" NpcId="1027339" XYZ="709.6819, 24.19248, 1.815735" QuestId="68916"/>
+        <LLHandOver ItemId="2002849" NpcId="1027339" XYZ="709.6819, 24.19248, 1.815735" QuestId="68916"/>
       </If>
       <If Condition="HasQuest(68916) and not IsQuestCompleted(68916) and GetQuestStep(68916) == 2 and GetQuestById(68916).GetTodoArgs(1, 0).Item1 == 2">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="702.3879, 21.79854, -81.34589"/>
         </If>
-        <HandOver ItemId="2002849" NpcId="1027420" XYZ="702.3879, 21.79854, -81.34589" QuestId="68916"/>
+        <LLHandOver ItemId="2002849" NpcId="1027420" XYZ="702.3879, 21.79854, -81.34589" QuestId="68916"/>
       </If>
       <If Condition="HasQuest(68916) and not IsQuestCompleted(68916) and GetQuestStep(68916) == 2 and GetQuestById(68916).GetTodoArgs(1, 0).Item1 == 3">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="715.053, 21.41357, -26.93219"/>
         </If>
-        <HandOver ItemId="2002849" NpcId="1027341" XYZ="805.356, 30.86825, 7.980469" QuestId="68916"/>
+        <LLHandOver ItemId="2002849" NpcId="1027341" XYZ="805.356, 30.86825, 7.980469" QuestId="68916"/>
       </If>
       <If Condition="HasQuest(68916) and not IsQuestCompleted(68916) and GetQuestStep(68916) == 255">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="783.2596, 21.41485, -10.50621"/>
         </If>
-        <TurnIn QuestId="68916" NpcId="1028280" XYZ="784.0542, 21.41485, -9.414856"/>
+        <LLTurnIn QuestId="68916" NpcId="1028280" XYZ="784.0542, 21.41485, -9.414856"/>
       </If>
       <!-- Imperative Repairs -->
       <If Condition="IsQuestCompleted(68840) and not HasQuest(68920) and not IsQuestCompleted(68920)">
         <GetTo ZoneId="813" XYZ="-766.7798, 61.72048, -303.3688"/>
         <If Condition="IsQuestAcceptQualified(68920)">
-          <PickupQuest QuestId="68920" NpcId="1027382" XYZ="-765.9266, 61.72048, -304.1886"/>
+          <LLPickupQuest QuestId="68920" NpcId="1027382" XYZ="-765.9266, 61.72048, -304.1886"/>
         </If>
       </If>
       <If Condition="HasQuest(68920) and not IsQuestCompleted(68920) and GetQuestStep(68920) == 1">
@@ -72,22 +71,22 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(68920) and not IsQuestCompleted(68920) and GetQuestStep(68920) == 255">
         <GetTo ZoneId="813" XYZ="-765.4781, 61.58692, -301.9384"/>
-        <TurnIn QuestId="68920" NpcId="1027382" XYZ="-765.9266, 61.72048, -304.1886"/>
+        <LLTurnIn QuestId="68920" NpcId="1027382" XYZ="-765.9266, 61.72048, -304.1886"/>
       </If>
       <!-- The Astute Amaro -->
       <If Condition="IsQuestCompleted(68840) and not HasQuest(68921) and not IsQuestCompleted(68921)">
         <GetTo ZoneId="813" XYZ="-675.0093, 51.2151, -219.2736"/>
         <If Condition="IsQuestAcceptQualified(68921)">
-          <PickupQuest QuestId="68921" NpcId="1031212" XYZ="-673.0907, 51.15794, -219.501"/>
+          <LLPickupQuest QuestId="68921" NpcId="1031212" XYZ="-673.0907, 51.15794, -219.501"/>
         </If>
       </If>
       <If Condition="HasQuest(68921) and not IsQuestCompleted(68921) and GetQuestStep(68921) == 1">
         <GetTo ZoneId="813" XYZ="-426.4322, 7.907925, -119.4296"/>
-        <TalkTo NpcId="1031214" XYZ="-425.2232, 7.879167, -120.8362" QuestId="68921" StepId="1"/>
+        <LLTalkTo NpcId="1031214" XYZ="-425.2232, 7.879167, -120.8362" QuestId="68921" StepId="1"/>
       </If>
       <If Condition="HasQuest(68921) and not IsQuestCompleted(68921) and GetQuestStep(68921) == 2">
         <GetTo ZoneId="813" XYZ="-458.8109, 0.8904356, 77.63301"/>
-        <TalkTo NpcId="1031216" XYZ="-460.441, 0.9406272, 79.39258" QuestId="68921" StepId="2"/>
+        <LLTalkTo NpcId="1031216" XYZ="-460.441, 0.9406272, 79.39258" QuestId="68921" StepId="2"/>
       </If>
       <If Condition="HasQuest(68921) and not IsQuestCompleted(68921) and GetQuestStep(68921) == 3">
         <If Condition="not IsOnMap(813)">
@@ -97,42 +96,42 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(68921) and not IsQuestCompleted(68921) and GetQuestStep(68921) == 255">
         <GetTo ZoneId="813" XYZ="-674.8223, 51.20982, -219.2895"/>
-        <TurnIn QuestId="68921" NpcId="1031212" XYZ="-673.0907, 51.15794, -219.501"/>
+        <LLTurnIn QuestId="68921" NpcId="1031212" XYZ="-673.0907, 51.15794, -219.501"/>
       </If>
       <!-- An Unreasonable Request -->
       <If Condition="IsQuestCompleted(68840) and not HasQuest(68922) and not IsQuestCompleted(68922)">
         <GetTo ZoneId="813" XYZ="-699.3442, 61.99376, -350.9773"/>
         <If Condition="IsQuestAcceptQualified(68922)">
-          <PickupQuest QuestId="68922" NpcId="1027419" XYZ="-700.7401, 61.99375, -353.6279"/>
+          <LLPickupQuest QuestId="68922" NpcId="1027419" XYZ="-700.7401, 61.99375, -353.6279"/>
         </If>
       </If>
       <If Condition="HasQuest(68922) and not IsQuestCompleted(68922) and GetQuestStep(68922) == 1">
         <GetTo ZoneId="813" XYZ="-147.7577, 28.47205, -128.6607"/>
-        <SoHandOver ItemId="2002833" NpcId="1027353" XYZ="-146.3188, 28.47206, -128.832" QuestId="68922" StepId="1"/>
+        <LLHandOver ItemId="2002833" NpcId="1027353" XYZ="-146.3188, 28.47206, -128.832" QuestId="68922" StepId="1"/>
       </If>
       <If Condition="HasQuest(68922) and not IsQuestCompleted(68922) and GetQuestStep(68922) == 2 and GetQuestById(68922).GetTodoArgs(2, 0).Item1 == 0">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="-156.7361, 49.16942, -138.0723"/>
         </If>
-        <TalkTo NpcId="1028317" XYZ="-157.6409, 49.16856, -137.3465" QuestId="68922"/>
+        <LLTalkTo NpcId="1028317" XYZ="-157.6409, 49.16856, -137.3465" QuestId="68922"/>
       </If>
       <If Condition="HasQuest(68922) and not IsQuestCompleted(68922) and GetQuestStep(68922) == 2 and GetQuestById(68922).GetTodoArgs(2, 0).Item1 == 1">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="-120.6582, 5.761635, -158.4946"/>
         </If>
-        <TalkTo NpcId="1027368" XYZ="-120.6531, 5.761645, -159.7773" QuestId="68922"/>
+        <LLTalkTo NpcId="1027368" XYZ="-120.6531, 5.761645, -159.7773" QuestId="68922"/>
       </If>
       <If Condition="HasQuest(68922) and not IsQuestCompleted(68922) and GetQuestStep(68922) == 2 and GetQuestById(68922).GetTodoArgs(2, 0).Item1 == 2">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="-193.3299, 5.761792, -153.915"/>
         </If>
-        <TalkTo NpcId="1031559" XYZ="-194.1711, 5.761844, -153.7957" QuestId="68922"/>
+        <LLTalkTo NpcId="1031559" XYZ="-194.1711, 5.761844, -153.7957" QuestId="68922"/>
       </If>
       <If Condition="HasQuest(68922) and not IsQuestCompleted(68922) and GetQuestStep(68922) == 255">
         <If Condition="not IsOnMap(813)">
           <GetTo ZoneId="813" XYZ="-147.7582, 28.47204, -128.4235"/>
         </If>
-        <TurnIn QuestId="68922" NpcId="1027353" XYZ="-146.3188, 28.47206, -128.832"/>
+        <LLTurnIn QuestId="68922" NpcId="1027353" XYZ="-146.3188, 28.47206, -128.832"/>
       </If>
       <!-- Open World -->
       <If Condition="not IsAetherCurrentCompleted(813,14)">
@@ -205,12 +204,12 @@ Authors:  Sodimm
       <If Condition="IsQuestCompleted(68842) and not HasQuest(68931) and not IsQuestCompleted(68931)">
         <GetTo ZoneId="816" XYZ="-366.3663, 67.3123, 556.0659"/>
         <If Condition="IsQuestAcceptQualified(68931)">
-          <PickupQuest QuestId="68931" NpcId="1030266" XYZ="-367.6661, 66.86359, 557.1526"/>
+          <LLPickupQuest QuestId="68931" NpcId="1030266" XYZ="-367.6661, 66.86359, 557.1526"/>
         </If>
       </If>
       <If Condition="HasQuest(68931) and not IsQuestCompleted(68931) and GetQuestStep(68931) == 1">
         <GetTo ZoneId="816" XYZ="-163.7436, 34.61127, 607.8997"/>
-        <TalkTo NpcId="1030267" XYZ="-161.3032, 34.21811, 607.3853" QuestId="68931" StepId="1"/>
+        <LLTalkTo NpcId="1030267" XYZ="-161.3032, 34.21811, 607.3853" QuestId="68931" StepId="1"/>
       </If>
       <If Condition="HasQuest(68931) and not IsQuestCompleted(68931) and GetQuestStep(68931) == 2">
         <GetTo ZoneId="816" XYZ="-39.20681, 24.0492, 740.242"/>
@@ -219,13 +218,13 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(68931) and not IsQuestCompleted(68931) and GetQuestStep(68931) == 255">
         <GetTo ZoneId="816" XYZ="-366.2805, 67.34469, 555.5678"/>
-        <TurnIn QuestId="68931" NpcId="1030266" XYZ="-367.6661, 66.86359, 557.1526"/>
+        <LLTurnIn QuestId="68931" NpcId="1030266" XYZ="-367.6661, 66.86359, 557.1526"/>
       </If>
       <!-- Delightful Decorations -->
       <If Condition="IsQuestCompleted(68846) and not HasQuest(68934) and not IsQuestCompleted(68934)">
         <GetTo ZoneId="816" XYZ="-613.0966, 36.36868, -213.4198"/>
         <If Condition="IsQuestAcceptQualified(68934)">
-          <PickupQuest QuestId="68934" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
+          <LLPickupQuest QuestId="68934" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
         </If>
       </If>
       <If Condition="HasQuest(68934) and not IsQuestCompleted(68934) and GetQuestStep(68934) == 1">
@@ -250,7 +249,7 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(68934) and not IsQuestCompleted(68934) and GetQuestStep(68934) == 2">
         <GetTo ZoneId="816" XYZ="-612.2657, 36.3263, -214.5082"/>
-        <HandOver ItemId="2002636" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117" QuestId="68934" StepId="2"/>
+        <LLHandOver ItemId="2002636" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117" QuestId="68934" StepId="2"/>
       </If>
       <If Condition="HasQuest(68934) and not IsQuestCompleted(68934) and GetQuestStep(68934) == 3">
         <If Condition="not IsOnMap(816)">
@@ -268,13 +267,13 @@ Authors:  Sodimm
         <If Condition="not IsOnMap(816)">
           <GetTo ZoneId="816" XYZ="-612.5603, 36.51188, -217.3125"/>
         </If>
-        <TurnIn QuestId="68934" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
+        <LLTurnIn QuestId="68934" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
       </If>
       <!-- The Path to Popularity -->
       <If Condition="IsQuestCompleted(68847) and not HasQuest(68940) and not IsQuestCompleted(68940)">
         <GetTo ZoneId="816" XYZ="-287.7688, 40.32404, 445.2542"/>
         <If Condition="IsQuestAcceptQualified(68940)">
-          <PickupQuest QuestId="68940" NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188"/>
+          <LLPickupQuest QuestId="68940" NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188"/>
         </If>
       </If>
       <If Condition="HasQuest(68940) and not IsQuestCompleted(68940) and GetQuestStep(68940) == 1">
@@ -291,29 +290,29 @@ Authors:  Sodimm
         <If Condition="not IsOnMap(816)">
           <GetTo ZoneId="816" XYZ="-627.8063, 35.86156, -240.494"/>
         </If>
-        <TalkTo NpcId="1030839" XYZ="-628.1377, 35.86156, -238.2086" QuestId="68940" StepId="2"/>
+        <LLTalkTo NpcId="1030839" XYZ="-628.1377, 35.86156, -238.2086" QuestId="68940" StepId="2"/>
       </If>
       <If Condition="HasQuest(68940) and not IsQuestCompleted(68940) and GetQuestStep(68940) == 3">
         <GetTo ZoneId="816" XYZ="-288.1535, 40.32404, 445.6237"/>
-        <TalkTo NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188" QuestId="68940" StepId="3"/>
+        <LLTalkTo NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188" QuestId="68940" StepId="3"/>
       </If>
       <If Condition="HasQuest(68940) and not IsQuestCompleted(68940) and GetQuestStep(68940) == 255">
         <If Condition="not IsOnMap(816)">
           <GetTo ZoneId="816" XYZ="-288.1535, 40.32404, 445.6237"/>
         </If>
-        <TurnIn QuestId="68940" NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188"/>
+        <LLTurnIn QuestId="68940" NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188"/>
       </If>
       <If Condition="HasQuest(68940) and not IsQuestCompleted(68940) and GetQuestStep(68940) == 255">
         <If Condition="not IsOnMap(816)">
           <GetTo ZoneId="816" XYZ="-612.6672, 36.5118, -216.8956"/>
         </If>
-        <TurnIn QuestId="68940" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
+        <LLTurnIn QuestId="68940" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
       </If>
       <!-- A New Amaro -->
       <If Condition="IsQuestCompleted(68854) and not HasQuest(68963) and not IsQuestCompleted(68963)">
         <GetTo ZoneId="816" XYZ="441.4835, 89.6209, -654.8467"/>
         <If Condition="IsQuestAcceptQualified(68963)">
-          <PickupQuest QuestId="68963" NpcId="1027695" XYZ="441.6418, 89.80711, -653.4371"/>
+          <LLPickupQuest QuestId="68963" NpcId="1027695" XYZ="441.6418, 89.80711, -653.4371"/>
         </If>
       </If>
       <If Condition="HasQuest(68963) and not IsQuestCompleted(68963) and GetQuestStep(68963) == 1">
@@ -330,7 +329,7 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(68963) and not IsQuestCompleted(68963) and GetQuestStep(68963) == 255">
         <GetTo ZoneId="816" XYZ="-77.7541, 38.15496, -532.3476"/>
-        <TurnIn QuestId="68963" NpcId="1031025" XYZ="-79.75891, 37.96834, -531.8532"/>
+        <LLTurnIn QuestId="68963" NpcId="1031025" XYZ="-79.75891, 37.96834, -531.8532"/>
       </If>
       <!-- Open World -->
       <If Condition="not IsAetherCurrentCompleted(816,14)">
@@ -394,7 +393,7 @@ Authors:  Sodimm
       <If Condition="IsQuestCompleted(68861) and not HasQuest(68980) and not IsQuestCompleted(68980)">
         <GetTo ZoneId="817" XYZ="-128.5743, -17.23699, 314.8941"/>
         <If Condition="IsQuestAcceptQualified(68980)">
-          <PickupQuest QuestId="68980" NpcId="1029023" XYZ="-131.3649, -16.4778, 316.3042"/>
+          <LLPickupQuest QuestId="68980" NpcId="1029023" XYZ="-131.3649, -16.4778, 316.3042"/>
         </If>
       </If>
       <If Condition="HasQuest(68980) and not IsQuestCompleted(68980) and GetQuestStep(68980) == 1">
@@ -407,20 +406,20 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(68980) and not IsQuestCompleted(68980) and GetQuestStep(68980) == 255">
         <GetTo ZoneId="817" XYZ="-303.813, 8.348971, 709.9684"/>
-        <TurnIn ItemId="2002519" QuestId="68980" NpcId="1029024" XYZ="-301.5335, 8.681433, 711.2992"/>
+        <LLTurnIn ItemId="2002519" QuestId="68980" NpcId="1029024" XYZ="-301.5335, 8.681433, 711.2992"/>
       </If>
       <!-- The Great Deceiver -->
       <If Condition="IsQuestCompleted(68867) and not HasQuest(69192) and not IsQuestCompleted(69192)">
         <GetTo ZoneId="817" XYZ="-83.88918, -19.01869, 304.3128"/>
         <If Condition="IsQuestAcceptQualified(69192)">
-          <PickupQuest QuestId="69192" NpcId="1030747" XYZ="-81.28485, -19.06188, 307.2098"/>
+          <LLPickupQuest QuestId="69192" NpcId="1030747" XYZ="-81.28485, -19.06188, 307.2098"/>
         </If>
       </If>
       <If Condition="HasQuest(69192) and not IsQuestCompleted(69192) and GetQuestStep(69192) == 1">
         <If Condition="not IsOnMap(817)">
           <GetTo ZoneId="817" XYZ="-30.05586, -24.64596, 318.0247"/>
         </If>
-        <TalkTo NpcId="1030818" XYZ="-28.64117, -24.63142, 318.9899" QuestId="69192" StepId="1"/>
+        <LLTalkTo NpcId="1030818" XYZ="-28.64117, -24.63142, 318.9899" QuestId="69192" StepId="1"/>
       </If>
       <If Condition="HasQuest(69192) and not IsQuestCompleted(69192) and GetQuestStep(69192) == 2">
         <GetTo ZoneId="817" XYZ="-352.3276, 7.205114, 268.3033"/>
@@ -428,45 +427,45 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(69192) and not IsQuestCompleted(69192) and GetQuestStep(69192) == 255">
         <GetTo ZoneId="817" XYZ="-521.203, 0.3112338, 229.0744"/>
-        <TurnIn QuestId="69192" NpcId="1030821" XYZ="-524.4679, 0.08425587, 227.0084"/>
+        <LLTurnIn QuestId="69192" NpcId="1030821" XYZ="-524.4679, 0.08425587, 227.0084"/>
       </If>
       <!-- Suit Up -->
       <If Condition="IsQuestCompleted(68870) and not HasQuest(69003) and not IsQuestCompleted(69003)">
         <GetTo ZoneId="817" XYZ="394.206, 20.42252, -180.891"/>
         <If Condition="IsQuestAcceptQualified(69003)">
-          <PickupQuest QuestId="69003" NpcId="1027736" XYZ="396.3835, 20.42252, -179.1257"/>
+          <LLPickupQuest QuestId="69003" NpcId="1027736" XYZ="396.3835, 20.42252, -179.1257"/>
         </If>
       </If>
       <If Condition="HasQuest(69003) and not IsQuestCompleted(69003) and GetQuestStep(69003) == 1 and GetQuestById(69003).GetTodoArgs(1, 0).Item1 == 0">
         <GetTo ZoneId="817" XYZ="557.1024, 27.28193, 150.9372"/>
-        <HandOver ItemId="2002887" NpcId="1031381" XYZ="558.6479, 27.37839, 152.4224" QuestId="69003"/>
+        <LLHandOver ItemId="2002887" NpcId="1031381" XYZ="558.6479, 27.37839, 152.4224" QuestId="69003"/>
       </If>
       <If Condition="HasQuest(69003) and not IsQuestCompleted(69003) and GetQuestStep(69003) == 1 and GetQuestById(69003).GetTodoArgs(1, 0).Item1 == 1">
         <If Condition="not IsOnMap(817)">
           <GetTo ZoneId="817" XYZ="567.158, 27.28872, 142.9543"/>
         </If>
-        <HandOver ItemId="2002887" NpcId="1031383" XYZ="569.5125, 27.33106, 143.6942" QuestId="69003"/>
+        <LLHandOver ItemId="2002887" NpcId="1031383" XYZ="569.5125, 27.33106, 143.6942" QuestId="69003"/>
       </If>
       <If Condition="HasQuest(69003) and not IsQuestCompleted(69003) and GetQuestStep(69003) == 1 and GetQuestById(69003).GetTodoArgs(1, 0).Item1 == 2">
         <If Condition="not IsOnMap(817)">
           <GetTo ZoneId="817" XYZ="574.5402, 27.84469, 160.2848"/>
         </If>
-        <HandOver ItemId="2002887" NpcId="1031382" XYZ="575.1887, 27.87211, 161.3945" QuestId="69003"/>
+        <LLHandOver ItemId="2002887" NpcId="1031382" XYZ="575.1887, 27.87211, 161.3945" QuestId="69003"/>
       </If>
       <If Condition="HasQuest(69003) and not IsQuestCompleted(69003) and GetQuestStep(69003) == 255">
         <GetTo ZoneId="817" XYZ="394.6198, 20.42252, -181.0416"/>
-        <TurnIn QuestId="69003" NpcId="1027736" XYZ="396.3835, 20.42252, -179.1257"/>
+        <LLTurnIn QuestId="69003" NpcId="1027736" XYZ="396.3835, 20.42252, -179.1257"/>
       </If>
       <!-- Stand on Ceremony -->
       <If Condition="IsQuestCompleted(68875) and not HasQuest(69014) and not IsQuestCompleted(69014)">
         <GetTo ZoneId="817" XYZ="493.2754, -6.555339, -227.5039"/>
         <If Condition="IsQuestAcceptQualified(69014)">
-          <PickupQuest QuestId="69014" NpcId="1027716" XYZ="494.9873, -6.555339, -224.9333"/>
+          <LLPickupQuest QuestId="69014" NpcId="1027716" XYZ="494.9873, -6.555339, -224.9333"/>
         </If>
       </If>
       <If Condition="HasQuest(69014) and not IsQuestCompleted(69014) and GetQuestStep(69014) == 1">
         <GetTo ZoneId="817" XYZ="167.9489, -20, -468.2461"/>
-        <TalkTo NpcId="1031001" XYZ="167.7118, -20, -471.0002" QuestId="69014" Step="1"/>
+        <LLTalkTo NpcId="1031001" XYZ="167.7118, -20, -471.0002" QuestId="69014" Step="1"/>
       </If>
       <If Condition="HasQuest(69014) and not IsQuestCompleted(69014) and GetQuestStep(69014) == 2">
         <If Condition="not IsOnMap(817)">
@@ -479,11 +478,11 @@ Authors:  Sodimm
         <If Condition="not IsOnMap(817)">
           <GetTo ZoneId="817" XYZ="167.9558, -20, -475.9467"/>
         </If>
-        <TalkTo NpcId="1031001" XYZ="167.7118, -20, -471.0002" QuestId="69014" StepId="3"/>
+        <LLTalkTo NpcId="1031001" XYZ="167.7118, -20, -471.0002" QuestId="69014" StepId="3"/>
       </If>
       <If Condition="HasQuest(69014) and not IsQuestCompleted(69014) and GetQuestStep(69014) == 255">
         <GetTo ZoneId="817" XYZ="493.7979, -6.555339, -227.7605"/>
-        <TurnIn QuestId="69014" NpcId="1027716" XYZ="494.9873, -6.555339, -224.9333"/>
+        <LLTurnIn QuestId="69014" NpcId="1027716" XYZ="494.9873, -6.555339, -224.9333"/>
       </If>
       <!-- Open World -->
       <If Condition="not IsAetherCurrentCompleted(817,13)">
@@ -536,12 +535,12 @@ Authors:  Sodimm
       <If Condition="IsQuestCompleted(68829) and not HasQuest(68911) and not IsQuestCompleted(68911)">
         <GetTo ZoneId="815" XYZ="267.3467, 4.0297, -145.4092"/>
         <If Condition="IsQuestAcceptQualified(68911)">
-          <PickupQuest QuestId="68911" NpcId="1027872" XYZ="268.4519, 4.0297, -144.1825"/>
+          <LLPickupQuest QuestId="68911" NpcId="1027872" XYZ="268.4519, 4.0297, -144.1825"/>
         </If>
       </If>
       <If Condition="HasQuest(68911) and not IsQuestCompleted(68911) and GetQuestStep(68911) == 1">
         <GetTo ZoneId="815" XYZ="581.0317, -46.61663, -683.5903"/>
-        <TalkTo NpcId="1030391" XYZ="579.9801, -46.38523, -684.9012" QuestId="68911" StepId="1"/>
+        <LLTalkTo NpcId="1030391" XYZ="579.9801, -46.38523, -684.9012" QuestId="68911" StepId="1"/>
       </If>
       <If Condition="HasQuest(68911) and not IsQuestCompleted(68911) and GetQuestStep(68911) == 2">
         <If Condition="not IsOnMap(815)">
@@ -559,13 +558,13 @@ Authors:  Sodimm
         <If Condition="not IsOnMap(815)">
           <GetTo ZoneId="815" XYZ="581.3171, -46.60291, -683.4753"/>
         </If>
-        <TurnIn ItemId="2002584" QuestId="68911" NpcId="1030391" XYZ="579.9801, -46.38523, -684.9012"/>
+        <LLTurnIn ItemId="2002584" QuestId="68911" NpcId="1030391" XYZ="579.9801, -46.38523, -684.9012"/>
       </If>
       <!-- Scavengers Assemble -->
       <If Condition="IsQuestCompleted(69149) and not HasQuest(69039) and not IsQuestCompleted(69039)">
         <GetTo ZoneId="815" XYZ="-424.1465, 31.49794, -225.1674"/>
         <If Condition="IsQuestAcceptQualified(69039)">
-          <PickupQuest QuestId="69039" NpcId="1030979" XYZ="-424.6129, 31.90083, -226.6423"/>
+          <LLPickupQuest QuestId="69039" NpcId="1030979" XYZ="-424.6129, 31.90083, -226.6423"/>
         </If>
       </If>
       <If Condition="HasQuest(69039) and not IsQuestCompleted(69039) and GetQuestStep(69039) == 1">
@@ -590,33 +589,33 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(69039) and not IsQuestCompleted(69039) and GetQuestStep(69039) == 255">
         <GetTo ZoneId="815" XYZ="15.38471, -47.52571, 168.71"/>
-        <TurnIn QuestId="69039" NpcId="1030982" XYZ="13.96191, -47.88784, 169.7871"/>
+        <LLTurnIn QuestId="69039" NpcId="1030982" XYZ="13.96191, -47.88784, 169.7871"/>
       </If>
       <!-- Charmless Man -->
       <If Condition="IsQuestCompleted(69151) and not HasQuest(69047) and not IsQuestCompleted(69047)">
         <GetTo ZoneId="815" XYZ="-478.894, 47.78905, -200.6438"/>
         <If Condition="IsQuestAcceptQualified(69047)">
-          <PickupQuest QuestId="69047" NpcId="1027927" XYZ="-476.9512, 47.78906, -200.6104"/>
+          <LLPickupQuest QuestId="69047" NpcId="1027927" XYZ="-476.9512, 47.78906, -200.6104"/>
         </If>
       </If>
       <If Condition="HasQuest(69047) and not IsQuestCompleted(69047) and GetQuestStep(69047) == 1">
         <If Condition="not IsOnMap(815)">
           <GetTo ZoneId="815" XYZ="-557.3815, 52.409, -188.8508"/>
         </If>
-        <HandOver ItemId="2002733" NpcId="1030759" XYZ="-558.9227, 52.40899, -188.7999" QuestId="69047" StepId="1"/>
+        <LLHandOver ItemId="2002733" NpcId="1030759" XYZ="-558.9227, 52.40899, -188.7999" QuestId="69047" StepId="1"/>
       </If>
       <!-- A Vein Pursuit -->
       <If Condition="IsQuestCompleted(69153) and not HasQuest(69061) and not IsQuestCompleted(69061)">
         <GetTo ZoneId="815" XYZ="-506.098, 45.61607, -197.2799"/>
         <If Condition="IsQuestAcceptQualified(69061)">
-          <PickupQuest QuestId="69061" NpcId="1030419" XYZ="-506.6148, 45.6145, -194.5068"/>
+          <LLPickupQuest QuestId="69061" NpcId="1030419" XYZ="-506.6148, 45.6145, -194.5068"/>
         </If>
       </If>
       <If Condition="HasQuest(69061) and not IsQuestCompleted(69061) and GetQuestStep(69061) == 1">
         <If Condition="not IsOnMap(815)">
           <GetTo ZoneId="815" XYZ="-465.1343, 45.51725, -269.3111"/>
         </If>
-        <TalkTo NpcId="1030720" XYZ="-464.6525, 45.50817, -270.4662" QuestId="69061" StepId="1"/>
+        <LLTalkTo NpcId="1030720" XYZ="-464.6525, 45.50817, -270.4662" QuestId="69061" StepId="1"/>
       </If>
       <If Condition="HasQuest(69061) and not IsQuestCompleted(69061) and GetQuestStep(69061) == 2">
         <GetTo ZoneId="815" XYZ="-478.3472, 10.44109, 192.0116"/>
@@ -626,12 +625,12 @@ Authors:  Sodimm
         <If Condition="not IsOnMap(815)">
           <GetTo ZoneId="815" XYZ="-478.3472, 10.44109, 192.0116"/>
         </If>
-        <TurnIn QuestId="69061" NpcId="1030718" XYZ="-478.2025, 10.54953, 193.1334"/>
+        <LLTurnIn QuestId="69061" NpcId="1030718" XYZ="-478.2025, 10.54953, 193.1334"/>
       </If>
       <!-- Charmless Man -->
       <If Condition="HasQuest(69047) and not IsQuestCompleted(69047) and GetQuestStep(69047) == 255">
         <GetTo ZoneId="815" XYZ="-336.9016, 19.2985, 77.47129"/>
-        <TurnIn ItemId="2002733" QuestId="69047" NpcId="1030807" XYZ="-336.6903, 19.24816, 75.91357"/>
+        <LLTurnIn ItemId="2002733" QuestId="69047" NpcId="1030807" XYZ="-336.6903, 19.24816, 75.91357"/>
       </If>
       <!-- Open World -->
       <If Condition="not IsAetherCurrentCompleted(815,14)">
@@ -684,13 +683,13 @@ Authors:  Sodimm
       <If Condition="IsQuestCompleted(68821) and not HasQuest(68896) and not IsQuestCompleted(68896)">
         <GetTo ZoneId="814" XYZ="-310.0979, 19.39982, 406.5162"/>
         <If Condition="IsQuestAcceptQualified(68896)">
-          <PickupQuest QuestId="68896" NpcId="1027452" XYZ="-310.6279, 19.40518, 405.2948"/>
+          <LLPickupQuest QuestId="68896" NpcId="1027452" XYZ="-310.6279, 19.40518, 405.2948"/>
         </If>
       </If>
       <If Condition="HasQuest(68896) and not IsQuestCompleted(68896) and GetQuestStep(68896) == 1">
         <GetTo ZoneId="814" XYZ="-450.7294, 8.987022, 536.5689"/>
         <MoveTo XYZ="-446.2806, 7.657999, 536.1563" Distance="1" UseMesh="False"/>
-        <TalkTo NpcId="1030741" XYZ="-446.2806, 7.657999, 536.1563" Distance="4.5f" QuestId="68896" StepId="1"/>
+        <LLTalkTo NpcId="1030741" XYZ="-446.2806, 7.657999, 536.1563" Distance="4.5f" QuestId="68896" StepId="1"/>
       </If>
       <If Condition="HasQuest(68896) and not IsQuestCompleted(68896) and GetQuestStep(68896) == 2">
         <If Condition="not IsOnMap(814)">
@@ -713,17 +712,17 @@ Authors:  Sodimm
         <If Condition="not IsOnMap(814)">
           <GetTo ZoneId="814" XYZ="-444.4311, 8.492847, 536.3561"/>
         </If>
-        <TalkTo NpcId="1030741" XYZ="-446.2806, 7.657999, 536.1563" QuestId="68896" StepId="3"/>
+        <LLTalkTo NpcId="1030741" XYZ="-446.2806, 7.657999, 536.1563" QuestId="68896" StepId="3"/>
       </If>
       <If Condition="HasQuest(68896) and not IsQuestCompleted(68896) and GetQuestStep(68896) == 255">
         <GetTo ZoneId="814" XYZ="-309.364, 19.39425, 407.1985"/>
-        <TurnIn QuestId="68896" NpcId="1027452" XYZ="-310.6279, 19.40518, 405.2948"/>
+        <LLTurnIn QuestId="68896" NpcId="1027452" XYZ="-310.6279, 19.40518, 405.2948"/>
       </If>
       <!-- Village of Woe -->
       <If Condition="IsQuestCompleted(68821) and not HasQuest(68907) and not IsQuestCompleted(68907)">
         <GetTo ZoneId="814" XYZ="-305.9456, 20.95898, 361.1356"/>
         <If Condition="IsQuestAcceptQualified(68907)">
-          <PickupQuest QuestId="68907" NpcId="1030763" XYZ="-306.2334, 20.95657, 358.4191"/>
+          <LLPickupQuest QuestId="68907" NpcId="1030763" XYZ="-306.2334, 20.95657, 358.4191"/>
         </If>
       </If>
       <If Condition="HasQuest(68907) and not IsQuestCompleted(68907) and GetQuestStep(68907) == 1">
@@ -738,63 +737,63 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(68907) and not IsQuestCompleted(68907) and GetQuestStep(68907) == 3">
         <GetTo ZoneId="814" XYZ="-282.9092, 35.28001, 206.2846"/>
-        <TalkTo NpcId="1030766" XYZ="-284.2299, 35.37314, 204.6692" QuestId="68907" StepId="3"/>
+        <LLTalkTo NpcId="1030766" XYZ="-284.2299, 35.37314, 204.6692" QuestId="68907" StepId="3"/>
       </If>
       <If Condition="HasQuest(68907) and not IsQuestCompleted(68907) and GetQuestStep(68907) == 4">
         <GetTo ZoneId="814" XYZ="-314.9098, 21.13547, 348.7303"/>
-        <TalkTo NpcId="1030794" XYZ="-317.2503, 21.04561, 349.1721" QuestId="68907" StepId="4"/>
+        <LLTalkTo NpcId="1030794" XYZ="-317.2503, 21.04561, 349.1721" QuestId="68907" StepId="4"/>
       </If>
       <If Condition="HasQuest(68907) and not IsQuestCompleted(68907) and GetQuestStep(68907) == 255">
         <GetTo ZoneId="814" XYZ="-283.3589, 35.30619, 205.8826"/>
-        <TurnIn QuestId="68907" NpcId="1030766" XYZ="-284.2299, 35.37314, 204.6692"/>
+        <LLTurnIn QuestId="68907" NpcId="1030766" XYZ="-284.2299, 35.37314, 204.6692"/>
       </If>
       <!-- A Disagreeable Dwarf -->
       <If Condition="IsQuestCompleted(69173) and not HasQuest(69092) and not IsQuestCompleted(69092)">
         <GetTo ZoneId="814" XYZ="-447.2847, 417.1024, -610.7085"/>
         <If Condition="IsQuestAcceptQualified(69092)">
-          <SoPickupQuest QuestId="69092" NpcId="1030776" XYZ="-450.8583, 417.1344, -610.8644"/>
+          <LLPickupQuest QuestId="69092" NpcId="1030776" XYZ="-450.8583, 417.1344, -610.8644"/>
         </If>
       </If>
       <If Condition="HasQuest(69092) and not IsQuestCompleted(69092) and GetQuestStep(69092) == 1">
         <If Condition="not IsOnMap(814)">
           <GetTo ZoneId="814" XYZ="-430.9892, 417.2927, -675.2963"/>
         </If>
-        <TalkTo NpcId="1030778" XYZ="-429.3126, 417.298, -677.2107" QuestId="69092" StepId="1"/>
+        <LLTalkTo NpcId="1030778" XYZ="-429.3126, 417.298, -677.2107" QuestId="69092" StepId="1"/>
       </If>
       <If Condition="HasQuest(69092) and not IsQuestCompleted(69092) and GetQuestStep(69092) == 2">
         <If Condition="not IsOnMap(814)">
           <GetTo ZoneId="814" XYZ="-438.4014, 417.2882, -639.3514"/>
         </If>
-        <SoTalkTo NpcId="1030779" XYZ="-436.4844, 417.2195, -641.3824" QuestId="69092" StepId="2"/>
+        <LLTalkTo NpcId="1030779" XYZ="-436.4844, 417.2195, -641.3824" QuestId="69092" StepId="2"/>
       </If>
       <If Condition="HasQuest(69092) and not IsQuestCompleted(69092) and GetQuestStep(69092) == 3">
         <If Condition="not IsOnMap(814)">
           <GetTo ZoneId="814" XYZ="-491.654, 417.1482, -608.3272"/>
         </If>
-        <SoTalkTo NpcId="1030780" XYZ="-493.2479, 417.1531, -610.9866" QuestId="69092" StepId="3"/>
+        <LLTalkTo NpcId="1030780" XYZ="-493.2479, 417.1531, -610.9866" QuestId="69092" StepId="3"/>
       </If>
       <If Condition="HasQuest(69092) and not IsQuestCompleted(69092) and GetQuestStep(69092) == 255">
         <If Condition="not IsOnMap(814)">
           <GetTo ZoneId="814" XYZ="-398.1559, 417.5051, -659.8394"/>
         </If>
-        <SoTurnIn ItemId="2002701" QuestId="69092" NpcId="1030800" XYZ="-396.6888, 417.5182, -657.9232"/>
+        <LLTurnIn ItemId="2002701" QuestId="69092" NpcId="1030800" XYZ="-396.6888, 417.5182, -657.9232"/>
       </If>
       <!-- Fugitive of Fear -->
       <If Condition="IsQuestCompleted(69176) and not HasQuest(69073) and not IsQuestCompleted(69073)">
         <GetTo ZoneId="814" XYZ="-130.5229, 354.3582, -178.4895"/>
         <If Condition="IsQuestAcceptQualified(69073)">
-          <PickupQuest QuestId="69073" NpcId="1027956" XYZ="-128.7709, 354.3582, -179.1868"/>
+          <LLPickupQuest QuestId="69073" NpcId="1027956" XYZ="-128.7709, 354.3582, -179.1868"/>
         </If>
       </If>
       <If Condition="HasQuest(69073) and not IsQuestCompleted(69073) and GetQuestStep(69073) == 1">
         <GetTo ZoneId="814" XYZ="-515.1837, 334.1159, -7.864386"/>
-        <TalkTo NpcId="1030748" XYZ="-514.8852, 334.116, -9.262268" QuestId="69073" StepId="1"/>
+        <LLTalkTo NpcId="1030748" XYZ="-514.8852, 334.116, -9.262268" QuestId="69073" StepId="1"/>
       </If>
       <If Condition="HasQuest(69073) and not IsQuestCompleted(69073) and GetQuestStep(69073) == 2">
         <If Condition="not IsOnMap(814)">
           <GetTo ZoneId="814" XYZ="-506.4615, 333.0726, -112.5898"/>
         </If>
-        <TalkTo NpcId="1030749" XYZ="-504.5701, 332.9331, -112.0775" QuestId="69073" StepId="2"/>
+        <LLTalkTo NpcId="1030749" XYZ="-504.5701, 332.9331, -112.0775" QuestId="69073" StepId="2"/>
       </If>
       <If Condition="HasQuest(69073) and not IsQuestCompleted(69073) and GetQuestStep(69073) == 3">
         <If Condition="not IsOnMap(814)">
@@ -804,7 +803,7 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(69073) and not IsQuestCompleted(69073) and GetQuestStep(69073) == 255">
         <GetTo ZoneId="814" XYZ="-130.435, 354.3582, -178.799"/>
-        <TurnIn QuestId="69073" NpcId="1027956" XYZ="-128.7709, 354.3582, -179.1868"/>
+        <LLTurnIn QuestId="69073" NpcId="1027956" XYZ="-128.7709, 354.3582, -179.1868"/>
       </If>
       <!-- Open World -->
       <If Condition="not IsAetherCurrentCompleted(814,13)">
@@ -857,63 +856,63 @@ Authors:  Sodimm
       <If Condition="IsQuestCompleted(69184) and not HasQuest(69124) and not IsQuestCompleted(69124)">
         <GetTo ZoneId="818" XYZ="534.5916, 353.7596, -240.047"/>
         <If Condition="IsQuestAcceptQualified(69124)">
-          <PickupQuest QuestId="69124" NpcId="1031015" XYZ="530.5103, 353.5436, -244.007"/>
+          <LLPickupQuest QuestId="69124" NpcId="1031015" XYZ="530.5103, 353.5436, -244.007"/>
         </If>
       </If>
       <If Condition="HasQuest(69124) and not IsQuestCompleted(69124) and GetQuestStep(69124) == 1">
         <GetTo ZoneId="818" XYZ="347.3562, 342.7529, -309.7823"/>
-        <TalkTo NpcId="1031016" XYZ="344.0452, 342.6954, -310.5364" QuestId="69124" StepId="1"/>
+        <LLTalkTo NpcId="1031016" XYZ="344.0452, 342.6954, -310.5364" QuestId="69124" StepId="1"/>
       </If>
       <If Condition="HasQuest(69124) and not IsQuestCompleted(69124) and GetQuestStep(69124) == 2 and GetQuestById(69124).GetTodoArgs(2, 0).Item1 == 0">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="345.2866, 342.7329, -309.9009"/>
         </If>
-        <SoTalkTo NpcId="2010463" DialogOption="1" XYZ="340.9324, 342.6719, -310.4753" InteractDistance="3.0" QuestId="69124"/>
+        <LLTalkTo NpcId="2010463" DialogOption="1" XYZ="340.9324, 342.6719, -310.4753" InteractDistance="3.0" QuestId="69124"/>
       </If>
       <If Condition="HasQuest(69124) and not IsQuestCompleted(69124) and GetQuestStep(69124) == 2 and GetQuestById(69124).GetTodoArgs(2, 0).Item1 == 1">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="345.2866, 342.7329, -309.9009"/>
         </If>
-        <SoTalkTo NpcId="2010464" XYZ="341.5426, 342.7634, -308.7053" QuestId="69124"/>
+        <LLTalkTo NpcId="2010464" XYZ="341.5426, 342.7634, -308.7053" QuestId="69124"/>
       </If>
       <If Condition="HasQuest(69124) and not IsQuestCompleted(69124) and GetQuestStep(69124) == 3">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="345.2866, 342.7329, -309.9009"/>
         </If>
-        <TalkTo NpcId="1031016" XYZ="344.0452, 342.6954, -310.5364" QuestId="69124" StepId="3"/>
+        <LLTalkTo NpcId="1031016" XYZ="344.0452, 342.6954, -310.5364" QuestId="69124" StepId="3"/>
       </If>
       <If Condition="HasQuest(69124) and not IsQuestCompleted(69124) and GetQuestStep(69124) == 4">
         <GetTo ZoneId="818" XYZ="601.4193, 347.9564, -168.1747"/>
-        <TalkTo NpcId="1031017" XYZ="603.0212, 348.0125, -165.301" QuestId="69124" StepId="4"/>
+        <LLTalkTo NpcId="1031017" XYZ="603.0212, 348.0125, -165.301" QuestId="69124" StepId="4"/>
       </If>
       <If Condition="HasQuest(69124) and not IsQuestCompleted(69124) and GetQuestStep(69124) == 255">
         <GetTo ZoneId="818" XYZ="505.6281, 370.8383, -339.8196"/>
-        <TurnIn QuestId="69124" NpcId="1031019" XYZ="505.8823, 371.189, -342.7939"/>
+        <LLTurnIn QuestId="69124" NpcId="1031019" XYZ="505.8823, 371.189, -342.7939"/>
       </If>
       <!-- Responsible Creation -->
       <If Condition="IsQuestCompleted(69188) and not HasQuest(69128) and not IsQuestCompleted(69128)">
         <GetTo ZoneId="818" XYZ="-388.4057, -260.1766, 312.7331"/>
         <If Condition="IsQuestAcceptQualified(69128)">
-          <PickupQuest QuestId="69128" NpcId="1027775" XYZ="-390.8599, -260.1766, 308.4611"/>
+          <LLPickupQuest QuestId="69128" NpcId="1027775" XYZ="-390.8599, -260.1766, 308.4611"/>
         </If>
       </If>
       <If Condition="HasQuest(69128) and not IsQuestCompleted(69128) and GetQuestStep(69128) == 1">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="-408.7637, -260.1766, 259.7647"/>
         </If>
-        <TalkTo NpcId="1030473" XYZ="-410.1778, -260.1766, 256.092" QuestId="69128" StepId="1"/>
+        <LLTalkTo NpcId="1030473" XYZ="-410.1778, -260.1766, 256.092" QuestId="69128" StepId="1"/>
       </If>
       <If Condition="HasQuest(69128) and not IsQuestCompleted(69128) and GetQuestStep(69128) == 2">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="-368.903, -260.1766, 275.9329"/>
         </If>
-        <TalkTo NpcId="1027774" XYZ="-365.5909, -260.1766, 276.9359" QuestId="69128" StepId="2"/>
+        <LLTalkTo NpcId="1027774" XYZ="-365.5909, -260.1766, 276.9359" QuestId="69128" StepId="2"/>
       </If>
       <If Condition="HasQuest(69128) and not IsQuestCompleted(69128) and GetQuestStep(69128) == 3">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="-385.9279, -260.1766, 283.8392"/>
         </If>
-        <TalkTo NpcId="1030474" XYZ="-390.9209, -260.1766, 284.9316" QuestId="69128" StepId="3"/>
+        <LLTalkTo NpcId="1030474" XYZ="-390.9209, -260.1766, 284.9316" QuestId="69128" StepId="3"/>
       </If>
       <If Condition="HasQuest(69128) and not IsQuestCompleted(69128) and GetQuestStep(69128) == 4">
         <GetTo ZoneId="818" XYZ="-499.6969, -250.906, 448.8011"/>
@@ -921,55 +920,55 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(69128) and not IsQuestCompleted(69128) and GetQuestStep(69128) == 255">
         <GetTo ZoneId="818" XYZ="-389.6642, -260.1766, 288.5068"/>
-        <TurnIn QuestId="69128" NpcId="1030474" XYZ="-390.9209, -260.1766, 284.9316"/>
+        <LLTurnIn QuestId="69128" NpcId="1030474" XYZ="-390.9209, -260.1766, 284.9316"/>
       </If>
       <!-- Debate and Discourse -->
       <If Condition="IsQuestCompleted(69188) and not HasQuest(69129) and not IsQuestCompleted(69129)">
         <GetTo ZoneId="818" XYZ="-709.4703, -245.368, 497.7509"/>
         <If Condition="IsQuestAcceptQualified(69129)">
-          <PickupQuest QuestId="69129" NpcId="1027778" XYZ="-713.283, -245.368, 498.4968"/>
+          <LLPickupQuest QuestId="69129" NpcId="1027778" XYZ="-713.283, -245.368, 498.4968"/>
         </If>
       </If>
       <If Condition="HasQuest(69129) and not IsQuestCompleted(69129) and GetQuestStep(69129) == 1">
         <GetTo ZoneId="818" XYZ="-628.6682, -250.756, 547.2688"/>
-        <TalkTo NpcId="1030475" XYZ="-627.7715, -250.756, 550.6523" QuestId="69129" StepId="1"/>
+        <LLTalkTo NpcId="1030475" XYZ="-627.7715, -250.756, 550.6523" QuestId="69129" StepId="1"/>
       </If>
       <If Condition="HasQuest(69129) and not IsQuestCompleted(69129) and GetQuestStep(69129) == 2">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="-628.6682, -250.756, 547.2688"/>
         </If>
-        <TalkTo NpcId="1030475" XYZ="-627.7715, -250.756, 550.6523" QuestId="69129" StepId="2"/>
+        <LLTalkTo NpcId="1030475" XYZ="-627.7715, -250.756, 550.6523" QuestId="69129" StepId="2"/>
       </If>
       <If Condition="HasQuest(69129) and not IsQuestCompleted(69129) and GetQuestStep(69129) == 3">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="-628.6682, -250.756, 547.2688"/>
         </If>
-        <TalkTo NpcId="1030475" XYZ="-627.7715, -250.756, 550.6523" QuestId="69129" StepId="3"/>
+        <LLTalkTo NpcId="1030475" XYZ="-627.7715, -250.756, 550.6523" QuestId="69129" StepId="3"/>
       </If>
       <If Condition="HasQuest(69129) and not IsQuestCompleted(69129) and GetQuestStep(69129) == 4">
         <GetTo ZoneId="818" XYZ="-709.9706, -245.368, 498.8062"/>
-        <TalkTo NpcId="1027778" XYZ="-713.283, -245.368, 498.4968" QuestId="69129" StepId="4"/>
+        <LLTalkTo NpcId="1027778" XYZ="-713.283, -245.368, 498.4968" QuestId="69129" StepId="4"/>
       </If>
       <If Condition="HasQuest(69129) and not IsQuestCompleted(69129) and GetQuestStep(69129) == 255">
         <If Condition="not IsOnMap(818)">
           <GetTo ZoneId="818" XYZ="-709.9706, -245.368, 498.8062"/>
         </If>
-        <TurnIn QuestId="69129" NpcId="1027778" XYZ="-713.283, -245.368, 498.4968"/>
+        <LLTurnIn QuestId="69129" NpcId="1027778" XYZ="-713.283, -245.368, 498.4968"/>
       </If>
       <!-- Community Cohesion -->
       <If Condition="IsQuestCompleted(69188) and not HasQuest(69130) and not IsQuestCompleted(69130)">
         <GetTo ZoneId="818" XYZ="-590.7681, -266.7698, 338.6785"/>
         <If Condition="IsQuestAcceptQualified(69130)">
-          <PickupQuest QuestId="69130" NpcId="1030477" XYZ="-594.6593, -266.7698, 338.7045"/>
+          <LLPickupQuest QuestId="69130" NpcId="1030477" XYZ="-594.6593, -266.7698, 338.7045"/>
         </If>
       </If>
       <If Condition="HasQuest(69130) and not IsQuestCompleted(69130) and GetQuestStep(69130) == 1">
         <GetTo ZoneId="818" XYZ="-650.8147, -250.756, 472.0215"/>
-        <TalkTo NpcId="1030478" XYZ="-654.3527, -250.896, 475.7609" QuestId="69130" StepId="1"/>
+        <LLTalkTo NpcId="1030478" XYZ="-654.3527, -250.896, 475.7609" QuestId="69130" StepId="1"/>
       </If>
       <If Condition="HasQuest(69130) and not IsQuestCompleted(69130) and GetQuestStep(69130) == 2">
         <GetTo ZoneId="818" XYZ="-360.2217, -260.1766, 280.8073"/>
-        <TalkTo NpcId="1027777" XYZ="-355.2453, -260.1766, 278.6754" InteractDistance="8.0" QuestId="69130" StepId="2"/>
+        <LLTalkTo NpcId="1027777" XYZ="-355.2453, -260.1766, 278.6754" InteractDistance="8.0" QuestId="69130" StepId="2"/>
       </If>
       <If Condition="HasQuest(69130) and not IsQuestCompleted(69130) and GetQuestStep(69130) == 3">
         <GetTo ZoneId="818" XYZ="7.878439, -302.668, 508.5659"/>
@@ -977,7 +976,7 @@ Authors:  Sodimm
       </If>
       <If Condition="HasQuest(69130) and not IsQuestCompleted(69130) and GetQuestStep(69130) == 255">
         <GetTo ZoneId="818" XYZ="-360.2177, -260.1766, 280.8086"/>
-        <TurnIn ItemId="2002614" QuestId="69130" NpcId="1027777" XYZ="-355.2453, -260.1766, 278.6754" InteractDistance="8.0"/>
+        <LLTurnIn ItemId="2002614" QuestId="69130" NpcId="1027777" XYZ="-355.2453, -260.1766, 278.6754" InteractDistance="8.0"/>
       </If>
       <!-- Open World -->
       <If Condition="not IsAetherCurrentCompleted(818,11)">

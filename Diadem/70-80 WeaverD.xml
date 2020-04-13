@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
 <Name>Crafting Weaver to 80</Name>
-<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 <Order>
 	
 	<!-- Leave Diadem -->
@@ -41,13 +40,13 @@ Authors:  Kayla / Angles24
 	
 	<!-- Reload Profile -->
 	<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">
-		<ALoadProfile Path="70-80 WeaverD.xml"/>
+		<LLoadProfile Path="70-80 WeaverD.xml"/>
 	</If>
 	
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 80 on Weaver, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>
-	<ALoadProfile Path="../Start.xml"/>
+	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>
 <CodeChunks>

@@ -14,10 +14,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Blacksmith to 21</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
-	
-	<BotSettings BlockSkippingCutscenes="0"/>
 	
 	<!-- Change Class BSM - 1 Bronze Ingot 5056 // 5 Bronze Rivets 5091 // 16 Iron Ingot 5057-->
 	<If Condition="ClassName != ClassJobType.Blacksmith">
@@ -31,7 +28,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65827) and not HasQuest(65828) and not IsQuestCompleted(65828)">
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65828)">
-          <PickupQuest QuestId="65828" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLPickupQuest QuestId="65828" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         </If>
       </If>
       <If Condition="HasQuest(65828) and not IsQuestCompleted(65828) and GetQuestStep(65828) == 255">
@@ -56,7 +53,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65828) and not HasQuest(65829) and not IsQuestCompleted(65829) and Core.Player.ClassLevel &gt; 4">
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65829)">
-          <PickupQuest QuestId="65829" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLPickupQuest QuestId="65829" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         </If>
       </If>
       <If Condition="HasQuest(65829) and not IsQuestCompleted(65829) and GetQuestStep(65829) == 255">
@@ -81,7 +78,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65829) and not HasQuest(65830) and not IsQuestCompleted(65830) and Core.Player.ClassLevel &gt; 9">
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65830)">
-          <PickupQuest QuestId="65830" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLPickupQuest QuestId="65830" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         </If>
       </If>
       <If Condition="HasQuest(65830) and not IsQuestCompleted(65830) and GetQuestStep(65830) == 255">
@@ -106,12 +103,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65830) and not HasQuest(65831) and not IsQuestCompleted(65831) and Core.Player.ClassLevel &gt; 14">
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65831)">
-          <PickupQuest QuestId="65831" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLPickupQuest QuestId="65831" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         </If>
       </If>
       <If Condition="HasQuest(65831) and not IsQuestCompleted(65831) and GetQuestStep(65831) == 1">
         <GetTo ZoneId="128" XYZ="-52.35376, 42.49961, 211.5968"/>
-        <TalkTo NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968" QuestId="65831" StepId="1"/>
+        <LLTalkTo NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968" QuestId="65831" StepId="1"/>
       </If>
       <If Condition="HasQuest(65831) and not IsQuestCompleted(65831) and GetQuestStep(65831) == 255">
         <While Condition="not HasItem(1605)">
@@ -130,7 +127,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 21 -->
 			<While Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21">
-				<Lisbeth Json="[{'Item': 5057,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/><ALoadProfile Path="1-21 Blacksmith.xml"/>
+				<Lisbeth Json="[{'Item': 5057,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/><LLoadProfile Path="1-21 Blacksmith.xml"/>
 			</While>
 	</If>
 
@@ -139,7 +136,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<AutoEquip UpdateGearSet="true"/>	
 	</If>
 	
-	<ALoadProfile Path="../Start.xml"/>
+	<EtxSellItem ItemIds="2330,2961,5361,5364,5385,5367,
+						  5106,5091,2652,3014,2357,3019,5057"/>
+	
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>

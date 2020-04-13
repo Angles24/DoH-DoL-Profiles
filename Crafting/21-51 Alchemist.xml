@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
   <Name>Crafting Alchemist to 51</Name>
-  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 		 		
 		<!-- Turn your shit in. -->
@@ -46,12 +45,12 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 51">
-			<ALoadProfile Path="21-51 Alchemist.xml"/>				
+			<LLoadProfile Path="21-51 Alchemist.xml"/>				
 		</If>
 		
 		<LogMessage Message="Congrats on Level 51 on Alchemist, moving on." />
 		<AutoEquip UpdateGearSet="true"/>
-		<ALoadProfile Path="../Start.xml"/>			
+		<LLoadProfile Path="../Start.xml"/>			
 			
 	</Order>
 	

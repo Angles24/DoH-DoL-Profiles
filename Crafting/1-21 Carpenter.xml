@@ -14,10 +14,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Carpenter to 21</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>	
-	
-	<BotSettings BlockSkippingCutscenes="0"/>
 	
 	<!-- Change Class CRP - 1 Maple Lumber 5361 // 10 Ash Lumber 5364 // 16 Elm Lumber 5367 -->	
 	<If Condition="ClassName != ClassJobType.Carpenter">
@@ -31,7 +28,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65674) and not HasQuest(65741) and not IsQuestCompleted(65741)">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65741)">
-          <PickupQuest QuestId="65741" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="65741" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65741) and not IsQuestCompleted(65741) and GetQuestStep(65741) == 255">
@@ -56,7 +53,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65741) and not HasQuest(65675) and not IsQuestCompleted(65675) and Core.Player.ClassLevel &gt; 4">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65675)">
-          <PickupQuest QuestId="65675" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="65675" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65675) and not IsQuestCompleted(65675) and GetQuestStep(65675) == 255">
@@ -81,7 +78,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65675) and not HasQuest(65676) and not IsQuestCompleted(65676) and Core.Player.ClassLevel &gt; 9">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65676)">
-          <PickupQuest QuestId="65676" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="65676" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65676) and not IsQuestCompleted(65676) and GetQuestStep(65676) == 255">
@@ -106,12 +103,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65676) and not HasQuest(65677) and not IsQuestCompleted(65677) and Core.Player.ClassLevel &gt; 14">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65677)">
-          <PickupQuest QuestId="65677" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="65677" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 1">
         <GetTo ZoneId="132" XYZ="-9.720032, -3.25, 52.47571"/>
-        <TalkTo NpcId="1000149" XYZ="-9.720032, -3.25, 52.47571" QuestId="65677" StepId="1"/>
+        <LLTalkTo NpcId="1000149" XYZ="-9.720032, -3.25, 52.47571" QuestId="65677" StepId="1"/>
       </If>
       <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 2 and not IsTodoChecked(65677, 2, 1)">
         <While Condition="not HasItem(1895)">
@@ -150,7 +147,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<AutoEquip UpdateGearSet="true"/>	
 	</If>
 	
-	<ALoadProfile Path="../Start.xml"/>
+	<EtxSellItem ItemIds="2330,2961,5361,5364,5385,5367"/>
+	
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>

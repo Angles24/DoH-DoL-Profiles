@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
   <Name>Crafting Alchemist to 63</Name>
-  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 		 <!-- Turn your shit in. -->
         <If Condition="HasIshgardItem() &gt; 0 and GetSkybuilderScrips() &lt; 9000">
@@ -45,12 +44,12 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &gt; 62">
-			<ALoadProfile Path="51-63 Alchemist.xml"/>
+			<LLoadProfile Path="51-63 Alchemist.xml"/>
 		</If>
 		
 		<LogMessage Message="Congrats on Level 63 on Alchemist, moving on." />
 		<AutoEquip UpdateGearSet="true"/>
-		<ALoadProfile Path="../Start.xml"/>			
+		<LLoadProfile Path="../Start.xml"/>			
 			
 	</Order>
 	

@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
   <Name>Crafting Carpenter to 67</Name>
-  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 	
 		 <!-- Turn your shit in. -->
@@ -41,12 +40,12 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 67">
-			<ALoadProfile Path="63-67 CarpenterNP.xml"/>
+			<LLoadProfile Path="63-67 CarpenterNP.xml"/>
 		</If>
 		
 		<LogMessage Message="Congrats on Level 67 on Carpenter, moving on." />
 		<AutoEquip UpdateGearSet="true"/>
-		<ALoadProfile Path="../Start.xml"/>
+		<LLoadProfile Path="../Start.xml"/>
 			
 	</Order>
 	

@@ -5,7 +5,6 @@ Profile and fixes by Anges
 -->
 <Profile>
 	<Name>Heavensward Aether Currents All</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	<Order>	
 	
@@ -37,7 +36,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67280)">
-					<PickupQuest NpcId="1011240" QuestId="67280" XYZ="493.1563, 200.2377, 663.0197" />
+					<LLPickupQuest NpcId="1011240" QuestId="67280" XYZ="493.1563, 200.2377, 663.0197" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67280)">
@@ -71,7 +70,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67647)">
-					<PickupQuest NpcId="1011911" QuestId="67647" XYZ="-279.5605, 127.0813, 13.59576" />
+					<LLPickupQuest NpcId="1011911" QuestId="67647" XYZ="-279.5605, 127.0813, 13.59576" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67647)">
@@ -80,7 +79,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="397" XYZ="474.8097, 212.5399, 721.9003" /> <!-- Falcon's Nest -->
 					</If>
 					<NoCombatMoveTo Name="Nadinie" XYZ="-87.81573, 87.189, -735.0424" />
-					<TalkTo NpcId="1013746" XYZ="-87.81573, 87.189, -735.0424" QuestId="67647" StepId="1" />
+					<LLTalkTo NpcId="1013746" XYZ="-87.81573, 87.189, -735.0424" QuestId="67647" StepId="1" />
 				</If>
 				<If Condition="GetQuestStep(67647) == 2">
 					<LogMessage Message="Please complete The Dusk Vigil manually!" />
@@ -110,7 +109,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67296)">
-					<PickupQuest NpcId="1011907" QuestId="67296" XYZ="-288.8686, 127.0664, 13.19904" />
+					<LLPickupQuest NpcId="1011907" QuestId="67296" XYZ="-288.8686, 127.0664, 13.19904" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67296)">
@@ -144,7 +143,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67295)">
-					<PickupQuest NpcId="1011910" QuestId="67295" XYZ="-298.2681, 126.6705, -1.419189" />
+					<LLPickupQuest NpcId="1011910" QuestId="67295" XYZ="-298.2681, 126.6705, -1.419189" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67295)">
@@ -330,7 +329,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67307)">
-					<PickupQuest NpcId="1011916" QuestId="67307" XYZ="470.0236, -49.89133, 20.37079" />
+					<LLPickupQuest NpcId="1011916" QuestId="67307" XYZ="470.0236, -49.89133, 20.37079" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67307)">
@@ -340,13 +339,13 @@ Profile and fixes by Anges
 					</If>
 					<While Condition="not IsTodoChecked(67307, 1, 0)">
 						<NoCombatMoveTo Name="Leonulfe" XYZ="711.1161, -36.39083, 198.1079" />
-						<TalkTo NpcId="1011923" XYZ="711.1161, -36.39083, 198.1079" QuestId="67307" StepId="1" />
+						<LLTalkTo NpcId="1011923" XYZ="711.1161, -36.39083, 198.1079" QuestId="67307" StepId="1" />
 						<NoCombatMoveTo Name="Guenaret" XYZ="849.0576, -37.66994, -39.56665" />
-						<TalkTo NpcId="1011924" XYZ="849.0576, -37.66994, -39.56665" QuestId="67307" StepId="1" />
+						<LLTalkTo NpcId="1011924" XYZ="849.0576, -37.66994, -39.56665" QuestId="67307" StepId="1" />
 						<NoCombatMoveTo Name="Jump Spot" XYZ="675.6691, -19.5401, -340.323" />
 						<MoveTo Name="Jump Spot" XYZ="682.945, -19.77036, -327.5137" />
 						<RunCode Name="MoveForwardStart" />
-						<TalkTo NpcId="1011932" XYZ="685.9692, -24.38285, -269.0624" QuestId="67307" StepId="1" />
+						<LLTalkTo NpcId="1011932" XYZ="685.9692, -24.38285, -269.0624" QuestId="67307" StepId="1" />
 					</While>
 					<NoCombatMoveTo Name="Jump Spot" XYZ="693.4866, -24.62367, -244.3382" />
 					<RunCode Name="MoveForwardStart" />
@@ -374,7 +373,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67338)">
-					<PickupQuest NpcId="1011937" QuestId="67338" XYZ="-305.562, 39.04307, 22.9953" />
+					<LLPickupQuest NpcId="1011937" QuestId="67338" XYZ="-305.562, 39.04307, 22.9953" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67338)">
@@ -383,7 +382,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="398" XYZ="-300.4373, -21.13108, 37.52076" /> <!-- Anyx Trine -->
 					</If>
 					<NoCombatMoveTo Name="Kohm Gahn" XYZ="-411.5206, -35.095, 231.464" />
-					<TalkTo NpcId="1013406" XYZ="-411.5206, -35.095, 231.464" QuestId="67338" StepId="1" />
+					<LLTalkTo NpcId="1013406" XYZ="-411.5206, -35.095, 231.464" QuestId="67338" StepId="1" />
 				</If>
 				<If Condition="GetQuestStep(67338) == 2">
 					<If Condition="not IsOnMap(398)">
@@ -397,7 +396,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="398" XYZ="-300.4373, -21.13108, 37.52076" /> <!-- Anyx Trine -->
 					</If>
 					<NoCombatMoveTo Name="Kohm Scorh" XYZ="-408.4078, -34.19166, 238.4832" />
-					<TalkTo NpcId="1013407" XYZ="-408.4078, -34.19166, 238.4832" QuestId="67338" StepId="3" />
+					<LLTalkTo NpcId="1013407" XYZ="-408.4078, -34.19166, 238.4832" QuestId="67338" StepId="3" />
 				</If>
 				<If Condition="GetQuestStep(67338) == 4">
 					<If Condition="not IsOnMap(398)">
@@ -411,7 +410,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="398" XYZ="-300.4373, -21.13108, 37.52076" /> <!-- Anyx Trine -->
 					</If>
 					<NoCombatMoveTo Name="Kohm Khur" XYZ="-409.8726, -34.65094, 234.8821" />
-					<TalkTo NpcId="1013408" XYZ="-409.8726, -34.65094, 234.8821" QuestId="67338" StepId="5" />
+					<LLTalkTo NpcId="1013408" XYZ="-409.8726, -34.65094, 234.8821" QuestId="67338" StepId="5" />
 				</If>
 				<If Condition="GetQuestStep(67338) == 6">
 					<If Condition="not IsOnMap(398)">
@@ -443,7 +442,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67326)">
-					<PickupQuest NpcId="1011929" QuestId="67326" XYZ="72.31982, -49.153, -142.5694" />
+					<LLPickupQuest NpcId="1011929" QuestId="67326" XYZ="72.31982, -49.153, -142.5694" />
 				</If>
 			</If>
 				<If Condition="GetQuestStep(67326) == 1">
@@ -476,22 +475,22 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67333)">
-					<PickupQuest NpcId="1011916" QuestId="67333" XYZ="470.1163, -49.89133, 22.38989" />
+					<LLPickupQuest NpcId="1011916" QuestId="67333" XYZ="470.1163, -49.89133, 22.38989" />
 				</If>
 			</If>
 			    <If Condition="HasQuest(67333) and not IsQuestCompleted(67333) and GetQuestStep(67333) == 1 and GetQuestById(67333).GetTodoArgs(1, 0).Item1 == 0">
 					<GetTo ZoneId="398" XYZ="713.429, -36.46737, 197.3796"/>
-					<TalkTo NpcId="1011923" XYZ="713.429, -36.46737, 197.3796" QuestId="67333"/>
+					<LLTalkTo NpcId="1011923" XYZ="713.429, -36.46737, 197.3796" QuestId="67333"/>
 				</If>
 				<If Condition="HasQuest(67333) and not IsQuestCompleted(67333) and GetQuestStep(67333) == 1 and GetQuestById(67333).GetTodoArgs(1, 0).Item1 == 1">
 					<GetTo ZoneId="398" XYZ="847.2927, -37.66238, -38.70405"/>
-					<TalkTo NpcId="1011924" XYZ="847.2927, -37.66238, -38.70405" QuestId="67333"/>
+					<LLTalkTo NpcId="1011924" XYZ="847.2927, -37.66238, -38.70405" QuestId="67333"/>
 				</If>
 				<If Condition="HasQuest(67333) and not IsQuestCompleted(67333) and GetQuestStep(67333) == 1 and GetQuestById(67333).GetTodoArgs(1, 0).Item1 == 2">
 					<GetTo ZoneId="398" XYZ="625.3038, -26.78107, -407.2412" Distance="0.2"/>
 					<MoveTo XYZ="656.5858, -19.03242, -404.9117" Distance="0.2" UseMesh="False"/>					
 					<MoveTo XYZ="684.6665, -24.41711, -268.053" Distance="0.2" UseMesh="False"/>
-					<TalkTo NpcId="1011932" XYZ="684.6665, -24.41711, -268.053" QuestId="67333"/>
+					<LLTalkTo NpcId="1011932" XYZ="684.6665, -24.41711, -268.053" QuestId="67333"/>
 					<MoveTo XYZ="678.1696, -43.41352, -252.7307" Distance="0.2" UseMesh="False"/>
 				</If>
 				<If Condition="GetQuestStep(67333) == 255">
@@ -607,7 +606,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67355)">
-					<PickupQuest NpcId="1012284" QuestId="67355" XYZ="363.241, -73.25598, 678.4314" />
+					<LLPickupQuest NpcId="1012284" QuestId="67355" XYZ="363.241, -73.25598, 678.4314" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67355)">
@@ -641,7 +640,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67371)">
-					<PickupQuest NpcId="1013434" QuestId="67371" XYZ="517.9064, -1.191711, -354.6349" />
+					<LLPickupQuest NpcId="1013434" QuestId="67371" XYZ="517.9064, -1.191711, -354.6349" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67371)">
@@ -675,7 +674,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67359)">
-					<PickupQuest NpcId="1012285" QuestId="67359" XYZ="247.1199, -42.33362, 565.3314" />
+					<LLPickupQuest NpcId="1012285" QuestId="67359" XYZ="247.1199, -42.33362, 565.3314" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67359)">
@@ -709,16 +708,16 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67364)">
-					<PickupQuest NpcId="1013420" QuestId="67364" XYZ="-511.6354, 50, 348.9565" />
+					<LLPickupQuest NpcId="1013420" QuestId="67364" XYZ="-511.6354, 50, 348.9565" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67364) and not IsQuestCompleted(67364) and GetQuestStep(67364) == 1 and GetQuestById(67364).GetTodoArgs(1, 0).Item1 == 0">
 					<GetTo ZoneId="400" XYZ="-498.9335, 57.26135, 436.7102"/>
-					<TalkTo NpcId="1013424" XYZ="-498.9335, 57.26135, 436.7102" QuestId="67364"/>
+					<LLTalkTo NpcId="1013424" XYZ="-498.9335, 57.26135, 436.7102" QuestId="67364"/>
 				</If>
 			<If Condition="HasQuest(67364) and not IsQuestCompleted(67364) and GetQuestStep(67364) == 1 and GetQuestById(67364).GetTodoArgs(1, 0).Item1 == 1">
 					<GetTo ZoneId="400" XYZ="-452.8425, 44.7454, 417.0107"/>	
-					<TalkTo NpcId="1013425" XYZ="-452.8425, 44.7454, 417.0107" QuestId="67364"/>				
+					<LLTalkTo NpcId="1013425" XYZ="-452.8425, 44.7454, 417.0107" QuestId="67364"/>				
 				</If>
 			<If Condition="HasQuest(67364) and not IsQuestCompleted(67364) and GetQuestStep(67364) == 1 and GetQuestById(67364).GetTodoArgs(1, 0).Item1 == 2">
 					<GetTo ZoneId="400" XYZ="-456.751, 43.32316, 387.6946"/>
@@ -726,7 +725,7 @@ Profile and fixes by Anges
 					<ClimbHill Start="-445.2233, 50.70994, 387.7384" End="-439.85, 53.84184, 385.2048" />
 					<MoveTo XYZ="-442.5448, 53.88261, 378.4454" Distance="1" UseMesh="False"/>
 					<MoveTo XYZ="-454.1716, 53.5063, 379.4364" Distance="1" UseMesh="False"/>
-					<TalkTo NpcId="1013421" XYZ="-454.1716, 53.5063, 379.4364" QuestId="67364"/>
+					<LLTalkTo NpcId="1013421" XYZ="-454.1716, 53.5063, 379.4364" QuestId="67364"/>
 					<MoveTo XYZ="-463.1111, 42.99546, 382.9499" Distance="1" UseMesh="False"/>					
 				</If>
 				<If Condition="GetQuestStep(67364) == 255">
@@ -847,7 +846,7 @@ Profile and fixes by Anges
 				</If>
 				<NoCombatMoveTo Name="Laniaitte" XYZ="-277.6379, -184.5974, 741.6038" />
 				<If Condition="IsQuestAcceptQualified(67284)">
-					<PickupQuest NpcId="1011952" QuestId="67284" XYZ="-277.6379, -184.5974, 741.6038" />
+					<LLPickupQuest NpcId="1011952" QuestId="67284" XYZ="-277.6379, -184.5974, 741.6038" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67284)">
@@ -881,7 +880,7 @@ Profile and fixes by Anges
 			<If Condition="not HasQuest(67410)">
 				<GetTo ZoneId="419" XYZ="12.93354, 15.96505, -15.44089" />
 				<If Condition="IsQuestAcceptQualified(67410)">
-					<PickupQuest NpcId="1014720" QuestId="67410" XYZ="12.93354, 15.96505, -15.44089" />
+					<LLPickupQuest NpcId="1014720" QuestId="67410" XYZ="12.93354, 15.96505, -15.44089" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67410)">
@@ -912,7 +911,7 @@ Profile and fixes by Anges
 			<If Condition="not HasQuest(67445)">
 				<GetTo ZoneId="401" XYZ="-647.0283, -51.05719, -417.7463"/>
 				<If Condition="IsQuestAcceptQualified(67445)">
-					<PickupQuest NpcId="1012069" QuestId="67445" XYZ="-647.0283, -51.05719, -417.7463" />
+					<LLPickupQuest NpcId="1012069" QuestId="67445" XYZ="-647.0283, -51.05719, -417.7463" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67445)">
@@ -978,7 +977,7 @@ Profile and fixes by Anges
 				</If>
 				<NoCombatMoveTo Name="Guna Vanu" XYZ="-597.0398, -51.05185, -387.0451" />
 				<If Condition="IsQuestAcceptQualified(67446)">
-					<PickupQuest NpcId="1012068" QuestId="67446" XYZ="-597.0398, -51.05185, -387.0451" />
+					<LLPickupQuest NpcId="1012068" QuestId="67446" XYZ="-597.0398, -51.05185, -387.0451" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67446)">
@@ -998,9 +997,9 @@ Profile and fixes by Anges
 					</If>
 					<NoCombatMoveTo Name="Hinu Vali" XYZ="-568.3833, -50.60525, -449.1188" />
 					<While Condition="not IsTodoChecked(67446, 1, 0)">
-						<TalkTo NpcId="1012071" XYZ="-568.3833, -50.60525, -449.1188" QuestId="67446" StepId="1" />
-						<TalkTo NpcId="1012072" XYZ="-568.5969, -50.64948, -452.1096" QuestId="67446" StepId="1" />
-						<TalkTo NpcId="1012069" XYZ="-647.0283, -51.05719, -417.7463" QuestId="67446" StepId="1" />
+						<LLTalkTo NpcId="1012071" XYZ="-568.3833, -50.60525, -449.1188" QuestId="67446" StepId="1" />
+						<LLTalkTo NpcId="1012072" XYZ="-568.5969, -50.64948, -452.1096" QuestId="67446" StepId="1" />
+						<LLTalkTo NpcId="1012069" XYZ="-647.0283, -51.05719, -417.7463" QuestId="67446" StepId="1" />
 					</While>
 				</If>
 				<If Condition="GetQuestStep(67446) == 255">
@@ -1159,7 +1158,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67472)">
-					<PickupQuest NpcId="1012287" QuestId="67472" XYZ="-28.39703, 100.9697, -186.4195" />
+					<LLPickupQuest NpcId="1012287" QuestId="67472" XYZ="-28.39703, 100.9697, -186.4195" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67472)">
@@ -1200,7 +1199,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67481)">
-					<PickupQuest NpcId="1012102" QuestId="67481" XYZ="72.40405, 205.6816, 31.63196" />
+					<LLPickupQuest NpcId="1012102" QuestId="67481" XYZ="72.40405, 205.6816, 31.63196" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67481)">
@@ -1241,7 +1240,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67499)">
-					<PickupQuest NpcId="1012133" QuestId="67499" XYZ="-26.84064, 206.5, 28.67163" />
+					<LLPickupQuest NpcId="1012133" QuestId="67499" XYZ="-26.84064, 206.5, 28.67163" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67499)">
@@ -1250,7 +1249,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="399" XYZ="-529.9246, 150.2556, -467.4438" /> <!-- The Dravanian Hinterlands (West) -->
 					</If>
 					<NoCombatMoveTo Name="Midnight Dew" XYZ="-475.761, 155.8605, -209.7658" />
-					<TalkTo NpcId="1013651" XYZ="-475.761, 155.8605, -209.7658" QuestId="67499" StepId="1" />
+					<LLTalkTo NpcId="1013651" XYZ="-475.761, 155.8605, -209.7658" QuestId="67499" StepId="1" />
 				</If>
 				<If Condition="GetQuestStep(67499) == 2">
 					<If Condition="not IsOnMap(399)">
@@ -1293,7 +1292,7 @@ Profile and fixes by Anges
 					<LogMessage Message="Skipping for now..." />
 				</If>
 				<If Condition="IsQuestAcceptQualified(67502)">
-					<PickupQuest NpcId="1012141" QuestId="67502" XYZ="35.6908, 38.43, 12.98535" />
+					<LLPickupQuest NpcId="1012141" QuestId="67502" XYZ="35.6908, 38.43, 12.98535" />
 				</If>
 			</If>
 			<If Condition="HasQuest(67502)">

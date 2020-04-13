@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
   <Name>Crafting Culinarian to 67</Name>
-  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 	
 		 <!-- Turn your shit in. -->
@@ -41,12 +40,12 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 67">
-			<ALoadProfile Path="63-67 CulinarianNP.xml"/>	
+			<LLoadProfile Path="63-67 CulinarianNP.xml"/>	
 		</If>
 		
 		<LogMessage Message="Congrats on Level 67 on Culinarian, moving on." />
 		<AutoEquip UpdateGearSet="true"/>
-		<ALoadProfile Path="../Start.xml"/>				
+		<LLoadProfile Path="../Start.xml"/>				
 			
 	</Order>
 	

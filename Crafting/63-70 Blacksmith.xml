@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
   <Name>Crafting Blacksmith to 70</Name>
-  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 	
 		 <!-- Turn your shit in. -->
@@ -46,12 +45,12 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">
-			<ALoadProfile Path="63-70 Blacksmith.xml"/>
+			<LLoadProfile Path="63-70 Blacksmith.xml"/>
 		</If>
 		
 		<LogMessage Message="Congrats on Level 70 on Blacksmith, moving on." />
 		<AutoEquip UpdateGearSet="true"/>
-		<ALoadProfile Path="../Start.xml"/>
+		<LLoadProfile Path="../Start.xml"/>
 			
 	</Order>
 	

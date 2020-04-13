@@ -4,14 +4,11 @@ Angles24
 -->
 <Profile>
 	<Name>63-70 Botanist</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	
 	<Order>
 		
 	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
-
-	<BotSettings BlockSkippingCutscenes="0"/>
 			
 	<If Condition="ClassName != ClassJobType.Botanist">
 		<ChangeClass Job="Botanist" />
@@ -29,20 +26,20 @@ Angles24
 				<LogMessage Message="Picking Up Level 63 - You Say Popoto, I Say...." />
 				<GetTo ZoneId="478" XYZ="-44.56588, 209.2288, -90.81387"/>
 				<If Condition="IsQuestAcceptQualified(68157)">
-					<PickupQuest QuestId="68157" NpcId="1021349" XYZ="-44.56588, 209.2288, -90.81387"/>
+					<LLPickupQuest QuestId="68157" NpcId="1021349" XYZ="-44.56588, 209.2288, -90.81387"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68157) == 1">
 				<GetTo ZoneId="132" XYZ="7.248971, -0.3256242, 6.911566"/>
-				<TalkTo NpcId="1021350" XYZ="7.248971, -0.3256242, 6.911566" QuestId="68157" StepId="1"/>
+				<LLTalkTo NpcId="1021350" XYZ="7.248971, -0.3256242, 6.911566" QuestId="68157" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68157) == 2">
 				<GetTo ZoneId="133" XYZ="-233.5398, 6.245102, -169.8389"/>
-				<TalkTo NpcId="1000815" XYZ="-233.5398, 6.245102, -169.8389" QuestId="68157" StepId="2"/>
+				<LLTalkTo NpcId="1000815" XYZ="-233.5398, 6.245102, -169.8389" QuestId="68157" StepId="2"/>
 			</If>
 			<If Condition="GetQuestStep(68157) == 3">
 				<GetTo ZoneId="612" XYZ="-445.9644, 52.73912, 32.5323"/>
-				<TalkTo NpcId="1021352" XYZ="-445.9644, 52.73912, 32.5323" QuestId="68157" StepId="3"/>
+				<LLTalkTo NpcId="1021352" XYZ="-445.9644, 52.73912, 32.5323" QuestId="68157" StepId="3"/>
 			</If>
 			<If Condition="GetQuestStep(68157) == 4">
 				<If Condition="not HqHasAtLeast(17945,3)">
@@ -125,26 +122,26 @@ Angles24
 				<LogMessage Message="Picking Up Level 65 - Walking for Walker's." />
 				<GetTo ZoneId="478" XYZ="-44.95714, 209.2252, -90.96803"/>
 				<If Condition="IsQuestAcceptQualified(68158)">
-					<PickupQuest QuestId="68158" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/>
+					<LLPickupQuest QuestId="68158" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68158) == 1">
 				<GetTo ZoneId="133" XYZ="-233.8733, 6.235486, -169.9786"/>
-				<TalkTo NpcId="1000815" XYZ="-233.8733, 6.235486, -169.9786" QuestId="68158" StepId="1"/>
+				<LLTalkTo NpcId="1000815" XYZ="-233.8733, 6.235486, -169.9786" QuestId="68158" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68158) == 2">
 				<If Condition="GetQuestById(68158).GetTodoArgs(2, 0).Item1 == 0">
 					<GetTo ZoneId="135" XYZ="536.1068, 88.99999, -71.85416"/>
-					<TalkTo NpcId="1002659" XYZ="536.1068, 88.99999, -71.85416" QuestId="68158" StepId="2"/>
+					<LLTalkTo NpcId="1002659" XYZ="536.1068, 88.99999, -71.85416" QuestId="68158" StepId="2"/>
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(2, 0).Item1 == 1">
 					<GetTo ZoneId="135" XYZ="536.1068, 88.99999, -71.85416"/>
-					<TalkTo NpcId="1002657" XYZ="536.1068, 88.99999, -71.85416" QuestId="68158" StepId="2"/>
+					<LLTalkTo NpcId="1002657" XYZ="536.1068, 88.99999, -71.85416" QuestId="68158" StepId="2"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68158) == 3">
 				<GetTo ZoneId="135" XYZ="563.4178, 84.48011, -99.415"/>
-				<TalkTo NpcId="1021353" XYZ="563.4178, 84.48011, -99.415" QuestId="68158" StepId="3"/>
+				<LLTalkTo NpcId="1021353" XYZ="563.4178, 84.48011, -99.415" QuestId="68158" StepId="3"/>
 			</If>
 			<If Condition="GetQuestStep(68158) == 4">
 				<If Condition="not IsOnMap(628)">
@@ -152,16 +149,16 @@ Angles24
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(4, 0).Item1 == 0">
 					<GetTo ZoneId="628" XYZ="58.82053, 4, 66.71966"/>
-					<TalkTo NpcId="1019064" XYZ="58.82053, 4, 66.71966" QuestId="68158" StepId="4"/>
+					<LLTalkTo NpcId="1019064" XYZ="58.82053, 4, 66.71966" QuestId="68158" StepId="4"/>
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(4, 0).Item1 == 1">
 					<GetTo ZoneId="628" XYZ="79.15508, 4, 57.17901"/>
-					<TalkTo NpcId="1019065" XYZ="79.15508, 4, 57.17901" QuestId="68158" StepId="4"/>
+					<LLTalkTo NpcId="1019065" XYZ="79.15508, 4, 57.17901" QuestId="68158" StepId="4"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68158) == 5">
 				<GetTo ZoneId="613" XYZ="-732.6594, 1.960285, -610.0832"/>
-				<TalkTo NpcId="1019233" XYZ="-732.6594, 1.960285, -610.0832" QuestId="68158" StepId="5"/>
+				<LLTalkTo NpcId="1019233" XYZ="-732.6594, 1.960285, -610.0832" QuestId="68158" StepId="5"/>
 			</If>
 			<If Condition="GetQuestStep(68158) == 255">				
 				<If Condition="not HqHasAtLeast(17946,5)">
@@ -240,12 +237,12 @@ Angles24
 				<LogMessage Message="Picking Up Level 68 - The White Death." />
 				<GetTo ZoneId="478" XYZ="-44.67389, 209.2242, -90.67441"/>
 				<If Condition="IsQuestAcceptQualified(68159)">
-					<PickupQuest QuestId="68159" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/>
+					<LLPickupQuest QuestId="68159" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68159) == 1">
 				<GetTo ZoneId="133" XYZ="-233.5393, 6.245116, -170.4607"/>
-				<TalkTo NpcId="1000815" XYZ="-233.5393, 6.245116, -170.4607" QuestId="68159" StepId="1"/>
+				<LLTalkTo NpcId="1000815" XYZ="-233.5393, 6.245116, -170.4607" QuestId="68159" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 2">
 				<GetTo ZoneId="478" XYZ="-46.29791, 209.2066, -87.10259"/>
@@ -324,41 +321,41 @@ Angles24
 				<LogMessage Message="Picking Up Level 70 - Edgyth's Winning Streak." />
 				<GetTo ZoneId="478" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<If Condition="IsQuestAcceptQualified(68160)">
-					<PickupQuest QuestId="68160" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
+					<LLPickupQuest QuestId="68160" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68160) == 1">
 				<GetTo ZoneId="133" XYZ="-233.303, 6.252198, -170.7122"/>
-				<TalkTo NpcId="1000815" XYZ="-233.303, 6.252198, -170.7122" QuestId="68160" StepId="1"/>
+				<LLTalkTo NpcId="1000815" XYZ="-233.303, 6.252198, -170.7122" QuestId="68160" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 2">
 				<GetTo ZoneId="612" XYZ="-600.5614, 130, -483.7271"/>
-				<TalkTo NpcId="1021358" XYZ="-600.5614, 130, -483.7271" QuestId="68160" StepId="2"/>
+				<LLTalkTo NpcId="1021358" XYZ="-600.5614, 130, -483.7271" QuestId="68160" StepId="2"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 3">
 				<GetTo ZoneId="620" XYZ="-263.3452, 256.9996, 696.3071"/>
-				<TalkTo NpcId="1021359" XYZ="-263.3452, 256.9996, 696.3071" QuestId="68160" StepId="3"/>
+				<LLTalkTo NpcId="1021359" XYZ="-263.3452, 256.9996, 696.3071" QuestId="68160" StepId="3"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 4">
 				<If Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 0">
 					<GetTo ZoneId="620" XYZ="-277.3094, 258.9065, 781.6879"/>
-					<TalkTo NpcId="1021591" XYZ="-277.3094, 258.9065, 781.6879" QuestId="68160" StepId="4"/>
+					<LLTalkTo NpcId="1021591" XYZ="-277.3094, 258.9065, 781.6879" QuestId="68160" StepId="4"/>
 					<WaitWhile Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 0"/>
 				</If>
 				<If Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 1">
 					<GetTo ZoneId="620" XYZ="-233.5301, 258.9065, 782.9395"/>
-					<TalkTo NpcId="1021595" XYZ="-233.5301, 258.9065, 782.9395" QuestId="68160" StepId="4"/>
+					<LLTalkTo NpcId="1021595" XYZ="-233.5301, 258.9065, 782.9395" QuestId="68160" StepId="4"/>
 					<WaitWhile Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 1"/>
 				</If>
 				<If Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 2">
 					<GetTo ZoneId="620" XYZ="-218.7188, 257.5265, 738.5011"/>
-					<TalkTo NpcId="1020870" XYZ="-218.7188, 257.5265, 738.5011" QuestId="68160" StepId="4"/>
+					<LLTalkTo NpcId="1020870" XYZ="-218.7188, 257.5265, 738.5011" QuestId="68160" StepId="4"/>
 					<WaitWhile Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 2"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68160) == 5">
 				<GetTo ZoneId="620" XYZ="-243.6874, 257.5265, 744.6713"/>
-				<TalkTo NpcId="1022381" XYZ="-243.6874, 257.5265, 744.6713" QuestId="68160" StepId="5"/>
+				<LLTalkTo NpcId="1022381" XYZ="-243.6874, 257.5265, 744.6713" QuestId="68160" StepId="5"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 255">
 				<While Condition="not HasAtLeast(17948,5)">
@@ -381,7 +378,7 @@ Angles24
 							</HotSpots>
 						</ExGather>
 					</If>
-				</While>   
+				</While>    
 				<If Condition="HasAtLeast(17948,5)">
 					<GetTo ZoneId="478" XYZ="-44.54691, 209.2032, -89.48778"/>
 					<LLTurnIn ItemIds="17948" QuestId="68160" NpcId="1021349" XYZ="-44.54691, 209.2032, -89.48778"/>	
@@ -394,7 +391,7 @@ Angles24
 		<!--End Edgyth's Winning Streak-->
 	</If>
 	
-	<ALoadProfile Path="../Start.xml"/>
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<GrindAreas>

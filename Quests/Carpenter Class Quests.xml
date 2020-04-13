@@ -22,13 +22,12 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Carpenter Class Quests</Name>
-	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>		
+	<Name>Carpenter Class Quests</Name>		
 	<Order>	
 	
 	<If Condition="FreeItemSlots() &lt; 16">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
-		<StopBot/>
+		<LLStopBot/>
 	</If>
 	
 	<WaitTimer WaitTime="2"/>
@@ -47,7 +46,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65678)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="65678" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="65678" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65678) and not IsQuestCompleted(65678) and GetQuestStep(65678) == 255">
@@ -74,12 +73,12 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65704)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="65704" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="65704" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65704) and not IsQuestCompleted(65704) and GetQuestStep(65704) == 1">
         <GetTo ZoneId="132" XYZ="-77.95837, -3.695303, 53.08606"/>
-        <TalkTo NpcId="1000162" XYZ="-77.95837, -3.695303, 53.08606" QuestId="65704" StepId="1"/>
+        <LLTalkTo NpcId="1000162" XYZ="-77.95837, -3.695303, 53.08606" QuestId="65704" StepId="1"/>
       </If>
       <If Condition="HasQuest(65704) and not IsQuestCompleted(65704) and GetQuestStep(65704) == 255">
         <While Condition="not HasHqItem(5371)">
@@ -99,7 +98,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65705)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="65705" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="65705" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 1">
@@ -121,7 +120,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 4">
         <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
-        <TalkTo NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="65705" StepId="4"/>
+        <LLTalkTo NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="65705" StepId="4"/>
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 255">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -136,7 +135,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66072)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="66072" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="66072" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(66072) and not IsQuestCompleted(66072) and GetQuestStep(66072) == 1">
@@ -165,7 +164,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66073)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="66073" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="66073" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(66073) and not IsQuestCompleted(66073) and GetQuestStep(66073) == 1">
@@ -194,16 +193,16 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66074)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="66074" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="66074" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 1">
         <GetTo ZoneId="132" XYZ="-77.95837, -3.695303, 53.08606"/>
-        <TalkTo NpcId="1000162" XYZ="-77.95837, -3.695303, 53.08606" QuestId="66074" StepId="1"/>
+        <LLTalkTo NpcId="1000162" XYZ="-77.95837, -3.695303, 53.08606" QuestId="66074" StepId="1"/>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 2">
         <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
-        <TalkTo NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="66074" StepId="2"/>
+        <LLTalkTo NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="66074" StepId="2"/>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 3">
         <While Condition="not HasHqItem(1937)">
@@ -241,12 +240,12 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66075)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="66075" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="66075" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(66075) and not IsQuestCompleted(66075) and GetQuestStep(66075) == 1">
         <GetTo ZoneId="132" XYZ="-77.95837, -3.695303, 53.08606"/>
-        <TalkTo NpcId="1000162" InteractDistance="2" UseMesh="True" XYZ="-77.95837, -3.695303, 53.08606"/>
+        <LLTalkTo NpcId="1000162" InteractDistance="2" UseMesh="True" XYZ="-77.95837, -3.695303, 53.08606"/>
       </If>
       <If Condition="HasQuest(66075) and not IsQuestCompleted(66075) and GetQuestStep(66075) == 2">
         <While Condition="not HasHqItem(5376)">
@@ -285,7 +284,7 @@ Angles24
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(67533)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67533" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="67533" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(67533) and not IsQuestCompleted(67533) and GetQuestStep(67533) == 1">
@@ -305,7 +304,7 @@ Angles24
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67534)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67534" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
+          <LLPickupQuest QuestId="67534" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         </If>
       </If>
       <If Condition="HasQuest(67534) and not IsQuestCompleted(67534) and GetQuestStep(67534) == 1">
@@ -319,7 +318,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67534) and not IsQuestCompleted(67534) and GetQuestStep(67534) == 2">
         <GetTo ZoneId="418" XYZ="-141.558, 19.06319, -13.26007"/>
-        <TalkTo NpcId="1012501" XYZ="-141.558, 19.06319, -13.26007" QuestId="67534" StepId="2"/>
+        <LLTalkTo NpcId="1012501" XYZ="-141.558, 19.06319, -13.26007" QuestId="67534" StepId="2"/>
       </If>
       <If Condition="HasQuest(67534) and not IsQuestCompleted(67534) and GetQuestStep(67534) == 255">
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
@@ -334,12 +333,12 @@ Angles24
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67535)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67535" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
+          <LLPickupQuest QuestId="67535" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         </If>
       </If>
       <If Condition="HasQuest(67535) and not IsQuestCompleted(67535) and GetQuestStep(67535) == 1">
         <GetTo ZoneId="418" XYZ="-30.6554, 5.504704, 23.72772"/>
-        <TalkTo NpcId="1012502" XYZ="-30.6554, 5.504704, 23.72772" QuestId="67535" StepId="1"/>
+        <LLTalkTo NpcId="1012502" XYZ="-30.6554, 5.504704, 23.72772" QuestId="67535" StepId="1"/>
       </If>
       <If Condition="HasQuest(67535) and not IsQuestCompleted(67535) and GetQuestStep(67535) == 2">
         <While Condition="not HasHqItem(10636)">
@@ -363,20 +362,20 @@ Angles24
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67536)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67536" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
+          <LLPickupQuest QuestId="67536" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         </If>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 1">
         <GetTo ZoneId="418" XYZ="-138.0484, 5.467082, 34.86682"/>
-        <TalkTo NpcId="1012505" XYZ="-138.0484, 5.467082, 34.86682" QuestId="67536" StepId="1"/>
+        <LLTalkTo NpcId="1012505" XYZ="-138.0484, 5.467082, 34.86682" QuestId="67536" StepId="1"/>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 2">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <TalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67536" StepId="2"/>
+        <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67536" StepId="2"/>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 3">
         <GetTo ZoneId="155" XYZ="115.3429, 287.0294, 142.1377"/>
-        <TalkTo NpcId="1000776" XYZ="115.3429, 287.0294, 142.1377" QuestId="67536" StepId="3"/>
+        <LLTalkTo NpcId="1000776" XYZ="115.3429, 287.0294, 142.1377" QuestId="67536" StepId="3"/>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 255">
         <While Condition="not HqHasAtLeast(12583,3)">
@@ -396,12 +395,12 @@ Angles24
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67537)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67537" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
+          <LLPickupQuest QuestId="67537" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         </If>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 1">
         <GetTo ZoneId="397" XYZ="-294.5449, 125.4943, -18.6618"/>
-        <TalkTo NpcId="1013596" XYZ="-294.5449, 125.4943, -18.6618" QuestId="67537" StepId="1"/>
+        <LLTalkTo NpcId="1013596" XYZ="-294.5449, 125.4943, -18.6618" QuestId="67537" StepId="1"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 2">
         <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
@@ -418,16 +417,16 @@ Angles24
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 4">
         <GetTo ZoneId="418" XYZ="-138.0484, 5.467082, 34.86682"/>
-        <TalkTo NpcId="1012505" XYZ="-138.0484, 5.467082, 34.86682" QuestId="67537" StepId="4"/>
+        <LLTalkTo NpcId="1012505" XYZ="-138.0484, 5.467082, 34.86682" QuestId="67537" StepId="4"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 5">
         <GetTo ZoneId="397" XYZ="-270.0085, 80.85996, -350.6066"/>
-        <TalkTo NpcId="1013597" XYZ="-270.0085, 80.85996, -350.6066" QuestId="67537" StepId="5"/>
+        <LLTalkTo NpcId="1013597" XYZ="-270.0085, 80.85996, -350.6066" QuestId="67537" StepId="5"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 6">
         <GetTo ZoneId="397" XYZ="-270.0085, 80.85996, -350.6066"/>
 		<Dismount/>
-        <TalkTo NpcId="1013600" XYZ="-270.0085, 80.85996, -350.6066" QuestId="67537" StepId="6"/>
+        <LLTalkTo NpcId="1013600" XYZ="-270.0085, 80.85996, -350.6066" QuestId="67537" StepId="6"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 255">
 	    <GetTo ZoneId="397" XYZ="542.2294, 176.8043, -554.4976"/>
@@ -442,28 +441,28 @@ Angles24
         <GetTo ZoneId="132" XYZ="-45.0408, -1.250016, 58.37101"/>
         <If Condition="IsQuestAcceptQualified(67977)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67977" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="67977" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 1">
         <GetTo ZoneId="132" XYZ="-22.00138, -3.25, 35.37772"/>
-        <TalkTo NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251" QuestId="67977" StepId="1"/>
+        <LLTalkTo NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251" QuestId="67977" StepId="1"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 2 and GetQuestById(67977).GetTodoArgs(2, 0).Item1 == 0">
         <GetTo ZoneId="132" XYZ="30.89977, -8, 111.3071"/>
-        <TalkTo NpcId="1000384" XYZ="30.80798, -8, 112.2301" QuestId="67977"/>
+        <LLTalkTo NpcId="1000384" XYZ="30.80798, -8, 112.2301" QuestId="67977"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 2 and GetQuestById(67977).GetTodoArgs(2, 0).Item1 == 1">
         <GetTo ZoneId="132" XYZ="33.73767, -8, 118.5474"/>
-        <TalkTo NpcId="1000139" XYZ="33.73767, -8, 118.5474" QuestId="67977"/>
+        <LLTalkTo NpcId="1000139" XYZ="33.73767, -8, 118.5474" QuestId="67977"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 2 and GetQuestById(67977).GetTodoArgs(2, 0).Item1 == 2">
         <GetTo ZoneId="132" XYZ="34.2773, -18.8, 95.46662"/>
-        <TalkTo NpcId="1000140" XYZ="33.58508, -18.81439, 94.49902" QuestId="67977"/>
+        <LLTalkTo NpcId="1000140" XYZ="33.58508, -18.81439, 94.49902" QuestId="67977"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 3">
         <GetTo ZoneId="132" XYZ="26.31469, -8, 102.1364"/>
-        <TalkTo NpcId="1020902" XYZ="25.46729, -8, 102.037" QuestId="67977" StepId="3"/>
+        <LLTalkTo NpcId="1020902" XYZ="25.46729, -8, 102.037" QuestId="67977" StepId="3"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 255">
         <GetTo ZoneId="132" XYZ="-45.10997, -1.250017, 57.86028"/>
@@ -478,38 +477,38 @@ Angles24
         <GetTo ZoneId="132" XYZ="-45.10997, -1.250017, 57.86028"/>
         <If Condition="IsQuestAcceptQualified(67978)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67978" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLPickupQuest QuestId="67978" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 1">
         <GetTo ZoneId="628" XYZ="-46.4557, 3.013504, -69.9194"/>
-        <TalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67978" StepId="1"/>
+        <LLTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67978" StepId="1"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 2">
         <GetTo ZoneId="628" XYZ="44.50636, 4.000001, 85.82306"/>
-        <TalkTo NpcId="1020904" XYZ="45.48706, 4.000001, 85.34363" QuestId="67978" StepId="2"/>
+        <LLTalkTo NpcId="1020904" XYZ="45.48706, 4.000001, 85.34363" QuestId="67978" StepId="2"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 3 and GetQuestById(67978).GetTodoArgs(3, 0).Item1 == 0">
         <GetTo ZoneId="628" XYZ="31.49495, 4.000001, 52.55272"/>
-        <TalkTo NpcId="1020906" XYZ="31.44885, 4.000001, 51.80432" QuestId="67978"/>
+        <LLTalkTo NpcId="1020906" XYZ="31.44885, 4.000001, 51.80432" QuestId="67978"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 3 and GetQuestById(67978).GetTodoArgs(3, 0).Item1 == 1">
         <GetTo ZoneId="628" XYZ="54.80767, 4, 69.25572"/>
-        <TalkTo NpcId="1020907" XYZ="55.00867, 4.05, 69.84058" QuestId="67978"/>
+        <LLTalkTo NpcId="1020907" XYZ="55.00867, 4.05, 69.84058" QuestId="67978"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 3 and GetQuestById(67978).GetTodoArgs(3, 0).Item1 == 2">
         <GetTo ZoneId="628" XYZ="74.19947, 4, 54.21334"/>
-        <TalkTo NpcId="1020908" XYZ="75.45581, 4.05, 52.90295" QuestId="67978"/>
+        <LLTalkTo NpcId="1020908" XYZ="75.45581, 4.05, 52.90295" QuestId="67978"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 4">
         <GetTo ZoneId="628" XYZ="-46.50515, 3.013504, -70.01102"/>
-        <SoTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67978" StepId="4" DialogOption="1"/>
+        <LLTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67978" StepId="4" DialogOption="1"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 5">
         <While Condition="not HasHqItem(17878)">
 			<If Condition="not HasItem(17877)">
 			<GetTo ZoneId="628" XYZ="-45.65387, 3.013504, -69.74326"/>
-			 <TalkTo NpcId="1020903" XYZ="-45.65387, 3.013504, -69.74326" QuestId="67978"/>
+			 <LLTalkTo NpcId="1020903" XYZ="-45.65387, 3.013504, -69.74326" QuestId="67978"/>
 			 </If>
 			 <If Condition="HasItem(17877)">
 			 <RunCode Name="Disable_Flight"/>
@@ -533,34 +532,34 @@ Angles24
         <GetTo ZoneId="628" XYZ="-46.65266, 3.013504, -69.99533"/>
         <If Condition="IsQuestAcceptQualified(67979)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67979" NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166"/>
+          <LLPickupQuest QuestId="67979" NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166"/>
         </If>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 1">
         <GetTo ZoneId="628" XYZ="-1.756881, 4.768372E-07, -77.39175"/>
-        <TalkTo NpcId="1020910" XYZ="-1.175049, 1.266599E-07, -78.04993" QuestId="67979" StepId="1"/>
+        <LLTalkTo NpcId="1020910" XYZ="-1.175049, 1.266599E-07, -78.04993" QuestId="67979" StepId="1"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 2 and GetQuestById(67979).GetTodoArgs(2, 0).Item1 == 0">
         <GetTo ZoneId="628" XYZ="-12.33821, 7.152557E-07, -85.17715"/>
-        <TalkTo NpcId="1020912" XYZ="-13.07703, 0.25, -86.22876" QuestId="67979"/>
+        <LLTalkTo NpcId="1020912" XYZ="-13.07703, 0.25, -86.22876" QuestId="67979"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 2 and GetQuestById(67979).GetTodoArgs(2, 0).Item1 == 1">
         <GetTo ZoneId="628" XYZ="1.974976, 0, -68.85121"/>
-        <TalkTo NpcId="1019063" XYZ="3.341675, 7.450581E-09, -67.73486" QuestId="67979"/>
+        <LLTalkTo NpcId="1019063" XYZ="3.341675, 7.450581E-09, -67.73486" QuestId="67979"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 2 and GetQuestById(67979).GetTodoArgs(2, 0).Item1 == 2">
         <GetTo ZoneId="628" XYZ="10.14571, 0, -75.16724"/>
-        <TalkTo NpcId="1019062" XYZ="9.506287, 0, -76.12726" QuestId="67979"/>
+        <LLTalkTo NpcId="1019062" XYZ="9.506287, 0, -76.12726" QuestId="67979"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 3">
         <GetTo ZoneId="628" XYZ="-45.9142, 3.013504, -69.86348"/>
-        <SoTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67979" StepId="3" DialogOption="2"/>
+        <LLTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67979" StepId="3" DialogOption="2"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 4">
         <While Condition="not HasHqItem(17880)">
           <If Condition="not HasItem(17879)">
 			<GetTo ZoneId="628" XYZ="-45.65387, 3.013504, -69.74326"/>
-			 <TalkTo NpcId="1020903" XYZ="-45.65387, 3.013504, -69.74326" QuestId="67979"/>
+			 <LLTalkTo NpcId="1020903" XYZ="-45.65387, 3.013504, -69.74326" QuestId="67979"/>
 			 </If>
 			 <If Condition="HasItem(17879)">
 			 <RunCode Name="Disable_Flight"/>
@@ -584,38 +583,38 @@ Angles24
         <GetTo ZoneId="628" XYZ="-48.06082, -2.9, -52.78751"/>
         <If Condition="IsQuestAcceptQualified(67980)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67980" NpcId="1019002" XYZ="-48.05072, -2.9, -50.24799"/>
+          <LLPickupQuest QuestId="67980" NpcId="1019002" XYZ="-48.05072, -2.9, -50.24799"/>
         </If>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 1">
         <GetTo ZoneId="614" XYZ="480.8924, 57.41007, -167.5075"/>
-        <TalkTo NpcId="1020913" XYZ="480.949, 57.51844, -168.4749" QuestId="67980" StepId="1"/>
+        <LLTalkTo NpcId="1020913" XYZ="480.949, 57.51844, -168.4749" QuestId="67980" StepId="1"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 2">
         <GetTo ZoneId="614" XYZ="466.0222, 68.22433, -119.8152"/>
-        <TalkTo NpcId="1019279" XYZ="466.4835, 68.22433, -120.7447" QuestId="67980" StepId="2"/>
+        <LLTalkTo NpcId="1019279" XYZ="466.4835, 68.22433, -120.7447" QuestId="67980" StepId="2"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 3 and GetQuestById(67980).GetTodoArgs(3, 0).Item1 == 0">
         <GetTo ZoneId="614" XYZ="467.596, 68.02505, -94.73309"/>
-        <TalkTo NpcId="1019257" XYZ="468.5587, 68.02771, -93.21747" QuestId="67980"/>
+        <LLTalkTo NpcId="1019257" XYZ="468.5587, 68.02771, -93.21747" QuestId="67980"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 3 and GetQuestById(67980).GetTodoArgs(3, 0).Item1 == 1">
         <GetTo ZoneId="614" XYZ="394.8227, 72.07918, -83.17698"/>
-        <TalkTo NpcId="1019256" XYZ="394.7356, 72.07918, -81.77313" QuestId="67980"/>
+        <LLTalkTo NpcId="1019256" XYZ="394.7356, 72.07918, -81.77313" QuestId="67980"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 3 and GetQuestById(67980).GetTodoArgs(3, 0).Item1 == 2">
         <GetTo ZoneId="614" XYZ="369.4804, 84.94711, -201.8471"/>
-        <TalkTo NpcId="1019258" XYZ="368.4595, 85.00467, -202.8077" QuestId="67980"/>
+        <LLTalkTo NpcId="1019258" XYZ="368.4595, 85.00467, -202.8077" QuestId="67980"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 4">
         <GetTo ZoneId="614" XYZ="481.0121, 57.41946, -167.716"/>
-        <SoTalkTo NpcId="1020913" XYZ="480.949, 57.51844, -168.4749" QuestId="67980" StepId="4" DialogOption="2"/>
+        <LLTalkTo NpcId="1020913" XYZ="480.949, 57.51844, -168.4749" QuestId="67980" StepId="4" DialogOption="2"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 5">
         <While Condition="not HasHqItem(17882)">
 			<If Condition="not HasItem(17881)">
 			<GetTo ZoneId="614" XYZ="480.6881, 57.60501, -168.9152"/>
-			 <TalkTo NpcId="1020913" XYZ="480.6881, 57.60501, -168.9152" QuestId="67980"/>
+			 <LLTalkTo NpcId="1020913" XYZ="480.6881, 57.60501, -168.9152" QuestId="67980"/>
 			 </If>
 			 <If Condition="HasItem(17881)">
 			 <RunCode Name="Disable_Flight"/>
@@ -643,30 +642,30 @@ Angles24
         <GetTo ZoneId="132" XYZ="-22.18031, -3.25, 35.30078"/>
         <If Condition="IsQuestAcceptQualified(67981)">
 		<RunCode Name="SmallTalk"/>
-          <PickupQuest QuestId="67981" NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251"/>
+          <LLPickupQuest QuestId="67981" NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251"/>
         </If>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 1">
         <GetTo ZoneId="132" XYZ="-44.8852, -1.250004, 57.72015"/>
-        <TalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981" StepId="1"/>
+        <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981" StepId="1"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 2">
         <GetTo ZoneId="132" XYZ="-68.87189, -1.963174, 22.31291"/>
-        <TalkTo NpcId="1020917" XYZ="-69.47443, -1.903866, 22.75116" QuestId="67981" StepId="2"/>
+        <LLTalkTo NpcId="1020917" XYZ="-69.47443, -1.903866, 22.75116" QuestId="67981" StepId="2"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 3">
         <GetTo ZoneId="133" XYZ="-146.9552, 7.680779, -132.6617"/>
-        <TalkTo NpcId="1020918" XYZ="-147.6616, 7.702551, -132.2805" QuestId="67981" StepId="3"/>
+        <LLTalkTo NpcId="1020918" XYZ="-147.6616, 7.702551, -132.2805" QuestId="67981" StepId="3"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 4">
         <GetTo ZoneId="132" XYZ="-45.05016, -1.250016, 57.89428"/>
-        <SoTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981" StepId="4" DialogOption="1"/>
+        <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981" StepId="4" DialogOption="1"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 5">
         <While Condition="not HasHqItem(17884)">
           <If Condition="not HasItem(17883)">
 			<GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-			 <TalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981"/>
+			 <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981"/>
 			 </If>
 			 <If Condition="HasItem(17883)">
 			 <RunCode Name="Disable_Flight"/>
@@ -679,7 +678,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 6">
         <GetTo ZoneId="133" XYZ="-33.32317, 10.30855, -249.344"/>
-        <TalkTo NpcId="1020920" XYZ="-32.02869, 10.20999, -249.1035" QuestId="67981" StepId="6"/>
+        <LLTalkTo NpcId="1020920" XYZ="-32.02869, 10.20999, -249.1035" QuestId="67981" StepId="6"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 255">
         <GetTo ZoneId="132" XYZ="-45.06167, -1.250014, 57.76295"/>
@@ -698,7 +697,7 @@ Angles24
 						  11872,11873,5449,12576,12630,
 						  19517,19506"/>
 	
-	<ALoadProfile Path="../Start.xml"/>
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>

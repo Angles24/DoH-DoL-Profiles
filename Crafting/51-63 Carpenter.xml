@@ -4,7 +4,6 @@ Authors:  Kayla / Angles24
 -->
 <Profile>
   <Name>Crafting Carpenter to 63</Name>
-  <BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
 		 <!-- Turn your shit in. -->
         <If Condition="HasIshgardItem() &gt; 0 and GetSkybuilderScrips() &lt; 9000">
@@ -45,12 +44,12 @@ Authors:  Kayla / Angles24
         </If>
 		
 		<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">
-			<ALoadProfile Path="51-63 Carpenter.xml"/>
+			<LLoadProfile Path="51-63 Carpenter.xml"/>
 		</If>
 		
 		<LogMessage Message="Congrats on Level 63 on Carpenter, moving on." />
 		<AutoEquip UpdateGearSet="true"/>
-		<ALoadProfile Path="../Start.xml"/>
+		<LLoadProfile Path="../Start.xml"/>
 			
 	</Order>
 	

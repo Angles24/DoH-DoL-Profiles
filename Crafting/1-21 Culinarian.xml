@@ -14,10 +14,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Culinarian to 21</Name>
-	<BehaviorDirectory>..\Quest Behaviors</BehaviorDirectory>
 	<Order>
-
-	<BotSettings BlockSkippingCutscenes="0"/>
 	
 	<!-- Change Class CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 Gelatin150 4863-->
 	<If Condition="ClassName != ClassJobType.Culinarian">
@@ -31,7 +28,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65807) and not HasQuest(65790) and not IsQuestCompleted(65790)">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
         <If Condition="IsQuestAcceptQualified(65790)">
-          <PickupQuest QuestId="65790" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+          <LLPickupQuest QuestId="65790" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
         </If>
       </If>
       <If Condition="HasQuest(65790) and not IsQuestCompleted(65790) and GetQuestStep(65790) == 255">
@@ -56,7 +53,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65790) and not HasQuest(65791) and not IsQuestCompleted(65791) and Core.Player.ClassLevel &gt; 4">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
         <If Condition="IsQuestAcceptQualified(65791)">
-          <PickupQuest QuestId="65791" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+          <LLPickupQuest QuestId="65791" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
         </If>
       </If>
       <If Condition="HasQuest(65791) and not IsQuestCompleted(65791) and GetQuestStep(65791) == 255">
@@ -81,7 +78,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65791) and not HasQuest(65793) and not IsQuestCompleted(65793) and Core.Player.ClassLevel &gt; 9">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
         <If Condition="IsQuestAcceptQualified(65793)">
-          <PickupQuest QuestId="65793" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+          <LLPickupQuest QuestId="65793" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
         </If>
       </If>
       <If Condition="HasQuest(65793) and not IsQuestCompleted(65793) and GetQuestStep(65793) == 255">
@@ -106,16 +103,16 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <If Condition="IsQuestCompleted(65793) and not HasQuest(65794) and not IsQuestCompleted(65794) and Core.Player.ClassLevel &gt; 14">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
         <If Condition="IsQuestAcceptQualified(65794)">
-          <PickupQuest QuestId="65794" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+          <LLPickupQuest QuestId="65794" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
         </If>
       </If>
       <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 1">
         <GetTo ZoneId="128" XYZ="-66.26996, 42.29999, -162.9207"/>
-        <TalkTo NpcId="1000950" XYZ="-66.26996, 42.29999, -162.9207" QuestId="65794" StepId="1"/>
+        <LLTalkTo NpcId="1000950" XYZ="-66.26996, 42.29999, -162.9207" QuestId="65794" StepId="1"/>
       </If>
       <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 2">
         <GetTo ZoneId="128" XYZ="-76.98181, 40.99999, -136.2173"/>
-        <TalkTo NpcId="1000965" XYZ="-76.98181, 40.99999, -136.2173" QuestId="65794" StepId="2"/>
+        <LLTalkTo NpcId="1000965" XYZ="-76.98181, 40.99999, -136.2173" QuestId="65794" StepId="2"/>
       </If>
       <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 3">
         <While Condition="not HasItem(4642)">
@@ -143,6 +140,15 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<LogMessage Message="Congrats on Level 21, moving on." />
 		<AutoEquip UpdateGearSet="true"/>	
 	</If>	
+	
+	<EtxSellItem ItemIds="2330,2961,5361,5364,5385,5367,
+						  5106,5091,2652,3014,2357,3019,5057,
+						  5823,5824,5071,2382,
+						  5062,5258,4309,5063,
+						  2407,2432,5275,2669,
+						  2458,5324,5325,
+						  4597,5487,5515,4564,4595,2483,4856,
+						  4849,5518,4660,4847,4850,4640,4642,4853,4853,2509,4863"/>
 	
 	<ALoadProfile Path="../Start.xml"/>
 	
