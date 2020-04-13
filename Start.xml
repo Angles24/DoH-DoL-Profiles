@@ -43,7 +43,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<If Condition="not IsQuestCompleted(67653)">
 				<LogMessage Message="Going to learn Chocobo Flying!" />
 				<RunCode Name="chocobo"/>
-				<LLoadProfile Path="Quests/Unlcok Chocobo Flying.xml"/>	
+				<LLoadProfile Path="Quests/Unlock Chocobo Flying.xml"/>	
 			</If>
 	
 	
@@ -975,7 +975,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			await Coroutine.Sleep(40000);
 		]]>
 		</CodeChunk>
-		<CodeChunk Name="classes">
+		<CodeChunk Name="chocobo">
 		<![CDATA[
 			Core.OverlayManager.AddToast(() => "Going to learn Chocobo Flying!", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(20000);
