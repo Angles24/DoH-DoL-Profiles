@@ -26,7 +26,8 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Carpenter" />
 		</If>		
 		<If Condition="ClassName == ClassJobType.Carpenter">
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoEquip UpdateGearSet="true"/>			
+			<WaitTimer waitTime="3"/>
 			<Lisbeth Json="[{'Group':1,'Item':29816,'Amount':15,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>
 		</If>		
 	</If>
@@ -45,7 +46,8 @@ Authors:  Kayla / Angles24
 	
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 80 on Carpenter, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>	
+	<AutoEquip UpdateGearSet="true"/>			
+	<WaitTimer waitTime="3"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>

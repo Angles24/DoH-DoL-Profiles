@@ -139,7 +139,8 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 
 	<If Condition="Core.Player.ClassLevel &gt; 20">
 		<LogMessage Message="Congrats on Level 21, moving on." />
-		<AutoEquip UpdateGearSet="true"/>	
+		<AutoEquip UpdateGearSet="true"/>		
+		<WaitTimer waitTime="3"/>
 	</If>
 	
 	<EtxSellItem ItemIds="2330,2961,5361,5364,5385,5367,
@@ -147,7 +148,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 						  5823,5824,5071,2382,
 						  5062,5258,4309,5063,
 						  2407,2432,5275,2669,
-						  2458,5324,5325"/>
+						  2458,5324,5325"/>			
 	
 	<LLoadProfile Path="../Start.xml"/>
 	

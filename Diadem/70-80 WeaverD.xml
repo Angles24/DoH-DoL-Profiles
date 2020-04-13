@@ -26,7 +26,8 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Weaver" />
 		</If>		
 		<If Condition="ClassName == ClassJobType.Weaver">
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoEquip UpdateGearSet="true"/>		
+			<WaitTimer waitTime="3"/>
 			<Lisbeth Json="[{'Group':1,'Item':29821,'Amount':15,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
 		</If> 		
 	</If>
@@ -45,7 +46,8 @@ Authors:  Kayla / Angles24
 	
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 80 on Weaver, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>
+	<AutoEquip UpdateGearSet="true"/>		
+	<WaitTimer waitTime="3"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>
