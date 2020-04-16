@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<Profile>
+	<Name>51-63 Botanist</Name>
+	<KillRadius>90</KillRadius>
+	
+	<Order>
+		
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
+			
+	<If Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist" />
+	</If> 
+				
+    <If Condition="ClassName == ClassJobType.Botanist">
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="Enable_Flight" />
+		<WaitTimer WaitTime="2"/>
+		<AutoEquip UpdateGearSet="true"/>
+		
+		<!--Level 50 - Call From The Clouds-->
+		<If Condition="not IsQuestCompleted(67584)">
+			<If Condition="not HasQuest(67584)">
+				<LogMessage Message="Picking Up Level 50 - Call From The Clouds." />
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613" /> <!-- Old Gridania -->
+				<If Condition="IsQuestAcceptQualified(67584)">
+					<LLPickupQuest NpcId="1000815" QuestId="67584" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67584) == 1">
+				<GetTo ZoneId="155" XYZ="115.3429, 287.0294, 142.1377" /> <!-- Camp Dragonhead -->
+				<LLHandOver ItemId="2001667" QuestId="67584" StepId="1" NpcId="1000776" XYZ="115.3429, 287.0294, 142.1377" />
+			</If>
+			<If Condition="GetQuestStep(67584) == 255">
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<LLTurnIn QuestId="67584" NpcId="1013240" ItemId="2001886" XYZ="-84.45868, 8.05915, 37.12512" />
+				<WaitTimer WaitTime="2"/>	
+				<LogMessage Message="Level 50 - Call From The Clouds - Completed." 	/>				
+			    <WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
+			</If>
+		</If>
+		<!--End Call From The Clouds-->
+
+		<!-- Level 50-51 -->
+		<If Condition="Core.Player.ClassLevel &lt; 51">
+			<LogMessage Message="Starting the Grind to Level 51." />
+			<GetTo ZoneId="152" XYZ="-255.8077, 4.674677, 101.8108"/> <!-- The Hawthorne Hut -->
+			<Gather while="Core.Player.ClassLevel &lt; 51">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="250" XYZ="-255.8077, 4.674677, 101.8108" name="Mature Trees" />
+				</HotSpots>
+				<Slot>5</Slot> <!-- Rosewood Log -->
+				<GatherRotation>Chance</GatherRotation>
+			</Gather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 51">
+			<LogMessage Message="Congrats on Level 51, moving on." />			
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>
+		</If>
+		<!--End Level 51-->
+		
+		<!-- Level 51-52 -->
+		<If Condition="Core.Player.ClassLevel &lt; 52">
+			<LogMessage Message="Starting the Grind to Level 52." />
+			<GetTo ZoneId="397" XYZ="-163.4057, 86.64782, -223.922" /> <!-- Falcon's Nest -->			
+			<ExGather while="Core.Player.ClassLevel &lt; 52">
+				<GatherObject>Lush Vegetation Patch</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="-163.4057, 86.64782, -223.922" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-315.2786, 76.98337, -303.794" name="Lush Vegetation Patches" />
+					<HotSpot Radius="25" XYZ="-185.232758, 92.00851, -396.817322" name="Lush Vegetation Patches" />
+				</HotSpots>
+				<Slot>3</Slot> <!-- Rainbow Cotton Boll -->
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 52">
+			<LogMessage Message="Congrats on Level 52, moving on." />			
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>
+		</If>
+		<!--End Level 52-->
+		
+		<!-- Level 52-54 --> 
+		<If Condition="Core.Player.ClassLevel &lt; 54">
+			<LogMessage Message="Starting the Grind to Level 54." />
+			<GetTo ZoneId="398" XYZ="679.3611, -53.20882, -105.4077" /> <!-- Tailfeather --> 			
+			<ExGather while="Core.Player.ClassLevel &lt; 54">
+				<GatherObject>Lush Vegetation Patch</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="679.3611, -53.20882, -105.4077" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="723.6763, -46.25278, -188.5057" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="824.1179, -39.59391, -42.10449" name="Lush Vegetation Patches" />
+				</HotSpots>
+				<Slot>2</Slot> <!-- Highland Wheat -->
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 54">
+			<LogMessage Message="Congrats on Level 54, moving on." />			
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>	
+		</If>
+		<!--End Level 54-->
+
+		<!--Level 53 - Onions Of Life Bestowing-->
+		<If Condition="IsQuestCompleted(67584) and not IsQuestCompleted(67585)">
+			<If Condition="not HasQuest(67585)">
+				<LogMessage Message="Picking Up Level 53 - Onions Of Life Bestowing." />
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<If Condition="IsQuestAcceptQualified(67585)">
+					<LLPickupQuest NpcId="1013240" QuestId="67585" XYZ="-84.45868, 8.05915, 37.12512" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67585) == 1">
+				<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+				<LLTalkTo QuestId="67585" StepId="1" NpcId="1013241" XYZ="-670.8019, -127.9738, 639.9481" />
+			</If>
+			<If Condition="GetQuestStep(67585) == 2">
+				<If Condition="not HqHasAtLeast(12878,10)">
+					<RunCode Name="Disable_Flight" />
+					<If Condition="HasAtLeast(12668,1)">
+						<Lisbeth Json="[{'Item': 12878,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 12668,'Medicine': 0}]"/>
+					</If>
+					<If Condition="not HasAtLeast(12668,1)">
+						<Lisbeth Json="[{'Item': 12878,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+					</If>
+				</If>
+				<If Condition="HqHasAtLeast(12878,10)">
+					<RunCode Name="Enable_Flight" />
+					<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+					<LLTurnIn ItemId="12878" RequiresHq="true" QuestId="67585" StepId="2" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67585) == 255">
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<LLTurnIn RewardSlot="0" QuestId="67585" NpcId="1013240" ItemId="2001886" XYZ="-84.45868, 8.05915, 37.12512" />
+				<WaitTimer WaitTime="2"/>	
+				<LogMessage Message="Level 53 - Onions Of Life Bestowing - Completed." />						
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
+			</If>
+		</If>
+		<!--End Onion of Life Bestowing-->
+		
+		<!-- Level 54-55 -->
+		<If Condition="Core.Player.ClassLevel &lt; 55">
+			<LogMessage Message="Starting the Grind to Level 55." />
+			<GetTo ZoneId="398" XYZ="132.1491, -78.83743, 126.4599" /> <!-- Tailfeather --> 			
+			<ExGather while="Core.Player.ClassLevel &lt; 55">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="10" XYZ="132.1491, -78.83743, 126.4599" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="125.7084, -83.36644, 198.7258" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="173.5779, -75.65202, 95.38009" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="202.295, -79.33517, 142.928" name="Mature Tree" />
+					<HotSpot Radius="5" XYZ="202.886, -83.62169, 169.4309" name="Safe Spot" />
+					<HotSpot Radius="10" XYZ="291.4118, -70.66816, 149.401" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="273.281, -74.89111, 180.738" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="248.0733, -82.4752, 222.5734" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="290.3573, -86.61946, 273.9022" name="Mature Tree" />
+					<HotSpot Radius="5" XYZ="302.7231, -99.3852, 329.6814" name="Safe Spot" />
+					<HotSpot Radius="10" XYZ="231.6947, -95.85766, 364.9529" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="219.523, -94.94508, 290.9246" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="180.0995, -101.89, 328.9188" name="Mature Tree" />
+					<HotSpot Radius="10" XYZ="106.329, -112.1545, 363.0009" name="Mature Tree" />
+					<HotSpot Radius="5" XYZ="65.5053, -114.0104, 379.4772" name="Safe Spot" />
+				</HotSpots>
+				<Slot>5</Slot> <!-- Dark Chestnut Log -->
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 55">
+			<LogMessage Message="Congrats on Level 55, moving on." />			
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>
+		</If>
+		<!--End Level 55-->
+
+		<!--Level 55 - Two Nations, One Seed-->
+		<If Condition="IsQuestCompleted(67585) and not IsQuestCompleted(67586)">
+			<If Condition="not HasQuest(67586)">
+				<LogMessage Message="Picking Up Level 55 - Two Nations, One Seed." />
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<If Condition="IsQuestAcceptQualified(67586)">
+					<LLPickupQuest NpcId="1013240" QuestId="67586" XYZ="-84.45868, 8.05915, 37.12512" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67586) == 1">
+				<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+				<LLTalkTo QuestId="67586" StepId="1" NpcId="1013241" XYZ="-670.8019, -127.9738, 639.9481" />
+			</If>
+			<If Condition="GetQuestStep(67586) == 2">
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613" /> <!-- Old Gridania -->
+				<LLTalkTo QuestId="67586" StepId="2" NpcId="1000815" XYZ="-233.9361, 6.668152, -171.0384" />
+			</If>
+			<If Condition="GetQuestStep(67586) == 3">
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<LLTalkTo QuestId="67586" StepId="3" NpcId="1013240" XYZ="-84.45868, 8.05915, 37.12512" />
+			</If>
+			<If Condition="GetQuestStep(67586) == 4">
+				<GetTo ZoneId="419" XYZ="-136.9193, 14.55313, -150.3167" /> <!-- The Pillars -->
+				<LLHandOver ItemId="2001664" QuestId="67586" StepId="4" NpcId="1013245" XYZ="-136.9193, 14.55313, -150.3167" />
+			</If>
+			<If Condition="GetQuestStep(67586) == 5">
+				<If Condition="not HqHasAtLeast(12879,10)">
+					<RunCode Name="Disable_Flight" />
+					<If Condition="HasAtLeast(12668,1)">
+						<Lisbeth Json="[{'Item': 12879,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 12668,'Medicine': 0}]"/>
+					</If>
+					<If Condition="not HasAtLeast(12668,1)">
+						<Lisbeth Json="[{'Item': 12879,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+					</If>
+				</If>
+				<If Condition="HqHasAtLeast(12879,10)">
+					<RunCode Name="Enable_Flight" />
+					<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+					<LLTurnIn ItemId="12879" RequiresHq="true" QuestId="67586" StepId="5" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67586) == 255">
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<LLTurnIn RewardSlot="0" QuestId="67586" NpcId="1013240" XYZ="-84.45868, 8.05915, 37.12512" />
+				<WaitTimer WaitTime="2"/>	
+				<LogMessage Message="Level 55 - Two Nations, One Seed - Completed." />						
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
+			</If>
+		</If>
+		<!--End Two Nations, One Seed-->
+		
+		<!-- Level 55-58 -->
+		<If Condition="Core.Player.ClassLevel &lt; 58">
+			<LogMessage Message="Starting the Grind to Level 58." />
+			<GetTo ZoneId="400" XYZ="-19.2137985, -23.258, 125.697281" /> <!-- Moghome -->			
+			<ExGather while="Core.Player.ClassLevel &lt; 58">
+				<GatherObject>Lush Vegetation Patch</GatherObject>
+				<HotSpots>
+					<HotSpots Radius="30" XYZ="-19.2137985, -23.258, 125.697281" name="Lush Vegetation Patches" />
+					<HotSpots Radius="85" XYZ="-10.0374613, 0, 100.5849" name="Lush Vegetation Patches" />
+					<HotSpot Radius="40"  XYZ="-74.13724, -17.54626, -53.06326" name="Lush Vegetation Patches" />
+					<HotSpot Radius="40"  XYZ="29.59622, -17.77994, -88.65677" name="Lush Vegetation Patches" />
+				</HotSpots>
+				<ItemNames>
+					<ItemName>Emerald Beans</ItemName>
+					<ItemName>Magma Beet</ItemName>
+				</ItemNames>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 58">
+			<LogMessage Message="Congrats on Level 58, moving on." />			
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>	
+		</If>
+		<!--End Level 58-->
+		
+		<!--Level 58 - Love For Harmony-->
+		<If Condition="IsQuestCompleted(67586) and not IsQuestCompleted(67587)">
+			<If Condition="not HasQuest(67587)">
+				<LogMessage Message="Picking Up Level 58 - Love For Harmony." />
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<If Condition="IsQuestAcceptQualified(67587)">
+					<LLPickupQuest NpcId="1013240" QuestId="67587" XYZ="-84.45868, 8.05915, 37.12512" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67587) == 1">
+				<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+				<LLTalkTo QuestId="67587" StepId="1" NpcId="1013241" XYZ="-670.8019, -127.9738, 639.9481" />
+			</If>
+			<If Condition="GetQuestStep(67587) == 2">
+				<GetTo ZoneId="419" XYZ="-136.9193, 14.55313, -150.3167" /> <!-- The Pillars -->
+				<LLTalkTo QuestId="67587" StepId="2" NpcId="1013245" XYZ="-136.9193, 14.55313, -150.3167" />
+			</If>
+			<If Condition="GetQuestStep(67587) == 3">
+				<If Condition="not HqHasAtLeast(12579,10)">
+					<RunCode Name="Disable_Flight" />
+					<If Condition="HasAtLeast(12668,1)">
+						<Lisbeth Json="[{'Item': 12579,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 12668,'Medicine': 0}]"/>
+					</If>
+					<If Condition="not HasAtLeast(12668,1)">
+						<Lisbeth Json="[{'Item': 12579,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+					</If>
+				</If>
+				<If Condition="HqHasAtLeast(12579,10)">
+					<RunCode Name="Enable_Flight" />
+					<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+					<LLTurnIn ItemId="12579" RequiresHq="true" QuestId="67587" StepId="3" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67587) == 255">
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<LLTurnIn RewardSlot="0" QuestId="67587" NpcId="1013240" XYZ="-84.45868, 8.05915, 37.12512" />
+				<WaitTimer WaitTime="2"/>	
+				<LogMessage Message="Level 58 - Love For Harmony - Completed." />						
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
+			</If>
+		</If>
+		<!--End Love For Harmony-->
+		
+		<!--Level 58-60-->		
+		<If Condition="Core.Player.ClassLevel &lt; 60">
+			<LogMessage Message="Starting the Grind to Level 60." />
+			<GetTo ZoneId="401" XYZ="117.249428, -137.9418, 613.707947" /> <!-- Camp Cloudtop --> 			
+			<ExGather while="Core.Player.ClassLevel &lt; 60">
+				<GatherObject>Mature Tree</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="65" XYZ="117.249428, -137.9418, 613.707947" />
+					<HotSpot Radius="40" XYZ="100.5221, -137.9418, 504.220642" />
+					<HotSpot Radius="80" XYZ="218.774689, -124.9265, 500.0145" />
+					<HotSpot Radius="60" XYZ="294.9306, -111.2702, 521.9253" />
+				</HotSpots>
+				<Items>
+					<GatherItem Name="Birch Log" />
+					<GatherItem Name="Birch Sap" />
+				</Items>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 60">
+			<LogMessage Message="Congrats on Level 60, moving on." />			
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>	
+		</If>
+		<!--End Level 60-->
+
+		<!--Level 60 - Seeds Know No Borders-->
+		<If Condition="IsQuestCompleted(67587) and not IsQuestCompleted(67588)">
+			<If Condition="not HasQuest(67588)">
+				<LogMessage Message="Picking Up Level 60 - Seeds Know No Borders." />
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<If Condition="IsQuestAcceptQualified(67588)">
+					<LLPickupQuest NpcId="1013240" QuestId="67588" XYZ="-84.45868, 8.05915, 37.12512" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67588) == 1">
+				<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+				<LLTalkTo QuestId="67588" StepId="1" NpcId="1013241" XYZ="-670.8019, -127.9738, 639.9481" />
+			</If>
+			<If Condition="GetQuestStep(67588) == 2">
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613" /> <!-- Old Gridania -->
+				<LLTalkTo QuestId="67588" StepId="2" NpcId="1000815" XYZ="-232.9017, 6.263501, -169.7613" />
+			</If>
+			<If Condition="GetQuestStep(67588) == 3">
+				<If Condition="not HqHasAtLeast(12900,3)">
+					<If Condition="not IsOnMap(397)">
+						<GetTo ZoneId="397" XYZ="461.0736, 212.5399, 699.8669" /> 
+					</If>
+					<WaitWhile Condition="Condition.IsTimeBetween(22,8.1) or Condition.IsTimeBetween(10,20.1)"/>
+					<If Condition="Condition.IsTimeBetween(8,10) or Condition.IsTimeBetween(20,22)">
+					<ExGather While="not HqHasAtLeast(12900,3)">
+						<GatherObjects>
+							<GatherObject>Unspoiled Lush Vegetation Patch</GatherObject>
+						</GatherObjects>
+						<ItemNames>
+							<ItemName>Chysahl Greens</ItemName>
+						</ItemNames>
+						<HotSpots>
+							<HotSpot Radius="90" XYZ="-684.4172, 130.6977, -600.1046" />
+						</HotSpots>
+						<GatheringSkillOrder>
+							<GatheringSkill SpellName="Leaf Turn II" TimesToCast="1" />
+						</GatheringSkillOrder>
+					</ExGather>
+					</If>
+				</If>
+				<If Condition="HqHasAtLeast(12900,3)">
+					<RunCode Name="Enable_Flight" />
+					<GetTo ZoneId="419" XYZ="-136.9193, 14.55313, -150.3167" /> <!-- The Pillars -->
+					<LLTurnIn ItemId="12900" RequiresHq="true" QuestId="67588" StepId="3" NpcId="1013245" InteractDistance="2.0" XYZ="-136.9193, 14.55313, -150.3167" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(67588) == 4">
+				<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+				<LLTurnIn ItemId="12900" RequiresHq="true" QuestId="67588" StepId="4" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481" />
+			</If>
+			<If Condition="GetQuestStep(67588) == 5">
+				<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+				<LLHandOver ItemId="2001665,2001666" QuestId="67588" StepId="5" NpcId="1013241" XYZ="-670.8019, -127.9738, 639.9481" />
+			</If>
+			<If Condition="GetQuestStep(67588) == 6">
+				<GetTo ZoneId="401" XYZ="-670.8019, -127.9738, 639.9481" /> <!-- Camp Cloudtop -->
+				<LLTalkTo QuestId="67588" StepId="6" NpcId="1013241" XYZ="-670.8019, -127.9738, 639.9481" />
+			</If>
+			<If Condition="GetQuestStep(67588) == 7">
+				<GetTo ZoneId="418" XYZ="-84.45868, 8.05915, 37.12512" /> <!-- Foundation -->
+				<LLTalkTo QuestId="67588" StepId="7" NpcId="1013240" XYZ="-84.45868, 8.05915, 37.12512" />
+			</If>
+			<If Condition="GetQuestStep(67588) == 255">
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613" /> <!-- Old Gridania -->
+				<LLTurnIn RewardSlot="1" QuestId="67588" NpcId="1000815" XYZ="-232.9017, 6.263501, -169.7613" />
+				<WaitTimer WaitTime="2"/>	
+				<LogMessage Message="Level 60 - Seeds Know No Borders - Completed." />						
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
+			</If>
+		</If>
+		<!--End Seeds Know No Borders-->
+		
+		<!--Level 60 - Never Meet Your Heroes -->
+		<If Condition="IsQuestCompleted(67588) and not IsQuestCompleted(68156)">
+			<If Condition="not HasQuest(68156)">
+				<LogMessage Message="Picking Up Level 60 - Never Meet Your Heroes." />
+				<GetTo ZoneId="133" XYZ="-233.4523, 6.247627, -169.1969"/>
+				<If Condition="IsQuestAcceptQualified(68156)">
+					<LLPickupQuest QuestId="68156" NpcId="1000815" XYZ="-233.4523, 6.247627, -169.1969"/>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(68156) == 1">
+				<GetTo ZoneId="478" XYZ="-44.56588, 209.2288, -90.81387"/>
+				<LLTalkTo NpcId="1021349" XYZ="-44.56588, 209.2288, -90.81387" QuestId="68156" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(68156) == 255">
+				<GetTo ZoneId="478" XYZ="-44.56588, 209.2288, -90.81387"/>
+				<LLTurnIn QuestId="68156" NpcId="1021349" XYZ="-44.56588, 209.2288, -90.81387"/>
+				<WaitTimer WaitTime="2"/>	
+				<LogMessage Message="Level 40 - Crisis of Faith - Completed." />
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
+			</If>
+		</If>
+		<!--End Never Meet Your Heroes-->
+   
+		<!-- Level 60-62 -->
+		<If Condition="Core.Player.ClassLevel &lt; 62">
+			<LogMessage Message="Starting the Grind to Level 62." />
+			<GetTo ZoneId="612" XYZ="-261.0497, 61.09257, -570.2502" /> <!-- Farming Area -->			
+			<ExGather while="Core.Player.ClassLevel &lt; 62">
+				<GatherObject>Lush Vegetation Patch</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="-261.0497, 61.09257, -570.2502" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-276.6917, 69.41019, -663.2183" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-100.7757, 60.78433, -660.3498" name="Lush Vegetation Patches" />
+				</HotSpots>
+				<ItemNames>
+					<ItemName>Gyr Abanian Wheat</ItemName>
+				</ItemNames>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 62">
+			<LogMessage Message="Congrats on Level 62, moving on." />			
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>	
+		</If>
+		<!--End Level 62-->
+		
+		<!-- Level 62-63 -->
+		<If Condition="Core.Player.ClassLevel &lt; 63">
+			<LogMessage Message="Starting the Grind to Level 63." />
+			<GetTo ZoneId="612" XYZ="-496.9459, 54.01863, 138.8405" /> <!-- Farming Area -->			
+			<ExGather while="Core.Player.ClassLevel &lt; 63">
+				<GatherObject>Lush Vegetation Patch</GatherObject>
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="-496.9459, 54.01863, 138.8405" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-406.1179, 48.15139, 149.3893" name="Lush Vegetation Patches" />
+					<HotSpot Radius="90" XYZ="-502.959, 56.58319, 251.9903" name="Lush Vegetation Patches" />
+				</HotSpots>
+				<ItemNames>
+					<ItemName>Kudzu Vine</ItemName>
+				</ItemNames>
+				<GatherRotation>Chance</GatherRotation>
+			</ExGather>
+		</If>
+		<If Condition="Core.Player.ClassLevel == 63">
+			<LogMessage Message="Congrats on Level 63, moving on." />			  
+			<WaitTimer WaitTime="2"/>
+			<AutoEquip UpdateGearSet="true"/>
+		</If>
+		<!--End Level 63-->
+		
+	</If>
+	
+	<LLoadProfile Path="../Start.xml"/>
+	
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+	<CodeChunks>		
+		<CodeChunk Name="BTNWeapon">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.MainHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BTNWeapon2">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Secondary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.OffHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	</CodeChunks>
+</Profile>
