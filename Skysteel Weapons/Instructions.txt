@@ -1,0 +1,9 @@
+Required: LLamaLibrary BotBase
+	  Lisbeth BotBase
+	  Exbuddy Plugin
+          ALL currently obtained Skysteel weapons in inventory or Armory.
+
+How to Use: Configure Lisbeth on however you want, then load the "Skysteel Start" profile in Order Bot not Lisbeth!
+
+	    If you only what certain weapons as you don't want to spend so much gil buying the weapons open the "Skysteel Start" 
+	    profile in notepad and edit the profile settings buy changing "1" to "0" on classes you don't want to do.

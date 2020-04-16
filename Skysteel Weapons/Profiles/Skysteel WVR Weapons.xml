@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Author: Angles24 / Kayla
+Required: LLamaLibrary BotBase
+		  Lisbeth BotBase
+          ALL currently obtained Skysteel weapons in inventory or Armory.
+-->
+<Profile>
+	<Name>Dragonsung Needle</Name>	
+	<Order>	
+	
+	<RunCode Name="Disable_Flight"/>
+	
+	<StopCrafting/>
+	
+	<If Condition="ClassName != ClassJobType.Weaver">
+		<ChangeClass Job="Weaver"/>
+	</If>
+	<If Condition="ClassName == ClassJobType.Weaver and Core.Player.ClassLevel &gt; 79">
+		
+		<If Condition="not IsQuestCompleted(69384)">	
+			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
+				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
+				<If Condition="IsQuestAcceptQualified(69384)">
+					<LLPickupQuest NpcId="1032897" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
+				</If>
+			</If>
+			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="Coffer"/>
+			</If>
+		</If>
+		
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">	
+			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<If Condition="IsQuestAcceptQualified(69385)">
+					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
+				</If>
+			</If>
+		</If>
+		
+		<If Condition="not (HasItem(29617) or HasItem(29628) or HasItem(29639))"> 
+			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29617" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>	
+		</If>	
+		
+		<While Condition="HasItem(29617)"> <!-- Skysteel Needle -->
+			<If Condition="not HqHasAtLeast(29650,20)"> <!-- Oddly Specific Moonbeam Silk --> 
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29650,'Amount':20,'Hq': true,'Enabled':true,'Type':'Weaver'}]"/>
+			</If>
+			<If Condition="HasItem(29617) and HqHasAtLeast(29650,20)">	
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29617">
+					<ChangeClass Job="Weaver"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29617">
+						<RunCode Name="SwitchCombatJob"/> 
+					</While>	
+				</While>	
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29628" SelectString="0"/> <!-- Buy Skysteel Needle +1 -->
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</If>					
+		</While>
+		
+		<While Condition="HasItem(29628)"> <!-- Skysteel Needle +1 -->
+			<If Condition="not HqHasAtLeast(29658,30)"> <!-- Oddly Specific Vellum -->		
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29658,'Amount':30,'Hq': true,'Enabled':true,'Type':'Weaver'}]"/>
+			</If>
+			<If Condition="HasItem(29628) and HqHasAtLeast(29658,30)">	
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29628">
+					<ChangeClass Job="Weaver"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29628">
+						<RunCode Name="SwitchCombatJob"/> 
+					</While>
+				</While>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29639" SelectString="1"/> <!-- Buy Dragonsung Needle -->
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</If>					
+		</While>
+		
+		<If Condition="HasItem(29639) and HasQuest(69385)"> <!-- Dragonsung Needle -->
+			<While Condition="ClassName != ClassJobType.Weaver">
+				<ChangeClass Job="Weaver"/>
+			</While>
+			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29639">
+				<RunCode Name="SkysteelWVR3"/> <!-- Dragonsung Needle -->
+				<WaitTimer WaitTime="3"/>
+			</While>
+			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+			</If>
+		</If>
+		
+	</If>	
+	
+	<LLoadProfile Path="../Skysteel Start.xml"/>
+	
+	</Order>
+	<CodeChunks>
+		<CodeChunk Name="CloseShop">
+			<![CDATA[ 
+				var windowName = "ShopExchangeItem";
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName(windowName) != null);				
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName(windowName);					
+				windowByName = RaptureAtkUnitManager.GetWindowByName("ShopExchangeItem");
+				await Coroutine.Wait(5000, () => windowByName != null);
+				if (windowByName != null)
+				windowByName.SendAction(1, 3uL, 4294967295uL);		
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="Coffer">
+			<![CDATA[		
+				foreach (var bagslot in InventoryManager.FilledSlots.Where(bagslot => bagslot.Item.ItemAction == 388))
+				{
+                bagslot.UseItem();
+                await Coroutine.Sleep(5000);
+				}
+			]]> 
+		</CodeChunk>
+		<CodeChunk Name="SkysteelWVR3">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29639)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+		<![CDATA[
+			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+			{
+			try
+			{
+				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+			}
+			catch (Exception ex) {  }
+			}
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+</Profile>

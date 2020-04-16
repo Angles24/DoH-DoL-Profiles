@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Authors: Angles24 / Kayla / Lokibunny
+Requires: ExBuddy Plugin & LLamaLibrary BotBase
+-->
+<Profile>
+	<Name>Dragonsung Pickaxe</Name>
+	<Order>	
+	
+	<RunCode Name="Enable_Flight"/>
+	
+	<If Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner"/>
+	</If>
+	<If Condition="ClassName == ClassJobType.Miner and Core.Player.ClassLevel &gt; 79">
+		
+		<If Condition="not IsQuestCompleted(69384)">	
+			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
+				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
+				<If Condition="IsQuestAcceptQualified(69384)">
+					<LLPickupQuest NpcId="1032897" DialogOption="0" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
+				</If>
+			</If>
+			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="Coffer"/>
+			</If>
+		</If>
+		
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">	
+			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<If Condition="IsQuestAcceptQualified(69385)">
+					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
+				</If>
+			</If>
+		</If>
+		
+		<If Condition="not (HasItem(29621) or HasItem(29632) or HasItem(29643))">
+			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29621" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+		</If>	
+		
+		<While Condition="HasItem(29621)"> <!-- Skysteel Saw -->
+			<If Condition="not HqHasAtLeast(29671,340) and not HasAtLeast(29672,120)">
+				<Lisbeth Json="[{'Group':1,'Item':29672,'Amount':120,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="HqHasAtLeast(29671,340) and not HasAtLeast(29672,120)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29672,'Amount':120,'Enabled':true,'Type':'Gather'}]"/>
+			</If>
+			<If Condition="not HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<!--<If Condition="not HqHasAtLeast(29671,340) or not HasAtLeast(29672,120)"> 
+				<If Condition="ClassName != ClassJobType.Miner">
+					<ChangeClass Job="Miner"/>
+				</If>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29621">
+					<RunCode Name="SkysteelMIN"/> 
+					<WaitTimer WaitTime="3"/>
+				</While>
+				<WaitTimer WaitTime="3"/>
+				<AutoEquip/>
+				<If Condition="not IsOnMap(397)">
+					<TeleportTo Name="CWH" AetheryteId="71" Force="True"/>
+					<WaitTimer WaitTime="5"/>
+				</If>
+				<!-- Mineral Sand -->
+				<!--<ExGather While="not HasAtLeast(29672,120)" CordialType="Auto">
+					<GatherObject>Mineral Deposit</GatherObject>
+					<HotSpots>
+						<HotSpots Radius="10" X="-440.793854" Y="236.3336" Z="376.54425"/>
+						<HotSpots Radius="10" X="-364.109467" Y="220.3919" Z="293.460144"/>
+						<HotSpots Radius="15" X="-419.693085" Y="220.323" Z="512.376953"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Mineral Sand</ItemName>
+						<ItemName>Oddly Specific Obsidian</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>	  
+				<!-- Obsidian -->
+				<!--<ExGather While="not HqHasAtLeast(29671,340)" CordialType="Auto">
+					<GatherObject>Mineral Deposit</GatherObject>
+					<HotSpots>
+						<HotSpots Radius="10" X="-440.793854" Y="236.3336" Z="376.54425"/>
+						<HotSpots Radius="10" X="-364.109467" Y="220.3919" Z="293.460144"/>
+						<HotSpots Radius="15" X="-419.693085" Y="220.323" Z="512.376953"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Obsidian</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Unearth III" TimesToCast="1"/>
+						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>			
+			</If>-->	
+			<If Condition="HasItem(29621) and HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">	
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29621">
+					<ChangeClass Job="Miner"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29621">
+					<RunCode Name="SwitchCombatJob"/> 
+					</While>
+				</While>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29632" SelectString="0"/> <!-- Buy Skysteel Saw +1 -->
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</If>					
+		</While>
+			
+		<While Condition="HasItem(29632)"> <!-- Skysteel Saw +1 -->
+			<If Condition="not HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)"> 
+				<Lisbeth Json="[{'Group':1,'Item':29677,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)"> 
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="not HasAtLeast(29677,180) and HqHasAtLeast(29676,510)"> 
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29677,'Amount':180,'Enabled':true,'Type':'Gather'}]"/>
+			</If>
+			<!--<If Condition="not HasAtLeast(29677,180) or not HqHasAtLeast(29676,510)"> 
+				<If Condition="ClassName != ClassJobType.Miner">
+					<ChangeClass Job="Miner"/>
+				</If>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29632">
+					<RunCode Name="SkysteelMIN2"/> 
+					<WaitTimer WaitTime="3"/>
+				</While>
+				<WaitTimer WaitTime="3"/>
+				<AutoEquip/>
+				<If Condition="not IsOnMap(399)">
+					<GetTo ZoneId="399" XYZ="510.0405, 77.78331, 245.8114"/>
+				</If>
+				<!-- Striking Stone -->
+				<!--<ExGather while="not HasAtLeast(29677,180)" CordialType="Auto">
+					<GatherObject>Rocky Outcrop</GatherObject>
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="395.5583, 112.1888, 373.3869" NodeLocation="394.8522, 111.9116, 371.4661" ReturnToApproachLocation="False"/>
+						<IndirectApproachGatherSpot ApproachLocation="506.9236, 81.67597, 240.1136" NodeLocation="507.9012, 78.63781, 243.7683" ReturnToApproachLocation="False"/>
+					</GatherSpots>
+					<HotSpots>
+						<HotSpots Radius="30" X="319.1651" Y="76.7271" Z="247.885818"/>
+						<HotSpots Radius="30" X="510.159668" Y="77.85595" Z="250.241562"/>
+						<HotSpots Radius="30" X="400.736145" Y="116.3448" Z="379.376068"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Striking Stone</ItemName>
+						<ItemName>Oddly Specific Dark Matter</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>	  
+				<!-- Dark Matter -->
+				<!--<ExGather while="not HqHasAtLeast(29676,510)" CordialType="Auto">
+					<GatherObject>Rocky Outcrop</GatherObject>
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="395.5583, 112.1888, 373.3869" NodeLocation="394.8522, 111.9116, 371.4661" ReturnToApproachLocation="False"/>
+						<IndirectApproachGatherSpot ApproachLocation="506.9236, 81.67597, 240.1136" NodeLocation="507.9012, 78.63781, 243.7683" ReturnToApproachLocation="False"/>
+					</GatherSpots>
+					<HotSpots>
+						<HotSpots Radius="30" X="319.1651" Y="76.7271" Z="247.885818"/>
+						<HotSpots Radius="30" X="510.159668" Y="77.85595" Z="250.241562"/>
+						<HotSpots Radius="30" X="400.736145" Y="116.3448" Z="379.376068"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Dark Matter</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Unearth III" TimesToCast="1"/>
+						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>							
+			</If>-->
+			<If Condition="HasItem(29632) and HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">	
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29632">
+					<ChangeClass Job="Miner"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29632">
+						<RunCode Name="SwitchCombatJob"/> 
+					</While>
+				</While>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29643" SelectString="1"/> <!-- Buy Dragonsung Pickaxe -->
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</If>					
+		</While>
+		
+		<If Condition="HasItem(29643) and HasQuest(69385)"> 
+			<While Condition="ClassName != ClassJobType.Miner">
+				<ChangeClass Job="Miner"/>
+			</While>
+			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29643">
+				<RunCode Name="SkysteelMIN3"/> <!-- Equip Dragonsung Saw -->
+				<WaitTimer WaitTime="3"/>
+			</While>
+			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+			</If>
+		</If>
+		
+	</If>	
+	
+	<LLoadProfile Path="../Skysteel Start.xml"/>
+	
+	</Order>
+	<CodeChunks>
+		<CodeChunk Name="CloseShop">
+			<![CDATA[ 
+				var windowName = "ShopExchangeItem";
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName(windowName) != null);				
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName(windowName);					
+				windowByName = RaptureAtkUnitManager.GetWindowByName("ShopExchangeItem");
+				await Coroutine.Wait(5000, () => windowByName != null);
+				if (windowByName != null)
+				windowByName.SendAction(1, 3uL, 4294967295uL);		
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="Coffer">
+			<![CDATA[		
+				foreach (var bagslot in InventoryManager.FilledSlots.Where(bagslot => bagslot.Item.ItemAction == 388))
+				{
+                bagslot.UseItem();
+                await Coroutine.Sleep(5000);
+				}
+			]]> 
+		</CodeChunk>
+		<CodeChunk Name="SkysteelMIN">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29621)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SkysteelMIN2">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29632)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SkysteelMIN3">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29643)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+		<![CDATA[
+			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+			{
+			try
+			{
+				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+			}
+			catch (Exception ex) {  }
+			}
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+</Profile>
