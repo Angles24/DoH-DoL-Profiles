@@ -49,7 +49,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29613)"> <!-- Skysteel Cross-pein Hammer -->
 			<If Condition="not HqHasAtLeast(29646,20)"> <!-- Oddly Specific Rivets -->
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29646,'Amount':20,'Hq': true,'Enabled':true,'Type':'Blacksmith'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29646,'Amount':20,'Hq':true,'Enabled':true,'Type':'Blacksmith'}]"/>
 			</If>
 			<If Condition="HasItem(29613) and HqHasAtLeast(29646,20)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29624)"> <!-- Skysteel Cross-pein Hammer +1 -->
 			<If Condition="not HqHasAtLeast(29654,30)"> <!-- Oddly Specific Fitting -->					
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29654,'Amount':30,'Hq': true,'Enabled':true,'Type':'Blacksmith'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29654,'Amount':30,'Hq':true,'Enabled':true,'Type':'Blacksmith'}]"/>
 			</If>
 			<If Condition="HasItem(29624) and HqHasAtLeast(29654,30)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>

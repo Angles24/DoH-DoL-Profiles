@@ -49,7 +49,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29617)"> <!-- Skysteel Needle -->
 			<If Condition="not HqHasAtLeast(29650,20)"> <!-- Oddly Specific Moonbeam Silk --> 
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29650,'Amount':20,'Hq': true,'Enabled':true,'Type':'Weaver'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29650,'Amount':20,'Hq':true,'Enabled':true,'Type':'Weaver'}]"/>
 			</If>
 			<If Condition="HasItem(29617) and HqHasAtLeast(29650,20)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29628)"> <!-- Skysteel Needle +1 -->
 			<If Condition="not HqHasAtLeast(29658,30)"> <!-- Oddly Specific Vellum -->		
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29658,'Amount':30,'Hq': true,'Enabled':true,'Type':'Weaver'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29658,'Amount':30,'Hq':true,'Enabled':true,'Type':'Weaver'}]"/>
 			</If>
 			<If Condition="HasItem(29628) and HqHasAtLeast(29658,30)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>

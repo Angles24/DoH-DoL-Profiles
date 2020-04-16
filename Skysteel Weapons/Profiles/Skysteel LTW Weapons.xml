@@ -49,7 +49,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29616)"> <!-- Skysteel Round Knife -->
 			<If Condition="not HqHasAtLeast(29649,20)"> <!-- Oddly Specific Leahter --> 
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29649,'Amount':20,'Hq': true,'Enabled':true,'Type':'Leatherworker'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29649,'Amount':20,'Hq':true,'Enabled':true,'Type':'Leatherworker'}]"/>
 			</If>
 			<If Condition="HasItem(29616) and HqHasAtLeast(29649,20)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29627)"> <!-- Skysteel Round Knife +1 -->
 			<If Condition="not HqHasAtLeast(29657,30)"> <!-- Oddly Specific Vellum -->		
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29657,'Amount':30,'Hq': true,'Enabled':true,'Type':'Leatherworker'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29657,'Amount':30,'Hq':true,'Enabled':true,'Type':'Leatherworker'}]"/>
 			</If>
 			<If Condition="HasItem(29627) and HqHasAtLeast(29657,30)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>

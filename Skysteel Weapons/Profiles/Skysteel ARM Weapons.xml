@@ -49,7 +49,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29614)"> <!-- Skysteel Raising Hammer -->
 			<If Condition="not HqHasAtLeast(29647,20)"> <!-- Oddly Specific Wire --> 
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29647,'Amount':20,'Hq': true,'Enabled':true,'Type':'Armorer'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29647,'Amount':20,'Hq':true,'Enabled':true,'Type':'Armorer'}]"/>
 			</If>
 			<If Condition="HasItem(29614) and HqHasAtLeast(29647,20)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29625)"> <!-- Skysteel Raising Hammer +1 -->
 			<If Condition="not HqHasAtLeast(29655,30)"> <!-- Oddly Specific Chainmail Sheet -->	 
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29655,'Amount':30,'Hq': true,'Enabled':true,'Type':'Armorer'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29655,'Amount':30,'Hq':true,'Enabled':true,'Type':'Armorer'}]"/>
 			</If>
 			<If Condition="HasItem(29625) and HqHasAtLeast(29655,30)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>

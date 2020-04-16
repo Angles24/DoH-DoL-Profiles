@@ -49,7 +49,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29619)"> <!-- Skysteel Frypan -->
 			<If Condition="not HqHasAtLeast(29652,20)"> <!-- Oddly Specific Seed Extract --> 
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29652,'Amount':20,'Hq': true,'Enabled':true,'Type':'Culinarian'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29652,'Amount':20,'Hq':true,'Enabled':true,'Type':'Culinarian'}]"/>
 			</If>
 			<If Condition="HasItem(29619) and HqHasAtLeast(29652,20)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29630)"> <!-- Skysteel Frypan +1 -->
 			<If Condition="not HqHasAtLeast(29660,30)"> <!-- Oddly Specific Seed Flour -->					
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29660,'Amount':30,'Hq': true,'Enabled':true,'Type':'Culinarian'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29660,'Amount':30,'Hq':true,'Enabled':true,'Type':'Culinarian'}]"/>
 			</If>
 			<If Condition="HasItem(29630) and HqHasAtLeast(29660,30)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>

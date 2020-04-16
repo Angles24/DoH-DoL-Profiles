@@ -49,7 +49,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29612)"> <!-- Skysteel Saw -->
 			<If Condition="not HqHasAtLeast(29645,20)"> <!-- Oddly Specific Petrified Orb -->				
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29645,'Amount':20,'Hq': true,'Enabled':true,'Type':'Carpenter'}]"/>						
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29645,'Amount':20,'Hq':true,'Enabled':true,'Type':'Carpenter'}]"/>						
 			</If>
 			<If Condition="HasItem(29612) and HqHasAtLeast(29645,20)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 			
 		<While Condition="HasItem(29623)"> <!-- Skysteel Saw +1 -->
 			<If Condition="not HqHasAtLeast(29653,30)"> <!-- Oddly Specific Shaft -->	
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29653,'Amount':30,'Hq': true,'Enabled':true,'Type':'Carpenter'}]"/>			
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29653,'Amount':30,'Hq':true,'Enabled':true,'Type':'Carpenter'}]"/>			
 			</If>
 			<While Condition="HasItem(29623) and HqHasAtLeast(29653,30)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>

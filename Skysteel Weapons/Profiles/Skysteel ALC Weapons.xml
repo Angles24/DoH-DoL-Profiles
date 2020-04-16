@@ -49,7 +49,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29618)"> <!-- Skysteel Alembic -->
 			<If Condition="not HqHasAtLeast(29651,20)"> <!-- Oddly Specific Synthetic Resin --> <!-- +1 -->		
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29651,'Amount':20,'Hq': true,'Enabled':true,'Type':'Alchemist'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29651,'Amount':20,'Hq':true,'Enabled':true,'Type':'Alchemist'}]"/>
 			</If>
 			<If Condition="HasItem(29618) and HqHasAtLeast(29651,20)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
@@ -68,7 +68,7 @@ Required: LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29629)"> <!-- Skysteel Alembic +1 -->
 			<If Condition="not HqHasAtLeast(29659,30)"> <!-- Oddly Specific Glass -->	<!-- +1 -->				
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29659,'Amount':30,'Hq': true,'Enabled':true,'Type':'Alchemist'}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29659,'Amount':30,'Hq':true,'Enabled':true,'Type':'Alchemist'}]"/>
 			</If>
 			<If Condition="HasItem(29629) and HqHasAtLeast(29659,30)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
