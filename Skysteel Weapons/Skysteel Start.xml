@@ -24,7 +24,6 @@ Required: LLamaLibrary BotBase
 	<Name>Skysteel Start</Name>
 	<Order>	
 	
-	<RunCode Name="flying"/>
 	<RunCode Name="Disable_Flight"/>
 	
 		<If Condition="&crp; == 1">		
