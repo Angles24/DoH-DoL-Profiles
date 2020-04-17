@@ -7,7 +7,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	<Name>Dragonsung Pickaxe</Name>
 	<Order>	
 	
-	<RunCode Name="Enable_Flight"/>
+	<RunCode Name="Disable_Flight"/>
 	
 	<If Condition="ClassName != ClassJobType.Miner">
 		<ChangeClass Job="Miner"/>
@@ -66,7 +66,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<If Condition="not IsOnMap(397)">
 					<TeleportTo Name="CWH" AetheryteId="71" Force="True"/>
 					<WaitTimer WaitTime="5"/>
-				</If>
+				</If>-->-->
 				<!-- Mineral Sand -->
 				<!--<ExGather While="not HasAtLeast(29672,120)" CordialType="Auto">
 					<GatherObject>Mineral Deposit</GatherObject>
@@ -82,7 +82,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					<GatheringSkillOrder>
 						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
 					</GatheringSkillOrder>
-				</ExGather>	  
+				</ExGather>	  -->
 				<!-- Obsidian -->
 				<!--<ExGather While="not HqHasAtLeast(29671,340)" CordialType="Auto">
 					<GatherObject>Mineral Deposit</GatherObject>
@@ -100,7 +100,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</GatheringSkillOrder>
 				</ExGather>			
 			</If>-->	
-			<If Condition="HasItem(29621) and HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">	
+			<While Condition="HasItem(29621) and HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29621">
 					<ChangeClass Job="Miner"/>
@@ -109,10 +109,11 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					<RunCode Name="SwitchCombatJob"/> 
 					</While>
 				</While>
+				<RunCode Name="Sort"/>
 				<BuyShopExchangeItem NpcId="1032900" ItemId="29632" SelectString="0"/> <!-- Buy Skysteel Saw +1 -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</If>					
+			</While>					
 		</While>
 			
 		<While Condition="HasItem(29632)"> <!-- Skysteel Saw +1 -->
@@ -137,7 +138,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<AutoEquip/>
 				<If Condition="not IsOnMap(399)">
 					<GetTo ZoneId="399" XYZ="510.0405, 77.78331, 245.8114"/>
-				</If>
+				</If>-->
 				<!-- Striking Stone -->
 				<!--<ExGather while="not HasAtLeast(29677,180)" CordialType="Auto">
 					<GatherObject>Rocky Outcrop</GatherObject>
@@ -157,7 +158,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					<GatheringSkillOrder>
 						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
 					</GatheringSkillOrder>
-				</ExGather>	  
+				</ExGather>	  -->
 				<!-- Dark Matter -->
 				<!--<ExGather while="not HqHasAtLeast(29676,510)" CordialType="Auto">
 					<GatherObject>Rocky Outcrop</GatherObject>
@@ -179,7 +180,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</GatheringSkillOrder>
 				</ExGather>							
 			</If>-->
-			<If Condition="HasItem(29632) and HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">	
+			<While Condition="HasItem(29632) and HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">	
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29632">
 					<ChangeClass Job="Miner"/>
@@ -188,10 +189,11 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 						<RunCode Name="SwitchCombatJob"/> 
 					</While>
 				</While>
+				<RunCode Name="Sort"/>
 				<BuyShopExchangeItem NpcId="1032900" ItemId="29643" SelectString="1"/> <!-- Buy Dragonsung Pickaxe -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</If>					
+			</While>					
 		</While>
 		
 		<If Condition="HasItem(29643) and HasQuest(69385)"> 
@@ -214,6 +216,15 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	
 	</Order>
 	<CodeChunks>
+		<CodeChunk Name="Sort">
+			<![CDATA[ 
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				ff14bot.Managers.ChatManager.SendChat("/itemsort condition inventory hq des");
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				ff14bot.Managers.ChatManager.SendChat("/itemsort execute inventory");
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="CloseShop">
 			<![CDATA[ 
 				var windowName = "ShopExchangeItem";
