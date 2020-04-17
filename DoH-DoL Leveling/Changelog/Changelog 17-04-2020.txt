@@ -1,0 +1,9 @@
+Changelog 17/04/2020
+
+- Fisher had wrong class type in Skysteel Start profile.
+- Added item sort before exchanging gathering weapons.
+- removed QB that weren't required.
+- Increased wait time after autoquip for diadem crafting profiles.
+
+
+
