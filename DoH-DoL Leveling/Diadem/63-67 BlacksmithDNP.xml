@@ -27,7 +27,7 @@ Authors:  Kayla / Angles24
 		</If>		
 		<If Condition="ClassName == ClassJobType.Blacksmith">
 			<AutoEquip UpdateGearSet="true"/>		
-			<WaitTimer waitTime="3"/>
+			<WaitTimer waitTime="5"/>
 			<Lisbeth Json="[{'Group':1,'Item':29809,'Amount':15,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
 		</If> 
 		
@@ -48,7 +48,7 @@ Authors:  Kayla / Angles24
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 65 on Blacksmith, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>		
-	<WaitTimer waitTime="3"/>
+	<WaitTimer waitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>
