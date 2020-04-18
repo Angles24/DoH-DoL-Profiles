@@ -19,6 +19,7 @@ Angles24
 		<RunCode Name="Enable_Flight" />
 		<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 63 - You Say Popoto, I Say...-->
 		<If Condition="not IsQuestCompleted(68157)">
@@ -65,6 +66,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
 		<!--End You Say Popoto, I Say...-->
@@ -90,6 +92,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 64, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>	
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 64-->
 		
@@ -114,6 +117,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 65, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 65-->
 		
@@ -180,6 +184,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
+					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -206,6 +211,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 66, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 66-->
   
@@ -230,6 +236,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 68, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>	
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 68-->
 		
@@ -287,6 +294,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
 		<!--End The White Death-->
@@ -314,6 +322,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 70, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 70-->
 		
@@ -389,6 +398,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
+					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>	  
 		</If>

@@ -17,6 +17,7 @@ Angles24
     <If Condition="ClassName == ClassJobType.Miner">	
 		<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 20 - Old Wisdom, New Ways-->
 		<If Condition="not IsQuestCompleted(66140)">
@@ -45,6 +46,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -67,6 +69,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 26, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 26 Grind-->
 
@@ -91,6 +94,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -113,6 +117,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 31, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 31 Grind-->
 
@@ -149,6 +154,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
 		<!--End Obsidian Race-->
@@ -175,6 +181,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 36, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 36 Grind-->
 
@@ -202,6 +209,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -224,6 +232,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 40, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 40 Grind-->		  
 	</If>

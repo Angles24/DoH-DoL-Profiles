@@ -17,6 +17,7 @@ Angles24
     <If Condition="ClassName == ClassJobType.Miner">	
 		<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 40 - To Die For-->
 		<If Condition="not IsQuestCompleted(66180)">
@@ -43,6 +44,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -65,6 +67,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 46, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 46 Grind-->
 
@@ -93,6 +96,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -115,6 +119,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 50, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 50 Grind-->
 
@@ -179,6 +184,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
 		<!--End Canyon of Regret-->
@@ -200,6 +206,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 51, moving on." />			  
 			<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 51 Grind-->
 	</If>

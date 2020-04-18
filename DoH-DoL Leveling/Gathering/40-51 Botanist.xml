@@ -17,6 +17,7 @@ Angles24
     <If Condition="ClassName == ClassJobType.Botanist">	
 		<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 40 - Crisis of Faith-->
 		<If Condition="not IsQuestCompleted(65547)">
@@ -50,6 +51,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
 		<!--End Crisis of Faith-->
@@ -71,6 +73,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 46, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 46-->
 
@@ -101,6 +104,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
+					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -123,6 +127,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 50, moving to final quest." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 50-->
 
@@ -186,6 +191,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
+					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -208,6 +214,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 51, moving to final quest." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>			
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 51-->
 	</If>

@@ -17,6 +17,7 @@ Angles24
     <If Condition="ClassName == ClassJobType.Botanist">	
 		<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
+		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 20 - Dressed to Harvest-->
 		<If Condition="not IsQuestCompleted(65543)">
@@ -48,6 +49,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
+					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -70,6 +72,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 26, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>	
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 26-->
 
@@ -93,6 +96,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
+				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
 		<!--End Aromatic Aspirations-->
@@ -114,6 +118,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 31, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>	
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 31-->
 
@@ -144,6 +149,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
+					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
@@ -223,6 +229,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 36, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 36-->
 
@@ -256,6 +263,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>	
+				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
 		<!--End A Feast to Say the Least-->
@@ -277,6 +285,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 40, moving on." />			
 			<WaitTimer WaitTime="2"/>
 			<AutoEquip UpdateGearSet="true"/>	
+			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 40-->		
 	</If>
