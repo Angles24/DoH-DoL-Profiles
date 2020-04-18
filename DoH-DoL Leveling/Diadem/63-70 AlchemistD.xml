@@ -27,7 +27,7 @@ Authors:  Kayla / Angles24
 		</If>		
 		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoEquip UpdateGearSet="true"/>		
-			<WaitTimer waitTime="5"/>
+			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':29814,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 			</If>
@@ -52,7 +52,7 @@ Authors:  Kayla / Angles24
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 70 on Alchemist, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>		
-	<WaitTimer waitTime="5"/>
+	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>

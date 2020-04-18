@@ -27,7 +27,7 @@ Authors:  Kayla / Angles24
 		</If>		
 		<If Condition="ClassName == ClassJobType.Leatherworker">
 			<AutoEquip UpdateGearSet="true"/>			
-			<WaitTimer waitTime="5"/>
+			<WaitTimer waitTime="10"/>
 			<Lisbeth Json="[{'Group':1,'Item':29820,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 		</If>				
 	</If>
@@ -47,7 +47,7 @@ Authors:  Kayla / Angles24
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 80 on Leatherworker, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>			
-	<WaitTimer waitTime="5"/>
+	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>

@@ -27,7 +27,7 @@ Authors:  Kayla / Angles24
 		</If>		
 		<If Condition="ClassName == ClassJobType.Culinarian">
 			<AutoEquip UpdateGearSet="true"/>		
-			<WaitTimer waitTime="5"/>
+			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':29815,'Amount':15,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>
 			</If>
@@ -52,7 +52,7 @@ Authors:  Kayla / Angles24
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 63 on Culinarian, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>		
-	<WaitTimer waitTime="5"/>
+	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>
