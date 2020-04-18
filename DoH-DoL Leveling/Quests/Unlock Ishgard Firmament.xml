@@ -18,69 +18,66 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 		<If Condition="IsQuestCompleted(67783) and not HasQuest(69208) and not IsQuestCompleted(69208)"> <!-- Pickup Firmament Quest -->
 			<GetTo ZoneId="418" XYZ="-73.0267, 9.244665, 17.78088"/>
 			<RunCode Name="SwitchCombatJob"/>
-				<If Condition="IsQuestAcceptQualified(69208)">
-					<LLPickupQuest NpcId="2010850" QuestId="69208" XYZ="-73.0267, 9.244665, 17.78088"/>
-				</If>
+			<If Condition="IsQuestAcceptQualified(69208)">
+				<LLPickupQuest NpcId="2010850" QuestId="69208" XYZ="-73.0267, 9.244665, 17.78088"/>
+			</If>
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 1"> <!-- Talk to Thomelin -->
 			<GetTo ZoneId="418" XYZ="151.4828, -20, 63.83766"/>
-				<LLTalkTo NpcId="1031682" XYZ="151.4828, -20, 63.83766" QuestId="69208" StepId="1"/>
+			<LLTalkTo NpcId="1031682" XYZ="151.4828, -20, 63.83766" QuestId="69208" StepId="1"/>
 		</If>		
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 2"> <!-- Wait for passerby @ Jewel Crozier -->
 			<GetTo ZoneId="419" XYZ="-141.4035, -12.63491, -32.7417"/>
-				<UseTransport NpcId="2010920" XYZ="-141.4035, -12.63491, -32.7417" QuestId="69208" StepId="2" />
+			<UseTransport NpcId="2010920" XYZ="-141.4035, -12.63491, -32.7417" QuestId="69208" StepId="2" />
 		</If>		
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 3"> <!-- Talk to Francel -->
 			<GetTo ZoneId="419" XYZ="-140.007, -12.63491, -33.14103"/>
-				<LLTalkTo NpcId="1031989" XYZ="-140.007, -12.63491, -33.14103" QuestId="69208" StepId="3"/>
+			<LLTalkTo NpcId="1031989" XYZ="-140.007, -12.63491, -33.14103" QuestId="69208" StepId="3"/>
 		</If>		
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 4"> <!-- LLHandOver mulled wine to Thomelin -->
 			<GetTo ZoneId="418" XYZ="151.4828, -20, 63.83766"/>
-				<LLHandOver ItemId="2002954" QuestId="69208" StepId="4" NpcId="1031682" XYZ="151.4828, -20, 63.83766"/>
-				<WaitTimer WaitTime="10" />
+			<LLHandOver ItemId="2002954" QuestId="69208" StepId="4" NpcId="1031682" XYZ="151.4828, -20, 63.83766"/>
+			<WaitTimer WaitTime="10" />
 		</If>		
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 255"> <!-- Hand in Quest to Francel -->
-			<If Condition="not IsOnMap(886)">
-					<GetTo ZoneId="418" XYZ="-56.22199, 8.113304, 43.31803"/>
-					<RunCode Name="MoveToFirmament"/>	
-			</If>
-				<MoveTo Name="Francel" XYZ="-7.472548, -16, 162.5581" UseMesh="False" /> 
-				<LLTurnIn QuestId="69208" NpcId="1031684" XYZ="-7.472548, -16, 162.5581" UseMesh="False"/>
-				<WaitTimer WaitTime="3" />				
+			<GetTo ZoneId="886" XYZ="-7.472548, -16, 162.5581" />
+			<LLTurnIn QuestId="69208" NpcId="1031684" XYZ="-7.472548, -16, 162.5581" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />				
 		</If>
-		<MoveTo Name="Augebert" XYZ="8.266967, -16, 147.535" UseMesh="False" /> 	
+		<GetTo ZoneId="886" XYZ="8.266967, -16, 147.535" />
 		<LLTalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
 		<WaitTimer WaitTime="3" />
-		<MoveTo Name="Potkin" XYZ="50.83703, -16, 168.3313" UseMesh="False" /> 	
+		<GetTo ZoneId="886" XYZ="50.83703, -16, 168.3313" />
 		<LLTalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<MoveTo Name="Lizbeth" XYZ="50.84084, -16, 170.4325" UseMesh="False" /> 	
+		<WaitTimer WaitTime="3" />	
+		<GetTo ZoneId="886" XYZ="50.84084, -16, 170.4325" />
 		<LLTalkTo NpcId="1031692" XYZ="50.84084, -16, 170.4325" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<MoveTo Name="Enie" XYZ="38.6591, -16, 139.6498" UseMesh="False" /> 	
+		<WaitTimer WaitTime="3" />	
+		<GetTo ZoneId="886" XYZ="38.6591, -16, 139.6498" />
 		<LLTalkTo NpcId="1031680" XYZ="38.6591, -16, 139.6498" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<MoveTo XYZ="10.15383, -16, 149.4883" UseMesh="False" /> 
-		<MoveTo Name="Flotpassant" XYZ="-20.24542, -16, 141.1501" UseMesh="False" /> 	
+		<WaitTimer WaitTime="3" />	
+		<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
 		<LLTalkTo NpcId="1031693" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<MoveTo Name="Aurvael" XYZ="-20.24542, -16, 141.1501" UseMesh="False" /> 	
+		<WaitTimer WaitTime="3" />	
+		<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
 		<LLTalkTo NpcId="1031694" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<MoveTo Name="Ludovraint" XYZ="-30.73239, -16, 168.9261" UseMesh="False" /> 	
+		<WaitTimer WaitTime="3" />	
+		<GetTo ZoneId="886" XYZ="-30.73239, -16, 168.9261" />
 		<LLTalkTo NpcId="1031695" XYZ="-30.73239, -16, 168.9261" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<MoveTo XYZ="-18.089, -16, 158.9264" UseMesh="False" /> 
-		<MoveTo Name="Augebert" XYZ="8.266967, -16, 147.535" UseMesh="False" /> 	
+		<WaitTimer WaitTime="3" />	
+		<GetTo ZoneId="886" XYZ="8.266967, -16, 147.535" />
 		<LLTalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
 		<WaitTimer WaitTime="3" />
-		<RunCode Name="SwitchDoHJob"/>
-		<MoveTo XYZ="34.94659, -16, 154.2146" UseMesh="False" /> 	
-		<MoveTo Name="Potkin" XYZ="50.83703, -16, 168.3313" UseMesh="False" /> 	
+		<While Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian)">
+			<RunCode Name="SwitchDoHJob"/>
+		</While>
+		<GetTo ZoneId="886" XYZ="50.83703, -16, 168.3313" />
 		<LLTalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
 		<WaitTimer WaitTime="3" />
-		<RunCode Name="SwitchDoLJob"/>
-		<MoveTo Name="Aurvael" XYZ="-20.24542, -16, 141.1501" UseMesh="False" /> 	
+		<While Condition="ClassName != (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)">
+			<RunCode Name="SwitchDoLJob"/>
+		</While>		
+		<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
 		<LLTalkTo NpcId="1031694" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
 		
 		<LLoadProfile Path="../Start.xml"/>
