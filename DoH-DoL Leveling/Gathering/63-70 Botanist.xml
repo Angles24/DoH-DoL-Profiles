@@ -60,8 +60,9 @@ Angles24
 			<If Condition="GetQuestStep(68157) == 255">
 				<GetTo ZoneId="478" XYZ="-44.95714, 209.2252, -90.96803"/>
 				<LLTurnIn QuestId="68157" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/> 
-				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 63 - You Say Popoto, I Say.... - Completed" />
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
 			</If>
@@ -174,8 +175,9 @@ Angles24
 					<RunCode Name="Enable_Flight" />
 					<GetTo ZoneId="478" XYZ="-44.67389, 209.2242, -90.67441"/>
 					<LLTurnIn ItemIds="17946" RequiresHq="True" QuestId="68158" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/> 
-					<WaitTimer WaitTime="2"/>	
 					<LogMessage Message="Level 65 - Walking for Walker's - Completed." />
+					<WaitTimer WaitTime="2"/>
+					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
 				</If>
@@ -281,8 +283,8 @@ Angles24
 			<If Condition="GetQuestStep(68159) == 255" >
 				<GetTo ZoneId="478" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<LLTurnIn ItemIds="2002168" QuestId="68159" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
-				<WaitTimer WaitTime="2"/>	
-				<LogMessage Message="Level 68 - The White Death - Completed." />
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
 			</If>
@@ -384,6 +386,8 @@ Angles24
 					<LLTurnIn ItemIds="17948" QuestId="68160" NpcId="1021349" XYZ="-44.54691, 209.2032, -89.48778"/>	
 					<LogMessage Message="Level 70 - Edgyth's Winning Streak - Completed." />
 					<WaitTimer WaitTime="2"/>
+					<RunCode Name="SmallTalk"/>	
+					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>	  
@@ -396,7 +400,13 @@ Angles24
 	</Order>
 	<GrindAreas>
 	</GrindAreas>
-	<CodeChunks>		
+	<CodeChunks>	
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);

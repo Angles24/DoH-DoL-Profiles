@@ -42,7 +42,9 @@ Angles24
 					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
 					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed." />						  
 					<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>
 		</If>
@@ -86,7 +88,9 @@ Angles24
 					<LLTurnIn ItemId="5491" QuestId="66141" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
 					<LogMessage Message="Level 25 - Water From Stone - Completed." />						  
 					<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>
 		</If>
@@ -142,7 +146,9 @@ Angles24
 				<LLTurnIn QuestId="66142" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
 				<LogMessage Message="Level 30 - Obsidian Race - Completed." />				  
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Obsidian Race-->
@@ -193,7 +199,9 @@ Angles24
 					<LLTurnIn ItemId="5138" QuestId="66179" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229" />
 					<LogMessage Message="Level 35 - Amethysts Are Forever - Completed." />						  
 					<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>
 		</If>
@@ -226,6 +234,12 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="MINWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);

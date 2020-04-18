@@ -63,11 +63,12 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68091) == 255">
 				<GetTo ZoneId="478" XYZ="54.85791, 207.3399, -8.434767"/>
-				<LLTurnIn QuestId="68091" NpcId="1019863" XYZ="54.85791, 207.3399, -8.434767"/> 
-				<WaitTimer WaitTime="2"/>	
+				<LLTurnIn QuestId="68091" NpcId="1019863" XYZ="54.85791, 207.3399, -8.434767"/> 	
 				<LogMessage Message="Level 63 - Thick Skin - Completed." />
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Thick Skin-->
@@ -182,11 +183,12 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68092) == 255">
 				<GetTo ZoneId="478" XYZ="54.88151, 207.3399, -8.167487"/>
-				<LLTurnIn QuestId="68092" NpcId="1019863" XYZ="54.88151, 207.3399, -8.167487"/> 
-				<WaitTimer WaitTime="2"/>	
+				<LLTurnIn QuestId="68092" NpcId="1019863" XYZ="54.88151, 207.3399, -8.167487"/> 	
 				<LogMessage Message="Level 65 - Pedal to the Metal - Completed." />
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Pedal to the Metal-->
@@ -266,6 +268,10 @@ Angles24
 					<RunCode Name="Enable_Flight" />
 					<GetTo ZoneId="478" XYZ="-19.1375, 211.2449, -29.66669"/>
 					<LLTurnIn ItemIds="17943" RequiresHq="True" NpcId="1013713" XYZ="-19.1375, 211.2449, -29.66669" QuestId="68093" StepId="2"/>
+					<WaitTimer WaitTime="2"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68093) == 3">
@@ -282,11 +288,12 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68093) == 255">
 				<GetTo ZoneId="478" XYZ="54.71909, 207.3399, -7.805041"/>
-				<LLTurnIn QuestId="68093" NpcId="1019863" XYZ="54.71909, 207.3399, -7.805041"/> 
-				<WaitTimer WaitTime="2"/>	
+				<LLTurnIn QuestId="68093" NpcId="1019863" XYZ="54.71909, 207.3399, -7.805041"/> 	
 				<LogMessage Message="Level 68 - Where the Money Takes You - Completed." />
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Where the Money Takes You-->
@@ -375,10 +382,11 @@ Angles24
 			<If Condition="GetQuestStep(68094) == 255">
 				<GetTo ZoneId="131" XYZ="-18.1387, 6.2, 157.5993"/>
 				<LLTurnIn QuestId="68094" NpcId="1002298" XYZ="-18.1387, 6.2, 157.5993"/>	
-				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 70 - A Miner Success - Completed." />
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End A Miner Success-->
@@ -390,6 +398,12 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="MINWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);

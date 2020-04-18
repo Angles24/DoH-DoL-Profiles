@@ -47,6 +47,8 @@ Angles24
 				<LLTurnIn ItemId="2000569" QuestId="65547" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644" />
 				<LogMessage Message="Level 40 - Crisis of Faith - Completed." />				
 				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
 				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
@@ -95,6 +97,8 @@ Angles24
 					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn ItemId="5536" RequiresHq="true" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613" />
 					<LogMessage Message="Level 45 - Botanist in a Bind - Completed." />
+					<WaitTimer WaitTime="2"/>
+					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
 				</If>
@@ -179,6 +183,8 @@ Angles24
 					  <WaitTimer WaitTime="3" />
 				  </While>
 					<WaitTimer WaitTime="2"/>
+					<RunCode Name="SmallTalk"/>	
+					<WaitTimer WaitTime="2"/>
 					<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>
@@ -212,6 +218,12 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>		
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);

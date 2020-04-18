@@ -36,14 +36,19 @@ Angles24
 			<If Condition="GetQuestStep(67616) == 2">
 				<GetTo ZoneId="419" XYZ="16.617, 15.96505, 3.677429" /> <!-- The Pillars -->
 				<LLTurnIn ItemId="2001726" QuestId="67616" StepId="2" NpcId="1013232" XYZ="16.617, 15.96505, 3.677429" />
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 			<If Condition="GetQuestStep(67616) == 255">
 				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268" /> <!-- Foundation -->
-				<LLTurnIn QuestId="67616" NpcId="1013230" ItemId="0" XYZ="85.19104, 15.00001, 40.66516" />
-				<WaitTimer WaitTime="2"/>				
+				<LLTurnIn QuestId="67616" NpcId="1013230" ItemId="0" XYZ="85.19104, 15.00001, 40.66516" />		
 				<LogMessage Message="Level 50 - Breaking New Ground - Completed." />	
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Breaking New Ground-->
@@ -149,10 +154,11 @@ Angles24
 			<If Condition="GetQuestStep(67617) == 255">
 				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268" />
 				<LLTurnIn QuestId="67617" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516" />	
-				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 53 - Sellspade - Completed." />	
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Sellspade-->
@@ -222,10 +228,11 @@ Angles24
 			<If Condition="GetQuestStep(67618) == 255">
 				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268" />
 				<LLTurnIn QuestId="67618" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516" />	
-				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 55 - The Same Vein - Completed." />	
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End The Same Vein-->
@@ -316,11 +323,12 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(67619) == 255">
 				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268" />
-				<LLTurnIn QuestId="67619" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516" />
-				<WaitTimer WaitTime="2"/>	
+				<LLTurnIn QuestId="67619" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516" />	
 				<LogMessage Message="Level 58 - Digging Deeper - Completed." />	
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Digging Deeper-->
@@ -398,6 +406,10 @@ Angles24
 					<RunCode Name="Enable_Flight" />
 					<GetTo ZoneId="478" XYZ="59.67798, 207.1303, 3.311157" />
 					<LLTurnIn ItemId="12538" RequiresHq="true" QuestId="67620" StepId="3" NpcId="1013958" XYZ="59.67798, 207.1303, 3.311157" />
+					<WaitTimer WaitTime="2"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67620) == 4">
@@ -419,10 +431,11 @@ Angles24
 				<If Condition="not IsOnMap(418)">
 					<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268" />
 					<LLTurnIn QuestId="67620" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516" />
-					<WaitTimer WaitTime="2"/>	
 					<LogMessage Message="Level 60 - The Hole Truth - Completed." />	
 					<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 				</If>
 			</If>
 		</If>
@@ -452,10 +465,11 @@ Angles24
 			<If Condition="GetQuestStep(68090) == 255">
 				<GetTo ZoneId="478" XYZ="54.56663, 207.3399, -8.392662"/>
 				<LLTurnIn QuestId="68090" NpcId="1019863" XYZ="54.56663, 207.3399, -8.392662"/>	
-				<WaitTimer WaitTime="2"/>	
 				<LogMessage Message="Level 60 - Gift of the Gob - Completed." />	
 				<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+				<RunCode Name="SmallTalk"/>	
+				<WaitTimer WaitTime="2"/>
+				<AutoEquip UpdateGearSet="true"/>
 			</If>
 		</If>
 		<!--End Gift of the Gob-->
@@ -527,6 +541,12 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
+		<CodeChunk Name="SmallTalk">
+			<![CDATA[ 
+			    if (SelectString.IsOpen)
+				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="MINWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);
