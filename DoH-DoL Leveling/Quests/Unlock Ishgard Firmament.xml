@@ -42,43 +42,43 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 255"> <!-- Hand in Quest to Francel -->
 			<GetTo ZoneId="886" XYZ="-7.472548, -16, 162.5581" />
 			<LLTurnIn QuestId="69208" NpcId="1031684" XYZ="-7.472548, -16, 162.5581" UseMesh="False"/>
-			<WaitTimer WaitTime="3" />				
-		</If>
-		<GetTo ZoneId="886" XYZ="8.266967, -16, 147.535" />
-		<LLTalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<GetTo ZoneId="886" XYZ="50.83703, -16, 168.3313" />
-		<LLTalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />	
-		<GetTo ZoneId="886" XYZ="50.84084, -16, 170.4325" />
-		<LLTalkTo NpcId="1031692" XYZ="50.84084, -16, 170.4325" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />	
-		<GetTo ZoneId="886" XYZ="38.6591, -16, 139.6498" />
-		<LLTalkTo NpcId="1031680" XYZ="38.6591, -16, 139.6498" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />	
-		<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
-		<LLTalkTo NpcId="1031693" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />	
-		<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
-		<LLTalkTo NpcId="1031694" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />	
-		<GetTo ZoneId="886" XYZ="-30.73239, -16, 168.9261" />
-		<LLTalkTo NpcId="1031695" XYZ="-30.73239, -16, 168.9261" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />	
-		<GetTo ZoneId="886" XYZ="8.266967, -16, 147.535" />
-		<LLTalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<While Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian)">
+			<WaitTimer WaitTime="3" />	
+			<GetTo ZoneId="886" XYZ="8.266967, -16, 147.535" />
+			<LLTalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />
+			<GetTo ZoneId="886" XYZ="50.83703, -16, 168.3313" />
+			<LLTalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />	
+			<GetTo ZoneId="886" XYZ="50.84084, -16, 170.4325" />
+			<LLTalkTo NpcId="1031692" XYZ="50.84084, -16, 170.4325" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />	
+			<GetTo ZoneId="886" XYZ="38.6591, -16, 139.6498" />
+			<LLTalkTo NpcId="1031680" XYZ="38.6591, -16, 139.6498" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />	
+			<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
+			<LLTalkTo NpcId="1031693" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />	
+			<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
+			<LLTalkTo NpcId="1031694" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />	
+			<GetTo ZoneId="886" XYZ="-30.73239, -16, 168.9261" />
+			<LLTalkTo NpcId="1031695" XYZ="-30.73239, -16, 168.9261" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />	
+			<GetTo ZoneId="886" XYZ="8.266967, -16, 147.535" />
+			<LLTalkTo NpcId="1031681" XYZ="8.266967, -16, 147.535" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />
+			<WaitTimer WaitTime="2"/>
 			<RunCode Name="SwitchDoHJob"/>
-		</While>
-		<GetTo ZoneId="886" XYZ="50.83703, -16, 168.3313" />
-		<LLTalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
-		<WaitTimer WaitTime="3" />
-		<While Condition="ClassName != (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)">
+			<WaitTimer WaitTime="2"/>
+			<GetTo ZoneId="886" XYZ="50.83703, -16, 168.3313" />
+			<LLTalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="3" />
+			<WaitTimer WaitTime="2"/>
 			<RunCode Name="SwitchDoLJob"/>
-		</While>		
-		<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
-		<LLTalkTo NpcId="1031694" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>
+			<WaitTimer WaitTime="2"/>		
+			<GetTo ZoneId="886" XYZ="-20.24542, -16, 141.1501" />
+			<LLTalkTo NpcId="1031694" XYZ="-20.24542, -16, 141.1501" InteractDistance="5" UseMesh="False"/>			
+		</If>
 		
 		<LLoadProfile Path="../Start.xml"/>
 		
