@@ -515,7 +515,7 @@ Angles24
 		<!--End Level 62 Grind-->
 		
 		<!-- Level 62-63 -->
-		<If Condition="Core.Player.ClassLevel &lt; 64">
+		<While Condition="Core.Player.ClassLevel &lt; 64">
 			<LogMessage Message="Starting the Grind to Level 64." />
 				<GetTo ZoneId="620" XYZ="105.2464, 114.3518, -510.7864" /> <!-- Farming Area -->
 			<ExGather Loops="1" while="Core.Player.ClassLevel &lt; 64">
@@ -541,7 +541,7 @@ Angles24
 				</ItemNames>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
-		</If>
+		</While>
 		<If Condition="Core.Player.ClassLevel == 64">
 			<LogMessage Message="Congrats on Level 64, moving on." />			
 			<WaitTimer WaitTime="2"/>
