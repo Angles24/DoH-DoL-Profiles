@@ -331,6 +331,12 @@ Angles24
 		
 	<!--Level 15 - Every Fish Has a Silver Lining-->
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 19 and not IsQuestCompleted(66647) and IsQuestCompleted(66646)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -406,6 +412,12 @@ Angles24
 	
 	<!--Level 20 - A Fish in Hot Water-->
 		<While Condition="not IsQuestCompleted(66648) and Core.Me.Levels[ClassJobType.Fisher] &gt; 19 and IsQuestCompleted(66647)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -519,6 +531,12 @@ Angles24
 	
 	<!--Level 25 - A Game Of Cat And Fish-->
 		<While Condition="IsQuestCompleted(66648) and Core.Me.Levels[ClassJobType.Fisher] &gt; 39 and not IsQuestCompleted(66649)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -577,6 +595,12 @@ Angles24
 			  
 	<!--Level 30 - Like Fish Passing in the Night-->
 		<While Condition="IsQuestCompleted(66649) and Core.Me.Levels[ClassJobType.Fisher] &gt; 39 and not IsQuestCompleted(66650)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -653,6 +677,12 @@ Angles24
 			  
 	<!--Level 35 A Fish Out Of Water-->
 		<While Condition="IsQuestCompleted(66650) and Core.Me.Levels[ClassJobType.Fisher] &gt; 39 and not IsQuestCompleted(66651)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -717,6 +747,12 @@ Angles24
 			  
 	<!--Level 40 - Fishing In The Rain -->
 		<While Condition="IsQuestCompleted(66651) and Core.Me.Levels[ClassJobType.Fisher] &gt; 39 and not IsQuestCompleted(66652)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -831,6 +867,12 @@ Angles24
 	
 	<!--Level 45 - I Believe Fish Can Fly-->
 		<While Condition="IsQuestCompleted(66652) and Core.Me.Levels[ClassJobType.Fisher] &gt; 50 and not IsQuestCompleted(66653)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -897,6 +939,12 @@ Angles24
 			 
 	<!--Level 50 - So Long, and Thanks for All the Fish-->
 		<While Condition="IsQuestCompleted(66653) and Core.Me.Levels[ClassJobType.Fisher] &gt; 50 and not IsQuestCompleted(66654)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -984,6 +1032,12 @@ Angles24
 			  
 	<!--Level 50 - Plenty More Fish in the Sea-->
 		<While Condition="IsQuestCompleted(66654) and Core.Me.Levels[ClassJobType.Fisher] &gt; 50 and not IsQuestCompleted(67621)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<If Condition="not HasQuest(67621)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(67621)">
@@ -1070,6 +1124,12 @@ Angles24
 	
 	<!--Level 53 - The Icepick Challenge-->
 		<While Condition="IsQuestCompleted(67621) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(67622)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -1130,6 +1190,12 @@ Angles24
 	
 	<!--Level 55 - Invasion of the Supper Snatcher-->
 		<While Condition="IsQuestCompleted(67622) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(67623)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -1204,6 +1270,12 @@ Angles24
 	
 	<!--Level 58 - One Man's Fish Is Another Man's Poison-->
 		<While Condition="IsQuestCompleted(67623) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(67624)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -1289,6 +1361,12 @@ Angles24
 	
 	<!--Level 60 - Carpe Diem-->
 		<While Condition="IsQuestCompleted(67624) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(67625)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -1366,6 +1444,12 @@ Angles24
 	
 	<!--Level 60 - Wither Wawalago Wanders-->
 		<While Condition="IsQuestCompleted(67625) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(68431)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<If Condition="not HasQuest(68431)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(68431)">
@@ -1403,6 +1487,12 @@ Angles24
 	
 	<!--Level 61 A New Fishing Ex-spear-ience -->
 		<If Condition="not HasQuest(68458) and not IsQuestCompleted(68458) and IsQuestCompleted(68020) and IsQuestCompleted(66643) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
 			<NoCombatMoveTo XYZ="373.4206, -120.0014, -276.3537"/>
 			<If Condition="IsQuestAcceptQualified(68458)">
@@ -1432,6 +1522,12 @@ Angles24
 	
 	<!--Level 63 - A Rousing Reunion-->
 		<While Condition="IsQuestCompleted(68431) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(68432)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -1557,6 +1653,12 @@ Angles24
 	
 	<!--Level 65 - Search for the Spawning Grounds-->
 		<While Condition="IsQuestCompleted(68432) and Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not IsQuestCompleted(68433)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -1644,6 +1746,12 @@ Angles24
 	
 	<!--Level 68 - Always a Bigger Fish-->
 		<While Condition="IsQuestCompleted(68433) and Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not IsQuestCompleted(68434)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -1756,6 +1864,12 @@ Angles24
 	
 	<!--Level 70 - Farewell, and Thanks for the Fish-->
 		<While Condition="IsQuestCompleted(68434) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(68435)">
+			<!-- Leave Diadem -->
+			<If Condition="(WorldManager.ZoneId == 901)">
+				<RunCode Name="Leave"/>
+				<WaitTimer waitTime="7"/>
+				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+			</If>
 			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
@@ -2041,6 +2155,20 @@ Angles24
 				{
 					gearSets.First().Activate();
 					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
+		<CodeChunk name="Leave">
+			<![CDATA[
+				if (DutyManager.InInstance)
+				{
+				DutyManager.LeaveActiveDuty();
+				if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+				{
+				await Coroutine.Yield();
+				await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+				await Coroutine.Sleep(1000);
+				}
 				}
 			]]>
 		</CodeChunk>
