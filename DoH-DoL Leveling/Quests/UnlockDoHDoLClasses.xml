@@ -35,6 +35,7 @@
 					</If>		
 					<If Condition="ClassName == ClassJobType.Fisher">
 						<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>						
 					</If>
 				</If>
 			</If>
@@ -67,6 +68,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Culinarian">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -101,6 +103,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Armorer">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -135,6 +138,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Blacksmith">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -169,6 +173,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Carpenter">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -203,6 +208,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Leatherworker">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -237,6 +243,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Botanist">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -269,6 +276,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Goldsmith">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -303,6 +311,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Weaver">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -337,6 +346,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Alchemist">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
@@ -371,6 +381,7 @@
 						</If>		
 						<If Condition="ClassName == ClassJobType.Miner">
 							<AutoEquip UpdateGearSet="true"/>
+						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
 			</If>
