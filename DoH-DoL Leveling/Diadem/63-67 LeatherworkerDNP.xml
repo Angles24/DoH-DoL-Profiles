@@ -41,11 +41,11 @@ Authors:  Kayla / Angles24
 	
 	<!-- Reload Profile -->
 	<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 67">
-		<LLoadProfile Path="63-65 LeatherworkerDNP.xml"/>
+		<LLoadProfile Path="63-67 LeatherworkerDNP.xml"/>
 	</If>
 	
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 65 on Leatherworker, moving on." />	
+	<LogMessage Message="Congrats on Level 67 on Leatherworker, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>			
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>

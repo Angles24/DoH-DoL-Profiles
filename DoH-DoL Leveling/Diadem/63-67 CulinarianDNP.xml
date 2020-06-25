@@ -41,11 +41,11 @@ Authors:  Kayla / Angles24
 	
 	<!-- Reload Profile -->
 	<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 67">
-		<LLoadProfile Path="63-65 CulinarianDNP.xml"/>
+		<LLoadProfile Path="63-67 CulinarianDNP.xml"/>
 	</If>
 	
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 65 on Culinarian, moving on." />	
+	<LogMessage Message="Congrats on Level 67 on Culinarian, moving on." />	
 	<AutoEquip UpdateGearSet="true"/>		
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
