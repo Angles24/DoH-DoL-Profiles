@@ -1,0 +1,6 @@
+Changelog 02/08/2020
+
+- Updated for Chinese Client 5.2
+
+
+
