@@ -76,42 +76,42 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<!-- Check to see if we have Crafting at level 21 -->	
 			<If Condition="&crp; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 or not IsQuestCompleted(65677)">	
-					<LLoadProfile Path="Diadem/1-21 Carpenter.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Carpenter.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21 or not IsQuestCompleted(65831)">	
-					<LLoadProfile Path="Diadem/1-21 Blacksmith.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Blacksmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21 or not IsQuestCompleted(65813)">	
-					<LLoadProfile Path="Diadem/1-21 Armorer.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Armorer.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21 or not IsQuestCompleted(66150)">	
-					<LLoadProfile Path="Diadem/1-21 Goldsmith.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Goldsmith.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21 or not IsQuestCompleted(65672)">	
-					<LLoadProfile Path="Diadem/1-21 Leatherworker.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Leatherworker.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21 or not IsQuestCompleted(66126)">	
-					<LLoadProfile Path="Diadem/1-21 Weaver.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Weaver.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21 or not IsQuestCompleted(66117)">	
-					<LLoadProfile Path="Diadem/1-21 Alchemist.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Alchemist.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">	
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21 or not IsQuestCompleted(65794)">	
-					<LLoadProfile Path="Diadem/1-21 Culinarian.xml"/>
+					<LLoadProfile Path="Crafting/1-21 Culinarian.xml"/>
 				</If>
 			</If>
 		
