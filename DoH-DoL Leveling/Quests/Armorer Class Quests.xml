@@ -416,10 +416,16 @@ Angles24
 		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
+		<If Condition="ClassName != ClassJobType.Armorer">
+			<ChangeClass Job="Armorer"/>
+		</If>
         <LLHandOver ItemId="10682" RequireHq="True" NpcId="1001001" XYZ="-56.44318, 39.97361, 178.7289" QuestId="67578" StepId="4"/>
       </If>
       <If Condition="HasQuest(67578) and not IsQuestCompleted(67578) and GetQuestStep(67578) == 255 and HasItem(2001689)">
         <GetTo ZoneId="129" XYZ="6.48505, 20.3097, 1.08331"/>
+		<If Condition="ClassName != ClassJobType.Armorer">
+			<ChangeClass Job="Armorer"/>
+		</If>
         <LLTurnIn QuestId="67578" ItemId="2001689" NpcId="1013791" XYZ="6.48505, 20.3097, 1.08331"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
