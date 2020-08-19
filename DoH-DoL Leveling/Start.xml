@@ -37,16 +37,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 	<Order>	
 	
 	<RunCode Name="flying"/>
-	<RunCode Name="Disable_Flight"/>
-	
-	<!-- Check to see if we have CHocobo Flying -->
-			<If Condition="not IsQuestCompleted(67653)">
-				<LogMessage Message="Going to learn Chocobo Flying!" />
-				<RunCode Name="chocobo"/>
-				<LLoadProfile Path="Quests/Unlock Chocobo Flying.xml"/>	
-			</If>
-	
-	
+	<RunCode Name="Disable_Flight"/>	
 	
 	<!-- Check to see if we have unlock all Crafting Profiles -->	
 			<If Condition="not (IsQuestCompleted(65807) and IsQuestCompleted(65809) 
