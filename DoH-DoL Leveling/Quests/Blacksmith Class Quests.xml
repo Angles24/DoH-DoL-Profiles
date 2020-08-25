@@ -33,7 +33,7 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	<RunCode Name="SmallTalk"/>
 	<WaitTimer WaitTime="2"/>
-	<RunCode Name="Enable_Flight"/>
+	<RunCode Name="Disable_Flight"/>
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68155)">
@@ -51,9 +51,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65832) and not IsQuestCompleted(65832) and GetQuestStep(65832) == 255">
         <While Condition="not HasItem(2344)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2344,'Amount':1,'Enabled':true,'Type':'Blacksmith','QuickSynth':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
 		<If Condition="&meld; == 0">
@@ -78,9 +76,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65833) and not IsQuestCompleted(65833) and GetQuestStep(65833) == 255">
         <While Condition="not HasHqItem(5058)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':5058,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.35376, 42.49961, 211.5968"/>
         <LLTurnIn QuestId="65833" ItemId="5058" RequiresHq="True" NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968" RewardSlot="3"/>
@@ -107,9 +103,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65834) and not IsQuestCompleted(65834) and GetQuestStep(65834) == 3">
         <While Condition="not HasHqItem(2551)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2551,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-51.28564, 42.8, 195.5138"/>
         <LLHandOver ItemId="2551" RequiresHq="True" NpcId="1000971" XYZ="-51.28564, 42.8, 195.5138" QuestId="65834" StepId="3"/>
@@ -140,9 +134,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65835) and not IsQuestCompleted(65835) and GetQuestStep(65835) == 255">
         <While Condition="not HasHqItem(1778)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1778,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.35376, 42.49961, 211.5968"/>
         <LLTurnIn QuestId="65835" ItemId="1778" RequiresHq="True" NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968" RewardSlot="3"/>
@@ -161,9 +153,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65836) and not IsQuestCompleted(65836) and GetQuestStep(65836) == 255">
         <While Condition="not HasHqItem(2350)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2350,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
         <LLTurnIn QuestId="65836" ItemId="2350" RequiresHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344" RewardSlot="3"/>
@@ -186,19 +176,13 @@ Angles24
       </If>
       <If Condition="HasQuest(65837) and not IsQuestCompleted(65837) and GetQuestStep(65837) == 2">
         <While Condition="not HasHqItem(1723)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1723,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(1796)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1796,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(1659)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1659,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.35376, 42.49961, 211.5968"/>
         <LLHandOver ItemIds="1723, 1796, 1659" RequiresHq="True, True, True" NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968" QuestId="65837" StepId="2"/>
@@ -229,9 +213,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65838) and not IsQuestCompleted(65838) and GetQuestStep(65838) == 3">
         <While Condition="not HasHqItem(1663)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1663,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.35376, 42.49961, 211.5968"/>
 		<If Condition="&meld; == 0">
@@ -292,9 +274,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67544) and not IsQuestCompleted(67544) and GetQuestStep(67544) == 255">
         <While Condition="not HqHasAtLeast(12528,3)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12528,'Amount':3,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="419" XYZ="-190.566, -12.5484, -25.8185"/>
         <LLTurnIn QuestId="67544" ItemId="12528" RequiresHq="True" NpcId="1012509" XYZ="-190.566, -12.5484, -25.8185" RewardSlot="4"/>
@@ -317,9 +297,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67545) and not IsQuestCompleted(67545) and GetQuestStep(67545) == 2">
         <While Condition="not HasHqItem(10588)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10588,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="419" XYZ="-190.566, -12.5484, -25.8185"/>
         <LLHandOver ItemId="10588" RequiresHq="True" NpcId="1012509" XYZ="-190.566, -12.5484, -25.8185" QuestId="67545" StepId="2"/>
@@ -350,9 +328,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67546) and not IsQuestCompleted(67546) and GetQuestStep(67546) == 3">
         <While Condition="not HasHqItem(11877)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':11877,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="154" XYZ="445.4565, -0.9374095, -67.36859"/>
         <LLHandOver ItemId="11877" RequiresHq="True" NpcId="1008945" XYZ="445.4565, -0.9374095, -67.36859" QuestId="67546" StepId="3"/>
@@ -379,9 +355,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67547) and not IsQuestCompleted(67547) and GetQuestStep(67547) == 1">
         <While Condition="not HasHqItem(10591)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10591,'Amount':1,'Enabled':true,'Type':'Blacksmith','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="419" XYZ="-190.566, -12.5484, -25.8185"/>
         <LLHandOver ItemId="10591" NpcId="1012509" XYZ="-190.566, -12.5484, -25.8185" QuestId="67547" StepId="1"/>
@@ -447,9 +421,7 @@ Angles24
 			 <LLTalkTo NpcId="1021043" XYZ="-5.56958, 39.51749, 17.25787" QuestId="68152"/>
 			 </If>
 			 <If Condition="HasItem(17885)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17886,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
 		</While>
 		<GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
@@ -483,9 +455,7 @@ Angles24
 			 <LLTalkTo NpcId="1021042" XYZ="-184.9241, 41, 184.6799" QuestId="68153"/>
 			 </If>
 			 <If Condition="HasItem(17887)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17888,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
-		  <RunCode Name="Enable_Flight"/>
 		  </If>
         </While>
         <GetTo ZoneId="129" XYZ="-188.1376, 3.999918, 177.7511"/>
@@ -527,9 +497,7 @@ Angles24
 			 <LLTalkTo NpcId="1000995" XYZ="-52.01807, 42.7997, 192.2179" QuestId="68154"/>
 			 </If>
 			 <If Condition="HasItem(17889)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17890,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
-		  <RunCode Name="Enable_Flight"/>
 		  </If>
         </While>
         <GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
@@ -575,9 +543,7 @@ Angles24
 			 <LLTalkTo NpcId="1021050" XYZ="-79.17908, -6.999999, -67.70435" QuestId="68155"/>
 			 </If>
 			 <If Condition="HasItem(17891)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17892,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
-		  <RunCode Name="Enable_Flight"/>
 		  </If>
         </While>
         <GetTo ZoneId="628" XYZ="-135.7374, -4.417048, 199.0069"/>

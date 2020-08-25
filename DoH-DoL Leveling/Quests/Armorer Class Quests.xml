@@ -33,7 +33,7 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	<RunCode Name="SmallTalk"/>
 	<WaitTimer WaitTime="2"/>
-	<RunCode Name="Enable_Flight"/>
+	<RunCode Name="Disable_Flight"/>
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68134)">
@@ -51,9 +51,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65814) and not IsQuestCompleted(65814) and GetQuestStep(65814) == 255">
         <While Condition="not HasItem(2236)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2236,'Amount':1,'Enabled':true,'Type':'Armorer','QuickSynth':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
 		<If Condition="&meld; == 0">
@@ -78,9 +76,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65815) and not IsQuestCompleted(65815) and GetQuestStep(65815) == 255">
         <While Condition="not HasItem(5058)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':5058,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
         <LLTurnIn QuestId="65815" ItemId="5058" NpcId="1001001" XYZ="-56.44318, 39.97361, 178.7289" RewardSlot="3"/>
@@ -107,9 +103,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65816) and not IsQuestCompleted(65816) and GetQuestStep(65816) == 255">
         <While Condition="not HasHqItem(3096)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':3096,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
         <LLTurnIn QuestId="65816" ItemId="3096" RequiresHq="True" NpcId="1001001" XYZ="-56.44318, 39.97361, 178.7289" RewardSlot="3"/>
@@ -128,9 +122,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65817) and not IsQuestCompleted(65817) and GetQuestStep(65817) == 1">
         <While Condition="not HasHqItem(2502)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2502,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-32.02869, 41.49999, 208.3923"/>
         <LLHandOver ItemId="2502" RequiresHq="True" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923" QuestId="65817" StepId="1"/>
@@ -157,9 +149,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65818) and not IsQuestCompleted(65818) and GetQuestStep(65818) == 2">
         <While Condition="not HasHqItem(3149)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':3149,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-32.02869, 41.49999, 208.3923"/>
         <LLHandOver ItemId="3149" RequiresHq="True" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923" QuestId="65818" StepId="2"/>
@@ -182,19 +172,13 @@ Angles24
       </If>
       <If Condition="HasQuest(65819) and not IsQuestCompleted(65819) and GetQuestStep(65819) == 1">
         <While Condition="not HasHqItem(3861)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':3861,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(2830)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2830,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(3868)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':3868,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-32.02869, 41.49999, 208.3923"/>
         <LLHandOver ItemIds="3861, 2830, 3868" RequiresHq="True, True, True" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923" QuestId="65819" StepId="1"/>
@@ -217,9 +201,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65820) and not IsQuestCompleted(65820) and GetQuestStep(65820) == 1">
         <While Condition="not HasHqItem(3203)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':3203,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="129" XYZ="-202.6857, 16, 56.99243"/>
 		<If Condition="&meld; == 0">
@@ -300,9 +282,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67575) and not IsQuestCompleted(67575) and GetQuestStep(67575) == 255">
         <While Condition="not HasItem(10756)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10756,'Amount':1,'Enabled':true,'Type':'Armorer','QuickSynth':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-24.91, 40, 4.995"/>
         <LLTurnIn QuestId="67575" ItemId="10756" NpcId="1012518" XYZ="-24.91, 40, 4.995" RewardSlot="4"/>
@@ -341,9 +321,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67576) and not IsQuestCompleted(67576) and GetQuestStep(67576) == 255">
         <While Condition="not HasHqItem(10721)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10721,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-24.91, 40, 4.995"/>
         <LLTurnIn QuestId="67576" ItemId="10721" NpcId="1012518" RequiresHq="True" XYZ="-24.91, 40, 4.995" RewardSlot="4"/>
@@ -378,9 +356,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67577) and not IsQuestCompleted(67577) and GetQuestStep(67577) == 255">
         <While Condition="not HasItem(10667)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10667,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-24.91, 40, 4.995"/>
         <LLTurnIn QuestId="67577" ItemId="10667" NpcId="1012518" XYZ="-24.91, 40, 4.995"/>
@@ -411,9 +387,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67578) and not IsQuestCompleted(67578) and GetQuestStep(67578) == 4">
         <While Condition="not HasHqItem(10682)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10682,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
 		<If Condition="ClassName != ClassJobType.Armorer">
@@ -479,9 +453,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68131"/>
 			 </If>
 			 <If Condition="HasItem(17893)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17894,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-129.5407, -4.750016, 202.1004"/>
@@ -522,9 +494,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68132"/>
 			 </If>
 			 <If Condition="HasItem(17895)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17896,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-129.2014, -4.750015, 203.3975"/>
@@ -569,9 +539,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68133"/>
 			 </If>
 			 <If Condition="HasItem(17897)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17898,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-129.3481, -4.750015, 203.0172"/>
@@ -604,9 +572,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68134"/>
 			 </If>
 			 <If Condition="HasItem(17899)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17900,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-143.7726, -4.999999, 153.462"/>

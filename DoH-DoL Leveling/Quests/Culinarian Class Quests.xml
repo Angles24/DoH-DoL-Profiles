@@ -33,7 +33,7 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	<RunCode Name="SmallTalk"/>
 	<WaitTimer WaitTime="2"/>
-	<RunCode Name="Enable_Flight"/>
+	<RunCode Name="Disable_Flight"/>
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68144)">
@@ -51,9 +51,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65795) and not IsQuestCompleted(65795) and GetQuestStep(65795) == 255">
         <While Condition="not HasItem(4730)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4730,'Amount':1,'Enabled':true,'Type':'Culinarian','QuickSynth':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
         <LLTurnIn QuestId="65795" ItemId="4730" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235" RewardSlot="3"/>
@@ -72,9 +70,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65796) and not IsQuestCompleted(65796) and GetQuestStep(65796) == 255">
         <While Condition="not HasItem(4644)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4644,'Amount':1,'Enabled':true,'Type':'Culinarian','QuickSynth':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
         <LLTurnIn QuestId="65796" ItemId="4644" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235" RewardSlot="3"/>
@@ -101,9 +97,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65802) and not IsQuestCompleted(65802) and GetQuestStep(65802) == 3">
         <While Condition="not HasHqItem(4645)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4645,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-91.23376, 40.99999, -154.7723"/>
         <LLHandOver ItemId="4645" NpcId="1000973" RequiresHq="True" XYZ="-91.23376, 40.99999, -154.7723" QuestId="65802" StepId="3"/>
@@ -130,9 +124,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65803) and not IsQuestCompleted(65803) and GetQuestStep(65803) == 255">
         <While Condition="not HasHqItem(4677)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4677,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTurnIn QuestId="65803" ItemId="4677" RequiresHq="True" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" RewardSlot="3"/>
@@ -155,19 +147,13 @@ Angles24
       </If>
       <If Condition="HasQuest(65804) and not IsQuestCompleted(65804) and GetQuestStep(65804) == 255">
         <While Condition="not HasHqItem(4712)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4712,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(4733)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4733,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(4749)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4749,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTurnIn QuestId="65804" ItemId="4712,4733,4749" RequiresHq="true,true,true" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" RewardSlot="3"/>
@@ -190,9 +176,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65805) and not IsQuestCompleted(65805) and GetQuestStep(65805) == 255">
         <While Condition="not HasHqItem(4679)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4679,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTurnIn QuestId="65805" ItemId="4679" RequiresHq="True" NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" RewardSlot="3"/>
@@ -257,24 +241,16 @@ Angles24
       </If>	  
       <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 5">
         <While Condition="not HasHqItem(4647)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4647,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(4678)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4678,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(4715)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4715,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(4713)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4713,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="129" XYZ="9.170593, 20.9994, -15.21332"/>
         <LLHandOver ItemIds="4647, 4678, 4715, 4713" RequiresHq="True, True, True, True" NpcId="1001029" XYZ="9.170593, 20.9994, -15.21332" QuestId="65806" StepId="5"/>
@@ -337,14 +313,10 @@ Angles24
       </If>
       <If Condition="HasQuest(67580) and not IsQuestCompleted(67580) and GetQuestStep(67580) == 255">
         <While Condition="not HasHqItem(12842)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12842,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasItem(12846)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12846,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
         <LLTurnIn NpcId="1012568" ItemId="12842, 12846" RequiresHq="True, False" QuestId="67580" XYZ="69.7248, 44.3999, 135.967" RewardSlot="4"/>
@@ -379,19 +351,13 @@ Angles24
       </If>
       <If Condition="HasQuest(67581) and not IsQuestCompleted(67581) and GetQuestStep(67581) == 255">
         <While Condition="not HasHqItem(12849)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12849,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(12862)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12862,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(12855)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12855,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
         <LLTurnIn NpcId="1012568" ItemId="12849, 12862, 12855" RequiresHq="True, True, True" QuestId="67581" XYZ="69.7248, 44.3999, 135.967" RewardSlot="4"/>
@@ -414,9 +380,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67582) and not IsQuestCompleted(67582) and GetQuestStep(67582) == 255">
         <While Condition="not HasHqItem(12858)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12858,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-54.6426, 43.9917, -151.202"/>
         <LLTurnIn NpcId="1000947" ItemId="12858" RequiresHq="True" QuestId="67582" XYZ="-54.6426, 43.9917, -151.202"/>
@@ -443,19 +407,13 @@ Angles24
       </If>
       <If Condition="HasQuest(67583) and not IsQuestCompleted(67583) and GetQuestStep(67583) == 3">
         <While Condition="not HasHqItem(12854)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12854,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(12860)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12860,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <While Condition="not HasHqItem(12847)">
-		<RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12847,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </While>
         <GetTo ZoneId="128" XYZ="-80.906, 41, -139.3"/>
         <LLHandOver ItemId="12854, 12860, 12847" NpcId="1012576" RequiresHq="True, True, True" XYZ="-80.906, 41, -139.3" QuestId="67583" StepId="3"/>
@@ -519,9 +477,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68141"/>
 			 </If>
 			 <If Condition="HasItem(17933)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17934,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="68.3251, 33.06653, -702.5699"/>
@@ -566,9 +522,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68142"/>
 			 </If>
 			 <If Condition="HasItem(17935)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17936,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="32.37473, 50.99997, -821.4847"/>
@@ -616,9 +570,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68143"/>
 			 </If>
 			 <If Condition="HasItem(17937)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17938,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="32.76991, 50.99997, -821.1919"/>
@@ -692,9 +644,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68144"/>
 			 </If>
 			 <If Condition="HasItem(17939)">
-			 <RunCode Name="Disable_Flight"/>
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':17940,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
-		  <RunCode Name="Enable_Flight"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="32.38362, 50.99997, -820.6827"/>
