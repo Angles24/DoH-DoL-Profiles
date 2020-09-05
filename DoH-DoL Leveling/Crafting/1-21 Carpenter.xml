@@ -33,7 +33,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(65741) and not IsQuestCompleted(65741) and GetQuestStep(65741) == 255">
         <While Condition="not HasItem(5361)">
-          <LLisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65741" ItemId="5361" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -45,7 +45,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 5 -->	
 			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 5">
-				<LLisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While> 
 	
 	<!-- Do Level 5 Quest -->
@@ -58,7 +58,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(65675) and not IsQuestCompleted(65675) and GetQuestStep(65675) == 255">
         <While Condition="not (HqHasAtLeast(2219,3) or NqHasAtLeast(2219,3))">
-          <LLisbeth Json="[{'Item': 2219,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 2219,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65675" ItemIds="2219, 2219, 2219" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -70,7 +70,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 10 -->	
 			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 10">
-				<LLisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 	
 	<!-- Do Level 10 Quest -->
@@ -83,7 +83,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(65676) and not IsQuestCompleted(65676) and GetQuestStep(65676) == 255">
         <While Condition="not (HqHasAtLeast(5364, 12) or NqHasAtLeast(5364, 12))">
-          <LLisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65676" ItemId="5364" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -95,7 +95,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 15 -->	
 			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 15">
-				<LLisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 	
 	<!-- Do Level 15 Quest -->
@@ -112,14 +112,14 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 2 and not IsTodoChecked(65677, 2, 1)">
         <While Condition="not HasItem(1895)">
-          <LLisbeth Json="[{'Item': 1895,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 1895,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="209.5521, 0.9999819, 35.01941"/>
         <LLHandOver ItemId="1895" AllowHq="True" NpcId="1000200" XYZ="209.5521, 0.9999819, 35.01941" QuestId="65677"/>
       </If>
       <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 2 and not IsTodoChecked(65677, 2, 0)">
         <While Condition="not HasItem(1823)">
-          <LLisbeth Json="[{'Item': 1823,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 1823,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="133" XYZ="157.7019, 15.90038, -270.3442"/>
         <LLHandOver ItemId="1823" AllowHq="True" NpcId="1000254" XYZ="157.7019, 15.90038, -270.3442" QuestId="65677"/>
@@ -135,10 +135,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 21 -->	
 			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 16">
-				<LLisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>	
 			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21">
-				<LLisbeth Json="[{'Item': 5367,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5367,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 	</If>
 

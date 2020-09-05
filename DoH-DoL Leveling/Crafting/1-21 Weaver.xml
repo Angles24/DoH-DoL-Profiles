@@ -33,7 +33,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(66071) and not IsQuestCompleted(66071) and GetQuestStep(66071) == 255">
         <While Condition="not HasItem(5333)">
-          <LLisbeth Json="[{'Item': 5333,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 5333,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66071" ItemId="5333" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
@@ -45,7 +45,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 5 -->
 			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 5">
-				<LLisbeth Json="[{'Item': 5333,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5333,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 	
 	<!-- Do Level 5 Quest -->
@@ -58,7 +58,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(66123) and not IsQuestCompleted(66123) and GetQuestStep(66123) == 255">
         <While Condition="not (HqHasAtLeast(3274, 3) or NqHasAtLeast(3274, 3))">
-          <LLisbeth Json="[{'Item': 3274,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 3274,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66123" ItemIds="3274, 3274, 3274" AllowHq="True" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
@@ -70,7 +70,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 10 -->
 			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 10">
-				<LLisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 	
 	<!-- Do Level 10 Quest -->
@@ -83,7 +83,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(66125) and not IsQuestCompleted(66125) and GetQuestStep(66125) == 255">
         <While Condition="not (HqHasAtLeast(5324, 12) or NqHasAtLeast(5324, 12))">
-          <LLisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66125" ItemId="5324" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
@@ -95,10 +95,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 15 -->
 			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 12">
-				<LLisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 15">
-				<LLisbeth Json="[{'Item': 5334,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5334,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 	
 	<!-- Do Level 15 Quest -->
@@ -115,10 +115,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(66126) and not IsQuestCompleted(66126) and GetQuestStep(66126) == 255">
         <While Condition="not HasAtLeast(2670,2)">
-          <LLisbeth Json="[{'Item': 2670,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 2670,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <While Condition="not HasItem(3322)">
-          <LLisbeth Json="[{'Item': 3322,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+          <Lisbeth Json="[{'Item': 3322,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn ItemIds="2670,3322" AllowHq="True" QuestId="66126" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
@@ -130,10 +130,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	
 	<!-- Grind to 21 -->
 			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 17">
-				<LLisbeth Json="[{'Item': 5334,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5334,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21">
-				<LLisbeth Json="[{'Item': 5325,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				<Lisbeth Json="[{'Item': 5325,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</While>
 	</If>
 
