@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>			
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Cloth -->	
+	<!-- Grade 3 Skybuilders' Cloth -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 50) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 63)">
 		<If Condition="ClassName != ClassJobType.Weaver">
 			<ChangeClass Job="Weaver" />
@@ -29,10 +29,10 @@ Authors:  Kayla / Angles24
 			<AutoEquip UpdateGearSet="true"/>		
 			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':29805,'Amount':15,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31197,'Amount':15,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':29805,'Amount':30,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>	
+				<Lisbeth Json="[{'Group':1,'Item':31197,'Amount':30,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>	
 			</If>
 		</If> 		
 	</If>

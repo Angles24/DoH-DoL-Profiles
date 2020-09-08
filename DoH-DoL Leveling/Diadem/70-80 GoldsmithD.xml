@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>	
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Stone -->	
+	<!-- Grade 3 Skybuilders' Stone -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 69) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 80)">
 		<If Condition="ClassName != ClassJobType.Goldsmith">
 			<ChangeClass Job="Goldsmith" />
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Goldsmith">
 			<AutoEquip UpdateGearSet="true"/>			
 			<WaitTimer waitTime="10"/>
-			<Lisbeth Json="[{'Group':1,'Item':29819,'Amount':15,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':31211,'Amount':15,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>
 		</If> 		
 	</If>
 	

@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>	
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Dye -->	
+	<!-- Grade 3 Skybuilders' Dye -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 62) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 67)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist" />
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoEquip UpdateGearSet="true"/>		
 			<WaitTimer waitTime="10"/>
-			<Lisbeth Json="[{'Group':1,'Item':29814,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':31206,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 		</If> 			
 	</If>
 	

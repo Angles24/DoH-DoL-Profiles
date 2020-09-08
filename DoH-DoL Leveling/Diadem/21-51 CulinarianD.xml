@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>			
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Hemp Milk -->	
+	<!-- Grade 3 Skybuilders' Hemp Milk -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 20) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 51)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian" />
@@ -29,10 +29,10 @@ Authors:  Kayla / Angles24
 			<AutoEquip UpdateGearSet="true"/>		
 			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':29799,'Amount':15,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>	
+				<Lisbeth Json="[{'Group':1,'Item':31191,'Amount':15,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>	
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':29799,'Amount':30,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>	
+				<Lisbeth Json="[{'Group':1,'Item':31191,'Amount':30,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>	
 			</If>
 		</If> 		
 	</If>

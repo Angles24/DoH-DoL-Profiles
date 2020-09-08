@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>	
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Broom -->	
+	<!-- Grade 3 Skybuilders' Broom -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 62) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 67)">
 		<If Condition="ClassName != ClassJobType.Weaver">
 			<ChangeClass Job="Weaver" />
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Weaver">
 			<AutoEquip UpdateGearSet="true"/>		
 			<WaitTimer waitTime="10"/>
-			<Lisbeth Json="[{'Group':1,'Item':29813,'Amount':15,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':31205,'Amount':15,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
 		</If> 		
 	</If>
 	

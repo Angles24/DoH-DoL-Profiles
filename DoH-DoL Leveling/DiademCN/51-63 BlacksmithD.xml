@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24 
+-->
+<Profile>
+<Name>Crafting Blacksmith to 63</Name>
+<Order>
+	
+	<!-- Leave Diadem -->
+	<If Condition="(WorldManager.ZoneId == 901)">
+		<RunCode Name="Leave"/>
+		<WaitTimer waitTime="7"/>
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+	</If>
+		
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<RunCode Name="TurnIn"/>
+		</While>			
+	</If>
+	
+	<!-- Grade 2 Skybuilders' Nails -->	
+	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 50) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63)">
+		<If Condition="ClassName != ClassJobType.Blacksmith">
+			<ChangeClass Job="Blacksmith" />
+		</If>		
+		<If Condition="ClassName == ClassJobType.Blacksmith">
+			<AutoEquip UpdateGearSet="true"/>		
+			<WaitTimer waitTime="10"/>
+			<If Condition="Core.Me.HasAura(1411)">
+				<Lisbeth Json="[{'Group':1,'Item':29801,'Amount':15,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+			</If>
+			<If Condition="not Core.Me.HasAura(1411)">
+				<Lisbeth Json="[{'Group':1,'Item':29801,'Amount':30,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+			</If>
+		</If> 
+	</If>
+	
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<RunCode Name="TurnIn"/>
+		</While>			
+	</If>
+	
+	<!-- Reload Profile -->
+	<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">
+		<LLoadProfile Path="51-63 BlacksmithD.xml"/>
+	</If>
+	
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 63 on Blacksmith, moving on." />	
+	<AutoEquip UpdateGearSet="true"/>		
+	<WaitTimer waitTime="10"/>
+	<LLoadProfile Path="../Start.xml"/>
+		
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.IshgardHandinBase.HandinNew();
+		await LlamaLibrary.IshgardHandinBase.GatheringHandin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>

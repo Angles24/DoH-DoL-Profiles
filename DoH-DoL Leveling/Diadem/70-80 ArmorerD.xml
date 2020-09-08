@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>	
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Mesail -->	
+	<!-- Grade 3 Skybuilders' Mesail -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 69) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 80)">
 		<If Condition="ClassName != ClassJobType.Armorer">
 			<ChangeClass Job="Armorer" />
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Armorer">
 			<AutoEquip UpdateGearSet="true"/>		
 			<WaitTimer waitTime="10"/>
-			<Lisbeth Json="[{'Group':1,'Item':29818,'Amount':15,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':31210,'Amount':15,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
 		</If> 		
 	</If>
 	

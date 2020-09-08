@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>	
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Rug -->	
+	<!-- Grade 3 Skybuilders' Rug -->	
 	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 62) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 67)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker" />
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Leatherworker">
 			<AutoEquip UpdateGearSet="true"/>			
 			<WaitTimer waitTime="10"/>
-			<Lisbeth Json="[{'Group':1,'Item':29812,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':31204,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 		</If>			
 	</If>
 	
