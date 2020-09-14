@@ -2,7 +2,6 @@ Requirements:
 	+ LLamaLibrary (BotBase) https://github.com/nt153133/LlamaLibrary/archive/master.zip
 	+ AutoRepair (Plugin) https://github.com/nt153133/AutoRepair/archive/master.zip
 	+ ExBuddy (Plugin) https://github.com/Entrax643/ExBuddy/archive/master.zip
-	+ Reduce.cs (Provided in the folder)
 	+ Level 30 or higher DoH to learn Desynth
 	+ Level 80 BTN & MIN (For farming Survival Manuals)
 	+ Pre Craft level 20/40/51/63/70 Gear Sets & Weapons (Lisbeth profiles provided in the Lisbeth Folder) and put gear in Armory Chest
@@ -14,7 +13,6 @@ Installation:
 	1. Download and place LLamaLibrary in BotBases, rename folder to "LLamaLibrary"
 	2. Download and place AutoRepair in Plugins, rename folder to "AutoRepair"
 	3. Download and place Exbuddy in Plugins, rename folder to "ExBuddy"
-	4. Place the Reduce.cs file "RB Directory\BotBases\LlamaLibrary\Reduce" replace the current version.
 	5. Restart your RebornBuddy if you didn't have it closed when doing steps 1 to 3.
 	6. Load up Fishing 1-80 and happy leveling!
 
