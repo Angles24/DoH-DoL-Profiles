@@ -7,7 +7,7 @@ Angles24
   <!ENTITY MinFish "7"> <!-- Minimum amount of fish to catch before changing spots. -->
   <!ENTITY MaxFish "15"> <!-- Maximum amount of fish to catch before changing spots -->
   <!ENTITY Sit "True"> <!-- Set this to "True" if you want to sit while fishing. -->
-  <!ENTITY EXPManuals "1"> 
+  <!ENTITY EXPManuals "1"> <!-- set this to 0 to disable the farming and using of exp manuals (this requires having botanist and miner at max level) -->
 
 ]>
 <Profile>
