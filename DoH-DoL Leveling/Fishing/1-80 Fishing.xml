@@ -7,6 +7,7 @@ Angles24
   <!ENTITY MinFish "7"> <!-- Minimum amount of fish to catch before changing spots. -->
   <!ENTITY MaxFish "15"> <!-- Maximum amount of fish to catch before changing spots -->
   <!ENTITY Sit "True"> <!-- Set this to "True" if you want to sit while fishing. -->
+  <!ENTITY EXPManuals "1"> 
 
 ]>
 <Profile>
@@ -14,7 +15,9 @@ Angles24
 	<KillRadius>90</KillRadius>	
 	<Order>
 		
-	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />
+
+	<RunCode Name="Enable_Flight"/>
 			
 	<While Condition="not IsQuestCompleted(65688)">
 		<If Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian) and (not Core.Player.ClassLevel &gt; 29)">
@@ -163,21 +166,26 @@ Angles24
 	
 	 <!--Level 5 - Bigger Fish To Fry-->
 		<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 9 and not IsQuestCompleted(66645) and IsQuestCompleted(66644)">
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>	
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66645)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(66645)">
@@ -217,21 +225,25 @@ Angles24
 	
 	<!--Level 10 - The Princess and the Fish-->
 		<While Condition="not IsQuestCompleted(66646) and Core.Me.Levels[ClassJobType.Fisher] &gt; 9 and IsQuestCompleted(66645)">
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66646)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(66646)">
@@ -272,21 +284,25 @@ Angles24
 				</If>
 			</If>
 		</While>
-	<!--End The Princess and the Fish-->	
-	
+	<!--End The Princess and the Fish-->
+
 	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 20 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 20">
-		<While Condition="not HasAtLeast(12668,1)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-		</While>
-		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher" />
-		</While> 
-		<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-			<RunCode Name="CSManual"/>
-		</While>
+		<If Condition="&EXPManuals; == 1">
+			<While Condition="not HasAtLeast(12668,1)">
+				<RunCode Name="Disable_Flight"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+			</While>
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher" />
+			</While> 
+			<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+				<RunCode Name="CSManual"/>
+			</While>
+		</If>
+		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -301,9 +317,13 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 20 and HasAtLeast(29717,5) and Core.Me.HasAura(46)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
+				<RunCode Name="Disable_Flight"/>	
+				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+				<RunCode Name="Enable_Flight"/>	
 			</While>
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>				
+			<RunCode Name="Disable_Flight"/>	
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+			<RunCode Name="Enable_Flight"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 20 and HasAtLeast(29717,1) and Core.Me.HasAura(46)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -313,7 +333,7 @@ Angles24
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;" />
 					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;" />
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;" />
-					<FishSpot XYZ="-535.6393, 304.5598, 694.5786" Heading="1.150729" Sit="&Sit;" />
+					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;" />
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;" />
 					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;" />
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;" />
@@ -337,21 +357,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66647)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" />
 				<If Condition="IsQuestAcceptQualified(66647)">
@@ -418,21 +442,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66648)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" />
 				<If Condition="IsQuestAcceptQualified(66648)">
@@ -473,20 +501,24 @@ Angles24
 			</If>
 		</While>
 	<!--End A Fish in Hot Water-->
-	
+
 	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 40 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 40">
-		<While Condition="not HasAtLeast(12668,1)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-		</While>
-		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher" />
-		</While> 
-		<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-			<RunCode Name="CSManual"/>
-		</While>
+		<If Condition="&EXPManuals; == 1">
+			<While Condition="not HasAtLeast(12668,1)">
+				<RunCode Name="Disable_Flight"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+			</While>
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher" />
+			</While> 
+			<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+				<RunCode Name="CSManual"/>
+			</While>
+		</If>
+		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -501,9 +533,13 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 40 and HasAtLeast(29717,5) and Core.Me.HasAura(46)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
+				<RunCode Name="Disable_Flight"/>	
+				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+				<RunCode Name="Enable_Flight"/>	
 			</While>
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>				
+			<RunCode Name="Disable_Flight"/>	
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+			<RunCode Name="Enable_Flight"/>		
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 40 and HasAtLeast(29717,1) and Core.Me.HasAura(46)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -513,7 +549,7 @@ Angles24
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;" />
 					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;" />
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;" />
-					<FishSpot XYZ="-535.6393, 304.5598, 694.5786" Heading="1.150729" Sit="&Sit;" />
+					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;" />
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;" />
 					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;" />
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;" />
@@ -537,21 +573,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66649)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(66649)">
@@ -601,21 +641,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66650)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(66650)">
@@ -683,21 +727,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66651)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(66651)">
@@ -753,21 +801,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66652)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(66652)">
@@ -809,20 +861,24 @@ Angles24
 			</If>
 		</While>	
 	<!--End Fishing In The Rain -->
-	
+
 	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 51 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 51">
-		<While Condition="not HasAtLeast(12668,1)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-		</While>
-		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher" />
-		</While> 
-		<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-			<RunCode Name="CSManual"/>
-		</While>
+		<If Condition="&EXPManuals; == 1">
+			<While Condition="not HasAtLeast(12668,1)">
+				<RunCode Name="Disable_Flight"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+			</While>
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher" />
+			</While> 
+			<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+				<RunCode Name="CSManual"/>
+			</While>
+		</If>
+		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -837,9 +893,13 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 51 and HasAtLeast(29717,5) and Core.Me.HasAura(46)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
+				<RunCode Name="Disable_Flight"/>	
+				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+				<RunCode Name="Enable_Flight"/>	
 			</While>
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>				
+			<RunCode Name="Disable_Flight"/>	
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+			<RunCode Name="Enable_Flight"/>		
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 51 and HasAtLeast(29717,1) and Core.Me.HasAura(46)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -849,7 +909,7 @@ Angles24
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;" />
 					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;" />
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;" />
-					<FishSpot XYZ="-535.6393, 304.5598, 694.5786" Heading="1.150729" Sit="&Sit;" />
+					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;" />
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;" />
 					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;" />
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;" />
@@ -873,21 +933,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66653)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" /> 
 				<If Condition="IsQuestAcceptQualified(66653)">
@@ -945,21 +1009,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66654)">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938" />
 				<If Condition="IsQuestAcceptQualified(66654)">
@@ -1064,20 +1132,24 @@ Angles24
 			</If>
 		</While>  
 	<!--End Plenty More Fish in the Sea-->
-	
+
 	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 63 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 63">
-		<While Condition="not HasAtLeast(12668,1)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-		</While>
-		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher" />
-		</While> 
-		<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-			<RunCode Name="CSManual"/>
-		</While>
+		<If Condition="&EXPManuals; == 1">
+			<While Condition="not HasAtLeast(12668,1)">
+				<RunCode Name="Disable_Flight"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+			</While>
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher" />
+			</While> 
+			<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+				<RunCode Name="CSManual"/>
+			</While>
+		</If>
+		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -1092,9 +1164,13 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 63 and HasAtLeast(29717,5) and Core.Me.HasAura(46)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
+				<RunCode Name="Disable_Flight"/>	
+				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+				<RunCode Name="Enable_Flight"/>	
 			</While>
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>				
+			<RunCode Name="Disable_Flight"/>	
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+			<RunCode Name="Enable_Flight"/>		
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 63 and HasAtLeast(29717,1) and Core.Me.HasAura(46)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -1104,7 +1180,7 @@ Angles24
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;" />
 					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;" />
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;" />
-					<FishSpot XYZ="-535.6393, 304.5598, 694.5786" Heading="1.150729" Sit="&Sit;" />
+					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;" />
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;" />
 					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;" />
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;" />
@@ -1119,8 +1195,6 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<AutoEquip UpdateGearSet="true"/>
 	</If>
-
-	<RunCode Name="Enable_Flight"/>
 	
 	<!--Level 53 - The Icepick Challenge-->
 		<While Condition="IsQuestCompleted(67621) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(67622)">
@@ -1130,21 +1204,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67622)">
 				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075" />
 				<LLPickupQuest NpcId="1013250" QuestId="67622" XYZ="100.3585, 15.00001, 24.3075" />
@@ -1196,21 +1274,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67623)">
 				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075" /> 
 				<If Condition="IsQuestAcceptQualified(67623)">
@@ -1229,8 +1311,10 @@ Angles24
 				<If Condition="GetQuestStep(67623) == 3">
 					<While Condition="not HqHasAtLeast(12769,3)"> 						
 						<If Condition="not HasAtLeast(12711,10)">
+							<RunCode Name="Disable_Flight"/>
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
+						<RunCode Name="Enable_Flight"/>
 						<If Condition="ClassName != ClassJobType.Fisher">
 							<ChangeClass Job="Fisher" />
 						</If> 
@@ -1276,21 +1360,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67624)">
 				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075" /> 
 				<If Condition="IsQuestAcceptQualified(67624)">
@@ -1316,8 +1404,10 @@ Angles24
 				<If Condition="GetQuestStep(67624) == 4">
 					<While Condition="not HqHasAtLeast(12793,1)"> 						
 						<If Condition="not HasAtLeast(12712,10)">
+							<RunCode Name="Disable_Flight"/>
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12712,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
+						<RunCode Name="Enable_Flight"/>
 						<If Condition="ClassName != ClassJobType.Fisher">
 							<ChangeClass Job="Fisher" />
 						</If> 
@@ -1357,8 +1447,6 @@ Angles24
 		</While>	  
 	<!--End One Man's Fish Is Another Man's Poison-->
 	
-	<RunCode Name="Enable_Flight"/>
-	
 	<!--Level 60 - Carpe Diem-->
 		<While Condition="IsQuestCompleted(67624) and Core.Me.Levels[ClassJobType.Fisher] &gt; 62 and not IsQuestCompleted(67625)">
 			<!-- Leave Diadem -->
@@ -1367,21 +1455,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67625)">
 				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075" /> 
 				<If Condition="IsQuestAcceptQualified(67625)">
@@ -1410,8 +1502,10 @@ Angles24
 				<If Condition="GetQuestStep(67625) == 255">
 					<While Condition="not HqHasAtLeast(12829,1)"> 
 						<If Condition="not HasAtLeast(12711,10)">
+							<RunCode Name="Disable_Flight"/>
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
+						<RunCode Name="Enable_Flight"/>
 						<If Condition="ClassName != ClassJobType.Fisher">
 							<ChangeClass Job="Fisher" />
 						</If> 
@@ -1528,21 +1622,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68432)">
 				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161" /> 
 				<If Condition="IsQuestAcceptQualified(68432)">
@@ -1598,15 +1696,19 @@ Angles24
 	
 	<!--Start - Level 70 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70">
-		<While Condition="not HasAtLeast(12668,1)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-		</While>
-		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher" />
-		</While> 
-		<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-			<RunCode Name="CSManual"/>
-		</While>
+		<If Condition="&EXPManuals; == 1">
+			<While Condition="not HasAtLeast(12668,1)">
+				<RunCode Name="Disable_Flight"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+			</While>
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher" />
+			</While> 
+			<While Condition="not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+				<RunCode Name="CSManual"/>
+			</While>
+		</If>
+		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -1621,9 +1723,13 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and HasAtLeast(29717,5) and Core.Me.HasAura(46)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
+				<RunCode Name="Disable_Flight"/>	
+				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+				<RunCode Name="Enable_Flight"/>	
 			</While>
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>				
+			<RunCode Name="Disable_Flight"/>	
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+			<RunCode Name="Enable_Flight"/>	
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and HasAtLeast(29717,1) and Core.Me.HasAura(46)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -1633,7 +1739,7 @@ Angles24
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;" />
 					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;" />
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;" />
-					<FishSpot XYZ="-535.6393, 304.5598, 694.5786" Heading="1.150729" Sit="&Sit;" />
+					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;" />
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;" />
 					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;" />
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;" />
@@ -1649,8 +1755,6 @@ Angles24
 		<AutoEquip UpdateGearSet="true"/>
 	</If>
 	
-	<RunCode Name="Enable_Flight"/>
-	
 	<!--Level 65 - Search for the Spawning Grounds-->
 		<While Condition="IsQuestCompleted(68432) and Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not IsQuestCompleted(68433)">
 			<!-- Leave Diadem -->
@@ -1659,21 +1763,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68433)">
 				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161" /> 
 				<If Condition="IsQuestAcceptQualified(68433)">
@@ -1752,21 +1860,25 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="CSManual"/>
-			</While> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="CSManual"/>
+				</While> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(12668,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68434)">
 				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161" /> 
 				<If Condition="IsQuestAcceptQualified(68434)">
@@ -1870,15 +1982,19 @@ Angles24
 				<WaitTimer waitTime="7"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
 			</If>
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-			</While>
-			<If Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher" />
-			</If> 
-			<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-				<RunCode Name="RSManual"/>
-			</While>
+			<If Condition="&EXPManuals; == 1">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
+					<RunCode Name="Disable_Flight"/>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+				</While>
+				<If Condition="ClassName != ClassJobType.Fisher">
+					<ChangeClass Job="Fisher" />
+				</If> 
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+					<RunCode Name="RSManual"/>
+				</While>
+			</If>
+			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68435)">
 				<GetTo ZoneId="129" XYZ="-154.8356, 3.999995, 199.8452"/>
 				<If Condition="IsQuestAcceptQualified(68435)">
@@ -1934,15 +2050,19 @@ Angles24
 	
 	<!--Start - Level 80 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 80">
-		<While Condition="not HasAtLeast(26553,1)">
-			<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-		</While>
-		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher" />
-		</While> 
-		<While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-			<RunCode Name="RSManual"/>
-		</While>
+		<If Condition="&EXPManuals; == 1">
+			<While Condition="not HasAtLeast(26553,1)">
+				<RunCode Name="Disable_Flight"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+			</While>
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher" />
+			</While> 
+			<While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+				<RunCode Name="RSManual"/>
+			</While>
+		</If>
+		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -1957,9 +2077,13 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and HasAtLeast(29717,5) and Core.Me.HasAura(46)">
 			<While Condition="WorldManager.ZoneId != 901">
+				<RunCode Name="Disable_Flight"/>
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
+				<RunCode Name="Enable_Flight"/>
 			</While>
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>				
+			<RunCode Name="Disable_Flight"/>	
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
+			<RunCode Name="Enable_Flight"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and HasAtLeast(29717,1) and Core.Me.HasAura(46)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -1969,7 +2093,7 @@ Angles24
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;" />
 					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;" />
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;" />
-					<FishSpot XYZ="-535.6393, 304.5598, 694.5786" Heading="1.150729" Sit="&Sit;" />
+					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;" />
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;" />
 					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;" />
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;" />
