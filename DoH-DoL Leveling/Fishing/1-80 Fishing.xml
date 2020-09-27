@@ -322,8 +322,7 @@ Angles24
 				<RunCode Name="Enable_Flight"/>	
 			</While>
 			<RunCode Name="Disable_Flight"/>	
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
-			<RunCode Name="Enable_Flight"/>
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>	
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 20 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -538,8 +537,7 @@ Angles24
 				<RunCode Name="Enable_Flight"/>	
 			</While>
 			<RunCode Name="Disable_Flight"/>	
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
-			<RunCode Name="Enable_Flight"/>		
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>			
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 40 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -602,7 +600,7 @@ Angles24
 				<If Condition="GetQuestStep(66649) == 255">
 					<While Condition="not NqHasAtLeast(4963,1)"> 
 						<If Condition="not HasAtLeast(2586,10)">
-							<GetTo ZoneId="129" XYZ="-246.6011, 16.2, 37.12512" /> 
+							<GetTo ZoneId="129" XYZ="-246.1743, 16.2, 40.10863" /> 
 							<BuyItem ItemId="2586" ItemCount="50" DialogOption="2" NpcId="1003254" XYZ="-246.6011, 16.2, 37.12512" />
 						</If>
 						<GetTo ZoneId="154" XYZ="-43.92079, -40.88041, 241.8634" />
@@ -898,8 +896,7 @@ Angles24
 				<RunCode Name="Enable_Flight"/>	
 			</While>
 			<RunCode Name="Disable_Flight"/>	
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
-			<RunCode Name="Enable_Flight"/>		
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>			
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 51 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -1169,8 +1166,7 @@ Angles24
 				<RunCode Name="Enable_Flight"/>	
 			</While>
 			<RunCode Name="Disable_Flight"/>	
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
-			<RunCode Name="Enable_Flight"/>		
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>			
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 63 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -1729,7 +1725,6 @@ Angles24
 			</While>
 			<RunCode Name="Disable_Flight"/>	
 			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
-			<RunCode Name="Enable_Flight"/>	
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
@@ -2082,8 +2077,7 @@ Angles24
 				<RunCode Name="Enable_Flight"/>
 			</While>
 			<RunCode Name="Disable_Flight"/>	
-			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>		
-			<RunCode Name="Enable_Flight"/>
+			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>	
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;" />
