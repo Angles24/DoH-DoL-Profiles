@@ -69,8 +69,7 @@ Authors:  Kayla / Angles24
 	<CodeChunk Name="TurnIn">
 	<![CDATA[
 		Logging.Write("[Handin] calling");
-		await LlamaLibrary.IshgardHandinBase.HandinNew();
-		await LlamaLibrary.IshgardHandinBase.GatheringHandin();
+		await LlamaLibrary.IshgardHandinBase.Handin();
 	]]>
 	</CodeChunk>
 </CodeChunks>
