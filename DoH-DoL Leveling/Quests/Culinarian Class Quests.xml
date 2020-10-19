@@ -38,7 +38,7 @@ Angles24
 	
 	<If Condition="not IsQuestCompleted(68144)">
 		<ChangeClass Job="Culinarian" />
-		<AutoEquip UpdateGearSet="true"/>
+      <AutoInventoryEquip/>
 	</If>
     <If Condition="ClassName == ClassJobType.Culinarian">      
       <!-- Releasing a Burden (Level 20) -->
@@ -58,7 +58,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Winning Friends with Aldgoat (Level 25) -->
       <If Condition="IsQuestCompleted(65795) and not HasQuest(65796) and not IsQuestCompleted(65796) and Core.Player.ClassLevel &gt; 24">
@@ -77,7 +77,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- The Chefsbane Cometh (Level 30) -->
       <If Condition="IsQuestCompleted(65796) and not HasQuest(65802) and not IsQuestCompleted(65802) and Core.Player.ClassLevel &gt; 29">
@@ -108,7 +108,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Of Cooks and Books (Level 35) -->
       <If Condition="IsQuestCompleted(65802) and not HasQuest(65803) and not IsQuestCompleted(65803) and Core.Player.ClassLevel &gt; 34">
@@ -131,7 +131,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Diplomacy of the Skillet (Level 40) -->
       <If Condition="IsQuestCompleted(65803) and not HasQuest(65804) and not IsQuestCompleted(65804) and Core.Player.ClassLevel &gt; 49">
@@ -160,7 +160,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- A Taste of Home (Level 45) -->
       <If Condition="IsQuestCompleted(65804) and not HasQuest(65805) and not IsQuestCompleted(65805) and Core.Player.ClassLevel &gt; 44">
@@ -183,7 +183,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Revenge of the Chefsbane (Level 50) -->
       <If Condition="IsQuestCompleted(65805) and not HasQuest(65806) and not IsQuestCompleted(65806) and Core.Player.ClassLevel &gt; 49">
@@ -261,7 +261,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Wait on Me (Level 50) -->
       <If Condition="IsQuestCompleted(65806) and not HasQuest(67579) and not IsQuestCompleted(67579) and Core.Player.ClassLevel &gt; 49">
@@ -285,7 +285,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- A Spoonful Less Sugar (Level 53) -->
       <If Condition="IsQuestCompleted(67579) and not HasQuest(67580) and not IsQuestCompleted(67580) and Core.Player.ClassLevel &gt; 52">
@@ -323,7 +323,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Looking for Some Hot Stuff (Level 55) -->
       <If Condition="IsQuestCompleted(67580) and not HasQuest(67581) and not IsQuestCompleted(67581) and Core.Player.ClassLevel &gt; 54">
@@ -364,7 +364,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Love Meat Tender (Level 58) -->
       <If Condition="IsQuestCompleted(67581) and not HasQuest(67582) and not IsQuestCompleted(67582) and Core.Player.ClassLevel &gt; 57">
@@ -387,7 +387,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- The Spirit of Hospitality (Level 60) -->
       <If Condition="IsQuestCompleted(67582) and not HasQuest(67583) and not IsQuestCompleted(67583) and Core.Player.ClassLevel &gt; 59">
@@ -424,7 +424,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Flavors of the Far East (Level 60) -->
       <If Condition="IsQuestCompleted(67583) and not HasQuest(68140) and not IsQuestCompleted(68140) and Core.Player.ClassLevel &gt; 59">
@@ -444,7 +444,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Rice to the Occasion (Level 63) -->
       <If Condition="IsQuestCompleted(68140) and not HasQuest(68141) and not IsQuestCompleted(68141) and Core.Player.ClassLevel &gt; 62">
@@ -489,7 +489,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- A Broth from the Brine (Level 65) -->
       <If Condition="IsQuestCompleted(68141) and not HasQuest(68142) and not IsQuestCompleted(68142) and Core.Player.ClassLevel &gt; 64">
@@ -534,7 +534,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Teach a Man to Make Fish (Lvel 68) -->
       <If Condition="IsQuestCompleted(68142) and not HasQuest(68143) and not IsQuestCompleted(68143) and Core.Player.ClassLevel &gt; 67">
@@ -590,7 +590,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- The Way to a Father's Heart (Level 70) -->
       <If Condition="IsQuestCompleted(68143) and not HasQuest(68144) and not IsQuestCompleted(68144) and Core.Player.ClassLevel &gt; 69">
@@ -652,7 +652,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
     </If>
 	

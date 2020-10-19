@@ -18,7 +18,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="Enable_Flight" />
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 63 - Thick Skin-->
@@ -69,7 +69,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -106,7 +106,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 64">
 			<LogMessage Message="Congrats on Level 64, moving on." />			
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 64 Grind-->
@@ -131,7 +131,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 65">
 			<LogMessage Message="Congrats on Level 65, moving on." />			
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 65 Grind-->
@@ -192,7 +192,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -218,7 +218,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 66">
 			<LogMessage Message="Congrats on Level 66, moving on." />			
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 66 Grind-->
@@ -243,7 +243,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 68">
 			<LogMessage Message="Congrats on Level 68, moving on." />			
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>	
+		<AutoInventoryEquip/>	
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 68 Grind-->
@@ -278,7 +278,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
@@ -301,7 +301,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -327,7 +327,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 70">
 			<LogMessage Message="Congrats on Level 70, moving on." />			
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>	
+		<AutoInventoryEquip/>	
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 70 Grind-->
@@ -396,7 +396,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>

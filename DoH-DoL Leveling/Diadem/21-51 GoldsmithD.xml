@@ -26,7 +26,7 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Goldsmith" />
 		</If>		
 		<If Condition="ClassName == ClassJobType.Goldsmith">
-			<AutoEquip UpdateGearSet="true"/>			
+			<AutoInventoryEquip/>			
 			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':31187,'Amount':15,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>	
@@ -51,7 +51,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 51 on Goldsmith, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>		
+	<AutoInventoryEquip/>		
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		

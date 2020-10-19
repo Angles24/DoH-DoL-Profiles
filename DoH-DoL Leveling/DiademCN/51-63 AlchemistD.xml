@@ -26,7 +26,7 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Alchemist" />
 		</If>		
 		<If Condition="ClassName == ClassJobType.Alchemist">
-			<AutoEquip UpdateGearSet="true"/>		
+			<AutoInventoryEquip/>		
 			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':29806,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
@@ -51,7 +51,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 63 on Alchemist, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>		
+	<AutoInventoryEquip/>		
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		

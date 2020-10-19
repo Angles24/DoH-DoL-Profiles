@@ -34,7 +34,7 @@
 						<ChangeClass Job="Fisher" />
 					</If>		
 					<If Condition="ClassName == ClassJobType.Fisher">
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>						
 					</If>
 				</If>
@@ -67,7 +67,7 @@
 							<ChangeClass Job="Culinarian" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Culinarian">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -102,7 +102,7 @@
 							<ChangeClass Job="Armorer" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Armorer">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -137,7 +137,7 @@
 							<ChangeClass Job="Blacksmith" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Blacksmith">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -172,7 +172,7 @@
 							<ChangeClass Job="Carpenter" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Carpenter">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -207,7 +207,7 @@
 							<ChangeClass Job="Leatherworker" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Leatherworker">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -242,7 +242,7 @@
 							<ChangeClass Job="Botanist" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Botanist">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -275,7 +275,7 @@
 							<ChangeClass Job="Goldsmith" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Goldsmith">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -310,7 +310,7 @@
 							<ChangeClass Job="Weaver" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Weaver">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -345,7 +345,7 @@
 							<ChangeClass Job="Alchemist" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Alchemist">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>
@@ -380,7 +380,7 @@
 							<ChangeClass Job="Miner" />
 						</If>		
 						<If Condition="ClassName == ClassJobType.Miner">
-							<AutoEquip UpdateGearSet="true"/>
+							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
 						</If>
 				</If>

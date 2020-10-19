@@ -16,7 +16,7 @@ Angles24
 				
     <If Condition="ClassName == ClassJobType.Miner">	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 40 - To Die For-->
@@ -43,7 +43,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
@@ -66,7 +66,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 46">
 			<LogMessage Message="Congrats on Level 46, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 46 Grind-->
@@ -95,7 +95,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
@@ -118,7 +118,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 50">
 			<LogMessage Message="Congrats on Level 50, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 50 Grind-->
@@ -184,7 +184,7 @@ Angles24
 				</While>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -206,7 +206,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 51">
 			<LogMessage Message="Congrats on Level 51, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 51 Grind-->

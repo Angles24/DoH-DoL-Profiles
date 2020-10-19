@@ -21,7 +21,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 		<ChangeClass Job="Weaver" />
 	</If>
 	<If Condition="ClassName == ClassJobType.Weaver">	
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 	
 	<!-- Do Level 1 Quest -->
 	<!-- My First Needle (Level 1) -->
@@ -40,7 +40,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 5 -->
@@ -65,7 +65,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>	
 	
 	<!-- Grind to 10 -->
@@ -90,7 +90,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 15 -->
@@ -125,7 +125,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 21 -->
@@ -139,7 +139,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 
 	<If Condition="Core.Player.ClassLevel &gt; 20">
 		<LogMessage Message="Congrats on Level 21, moving on." />
-		<AutoEquip UpdateGearSet="true"/>		
+		<AutoInventoryEquip/>		
 		<WaitTimer waitTime="3"/>
 	</If>
 	

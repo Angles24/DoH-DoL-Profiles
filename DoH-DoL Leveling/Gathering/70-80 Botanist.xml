@@ -18,7 +18,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="Enable_Flight" />
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>		
+		<AutoInventoryEquip/>		
 		<WaitTimer WaitTime="10"/>
   
 		<!-- Level 70-71 -->
@@ -39,7 +39,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 71">
 			<LogMessage Message="Congrats on Level 71, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 71-->
@@ -62,7 +62,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 73">
 			<LogMessage Message="Congrats on Level 73, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 73-->
@@ -85,7 +85,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 75">
 			<LogMessage Message="Congrats on Level 75, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 75-->
@@ -108,7 +108,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 76">
 			<LogMessage Message="Congrats on Level 76, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 76-->
@@ -131,7 +131,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 78">
 			<LogMessage Message="Congrats on Level 78, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 78-->
@@ -154,7 +154,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 80">
 			<LogMessage Message="Congrats on Level 80, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 80-->		

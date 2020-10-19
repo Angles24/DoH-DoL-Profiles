@@ -78,7 +78,7 @@ Angles24
 				
     <If Condition="ClassName == ClassJobType.Fisher">
 		<WaitTimer WaitTime="2"/>	
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		
 	<!--Level 1 - My First Fishing Rod-->
 		<While Condition="not IsQuestCompleted(66644)">
@@ -104,7 +104,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 				</If>
 			</If>
@@ -158,7 +158,7 @@ Angles24
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 10">	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<RunCode Name="Dismount"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="Desynth"/>
@@ -212,7 +212,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -275,7 +275,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -345,7 +345,7 @@ Angles24
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 20">	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 	</If>
 		
 	<!--Level 15 - Every Fish Has a Silver Lining-->
@@ -423,7 +423,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -490,7 +490,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -560,7 +560,7 @@ Angles24
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 40">	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 	</If>
 	
 	<!--Level 25 - A Game Of Cat And Fish-->
@@ -620,7 +620,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -707,7 +707,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -780,7 +780,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -849,7 +849,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -919,7 +919,7 @@ Angles24
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 51">	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 	</If>
 	
 	<!--Level 45 - I Believe Fish Can Fly-->
@@ -987,7 +987,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -1067,10 +1067,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 2584">
-							<RunCode Name="FSHWeapon" />
-							<WaitTimer WaitTime="3" />
-						</While>
+            <AutoInventoryEquip/>
 					</If>
 				</If>
 				<If Condition="GetQuestStep(66654) == 255">
@@ -1080,12 +1077,9 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 2584">
-						<RunCode Name="FSHWeapon" />
-						<WaitTimer WaitTime="3" />
-					</While>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -1120,7 +1114,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -1189,7 +1183,7 @@ Angles24
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 63">	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 	</If>
 	
 	<!--Level 53 - The Icepick Challenge-->
@@ -1251,7 +1245,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -1338,7 +1332,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -1433,7 +1427,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -1521,7 +1515,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>
@@ -1565,7 +1559,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -1601,7 +1595,7 @@ Angles24
 			<WaitTimer WaitTime="2"/>
 			<RunCode Name="SmallTalk"/>
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="2"/>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.OffHand].RawItemId != 17726">
 				<RunCode Name="SPEARWeapon" />
@@ -1678,7 +1672,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -1747,7 +1741,7 @@ Angles24
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 70">	
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 	</If>
 	
 	<!--Level 65 - Search for the Spawning Grounds-->
@@ -1837,7 +1831,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -1959,7 +1953,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
 					<WaitTimer WaitTime="2"/>
@@ -2030,7 +2024,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
-						<AutoEquip UpdateGearSet="true"/>
+						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
 						<WaitTimer WaitTime="2"/>

@@ -42,7 +42,7 @@ Kayla / Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SwitchDoLJob"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="2"/>
 		
 	<If Condition="ClassName == (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)">	

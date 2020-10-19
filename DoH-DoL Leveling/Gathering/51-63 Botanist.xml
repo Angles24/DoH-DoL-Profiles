@@ -18,7 +18,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="Enable_Flight" />
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 50 - Call From The Clouds-->
@@ -42,7 +42,7 @@ Angles24
 			    <WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -64,7 +64,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 51">
 			<LogMessage Message="Congrats on Level 51, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 51-->
@@ -87,7 +87,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 52">
 			<LogMessage Message="Congrats on Level 52, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 52-->
@@ -110,7 +110,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 54">
 			<LogMessage Message="Congrats on Level 54, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 54-->
@@ -145,7 +145,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
@@ -157,7 +157,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -193,7 +193,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 55">
 			<LogMessage Message="Congrats on Level 55, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 55-->
@@ -240,7 +240,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
@@ -251,7 +251,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -279,7 +279,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 58">
 			<LogMessage Message="Congrats on Level 58, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 58-->
@@ -318,7 +318,7 @@ Angles24
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>	
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
@@ -329,7 +329,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -357,7 +357,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 60">
 			<LogMessage Message="Congrats on Level 60, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 60-->
@@ -432,7 +432,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -458,7 +458,7 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>	
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -484,7 +484,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 62">
 			<LogMessage Message="Congrats on Level 62, moving on." />			
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>	
+			<AutoInventoryEquip/>	
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 62-->
@@ -509,7 +509,7 @@ Angles24
 		<If Condition="Core.Player.ClassLevel == 63">
 			<LogMessage Message="Congrats on Level 63, moving on." />			  
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 63-->

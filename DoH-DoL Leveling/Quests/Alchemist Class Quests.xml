@@ -38,7 +38,7 @@ Angles24
 	
 	<If Condition="not IsQuestCompleted(67976)">
 		<ChangeClass Job="Alchemist" />
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 	</If>
     <If Condition="ClassName == ClassJobType.Alchemist">
       <!-- The Arcanist's Tome (Level 20) -->
@@ -64,7 +64,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Practical Alchemy (Level 25) -->
       <If Condition="IsQuestCompleted(66118) and not HasQuest(66119) and not IsQuestCompleted(66119) and Core.Player.ClassLevel &gt; 24">
@@ -83,7 +83,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Baleful Brews (Level 30) -->
       <If Condition="IsQuestCompleted(66119) and not HasQuest(66120) and not IsQuestCompleted(66120) and Core.Player.ClassLevel &gt; 29">
@@ -113,7 +113,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Cease and Assist (Level 35) -->
       <If Condition="IsQuestCompleted(66120) and not HasQuest(66183) and not IsQuestCompleted(66183) and Core.Player.ClassLevel &gt; 34">
@@ -140,7 +140,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Might Made Right (Level 40) -->
       <If Condition="IsQuestCompleted(66183) and not HasQuest(66184) and not IsQuestCompleted(66184) and Core.Player.ClassLevel &gt; 39">
@@ -159,7 +159,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Ultimate Alchemy (Level 45) -->
       <If Condition="IsQuestCompleted(66184) and not HasQuest(66185) and not IsQuestCompleted(66185) and Core.Player.ClassLevel &gt; 44">
@@ -184,7 +184,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Momentary Miracle (Level 50) -->
       <If Condition="IsQuestCompleted(66185) and not HasQuest(66186) and not IsQuestCompleted(66186) and Core.Player.ClassLevel &gt; 49">
@@ -233,7 +233,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Without a Trace (Level 50) -->
       <If Condition="IsQuestCompleted(66186) and not HasQuest(67601) and not IsQuestCompleted(67601) and Core.Player.ClassLevel &gt; 49">
@@ -253,7 +253,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Magic Marks the Spot (Level 53) -->
       <If Condition="IsQuestCompleted(67601) and not HasQuest(67602) and not IsQuestCompleted(67602) and Core.Player.ClassLevel &gt; 52">
@@ -284,7 +284,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- From Hells (Level 55) -->
       <If Condition="IsQuestCompleted(67602) and not HasQuest(67603) and not IsQuestCompleted(67603) and Core.Player.ClassLevel &gt; 54">
@@ -319,7 +319,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Burden of Proof (Level 58) -->
       <If Condition="IsQuestCompleted(67603) and not HasQuest(67604) and not IsQuestCompleted(67604) and Core.Player.ClassLevel &gt; 57">
@@ -350,7 +350,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- What Death can Join Together (Level 60) -->
       <If Condition="IsQuestCompleted(67604) and not HasQuest(67605) and not IsQuestCompleted(67605) and Core.Player.ClassLevel &gt; 59">
@@ -393,7 +393,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Not Quite Dead Yet (Level 60) -->
       <If Condition="IsQuestCompleted(67605) and not HasQuest(67972) and not IsQuestCompleted(67972) and Core.Player.ClassLevel &gt; 59">
@@ -421,7 +421,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Forbidden Blade (Level 63) -->
       <If Condition="IsQuestCompleted(67972) and not HasQuest(67973) and not IsQuestCompleted(67973) and Core.Player.ClassLevel &gt; 62">
@@ -462,7 +462,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Do Goldsmiths Dream of Gilded Sheep (Level 65) -->
       <If Condition="IsQuestCompleted(67973) and not HasQuest(67974) and not IsQuestCompleted(67974) and Core.Player.ClassLevel &gt; 64">
@@ -507,7 +507,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- No Sin Unpunished (Level 68) -->
       <If Condition="IsQuestCompleted(67974) and not HasQuest(67975) and not IsQuestCompleted(67975) and Core.Player.ClassLevel &gt; 67">
@@ -556,7 +556,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- A Love Beyond Lifetimes (Level 70) -->
       <If Condition="IsQuestCompleted(67975) and not HasQuest(67976) and not IsQuestCompleted(67976) and Core.Player.ClassLevel &gt; 69">
@@ -605,7 +605,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
     </If>
 	
