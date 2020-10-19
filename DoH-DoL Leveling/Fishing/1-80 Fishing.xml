@@ -971,7 +971,7 @@ Angles24
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
 						<If Condition="not HasAtLeast(2605,10)">									
-							<MoveTo Name="Merchant &amp; Mender" XYZ="-410.6966, 210.8949, -276.1425" />
+							<LisbethTravel Zone="155" Subzone="402" Position="-414.2118, 211, -271.992"/>
 							<BuyItem ItemId="2605" ItemCount="50" DialogOption="4" NpcId="1006800" XYZ="-410.6966, 210.8949, -276.1425" />
 						</If>							
 						<ExFish Stealth="True" Mooch="0" Bait="Hoverworm" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(5040,5)"> <!-- Cloud Cutter -->
@@ -1816,9 +1816,8 @@ Angles24
 					</While>
 					<If Condition="HqHasAtLeast(17950,3)"> 
 						<RunCode Name="Disable_Flight"/>
-						<TeleportTo Name="Onokoro" Force="True" AetheryteId="106" />
-						<LisbethTravel Area="The Ruby Sea" Position="524.5593, -0.007716715, -244.8616"/>	
-						<LLHandOver ItemId="17950" StepId="4" QuestId="68433" NpcId="1021402" XYZ="524.5593, -0.007716715, -244.8616" />
+						<LisbethTravel Zone="613" Subzone="2767" Position="524.2776, -0.01325494, -245.0822"/>
+						<LLHandOver ItemId="17950" RequiresHq="true" StepId="4" QuestId="68433" NpcId="1021402" XYZ="524.5593, -0.007716715, -244.8616"/>
 						<RunCode Name="Enable_Flight"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
