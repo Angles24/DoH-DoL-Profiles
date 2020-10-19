@@ -549,10 +549,7 @@ Angles24
         <LLTalkTo NpcId="1018982" XYZ="-83.08539, 18.04999, -191.1498" QuestId="68143" StepId="1"/>
       </If>
       <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 2">
-        <TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
-        <NoCombatMoveTo XYZ="327.994, -120.3422, -306.8709"/>
-        <RunCode Name="Move_Forward"/>
-        <NoCombatMoveTo XYZ="300.4709, -117.914, -376.2548" Distance="1"/>
+        <LisbethTravel Zone="613" Subzone="2750" Position="300.0954, -117.3616, -378.4639"/>
         <LLTalkTo NpcId="1020157" XYZ="300.2212, -117.2961, -378.2559" QuestId="68143" StepId="2"/>
       </If>
       <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 3">
@@ -629,6 +626,7 @@ Angles24
         <LLTalkTo NpcId="1020168" XYZ="-441.825, 260.0884, 662.1958" QuestId="68144" StepId="5"/>
       </If>
       <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 6">
+        <LisbethTravel Zone="620" Subzone="2606" Position="-555.569, 266.595, 526.512"/>
         <GetTo ZoneId="620" XYZ="-562.0519, 266.2191, 526.7198"/>
         <NoCombatMoveTo XYZ="-562.0519, 266.2191, 526.7198"/>
         <LLTalkTo NpcId="1020169" XYZ="-561.4557, 266.2381, 525.4443" QuestId="68144" StepId="6"/>
