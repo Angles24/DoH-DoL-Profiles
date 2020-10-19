@@ -2128,8 +2128,11 @@ Angles24
 		</CodeChunk>
 		<CodeChunk Name="Desynth">
 			<![CDATA[
-				Logging.Write("[Desynth] calling");
-				await LlamaLibrary.Reduce.Reduce.Desynth();
+            Logging.Write("[Desynth] Calling");
+            IEnumerable<BagSlot> fish = InventoryManager.FilledSlots
+                                                        .Where(bs => bs.IsDesynthesizable && bs.Item.Rarity < 2 && bs.Item.EquipmentCatagory == ItemUiCategory.Seafood && bs.Item.StackSize == 999)
+                                                        .OrderBy(x => x.Item.ItemLevel);
+            await LlamaLibrary.Reduce.Reduce.Desynth(fish);
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="SmallTalk">
