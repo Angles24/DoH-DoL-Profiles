@@ -421,7 +421,7 @@ Angles24
 			 <LLTalkTo NpcId="1021043" XYZ="-5.56958, 39.51749, 17.25787" QuestId="68152"/>
 			 </If>
 			 <If Condition="HasItem(17885)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17886,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17886,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
         </If>
 		</While>
 		<GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
@@ -455,7 +455,7 @@ Angles24
 			 <LLTalkTo NpcId="1021042" XYZ="-184.9241, 41, 184.6799" QuestId="68153"/>
 			 </If>
 			 <If Condition="HasItem(17887)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17888,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17888,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
 		  </If>
         </While>
         <GetTo ZoneId="129" XYZ="-188.1376, 3.999918, 177.7511"/>
@@ -497,7 +497,7 @@ Angles24
 			 <LLTalkTo NpcId="1000995" XYZ="-52.01807, 42.7997, 192.2179" QuestId="68154"/>
 			 </If>
 			 <If Condition="HasItem(17889)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17890,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17890,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
 		  </If>
         </While>
         <GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
@@ -543,7 +543,7 @@ Angles24
 			 <LLTalkTo NpcId="1021050" XYZ="-79.17908, -6.999999, -67.70435" QuestId="68155"/>
 			 </If>
 			 <If Condition="HasItem(17891)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17892,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17892,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
 		  </If>
         </While>
         <GetTo ZoneId="628" XYZ="-135.7374, -4.417048, 199.0069"/>
