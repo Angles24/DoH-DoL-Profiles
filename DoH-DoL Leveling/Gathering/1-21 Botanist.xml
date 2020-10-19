@@ -203,15 +203,7 @@ Angles24
 		<!--Start Grind to Level 21-->
 		<If Condition="Core.Player.ClassLevel &lt; 21">
 			<LogMessage Message="Starting the Grind to Level 21." />
-			<GetTo ZoneId="152" XYZ="-192.3292, 3.769932, 291.1943" /> <!-- The Hawthorne Hut -->
-			<ExGather while="Core.Player.ClassLevel &lt; 21">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="-146.5669, 0.174731, 343.7414" />
-				</HotSpots>
-				<Slot>5</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':4834, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Botanist'}]"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 21">
 			<LogMessage Message="Congrats on Level 21, moving on." />

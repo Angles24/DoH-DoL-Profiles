@@ -47,18 +47,9 @@ Angles24
 		  <!--End Level 1-->
 
 		<!--Start - Grind to Level 6-->
-		<If Condition="Core.Player.ClassLevel &lt; 6">
-			<LogMessage Message="Starting the Grind to Level 6." />
-			<GetTo ZoneId="140" XYZ="61.26291, 45, -227.1376" /> <!-- Horizon -->			
-			<ExGather while="Core.Player.ClassLevel &lt; 6">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="264.0081,56.19608,206.0519" />
-				</HotSpots>
-				<Slot>2</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
-		</If>
+		<While Condition="Core.Player.ClassLevel &lt; 6">
+			<Lisbeth Json="[{'Group':0, 'Item':5106, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':6, 'ConditionalJob':'Miner'}]"/>
+		</While>
 		<If Condition="Core.Player.ClassLevel == 6">
 			<LogMessage Message="Congrats on Level 6, moving on." />			  
 			<WaitTimer WaitTime="2"/>
@@ -95,20 +86,10 @@ Angles24
 		  <!--End Level 5-->
 
 		<!--Start - Grind to Level 11-->
-		<If Condition="Core.Player.ClassLevel &lt; 11">
-			<LogMessage Message="Starting the Grind to Level 11." />
-			<GetTo ZoneId="140" XYZ="61.26291, 45, -227.1376" /> <!-- Horizon -->			
-			<ExGather while="Core.Player.ClassLevel &lt; 11">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="42.69921,56.98661,349.928" />
-				</HotSpots>				
-				<ItemNames>
-					<ItemName>Tin Ore</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
-		</If>
+		<While Condition="Core.Player.ClassLevel &lt; 11">
+			<LogMessage Message="Starting the Grind to Level 11." />		
+			<Lisbeth Json="[{'Group':0, 'Item':5107, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':11, 'ConditionalJob':'Miner'}]"/>
+		</While>
 		<If Condition="Core.Player.ClassLevel == 11">
 			<LogMessage Message="Congrats on Level 11, moving on." />			  
 			<WaitTimer WaitTime="2"/>
@@ -147,18 +128,10 @@ Angles24
 		  <!--End Level 10-->
 
 		<!--Start - Grind to Level 16-->
-		<If Condition="Core.Player.ClassLevel &lt; 16">
+		<While Condition="Core.Player.ClassLevel &lt; 16">
 			<LogMessage Message="Starting the Grind to Level 16." />
-			<GetTo ZoneId="140" XYZ="61.26291, 45, -227.1376" /> <!-- Horizon -->			
-			<ExGather while="Core.Player.ClassLevel &lt; 16">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="288.9167, 62.34205, -218.6282" />
-				</HotSpots>				
-				<Slot>2</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
-		</If>
+			<Lisbeth Json="[{'Group':0, 'Item':5111, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':16, 'ConditionalJob':'Miner'}]"/>
+		</While>
 		<If Condition="Core.Player.ClassLevel == 16">
 			<LogMessage Message="Congrats on Level 16, moving on." />			  
 			<WaitTimer WaitTime="2"/>
@@ -202,17 +175,8 @@ Angles24
 
 		<!--Start - Grind to Level 21-->
 		<If Condition="Core.Player.ClassLevel &lt; 21">
-			<LogMessage Message="Starting the Grind to Level 21." />
-			<GetTo ZoneId="145" XYZ="-386.3481, -59, 134.0927" /> <!-- Camp Drybone -->			
-			<ExGather while="Core.Player.ClassLevel &lt; 21">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="-183.1978, -34.69329, -37.8227" />
-				</HotSpots>				
-				<Slot>5</Slot>
-				<GatherRotation>Chance</GatherRotation>
-				<DiscoverUnknowns>True</DiscoverUnknowns>
-			</ExGather>
+			<LogMessage Message="Starting the Grind to Level 21." />	
+			<Lisbeth Json="[{'Group':0, 'Item':5130, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Miner'}]"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 21">
 			<LogMessage Message="Congrats on Level 21, moving on." />			  
