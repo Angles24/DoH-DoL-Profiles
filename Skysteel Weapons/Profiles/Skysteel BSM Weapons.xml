@@ -7,7 +7,7 @@ Required: LLamaLibrary BotBase
 -->
 <Profile>
 	<Name>Dragonsung Cross-pein Hammer</Name>
-	<Order>	
+	<Order>
 	
 	<RunCode Name="Disable_Flight"/>
 	
@@ -18,7 +18,7 @@ Required: LLamaLibrary BotBase
 	</If>
 	<If Condition="ClassName == ClassJobType.Blacksmith and Core.Player.ClassLevel &gt; 79">
 		
-		<If Condition="not IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
 				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
@@ -33,7 +33,7 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
@@ -44,62 +44,62 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="not (HasItem(29613) or HasItem(29624) or HasItem(29635))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-			<BuyItem ItemId="29613" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>	
-		</If>	
+			<BuyItem ItemId="29613" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+		</If>
 		
-		<While Condition="HasItem(29613)"> <!-- Skysteel Cross-pein Hammer -->
-			<If Condition="not HqHasAtLeast(29646,20)"> <!-- Oddly Specific Rivets -->
+		<While Condition="HasItem(29613)"><!-- Skysteel Cross-pein Hammer -->
+			<If Condition="not HqHasAtLeast(29646,20)"><!-- Oddly Specific Rivets -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29646,'Amount':20,'Hq':true,'Enabled':true,'Type':'Blacksmith'}]"/>
 			</If>
-			<If Condition="HasItem(29613) and HqHasAtLeast(29646,20)">	
+			<If Condition="HasItem(29613) and HqHasAtLeast(29646,20)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29613">
 					<ChangeClass Job="Blacksmith"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29613">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
-				</While>	
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29624" SelectString="0"/> <!-- Buy Skysteel Cross-pein Hammer +1 -->
+				</While>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29624" SelectString="0"/><!-- Buy Skysteel Cross-pein Hammer +1 -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</If>					
+			</If>
 		</While>
 		
-		<While Condition="HasItem(29624)"> <!-- Skysteel Cross-pein Hammer +1 -->
-			<If Condition="not HqHasAtLeast(29654,30)"> <!-- Oddly Specific Fitting -->					
+		<While Condition="HasItem(29624)"><!-- Skysteel Cross-pein Hammer +1 -->
+			<If Condition="not HqHasAtLeast(29654,30)"><!-- Oddly Specific Fitting -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29654,'Amount':30,'Hq':true,'Enabled':true,'Type':'Blacksmith'}]"/>
 			</If>
-			<If Condition="HasItem(29624) and HqHasAtLeast(29654,30)">	
+			<If Condition="HasItem(29624) and HqHasAtLeast(29654,30)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29624">
 					<ChangeClass Job="Blacksmith"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29624">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29635" SelectString="1"/> <!-- Buy Dragonsung Cross-pein Hammer -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29635" SelectString="1"/><!-- Buy Dragonsung Cross-pein Hammer -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</If>					
+			</If>
 		</While>
 		
-		<If Condition="HasItem(29635) and HasQuest(69385)"> <!-- Dragonsung Cross-pein Hammer -->
+		<If Condition="HasItem(29635) and HasQuest(69385)"><!-- Dragonsung Cross-pein Hammer -->
 			<While Condition="ClassName != ClassJobType.Blacksmith">
 				<ChangeClass Job="Blacksmith"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29635">
-				<RunCode Name="SkysteelBSM3"/> <!-- Dragonsung Cross-pein Hammer -->
+				<RunCode Name="SkysteelBSM3"/><!-- Dragonsung Cross-pein Hammer -->
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
 				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 			</If>
-		</If>		
+		</If>
 		
-	</If>	
+	</If>
 	
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	

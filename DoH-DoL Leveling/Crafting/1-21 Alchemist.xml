@@ -14,13 +14,13 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Alchemist to 21</Name>
-	<Order>	
+	<Order>
 	
 	<!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->
 	<If Condition="ClassName != ClassJobType.Alchemist">
-		<ChangeClass Job="Alchemist" />
+		<ChangeClass Job="Alchemist"/>
 	</If>
-	<If Condition="ClassName == ClassJobType.Alchemist">		
+	<If Condition="ClassName == ClassJobType.Alchemist">
 		<AutoInventoryEquip/>
 	
 	<!-- Do Level 1 Quest -->
@@ -38,7 +38,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66113" ItemId="5487" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -63,7 +63,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66114" ItemId="4564" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -88,7 +88,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66116" ItemId="5515" NpcId="1002299" Nq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -124,7 +124,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -136,10 +136,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	</If>
 	
 	<If Condition="Core.Player.ClassLevel &gt; 20">
-		<LogMessage Message="Congrats on Level 21, moving on." />
-		<AutoInventoryEquip/>				
+		<LogMessage Message="Congrats on Level 21, moving on."/>
+		<AutoInventoryEquip/>
 		<WaitTimer waitTime="3"/>
-	</If>	
+	</If>
 	
 	<EtxSellItem ItemIds="2330,2961,5361,5364,5385,5367,
 						  5106,5091,2652,3014,2357,3019,5057,
@@ -152,7 +152,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
-	<CodeChunks>		
+	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
 			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!-- Credits: kagepande -->
 
@@ -12,7 +12,7 @@
 <!--Unlocking Fisher-->
 		<If Condition="not IsQuestCompleted(66670)">
 			<If Condition="not HasQuest(66670)">
-				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919" /> <!-- N'nmulika-->
+				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
 				<If Condition="IsQuestAcceptQualified(66670)">
 					<LLTalkTo NpcId="1000859" QuestId="66670" XYZ="-166.4096, 4.54997, 152.0395"/>
 				</If>
@@ -20,7 +20,7 @@
 		</If>
 		<If Condition="not IsQuestCompleted(66643)">
 			<If Condition="not HasQuest(66643)">
-				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919" /> <!-- N'nmulika-->
+				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
 				<If Condition="IsQuestAcceptQualified(66643)">
 					<PickupQuest NpcId="1000859" QuestId="66643" XYZ="-166.4096, 4.54997, 152.0395"/>
 				</If>
@@ -31,11 +31,11 @@
 					<LLTurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
 					<WaitTimer WaitTime="2"/>
 					<If Condition="ClassName != ClassJobType.Fisher">
-						<ChangeClass Job="Fisher" />
-					</If>		
+						<ChangeClass Job="Fisher"/>
+					</If>
 					<If Condition="ClassName == ClassJobType.Fisher">
 						<AutoInventoryEquip/>
-						<WaitTimer WaitTime="5"/>						
+						<WaitTimer WaitTime="5"/>
 					</If>
 				</If>
 			</If>
@@ -46,7 +46,7 @@
     <If Condition="not IsQuestCompleted(65727)">
 		<If Condition="not HasQuest(65727)">
 			<GetTo ZoneId="128" XYZ="-61.18506, 42.29994, -161.9528"/>
-				<If Condition="IsQuestAcceptQualified(65727)">					
+				<If Condition="IsQuestAcceptQualified(65727)">
 					<LLTalkTo NpcId="1000946" QuestId="65727" XYZ="-61.18506, 42.29994, -161.9528"/>
 				</If>
 		</If>
@@ -54,7 +54,7 @@
     <If Condition="not IsQuestCompleted(65807)">
 		<If Condition="not HasQuest(65807)">
 			<GetTo ZoneId="128" XYZ="-61.18506, 42.29994, -161.9528"/>
-				<If Condition="IsQuestAcceptQualified(65807)">					
+				<If Condition="IsQuestAcceptQualified(65807)">
 					<PickupQuest NpcId="1000946" QuestId="65807" XYZ="-61.18506, 42.29994, -161.9528"/>
 				</If>
 		</If>
@@ -64,8 +64,8 @@
 					<LLTurnIn QuestId="65807" StepId="255" NpcId="1000947" InteractDistance="1.0" XYZ="-54.52119, 44.17484, -149.4378"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Culinarian">
-							<ChangeClass Job="Culinarian" />
-						</If>		
+							<ChangeClass Job="Culinarian"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Culinarian">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -99,8 +99,8 @@
 					<LLTurnIn QuestId="65809" StepId="255" NpcId="1001000" InteractDistance="1.0" XYZ="-32.81106, 41.49998, 207.5591"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Armorer">
-							<ChangeClass Job="Armorer" />
-						</If>		
+							<ChangeClass Job="Armorer"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Armorer">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -134,8 +134,8 @@
 					<LLTurnIn QuestId="65827" StepId="255" NpcId="1000997" InteractDistance="1.0" XYZ="-32.22669, 44.6637, 184.621"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Blacksmith">
-							<ChangeClass Job="Blacksmith" />
-						</If>		
+							<ChangeClass Job="Blacksmith"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Blacksmith">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -169,8 +169,8 @@
 					<LLTurnIn QuestId="65674" StepId="255" NpcId="1000153" InteractDistance="1.0" XYZ="-45.85313, -1.250001, 57.11108"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Carpenter">
-							<ChangeClass Job="Carpenter" />
-						</If>		
+							<ChangeClass Job="Carpenter"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Carpenter">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -204,8 +204,8 @@
 					<LLTurnIn QuestId="65641" StepId="255" NpcId="1000691" InteractDistance="1.0" XYZ="71.08187, 8, -165.4199"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Leatherworker">
-							<ChangeClass Job="Leatherworker" />
-						</If>		
+							<ChangeClass Job="Leatherworker"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Leatherworker">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -239,8 +239,8 @@
 					<LLTurnIn QuestId="65539" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-233.4313, 6.248232, -168.6552"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Botanist">
-							<ChangeClass Job="Botanist" />
-						</If>		
+							<ChangeClass Job="Botanist"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Botanist">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -272,8 +272,8 @@
 					<LLTurnIn QuestId="66144" StepId="255" NpcId="1004093" InteractDistance="1.0" XYZ="-25.54107, 12.2, 109.7778"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Goldsmith">
-							<ChangeClass Job="Goldsmith" />
-						</If>		
+							<ChangeClass Job="Goldsmith"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Goldsmith">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -302,13 +302,13 @@
 				</If>
 		</If>
 			<If Condition="HasQuest(66070)">
-				<If Condition="GetQuestStep(66070) == 255">	
+				<If Condition="GetQuestStep(66070) == 255">
 					<GetTo ZoneId="131" XYZ="156.6901, 7.792007, 100.3423"/>
 					<LLTurnIn QuestId="66070" StepId="255" NpcId="1003818" InteractDistance="1.0" XYZ="156.6901, 7.792007, 100.3423"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Weaver">
-							<ChangeClass Job="Weaver" />
-						</If>		
+							<ChangeClass Job="Weaver"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Weaver">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -342,8 +342,8 @@
 					<LLTurnIn QuestId="66111" StepId="255" NpcId="1002299" InteractDistance="1.0" XYZ="-98.68385, 40.2, 122.3508"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Alchemist">
-							<ChangeClass Job="Alchemist" />
-						</If>		
+							<ChangeClass Job="Alchemist"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Alchemist">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -377,8 +377,8 @@
 					<LLTurnIn QuestId="66133" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.52736, 6.2, 157.8005"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Miner">
-							<ChangeClass Job="Miner" />
-						</If>		
+							<ChangeClass Job="Miner"/>
+						</If>
 						<If Condition="ClassName == ClassJobType.Miner">
 							<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -390,7 +390,7 @@
 <!--Done Unlocking Miner-->
 
 	<RunCode Name="Requires_Manual"/>
-	<LogMessage Message="Please redo Gear Sets on Lisbeth then run the Start Profile again!" />
+	<LogMessage Message="Please redo Gear Sets on Lisbeth then run the Start Profile again!"/>
 
   </Order>
   <CodeChunks>

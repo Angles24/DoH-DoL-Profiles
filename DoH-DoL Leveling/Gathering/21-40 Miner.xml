@@ -6,15 +6,15 @@ Angles24
 	<Name>21-40 Miner</Name>
 	<KillRadius>90</KillRadius>
 	
-	<Order>		
+	<Order>
 		      
-	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
 	
 	<If Condition="ClassName != ClassJobType.Miner">
-		<ChangeClass Job="Miner" />
-	</If> 
+		<ChangeClass Job="Miner"/>
+	</If>
 				
-    <If Condition="ClassName == ClassJobType.Miner">	
+    <If Condition="ClassName == ClassJobType.Miner">
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
@@ -22,10 +22,10 @@ Angles24
 		<!--Level 20 - Old Wisdom, New Ways-->
 		<If Condition="not IsQuestCompleted(66140)">
 			<If Condition="not HasQuest(66140)">
-				<LogMessage Message="Picking up Level 20 - Old Wisdom, New Ways" />
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644" /> <!-- Ul'dah - Steps of Thal -->
+				<LogMessage Message="Picking up Level 20 - Old Wisdom, New Ways"/>
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66140)">
-					<LLPickupQuest NpcId="1002298" QuestId="66140" XYZ="-16.45324, 6.2, 157.4644" />
+					<LLPickupQuest NpcId="1002298" QuestId="66140" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
 			</If>
 			<If Condition="not NqHasAtLeast(5599,99)">
@@ -39,11 +39,11 @@ Angles24
 			</If>
 			<If Condition="NqHasAtLeast(5599,99)">
 				<If Condition="GetQuestStep(66140) == 255">
-					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644" /> <!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
-					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed." />						  
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed."/>
 					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>	
+				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
@@ -54,19 +54,19 @@ Angles24
 
 		<!--Start - Grind to Level 26-->
 		<If Condition="Core.Player.ClassLevel &lt; 26">
-			<LogMessage Message="Starting the Grind to Level 26." />
-			<GetTo ZoneId="145" XYZ="-183.1978, -34.69329, -37.8227" /> <!-- Camp Drybone --> 			
+			<LogMessage Message="Starting the Grind to Level 26."/>
+			<GetTo ZoneId="145" XYZ="-183.1978, -34.69329, -37.8227"/><!-- Camp Drybone -->
 			<ExGather while="Core.Player.ClassLevel &lt; 26">
 				<GatherObject>Mineral Deposit</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="95" XYZ="-183.1978, -34.69329, -37.8227" />
+					<HotSpot Radius="95" XYZ="-183.1978, -34.69329, -37.8227"/>
 				</HotSpots>
 				<Slot>1</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 26">
-			<LogMessage Message="Congrats on Level 26, moving on." />			  
+			<LogMessage Message="Congrats on Level 26, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
@@ -76,10 +76,10 @@ Angles24
 		<!--Level 25 - Water From Stone-->
 		<If Condition="IsQuestCompleted(66140) and not IsQuestCompleted(66141)">
 			<If Condition="not HasQuest(66141)">
-			<LogMessage Message="Picking up Level 25 - Water From Stone" />
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644" /> <!-- Ul'dah - Steps of Thal -->
+			<LogMessage Message="Picking up Level 25 - Water From Stone"/>
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66141)">
-					<LLPickupQuest NpcId="1002298" QuestId="66141" XYZ="-16.45324, 6.2, 157.4644" />
+					<LLPickupQuest NpcId="1002298" QuestId="66141" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
 			</If>
 			<If Condition="not HqHasAtLeast(5491,15)">
@@ -87,11 +87,11 @@ Angles24
 			</If>
 			<If Condition="HqHasAtLeast(5491,15)">
 				<If Condition="GetQuestStep(66141) == 255">
-					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644" /> <!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5491" QuestId="66141" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
-					<LogMessage Message="Level 25 - Water From Stone - Completed." />						  
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+					<LLTurnIn ItemId="5491" QuestId="66141" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+					<LogMessage Message="Level 25 - Water From Stone - Completed."/>
 					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>	
+				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
@@ -102,19 +102,19 @@ Angles24
 
 		<!--Start - Grind to Level 31-->
 		<If Condition="Core.Player.ClassLevel &lt; 31">
-			<LogMessage Message="Starting the Grind to Level 31." />
-			<GetTo ZoneId="146" XYZ="26.02704, 8.851164, 399.923" /> <!-- Forgotten Springs --> 			
+			<LogMessage Message="Starting the Grind to Level 31."/>
+			<GetTo ZoneId="146" XYZ="26.02704, 8.851164, 399.923"/><!-- Forgotten Springs -->
 			<ExGather while="Core.Player.ClassLevel &lt; 31">
 				<GatherObject>Rocky Outcrop</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="95" XYZ="26.02704, 8.851164, 399.923" />
+					<HotSpot Radius="95" XYZ="26.02704, 8.851164, 399.923"/>
 				</HotSpots>
 				<Slot>0</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 31">
-			<LogMessage Message="Congrats on Level 31, moving on." />			  
+			<LogMessage Message="Congrats on Level 31, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
@@ -124,34 +124,34 @@ Angles24
 		<!--Level 30 - Obsidian Race-->
 		<If Condition="IsQuestCompleted(66141) and not IsQuestCompleted(66142)">
 			<If Condition="not HasQuest(66142)">
-				<LogMessage Message="Picking up Level 30 - Obsidian Race." />
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644" /> <!-- Ul'dah - Steps of Thal -->
+				<LogMessage Message="Picking up Level 30 - Obsidian Race."/>
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66142)">
-					<LLPickupQuest NpcId="1002298" QuestId="66142" XYZ="-16.45324, 6.2, 157.4644" />
+					<LLPickupQuest NpcId="1002298" QuestId="66142" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66142) == 1">
-				<GetTo ZoneId="131" XYZ="-5.715219, 6.2, 165.6139" />
-				<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.715219, 6.2, 165.6139" />
+				<GetTo ZoneId="131" XYZ="-5.715219, 6.2, 165.6139"/>
+				<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.715219, 6.2, 165.6139"/>
 			</If>
 			<If Condition="GetQuestStep(66142) == 2">
-				<GetTo ZoneId="131" XYZ="-80.49365, 6.98457, 9.430854" />
-				<LLTalkTo InteractDistance="1.0" NpcId="1003911" XYZ="-80.49365, 6.98457, 9.430854" />
-			</If>			  
+				<GetTo ZoneId="131" XYZ="-80.49365, 6.98457, 9.430854"/>
+				<LLTalkTo InteractDistance="1.0" NpcId="1003911" XYZ="-80.49365, 6.98457, 9.430854"/>
+			</If>
 			<If Condition="not HqHasAtLeast(5125,15)">
 				<Lisbeth Json="[{'Item': 5125,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</If>
 			<If Condition="HqHasAtLeast(5125,15)">
 				<If Condition="GetQuestStep(66142) == 3">
-					<GetTo ZoneId="131" XYZ="-5.64079, 6.2, 166.6474" /> <!-- Ul'dah - Steps of Thal -->						
-					<LLHandOver ItemId="5125" QuestId="66142" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.64079, 6.2, 166.6474" />
+					<GetTo ZoneId="131" XYZ="-5.64079, 6.2, 166.6474"/><!-- Ul'dah - Steps of Thal -->
+					<LLHandOver ItemId="5125" QuestId="66142" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.64079, 6.2, 166.6474"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66142) == 255">
-				<LLTurnIn QuestId="66142" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644" />
-				<LogMessage Message="Level 30 - Obsidian Race - Completed." />				  
+				<LLTurnIn QuestId="66142" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+				<LogMessage Message="Level 30 - Obsidian Race - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>	
+				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
@@ -161,24 +161,24 @@ Angles24
 
 		<!--Start - Grind to Level 36-->
 		<If Condition="Core.Player.ClassLevel &lt; 36">
-			<LogMessage Message="Starting the Grind to Level 36." />
-			<GetTo ZoneId="146" XYZ="151.5022, 3.113048, 956.2474" /> <!-- Forgotten Springs -->			
+			<LogMessage Message="Starting the Grind to Level 36."/>
+			<GetTo ZoneId="146" XYZ="151.5022, 3.113048, 956.2474"/><!-- Forgotten Springs -->
 			<ExGather while="Core.Player.ClassLevel &lt; 36">
 				<GatherObject>Mineral Deposit</GatherObject>
 				<HotSpots>
-					<Hotspot Radius="80" XYZ="151.5022, 3.113048, 956.2474" />
-					<Hotspot Radius="80" XYZ="255.9391, 4.553239, 939.3931" />
+					<Hotspot Radius="80" XYZ="151.5022, 3.113048, 956.2474"/>
+					<Hotspot Radius="80" XYZ="255.9391, 4.553239, 939.3931"/>
 				</HotSpots>
 				<BlackSpots>
-					<Blackspot Radius="5" XYZ="190.9561, 4.34413, 988.1514" />
-					<Blackspot Radius="5" XYZ="202.4706, 5.60542, 946.358" />
+					<Blackspot Radius="5" XYZ="190.9561, 4.34413, 988.1514"/>
+					<Blackspot Radius="5" XYZ="202.4706, 5.60542, 946.358"/>
 				</BlackSpots>
 				<Slot>6</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 36">
-			<LogMessage Message="Congrats on Level 36, moving on." />			  
+			<LogMessage Message="Congrats on Level 36, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
@@ -188,25 +188,25 @@ Angles24
 		<!--Level 35 - Amethysts Are Forever-->
 		<If Condition="IsQuestCompleted(66142) and not IsQuestCompleted(66179)">
 			<If Condition="not HasQuest(66179)">
-				<LogMessage Message="Picking up Level 35 - Amethysts Are Forever." />
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644" /> <!-- Ul'dah - Steps of Thal -->
+				<LogMessage Message="Picking up Level 35 - Amethysts Are Forever."/>
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66179)">
-					<LLPickupQuest NpcId="1002298" QuestId="66179" XYZ="-16.45324, 6.2, 157.4644" />
+					<LLPickupQuest NpcId="1002298" QuestId="66179" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66179) == 1">
-				<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.306236, 6.2, 165.6101" />
-			</If>			
+				<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.306236, 6.2, 165.6101"/>
+			</If>
 			<If Condition="not HqHasAtLeast(5138,20)">
 				<Lisbeth Json="[{'Item': 5138,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</If>
 			<If Condition="HqHasAtLeast(5138,20)">
 				<If Condition="GetQuestStep(66179) == 255">
-					<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229" /> <!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5138" QuestId="66179" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229" />
-					<LogMessage Message="Level 35 - Amethysts Are Forever - Completed." />						  
+					<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
+					<LLTurnIn ItemId="5138" QuestId="66179" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
+					<LogMessage Message="Level 35 - Amethysts Are Forever - Completed."/>
 					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>	
+				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
@@ -217,24 +217,24 @@ Angles24
 
 		<!--Start - Grind to Level 40-->
 		<If Condition="Core.Player.ClassLevel &lt; 40">
-			<LogMessage Message="Starting the Grind to Level 40." />
-			<GetTo ZoneId="153" XYZ="353.7134, -3.617686, 58.73518" /> <!-- Quarrymill -->			
+			<LogMessage Message="Starting the Grind to Level 40."/>
+			<GetTo ZoneId="153" XYZ="353.7134, -3.617686, 58.73518"/><!-- Quarrymill -->
 			<ExGather while="Core.Player.ClassLevel &lt; 40">
 				<GatherObject>Mineral Deposit</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="60" XYZ="353.7134, -3.617686, 58.73518" />
+					<HotSpot Radius="60" XYZ="353.7134, -3.617686, 58.73518"/>
 				</HotSpots>
 				<Slot>1</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 40">
-			<LogMessage Message="Congrats on Level 40, moving on." />			  
+			<LogMessage Message="Congrats on Level 40, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
-		<!--End Level 40 Grind-->		  
+		<!--End Level 40 Grind-->
 	</If>
 	
 	<LLoadProfile Path="../Start.xml"/>

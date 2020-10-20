@@ -4,7 +4,7 @@ Angles24
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY meld "1"> 
+<!ENTITY meld "1">
  	 
 <!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
@@ -22,11 +22,11 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Culinarian Class Quests</Name>	
-	<Order>	
+	<Name>Culinarian Class Quests</Name>
+	<Order>
 	
 	<If Condition="FreeItemSlots() &lt; 16">
-		<LogMessage Message="Make Sure there is at least 40 or more free slots in your inventory then hit start on the bot." />
+		<LogMessage Message="Make Sure there is at least 40 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
 	
@@ -37,10 +37,10 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68144)">
-		<ChangeClass Job="Culinarian" />
+		<ChangeClass Job="Culinarian"/>
       <AutoInventoryEquip/>
 	</If>
-    <If Condition="ClassName == ClassJobType.Culinarian">      
+    <If Condition="ClassName == ClassJobType.Culinarian">
       <!-- Releasing a Burden (Level 20) -->
       <If Condition="IsQuestCompleted(65794) and not HasQuest(65795) and not IsQuestCompleted(65795) and Core.Player.ClassLevel &gt; 19">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
@@ -238,7 +238,7 @@ Angles24
       <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 4">
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTalkTo NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" QuestId="65806" StepId="4"/>
-      </If>	  
+      </If>
       <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 5">
         <While Condition="not HasHqItem(4647)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4647,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
@@ -674,7 +674,7 @@ Angles24
 						  12877,12849,12887,11943,4848,12891,12893,12880,4837,4842,5348,4715,4768,4756,
 						  4859,4678,12846,4647,2503,4679,2515,4749,4843,4861,4853,12842,4849,5542,4858,
 						  4733,4712,2501,4792,4677,5539,12860,2499,4811,4645,2511,4847,4644,2497,4730,
-						  4812"/>	
+						  4812"/>
 	
 	<LLoadProfile Path="../Start.xml"/>
 	

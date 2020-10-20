@@ -14,13 +14,13 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Goldsmith to 21</Name>
-	<Order>	
+	<Order>
 	
 	<!-- Change Class GSM - 1 Copper Ingot 5062 // 5 Ragstone Whetstone 5258 // 14 Brass Ingot 5063 -->
 	<If Condition="ClassName != ClassJobType.Goldsmith">
-		<ChangeClass Job="Goldsmith" />
+		<ChangeClass Job="Goldsmith"/>
 	</If>
-	<If Condition="ClassName == ClassJobType.Goldsmith">	
+	<If Condition="ClassName == ClassJobType.Goldsmith">
 		<AutoInventoryEquip/>
 	
 	<!-- Do Level 1 Quest -->
@@ -38,7 +38,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66146" ItemId="5062" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -63,7 +63,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66147" ItemIds="4305, 4305, 4305" AllowHq="True, True, True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -96,7 +96,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66149" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -135,7 +135,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66150" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -147,8 +147,8 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	</If>
 
 	<If Condition="Core.Player.ClassLevel &gt; 20">
-		<LogMessage Message="Congrats on Level 21, moving on." />
-		<AutoInventoryEquip/>		
+		<LogMessage Message="Congrats on Level 21, moving on."/>
+		<AutoInventoryEquip/>
 		<WaitTimer waitTime="3"/>
 	</If>
 	

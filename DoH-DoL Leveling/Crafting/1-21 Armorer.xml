@@ -14,11 +14,11 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Armorer to 21</Name>
-	<Order>	
+	<Order>
 	
 	<!-- Change Class ARM - 1 Bronze Rivet 5091 // 14 Iron Rivets 5092 -->
 	<If Condition="ClassName != ClassJobType.Armorer">
-		<ChangeClass Job="Armorer" />
+		<ChangeClass Job="Armorer"/>
 	</If>
 	<If Condition="ClassName == ClassJobType.Armorer">
 		<AutoInventoryEquip/>
@@ -38,7 +38,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="128" XYZ="-32.23862, 41.49998, 207.5451"/>
         <LLTurnIn QuestId="65810" ItemId="5056" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -63,7 +63,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
         <LLTurnIn QuestId="65811" ItemIds="2226, 2226, 2226" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -87,7 +87,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
         <LLTurnIn QuestId="65812" ItemId="5071" NpcId="1001009" XYZ="-29.71688, 41.5, 210.7288"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -135,7 +135,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LLTurnIn NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923" QuestId="65813"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
-		<WaitTimer WaitTime="2"/>		
+		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
 	
@@ -146,16 +146,16 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	</If>
 	
 	<If Condition="Core.Player.ClassLevel &gt; 20">
-		<LogMessage Message="Congrats on Level 21, moving on." />
-		<AutoInventoryEquip/>			
+		<LogMessage Message="Congrats on Level 21, moving on."/>
+		<AutoInventoryEquip/>
 		<WaitTimer waitTime="3"/>
-	</If>	
+	</If>
 	
 	<EtxSellItem ItemIds="2330,2961,5361,5364,5385,5367,
 						  5106,5091,2652,3014,2357,3019,5057,
 						  5823,5824,5071,2382"/>
 	
-	<LLoadProfile Path="../Start.xml"/>	
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>
