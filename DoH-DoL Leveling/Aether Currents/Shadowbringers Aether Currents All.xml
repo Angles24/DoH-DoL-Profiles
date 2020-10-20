@@ -150,13 +150,13 @@ Authors:  Sodimm
         <GetTo ZoneId="813" XYZ="705.6411, 24.19248, 3.015944"/>
         <MoveTo XYZ="705.6411, 24.19248, 3.015944" Distance="1"/>
         <Dismount/>
-		<WaitTimer WaitTime="5" />
+		<WaitTimer WaitTime="5"/>
         <ClimbHill Start="705.6411, 24.19248, 3.015944" End="706.9333, 27.62939, 8.007933"/>
-		<WaitTimer WaitTime="5" />
+		<WaitTimer WaitTime="5"/>
         <RunCode Name="2010026"/>
-		<WaitTimer WaitTime="5" />
+		<WaitTimer WaitTime="5"/>
         <MoveTo XYZ="702.3759, 30.48876, 2.899601" Distance="1" UseMesh="False"/>
-		<WaitTimer WaitTime="5" />
+		<WaitTimer WaitTime="5"/>
         <UseObject NpcId="2010026" XYZ="702.2355, 30.47229, 1.235901" Condition="not IsAetherCurrentCompleted(813,12)"/>
         <MoveTo XYZ="709.9052, 24.19248, -1.722743" UseMesh="False"/>
       </If>
@@ -245,7 +245,7 @@ Authors:  Sodimm
 			<If Condition="HasQuest(68934) and not IsQuestCompleted(68934) and GetQuestStep(68934) == 1 and GetQuestById(68934).GetTodoArgs(1, 0).Item1 == 3">
 				<MoveTo XYZ="-346.8651, -49.87661, -122.2701" Distance="1" UseMesh="False"/>
 				<UseObject NpcId="2010158" XYZ="-346.8651, -49.87661, -122.2701" Radius="5" UseTimes="1"/>
-			</If>		
+			</If>
       </If>
       <If Condition="HasQuest(68934) and not IsQuestCompleted(68934) and GetQuestStep(68934) == 2">
         <GetTo ZoneId="816" XYZ="-612.2657, 36.3263, -214.5082"/>
@@ -357,7 +357,7 @@ Authors:  Sodimm
         <GetTo ZoneId="816" XYZ="-317.4744, 86.14259, -555.7862"/>
 		<Dismount/>
 		<MoveTo XYZ="-328.0242, 89.54642, -554.8527" Distance="0.1" UseMesh="False"/>
-		<ClimbHill Start="-328.0242, 89.54642, -554.8527" End="-330.3864, 95.66309, -561.2908"/>        
+		<ClimbHill Start="-328.0242, 89.54642, -554.8527" End="-330.3864, 95.66309, -561.2908"/>
         <UseObject NpcId="2010058" XYZ="-325.0324, 96.54382, -562.9511" Condition="not IsAetherCurrentCompleted(816,10)"/>
         <MoveTo XYZ="-324.8481, 88.38784, -554.2283" UseMesh="False"/>
       </If>

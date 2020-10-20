@@ -3,10 +3,10 @@
 Authors: Angles24 / Kayla / Lokibunny
 Requires: ExBuddy Plugin & LLamaLibrary BotBase
 -->
-<!DOCTYPE Profile [ <!ENTITY LogTxt "#f542c5"> <!ENTITY MinFish "15"> <!ENTITY MaxFish "25"> ]>
+<!DOCTYPE Profile [ <!ENTITY LogTxt "#f542c5"><!ENTITY MinFish "15"><!ENTITY MaxFish "25">]>
 <Profile>
 	<Name>Dragonsung Fishing Rod</Name>
-	<Order>	
+	<Order>
 	
 	<RunCode Name="Enable_Flight"/>
 	
@@ -15,7 +15,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	</If>
 	<If Condition="ClassName == ClassJobType.Fisher and Core.Player.ClassLevel &gt; 79">
 		
-		<If Condition="not IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
 				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
@@ -30,7 +30,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
@@ -42,30 +42,30 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29622" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
-		</If>	
+		</If>
 		
-		<While Condition="HasItem(29622)"> <!-- Skysteel Fishing Rod -->
+		<While Condition="HasItem(29622)"><!-- Skysteel Fishing Rod -->
 			<While Condition="ClassName != ClassJobType.Fisher">
 				<ChangeClass Job="Fisher"/>
 			</While>
 			<While Condition="not HasAtLeast(30136,50)">
-				<Log Message="Buy some Signature Skyball from Foundation!" />
+				<Log Message="Buy some Signature Skyball from Foundation!"/>
 				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 			</While>
-			<Log Color="&LogTxt;" Message="Don't leave me unattended!" />
-			<Log Color="&LogTxt;" Message="Going to fish some Thinker's Coral!" />
+			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
+			<Log Color="&LogTxt;" Message="Going to fish some Thinker's Coral!"/>
 			<If Condition="not HqHasAtLeast(29673,40)">
 				<GetTo ZoneId="399" XYZ="30.28768, 52.93113, 87.8614"/>
 			</If>
 			<RunCode Name="DisableMount"/>
-			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29673,40)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400" >
+			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29673,40)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
 				<Keepers>
 					<Keeper Name="piece of thinker's coral"/>
                 </Keepers>
 				<FishSpots>
-					<FishSpot XYZ="30.23421, 52.84451, 88.72885" Heading="4.72" Sit="True" />
-					<FishSpot XYZ="29.48251, 52.56403, 28.53448" Heading="3.68" Sit="True" />
+					<FishSpot XYZ="30.23421, 52.84451, 88.72885" Heading="4.72" Sit="True"/>
+					<FishSpot XYZ="29.48251, 52.56403, 28.53448" Heading="3.68" Sit="True"/>
 				</FishSpots>
 				<PatienceTugs>
 				  <PatienceTug Mooch="0" TugType="Light"/>
@@ -78,64 +78,64 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					<ChangeClass Job="Fisher"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29622">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
 				<RunCode Name="Sort"/>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29633" SelectString="0"/> 
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29633" SelectString="0"/>
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</While>									
+			</While>
 		</While>
 			
-		<While Condition="HasItem(29633)"> <!-- Skysteel Fishing Rod +1 -->
+		<While Condition="HasItem(29633)"><!-- Skysteel Fishing Rod +1 -->
 			<While Condition="ClassName != ClassJobType.Fisher">
 				<ChangeClass Job="Fisher"/>
 			</While>
 			<While Condition="not HasAtLeast(30136,50)">
-				<Log Color="&LogTxt;" Message="Buy some Signature Skyball from Foundation!" />
+				<Log Color="&LogTxt;" Message="Buy some Signature Skyball from Foundation!"/>
 				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 			</While>
-			<Log Color="&LogTxt;" Message="Don't leave me unattended!" />
-			<Log Color="&LogTxt;" Message="Going to fish some Dragonspine!" />
+			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
+			<Log Color="&LogTxt;" Message="Going to fish some Dragonspine!"/>
 			<GetTo ZoneId="397" XYZ="-680.4474, 99.50026, -618.0323"/>
 			<RunCode Name="DisableMount"/>
-			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29678,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400" >
+			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29678,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
 				<Keepers>
 					<Keeper Name="Dragonspine"/>
                 </Keepers>
 				<FishSpots>
-					<FishSpot XYZ="-701.0602, 104.3623, -641.2723" Heading="5.14" Sit="True" />
-					<FishSpot XYZ="-673.9434, 99.63255, -598.0843" Heading="3.06" Sit="True" />
+					<FishSpot XYZ="-701.0602, 104.3623, -641.2723" Heading="5.14" Sit="True"/>
+					<FishSpot XYZ="-673.9434, 99.63255, -598.0843" Heading="3.06" Sit="True"/>
 				</FishSpots>
 				<PatienceTugs>
 				  <PatienceTug Mooch="0" TugType="Light"/>
 				</PatienceTugs>
 			</ExFish>
 			<RunCode Name="EnableMount"/>
-			<While Condition="HasItem(29633) and HqHasAtLeast(29678,60)">	
+			<While Condition="HasItem(29633) and HqHasAtLeast(29678,60)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29633">
 					<ChangeClass Job="Fisher"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29633">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
 				<RunCode Name="Sort"/>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29644" SelectString="1"/> <!-- Buy Skysteel Fishing Rod +1 -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29644" SelectString="1"/><!-- Buy Skysteel Fishing Rod +1 -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</While>				
+			</While>
 		</While>
 		
-		<If Condition="HasItem(29644) and HasQuest(69385)"> 
+		<If Condition="HasItem(29644) and HasQuest(69385)">
 			<While Condition="ClassName != ClassJobType.Fisher">
 				<ChangeClass Job="Fisher"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29644">
-				<RunCode Name="SkysteelFSH3"/> <!-- Equip Dragonsung Fishing Rod -->
+				<RunCode Name="SkysteelFSH3"/><!-- Equip Dragonsung Fishing Rod -->
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
@@ -144,7 +144,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-	</If>	
+	</If>
 	
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	

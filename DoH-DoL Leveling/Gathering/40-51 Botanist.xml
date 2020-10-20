@@ -8,24 +8,24 @@ Angles24
 	
 	<Order>
 		
-	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
 			
 	<If Condition="ClassName != ClassJobType.Botanist">
-		<ChangeClass Job="Botanist" />
-	</If> 
+		<ChangeClass Job="Botanist"/>
+	</If>
 				
-    <If Condition="ClassName == ClassJobType.Botanist">	
+    <If Condition="ClassName == ClassJobType.Botanist">
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		
 		<!--Level 40 - Crisis of Faith-->
 		<If Condition="not IsQuestCompleted(65547)">
 			<If Condition="not HasQuest(65547)">
-				<LogMessage Message="Picking Up Level 40 - Crisis of Faith." />
+				<LogMessage Message="Picking Up Level 40 - Crisis of Faith."/>
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65547)">
-					<LLPickupQuest NpcId="1000815" QuestId="65547" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					<LLPickupQuest NpcId="1000815" QuestId="65547" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65547) == 1">
@@ -36,21 +36,21 @@ Angles24
 			<If Condition="GetQuestStep(65547) == 1">
 				<If Condition="HqHasAtLeast(4792,20)">
 					<GetTo ZoneId="133" XYZ="-233.54, 6.246956, -170.5644"/>
-					<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644" />
+					<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65547) == 2">
 				<GetTo ZoneId="133" XYZ="-239.5238, 8, -146.7241"/>
-				<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="2" NpcId="1000775" InteractDistance="1.0" XYZ="-239.5238, 8, -146.7241" />
+				<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="2" NpcId="1000775" InteractDistance="1.0" XYZ="-239.5238, 8, -146.7241"/>
 			</If>
 			<If Condition="GetQuestStep(65547) == 255">
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-				<LLTurnIn ItemId="2000569" QuestId="65547" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644" />
-				<LogMessage Message="Level 40 - Crisis of Faith - Completed." />				
+				<LLTurnIn ItemId="2000569" QuestId="65547" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
+				<LogMessage Message="Level 40 - Crisis of Faith - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>	
+				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
-				<AutoEquip UpdateGearSet="true"/>
+				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="10"/>
 			</If>
 		</If>
@@ -58,21 +58,21 @@ Angles24
 
 		<!--Start Grind to Level 46-->
 		<If Condition="Core.Player.ClassLevel &lt; 46">
-			<LogMessage Message="Starting the Grind to Level 46" />
-			<GetTo ZoneId="155" XYZ="78.58948, 285.141, -191.1144" /> <!-- Camp Dragonhead -->
+			<LogMessage Message="Starting the Grind to Level 46"/>
+			<GetTo ZoneId="155" XYZ="78.58948, 285.141, -191.1144"/><!-- Camp Dragonhead -->
 			<ExGather while="Core.Player.ClassLevel &lt; 46">
 				<GatherObject>Mature Tree</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="100" XYZ="78.58948, 285.141, -191.1144" />
+					<HotSpot Radius="100" XYZ="78.58948, 285.141, -191.1144"/>
 				</HotSpots>
 				<Slot>7</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 46">
-			<LogMessage Message="Congrats on Level 46, moving on." />			
+			<LogMessage Message="Congrats on Level 46, moving on."/>
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 46-->
@@ -80,15 +80,15 @@ Angles24
 		<!--Level 45 - Botanist in a Bind-->
 		<If Condition="IsQuestCompleted(65547) and not IsQuestCompleted(65548)">
 			<If Condition="not HasQuest(65548)">
-				<LogMessage Message="Picking Up Level 45 - Botanist in a Bind." />
+				<LogMessage Message="Picking Up Level 45 - Botanist in a Bind."/>
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65548)">
-					<LLPickupQuest NpcId="1000815" QuestId="65548" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					<LLPickupQuest NpcId="1000815" QuestId="65548" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65548) == 1">
 				<GetTo ZoneId="132" XYZ="-56.474, -1.717168, 9.29583"/>
-				<LLTalkTo InteractDistance="3.0" NpcId="1000193" XYZ="-56.474, -1.717168, 9.29583" />
+				<LLTalkTo InteractDistance="3.0" NpcId="1000193" XYZ="-56.474, -1.717168, 9.29583"/>
 			</If>
 			<If Condition="GetQuestStep(65548) == 255">
 				<If Condition="not HqHasAtLeast(5536,20)">
@@ -98,12 +98,12 @@ Angles24
 			<If Condition="GetQuestStep(65548) == 255">
 				<If Condition="HqHasAtLeast(5536,20)">
 					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLTurnIn ItemId="5536" RequiresHq="true" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613" />
-					<LogMessage Message="Level 45 - Botanist in a Bind - Completed." />
+					<LLTurnIn ItemId="5536" RequiresHq="true" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LogMessage Message="Level 45 - Botanist in a Bind - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>	
+					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
@@ -112,21 +112,21 @@ Angles24
 
 		<!--Start Grind to Level 50-->
 		<If Condition="Core.Player.ClassLevel &lt; 50">
-			<LogMessage Message="Starting the Grind to Level 50." />
-			<GetTo ZoneId="152" XYZ="-244.6034, 5.874526, 83.33171" /> <!-- The Hawthorne Hut -->
+			<LogMessage Message="Starting the Grind to Level 50."/>
+			<GetTo ZoneId="152" XYZ="-244.6034, 5.874526, 83.33171"/><!-- The Hawthorne Hut -->
 			<ExGather while="Core.Player.ClassLevel &lt; 50">
 				<GatherObject>Mature Tree</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="95" XYZ="-244.6034, 5.874526, 83.33171" />
+					<HotSpot Radius="95" XYZ="-244.6034, 5.874526, 83.33171"/>
 				</HotSpots>
 				<Slot>5</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 50">
-			<LogMessage Message="Congrats on Level 50, moving to final quest." />			
+			<LogMessage Message="Congrats on Level 50, moving to final quest."/>
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 50-->
@@ -134,86 +134,86 @@ Angles24
 		<!--Level 50 - Seeds of Hope-->
 		<If Condition="IsQuestCompleted(65548) and not IsQuestCompleted(65549)">
 			<If Condition="not HasQuest(65549)">
-				<LogMessage Message="Picking Up Level 50 - Seeds of Hope." />
+				<LogMessage Message="Picking Up Level 50 - Seeds of Hope."/>
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65549)">
-					<LLPickupQuest NpcId="1000815" QuestId="65549" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613" />
+					<LLPickupQuest NpcId="1000815" QuestId="65549" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(65549)">
 				<If Condition="GetQuestStep(65549) == 1">
 					<GetTo ZoneId="133" XYZ="-297.7843, 7.369169, -168.7761"/>
-					<LLTalkTo InteractDistance="2.0" NpcId="1000774" XYZ="-297.7843, 7.369169, -168.7761" />
+					<LLTalkTo InteractDistance="2.0" NpcId="1000774" XYZ="-297.7843, 7.369169, -168.7761"/>
 				</If>
 				<If Condition="GetQuestStep(65549) == 2">
-					<GetTo ZoneId="155" XYZ="118.2649, 285.9804, 140.2907" /> <!-- Camp Dragonhead -->
-					<LLTalkTo InteractDistance="2.0" NpcId="1000776" XYZ="118.2649, 285.9804, 140.2907" />
-				</If>			
+					<GetTo ZoneId="155" XYZ="118.2649, 285.9804, 140.2907"/><!-- Camp Dragonhead -->
+					<LLTalkTo InteractDistance="2.0" NpcId="1000776" XYZ="118.2649, 285.9804, 140.2907"/>
+				</If>
 				<If Condition="not HasAtLeast(5395,3)">
 					<If Condition="not IsTimeBetween(9,11)">
-						<LogMessage Message="Waiting until 9am for node" />
-						<WaitWhile Condition="not IsTimeBetween(9,11)" />
+						<LogMessage Message="Waiting until 9am for node"/>
+						<WaitWhile Condition="not IsTimeBetween(9,11)"/>
 					</If>
 					<If Condition="IsTimeBetween(9,11)">
 						<If Condition="not IsOnMap(155)">
-							<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699" /> <!-- Camp Dragonhead -->
+							<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699"/><!-- Camp Dragonhead -->
 						</If>
-						<MoveTo Name="Unspoiled Mature Tree" XYZ="354.2818, 303.052, -348.1232" />
+						<MoveTo Name="Unspoiled Mature Tree" XYZ="354.2818, 303.052, -348.1232"/>
 						<Gather Loops="1">
 							<GatherObject>Unspoiled Mature Tree</GatherObject>
 							<HotSpots>
-								<Hotspot Radius="700" XYZ="354.2818, 303.052, -348.1232" />
+								<Hotspot Radius="700" XYZ="354.2818, 303.052, -348.1232"/>
 							</HotSpots>
 							<Slot>5</Slot>
 							<GatheringSkillOrder>
-								<GatheringSkill SpellName="Field Mastery III" TimesToCast="1" />
+								<GatheringSkill SpellName="Field Mastery III" TimesToCast="1"/>
 							</GatheringSkillOrder>
 						</Gather>
 					</If>
 				</If>
 				<If Condition="HasAtLeast(5395,3)">
 					<GetTo ZoneId="155" XYZ="118.2649, 285.9804, 140.2907"/>
-					<LLHandOver ItemId="5395" QuestId="65549" StepId="4" NpcId="1000776" InteractDistance="1.0" XYZ="118.2649, 285.9804, 140.2907" />
+					<LLHandOver ItemId="5395" QuestId="65549" StepId="4" NpcId="1000776" InteractDistance="1.0" XYZ="118.2649, 285.9804, 140.2907"/>
 				</If>
 				<If Condition="GetQuestStep(65549) == 4">
 					<GetTo ZoneId="155" XYZ="7.677456, 207.2478, 434.1476"/>
-					<LLTalkTo InteractDistance="2.0" NpcId="1000777" XYZ="7.677456, 207.2478, 434.1476" />
+					<LLTalkTo InteractDistance="2.0" NpcId="1000777" XYZ="7.677456, 207.2478, 434.1476"/>
 				</If>
 				<If Condition="GetQuestStep(65549) == 255">
 					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613" />				
-					<LogMessage Message="Level 50 - Seeds of Hope - Completed." />
+					<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LogMessage Message="Level 50 - Seeds of Hope - Completed."/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 2558">
-					  <RunCode Name="50Weapon" />
-					  <WaitTimer WaitTime="3" />
+					  <RunCode Name="50Weapon"/>
+					  <WaitTimer WaitTime="3"/>
 				  </While>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>	
+					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
-					<AutoEquip UpdateGearSet="true"/>
+					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="10"/>
 				</If>
 			</If>
 		</If>
-		<!--End Seeds of Hope-->	
+		<!--End Seeds of Hope-->
 		
 		<!--Start Grind to Level 51-->
 		<If Condition="Core.Player.ClassLevel &lt; 51">
-			<LogMessage Message="Starting the Grind to Level 51." />
-			<GetTo ZoneId="152" XYZ="-244.6034, 5.874526, 83.33171" /> <!-- The Hawthorne Hut -->
+			<LogMessage Message="Starting the Grind to Level 51."/>
+			<GetTo ZoneId="152" XYZ="-244.6034, 5.874526, 83.33171"/><!-- The Hawthorne Hut -->
 			<ExGather while="Core.Player.ClassLevel &lt; 51">
 				<GatherObject>Mature Tree</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="95" XYZ="-244.6034, 5.874526, 83.33171" />
+					<HotSpot Radius="95" XYZ="-244.6034, 5.874526, 83.33171"/>
 				</HotSpots>
 				<Slot>5</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 51">
-			<LogMessage Message="Congrats on Level 51, moving to final quest." />			
+			<LogMessage Message="Congrats on Level 51, moving to final quest."/>
 			<WaitTimer WaitTime="2"/>
-			<AutoEquip UpdateGearSet="true"/>			
+			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Grind to Level 51-->
@@ -224,11 +224,10 @@ Angles24
 	</Order>
 	<GrindAreas>
 	</GrindAreas>
-	<CodeChunks>		
+	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">

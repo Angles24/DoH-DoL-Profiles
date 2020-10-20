@@ -14,14 +14,14 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Weaver to 21</Name>
-	<Order>	
+	<Order>
 	
 	<!-- Change Class WVR - 1 Hempen Yarn60 5333 // 5 Undyed Hempen Cloth 5324 // 12 Cotton Yarn60 5334 // 17 Undyed Cotton Cloth 5325 -->
 	<If Condition="ClassName != ClassJobType.Weaver">
-		<ChangeClass Job="Weaver" />
+		<ChangeClass Job="Weaver"/>
 	</If>
-	<If Condition="ClassName == ClassJobType.Weaver">	
-		<AutoEquip UpdateGearSet="true"/>
+	<If Condition="ClassName == ClassJobType.Weaver">
+		<AutoInventoryEquip/>
 	
 	<!-- Do Level 1 Quest -->
 	<!-- My First Needle (Level 1) -->
@@ -38,9 +38,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66071" ItemId="5333" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 5 -->
@@ -63,10 +63,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66123" ItemIds="3274, 3274, 3274" AllowHq="True" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
-      </If>	
+		<AutoInventoryEquip/>
+      </If>
 	
 	<!-- Grind to 10 -->
 			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 10">
@@ -88,9 +88,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66125" ItemId="5324" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 15 -->
@@ -123,9 +123,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn ItemIds="2670,3322" AllowHq="True" QuestId="66126" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 21 -->
@@ -138,8 +138,8 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	</If>
 
 	<If Condition="Core.Player.ClassLevel &gt; 20">
-		<LogMessage Message="Congrats on Level 21, moving on." />
-		<AutoEquip UpdateGearSet="true"/>		
+		<LogMessage Message="Congrats on Level 21, moving on."/>
+		<AutoInventoryEquip/>
 		<WaitTimer waitTime="3"/>
 	</If>
 	
@@ -148,7 +148,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 						  5823,5824,5071,2382,
 						  5062,5258,4309,5063,
 						  2407,2432,5275,2669,
-						  2458,5324,5325"/>			
+						  2458,5324,5325"/>
 	
 	<LLoadProfile Path="../Start.xml"/>
 	
@@ -156,8 +156,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
 	</CodeChunks>

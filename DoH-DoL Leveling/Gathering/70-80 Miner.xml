@@ -6,138 +6,138 @@ Angles24
 	<Name>63-70 Miner</Name>
 	<KillRadius>90</KillRadius>
 	
-	<Order>		
+	<Order>
 		      
-	<LogMessage Message="The Journey Begins! Remember to Check up on me!" />	
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
 	
 	<If Condition="ClassName != ClassJobType.Miner">
-		<ChangeClass Job="Miner" />
-	</If> 
+		<ChangeClass Job="Miner"/>
+	</If>
 				
     <If Condition="ClassName == ClassJobType.Miner">
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="Enable_Flight" />
+		<RunCode Name="Enable_Flight"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		
 		<!-- Level 70-71 -->
 		<If Condition="Core.Player.ClassLevel &lt; 71">
-			<LogMessage Message="Starting the Grind to Level 71." />
-			<GetTo ZoneId="621" XYZ="-574.9869, 18.23296, -155.1063" /> <!-- Farming Area -->	 			
+			<LogMessage Message="Starting the Grind to Level 71."/>
+			<GetTo ZoneId="621" XYZ="-574.9869, 18.23296, -155.1063"/><!-- Farming Area -->
 			<ExGather while="Core.Player.ClassLevel &lt; 71">
 				<GatherObject>Mineral Deposit</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="90" XYZ="-574.9869, 18.23296, -155.1063" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="-536.9932, 15.21778, -299.1544" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="-399.3079, 23.87233, -265.761" name="Mineral Deposits" />
+					<HotSpot Radius="90" XYZ="-574.9869, 18.23296, -155.1063" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="-536.9932, 15.21778, -299.1544" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="-399.3079, 23.87233, -265.761" name="Mineral Deposits"/>
 				</HotSpots>
 				<Slot>3</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 71">
-			<LogMessage Message="Congrats on Level 71, moving on." />			
+			<LogMessage Message="Congrats on Level 71, moving on."/>
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 71-->
 		
 		<!-- Level 71-73 -->
 		<If Condition="Core.Player.ClassLevel &lt; 73">
-			<LogMessage Message="Starting the Grind to Level 73." />
-			<GetTo ZoneId="816" XYZ="-822.9684, 24.18817, -108.701" /> <!-- Farming Area -->	 			
+			<LogMessage Message="Starting the Grind to Level 73."/>
+			<GetTo ZoneId="816" XYZ="-822.9684, 24.18817, -108.701"/><!-- Farming Area -->
 			<ExGather while="Core.Player.ClassLevel &lt; 73">
 				<GatherObject>Mineral Deposit</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="90" XYZ="-822.9684, 24.18817, -108.701" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="-730.0422, 47.85723, -222.1555" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="-682.9999, 34.69775, -85.80553" name="Mineral Deposits" />
+					<HotSpot Radius="90" XYZ="-822.9684, 24.18817, -108.701" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="-730.0422, 47.85723, -222.1555" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="-682.9999, 34.69775, -85.80553" name="Mineral Deposits"/>
 				</HotSpots>
 				<Slot>0</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 73">
-			<LogMessage Message="Congrats on Level 73, moving on." />			
+			<LogMessage Message="Congrats on Level 73, moving on."/>
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 73-->
 		
 		<!-- Level 73-75 -->
 		<If Condition="Core.Player.ClassLevel &lt; 75">
-			<LogMessage Message="Starting the Grind to Level 75." />
-			<GetTo ZoneId="813" XYZ="224.2676, 18.95998, 794.2184" /> <!-- Farming Area -->	 			
+			<LogMessage Message="Starting the Grind to Level 75."/>
+			<GetTo ZoneId="813" XYZ="224.2676, 18.95998, 794.2184"/><!-- Farming Area -->
 			<ExGather while="Core.Player.ClassLevel &lt; 75">
 				<GatherObject>Mineral Deposit</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="90" XYZ="224.2676, 18.95998, 794.2184" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="242.0436, 10.15417, 658.4144" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="334.8075, 13.118, 797.3335" name="Mineral Deposits" />
+					<HotSpot Radius="90" XYZ="224.2676, 18.95998, 794.2184" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="242.0436, 10.15417, 658.4144" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="334.8075, 13.118, 797.3335" name="Mineral Deposits"/>
 				</HotSpots>
 				<Slot>5</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 75">
-			<LogMessage Message="Congrats on Level 75, moving on." />			
+			<LogMessage Message="Congrats on Level 75, moving on."/>
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 75-->
 		
 		<!-- Level 75-76 -->
 		<If Condition="Core.Player.ClassLevel &lt; 76">
-			<LogMessage Message="Starting the Grind to Level 76." />
-			<GetTo ZoneId="817" XYZ="-221.8309, 33.33236, -117.6477" /> <!-- Farming Area -->	 			
+			<LogMessage Message="Starting the Grind to Level 76."/>
+			<GetTo ZoneId="817" XYZ="-221.8309, 33.33236, -117.6477"/><!-- Farming Area -->
 			<ExGather while="Core.Player.ClassLevel &lt; 76">
 				<GatherObject>Rocky Outcrop</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="90" XYZ="-221.8309, 33.33236, -117.6477" name="Rocky Outcrops" />
-					<HotSpot Radius="90" XYZ="-311.4038, 5.079453, 43.08316" name="Rocky Outcrops" />
-					<HotSpot Radius="90" XYZ="-389.1069, 26.39708, -129.9895" name="Rocky Outcrops" />
+					<HotSpot Radius="90" XYZ="-221.8309, 33.33236, -117.6477" name="Rocky Outcrops"/>
+					<HotSpot Radius="90" XYZ="-311.4038, 5.079453, 43.08316" name="Rocky Outcrops"/>
+					<HotSpot Radius="90" XYZ="-389.1069, 26.39708, -129.9895" name="Rocky Outcrops"/>
 				</HotSpots>
 				<Slot>1</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 76">
-			<LogMessage Message="Congrats on Level 76, moving on." />			
+			<LogMessage Message="Congrats on Level 76, moving on."/>
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
 		<!--End Level 76-->
 		
 		<!-- Level 76-80 -->
 		<If Condition="Core.Player.ClassLevel &lt; 80">
-			<LogMessage Message="Starting the Grind to Level 80." />
-			<GetTo ZoneId="817" XYZ="122.7405, -2.637969, 323.2207" /> <!-- Farming Area -->	 			
+			<LogMessage Message="Starting the Grind to Level 80."/>
+			<GetTo ZoneId="817" XYZ="122.7405, -2.637969, 323.2207"/><!-- Farming Area -->
 			<ExGather while="Core.Player.ClassLevel &lt; 80">
 				<GatherObject>Mineral Deposit</GatherObject>
 				<HotSpots>
-					<HotSpot Radius="90" XYZ="122.7405, -2.637969, 323.2207" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="306.1823, 24.75313, 340.3305" name="Mineral Deposits" />
-					<HotSpot Radius="90" XYZ="183.6426, -14.56858, 474.3126" name="Mineral Deposits" />
+					<HotSpot Radius="90" XYZ="122.7405, -2.637969, 323.2207" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="306.1823, 24.75313, 340.3305" name="Mineral Deposits"/>
+					<HotSpot Radius="90" XYZ="183.6426, -14.56858, 474.3126" name="Mineral Deposits"/>
 				</HotSpots>
 				<BlackSpots>
-					<BlackSpot Radius="3" XYZ="186.5254, -14.20509, 480.9021" />
+					<BlackSpot Radius="3" XYZ="186.5254, -14.20509, 480.9021"/>
 				</BlackSpots>
 				<Slot>0</Slot>
 				<GatherRotation>Chance</GatherRotation>
 			</ExGather>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 80">
-			<LogMessage Message="Congrats on Level 80, moving on." />			
+			<LogMessage Message="Congrats on Level 80, moving on."/>
 			<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>	
+		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="10"/>
 		</If>
-		<!--End Level 80-->	
+		<!--End Level 80-->
 	</If>
 	
 	<LLoadProfile Path="../Start.xml"/>

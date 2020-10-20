@@ -4,7 +4,7 @@ Angles24
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY meld "1"> 
+<!ENTITY meld "1">
  	 
 <!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
@@ -22,11 +22,11 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Culinarian Class Quests</Name>	
-	<Order>	
+	<Name>Culinarian Class Quests</Name>
+	<Order>
 	
 	<If Condition="FreeItemSlots() &lt; 16">
-		<LogMessage Message="Make Sure there is at least 40 or more free slots in your inventory then hit start on the bot." />
+		<LogMessage Message="Make Sure there is at least 40 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
 	
@@ -37,10 +37,10 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68144)">
-		<ChangeClass Job="Culinarian" />
-		<AutoEquip UpdateGearSet="true"/>
+		<ChangeClass Job="Culinarian"/>
+      <AutoInventoryEquip/>
 	</If>
-    <If Condition="ClassName == ClassJobType.Culinarian">      
+    <If Condition="ClassName == ClassJobType.Culinarian">
       <!-- Releasing a Burden (Level 20) -->
       <If Condition="IsQuestCompleted(65794) and not HasQuest(65795) and not IsQuestCompleted(65795) and Core.Player.ClassLevel &gt; 19">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
@@ -58,7 +58,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Winning Friends with Aldgoat (Level 25) -->
       <If Condition="IsQuestCompleted(65795) and not HasQuest(65796) and not IsQuestCompleted(65796) and Core.Player.ClassLevel &gt; 24">
@@ -77,7 +77,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- The Chefsbane Cometh (Level 30) -->
       <If Condition="IsQuestCompleted(65796) and not HasQuest(65802) and not IsQuestCompleted(65802) and Core.Player.ClassLevel &gt; 29">
@@ -108,7 +108,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Of Cooks and Books (Level 35) -->
       <If Condition="IsQuestCompleted(65802) and not HasQuest(65803) and not IsQuestCompleted(65803) and Core.Player.ClassLevel &gt; 34">
@@ -131,7 +131,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Diplomacy of the Skillet (Level 40) -->
       <If Condition="IsQuestCompleted(65803) and not HasQuest(65804) and not IsQuestCompleted(65804) and Core.Player.ClassLevel &gt; 49">
@@ -160,7 +160,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- A Taste of Home (Level 45) -->
       <If Condition="IsQuestCompleted(65804) and not HasQuest(65805) and not IsQuestCompleted(65805) and Core.Player.ClassLevel &gt; 44">
@@ -183,7 +183,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Revenge of the Chefsbane (Level 50) -->
       <If Condition="IsQuestCompleted(65805) and not HasQuest(65806) and not IsQuestCompleted(65806) and Core.Player.ClassLevel &gt; 49">
@@ -238,7 +238,7 @@ Angles24
       <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 4">
         <GetTo ZoneId="128" XYZ="-58.85406, 42.29973, -164.0803"/>
         <LLTalkTo NpcId="1001537" XYZ="-58.85406, 42.29973, -164.0803" QuestId="65806" StepId="4"/>
-      </If>	  
+      </If>
       <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 5">
         <While Condition="not HasHqItem(4647)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4647,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
@@ -261,7 +261,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Wait on Me (Level 50) -->
       <If Condition="IsQuestCompleted(65806) and not HasQuest(67579) and not IsQuestCompleted(67579) and Core.Player.ClassLevel &gt; 49">
@@ -285,7 +285,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- A Spoonful Less Sugar (Level 53) -->
       <If Condition="IsQuestCompleted(67579) and not HasQuest(67580) and not IsQuestCompleted(67580) and Core.Player.ClassLevel &gt; 52">
@@ -323,7 +323,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Looking for Some Hot Stuff (Level 55) -->
       <If Condition="IsQuestCompleted(67580) and not HasQuest(67581) and not IsQuestCompleted(67581) and Core.Player.ClassLevel &gt; 54">
@@ -364,7 +364,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Love Meat Tender (Level 58) -->
       <If Condition="IsQuestCompleted(67581) and not HasQuest(67582) and not IsQuestCompleted(67582) and Core.Player.ClassLevel &gt; 57">
@@ -387,7 +387,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- The Spirit of Hospitality (Level 60) -->
       <If Condition="IsQuestCompleted(67582) and not HasQuest(67583) and not IsQuestCompleted(67583) and Core.Player.ClassLevel &gt; 59">
@@ -424,7 +424,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Flavors of the Far East (Level 60) -->
       <If Condition="IsQuestCompleted(67583) and not HasQuest(68140) and not IsQuestCompleted(68140) and Core.Player.ClassLevel &gt; 59">
@@ -444,7 +444,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Rice to the Occasion (Level 63) -->
       <If Condition="IsQuestCompleted(68140) and not HasQuest(68141) and not IsQuestCompleted(68141) and Core.Player.ClassLevel &gt; 62">
@@ -477,7 +477,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68141"/>
 			 </If>
 			 <If Condition="HasItem(17933)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17934,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
+            <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17934,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="68.3251, 33.06653, -702.5699"/>
@@ -489,7 +489,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- A Broth from the Brine (Level 65) -->
       <If Condition="IsQuestCompleted(68141) and not HasQuest(68142) and not IsQuestCompleted(68142) and Core.Player.ClassLevel &gt; 64">
@@ -522,7 +522,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68142"/>
 			 </If>
 			 <If Condition="HasItem(17935)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17936,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
+            <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17936,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="32.37473, 50.99997, -821.4847"/>
@@ -534,7 +534,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- Teach a Man to Make Fish (Lvel 68) -->
       <If Condition="IsQuestCompleted(68142) and not HasQuest(68143) and not IsQuestCompleted(68143) and Core.Player.ClassLevel &gt; 67">
@@ -549,10 +549,7 @@ Angles24
         <LLTalkTo NpcId="1018982" XYZ="-83.08539, 18.04999, -191.1498" QuestId="68143" StepId="1"/>
       </If>
       <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 2">
-        <TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
-        <NoCombatMoveTo XYZ="327.994, -120.3422, -306.8709"/>
-        <RunCode Name="Move_Forward"/>
-        <NoCombatMoveTo XYZ="300.4709, -117.914, -376.2548" Distance="1"/>
+        <LisbethTravel Zone="613" Subzone="2750" Position="300.0954, -117.3616, -378.4639"/>
         <LLTalkTo NpcId="1020157" XYZ="300.2212, -117.2961, -378.2559" QuestId="68143" StepId="2"/>
       </If>
       <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 3">
@@ -570,7 +567,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68143"/>
 			 </If>
 			 <If Condition="HasItem(17937)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17938,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
+            <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17938,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="32.76991, 50.99997, -821.1919"/>
@@ -590,7 +587,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
       <!-- The Way to a Father's Heart (Level 70) -->
       <If Condition="IsQuestCompleted(68143) and not HasQuest(68144) and not IsQuestCompleted(68144) and Core.Player.ClassLevel &gt; 69">
@@ -629,6 +626,7 @@ Angles24
         <LLTalkTo NpcId="1020168" XYZ="-441.825, 260.0884, 662.1958" QuestId="68144" StepId="5"/>
       </If>
       <If Condition="HasQuest(68144) and not IsQuestCompleted(68144) and GetQuestStep(68144) == 6">
+        <LisbethTravel Zone="620" Subzone="2606" Position="-555.569, 266.595, 526.512"/>
         <GetTo ZoneId="620" XYZ="-562.0519, 266.2191, 526.7198"/>
         <NoCombatMoveTo XYZ="-562.0519, 266.2191, 526.7198"/>
         <LLTalkTo NpcId="1020169" XYZ="-561.4557, 266.2381, 525.4443" QuestId="68144" StepId="6"/>
@@ -644,7 +642,7 @@ Angles24
 			 <LLTalkTo NpcId="1020148" XYZ="29.89246, 50.99997, -824.4297" QuestId="68144"/>
 			 </If>
 			 <If Condition="HasItem(17939)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17940,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
+            <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17940,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
         </If>
         </While>
         <GetTo ZoneId="156" XYZ="32.38362, 50.99997, -820.6827"/>
@@ -652,7 +650,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+        <AutoInventoryEquip/>
       </If>
     </If>
 	
@@ -676,7 +674,7 @@ Angles24
 						  12877,12849,12887,11943,4848,12891,12893,12880,4837,4842,5348,4715,4768,4756,
 						  4859,4678,12846,4647,2503,4679,2515,4749,4843,4861,4853,12842,4849,5542,4858,
 						  4733,4712,2501,4792,4677,5539,12860,2499,4811,4645,2511,4847,4644,2497,4730,
-						  4812"/>	
+						  4812"/>
 	
 	<LLoadProfile Path="../Start.xml"/>
 	
@@ -684,8 +682,7 @@ Angles24
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">

@@ -5,7 +5,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 -->
 <Profile>
 	<Name>Dragonsung Pickaxe</Name>
-	<Order>	
+	<Order>
 	
 	<RunCode Name="Disable_Flight"/>
 	
@@ -14,7 +14,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	</If>
 	<If Condition="ClassName == ClassJobType.Miner and Core.Player.ClassLevel &gt; 79">
 		
-		<If Condition="not IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
 				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
@@ -29,7 +29,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
@@ -41,9 +41,9 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<If Condition="not (HasItem(29621) or HasItem(29632) or HasItem(29643))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29621" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
-		</If>	
+		</If>
 		
-		<While Condition="HasItem(29621)"> <!-- Skysteel Saw -->
+		<While Condition="HasItem(29621)"><!-- Skysteel Saw -->
 			<If Condition="not HqHasAtLeast(29671,340) and not HasAtLeast(29672,120)">
 				<Lisbeth Json="[{'Group':1,'Item':29672,'Amount':120,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
@@ -53,12 +53,12 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<If Condition="not HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
-			<!--<If Condition="not HqHasAtLeast(29671,340) or not HasAtLeast(29672,120)"> 
+			<!--<If Condition="not HqHasAtLeast(29671,340) or not HasAtLeast(29672,120)">
 				<If Condition="ClassName != ClassJobType.Miner">
 					<ChangeClass Job="Miner"/>
 				</If>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29621">
-					<RunCode Name="SkysteelMIN"/> 
+					<RunCode Name="SkysteelMIN"/>
 					<WaitTimer WaitTime="3"/>
 				</While>
 				<WaitTimer WaitTime="3"/>
@@ -82,7 +82,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					<GatheringSkillOrder>
 						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
 					</GatheringSkillOrder>
-				</ExGather>	  -->
+				</ExGather>-->
 				<!-- Obsidian -->
 				<!--<ExGather While="not HqHasAtLeast(29671,340)" CordialType="Auto">
 					<GatherObject>Mineral Deposit</GatherObject>
@@ -98,40 +98,40 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 						<GatheringSkill SpellName="Unearth III" TimesToCast="1"/>
 						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
 					</GatheringSkillOrder>
-				</ExGather>			
-			</If>-->	
-			<While Condition="HasItem(29621) and HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">	
+				</ExGather>
+			</If>-->
+			<While Condition="HasItem(29621) and HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29621">
 					<ChangeClass Job="Miner"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29621">
-					<RunCode Name="SwitchCombatJob"/> 
+					<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
 				<RunCode Name="Sort"/>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29632" SelectString="0"/> <!-- Buy Skysteel Saw +1 -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29632" SelectString="0"/><!-- Buy Skysteel Saw +1 -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</While>					
+			</While>
 		</While>
 			
-		<While Condition="HasItem(29632)"> <!-- Skysteel Saw +1 -->
-			<If Condition="not HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)"> 
+		<While Condition="HasItem(29632)"><!-- Skysteel Saw +1 -->
+			<If Condition="not HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)">
 				<Lisbeth Json="[{'Group':1,'Item':29677,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
-			<If Condition="HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)"> 
+			<If Condition="HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
-			<If Condition="not HasAtLeast(29677,180) and HqHasAtLeast(29676,510)"> 
+			<If Condition="not HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29677,'Amount':180,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<!--<If Condition="not HasAtLeast(29677,180) or not HqHasAtLeast(29676,510)"> 
+			<!--<If Condition="not HasAtLeast(29677,180) or not HqHasAtLeast(29676,510)">
 				<If Condition="ClassName != ClassJobType.Miner">
 					<ChangeClass Job="Miner"/>
 				</If>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29632">
-					<RunCode Name="SkysteelMIN2"/> 
+					<RunCode Name="SkysteelMIN2"/>
 					<WaitTimer WaitTime="3"/>
 				</While>
 				<WaitTimer WaitTime="3"/>
@@ -158,7 +158,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					<GatheringSkillOrder>
 						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
 					</GatheringSkillOrder>
-				</ExGather>	  -->
+				</ExGather>-->
 				<!-- Dark Matter -->
 				<!--<ExGather while="not HqHasAtLeast(29676,510)" CordialType="Auto">
 					<GatherObject>Rocky Outcrop</GatherObject>
@@ -178,30 +178,30 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 						<GatheringSkill SpellName="Unearth III" TimesToCast="1"/>
 						<GatheringSkill SpellName="King's Yield II" TimesToCast="1"/>
 					</GatheringSkillOrder>
-				</ExGather>							
+				</ExGather>
 			</If>-->
-			<While Condition="HasItem(29632) and HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">	
+			<While Condition="HasItem(29632) and HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29632">
 					<ChangeClass Job="Miner"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29632">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
 				<RunCode Name="Sort"/>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29643" SelectString="1"/> <!-- Buy Dragonsung Pickaxe -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29643" SelectString="1"/><!-- Buy Dragonsung Pickaxe -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</While>					
+			</While>
 		</While>
 		
-		<If Condition="HasItem(29643) and HasQuest(69385)"> 
+		<If Condition="HasItem(29643) and HasQuest(69385)">
 			<While Condition="ClassName != ClassJobType.Miner">
 				<ChangeClass Job="Miner"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29643">
-				<RunCode Name="SkysteelMIN3"/> <!-- Equip Dragonsung Saw -->
+				<RunCode Name="SkysteelMIN3"/><!-- Equip Dragonsung Saw -->
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
@@ -210,7 +210,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-	</If>	
+	</If>
 	
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	

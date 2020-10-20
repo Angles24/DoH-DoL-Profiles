@@ -4,7 +4,7 @@ Angles24
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY meld "1"> 
+<!ENTITY meld "1">
  	 
 <!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
@@ -22,11 +22,11 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Leatherworker Class Quests</Name>	
-	<Order>	
+	<Name>Leatherworker Class Quests</Name>
+	<Order>
 	
 	<If Condition="FreeItemSlots() &lt; 16">
-		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
+		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
 	
@@ -37,14 +37,14 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68151)">
-		<ChangeClass Job="Leatherworker" />
-		<AutoEquip UpdateGearSet="true"/>
+		<ChangeClass Job="Leatherworker"/>
+		<AutoInventoryEquip/>
 	</If>
     <If Condition="ClassName == ClassJobType.Leatherworker">
       <!-- Aldgoat Everything (Level 20) -->
       <If Condition="IsQuestCompleted(65672) and not HasQuest(65673) and not IsQuestCompleted(65673) and Core.Player.ClassLevel &gt; 19">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65673)">		 
+        <If Condition="IsQuestAcceptQualified(65673)">
 			<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65673" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -64,12 +64,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Skin in the Game (Level 25) -->
       <If Condition="IsQuestCompleted(65673) and not HasQuest(65587) and not IsQuestCompleted(65587) and Core.Player.ClassLevel &gt; 24">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65587)">		  
+        <If Condition="IsQuestAcceptQualified(65587)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65587" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -91,12 +91,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Toadskins of the Father (Level 30) -->
       <If Condition="IsQuestCompleted(65587) and not HasQuest(65597) and not IsQuestCompleted(65597) and Core.Player.ClassLevel &gt; 29">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65597)">		  
+        <If Condition="IsQuestAcceptQualified(65597)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65597" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -129,12 +129,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Lead by the Empire (Level 35) -->
       <If Condition="IsQuestCompleted(65597) and not HasQuest(65599) and not IsQuestCompleted(65599) and Core.Player.ClassLevel &gt; 34">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65599)">		  
+        <If Condition="IsQuestAcceptQualified(65599)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65599" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -148,12 +148,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Brand Loyalty (Level 40) -->
       <If Condition="IsQuestCompleted(65599) and not HasQuest(65600) and not IsQuestCompleted(65600) and Core.Player.ClassLevel &gt; 39">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65600)">		  
+        <If Condition="IsQuestAcceptQualified(65600)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65600" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -175,12 +175,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Dissension in the Ranks (Level 45) -->
       <If Condition="IsQuestCompleted(65600) and not HasQuest(65601) and not IsQuestCompleted(65601) and Core.Player.ClassLevel &gt; 44">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65601)">		  
+        <If Condition="IsQuestAcceptQualified(65601)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65601" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -221,12 +221,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Accept No Imitations (Level 50) -->
       <If Condition="IsQuestCompleted(65601) and not HasQuest(65602) and not IsQuestCompleted(65602) and Core.Player.ClassLevel &gt; 49">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(65602)">			  
+        <If Condition="IsQuestAcceptQualified(65602)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65602" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -258,12 +258,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Turndown Service (Level 50) -->
       <If Condition="IsQuestCompleted(65602) and not HasQuest(67611) and not IsQuestCompleted(67611) and Core.Player.ClassLevel &gt; 49">
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <If Condition="IsQuestAcceptQualified(67611)">		  
+        <If Condition="IsQuestAcceptQualified(67611)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67611" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -274,24 +274,24 @@ Angles24
       </If>
       <If Condition="HasQuest(67611) and not IsQuestCompleted(67611) and GetQuestStep(67611) == 2">
         <GetTo ZoneId="419" XYZ="-248.54, -20.0349, -90.9767"/>
-        <LLTalkTo NpcId="1012181" XYZ="-248.54, -20.0349, -90.9767" QuestId="67611" StepId="2"/>      
+        <LLTalkTo NpcId="1012181" XYZ="-248.54, -20.0349, -90.9767" QuestId="67611" StepId="2"/>
         <GetTo ZoneId="419" XYZ="-174.169, -12.5555, -21.5556"/>
-        <LLTalkTo NpcId="1012180" XYZ="-174.169, -12.5555, -21.5556" QuestId="67611" StepId="2"/>      
+        <LLTalkTo NpcId="1012180" XYZ="-174.169, -12.5555, -21.5556" QuestId="67611" StepId="2"/>
         <GetTo ZoneId="419" XYZ="-119.036, -12.6349, -14.1448"/>
         <LLTalkTo NpcId="1012542" XYZ="-119.036, -12.6349, -14.1448" QuestId="67611" StepId="2"/>
-	  </If>      
+	  </If>
       <If Condition="HasQuest(67611) and not IsQuestCompleted(67611) and GetQuestStep(67611) == 255">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
         <LLTurnIn QuestId="67611" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- By Your Bootstraps (Level 53) -->
       <If Condition="IsQuestCompleted(67611) and not HasQuest(67612) and not IsQuestCompleted(67612) and Core.Player.ClassLevel &gt; 52">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
-        <If Condition="IsQuestAcceptQualified(67612)">		  
+        <If Condition="IsQuestAcceptQualified(67612)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67612" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
@@ -313,12 +313,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Perfect Pitch (Level 55) -->
       <If Condition="IsQuestCompleted(67612) and not HasQuest(67613) and not IsQuestCompleted(67613) and Core.Player.ClassLevel &gt; 54">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
-        <If Condition="IsQuestAcceptQualified(67613)">		  
+        <If Condition="IsQuestAcceptQualified(67613)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67613" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
@@ -348,12 +348,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- From the Hoplon to the Brume (Level 58) -->
       <If Condition="IsQuestCompleted(67613) and not HasQuest(67614) and not IsQuestCompleted(67614) and Core.Player.ClassLevel &gt; 57">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
-        <If Condition="IsQuestAcceptQualified(67614)">		  
+        <If Condition="IsQuestAcceptQualified(67614)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67614" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
@@ -387,12 +387,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- A Winter's Sale (Level 60) -->
       <If Condition="IsQuestCompleted(67614) and not HasQuest(67615) and not IsQuestCompleted(67615) and Core.Player.ClassLevel &gt; 59">
         <GetTo ZoneId="419" XYZ="-259.069, -20.0349, -84.3817"/>
-        <If Condition="IsQuestAcceptQualified(67615)">		  
+        <If Condition="IsQuestAcceptQualified(67615)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67615" NpcId="1012538" XYZ="-259.069, -20.0349, -84.3817"/>
         </If>
@@ -422,12 +422,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- A Taxing Request (Level 60) -->
       <If Condition="IsQuestCompleted(67615) and not HasQuest(68145) and not IsQuestCompleted(68145) and Core.Player.ClassLevel &gt; 59">
         <GetTo ZoneId="133" XYZ="71.00392, 8, -165.2372"/>
-        <If Condition="IsQuestAcceptQualified(68145)">		  
+        <If Condition="IsQuestAcceptQualified(68145)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="68145" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
         </If>
@@ -446,12 +446,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Mounting Expectations (Level 63) -->
       <If Condition="IsQuestCompleted(68145) and not HasQuest(68146) and not IsQuestCompleted(68146) and Core.Player.ClassLevel &gt; 62">
         <GetTo ZoneId="133" XYZ="140.9785, 13.5714, -91.07951"/>
-        <If Condition="IsQuestAcceptQualified(68146)">		  
+        <If Condition="IsQuestAcceptQualified(68146)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="68146" NpcId="1020929" XYZ="141.7106, 13.5714, -90.44025"/>
         </If>
@@ -484,7 +484,7 @@ Angles24
 			 <LLTalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68146"/>
 			 </If>
 			 <If Condition="HasItem(17909)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17910,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17910,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
         </If>
         </While>
         <GetTo ZoneId="133" XYZ="76.32645, 0, -125.24"/>
@@ -492,12 +492,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Value of Life (Level 65) -->
       <If Condition="IsQuestCompleted(68146) and not HasQuest(68147) and not IsQuestCompleted(68147) and Core.Player.ClassLevel &gt; 64">
         <GetTo ZoneId="133" XYZ="77.00484, 0, -124.3662"/>
-        <If Condition="IsQuestAcceptQualified(68147)">		  
+        <If Condition="IsQuestAcceptQualified(68147)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="68147" NpcId="1020940" XYZ="76.15771, 0, -124.4068"/>
         </If>
@@ -533,7 +533,7 @@ Angles24
 			 <LLTalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68147"/>
 			 </If>
 			 <If Condition="HasItem(17911)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17912,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17912,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
         </If>
         </While>
         <GetTo ZoneId="133" XYZ="76.51757, 0, -125.0596"/>
@@ -541,12 +541,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Trouble with Taxidermy (Level 68) -->
       <If Condition="IsQuestCompleted(68147) and not HasQuest(68150) and not IsQuestCompleted(68150) and Core.Player.ClassLevel &gt; 67">
         <GetTo ZoneId="133" XYZ="76.77622, 0, -124.2678"/>
-        <If Condition="IsQuestAcceptQualified(68150)">		  
+        <If Condition="IsQuestAcceptQualified(68150)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="68150" NpcId="1020940" XYZ="76.15771, 0, -124.4068"/>
         </If>
@@ -570,7 +570,7 @@ Angles24
 			 <LLTalkTo NpcId="1000352" XYZ="62.80441, 8, -146.0064" QuestId="68150"/>
 			 </If>
 			 <If Condition="HasItem(17913)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17914,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17914,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
         </If>
         </While>
         <GetTo ZoneId="133" XYZ="71.66022, 8, -165.9775"/>
@@ -582,12 +582,12 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- True to Life (Level 70) -->
       <If Condition="IsQuestCompleted(68150) and not HasQuest(68151) and not IsQuestCompleted(68151) and Core.Player.ClassLevel &gt; 69">
         <GetTo ZoneId="133" XYZ="76.80299, 0, -123.7812"/>
-        <If Condition="IsQuestAcceptQualified(68151)">		  
+        <If Condition="IsQuestAcceptQualified(68151)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="68151" NpcId="1020940" XYZ="76.15771, 0, -124.4068"/>
         </If>
@@ -615,7 +615,7 @@ Angles24
 			 <LLTalkTo NpcId="1020940" XYZ="76.15771, 0, -124.4068" QuestId="68151"/>
 			 </If>
 			 <If Condition="HasItem(17915)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17916,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17916,'Amount':1,'Enabled':true,'Type':'Leatherworker'}]"/>
         </If>
         </While>
         <GetTo ZoneId="133" XYZ="77.39965, 0, -125.1896"/>
@@ -623,7 +623,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
     </If>
 	
@@ -656,8 +656,7 @@ Angles24
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">

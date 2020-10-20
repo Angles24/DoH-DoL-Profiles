@@ -10,23 +10,23 @@ Authors:  Kayla / Angles24
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
 		<WaitTimer waitTime="7"/>
-		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
 		
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>			
+		</While>
 	</If>
 	
-	<!-- Grade 3 Skybuilders' Rings -->	
+	<!-- Grade 3 Skybuilders' Rings -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 50) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63)">
 		<If Condition="ClassName != ClassJobType.Goldsmith">
-			<ChangeClass Job="Goldsmith" />
-		</If>		
+			<ChangeClass Job="Goldsmith"/>
+		</If>
 		<If Condition="ClassName == ClassJobType.Goldsmith">
-			<AutoEquip UpdateGearSet="true"/>			
+			<AutoInventoryEquip/>
 			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':31195,'Amount':15,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>
@@ -34,14 +34,14 @@ Authors:  Kayla / Angles24
 			<If Condition="not Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':31195,'Amount':30,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>
 			</If>
-		</If> 				
+		</If>
 	</If>
 	
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>			
+		</While>
 	</If>
 	
 	<!-- Reload Profile -->
@@ -50,8 +50,8 @@ Authors:  Kayla / Angles24
 	</If>
 	
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 63 on Goldsmith, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>		
+	<LogMessage Message="Congrats on Level 63 on Goldsmith, moving on."/>
+	<AutoInventoryEquip/>
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		

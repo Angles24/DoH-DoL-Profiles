@@ -10,23 +10,23 @@ Authors:  Kayla / Angles24
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
 		<WaitTimer waitTime="7"/>
-		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
 		
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>			
+		</While>
 	</If>
 	
-	<!-- Grade 2 Skybuilders' Leather -->	
+	<!-- Grade 2 Skybuilders' Leather -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 20) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
-			<ChangeClass Job="Leatherworker" />
-		</If>		
+			<ChangeClass Job="Leatherworker"/>
+		</If>
 		<If Condition="ClassName == ClassJobType.Leatherworker">
-			<AutoEquip UpdateGearSet="true"/>			
+			<AutoInventoryEquip/>
 			<WaitTimer waitTime="10"/>
 			<If Condition="Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':29796,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
@@ -34,14 +34,14 @@ Authors:  Kayla / Angles24
 			<If Condition="not Core.Me.HasAura(1411)">
 				<Lisbeth Json="[{'Group':1,'Item':29796,'Amount':30,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 			</If>
-		</If>				
+		</If>
 	</If>
 	
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>	
+		</While>
 	</If>
 	
 	<!-- Reload Profile -->
@@ -50,8 +50,8 @@ Authors:  Kayla / Angles24
 	</If>
 	
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 51 on Leatherworker, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>			
+	<LogMessage Message="Congrats on Level 51 on Leatherworker, moving on."/>
+	<AutoInventoryEquip/>
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		

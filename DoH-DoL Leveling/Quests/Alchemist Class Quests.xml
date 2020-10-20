@@ -4,7 +4,7 @@ Angles24
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY meld "1"> 
+<!ENTITY meld "1">
  	 
 <!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
@@ -22,11 +22,11 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Alchemist Class Quests</Name>		
-	<Order>	
+	<Name>Alchemist Class Quests</Name>
+	<Order>
 	
 	<If Condition="FreeItemSlots() &lt; 16">
-		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
+		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
 	
@@ -37,8 +37,8 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(67976)">
-		<ChangeClass Job="Alchemist" />
-		<AutoEquip UpdateGearSet="true"/>
+		<ChangeClass Job="Alchemist"/>
+		<AutoInventoryEquip/>
 	</If>
     <If Condition="ClassName == ClassJobType.Alchemist">
       <!-- The Arcanist's Tome (Level 20) -->
@@ -64,7 +64,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Practical Alchemy (Level 25) -->
       <If Condition="IsQuestCompleted(66118) and not HasQuest(66119) and not IsQuestCompleted(66119) and Core.Player.ClassLevel &gt; 24">
@@ -83,7 +83,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Baleful Brews (Level 30) -->
       <If Condition="IsQuestCompleted(66119) and not HasQuest(66120) and not IsQuestCompleted(66120) and Core.Player.ClassLevel &gt; 29">
@@ -113,7 +113,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Cease and Assist (Level 35) -->
       <If Condition="IsQuestCompleted(66120) and not HasQuest(66183) and not IsQuestCompleted(66183) and Core.Player.ClassLevel &gt; 34">
@@ -140,7 +140,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Might Made Right (Level 40) -->
       <If Condition="IsQuestCompleted(66183) and not HasQuest(66184) and not IsQuestCompleted(66184) and Core.Player.ClassLevel &gt; 39">
@@ -159,7 +159,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Ultimate Alchemy (Level 45) -->
       <If Condition="IsQuestCompleted(66184) and not HasQuest(66185) and not IsQuestCompleted(66185) and Core.Player.ClassLevel &gt; 44">
@@ -184,7 +184,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Momentary Miracle (Level 50) -->
       <If Condition="IsQuestCompleted(66185) and not HasQuest(66186) and not IsQuestCompleted(66186) and Core.Player.ClassLevel &gt; 49">
@@ -197,15 +197,15 @@ Angles24
       <If Condition="HasQuest(66186) and not IsQuestCompleted(66186) and GetQuestStep(66186) == 1">
         <GetTo ZoneId="131" XYZ="105.9434, 7.999993, -32.70007"/>
         <LLTalkTo NpcId="1003927" XYZ="105.9434, 7.999993, -32.70007" QuestId="66186" StepId="1"/>
-      </If>	  
+      </If>
       <If Condition="HasQuest(66186) and not IsQuestCompleted(66186) and GetQuestStep(66186) == 2">
         <GetTo ZoneId="130" XYZ="37.67456, 7.999928, -113.2067"/>
         <LLTalkTo NpcId="1001309" XYZ="37.67456, 7.999928, -113.2067" QuestId="66186"/>
         <GetTo ZoneId="130" XYZ="14.1756, 6.973328, -83.87885"/>
-        <LLTalkTo NpcId="1001301" XYZ="14.1756, 6.973328, -83.87885" QuestId="66186"/>      
+        <LLTalkTo NpcId="1001301" XYZ="14.1756, 6.973328, -83.87885" QuestId="66186"/>
         <GetTo ZoneId="130" XYZ="-34.16504, 9.099978, -87.44946"/>
         <LLTalkTo NpcId="1001354" XYZ="-34.16504, 9.099978, -87.44946" QuestId="66186"/>
-      </If>	  
+      </If>
 	  <If Condition="HasQuest(66186) and not IsQuestCompleted(66186) and GetQuestStep(66186) == 2">
 		<GetTo ZoneId="130" XYZ="37.67456, 7.999928, -113.2067"/>
         <LLTalkTo NpcId="1001309" XYZ="37.67456, 7.999928, -113.2067" QuestId="66186"/>
@@ -213,7 +213,7 @@ Angles24
         <LLTalkTo NpcId="1001301" XYZ="14.1756, 6.973328, -83.87885" QuestId="66186"/>
 		<GetTo ZoneId="130" XYZ="-34.16504, 9.099978, -87.44946"/>
         <LLTalkTo NpcId="1001354" XYZ="-34.16504, 9.099978, -87.44946" QuestId="66186"/>
-	   </If>	  
+	   </If>
       <If Condition="HasQuest(66186) and not IsQuestCompleted(66186) and GetQuestStep(66186) == 3">
         <While Condition="not HasHqItem(1987)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1987,'Amount':1,'Enabled':true,'Type':'Alchemist','Hq':true}]"/>
@@ -233,7 +233,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Without a Trace (Level 50) -->
       <If Condition="IsQuestCompleted(66186) and not HasQuest(67601) and not IsQuestCompleted(67601) and Core.Player.ClassLevel &gt; 49">
@@ -253,7 +253,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Magic Marks the Spot (Level 53) -->
       <If Condition="IsQuestCompleted(67601) and not HasQuest(67602) and not IsQuestCompleted(67602) and Core.Player.ClassLevel &gt; 52">
@@ -284,7 +284,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- From Hells (Level 55) -->
       <If Condition="IsQuestCompleted(67602) and not HasQuest(67603) and not IsQuestCompleted(67603) and Core.Player.ClassLevel &gt; 54">
@@ -319,7 +319,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Burden of Proof (Level 58) -->
       <If Condition="IsQuestCompleted(67603) and not HasQuest(67604) and not IsQuestCompleted(67604) and Core.Player.ClassLevel &gt; 57">
@@ -350,7 +350,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- What Death can Join Together (Level 60) -->
       <If Condition="IsQuestCompleted(67604) and not HasQuest(67605) and not IsQuestCompleted(67605) and Core.Player.ClassLevel &gt; 59">
@@ -393,7 +393,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Not Quite Dead Yet (Level 60) -->
       <If Condition="IsQuestCompleted(67605) and not HasQuest(67972) and not IsQuestCompleted(67972) and Core.Player.ClassLevel &gt; 59">
@@ -421,7 +421,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Forbidden Blade (Level 63) -->
       <If Condition="IsQuestCompleted(67972) and not HasQuest(67973) and not IsQuestCompleted(67973) and Core.Player.ClassLevel &gt; 62">
@@ -446,7 +446,7 @@ Angles24
 			 <LLTalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67973"/>
 			 </If>
 			 <If Condition="HasItem(17925)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17926,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17926,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
         </If>
         </While>
         <GetTo ZoneId="130" XYZ="-212.6737, 18.5, 71.50591"/>
@@ -462,7 +462,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Do Goldsmiths Dream of Gilded Sheep (Level 65) -->
       <If Condition="IsQuestCompleted(67973) and not HasQuest(67974) and not IsQuestCompleted(67974) and Core.Player.ClassLevel &gt; 64">
@@ -499,7 +499,7 @@ Angles24
 			 <LLTalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67974"/>
 			 </If>
 			 <If Condition="HasItem(17927)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17928,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17928,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
         </If>
         </While>
         <GetTo ZoneId="130" XYZ="-157.2528, 14.0481, 59.74953"/>
@@ -507,7 +507,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- No Sin Unpunished (Level 68) -->
       <If Condition="IsQuestCompleted(67974) and not HasQuest(67975) and not IsQuestCompleted(67975) and Core.Player.ClassLevel &gt; 67">
@@ -540,7 +540,7 @@ Angles24
 			 <LLTalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67975"/>
 			 </If>
 			 <If Condition="HasItem(17929)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17930,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17930,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
         </If>
         </While>
         <GetTo ZoneId="131" XYZ="67.24543, 7.992012, -31.89059"/>
@@ -556,7 +556,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- A Love Beyond Lifetimes (Level 70) -->
       <If Condition="IsQuestCompleted(67975) and not HasQuest(67976) and not IsQuestCompleted(67976) and Core.Player.ClassLevel &gt; 69">
@@ -589,7 +589,7 @@ Angles24
 			 <LLTalkTo NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362" QuestId="67976"/>
 			 </If>
 			 <If Condition="HasItem(17931)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17932,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17932,'Amount':1,'Enabled':true,'Type':'Alchemist'}]"/>
         </If>
         </While>
         <GetTo ZoneId="130" XYZ="-119.2246, 10, 72.59454"/>
@@ -605,7 +605,7 @@ Angles24
 		<WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
     </If>
 	
@@ -632,8 +632,7 @@ Angles24
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">

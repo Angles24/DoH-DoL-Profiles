@@ -4,7 +4,7 @@ Angles24
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY meld "1"> 
+<!ENTITY meld "1">
  	 
 <!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
@@ -22,11 +22,11 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Armorer Class Quests</Name>		
-	<Order>	
+	<Name>Armorer Class Quests</Name>
+	<Order>
 	
 	<If Condition="FreeItemSlots() &lt; 16">
-		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
+		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
 	
@@ -37,8 +37,8 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68134)">
-		<ChangeClass Job="Armorer" />
-		<AutoEquip UpdateGearSet="true"/>
+		<ChangeClass Job="Armorer"/>
+		<AutoInventoryEquip/>
 	</If>
     <If Condition="ClassName == ClassJobType.Armorer">
       <!-- An Armorer's Pride (Level 20) -->
@@ -64,7 +64,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Showing Your Steel (Level 25) -->
       <If Condition="IsQuestCompleted(65814) and not HasQuest(65815) and not IsQuestCompleted(65815) and Core.Player.ClassLevel &gt; 24">
@@ -83,7 +83,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- May the Best Armorer Win (Level 30) -->
       <If Condition="IsQuestCompleted(65815) and not HasQuest(65816) and not IsQuestCompleted(65816) and Core.Player.ClassLevel &gt; 29">
@@ -110,7 +110,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Pans of Steel (Level 35) -->
       <If Condition="IsQuestCompleted(65816) and not HasQuest(65817) and not IsQuestCompleted(65817) and Core.Player.ClassLevel &gt; 34">
@@ -133,7 +133,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Best of Three (Level 40) -->
       <If Condition="IsQuestCompleted(65817) and not HasQuest(65818) and not IsQuestCompleted(65818) and Core.Player.ClassLevel &gt; 39">
@@ -160,7 +160,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- For the Good of the Guild (Level 45) -->
       <If Condition="IsQuestCompleted(65818) and not HasQuest(65819) and not IsQuestCompleted(65819) and Core.Player.ClassLevel &gt; 44">
@@ -189,7 +189,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Rivalry and Respect (Level 50) -->
       <If Condition="IsQuestCompleted(65819) and not HasQuest(65820) and not IsQuestCompleted(65820) and Core.Player.ClassLevel &gt; 49">
@@ -222,7 +222,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Breaking of Blanstyr (Level 50) -->
       <If Condition="IsQuestCompleted(65820) and not HasQuest(67574) and not IsQuestCompleted(67574) and Core.Player.ClassLevel &gt; 49">
@@ -254,7 +254,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Light-Headed (Level 53) -->
       <If Condition="IsQuestCompleted(67574) and not HasQuest(67575) and not IsQuestCompleted(67575) and Core.Player.ClassLevel &gt; 52">
@@ -289,7 +289,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Fancy Lancer (Level 55) -->
       <If Condition="IsQuestCompleted(67575) and not HasQuest(67576) and not IsQuestCompleted(67576) and Core.Player.ClassLevel &gt; 54">
@@ -328,7 +328,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The reforging of Blanstyr (Level 58) -->
       <If Condition="IsQuestCompleted(67576) and not HasQuest(67577) and not IsQuestCompleted(67577) and Core.Player.ClassLevel &gt; 57">
@@ -363,7 +363,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Pride of Vymelli (Level 60) -->
       <If Condition="IsQuestCompleted(67577) and not HasQuest(67578) and not IsQuestCompleted(67578) and Core.Player.ClassLevel &gt; 59">
@@ -404,7 +404,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Original Blanstyr (Level 60) -->
       <If Condition="IsQuestCompleted(67578) and not HasQuest(68130) and not IsQuestCompleted(68130) and Core.Player.ClassLevel &gt; 59">
@@ -424,7 +424,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Eastern Apprentice (Level 63) -->
       <If Condition="IsQuestCompleted(68130) and not HasQuest(68131) and not IsQuestCompleted(68131) and Core.Player.ClassLevel &gt; 62">
@@ -453,7 +453,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68131"/>
 			 </If>
 			 <If Condition="HasItem(17893)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17894,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17894,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-129.5407, -4.750016, 202.1004"/>
@@ -465,7 +465,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Forging with Scales (Level 65) -->
       <If Condition="IsQuestCompleted(68131) and not HasQuest(68132) and not IsQuestCompleted(68132) and Core.Player.ClassLevel &gt; 64">
@@ -494,7 +494,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68132"/>
 			 </If>
 			 <If Condition="HasItem(17895)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17896,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17896,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-129.2014, -4.750015, 203.3975"/>
@@ -502,7 +502,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Head-to-head Contest (Level 68) -->
       <If Condition="IsQuestCompleted(68132) and not HasQuest(68133) and not IsQuestCompleted(68133) and Core.Player.ClassLevel &gt; 67">
@@ -539,7 +539,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68133"/>
 			 </If>
 			 <If Condition="HasItem(17897)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17898,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17898,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-129.3481, -4.750015, 203.0172"/>
@@ -547,7 +547,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- A Confluence of Style (Level 70) -->
       <If Condition="IsQuestCompleted(68133) and not HasQuest(68134) and not IsQuestCompleted(68134) and Core.Player.ClassLevel &gt; 69">
@@ -572,7 +572,7 @@ Angles24
 			 <LLTalkTo NpcId="1019053" XYZ="-124.5594, -4.705104, 206.4697" QuestId="68134"/>
 			 </If>
 			 <If Condition="HasItem(17899)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17900,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17900,'Amount':1,'Enabled':true,'Type':'Armorer'}]"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-143.7726, -4.999999, 153.462"/>
@@ -588,7 +588,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
     </If>
 	
@@ -609,8 +609,7 @@ Angles24
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">

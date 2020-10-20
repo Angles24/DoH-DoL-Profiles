@@ -10,33 +10,33 @@ Authors:  Kayla / Angles24
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
 		<WaitTimer waitTime="7"/>
-		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
 		
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>	
+		</While>
 	</If>
 	
-	<!-- Grade 3 Skybuilders' Dye -->	
+	<!-- Grade 3 Skybuilders' Dye -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 62) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 67)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
-			<ChangeClass Job="Alchemist" />
-		</If>		
+			<ChangeClass Job="Alchemist"/>
+		</If>
 		<If Condition="ClassName == ClassJobType.Alchemist">
-			<AutoEquip UpdateGearSet="true"/>		
+			<AutoInventoryEquip/>
 			<WaitTimer waitTime="10"/>
 			<Lisbeth Json="[{'Group':1,'Item':31206,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
-		</If> 			
+		</If>
 	</If>
 	
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>	
+		</While>
 	</If>
 	
 	<!-- Reload Profile -->
@@ -45,8 +45,8 @@ Authors:  Kayla / Angles24
 	</If>
 	
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 67 on Alchemist, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>		
+	<LogMessage Message="Congrats on Level 67 on Alchemist, moving on."/>
+	<AutoInventoryEquip/>
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		

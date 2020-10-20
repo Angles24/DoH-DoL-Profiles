@@ -7,7 +7,7 @@ Required: LLamaLibrary BotBase
 -->
 <Profile>
 	<Name>Dragonsung Saw</Name>
-	<Order>	
+	<Order>
 	
 	<RunCode Name="Disable_Flight"/>
 	
@@ -18,7 +18,7 @@ Required: LLamaLibrary BotBase
 	</If>
 	<If Condition="ClassName == ClassJobType.Carpenter and Core.Player.ClassLevel &gt; 79">
 		
-		<If Condition="not IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
 				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
@@ -33,7 +33,7 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
@@ -45,47 +45,47 @@ Required: LLamaLibrary BotBase
 		<If Condition="not (HasItem(29612) or HasItem(29623) or HasItem(29634))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29612" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
-		</If>	
+		</If>
 		
-		<While Condition="HasItem(29612)"> <!-- Skysteel Saw -->
-			<If Condition="not HqHasAtLeast(29645,20)"> <!-- Oddly Specific Petrified Orb -->				
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29645,'Amount':20,'Hq':true,'Enabled':true,'Type':'Carpenter'}]"/>						
+		<While Condition="HasItem(29612)"><!-- Skysteel Saw -->
+			<If Condition="not HqHasAtLeast(29645,20)"><!-- Oddly Specific Petrified Orb -->
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29645,'Amount':20,'Hq':true,'Enabled':true,'Type':'Carpenter'}]"/>
 			</If>
-			<If Condition="HasItem(29612) and HqHasAtLeast(29645,20)">	
+			<If Condition="HasItem(29612) and HqHasAtLeast(29645,20)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29612">
 					<ChangeClass Job="Carpenter"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29612">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29623" SelectString="0"/> <!-- Buy Skysteel Saw +1 -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29623" SelectString="0"/><!-- Buy Skysteel Saw +1 -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</If>					
+			</If>
 		</While>
 			
-		<While Condition="HasItem(29623)"> <!-- Skysteel Saw +1 -->
-			<If Condition="not HqHasAtLeast(29653,30)"> <!-- Oddly Specific Shaft -->	
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29653,'Amount':30,'Hq':true,'Enabled':true,'Type':'Carpenter'}]"/>			
+		<While Condition="HasItem(29623)"><!-- Skysteel Saw +1 -->
+			<If Condition="not HqHasAtLeast(29653,30)"><!-- Oddly Specific Shaft -->
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29653,'Amount':30,'Hq':true,'Enabled':true,'Type':'Carpenter'}]"/>
 			</If>
-			<While Condition="HasItem(29623) and HqHasAtLeast(29653,30)">	
+			<While Condition="HasItem(29623) and HqHasAtLeast(29653,30)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29623">
 					<ChangeClass Job="Carpenter"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29623">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29634" SelectString="1"/> <!-- Buy Dragonsung Saw -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29634" SelectString="1"/><!-- Buy Dragonsung Saw -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</While>					
+			</While>
 		</While>
 		
-		<If Condition="HasItem(29634) and HasQuest(69385)"> <!-- Dragonsung Saw -->
+		<If Condition="HasItem(29634) and HasQuest(69385)"><!-- Dragonsung Saw -->
 			<While Condition="ClassName != ClassJobType.Carpenter">
 				<ChangeClass Job="Carpenter"/>
 			</While>

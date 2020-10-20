@@ -4,7 +4,7 @@ Angles24
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY meld "1"> 
+<!ENTITY meld "1">
  	 
 <!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
@@ -22,11 +22,11 @@ Angles24
 -->
 ]>
 <Profile>
-	<Name>Blacksmith Class Quests</Name>	
-	<Order>	
+	<Name>Blacksmith Class Quests</Name>
+	<Order>
 	
 	<If Condition="FreeItemSlots() &lt; 16">
-		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot." />
+		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
 	
@@ -37,8 +37,8 @@ Angles24
 	<WaitTimer WaitTime="2"/>
 	
 	<If Condition="not IsQuestCompleted(68155)">
-		<ChangeClass Job="Blacksmith" />
-		<AutoEquip UpdateGearSet="true"/>
+		<ChangeClass Job="Blacksmith"/>
+		<AutoInventoryEquip/>
 	</If>
     <If Condition="ClassName == ClassJobType.Blacksmith">
       <!-- By the Sweat of Your Brow (Level 20) -->
@@ -64,7 +64,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- True as Steel (Level 25) -->
       <If Condition="IsQuestCompleted(65832) and not HasQuest(65833) and not IsQuestCompleted(65833) and Core.Player.ClassLevel &gt; 24">
@@ -83,7 +83,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- As Iron Sharpens Iron (Level 30) -->
       <If Condition="IsQuestCompleted(65833) and not HasQuest(65834) and not IsQuestCompleted(65834) and Core.Player.ClassLevel &gt; 29">
@@ -118,7 +118,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Set Faezahr to Stun (Level 35) -->
       <If Condition="IsQuestCompleted(65834) and not HasQuest(65835) and not IsQuestCompleted(65835) and Core.Player.ClassLevel &gt; 34">
@@ -141,7 +141,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Forging Ahead (Level 40) -->
       <If Condition="IsQuestCompleted(65835) and not HasQuest(65836) and not IsQuestCompleted(65836) and Core.Player.ClassLevel &gt; 39">
@@ -160,7 +160,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Beauty and the Bardiche (Level 45) -->
       <If Condition="IsQuestCompleted(65836) and not HasQuest(65837) and not IsQuestCompleted(65837) and Core.Player.ClassLevel &gt; 44">
@@ -193,7 +193,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Waiting in the Winglet (Level 50) -->
       <If Condition="IsQuestCompleted(65837) and not HasQuest(65838) and not IsQuestCompleted(65838) and Core.Player.ClassLevel &gt; 49">
@@ -234,7 +234,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Forging Northwards (Level 50) -->
       <If Condition="IsQuestCompleted(65838) and not HasQuest(67543) and not IsQuestCompleted(67543) and Core.Player.ClassLevel &gt; 49">
@@ -254,7 +254,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Leave it to Fremondain (Level 53) -->
       <If Condition="IsQuestCompleted(67543) and not HasQuest(67544) and not IsQuestCompleted(67544) and Core.Player.ClassLevel &gt; 52">
@@ -281,7 +281,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Good Fight (Level 55) -->
       <If Condition="IsQuestCompleted(67544) and not HasQuest(67545) and not IsQuestCompleted(67545) and Core.Player.ClassLevel &gt; 54">
@@ -308,7 +308,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Blade that was Broken (Level 58) -->
       <If Condition="IsQuestCompleted(67545) and not HasQuest(67546) and not IsQuestCompleted(67546) and Core.Player.ClassLevel &gt; 57">
@@ -343,7 +343,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Integrity (Level 60) -->
       <If Condition="IsQuestCompleted(67546) and not HasQuest(67547) and not IsQuestCompleted(67547) and Core.Player.ClassLevel &gt; 59">
@@ -370,7 +370,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- A Missive from the Far East (Level 60) -->
       <If Condition="IsQuestCompleted(67547) and not HasQuest(68129) and not IsQuestCompleted(68129) and Core.Player.ClassLevel &gt; 59">
@@ -391,7 +391,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Client is King (Level 63) -->
       <If Condition="IsQuestCompleted(68129) and not HasQuest(68152) and not IsQuestCompleted(68152) and Core.Player.ClassLevel &gt; 62">
@@ -421,7 +421,7 @@ Angles24
 			 <LLTalkTo NpcId="1021043" XYZ="-5.56958, 39.51749, 17.25787" QuestId="68152"/>
 			 </If>
 			 <If Condition="HasItem(17885)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17886,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17886,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
         </If>
 		</While>
 		<GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
@@ -429,7 +429,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- Blood Ties (Level 65) -->
       <If Condition="IsQuestCompleted(68152) and not HasQuest(68153) and not IsQuestCompleted(68153) and Core.Player.ClassLevel &gt; 64">
@@ -437,7 +437,7 @@ Angles24
 		<WaitTimer WaitTime="10"/>
         <If Condition="IsQuestAcceptQualified(68153)">
 			<RunCode Name="SmallTalk"/>
-          <LLPickupQuest QuestId="68153" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344" />
+          <LLPickupQuest QuestId="68153" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         </If>
       </If>
       <If Condition="HasQuest(68153) and not IsQuestCompleted(68153) and GetQuestStep(68153) == 1">
@@ -455,7 +455,7 @@ Angles24
 			 <LLTalkTo NpcId="1021042" XYZ="-184.9241, 41, 184.6799" QuestId="68153"/>
 			 </If>
 			 <If Condition="HasItem(17887)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17888,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17888,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
 		  </If>
         </While>
         <GetTo ZoneId="129" XYZ="-188.1376, 3.999918, 177.7511"/>
@@ -467,7 +467,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Missing Piece (Level 68) -->
       <If Condition="IsQuestCompleted(68153) and not HasQuest(68154) and not IsQuestCompleted(68154) and Core.Player.ClassLevel &gt; 67">
@@ -497,7 +497,7 @@ Angles24
 			 <LLTalkTo NpcId="1000995" XYZ="-52.01807, 42.7997, 192.2179" QuestId="68154"/>
 			 </If>
 			 <If Condition="HasItem(17889)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17890,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17890,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
 		  </If>
         </While>
         <GetTo ZoneId="128" XYZ="-25.95707, 44.5, 184.4239" distance="0.1"/>
@@ -513,7 +513,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
       <!-- The Final Face-off (Level 70) -->
       <If Condition="IsQuestCompleted(68154) and not HasQuest(68155) and not IsQuestCompleted(68155) and Core.Player.ClassLevel &gt; 69">
@@ -543,7 +543,7 @@ Angles24
 			 <LLTalkTo NpcId="1021050" XYZ="-79.17908, -6.999999, -67.70435" QuestId="68155"/>
 			 </If>
 			 <If Condition="HasItem(17891)">
-          <Lisbeth Json="[{'Id':1,'Group':1,'Item':17892,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17892,'Amount':1,'Enabled':true,'Type':'Blacksmith'}]"/>
 		  </If>
         </While>
         <GetTo ZoneId="628" XYZ="-135.7374, -4.417048, 199.0069"/>
@@ -559,7 +559,7 @@ Angles24
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
     </If>
 	
@@ -579,8 +579,7 @@ Angles24
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
     <CodeChunk Name="Requires_Melding">

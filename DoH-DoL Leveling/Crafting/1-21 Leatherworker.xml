@@ -14,14 +14,14 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 -->
 <Profile>
 	<Name>Crafting Leatherworker to 21</Name>
-	<Order>	
+	<Order>
 	
 	<!-- Change Class LTW - 1 Leather 5257 // 8 Hard Leather 5276 // 17 Aldgoat Leather 5277 -->
 	<If Condition="ClassName != ClassJobType.Leatherworker">
-		<ChangeClass Job="Leatherworker" />
+		<ChangeClass Job="Leatherworker"/>
 	</If>
-	<If Condition="ClassName == ClassJobType.Leatherworker">		
-		<AutoEquip UpdateGearSet="true"/>
+	<If Condition="ClassName == ClassJobType.Leatherworker">
+		<AutoInventoryEquip/>
 	
 	<!-- Do Level 1 Quest -->
 	<!-- My First Head Knife (Level 1) -->
@@ -38,9 +38,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65745" ItemId="5275" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 5 -->
@@ -63,9 +63,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 10 -->
@@ -91,9 +91,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65671" ItemId="5276" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 15 -->
@@ -123,9 +123,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <GetTo ZoneId="133" XYZ="59.30462, 8, -141.0205"/>
         <LLTurnIn QuestId="65672" NpcId="1000681" XYZ="58.73193, 7.980469, -138.5672" Emote="kneel"/>
         <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>	
+		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
-		<AutoEquip UpdateGearSet="true"/>
+		<AutoInventoryEquip/>
       </If>
 	
 	<!-- Grind to 21 -->
@@ -138,8 +138,8 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	</If>
 
 	<If Condition="Core.Player.ClassLevel &gt; 20">
-		<LogMessage Message="Congrats on Level 21, moving on." />
-		<AutoEquip UpdateGearSet="true"/>		
+		<LogMessage Message="Congrats on Level 21, moving on."/>
+		<AutoInventoryEquip/>
 		<WaitTimer waitTime="3"/>
 	</If>
 	
@@ -149,14 +149,13 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 						  5062,5258,4309,5063,
 						  2407,2432,5275,2669"/>
 	
-	<LLoadProfile Path="../Start.xml"/>	
+	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
 			<![CDATA[ 
-			    if (SelectString.IsOpen)
-				SelectString.ClickSlot((uint) (SelectString.LineCount - 1));
+			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
 	</CodeChunks>

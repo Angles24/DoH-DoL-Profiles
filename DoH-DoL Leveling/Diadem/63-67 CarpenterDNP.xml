@@ -10,23 +10,23 @@ Authors:  Kayla / Angles24
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
 		<WaitTimer waitTime="7"/>
-		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
 		
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>	
+		</While>
 	</If>
 	
-	<!-- Grade 3 Skybuilders' Grindstone -->	
+	<!-- Grade 3 Skybuilders' Grindstone -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 62) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 67)">
 		<If Condition="ClassName != ClassJobType.Carpenter">
-			<ChangeClass Job="Carpenter" />
-		</If>		
+			<ChangeClass Job="Carpenter"/>
+		</If>
 		<If Condition="ClassName == ClassJobType.Carpenter">
-			<AutoEquip UpdateGearSet="true"/>			
+			<AutoInventoryEquip/>
 			<WaitTimer waitTime="10"/>
 			<Lisbeth Json="[{'Group':1,'Item':31200,'Amount':15,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>
 		</If>
@@ -37,7 +37,7 @@ Authors:  Kayla / Angles24
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>	
+		</While>
 	</If>
 	
 	<!-- Reload Profile -->
@@ -46,8 +46,8 @@ Authors:  Kayla / Angles24
 	</If>
 	
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 67 on Carpenter, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>			
+	<LogMessage Message="Congrats on Level 67 on Carpenter, moving on."/>
+	<AutoInventoryEquip/>
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		

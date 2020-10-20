@@ -6,8 +6,8 @@ Required: LLamaLibrary BotBase
           ALL currently obtained Skysteel weapons in inventory or Armory.
 -->
 <Profile>
-	<Name>Dragonsung Frypan</Name>	
-	<Order>	
+	<Name>Dragonsung Frypan</Name>
+	<Order>
 	
 	<RunCode Name="Disable_Flight"/>
 	
@@ -18,7 +18,7 @@ Required: LLamaLibrary BotBase
 	</If>
 	<If Condition="ClassName == ClassJobType.Culinarian and Core.Player.ClassLevel &gt; 79">
 		
-		<If Condition="not IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
 				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
@@ -33,7 +33,7 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">	
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
@@ -42,55 +42,55 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not (HasItem(29619) or HasItem(29630) or HasItem(29641))"> 
+		<If Condition="not (HasItem(29619) or HasItem(29630) or HasItem(29641))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-			<BuyItem ItemId="29619" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>	
-		</If>	
+			<BuyItem ItemId="29619" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+		</If>
 		
-		<While Condition="HasItem(29619)"> <!-- Skysteel Frypan -->
-			<If Condition="not HqHasAtLeast(29652,20)"> <!-- Oddly Specific Seed Extract --> 
+		<While Condition="HasItem(29619)"><!-- Skysteel Frypan -->
+			<If Condition="not HqHasAtLeast(29652,20)"><!-- Oddly Specific Seed Extract -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29652,'Amount':20,'Hq':true,'Enabled':true,'Type':'Culinarian'}]"/>
 			</If>
-			<If Condition="HasItem(29619) and HqHasAtLeast(29652,20)">	
+			<If Condition="HasItem(29619) and HqHasAtLeast(29652,20)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29619">
 					<ChangeClass Job="Culinarian"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29619">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
-				</While>	
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29630" SelectString="0"/> <!-- Buy Skysteel Frypan +1 -->
+				</While>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29630" SelectString="0"/><!-- Buy Skysteel Frypan +1 -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</If>					
+			</If>
 		</While>
 		
-		<While Condition="HasItem(29630)"> <!-- Skysteel Frypan +1 -->
-			<If Condition="not HqHasAtLeast(29660,30)"> <!-- Oddly Specific Seed Flour -->					
+		<While Condition="HasItem(29630)"><!-- Skysteel Frypan +1 -->
+			<If Condition="not HqHasAtLeast(29660,30)"><!-- Oddly Specific Seed Flour -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29660,'Amount':30,'Hq':true,'Enabled':true,'Type':'Culinarian'}]"/>
 			</If>
-			<If Condition="HasItem(29630) and HqHasAtLeast(29660,30)">	
+			<If Condition="HasItem(29630) and HqHasAtLeast(29660,30)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29630">
 					<ChangeClass Job="Culinarian"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29630">
-						<RunCode Name="SwitchCombatJob"/> 
+						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29641" SelectString="1"/> <!-- Buy Dragonsung Frypan -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29641" SelectString="1"/><!-- Buy Dragonsung Frypan -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
-			</If>					
+			</If>
 		</While>
 		
-		<If Condition="HasItem(29641) and HasQuest(69385)"> <!-- Dragonsung Frypan -->
+		<If Condition="HasItem(29641) and HasQuest(69385)"><!-- Dragonsung Frypan -->
 			<While Condition="ClassName != ClassJobType.Culinarian">
 				<ChangeClass Job="Culinarian"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29641">
-				<RunCode Name="SkysteelCUL3"/> <!-- Dragonsung Frypan -->
+				<RunCode Name="SkysteelCUL3"/><!-- Dragonsung Frypan -->
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">

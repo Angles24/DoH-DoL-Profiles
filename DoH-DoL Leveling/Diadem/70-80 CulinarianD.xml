@@ -10,33 +10,33 @@ Authors:  Kayla / Angles24
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
 		<WaitTimer waitTime="7"/>
-		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)" />
+		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
 		
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>	
+		</While>
 	</If>
 	
-	<!-- Grade 3 Skybuilders' All-purpose Infusion -->	
+	<!-- Grade 3 Skybuilders' All-purpose Infusion -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 69) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 80)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
-			<ChangeClass Job="Culinarian" />
-		</If>		
+			<ChangeClass Job="Culinarian"/>
+		</If>
 		<If Condition="ClassName == ClassJobType.Culinarian">
-			<AutoEquip UpdateGearSet="true"/>		
+			<AutoInventoryEquip/>
 			<WaitTimer waitTime="10"/>
 			<Lisbeth Json="[{'Group':1,'Item':31215,'Amount':15,'Enabled':true,'Type':'Culinarian','Collectable':false}]"/>
-		</If> 		
+		</If>
 	</If>
 	
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
-		</While>	
+		</While>
 	</If>
 	
 	<!-- Reload Profile -->
@@ -45,8 +45,8 @@ Authors:  Kayla / Angles24
 	</If>
 	
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 80 on Culinarian, moving on." />	
-	<AutoEquip UpdateGearSet="true"/>		
+	<LogMessage Message="Congrats on Level 80 on Culinarian, moving on."/>
+	<AutoInventoryEquip/>
 	<WaitTimer waitTime="10"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
