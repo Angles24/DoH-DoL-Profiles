@@ -48,7 +48,8 @@ Angles24
 
 		<!--Start - Grind to Level 6-->
 		<While Condition="Core.Player.ClassLevel &lt; 6">
-			<Lisbeth Json="[{'Group':0, 'Item':5106, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':6, 'ConditionalJob':'Miner'}]"/>
+      <LogMessage Message="Starting the Grind to Level 6."/>
+			<Lisbeth Json="[{'Group':0, 'Item':5106, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':6, 'ConditionalJob':'Miner'}]"/><!-- Copper Ore -->
 		</While>
 		<If Condition="Core.Player.ClassLevel == 6">
 			<LogMessage Message="Congrats on Level 6, moving on."/>
@@ -88,7 +89,7 @@ Angles24
 		<!--Start - Grind to Level 11-->
 		<While Condition="Core.Player.ClassLevel &lt; 11">
 			<LogMessage Message="Starting the Grind to Level 11."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5107, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':11, 'ConditionalJob':'Miner'}]"/>
+			<Lisbeth Json="[{'Group':0, 'Item':5107, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':11, 'ConditionalJob':'Miner'}]"/><!-- Tin Ore -->
 		</While>
 		<If Condition="Core.Player.ClassLevel == 11">
 			<LogMessage Message="Congrats on Level 11, moving on."/>
@@ -130,7 +131,7 @@ Angles24
 		<!--Start - Grind to Level 16-->
 		<While Condition="Core.Player.ClassLevel &lt; 16">
 			<LogMessage Message="Starting the Grind to Level 16."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5111, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':16, 'ConditionalJob':'Miner'}]"/>
+			<Lisbeth Json="[{'Group':0, 'Item':5111, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':16, 'ConditionalJob':'Miner'}]"/><!-- Iron Ore -->
 		</While>
 		<If Condition="Core.Player.ClassLevel == 16">
 			<LogMessage Message="Congrats on Level 16, moving on."/>
@@ -176,7 +177,7 @@ Angles24
 		<!--Start - Grind to Level 21-->
 		<If Condition="Core.Player.ClassLevel &lt; 21">
 			<LogMessage Message="Starting the Grind to Level 21."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5130, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Miner'}]"/>
+			<Lisbeth Json="[{'Group':0, 'Item':5130, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Miner'}]"/><!-- Raw Malachite -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 21">
 			<LogMessage Message="Congrats on Level 21, moving on."/>

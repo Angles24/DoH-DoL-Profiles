@@ -78,30 +78,7 @@ Angles24
 		<!-- Level 63-64 -->
 		<If Condition="Core.Player.ClassLevel &lt; 64">
 			<LogMessage Message="Starting the Grind to Level 64."/>
-				<GetTo ZoneId="620" XYZ="105.2464, 114.3518, -510.7864"/><!-- Farming Area -->
-			<ExGather Loops="1" while="Core.Player.ClassLevel &lt; 64">
-				<GatherObject>Rocky Outcrop</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="105.2464, 114.3518, -510.7864" name="Rocky Outcrops"/>
-					<HotSpot Radius="90" XYZ="178.7717, 140.4145, -362.2115" name="Rocky Outcrops"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Koppranickel Sand</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
-			<NoCombatMoveTo Name="Farming Area" XYZ="-14.3466, 111.8329, -400.4247"/>
-			<Dismount/>
-			<ExGather Loops="1" while="Core.Player.ClassLevel &lt; 88">
-				<GatherObject>Rocky Outcrop</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="-14.3466, 111.8329, -400.4247" name="Rocky Outcrops"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Koppranickel Sand</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19950, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/><!-- Koppranickel Sand -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 64">
 			<LogMessage Message="Congrats on Level 64, moving on."/>
@@ -114,19 +91,7 @@ Angles24
 		<!-- Level 64-65 -->
 		<If Condition="Core.Player.ClassLevel &lt; 65">
 			<LogMessage Message="Starting the Grind to Level 65."/>
-			<GetTo ZoneId="614" XYZ="516.8639, 42.48845, -68.91994"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 65">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="516.8639, 42.48845, -68.91994" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="413.9455, 65.71731, 14.77979" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="606.0994, 93.00619, 81.90447" name="Mineral Deposits"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Doman Iron Ore</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19953, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':65, 'ConditionalJob':'Miner'}]"/><!-- Doman Iron Ore -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 65">
 			<LogMessage Message="Congrats on Level 65, moving on."/>
@@ -201,19 +166,7 @@ Angles24
 		<!-- Level 65-66 -->
 		<If Condition="Core.Player.ClassLevel &lt; 66">
 			<LogMessage Message="Starting the Grind to Level 66."/>
-			<GetTo ZoneId="614" XYZ="516.8639, 42.48845, -68.91994"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 66">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="516.8639, 42.48845, -68.91994" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="413.9455, 65.71731, 14.77979" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="606.0994, 93.00619, 81.90447" name="Mineral Deposits"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Doman Iron Ore</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19953, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':66, 'ConditionalJob':'Miner'}]"/><!-- Doman Iron Ore -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 66">
 			<LogMessage Message="Congrats on Level 66, moving on."/>
@@ -226,19 +179,7 @@ Angles24
 		<!-- Level 66-68 -->
 		<If Condition="Core.Player.ClassLevel &lt; 68">
 			<LogMessage Message="Starting the Grind to Level 68."/>
-			<GetTo ZoneId="614" XYZ="810.4478, 130.4496, 18.63812"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 68">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="810.4478, 130.4496, 18.63812" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="890.1586, 140.756, -142.6981" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="720.6, 102.7389, -118.9952" name="Mineral Deposits"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Durium Ore</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19954, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':68, 'ConditionalJob':'Miner'}]"/><!-- Durium Ore -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 68">
 			<LogMessage Message="Congrats on Level 68, moving on."/>
@@ -310,19 +251,7 @@ Angles24
 		<!-- Level 68-70 -->
 		<If Condition="Core.Player.ClassLevel &lt; 70">
 			<LogMessage Message="Starting the Grind to Level 70."/>
-			<GetTo ZoneId="614" XYZ="810.4478, 130.4496, 18.63812"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 70">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="810.4478, 130.4496, 18.63812" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="890.1586, 140.756, -142.6981" name="Mineral Deposits"/>
-					<HotSpot Radius="90" XYZ="720.6, 102.7389, -118.9952" name="Mineral Deposits"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Durium Ore</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19954, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':70, 'ConditionalJob':'Miner'}]"/><!-- Durium Ore -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 70">
 			<LogMessage Message="Congrats on Level 70, moving on."/>
@@ -350,28 +279,10 @@ Angles24
 				<LLTalkTo NpcId="1002298" XYZ="-18.04254, 6.2, 157.418" QuestId="68094" StepId="2"/>
 			</If>
 			<If Condition="GetQuestStep(68094) == 3">
-				<While Condition="not HasAtLeast(17944,5)">
-					<If Condition="not IsOnMap(620)">
-						<GetTo ZoneId="620" XYZ="119.5055, 118.1558, -753.5763"/>
-					</If>
-					<ExMoveTo XYZ="283.588, 140.9948, -461.9317"/>
-					<WaitWhile Condition="Condition.IsTimeBetween(22,8.1) or Condition.IsTimeBetween(10,20.1)"/>
-					<If Condition="IsTimeBetween(8,10) or IsTimeBetween(20,22)">
-						<ExGather loops="1" SpawnTimeout="5" While="not HasAtLeast(17994,5)">
-							<GatherObjects>
-								<GatherObject>Unspoiled Mineral Deposit</GatherObject>
-							</GatherObjects>
-							<ItemNames>
-								<ItemName>Pummelite</ItemName>
-							</ItemNames>
-							<GatherRotation>Yield</GatherRotation>
-							<HotSpots>
-								<HotSpot XYZ="283.588, 140.9948, -461.9317" Radius="200"/>
-							</HotSpots>
-					  </ExGather>
-					</If>
+				<While Condition="not NqHasAtLeast(17944,5)">
+					<Lisbeth Json="[{'Group':1,'Item':17944,'Amount':5,'Enabled':true,'Type':'Gather'}]"/><!-- Pummelite -->
 				</While>
-				<If Condition="HasAtLeast(17944,5)">
+				<If Condition="NqHasAtLeast(17944,5)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="478" Position="81.02125, 214.1, -92.38254"/>
 					<LLHandOver ItemIds="17944" NpcId="1019867" XYZ="81.02125, 214.1, -92.38254" QuestId="68094" StepId="3"/>

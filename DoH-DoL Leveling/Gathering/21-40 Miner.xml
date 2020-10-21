@@ -55,15 +55,7 @@ Angles24
 		<!--Start - Grind to Level 26-->
 		<If Condition="Core.Player.ClassLevel &lt; 26">
 			<LogMessage Message="Starting the Grind to Level 26."/>
-			<GetTo ZoneId="145" XYZ="-183.1978, -34.69329, -37.8227"/><!-- Camp Drybone -->
-			<ExGather while="Core.Player.ClassLevel &lt; 26">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="-183.1978, -34.69329, -37.8227"/>
-				</HotSpots>
-				<Slot>1</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5524, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':26, 'ConditionalJob':'Miner'}]"/><!-- Alumen -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 26">
 			<LogMessage Message="Congrats on Level 26, moving on."/>
@@ -103,15 +95,7 @@ Angles24
 		<!--Start - Grind to Level 31-->
 		<If Condition="Core.Player.ClassLevel &lt; 31">
 			<LogMessage Message="Starting the Grind to Level 31."/>
-			<GetTo ZoneId="146" XYZ="26.02704, 8.851164, 399.923"/><!-- Forgotten Springs -->
-			<ExGather while="Core.Player.ClassLevel &lt; 31">
-				<GatherObject>Rocky Outcrop</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="26.02704, 8.851164, 399.923"/>
-				</HotSpots>
-				<Slot>0</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5528, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':31, 'ConditionalJob':'Miner'}]"/><!-- Bomb Ash -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 31">
 			<LogMessage Message="Congrats on Level 31, moving on."/>
@@ -162,20 +146,7 @@ Angles24
 		<!--Start - Grind to Level 36-->
 		<If Condition="Core.Player.ClassLevel &lt; 36">
 			<LogMessage Message="Starting the Grind to Level 36."/>
-			<GetTo ZoneId="146" XYZ="151.5022, 3.113048, 956.2474"/><!-- Forgotten Springs -->
-			<ExGather while="Core.Player.ClassLevel &lt; 36">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<Hotspot Radius="80" XYZ="151.5022, 3.113048, 956.2474"/>
-					<Hotspot Radius="80" XYZ="255.9391, 4.553239, 939.3931"/>
-				</HotSpots>
-				<BlackSpots>
-					<Blackspot Radius="5" XYZ="190.9561, 4.34413, 988.1514"/>
-					<Blackspot Radius="5" XYZ="202.4706, 5.60542, 946.358"/>
-				</BlackSpots>
-				<Slot>6</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5114, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':36, 'ConditionalJob':'Miner'}]"/><!-- Mythril Ore-->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 36">
 			<LogMessage Message="Congrats on Level 36, moving on."/>
@@ -218,15 +189,7 @@ Angles24
 		<!--Start - Grind to Level 40-->
 		<If Condition="Core.Player.ClassLevel &lt; 40">
 			<LogMessage Message="Starting the Grind to Level 40."/>
-			<GetTo ZoneId="153" XYZ="353.7134, -3.617686, 58.73518"/><!-- Quarrymill -->
-			<ExGather while="Core.Player.ClassLevel &lt; 40">
-				<GatherObject>Mineral Deposit</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="60" XYZ="353.7134, -3.617686, 58.73518"/>
-				</HotSpots>
-				<Slot>1</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5525, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':40, 'ConditionalJob':'Miner'}]"/><!-- Black Alumen -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 40">
 			<LogMessage Message="Congrats on Level 40, moving on."/>

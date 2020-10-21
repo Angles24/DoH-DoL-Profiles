@@ -74,19 +74,7 @@ Angles24
 		<!-- Level 63-64 -->
 		<If Condition="Core.Player.ClassLevel &lt; 64">
 			<LogMessage Message="Starting the Grind to Level 64."/>
-			<GetTo ZoneId="612" XYZ="-496.9459, 54.01863, 138.8405"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 64">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="-496.9459, 54.01863, 138.8405" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="-406.1179, 48.15139, 149.3893" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="-502.959, 56.58319, 251.9903" name="Lush Vegetation Patches"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Kudzu Vine</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19982, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Botanist'}]"/><!-- Kudzu Vine -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 64">
 			<LogMessage Message="Congrats on Level 64, moving on."/>
@@ -99,19 +87,7 @@ Angles24
 		<!-- Level 64-65 -->
 		<If Condition="Core.Player.ClassLevel &lt; 65">
 			<LogMessage Message="Starting the Grind to Level 65."/>
-			<GetTo ZoneId="614" XYZ="772.0947, 95.9671, -262.999"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 65">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="772.0947, 95.9671, -262.999" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="642.4675, 132.82, -404.4985" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="703.9889, 124.979, -379.2047" name="Mature Trees"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Pine Log</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5389, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':65, 'ConditionalJob':'Botanist'}]"/><!-- Pine Log -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 65">
 			<LogMessage Message="Congrats on Level 65, moving on."/>
@@ -193,19 +169,7 @@ Angles24
 		<!-- Level 65-66 -->
 		<If Condition="Core.Player.ClassLevel &lt; 66">
 			<LogMessage Message="Starting the Grind to Level 66."/>
-			<GetTo ZoneId="614" XYZ="742.9394, 99.01617, -283.3399"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 66">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="742.9394, 99.01617, -283.3399" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="642.4675, 132.82, -404.4985" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="703.9889, 124.979, -379.2047" name="Mature Trees"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Pine Log</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5389, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':66, 'ConditionalJob':'Botanist'}]"/><!-- Pine Log -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 66">
 			<LogMessage Message="Congrats on Level 66, moving on."/>
@@ -218,19 +182,7 @@ Angles24
 		<!-- Level 66-68 -->
 		<If Condition="Core.Player.ClassLevel &lt; 68">
 			<LogMessage Message="Starting the Grind to Level 68."/>
-			<GetTo ZoneId="620" XYZ="298.305, 323.4938, 392.7249"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 68">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="298.305, 323.4938, 392.7249" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="167.4693, 307.7455, 479.0093" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="293.425, 331.5481, 560.4263" name="Lush Vegetation Patches"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Twincoon</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19989, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':68, 'ConditionalJob':'Botanist'}]"/><!-- Twincoon -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 68">
 			<LogMessage Message="Congrats on Level 68, moving on."/>
@@ -302,21 +254,7 @@ Angles24
 		<!-- Level 68-70 -->
 		<If Condition="Core.Player.ClassLevel &lt; 70">
 			<LogMessage Message="Starting the Grind to Level 70."/>
-			<GetTo ZoneId="620" XYZ="298.305, 323.4938, 392.7249"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 70">
-				<!--<EtxUseAuraItem AuraId="46" ItemId="12668"/>-->
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="298.305, 323.4938, 392.7249" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="167.4693, 307.7455, 479.0093" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="293.425, 331.5481, 560.4263" name="Lush Vegetation Patches"/>
-				</HotSpots>
-				
-				<ItemNames>
-					<ItemName>Twincoon</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19989, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':70, 'ConditionalJob':'Botanist'}]"/><!-- Twincoon -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 70">
 			<LogMessage Message="Congrats on Level 70, moving on."/>
@@ -370,25 +308,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68160) == 255">
 				<While Condition="not HasAtLeast(17948,5)">
-					<If Condition="not IsOnMap(621)">
-						<GetTo ZoneId="621" XYZ="-651.8341, 50.00002, -5.081966"/>
-					</If>
-					<ExMoveTo XYZ="-739.371, 112.4997, -634.7165"/>
-					<WaitWhile Condition="Condition.IsTimeBetween(18,4.1) or Condition.IsTimeBetween(6,16.1)"/>
-					<If Condition="Condition.IsTimeBetween(4,6) or Condition.IsTimeBetween(16,18)">
-						<ExGather loops="1" SpawnTimeout="5" While="not HqHasAtLeast(17948,5)">
-							<GatherObjects>
-								<GatherObject>Unspoiled Lush Vegetation Patch</GatherObject>
-							</GatherObjects>
-							<ItemNames>
-								<ItemName>Rhalgr's Streak</ItemName>
-							</ItemNames>
-							<GatherRotation>Yield</GatherRotation>
-							<HotSpots>
-								<HotSpot XYZ="-739.371, 112.4997, -634.7165" Radius="120"/>
-							</HotSpots>
-						</ExGather>
-					</If>
+					<Lisbeth Json="[{'Group':1,'Item':17948,'Amount':5,'Enabled':true,'Type':'Gather'}]"/><!-- Rhalgr's Streak -->
 				</While>
 				<If Condition="HasAtLeast(17948,5)">
 					<LisbethTravel Zone="478" Position="-44.54691, 209.2032, -89.48778"/>

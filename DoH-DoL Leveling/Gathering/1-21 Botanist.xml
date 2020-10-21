@@ -49,15 +49,7 @@ Angles24
 		<!--Start - Grind to Level 6-->
 		<If Condition="Core.Player.ClassLevel &lt; 6">
 			<LogMessage Message="Starting the Grind to Level 6."/>
-			<GetTo ZoneId="148" XYZ="61.03972, 4.745368, -179.8398"/>
-			<ExGather while="Core.Player.ClassLevel &lt; 6">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="61.03972, 4.745368, -179.8398"/>
-				</HotSpots>
-				<Slot>3</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5509, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':6, 'ConditionalJob':'Botanist'}]"/><!-- Latex -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 6">
 			<LogMessage Message="Congrats on Level 6, moving on."/>
@@ -97,15 +89,7 @@ Angles24
 		<!--Start Grind to Level 11-->
 		<If Condition="Core.Player.ClassLevel &lt; 11">
 			<LogMessage Message="Starting the Grind to Level 11"/>
-			<GetTo ZoneId="148" XYZ="243.2079, -12.19825, -55.7188"/><!-- Bentbranch Meadows -->
-			<ExGather while="Core.Player.ClassLevel &lt; 11">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="243.2079, -12.19825, -55.7188"/>
-				</HotSpots>
-				<Slot>7</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5534, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':11, 'ConditionalJob':'Botanist'}]"/><!-- Tinolqa Mistletoe -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 11">
 			<LogMessage Message="Congrats on Level 11, moving on."/>
@@ -147,15 +131,7 @@ Angles24
 		<!--Start Grind to Level 16-->
 		<If Condition="Core.Player.ClassLevel &lt; 16">
 			<LogMessage Message="Starting the Grind to Level 16."/>
-			<GetTo ZoneId="148" XYZ="40.93684, -8.794018, 114.2742"/><!-- Bentbranch Meadows -->
-			<ExGather while="Core.Player.ClassLevel &lt; 16">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="40.93684, -8.794018, 114.2742"/>
-				</HotSpots>
-				<Slot>3</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5343, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':16, 'ConditionalJob':'Botanist'}]"/><!-- Cotton Boll -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 16">
 			<LogMessage Message="Congrats on Level 16, moving on."/>
@@ -203,7 +179,7 @@ Angles24
 		<!--Start Grind to Level 21-->
 		<If Condition="Core.Player.ClassLevel &lt; 21">
 			<LogMessage Message="Starting the Grind to Level 21."/>
-			<Lisbeth Json="[{'Group':0, 'Item':4834, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Botanist'}]"/>
+			<Lisbeth Json="[{'Group':0, 'Item':4834, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Botanist'}]"/><!-- Galago Mint -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 21">
 			<LogMessage Message="Congrats on Level 21, moving on."/>
