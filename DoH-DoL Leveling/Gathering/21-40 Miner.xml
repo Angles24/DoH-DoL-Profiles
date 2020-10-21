@@ -23,7 +23,7 @@ Angles24
 		<If Condition="not IsQuestCompleted(66140)">
 			<If Condition="not HasQuest(66140)">
 				<LogMessage Message="Picking up Level 20 - Old Wisdom, New Ways"/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66140)">
 					<LLPickupQuest NpcId="1002298" QuestId="66140" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
@@ -39,7 +39,7 @@ Angles24
 			</If>
 			<If Condition="NqHasAtLeast(5599,99)">
 				<If Condition="GetQuestStep(66140) == 255">
-					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+					<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -77,7 +77,7 @@ Angles24
 		<If Condition="IsQuestCompleted(66140) and not IsQuestCompleted(66141)">
 			<If Condition="not HasQuest(66141)">
 			<LogMessage Message="Picking up Level 25 - Water From Stone"/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66141)">
 					<LLPickupQuest NpcId="1002298" QuestId="66141" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
@@ -87,7 +87,7 @@ Angles24
 			</If>
 			<If Condition="HqHasAtLeast(5491,15)">
 				<If Condition="GetQuestStep(66141) == 255">
-					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+					<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 					<LLTurnIn ItemId="5491" QuestId="66141" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LogMessage Message="Level 25 - Water From Stone - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -125,17 +125,17 @@ Angles24
 		<If Condition="IsQuestCompleted(66141) and not IsQuestCompleted(66142)">
 			<If Condition="not HasQuest(66142)">
 				<LogMessage Message="Picking up Level 30 - Obsidian Race."/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66142)">
 					<LLPickupQuest NpcId="1002298" QuestId="66142" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66142) == 1">
-				<GetTo ZoneId="131" XYZ="-5.715219, 6.2, 165.6139"/>
+				<LisbethTravel Zone="131" Position="-5.715219, 6.2, 165.6139"/>
 				<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.715219, 6.2, 165.6139"/>
 			</If>
 			<If Condition="GetQuestStep(66142) == 2">
-				<GetTo ZoneId="131" XYZ="-80.49365, 6.98457, 9.430854"/>
+				<LisbethTravel Zone="131" Position="-80.49365, 6.98457, 9.430854"/>
 				<LLTalkTo InteractDistance="1.0" NpcId="1003911" XYZ="-80.49365, 6.98457, 9.430854"/>
 			</If>
 			<If Condition="not HqHasAtLeast(5125,15)">
@@ -143,7 +143,7 @@ Angles24
 			</If>
 			<If Condition="HqHasAtLeast(5125,15)">
 				<If Condition="GetQuestStep(66142) == 3">
-					<GetTo ZoneId="131" XYZ="-5.64079, 6.2, 166.6474"/><!-- Ul'dah - Steps of Thal -->
+					<LisbethTravel Zone="131" Position="-5.64079, 6.2, 166.6474"/><!-- Ul'dah - Steps of Thal -->
 					<LLHandOver ItemId="5125" QuestId="66142" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.64079, 6.2, 166.6474"/>
 				</If>
 			</If>
@@ -189,7 +189,7 @@ Angles24
 		<If Condition="IsQuestCompleted(66142) and not IsQuestCompleted(66179)">
 			<If Condition="not HasQuest(66179)">
 				<LogMessage Message="Picking up Level 35 - Amethysts Are Forever."/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66179)">
 					<LLPickupQuest NpcId="1002298" QuestId="66179" XYZ="-16.45324, 6.2, 157.4644"/>
 				</If>
@@ -202,7 +202,7 @@ Angles24
 			</If>
 			<If Condition="HqHasAtLeast(5138,20)">
 				<If Condition="GetQuestStep(66179) == 255">
-					<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
+					<LisbethTravel Zone="131" Position="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
 					<LLTurnIn ItemId="5138" QuestId="66179" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 					<LogMessage Message="Level 35 - Amethysts Are Forever - Completed."/>
 					<WaitTimer WaitTime="2"/>

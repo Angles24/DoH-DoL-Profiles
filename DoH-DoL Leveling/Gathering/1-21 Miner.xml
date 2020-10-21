@@ -23,7 +23,7 @@ Angles24
 		  <If Condition="not IsQuestCompleted(66135)">
 			  <If Condition="not HasQuest(66135)">
 				  <LogMessage Message="Picking up Level 1 - My First Pickaxe."/>
-				  <GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+				  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 					  <If Condition="IsQuestAcceptQualified(66135)">
 						  <LLPickupQuest NpcId="1002298" QuestId="66135" XYZ="-16.45324, 6.2, 157.4644"/>
 					  </If>
@@ -33,7 +33,7 @@ Angles24
 			  </While>
 			  <If Condition="NqHasAtLeast(5106,10)">
 				  <If Condition="GetQuestStep(66135) == 255">
-					  <GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 						  <LLTurnIn ItemId="5106" QuestId="66135" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 						  <LogMessage Message="Level 1 - My First Pickaxe - Completed."/>
 						<WaitTimer WaitTime="2"/>
@@ -62,7 +62,7 @@ Angles24
 		  <If Condition="IsQuestCompleted(66135) and not IsQuestCompleted(66136)">
 			  <If Condition="not HasQuest(66136)">
 				  <LogMessage Message="Picking up Level 5 - Know Thy Land."/>
-				  <GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+				  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 					  <If Condition="IsQuestAcceptQualified(66136)">
 						  <LLPickupQuest NpcId="1002298" QuestId="66136" XYZ="-16.45324, 6.2, 157.4644"/>
 					  </If>
@@ -72,7 +72,7 @@ Angles24
 			  </While>
 			  <If Condition="NqHasAtLeast(5432,50)">
 				  <If Condition="GetQuestStep(66136) == 255">
-					  <GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 						  <LLTurnIn ItemId="5432" QuestId="66136" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 						  <LogMessage Message="Level 5 - Know Thy Land - Completed."/>
 						  <WaitTimer WaitTime="2"/>
@@ -102,7 +102,7 @@ Angles24
 		  <If Condition="IsQuestCompleted(66136) and not IsQuestCompleted(66138)">
 			  <If Condition="not HasQuest(66138)">
 				  <LogMessage Message="Picking up Level 10 - The Cutting Edge."/>
-				  <GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+				  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 					  <If Condition="IsQuestAcceptQualified(66138)">
 						  <LLPickupQuest NpcId="1002298" QuestId="66138" XYZ="-16.45324, 6.2, 157.4644"/>
 					  </If>
@@ -112,7 +112,7 @@ Angles24
 			  </While>
 			  <If Condition="NqHasAtLeast(5124,99)">
 				  <If Condition="GetQuestStep(66138) == 255">
-					  <GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 						  <LLTurnIn ItemId="5124" QuestId="66138" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 						  <LogMessage Message="Level 10 - The Cutting Edge - Completed."/>
 							<WaitTimer WaitTime="2"/>
@@ -144,7 +144,7 @@ Angles24
 		  <If Condition="IsQuestCompleted(66138) and not IsQuestCompleted(66139)">
 			  <If Condition="not HasQuest(66139)">
 				  <LogMessage Message="Picking up Level 15 - Getting in Deep."/>
-				  <GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+				  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 					  <If Condition="IsQuestAcceptQualified(66139)">
 						  <LLPickupQuest NpcId="1002298" QuestId="66139" XYZ="-16.45324, 6.2, 157.4644"/>
 					  </If>
@@ -160,7 +160,7 @@ Angles24
 			  </While>
 			  <If Condition="HqHasAtLeast(5519,10)">
 				  <If Condition="GetQuestStep(66139) == 255">
-					  <GetTo ZoneId="131" XYZ="18.72768, 9.00961, 168.2022"/>
+					  <LisbethTravel Zone="131" Position="18.72768, 9.00961, 168.2022"/>
 						  <LLTurnIn ItemId="5519" QuestId="66139" RequiresHq="true" StepId="255" NpcId="1003909" InteractDistance="1.0" XYZ="18.72768, 9.00961, 168.2022"/>
 						  <LogMessage Message="Level 15 - Getting in Deep - Completed."/>
 						  <WaitTimer WaitTime="2"/>

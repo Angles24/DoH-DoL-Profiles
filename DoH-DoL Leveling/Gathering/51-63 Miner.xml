@@ -25,17 +25,17 @@ Angles24
 		<If Condition="not IsQuestCompleted(67616)">
 			<If Condition="not HasQuest(67616)">
 				<LogMessage Message="Picking up Level 50 - Breaking New Ground."/>
-				<GetTo ZoneId="131" XYZ="-18.9975, 6.2, 157.4272"/><!-- Ul'dah - Steps of Thal -->
+				<LisbethTravel Zone="131" Position="-18.9975, 6.2, 157.4272"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(67616)">
 					<LLPickupQuest NpcId="1002298" QuestId="67616" XYZ="-18.9975, 6.2, 157.4272"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67616) == 1">
-				<GetTo ZoneId="131" XYZ="1.129661, 7.599999, 153.545"/><!-- Ul'dah - Steps of Thal -->
+				<LisbethTravel Zone="131" Position="1.129661, 7.599999, 153.545"/><!-- Ul'dah - Steps of Thal -->
 				<LLTalkTo QuestId="67616" StepId="1" NpcId="1002282" XYZ="3.555298, 7.599962, 153.2157"/>
 			</If>
 			<If Condition="GetQuestStep(67616) == 2">
-				<GetTo ZoneId="419" XYZ="16.617, 15.96505, 3.677429"/><!-- The Pillars -->
+				<LisbethTravel Zone="419" Position="16.617, 15.96505, 3.677429"/><!-- The Pillars -->
 				<LLTurnIn ItemId="2001726" QuestId="67616" StepId="2" NpcId="1013232" XYZ="16.617, 15.96505, 3.677429"/>
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>
@@ -44,7 +44,7 @@ Angles24
 				<WaitTimer WaitTime="10"/>
 			</If>
 			<If Condition="GetQuestStep(67616) == 255">
-				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/><!-- Foundation -->
+				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/><!-- Foundation -->
 				<LLTurnIn QuestId="67616" NpcId="1013230" ItemId="0" XYZ="85.19104, 15.00001, 40.66516"/>
 				<LogMessage Message="Level 50 - Breaking New Ground - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -132,13 +132,13 @@ Angles24
 		<If Condition="IsQuestCompleted(67616) and not IsQuestCompleted(67617)">
 			<If Condition="not HasQuest(67617)">
 				<LogMessage Message="Picking up Level 53 - Sellspade."/>
-				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/>
+				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<If Condition="IsQuestAcceptQualified(67617)">
 					<LLPickupQuest NpcId="1013230" QuestId="67617" XYZ="85.19104, 15.00001, 40.66516"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67617) == 1">
-				<GetTo ZoneId="397" XYZ="299.6719, 157.9135, 103.2578"/>
+				<LisbethTravel Zone="397" Position="299.6719, 157.9135, 103.2578"/>
 				<LLTalkTo QuestId="67617" StepId="1" NpcId="1013233" XYZ="299.6719, 157.9135, 103.2578"/>
 			</If>
 			<If Condition="GetQuestStep(67617) == 2">
@@ -153,12 +153,12 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(12534,10)">
 					<RunCode Name="Enable_Flight"/>
-					<GetTo ZoneId="397" XYZ="299.6719, 157.9135, 103.2578"/>
+					<LisbethTravel Zone="397" Position="299.6719, 157.9135, 103.2578"/>
 					<LLHandOver ItemId="12534" RequiresHq="true" QuestId="67617" StepId="2" NpcId="1013233" InteractDistance="2.0" XYZ="299.6719, 157.9135, 103.2578"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67617) == 255">
-				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/>
+				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<LLTurnIn QuestId="67617" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
 				<LogMessage Message="Level 53 - Sellspade - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -200,21 +200,21 @@ Angles24
 		<If Condition="IsQuestCompleted(67617) and not IsQuestCompleted(67618)">
 			<If Condition="not HasQuest(67618)">
 				<LogMessage Message="Picking up Level 55 - The Same Vein."/>
-				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/>
+				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<If Condition="IsQuestAcceptQualified(67618)">
 					<LLPickupQuest NpcId="1013230" QuestId="67618" XYZ="85.19104, 15.00001, 40.66516"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67618) == 1">
-				<GetTo ZoneId="131" XYZ="-18.9975, 6.2, 157.4272"/>
+				<LisbethTravel Zone="131" Position="-18.9975, 6.2, 157.4272"/>
 				<LLHandOver ItemId="2001727" QuestId="67618" StepId="1" NpcId="1002298" XYZ="-18.9975, 6.2, 157.4272"/>
 			</If>
 			<If Condition="GetQuestStep(67618) == 2">
-				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/>
+				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<LLHandOver ItemId="2001727" QuestId="67618" StepId="2" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
 			</If>
 			<If Condition="GetQuestStep(67618) == 3">
-				<GetTo ZoneId="398" XYZ="388.3573, -43.08157, -368.9174"/>
+				<LisbethTravel Zone="398" Position="388.3573, -43.08157, -368.9174"/>
 				<LLTalkTo QuestId="67618" StepId="3" NpcId="1013933" XYZ="388.3573, -43.08157, -368.9174"/>
 			</If>
 			<If Condition="GetQuestStep(67618) == 4">
@@ -229,12 +229,12 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(12537,10)">
 					<RunCode Name="Enable_Flight"/>
-					<GetTo ZoneId="398" XYZ="388.3573, -43.08157, -368.9174"/>
+					<LisbethTravel Zone="398" Position="388.3573, -43.08157, -368.9174"/>
 					<LLHandOver ItemId="12537" RequiresHq="true" QuestId="67618" StepId="4" NpcId="1013933" XYZ="388.3573, -43.08157, -368.9174"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67618) == 255">
-				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/>
+				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<LLTurnIn QuestId="67618" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
 				<LogMessage Message="Level 55 - The Same Vein - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -279,40 +279,40 @@ Angles24
 		<If Condition="IsQuestCompleted(67618) and not IsQuestCompleted(67619)">
 			<If Condition="not HasQuest(67619)">
 				<LogMessage Message="Picking up Level 58 - Digging Deeper."/>
-				<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/>
+				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<If Condition="IsQuestAcceptQualified(67619)">
 					<LLPickupQuest NpcId="1013230" QuestId="67619" XYZ="85.19104, 15.00001, 40.66516"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67619) == 1">
 				<If Condition="not IsOnMap(399)">
-					<GetTo ZoneId="399" XYZ="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
+					<LisbethTravel Zone="399" Position="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
 				</If>
-				<GetTo ZoneId="399" XYZ="552.3003, 94.17663, 161.7609"/>
+				<LisbethTravel Zone="399" Position="552.3003, 94.17663, 161.7609"/>
 				<LLTalkTo QuestId="67619" StepId="1" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
 			</If>
 			<While Condition="GetQuestStep(67619) == 2">
 				<If Condition="not IsOnMap(399)">
-					<GetTo ZoneId="399" XYZ="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
+					<LisbethTravel Zone="399" Position="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
 				</If>
-				<GetTo ZoneId="399" XYZ="386.1599, 77.16479, 286.5186"/>
+				<LisbethTravel Zone="399" Position="386.1599, 77.16479, 286.5186"/>
 				<If Condition="GameObjectManager.GetObjectByNPCId(2005949).IsVisible">
 					<UseObject NpcId="2005949" XYZ="386.1599, 77.16479, 286.5186" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 				</If>
-				<GetTo ZoneId="399" XYZ="350.3623, 103.4714, 333.8826"/>
+				<LisbethTravel Zone="399" Position="350.3623, 103.4714, 333.8826"/>
 				<If Condition="GameObjectManager.GetObjectByNPCId(2005948).IsVisible">
 					<UseObject NpcId="2005948" XYZ="350.3623, 103.4714, 333.8826" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 				</If>
-				<GetTo ZoneId="399" XYZ="338.8571, 92.48486, 314.2595"/>
+				<LisbethTravel Zone="399" Position="338.8571, 92.48486, 314.2595"/>
 				<If Condition="GameObjectManager.GetObjectByNPCId(2005950).IsVisible">
 					<UseObject NpcId="2005950" XYZ="338.8571, 92.48486, 314.2595" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 				</If>
 			</While>
 			<If Condition="GetQuestStep(67619) == 3">
 				<If Condition="not IsOnMap(399)">
-					<GetTo ZoneId="399" XYZ="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
+					<LisbethTravel Zone="399" Position="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
 				</If>
-				<GetTo ZoneId="399" XYZ="552.3003, 94.17663, 161.7609"/>
+				<LisbethTravel Zone="399" Position="552.3003, 94.17663, 161.7609"/>
 				<LLHandOver ItemId="2001728" QuestId="67619" StepId="3" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
 			</If>
 			<If Condition="GetQuestStep(67619) == 4">
@@ -426,23 +426,23 @@ Angles24
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67620) == 4">
-				<GetTo ZoneId="478" XYZ="116.0448, 206.9609, 80.15564"/>
+				<LisbethTravel Zone="478" Position="116.0448, 206.9609, 80.15564"/>
 				<LLTalkTo QuestId="67620" StepId="4" NpcId="1013956" XYZ="116.0448, 206.9609, 80.15564"/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 5">
 				<If Condition="not IsOnMap(399)">
-					<GetTo ZoneId="399" XYZ="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
+					<LisbethTravel Zone="399" Position="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
 				</If>
 				<NoCombatMoveTo Name="Haimirich" XYZ="116.0448, 206.9609, 80.15564"/>
 				<LLTalkTo QuestId="67620" StepId="5" NpcId="1013959" XYZ="169.6345, 202.7997, 494.8042"/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 6">
-				<GetTo ZoneId="478" XYZ="-26.84064, 206.4995, 28.67163"/>
+				<LisbethTravel Zone="478" Position="-26.84064, 206.4995, 28.67163"/>
 				<LLHandOver ItemId="2001729" QuestId="67620" StepId="6" NpcId="1012133" XYZ="-26.84064, 206.4995, 28.67163"/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 255">
 				<If Condition="not IsOnMap(418)">
-					<GetTo ZoneId="418" XYZ="95.00264, 15.00001, 39.64268"/>
+					<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 					<LLTurnIn QuestId="67620" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
 					<LogMessage Message="Level 60 - The Hole Truth - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -459,25 +459,25 @@ Angles24
 		<If Condition="IsQuestCompleted(67620) and not IsQuestCompleted(68090)">
 			<If Condition="not HasQuest(68090)">
 				<LogMessage Message="Picking up Level 60 - Gift of the Gob."/>
-				<GetTo ZoneId="131" XYZ="-17.52845, 6.2, 157.5762"/>
+				<LisbethTravel Zone="131" Position="-17.52845, 6.2, 157.5762"/>
 				<If Condition="IsQuestAcceptQualified(68090)">
 					<LLPickupQuest QuestId="68090" NpcId="1002298" XYZ="-17.52845, 6.2, 157.5762"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68090) == 1">
-				<GetTo ZoneId="131" XYZ="1.556316, 7.599999, 153.5215"/>
+				<LisbethTravel Zone="131" Position="1.556316, 7.599999, 153.5215"/>
 				<LLTalkTo NpcId="1002282" XYZ="1.556316, 7.599999, 153.5215" QuestId="68090" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68090) == 2">
-				<GetTo ZoneId="478" XYZ="54.72661, 207.3399, -7.817912"/>
+				<LisbethTravel Zone="478" Position="54.72661, 207.3399, -7.817912"/>
 				<LLHandOver ItemIds="2002057" NpcId="1019863" XYZ="54.72661, 207.3399, -7.817912" QuestId="68090" StepId="2"/>
 			</If>
 			<If Condition="GetQuestStep(68090) == 3">
-				<GetTo ZoneId="478" XYZ="81.93546, 214.1, -91.00903"/>
+				<LisbethTravel Zone="478" Position="81.93546, 214.1, -91.00903"/>
 				<LLTalkTo NpcId="1019864" XYZ="81.93546, 214.1, -91.00903" QuestId="68090" StepId="3"/>
 			</If>
 			<If Condition="GetQuestStep(68090) == 255">
-				<GetTo ZoneId="478" XYZ="54.56663, 207.3399, -8.392662"/>
+				<LisbethTravel Zone="478" Position="54.56663, 207.3399, -8.392662"/>
 				<LLTurnIn QuestId="68090" NpcId="1019863" XYZ="54.56663, 207.3399, -8.392662"/>
 				<LogMessage Message="Level 60 - Gift of the Gob - Completed."/>
 				<WaitTimer WaitTime="2"/>
