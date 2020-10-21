@@ -113,8 +113,9 @@ Required: LLamaLibrary BotBase
 				<LLTurnIn QuestId="69428" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 			</If>
 		</If>
-		<While Condition="not HasQuest(69429) and HasItem(29639)">				
-				<RunCode Name="EverSkyward"/>
+		<While Condition="not HasQuest(69429) and HasItem(29639)">	
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<RunCode Name="EverSkyward"/>
 		</While>
 		<If Condition="HasQuest(69429) and HasItem(29639) and GetQuestStep(69429) == 255">
 			<If Condition="LLHasItemCollectable(31106)">
@@ -134,8 +135,9 @@ Required: LLamaLibrary BotBase
 				<LLTurnIn QuestId="69429" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 			</If>
 		</If>
-		<While Condition="not HasQuest(69430) and HasItem(30287)">				
-				<RunCode Name="ToolsOfTomorrow"/>
+		<While Condition="not HasQuest(69430) and HasItem(30287)">	
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<RunCode Name="ToolsOfTomorrow"/>
 		</While>
 		<If Condition="HasQuest(69430) and HasItem(30287) and GetQuestStep(69430) == 255">
 			<If Condition="LLHasItemCollectable(31114)">
