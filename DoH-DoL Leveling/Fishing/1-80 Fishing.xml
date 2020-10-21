@@ -1597,10 +1597,6 @@ Angles24
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="2"/>
-			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.OffHand].RawItemId != 17726">
-				<RunCode Name="SPEARWeapon"/>
-				<WaitTimer WaitTime="3"/>
-			</While>
 		</If>
 	<!--End -->
 	

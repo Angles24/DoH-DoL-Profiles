@@ -116,8 +116,6 @@ Angles24
 					  <LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
 						  <LLTurnIn ItemId="5124" QuestId="66138" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 						  <LogMessage Message="Level 10 - The Cutting Edge - Completed."/>
-							<WaitTimer WaitTime="2"/>
-						  <RunCode Name="MINWeapon2"/>
 						  <WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>

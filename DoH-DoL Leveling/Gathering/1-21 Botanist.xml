@@ -117,8 +117,6 @@ Angles24
 						<LLTurnIn ItemId="5352" QuestId="65541" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
 						<LogMessage Message="Level 10 - Weapons of a Feather - Completed."/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="BTNWeapon2"/>
-						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>

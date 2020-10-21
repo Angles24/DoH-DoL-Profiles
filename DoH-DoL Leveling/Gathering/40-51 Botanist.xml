@@ -148,10 +148,6 @@ Angles24
 					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LogMessage Message="Level 50 - Seeds of Hope - Completed."/>
-					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 2558">
-					  <RunCode Name="50Weapon"/>
-					  <WaitTimer WaitTime="3"/>
-				  </While>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
