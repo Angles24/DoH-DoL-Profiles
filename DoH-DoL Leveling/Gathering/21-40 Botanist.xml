@@ -34,6 +34,9 @@ Angles24
 			<If Condition="NqHasAtLeast(5599,99)">
 				<If Condition="GetQuestStep(65543) == 255">
 					<LisbethTravel Zone="133" Position="-235.7631, 8, -147.0039"/>
+          <If Condition="ClassName != ClassJobType.Botanist">
+		       <ChangeClass Job="Botanist"/>
+	        </If>
 					<LLTurnIn ItemId="5599" QuestId="65543" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
 					<LogMessage Message="Level 20 - Dressed to Harvest - Completed."/>
 					<WaitTimer WaitTime="2"/>
