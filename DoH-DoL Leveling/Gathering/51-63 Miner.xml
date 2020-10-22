@@ -19,7 +19,7 @@ Angles24
 		<RunCode Name="Enable_Flight"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		
 		<!--Level 50 - Breaking New Ground-->
 		<If Condition="not IsQuestCompleted(67616)">
@@ -41,7 +41,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 			<If Condition="GetQuestStep(67616) == 255">
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/><!-- Foundation -->
@@ -51,7 +51,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Breaking New Ground-->
@@ -65,7 +65,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 51, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 51 Grind-->
 
@@ -78,7 +78,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 52, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 52 Grind-->
 
@@ -91,7 +91,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 54, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 54 Grind-->
 
@@ -132,7 +132,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Sellspade-->
@@ -146,7 +146,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 56, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 56 Grind-->
 
@@ -195,7 +195,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End The Same Vein-->
@@ -209,7 +209,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 58, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 58 Grind-->
 
@@ -277,7 +277,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Digging Deeper-->
@@ -291,7 +291,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 60, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 60 Grind-->
 
@@ -324,7 +324,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67620) == 4">
@@ -351,7 +351,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 		</If>
@@ -386,7 +386,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Gift of the Gob-->
@@ -400,7 +400,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 62, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 62 Grind-->
 		
@@ -413,7 +413,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 64, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 63 Grind-->
 		

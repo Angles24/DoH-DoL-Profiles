@@ -17,7 +17,7 @@ Angles24
     <If Condition="ClassName == ClassJobType.Botanist">
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 
 		<!--Level 1 - My First Hatchet-->
 		<If Condition="not IsQuestCompleted(65744)">
@@ -40,7 +40,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
-					<WaitTimer WaitTime="10"/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 		</If>
@@ -55,7 +55,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 6, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 6 Grind-->
 
@@ -80,7 +80,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
-					<WaitTimer WaitTime="10"/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 		</If>
@@ -95,7 +95,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 11, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 11 Grind-->
 
@@ -120,7 +120,7 @@ Angles24
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
-						<WaitTimer WaitTime="10"/>
+						<WaitTimer WaitTime="5"/>
 					</If>
 				</If>
 		</If>
@@ -135,7 +135,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 16, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 16 Grind-->
 
@@ -169,7 +169,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Haste Makes Waste-->
@@ -183,7 +183,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 21, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 21 Grind-->
 	</If>

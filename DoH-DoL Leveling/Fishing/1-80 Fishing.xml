@@ -306,7 +306,7 @@ Angles24
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
@@ -353,7 +353,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -438,7 +438,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -521,7 +521,7 @@ Angles24
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
@@ -568,7 +568,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -636,7 +636,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -722,7 +722,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -796,7 +796,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -880,7 +880,7 @@ Angles24
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
@@ -927,7 +927,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1003,7 +1003,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1094,7 +1094,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="not HasQuest(67621)">
@@ -1144,7 +1144,7 @@ Angles24
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
@@ -1191,7 +1191,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1261,7 +1261,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1347,7 +1347,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1442,7 +1442,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1531,7 +1531,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="not HasQuest(68431)">
@@ -1574,7 +1574,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
@@ -1605,7 +1605,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1698,7 +1698,7 @@ Angles24
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
@@ -1745,7 +1745,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1841,7 +1841,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -1963,7 +1963,7 @@ Angles24
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
@@ -2050,7 +2050,7 @@ Angles24
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
-				<WaitTimer waitTime="7"/>
+				<WaitTimer WaitTime="3"/>
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">

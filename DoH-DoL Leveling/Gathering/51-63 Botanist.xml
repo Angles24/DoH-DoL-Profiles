@@ -19,7 +19,7 @@ Angles24
 		<RunCode Name="Enable_Flight"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		
 		<!--Level 50 - Call From The Clouds-->
 		<If Condition="not IsQuestCompleted(67584)">
@@ -43,7 +43,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Call From The Clouds-->
@@ -57,7 +57,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 51, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 51-->
 		
@@ -70,7 +70,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 52, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 52-->
 		
@@ -83,7 +83,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 54, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 54-->
 
@@ -118,7 +118,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
-					<WaitTimer WaitTime="10"/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67585) == 255">
@@ -130,7 +130,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Onion of Life Bestowing-->
@@ -144,7 +144,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 55, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 55-->
 
@@ -191,7 +191,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
-					<WaitTimer WaitTime="10"/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67586) == 255">
@@ -202,7 +202,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Two Nations, One Seed-->
@@ -216,7 +216,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 58, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 58-->
 		
@@ -255,7 +255,7 @@ Angles24
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
-					<WaitTimer WaitTime="10"/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67587) == 255">
@@ -266,7 +266,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Love For Harmony-->
@@ -280,7 +280,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 60, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 60-->
 
@@ -336,7 +336,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Seeds Know No Borders-->
@@ -362,7 +362,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Never Meet Your Heroes-->
@@ -376,7 +376,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 62, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 62-->
 		
@@ -389,7 +389,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 63, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 63-->
 		

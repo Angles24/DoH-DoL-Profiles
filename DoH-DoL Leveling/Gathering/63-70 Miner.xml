@@ -19,7 +19,7 @@ Angles24
 		<RunCode Name="Enable_Flight"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		
 		<!--Level 63 - Thick Skin-->
 		<If Condition="not IsQuestCompleted(68091)">
@@ -70,7 +70,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Thick Skin-->
@@ -84,7 +84,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 64, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 64 Grind-->
 	
@@ -97,7 +97,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 65, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 65 Grind-->
 	
@@ -158,7 +158,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Pedal to the Metal-->
@@ -172,7 +172,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 66, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 66 Grind-->
 
@@ -185,7 +185,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 68, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 68 Grind-->
 
@@ -220,7 +220,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68093) == 3">
@@ -243,7 +243,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Where the Money Takes You-->
@@ -257,7 +257,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 70, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 70 Grind-->
 
@@ -308,7 +308,7 @@ Angles24
 				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End A Miner Success-->

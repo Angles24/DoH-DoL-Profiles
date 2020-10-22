@@ -37,7 +37,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 4"><!-- LLHandOver mulled wine to Thomelin -->
 			<LisbethTravel Zone="418" Position="151.4828, -20, 63.83766"/>
 			<LLHandOver ItemId="2002954" QuestId="69208" StepId="4" NpcId="1031682" XYZ="151.4828, -20, 63.83766"/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 255"><!-- Hand in Quest to Francel -->
 			<MoveTo ZoneId="886" XYZ="-7.472548, -16, 162.5581"/>
