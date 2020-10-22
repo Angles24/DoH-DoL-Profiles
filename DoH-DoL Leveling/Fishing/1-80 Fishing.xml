@@ -29,11 +29,11 @@ Angles24
 		<!-- Gone to Pieces -->
 		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
 			<LogMessage Message="Going to Learn Desynth!"/>
-			<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789"/>
+			<LisbethTravel Zone="131" Position="138.4237, 4, -58.45789"/>
 			<LLPickupQuest NpcId="1001679" QuestId="65688"/>
 		</If>
 		<While Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
-			<GetTo ZoneId="141" XYZ="96.27642, 27.04044, -352.4858"/>
+			<LisbethTravel Zone="141" Position="96.27642, 27.04044, -352.4858"/>
 			<LLTurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
 			<LogMessage Message="Learnt Desynth!"/>
 		</While>
@@ -43,20 +43,20 @@ Angles24
 	<!--Unlocking Fisher-->
 		<While Condition="not IsQuestCompleted(66670)">
 			<If Condition="not HasQuest(66670)">
-				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
+				<LisbethTravel Zone="129" Position="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
 				<If Condition="IsQuestAcceptQualified(66670)">
 					<LLTalkTo NpcId="1000859" QuestId="66670" XYZ="-166.4096, 4.54997, 152.0395"/>
 				</If>
 			</If>
 			<If Condition="not HasQuest(66643)">
-				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
+				<LisbethTravel Zone="129" Position="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
 				<If Condition="IsQuestAcceptQualified(66643)">
 					<LLPickupQuest NpcId="1000859" QuestId="66643" XYZ="-166.4096, 4.54997, 152.0395"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66643)">
 				<If Condition="GetQuestStep(66643) == 255">
-					<GetTo ZoneId="129" XYZ="-166.1612, 4.550006, 165.4742"/>
+					<LisbethTravel Zone="129" Position="-166.1612, 4.550006, 165.4742"/>
 					<LLTurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
 					<WaitTimer WaitTime="2"/>
 					<If Condition="ClassName != ClassJobType.Fisher">
@@ -84,7 +84,7 @@ Angles24
 		<While Condition="not IsQuestCompleted(66644)">
 			<If Condition="not HasQuest(66644)">
 				<If Condition="not IsOnMap(129)">
-					<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/>
+					<LisbethTravel Zone="129" Position="-84.08636, 18.60033, -12.41393"/>
 				</If>
 				<MoveTo Name="Sisipu" XYZ="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66644)">
@@ -94,11 +94,11 @@ Angles24
 			<If Condition="HasQuest(66644)">
 				<If Condition="GetQuestStep(66644) == 255">
 					<If Condition="not HasAtLeast(4870,5)">
-						<GetTo ZoneId="128" XYZ="-43.83308, 43.99126, -133.257"/>
+						<LisbethTravel Zone="128" Position="-43.83308, 43.99126, -133.257"/>
 						<MoveTo Name="Holasfhis" XYZ="-42.67957, 39.99997, 119.9207"/>
 						<BuyItem ItemId="4870" ItemCount="5" InteractDistance="3.0" NpcId="1001016" XYZ="-42.67957, 39.99997, 119.9207"/>
 					</If>
-					<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/>
+					<LisbethTravel Zone="129" Position="-84.08636, 18.60033, -12.41393"/>
 					<MoveTo Name="Sisipu" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLTurnIn ItemId="4870" QuestId="66644" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<WaitTimer WaitTime="2"/>
@@ -115,11 +115,11 @@ Angles24
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 10">
 			<If Condition="not HasAtLeast(2585,99)">
 				<LogMessage Message="You need more Lugworms!"/>
-				<GetTo ZoneId="129" XYZ="-245.3774, 16.2, 40.53"/><!-- Limsa Lominsa Lower Decks -->
+				<LisbethTravel Zone="129" Position="-245.3774, 16.2, 40.53"/><!-- Limsa Lominsa Lower Decks -->
 				<BuyItem ItemId="2585" ItemCount="200" DialogOption="2" InteractDistance="3.0" NpcId="1003254" XYZ="-245.3774, 16.2, 40.53"/>
 			</If>
 			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 10 and not IsTimeBetween(0,2)">
-				<GetTo ZoneId="129" XYZ="-202.6564, 3.999995, 248.9884"/>
+				<LisbethTravel Zone="129" Position="-202.6564, 3.999995, 248.9884"/>
 			</If>
 			<ExFish Mooch="1" Bait="Lugworm" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 10 and IsTimeBetween(0,8)">
 				<FishSpots>
@@ -143,7 +143,7 @@ Angles24
 			</ExFish>
 			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 10 and IsTimeBetween(0,2)">
 				<LogMessage Message="Swapping zones to not scare the fish..."/>
-				<GetTo ZoneId="134" XYZ="-94.85776, 41.12709, 6.343672"/>
+				<LisbethTravel Zone="134" Position="-94.85776, 41.12709, 6.343672"/>
 			</If>
 			<ExFish Mooch="0" Bait="Lugworm" ShuffleFishSpots="True" Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 10 and IsTimeBetween(0,2)">
 				<FishSpots>
@@ -187,7 +187,7 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66645)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66645)">
 					<LLPickupQuest NpcId="1000857" QuestId="66645" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
@@ -196,10 +196,10 @@ Angles24
 				<If Condition="GetQuestStep(66645) == 255">
 					<If Condition="not NqHasAtLeast(4874,3)">
 						<If Condition="not HasAtLeast(2587,99)">
-							<GetTo ZoneId="129" XYZ="-245.3774, 16.2, 40.53"/>
+							<LisbethTravel Zone="129" Position="-245.3774, 16.2, 40.53"/>
 							<BuyItem ItemId="2587" ItemCount="99" DialogOption="2" NpcId="1003254" XYZ="-245.3774, 16.2, 40.53"/>
 						</If>
-						<GetTo ZoneId="129" XYZ="-182.1713, 1.999995, 198.2991"/>
+						<LisbethTravel Zone="129" Position="-182.1713, 1.999995, 198.2991"/>
 						<ExFish Mooch="0" Bait="Pill Bug" MinFish="10" MaxFish="15" Condition="not NqHasAtLeast(4874,3)">
 							<FishSpots>
 								<FishSpot XYZ="-182.1713, 1.999995, 198.2991" Heading="1.16"/>
@@ -207,7 +207,7 @@ Angles24
 						</ExFish>
 					</If>
 					<If Condition="NqHasAtLeast(4874,3)">
-						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+						<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 						<LLTurnIn ItemId="4874" QuestId="66645" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -245,7 +245,7 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66646)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66646)">
 					<LLPickupQuest NpcId="1000857" QuestId="66646" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
@@ -254,10 +254,10 @@ Angles24
 				<If Condition="GetQuestStep(66646) == 255">
 					<If Condition="not HqHasAtLeast(4930,1)">
 						<If Condition="not HasAtLeast(2586,90)">
-							<GetTo ZoneId="129" XYZ="-245.3774, 16.2, 40.53"/>
+							<LisbethTravel Zone="129" Position="-245.3774, 16.2, 40.53"/>
 							<BuyItem ItemId="2586" ItemCount="99" DialogOption="2" NpcId="1003254" XYZ="-245.3774, 16.2, 40.53"/>
 						</If>
-						<GetTo ZoneId="134" XYZ="222.3688, 113.1, -256.9429"/>
+						<LisbethTravel Zone="134" Position="222.3688, 113.1, -256.9429"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
@@ -270,7 +270,7 @@ Angles24
 						</ExFish>
 					</If>
 					<If Condition="HqHasAtLeast(4930,1)">
-						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+						<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 						<LLTurnIn ItemId="4930" RequiresHq="true" QuestId="66646" StepId="255" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -311,7 +311,7 @@ Angles24
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
 				<LogMessage Message="You need more Versatile Lure!"/>
-				<GetTo ZoneId="129" XYZ="-397.8102, 3.099996, 79.60578"/>
+				<LisbethTravel Zone="129" Position="-397.8102, 3.099996, 79.60578"/>
 				<BuyItem ItemId="29717" ItemCount="15" DialogOption="0" InteractDistance="3.0" NpcId="1005422" XYZ="-397.6349, 3.099996, 80.97961"/>
 			</If>
 		</While>
@@ -376,31 +376,31 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66647)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66647)">
 					<LLPickupQuest NpcId="1000857" QuestId="66647" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66647)">
 				<If Condition="GetQuestStep(66647) == 1">
-					<GetTo ZoneId="129" XYZ="-185.8396, 4, 169.604"/>
+					<LisbethTravel Zone="129" Position="-185.8396, 4, 169.604"/>
 					<LLTalkTo QuestId="66647" StepId="1" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
 				</If>
 				<If Condition="GetQuestStep(66647) == 2">
-					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 					<LLTalkTo QuestId="66647" StepId="2" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 				<If Condition="GetQuestStep(66647) == 3">
-					<GetTo ZoneId="129" XYZ="-156.6837, 2.999992, 204.5302"/>
+					<LisbethTravel Zone="129" Position="-156.6837, 2.999992, 204.5302"/>
 					<LLTalkTo QuestId="66647" StepId="3" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 				<If Condition="GetQuestStep(66647) == 4">
 					<While Condition="not NqHasAtLeast(4882,5)">
 						<If Condition="not HasAtLeast(2591,10)">
-							<GetTo ZoneId="138" XYZ="240.2533, -24.99897, 231.4336"/>
+							<LisbethTravel Zone="138" Position="240.2533, -24.99897, 231.4336"/>
 							<BuyItem ItemId="2591" ItemCount="25" DialogOption="2" NpcId="1003264" XYZ="240.2533, -24.99897, 231.4336"/>
 						</If>
-						<GetTo ZoneId="138" XYZ="488.4257, 11.5766, 344.7761"/>
+						<LisbethTravel Zone="138" Position="488.4257, 11.5766, 344.7761"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
@@ -413,12 +413,12 @@ Angles24
 					</While>
 					<If Condition="NqHasAtLeast(4882,5)">
 						<WaitTimer WaitTime="2"/>
-						<GetTo ZoneId="129" XYZ="-185.8396, 4, 169.604"/>
+						<LisbethTravel Zone="129" Position="-185.8396, 4, 169.604"/>
 						<LLHandOver ItemId="4882" QuestId="66647" StepId="4" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
 					</If>
 				</If>
 				<If Condition="GetQuestStep(66647) == 255">
-					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 					<LLTurnIn QuestId="66647" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -461,7 +461,7 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66648)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66648)">
 					<LLPickupQuest NpcId="1000857" QuestId="66648" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
@@ -470,10 +470,10 @@ Angles24
 				<If Condition="GetQuestStep(66648) == 255">
 					<While Condition="not NqHasAtLeast(4955,5)">
 						<If Condition="not HasAtLeast(2614,1)">
-							<GetTo ZoneId="139" XYZ="-329.6712, -2.533815, 136.2782"/>
+							<LisbethTravel Zone="139" Position="-329.6712, -2.533815, 136.2782"/>
 							<BuyItem ItemId="2614" ItemCount="1" DialogOption="4" NpcId="1003267" XYZ="-329.6712, -2.533815, 136.2782"/>
 						</If>
-						<GetTo ZoneId="139" XYZ="-329.6712, -2.533815, 136.2782"/>
+						<LisbethTravel Zone="139" Position="-329.6712, -2.533815, 136.2782"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
@@ -485,7 +485,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(4955,5) or HqHasAtLeast(4955,5)">
-						<GetTo ZoneId="129" XYZ="-185.8396, 4, 169.604"/>
+						<LisbethTravel Zone="129" Position="-185.8396, 4, 169.604"/>
 						<LLTurnIn ItemId="4955" QuestId="66648" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -526,7 +526,7 @@ Angles24
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
 				<LogMessage Message="You need more Versatile Lure!"/>
-				<GetTo ZoneId="129" XYZ="-397.8102, 3.099996, 79.60578"/>
+				<LisbethTravel Zone="129" Position="-397.8102, 3.099996, 79.60578"/>
 				<BuyItem ItemId="29717" ItemCount="15" DialogOption="0" InteractDistance="3.0" NpcId="1005422" XYZ="-397.6349, 3.099996, 80.97961"/>
 			</If>
 		</While>
@@ -591,7 +591,7 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66649)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66649)">
 					<LLPickupQuest NpcId="1000857" QuestId="66649" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
@@ -600,10 +600,10 @@ Angles24
 				<If Condition="GetQuestStep(66649) == 255">
 					<While Condition="not NqHasAtLeast(4963,1)">
 						<If Condition="not HasAtLeast(2586,10)">
-							<GetTo ZoneId="129" XYZ="-246.1743, 16.2, 40.10863"/>
+							<LisbethTravel Zone="129" Position="-246.1743, 16.2, 40.10863"/>
 							<BuyItem ItemId="2586" ItemCount="50" DialogOption="2" NpcId="1003254" XYZ="-246.6011, 16.2, 37.12512"/>
 						</If>
-						<GetTo ZoneId="154" XYZ="-43.92079, -40.88041, 241.8634"/>
+						<LisbethTravel Zone="154" Position="-43.92079, -40.88041, 241.8634"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
@@ -615,7 +615,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(4963,1)">
-						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+						<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 						<LLTurnIn ItemId="4963" QuestId="66649" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -659,30 +659,30 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66650)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66650)">
 					<LLPickupQuest NpcId="1000857" QuestId="66650" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66650)">
 				<If Condition="GetQuestStep(66650) == 1">
-					<GetTo ZoneId="129" XYZ="-184.7715, 4, 169.2683"/>
+					<LisbethTravel Zone="129" Position="-184.7715, 4, 169.2683"/>
 					<LLTalkTo QuestId="66650" StepId="1" NpcId="1003628" XYZ="-184.7715, 4, 169.2683"/>
 				</If>
 				<If Condition="GetQuestStep(66650) == 2">
-					<GetTo ZoneId="129" XYZ="-157.0917, 2.975464, 201.6174"/>
+					<LisbethTravel Zone="129" Position="-157.0917, 2.975464, 201.6174"/>
 					<LLTalkTo QuestId="66650" StepId="2" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 				<If Condition="GetQuestStep(66650) == 3">
 					<While Condition="not NqHasAtLeast(4898,10)">
 						<If Condition="not IsOnMap(137)">
-							<GetTo ZoneId="137" XYZ="493.9612, 17.39324, 463.9441"/><!-- Costa del Sol -->
+							<LisbethTravel Zone="137" Position="493.9612, 17.39324, 463.9441"/><!-- Costa del Sol -->
 							<WaitTimer WaitTime="2"/>
 							<RunCode Name="Sneak"/>
 							<WaitTimer WaitTime="2"/>
 						</If>
 						<If Condition="not HasAtLeast(2596,10)">
-							<GetTo ZoneId="137" XYZ="460.3798, 17.12659, 486.5948"/>
+							<LisbethTravel Zone="137" Position="460.3798, 17.12659, 486.5948"/>
 							<BuyItem ItemId="2596" ItemCount="50" DialogOption="4" NpcId="1003261" XYZ="460.3798, 17.12659, 486.5948"/>
 						</If>
 						<If Condition="not IsTimeBetween(18,6)">
@@ -697,12 +697,12 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(4898,10)">
-						<GetTo ZoneId="129" XYZ="-184.7715, 4, 169.2683"/>
+						<LisbethTravel Zone="129" Position="-184.7715, 4, 169.2683"/>
 						<LLHandOver ItemId="4898" QuestId="66650" StepId="3" NpcId="1003628" XYZ="-184.7715, 4, 169.2683"/>
 					</If>
 				</If>
 				<If Condition="GetQuestStep(66650) == 255">
-					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 					<LLTurnIn QuestId="66650" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -745,20 +745,20 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66651)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66651)">
 					<LLPickupQuest NpcId="1000857" QuestId="66651" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66651)">
 				<If Condition="GetQuestStep(66651) == 1">
-					<GetTo ZoneId="146" XYZ="-300.1908, 7.278503, 410.9406"/>
+					<LisbethTravel Zone="146" Position="-300.1908, 7.278503, 410.9406"/>
 					<LLTalkTo QuestId="66651" StepId="1" NpcId="1004962" XYZ="-300.1908, 7.278503, 410.9406"/>
 				</If>
 				<If Condition="GetQuestStep(66651) == 255">
 					<While Condition="not NqHasAtLeast(5033,1)">
 						<If Condition="not IsOnMap(146)">
-							<GetTo ZoneId="146" XYZ="-321.7947, 8.260907, 408.605"/>
+							<LisbethTravel Zone="146" Position="-321.7947, 8.260907, 408.605"/>
 							<WaitTimer WaitTime="2"/>
 							<RunCode Name="Sneak"/>
 							<WaitTimer WaitTime="2"/>
@@ -775,7 +775,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(5033,1)">
-						<GetTo ZoneId="129" XYZ="-184.7715, 4, 169.2683"/>
+						<LisbethTravel Zone="129" Position="-184.7715, 4, 169.2683"/>
 						<LLTurnIn ItemId="5033" QuestId="66651" StepId="255" NpcId="1003628" XYZ="-184.7715, 4, 169.2683"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -819,23 +819,23 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66652)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66652)">
 					<LLPickupQuest NpcId="1000857" QuestId="66652" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66652)">
 				<If Condition="GetQuestStep(66652) == 1">
-					<GetTo ZoneId="129" XYZ="-171.8929, 4, 175.3108"/>
+					<LisbethTravel Zone="129" Position="-171.8929, 4, 175.3108"/>
 					<LLTalkTo QuestId="66652" StepId="1" NpcId="1003629" XYZ="-171.8929, 4, 175.3108"/>
 				</If>
 				<If Condition="GetQuestStep(66652) == 255">
 					<While Condition="not NqHasAtLeast(4905,5)">
 						<If Condition="not HasAtLeast(2601,10)">
-							<GetTo ZoneId="139" XYZ="427.2678, 4.098778, 115.2819"/>
+							<LisbethTravel Zone="139" Position="427.2678, 4.098778, 115.2819"/>
 							<BuyItem ItemId="2601" ItemCount="99" DialogOption="2" NpcId="1003268" XYZ="427.2678, 4.098778, 115.2819"/>
 						</If>
-						<GetTo ZoneId="132" XYZ="29.56105, 1.691584, 33.32197"/>
+						<LisbethTravel Zone="132" Position="29.56105, 1.691584, 33.32197"/>
 						<ExFish Mooch="0" Weather="Rain" Bait="Stem Borer" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4905,5)"><!-- Raincaller -->
 							<FishSpots>
 								<FishSpot XYZ="70.09777, -7.775955, 115.4598" Heading="6.15"/>
@@ -844,7 +844,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(4905,5)">
-						<GetTo ZoneId="129" XYZ="-171.8929, 4, 175.3108"/>
+						<LisbethTravel Zone="129" Position="-171.8929, 4, 175.3108"/>
 						<LLTurnIn ItemId="4905" QuestId="66652" NpcId="1003629" XYZ="-171.8929, 4, 175.3108"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -885,7 +885,7 @@ Angles24
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
 				<LogMessage Message="You need more Versatile Lure!"/>
-				<GetTo ZoneId="129" XYZ="-397.8102, 3.099996, 79.60578"/>
+				<LisbethTravel Zone="129" Position="-397.8102, 3.099996, 79.60578"/>
 				<BuyItem ItemId="29717" ItemCount="15" DialogOption="0" InteractDistance="3.0" NpcId="1005422" XYZ="-397.6349, 3.099996, 80.97961"/>
 			</If>
 		</While>
@@ -950,23 +950,23 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66653)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66653)">
 					<LLPickupQuest NpcId="1000857" QuestId="66653" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66653)">
 				<If Condition="GetQuestStep(66653) == 1">
-					<GetTo ZoneId="129" XYZ="-171.8929, 4, 175.3108"/>
+					<LisbethTravel Zone="129" Position="-171.8929, 4, 175.3108"/>
 					<LLTalkTo QuestId="66653" StepId="1" NpcId="1003629" XYZ="-171.8929, 4, 175.3108"/>
 				</If>
 				<If Condition="GetQuestStep(66653) == 2">
-					<GetTo ZoneId="155" XYZ="-387.625, 208.5254, -257.5266"/>
+					<LisbethTravel Zone="155" Position="-387.625, 208.5254, -257.5266"/>
 					<LLTalkTo QuestId="66653" StepId="2" NpcId="1006804" XYZ="-387.625, 208.5254, -257.5266"/>
 				</If>
 				<If Condition="GetQuestStep(66653) == 255">
 					<While Condition="not NqHasAtLeast(5040,5)">
-						<GetTo ZoneId="155" XYZ="223.9285, 312, -240.9699"/>
+						<LisbethTravel Zone="155" Position="223.9285, 312, -240.9699"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
@@ -982,7 +982,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(5040,5)">
-						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+						<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 						<LLTurnIn ItemId="5040" QuestId="66653" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -1026,31 +1026,31 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66654)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66654)">
 					<LLPickupQuest NpcId="1000857" QuestId="66654" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66654)">
 				<If Condition="GetQuestStep(66654) == 1">
-					<GetTo ZoneId="129" XYZ="-171.8929, 4, 175.3108"/>
+					<LisbethTravel Zone="129" Position="-171.8929, 4, 175.3108"/>
 					<LLTalkTo QuestId="66654" StepId="1" NpcId="1003629" XYZ="-171.8929, 4, 175.3108"/>
 				</If>
 				<If Condition="GetQuestStep(66654) == 2">
-					<GetTo ZoneId="129" XYZ="-185.8396, 4, 169.604"/>
+					<LisbethTravel Zone="129" Position="-185.8396, 4, 169.604"/>
 					<LLTalkTo InteractDistance="3.0" QuestId="66654" StepId="2" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
 				</If>
 				<If Condition="GetQuestStep(66654) == 3">
-					<GetTo ZoneId="129" XYZ="-156.0899, 2.999992, 204.557"/>
+					<LisbethTravel Zone="129" Position="-156.0899, 2.999992, 204.557"/>
 					<LLTalkTo QuestId="66654" StepId="3" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 				<If Condition="GetQuestStep(66654) == 4">
 					<While Condition="not NqHasAtLeast(4917,1)">
 						<If Condition="not HasAtLeast(2591,10)">
-							<GetTo ZoneId="138" XYZ="240.2533, -24.99897, 231.4336"/>
+							<LisbethTravel Zone="138" Position="240.2533, -24.99897, 231.4336"/>
 							<BuyItem ItemId="2591" ItemCount="50" DialogOption="2" NpcId="1003264" XYZ="240.2533, -24.99897, 231.4336"/>
 						</If>
-						<GetTo ZoneId="137" XYZ="493.9612, 17.39324, 463.9441"/>
+						<LisbethTravel Zone="137" Position="493.9612, 17.39324, 463.9441"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
@@ -1062,7 +1062,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(4917,1)">
-						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+						<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 						<LLTurnIn ItemId="4917" QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -1071,7 +1071,7 @@ Angles24
 					</If>
 				</If>
 				<If Condition="GetQuestStep(66654) == 255">
-					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 					<NoCombatMoveTo Name="Sisipu" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLTurnIn QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<WaitTimer WaitTime="2"/>
@@ -1098,18 +1098,18 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="not HasQuest(67621)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(67621)">
 					<LLPickupQuest NpcId="1000857" QuestId="67621" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(67621)">
 				<If Condition="GetQuestStep(67621) == 1">
-					<GetTo ZoneId="128" XYZ="8.041443, 40.0004, 12.8938"/>
+					<LisbethTravel Zone="128" Position="8.041443, 40.0004, 12.8938"/>
 					<LLHandOver ItemId="2001720" QuestId="67621" StepId="1" NpcId="1013251" XYZ="8.041443, 40.0004, 12.8938"/>
 				</If>
 				<If Condition="GetQuestStep(67621) == 255">
-					<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+					<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 					<LLTurnIn QuestId="67621" NpcId="1013250" ItemId="2001886" XYZ="100.3585, 15.00001, 24.3075"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -1149,7 +1149,7 @@ Angles24
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
 				<LogMessage Message="You need more Versatile Lure!"/>
-				<GetTo ZoneId="129" XYZ="-397.8102, 3.099996, 79.60578"/>
+				<LisbethTravel Zone="129" Position="-397.8102, 3.099996, 79.60578"/>
 				<BuyItem ItemId="29717" ItemCount="15" DialogOption="0" InteractDistance="3.0" NpcId="1005422" XYZ="-397.6349, 3.099996, 80.97961"/>
 			</If>
 		</While>
@@ -1214,24 +1214,24 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67622)">
-				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<LLPickupQuest NpcId="1013250" QuestId="67622" XYZ="100.3585, 15.00001, 24.3075"/>
 			</If>
 			<If Condition="HasQuest(67622)">
 				<If Condition="GetQuestStep(67622) == 1">
-					<GetTo ZoneId="397" XYZ="456.0768, 200.2136, 668.635"/>
+					<LisbethTravel Zone="397" Position="456.0768, 200.2136, 668.635"/>
 					<LLTalkTo QuestId="67622" StepId="1" NpcId="1013252" XYZ="459.6169, 200.2377, 665.8884"/>
 				</If>
 				<If Condition="GetQuestStep(67622) == 255">
 					<While Condition="not HqHasAtLeast(12713,3)">
 						<If Condition="not IsOnMap(397)">
-							<GetTo ZoneId="397" XYZ="474.8097, 212.5399, 721.9003"/>
+							<LisbethTravel Zone="397" Position="474.8097, 212.5399, 721.9003"/>
 						</If>
 						<If Condition="not HasAtLeast(12704,10)">
 							<NoCombatMoveTo Name="Independent Merchant" XYZ="504.5396, 212.7327, 718.5625"/>
 							<BuyItem ItemId="12704" ItemCount="99" DialogOption="4" NpcId="1011228" XYZ="504.5396, 212.7327, 718.5625"/>
 						</If>
-						<GetTo ZoneId="397" XYZ="285.1617, 132.4532, -249.6214"/>
+						<LisbethTravel Zone="397" Position="285.1617, 132.4532, -249.6214"/>
 						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="0" Bait="Stonefly Nymph" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12704,10) and not HqHasAtLeast(12713,3)">
 							<FishSpots>
 								<FishSpot XYZ="299.7361, 132.1549, -248.1964" Heading="1.919566"/>
@@ -1240,7 +1240,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="HqHasAtLeast(12713,3)">
-						<GetTo ZoneId="397" XYZ="456.0768, 200.2136, 668.635"/>
+						<LisbethTravel Zone="397" Position="456.0768, 200.2136, 668.635"/>
 						<LLTurnIn ItemId="12713" RequiresHq="true" QuestId="67622" NpcId="1013252" XYZ="459.6169, 200.2377, 665.8884"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -1284,18 +1284,18 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67623)">
-				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<If Condition="IsQuestAcceptQualified(67623)">
 					<LLPickupQuest NpcId="1013250" QuestId="67623" XYZ="100.3585, 15.00001, 24.3075"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(67623)">
 				<If Condition="GetQuestStep(67623) == 1">
-					<GetTo ZoneId="398" XYZ="523.6133, -51.424, 62.54675"/>
+					<LisbethTravel Zone="398" Position="523.6133, -51.424, 62.54675"/>
 					<LLTalkTo QuestId="67623" StepId="1" NpcId="1013254" XYZ="523.6133, -51.424, 62.54675"/>
 				</If>
 				<If Condition="GetQuestStep(67623) == 2">
-					<GetTo ZoneId="398" XYZ="560.5706, -21.32274, -557.1527"/>
+					<LisbethTravel Zone="398" Position="560.5706, -21.32274, -557.1527"/>
 					<LLTalkTo QuestId="67623" StepId="2" NpcId="1013256" XYZ="560.5706, -21.32274, -557.1527"/>
 				</If>
 				<If Condition="GetQuestStep(67623) == 3">
@@ -1309,7 +1309,7 @@ Angles24
 							<ChangeClass Job="Fisher"/>
 						</If>
 						<If Condition="not IsOnMap(398)">
-							<GetTo ZoneId="398" XYZ="527.918, -51.27571, 41.3532"/>
+							<LisbethTravel Zone="398" Position="527.918, -51.27571, 41.3532"/>
 						</If>
 						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Bait="Brute Leech" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12711,10) and not HqHasAtLeast(12769,3)">
 							<FishSpots>
@@ -1319,7 +1319,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="HqHasAtLeast(12769,3)">
-						<GetTo ZoneId="398" XYZ="523.6133, -51.424, 62.54675"/>
+						<LisbethTravel Zone="398" Position="523.6133, -51.424, 62.54675"/>
 						<LLTurnIn ItemId="12769" RequiresHq="true" StepId="3" QuestId="67623" NpcId="1013254" XYZ="523.6133, -51.424, 62.54675"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -1327,7 +1327,7 @@ Angles24
 					</If>
 				</If>
 				<If Condition="GetQuestStep(67623) == 255">
-					<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+					<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 					<LLTurnIn QuestId="67623" StepId="255" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -1370,25 +1370,25 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67624)">
-				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<If Condition="IsQuestAcceptQualified(67624)">
 					<LLPickupQuest NpcId="1013250" QuestId="67624" XYZ="100.3585, 15.00001, 24.3075"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(67624)">
 				<If Condition="GetQuestStep(67624) == 1">
-					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 					<LLTalkTo QuestId="67624" StepId="1" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 				<If Condition="GetQuestStep(67624) == 2">
 					<RunCode Name="Disable_Flight"/>
-					<GetTo ZoneId="400" XYZ="406.7596, -73.59544, 702.571"/>
+					<LisbethTravel Zone="400" Position="406.7596, -73.59544, 702.571"/>
 					<LLTalkTo QuestId="67624" StepId="2" NpcId="1012079" XYZ="406.7596, -73.59544, 702.571"/>
-					<GetTo ZoneId="400" XYZ="255.1211, -42.15409, 586.8893"/>
+					<LisbethTravel Zone="400" Position="255.1211, -42.15409, 586.8893"/>
 				</If>
 				<If Condition="GetQuestStep(67624) == 3">
 					<RunCode Name="Enable_Flight"/>
-					<GetTo ZoneId="400" XYZ="441.306, -29.3383, 218.1277"/>
+					<LisbethTravel Zone="400" Position="441.306, -29.3383, 218.1277"/>
 					<LLTalkTo QuestId="67624" StepId="3" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
 				</If>
 				<If Condition="GetQuestStep(67624) == 4">
@@ -1402,9 +1402,9 @@ Angles24
 							<ChangeClass Job="Fisher"/>
 						</If>
 						<If Condition="not IsOnMap(400)">
-							<GetTo ZoneId="400" XYZ="252.6177, -42.16244, 590.2133"/>
+							<LisbethTravel Zone="400" Position="252.6177, -42.16244, 590.2133"/>
 						</If>
-						<GetTo ZoneId="400" XYZ="440.869, -29.54482, 218.6229"/>
+						<LisbethTravel Zone="400" Position="440.869, -29.54482, 218.6229"/>
 						<RunCode Name="Disable_Flight"/>
 						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Bait="Giant Crane Fly" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12712,10) and not HqHasAtLeast(12793,1)"><!-- Letter Puffer -->
 							<FishSpots>
@@ -1414,7 +1414,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="HqHasAtLeast(12793,1)">
-						<GetTo ZoneId="400" XYZ="441.306, -29.3383, 218.1277"/>
+						<LisbethTravel Zone="400" Position="441.306, -29.3383, 218.1277"/>
 						<LLTurnIn ItemId="12793" RequiresHq="true" StepId="4" QuestId="67624" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -1422,7 +1422,7 @@ Angles24
 					</If>
 				</If>
 				<If Condition="GetQuestStep(67624) == 255">
-					<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+					<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 					<LLTurnIn ItemId="12793" RequiresHq="true" StepId="255" QuestId="67624" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -1465,22 +1465,22 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67625)">
-				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<If Condition="IsQuestAcceptQualified(67625)">
 					<LLPickupQuest NpcId="1013250" QuestId="67625" XYZ="100.3585, 15.00001, 24.3075"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(67625)">
 				<If Condition="GetQuestStep(67625) == 1">
-					<GetTo ZoneId="400" XYZ="441.306, -29.3383, 218.1277"/>
+					<LisbethTravel Zone="400" Position="441.306, -29.3383, 218.1277"/>
 					<LLTalkTo QuestId="67625" StepId="1" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
 				</If>
 				<If Condition="GetQuestStep(67625) == 2">
-					<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
+					<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 					<LLTalkTo QuestId="67625" StepId="2" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
 				</If>
 				<If Condition="GetQuestStep(67625) == 3">
-					<GetTo ZoneId="401" XYZ="-253.0709, -185.1346, 691.5845"/>
+					<LisbethTravel Zone="401" Position="-253.0709, -185.1346, 691.5845"/>
 					<LLTalkTo QuestId="67625" StepId="3" NpcId="1013827" XYZ="-253.0709, -185.1346, 691.5845"/>
 				</If>
 				<If Condition="GetQuestStep(67625) == 4">
@@ -1500,7 +1500,7 @@ Angles24
 							<ChangeClass Job="Fisher"/>
 						</If>
 						<If Condition="not IsOnMap(401)">
-							<GetTo ZoneId="401" XYZ="-626.617, -122.5, 539.8152"/>
+							<LisbethTravel Zone="401" Position="-626.617, -122.5, 539.8152"/>
 						</If>
 						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Snagging="true" Bait="Brute Leech" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HqHasAtLeast(12829,1) and HasAtLeast(12711,10)"><!-- Catkiller -->
 							<FishSpots>
@@ -1510,7 +1510,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="HqHasAtLeast(12829,1)">
-						<GetTo ZoneId="401" XYZ="400.7477, -123.263, 674.9523"/>
+						<LisbethTravel Zone="401" Position="400.7477, -123.263, 674.9523"/>
 						<LLTurnIn ItemId="12829" RequiresHq="true" StepId="255" QuestId="67625" NpcId="1013830" XYZ="400.7477, -123.263, 674.9523"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -1535,26 +1535,26 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="not HasQuest(68431)">
-				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(68431)">
 					<LLPickupQuest NpcId="1000857" QuestId="68431" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(68431)">
 				<If Condition="GetQuestStep(68431) == 1">
-					<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTalkTo QuestId="68431" StepId="1" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 				<If Condition="GetQuestStep(68431) == 2">
-					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 					<LLTalkTo QuestId="68431" StepId="2" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 				</If>
 				<If Condition="GetQuestStep(68431) == 3">
-					<GetTo ZoneId="135" XYZ="202.3499, 25.40625, 776.3026"/>
+					<LisbethTravel Zone="135" Position="202.3499, 25.40625, 776.3026"/>
 					<LLTalkTo QuestId="68431" StepId="3" NpcId="2008204" XYZ="202.3499, 25.40625, 776.3026"/>
 				</If>
 				<If Condition="GetQuestStep(68431) == 255">
-					<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTurnIn ItemId="12829" StepId="255" QuestId="68431" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -1597,10 +1597,6 @@ Angles24
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="2"/>
-			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.OffHand].RawItemId != 17726">
-				<RunCode Name="SPEARWeapon"/>
-				<WaitTimer WaitTime="3"/>
-			</While>
 		</If>
 	<!--End -->
 	
@@ -1632,20 +1628,20 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68432)">
-				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+				<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 				<If Condition="IsQuestAcceptQualified(68432)">
 					<LLPickupQuest NpcId="1000856" QuestId="68432" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(68432)">
 				<If Condition="GetQuestStep(68432) == 1">
-					<GetTo ZoneId="612" XYZ="-229.7856, 60.06992, -635.7367"/>
+					<LisbethTravel Zone="612" Position="-229.7856, 60.06992, -635.7367"/>
 					<LLTalkTo QuestId="68432" StepId="1" NpcId="1021396" XYZ="-229.7856, 60.06992, -635.7367"/>
 				</If>
 				<If Condition="GetQuestStep(68432) == 2">
 					<While Condition="not (NqHasAtLeast(17949,3) or HqHasAtLeast(17949,3))">
 						<If Condition="not IsOnMap(612)">
-							<GetTo ZoneId="612" XYZ="474.8097, 212.5399, 721.9003"/>
+							<LisbethTravel Zone="612" Position="474.8097, 212.5399, 721.9003"/>
 						</If>
 						<If Condition="not HasAtLeast(20613,50)">
 							<NoCombatMoveTo Name="Independent Merchant" XYZ="-634.1802, 130.086, -526.0853"/>
@@ -1659,7 +1655,7 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="NqHasAtLeast(17949,3) or HqHasAtLeast(17949,3)">
-						<GetTo ZoneId="612" XYZ="-229.7856, 60.06992, -635.7367"/>
+						<LisbethTravel Zone="612" Position="-229.7856, 60.06992, -635.7367"/>
 						<LLHandOver ItemId="17949" StepId="2" QuestId="68432" NpcId="1021396" XYZ="-229.7856, 60.06992, -635.7367"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -1667,7 +1663,7 @@ Angles24
 					</If>
 				</If>
 				<If Condition="GetQuestStep(68432) == 255">
-					<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTurnIn StepId="255" QuestId="68432" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -1707,7 +1703,7 @@ Angles24
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
 				<LogMessage Message="You need more Versatile Lure!"/>
-				<GetTo ZoneId="129" XYZ="-397.8102, 3.099996, 79.60578"/>
+				<LisbethTravel Zone="129" Position="-397.8102, 3.099996, 79.60578"/>
 				<BuyItem ItemId="29717" ItemCount="15" DialogOption="0" InteractDistance="3.0" NpcId="1005422" XYZ="-397.6349, 3.099996, 80.97961"/>
 			</If>
 		</While>
@@ -1772,19 +1768,19 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68433)">
-				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+				<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 				<If Condition="IsQuestAcceptQualified(68433)">
 					<LLPickupQuest NpcId="1000856" QuestId="68433" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(68433)">
 				<If Condition="GetQuestStep(68433) == 1">
-					<GetTo ZoneId="628" XYZ="31.50977, 3, -71.33594"/>
+					<LisbethTravel Zone="628" Position="31.50977, 3, -71.33594"/>
 					<LLTalkTo QuestId="68433" StepId="1" NpcId="1021398" XYZ="31.50977, 3, -71.33594"/>
 				</If>
 				<If Condition="GetQuestStep(68433) == 2">
 					<TeleportTo Name="Tamamizu" Force="True" AetheryteId="105"/>
-					<GetTo ZoneId="613" XYZ="370.0465, -120.0139, -281.9715"/>
+					<LisbethTravel Zone="613" Position="370.0465, -120.0139, -281.9715"/>
 					<LLTalkTo QuestId="68433" StepId="2" NpcId="1021399" XYZ="370.0465, -120.0139, -281.9715"/>
 				</If>
 				<If Condition="GetQuestStep(68433) == 3">
@@ -1797,13 +1793,13 @@ Angles24
 				<If Condition="GetQuestStep(68433) == 4">
 					<While Condition="not HqHasAtLeast(17950,3)">
 						<If Condition="not IsOnMap(613)">
-							<GetTo ZoneId="613" XYZ="96.49239, 3.033221, -585.4243"/>
+							<LisbethTravel Zone="613" Position="96.49239, 3.033221, -585.4243"/>
 						</If>
 						<If Condition="not HasAtLeast(20617,10)">
-							<GetTo ZoneId="613" XYZ="93.21729, 2.087148, -612.3598"/>
+							<LisbethTravel Zone="613" Position="93.21729, 2.087148, -612.3598"/>
 							<BuyItem ItemId="20617" ItemCount="50" DialogOption="6" NpcId="1021501" XYZ="93.21729, 2.087148, -612.3598"/>
 						</If>
-						<GetTo ZoneId="613" XYZ="570.0244, 9.866471, -724.6882"/>
+						<LisbethTravel Zone="613" Position="570.0244, 9.866471, -724.6882"/>
 						<ExFish Stealth="True" Bait="Live Shrimp" Patience="Patience2" MinimumGPPatience="650" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HqHasAtLeast(17950,3) and HasAtLeast(20617,10)">
 							<FishSpots>
 								<FishSpot XYZ="513.9774, 0.241725, -623.5388" Heading="1.404261"/>
@@ -1825,7 +1821,7 @@ Angles24
 					</If>
 				</If>
 				<If Condition="GetQuestStep(68433) == 255">
-					<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTurnIn StepId="255" QuestId="68433" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -1868,14 +1864,14 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68434)">
-				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+				<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 				<If Condition="IsQuestAcceptQualified(68434)">
 					<LLPickupQuest NpcId="1000856" QuestId="68434" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(68434)">
 				<If Condition="GetQuestStep(68434) == 1">
-					<GetTo ZoneId="135" XYZ="202.3499, 25.40625, 776.3026"/>
+					<LisbethTravel Zone="135" Position="202.3499, 25.40625, 776.3026"/>
 					<LLTalkTo QuestId="68434" StepId="1" NpcId="2008206" XYZ="202.3499, 25.40625, 776.3026"/>
 				</If>
 				<If Condition="GetQuestStep(68434) == 2">
@@ -1888,16 +1884,16 @@ Angles24
 					</While>
 				</If>
 				<If Condition="GetQuestStep(68434) == 3">
-					<GetTo ZoneId="628" XYZ="-74.6319, -6.999999, -41.9776"/>
+					<LisbethTravel Zone="628" Position="-74.6319, -6.999999, -41.9776"/>
 					<LLTalkTo QuestId="68434" StepId="3" NpcId="1021406" XYZ="-74.6319, -6.999999, -41.9776"/>
 				</If>
 				<If Condition="GetQuestStep(68434) == 4">
-					<GetTo ZoneId="614" XYZ="470.0541, 70.50159, -47.04364"/>
+					<LisbethTravel Zone="614" Position="470.0541, 70.50159, -47.04364"/>
 					<LLTalkTo QuestId="68434" StepId="4" NpcId="1021408" XYZ="470.0541, 70.50159, -47.04364"/>
 				</If>
 				<If Condition="GetQuestStep(68434) == 5">
 					<If Condition="not HqHasAtLeast(17951,3)">
-						<GetTo ZoneId="614" XYZ="473.6446, 70.4106, -46.08875"/>
+						<LisbethTravel Zone="614" Position="473.6446, 70.4106, -46.08875"/>
 						<NoCombatMoveTo XYZ="-560.9194, 36.27979, 647.9481"/>
 						<RunCode Name="GoSwimming"/>
 					</If>
@@ -1926,7 +1922,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 					</While>
 					<If Condition="HqHasAtLeast(17951,3)">
-						<GetTo ZoneId="614" XYZ="473.6446, 70.4106, -46.08875"/>
+						<LisbethTravel Zone="614" Position="473.6446, 70.4106, -46.08875"/>
 						<NoCombatMoveTo XYZ="703.4661, 2.646878, 514.4102"/>
 						<LLHandOver ItemIds="17951" RequiresHq="True" NpcId="1021409" XYZ="703.1814, 2.949344, 513.6339" QuestId="68434" StepId="5"/>
 						<WaitTimer WaitTime="2"/>
@@ -1935,19 +1931,19 @@ Angles24
 					</If>
 				</If>
 				<If Condition="HasQuest(68434) and not IsQuestCompleted(68434) and GetQuestStep(68434) == 6">
-					<GetTo ZoneId="613" XYZ="-750.0164, 1.560868, -454.9615"/>
+					<LisbethTravel Zone="613" Position="-750.0164, 1.560868, -454.9615"/>
 					<LLHandOver ItemIds="2002180" NpcId="1021403" XYZ="-750.9728, 1.579246, -455.4971" QuestId="68434" StepId="6"/>
 				</If>
 				<If Condition="HasQuest(68434) and not IsQuestCompleted(68434) and GetQuestStep(68434) == 7">
 					<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
-					<GetTo ZoneId="613" XYZ="358.5697, -119.9633, -240.6343"/>
+					<LisbethTravel Zone="613" Position="358.5697, -119.9633, -240.6343"/>
 					<LLHandOver ItemIds="2002180" NpcId="1021412" XYZ="359.3347, -119.9429, -239.2767" QuestId="68434" StepId="7"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 				</If>
 				<If Condition="GetQuestStep(68434) == 255">
-					<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
+					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTurnIn StepId="255" QuestId="68434" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="SmallTalk"/>
@@ -1984,28 +1980,28 @@ Angles24
 			</If>
 			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68435)">
-				<GetTo ZoneId="129" XYZ="-154.8356, 3.999995, 199.8452"/>
+				<LisbethTravel Zone="129" Position="-154.8356, 3.999995, 199.8452"/>
 				<If Condition="IsQuestAcceptQualified(68435)">
 					<LLPickupQuest QuestId="68435" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(68435)">
 				<If Condition="GetQuestStep(68435) == 1">
-					<GetTo ZoneId="628" XYZ="-74.1769, -6.999999, -40.62537"/>
+					<LisbethTravel Zone="628" Position="-74.1769, -6.999999, -40.62537"/>
 					<LLTalkTo NpcId="1021407" XYZ="-73.16705, -6.999999, -40.66534" QuestId="68435" StepId="1"/>
 				</If>
 				<If Condition="GetQuestStep(68435) == 2">
-					<GetTo ZoneId="613" XYZ="-749.3661, 1.556574, -457.3727"/>
+					<LisbethTravel Zone="613" Position="-749.3661, 1.556574, -457.3727"/>
 					<LLTalkTo NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977" QuestId="68435" StepId="2"/>
 				</If>
 				<If Condition="GetQuestStep(68435) == 255">
 					<While Condition="not HqHasAtLeast(17952,5)">
 						<If Condition="not HasAtLeast(20617,50)">
-							<GetTo ZoneId="613" XYZ="94.41652, 2.080172, -610.312"/>
+							<LisbethTravel Zone="613" Position="94.41652, 2.080172, -610.312"/>
 							<BuyItem ItemId="20617" ItemCount="99" DialogOption="6" InteractDistance="3.0" NpcId="1021501" XYZ="93.21729, 2.087148, -612.3598"/>
 						</If>
 						<If Condition="not IsOnMap(613)">
-							<GetTo ZoneId="613" XYZ="95.49872, 0.568496, -552.3418"/>
+							<LisbethTravel Zone="613" Position="95.49872, 0.568496, -552.3418"/>
 						</If>
 						<Fish Stealth="True" Mooch="0" Bait="Live Shrimp" MinFish="20" MaxFish="50" ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" Condition="HasAtLeast(20617,10) and not HqHasAtLeast(17952,5)">
 							<FishSpots>
@@ -2018,7 +2014,7 @@ Angles24
 						</Fish>
 					</While>
 					<If Condition="HqHasAtLeast(17952,5)">
-						<GetTo ZoneId="613" XYZ="-749.6351, 1.559595, -456.9331"/>
+						<LisbethTravel Zone="613" Position="-749.6351, 1.559595, -456.9331"/>
 						<LLTurnIn ItemIds="17952" RequiresHq="True" QuestId="68435" NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
@@ -2059,7 +2055,7 @@ Angles24
 			</While>
 			<If Condition="WorldManager.ZoneId != 901">
 				<LogMessage Message="You need more Versatile Lure!"/>
-				<GetTo ZoneId="129" XYZ="-397.8102, 3.099996, 79.60578"/>
+				<LisbethTravel Zone="129" Position="-397.8102, 3.099996, 79.60578"/>
 				<BuyItem ItemId="29717" ItemCount="15" DialogOption="0" InteractDistance="3.0" NpcId="1005422" XYZ="-397.6349, 3.099996, 80.97961"/>
 			</If>
 		</While>

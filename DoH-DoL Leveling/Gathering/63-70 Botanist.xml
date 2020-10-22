@@ -25,21 +25,21 @@ Angles24
 		<If Condition="not IsQuestCompleted(68157)">
 			<If Condition="not HasQuest(68157)">
 				<LogMessage Message="Picking Up Level 63 - You Say Popoto, I Say...."/>
-				<GetTo ZoneId="478" XYZ="-44.56588, 209.2288, -90.81387"/>
+				<LisbethTravel Zone="478" Position="-44.56588, 209.2288, -90.81387"/>
 				<If Condition="IsQuestAcceptQualified(68157)">
 					<LLPickupQuest QuestId="68157" NpcId="1021349" XYZ="-44.56588, 209.2288, -90.81387"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68157) == 1">
-				<GetTo ZoneId="132" XYZ="7.248971, -0.3256242, 6.911566"/>
+				<LisbethTravel Zone="132" Position="7.248971, -0.3256242, 6.911566"/>
 				<LLTalkTo NpcId="1021350" XYZ="7.248971, -0.3256242, 6.911566" QuestId="68157" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68157) == 2">
-				<GetTo ZoneId="133" XYZ="-233.5398, 6.245102, -169.8389"/>
+				<LisbethTravel Zone="133" Position="-233.5398, 6.245102, -169.8389"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.5398, 6.245102, -169.8389" QuestId="68157" StepId="2"/>
 			</If>
 			<If Condition="GetQuestStep(68157) == 3">
-				<GetTo ZoneId="612" XYZ="-445.9644, 52.73912, 32.5323"/>
+				<LisbethTravel Zone="612" Position="-445.9644, 52.73912, 32.5323"/>
 				<LLTalkTo NpcId="1021352" XYZ="-445.9644, 52.73912, 32.5323" QuestId="68157" StepId="3"/>
 			</If>
 			<If Condition="GetQuestStep(68157) == 4">
@@ -54,12 +54,12 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(17945,3)">
 					<RunCode Name="Enable_Flight"/>
-					<GetTo ZoneId="612" XYZ="-445.4772, 52.69365, 32.55148"/>
+					<LisbethTravel Zone="612" Position="-445.4772, 52.69365, 32.55148"/>
 					<LLHandOver ItemIds="17945" RequiresHq="True" NpcId="1021352" XYZ="-445.4772, 52.69365, 32.55148" QuestId="68157" StepId="4"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68157) == 255">
-				<GetTo ZoneId="478" XYZ="-44.95714, 209.2252, -90.96803"/>
+				<LisbethTravel Zone="478" Position="-44.95714, 209.2252, -90.96803"/>
 				<LLTurnIn QuestId="68157" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/>
 				<LogMessage Message="Level 63 - You Say Popoto, I Say.... - Completed"/>
 				<WaitTimer WaitTime="2"/>
@@ -74,19 +74,7 @@ Angles24
 		<!-- Level 63-64 -->
 		<If Condition="Core.Player.ClassLevel &lt; 64">
 			<LogMessage Message="Starting the Grind to Level 64."/>
-			<GetTo ZoneId="612" XYZ="-496.9459, 54.01863, 138.8405"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 64">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="-496.9459, 54.01863, 138.8405" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="-406.1179, 48.15139, 149.3893" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="-502.959, 56.58319, 251.9903" name="Lush Vegetation Patches"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Kudzu Vine</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19982, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Botanist'}]"/><!-- Kudzu Vine -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 64">
 			<LogMessage Message="Congrats on Level 64, moving on."/>
@@ -99,19 +87,7 @@ Angles24
 		<!-- Level 64-65 -->
 		<If Condition="Core.Player.ClassLevel &lt; 65">
 			<LogMessage Message="Starting the Grind to Level 65."/>
-			<GetTo ZoneId="614" XYZ="772.0947, 95.9671, -262.999"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 65">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="772.0947, 95.9671, -262.999" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="642.4675, 132.82, -404.4985" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="703.9889, 124.979, -379.2047" name="Mature Trees"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Pine Log</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5389, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':65, 'ConditionalJob':'Botanist'}]"/><!-- Pine Log -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 65">
 			<LogMessage Message="Congrats on Level 65, moving on."/>
@@ -125,44 +101,44 @@ Angles24
 		<If Condition="IsQuestCompleted(68157) and not IsQuestCompleted(68158)">
 			<If Condition="not HasQuest(68158)">
 				<LogMessage Message="Picking Up Level 65 - Walking for Walker's."/>
-				<GetTo ZoneId="478" XYZ="-44.95714, 209.2252, -90.96803"/>
+				<LisbethTravel Zone="478" Position="-44.95714, 209.2252, -90.96803"/>
 				<If Condition="IsQuestAcceptQualified(68158)">
 					<LLPickupQuest QuestId="68158" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68158) == 1">
-				<GetTo ZoneId="133" XYZ="-233.8733, 6.235486, -169.9786"/>
+				<LisbethTravel Zone="133" Position="-233.8733, 6.235486, -169.9786"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.8733, 6.235486, -169.9786" QuestId="68158" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68158) == 2">
 				<If Condition="GetQuestById(68158).GetTodoArgs(2, 0).Item1 == 0">
-					<GetTo ZoneId="135" XYZ="536.1068, 88.99999, -71.85416"/>
+					<LisbethTravel Zone="135" Position="536.1068, 88.99999, -71.85416"/>
 					<LLTalkTo NpcId="1002659" XYZ="536.1068, 88.99999, -71.85416" QuestId="68158" StepId="2"/>
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(2, 0).Item1 == 1">
-					<GetTo ZoneId="135" XYZ="536.1068, 88.99999, -71.85416"/>
+					<LisbethTravel Zone="135" Position="536.1068, 88.99999, -71.85416"/>
 					<LLTalkTo NpcId="1002657" XYZ="536.1068, 88.99999, -71.85416" QuestId="68158" StepId="2"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68158) == 3">
-				<GetTo ZoneId="135" XYZ="563.4178, 84.48011, -99.415"/>
+				<LisbethTravel Zone="135" Position="563.4178, 84.48011, -99.415"/>
 				<LLTalkTo NpcId="1021353" XYZ="563.4178, 84.48011, -99.415" QuestId="68158" StepId="3"/>
 			</If>
 			<If Condition="GetQuestStep(68158) == 4">
 				<If Condition="not IsOnMap(628)">
-					<GetTo ZoneId="628" XYZ="58.82053, 4, 66.71966"/>
+					<LisbethTravel Zone="628" Position="58.82053, 4, 66.71966"/>
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(4, 0).Item1 == 0">
-					<GetTo ZoneId="628" XYZ="58.82053, 4, 66.71966"/>
+					<LisbethTravel Zone="628" Position="58.82053, 4, 66.71966"/>
 					<LLTalkTo NpcId="1019064" XYZ="58.82053, 4, 66.71966" QuestId="68158" StepId="4"/>
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(4, 0).Item1 == 1">
-					<GetTo ZoneId="628" XYZ="79.15508, 4, 57.17901"/>
+					<LisbethTravel Zone="628" Position="79.15508, 4, 57.17901"/>
 					<LLTalkTo NpcId="1019065" XYZ="79.15508, 4, 57.17901" QuestId="68158" StepId="4"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68158) == 5">
-				<GetTo ZoneId="613" XYZ="-732.6594, 1.960285, -610.0832"/>
+				<LisbethTravel Zone="613" Position="-732.6594, 1.960285, -610.0832"/>
 				<LLTalkTo NpcId="1019233" XYZ="-732.6594, 1.960285, -610.0832" QuestId="68158" StepId="5"/>
 			</If>
 			<If Condition="GetQuestStep(68158) == 255">
@@ -177,7 +153,7 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(17946,5)">
 					<RunCode Name="Enable_Flight"/>
-					<GetTo ZoneId="478" XYZ="-44.67389, 209.2242, -90.67441"/>
+					<LisbethTravel Zone="478" Position="-44.67389, 209.2242, -90.67441"/>
 					<LLTurnIn ItemIds="17946" RequiresHq="True" QuestId="68158" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/>
 					<LogMessage Message="Level 65 - Walking for Walker's - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -193,19 +169,7 @@ Angles24
 		<!-- Level 65-66 -->
 		<If Condition="Core.Player.ClassLevel &lt; 66">
 			<LogMessage Message="Starting the Grind to Level 66."/>
-			<GetTo ZoneId="614" XYZ="742.9394, 99.01617, -283.3399"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 66">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="742.9394, 99.01617, -283.3399" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="642.4675, 132.82, -404.4985" name="Mature Trees"/>
-					<HotSpot Radius="90" XYZ="703.9889, 124.979, -379.2047" name="Mature Trees"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Pine Log</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5389, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':66, 'ConditionalJob':'Botanist'}]"/><!-- Pine Log -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 66">
 			<LogMessage Message="Congrats on Level 66, moving on."/>
@@ -218,19 +182,7 @@ Angles24
 		<!-- Level 66-68 -->
 		<If Condition="Core.Player.ClassLevel &lt; 68">
 			<LogMessage Message="Starting the Grind to Level 68."/>
-			<GetTo ZoneId="620" XYZ="298.305, 323.4938, 392.7249"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 68">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="298.305, 323.4938, 392.7249" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="167.4693, 307.7455, 479.0093" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="293.425, 331.5481, 560.4263" name="Lush Vegetation Patches"/>
-				</HotSpots>
-				<ItemNames>
-					<ItemName>Twincoon</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19989, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':68, 'ConditionalJob':'Botanist'}]"/><!-- Twincoon -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 68">
 			<LogMessage Message="Congrats on Level 68, moving on."/>
@@ -244,31 +196,31 @@ Angles24
 		<If Condition="IsQuestCompleted(68158) and not IsQuestCompleted(68159)">
 			<If Condition="not HasQuest(68159)">
 				<LogMessage Message="Picking Up Level 68 - The White Death."/>
-				<GetTo ZoneId="478" XYZ="-44.67389, 209.2242, -90.67441"/>
+				<LisbethTravel Zone="478" Position="-44.67389, 209.2242, -90.67441"/>
 				<If Condition="IsQuestAcceptQualified(68159)">
 					<LLPickupQuest QuestId="68159" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68159) == 1">
-				<GetTo ZoneId="133" XYZ="-233.5393, 6.245116, -170.4607"/>
+				<LisbethTravel Zone="133" Position="-233.5393, 6.245116, -170.4607"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.5393, 6.245116, -170.4607" QuestId="68159" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 2">
-				<GetTo ZoneId="478" XYZ="-46.29791, 209.2066, -87.10259"/>
+				<LisbethTravel Zone="478" Position="-46.29791, 209.2066, -87.10259"/>
 				<UseObject NpcId="2008181" XYZ="-46.29791, 209.2066, -87.10259" QuestId="68159" StepId="2"/>
 				<WaitWhile Condition="GetQuestStep(68159) == 2"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 3">
-				<GetTo ZoneId="478" XYZ="-46.29791, 209.2066, -87.10259"/>
+				<LisbethTravel Zone="478" Position="-46.29791, 209.2066, -87.10259"/>
 				<UseObject NpcId="2008181" XYZ="-46.29791, 209.2066, -87.10259" QuestId="68159" StepId="3"/>
 				<WaitWhile Condition="GetQuestStep(68159) == 3"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 4">
-				<GetTo ZoneId="478" XYZ="-44.63303, 209.2276, -90.81181"/>
+				<LisbethTravel Zone="478" Position="-44.63303, 209.2276, -90.81181"/>
 				<LLHandOver ItemIds="2002166" NpcId="1021349" XYZ="-44.63303, 209.2276, -90.81181" QuestId="68159" StepId="4" DialogOption="1"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 5">
-				<GetTo ZoneId="478" XYZ="74.81849, 214.12, -91.51659"/>
+				<LisbethTravel Zone="478" Position="74.81849, 214.12, -91.51659"/>
 				<LLHandOver ItemIds="2002167" NpcId="1017106" XYZ="74.81849, 214.12, -91.51659" QuestId="68159" StepId="5"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 6">
@@ -283,12 +235,12 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(17947,8)">
 					<RunCode Name="Enable_Flight"/>
-					<GetTo ZoneId="478" XYZ="74.53394, 214.12, -91.56881"/>
+					<LisbethTravel Zone="478" Position="74.53394, 214.12, -91.56881"/>
 					<LLHandOver ItemIds="17947" RequiresHq="True" NpcId="1017106" XYZ="74.53394, 214.12, -91.56881" QuestId="68159" StepId="6"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68159) == 255">
-				<GetTo ZoneId="478" XYZ="-44.62869, 209.2269, -90.77264"/>
+				<LisbethTravel Zone="478" Position="-44.62869, 209.2269, -90.77264"/>
 				<LLTurnIn ItemIds="2002168" QuestId="68159" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="SmallTalk"/>
@@ -302,21 +254,7 @@ Angles24
 		<!-- Level 68-70 -->
 		<If Condition="Core.Player.ClassLevel &lt; 70">
 			<LogMessage Message="Starting the Grind to Level 70."/>
-			<GetTo ZoneId="620" XYZ="298.305, 323.4938, 392.7249"/><!-- Farming Area -->
-			<ExGather while="Core.Player.ClassLevel &lt; 70">
-				<!--<EtxUseAuraItem AuraId="46" ItemId="12668"/>-->
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="90" XYZ="298.305, 323.4938, 392.7249" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="167.4693, 307.7455, 479.0093" name="Lush Vegetation Patches"/>
-					<HotSpot Radius="90" XYZ="293.425, 331.5481, 560.4263" name="Lush Vegetation Patches"/>
-				</HotSpots>
-				
-				<ItemNames>
-					<ItemName>Twincoon</ItemName>
-				</ItemNames>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':19989, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':70, 'ConditionalJob':'Botanist'}]"/><!-- Twincoon -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 70">
 			<LogMessage Message="Congrats on Level 70, moving on."/>
@@ -330,68 +268,50 @@ Angles24
 		<If Condition="IsQuestCompleted(68159) and not IsQuestCompleted(68160)">
 			<If Condition="not HasQuest(68160)">
 				<LogMessage Message="Picking Up Level 70 - Edgyth's Winning Streak."/>
-				<GetTo ZoneId="478" XYZ="-44.62869, 209.2269, -90.77264"/>
+				<LisbethTravel Zone="478" Position="-44.62869, 209.2269, -90.77264"/>
 				<If Condition="IsQuestAcceptQualified(68160)">
 					<LLPickupQuest QuestId="68160" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68160) == 1">
-				<GetTo ZoneId="133" XYZ="-233.303, 6.252198, -170.7122"/>
+				<LisbethTravel Zone="133" Position="-233.303, 6.252198, -170.7122"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.303, 6.252198, -170.7122" QuestId="68160" StepId="1"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 2">
-				<GetTo ZoneId="612" XYZ="-600.5614, 130, -483.7271"/>
+				<LisbethTravel Zone="612" Position="-600.5614, 130, -483.7271"/>
 				<LLTalkTo NpcId="1021358" XYZ="-600.5614, 130, -483.7271" QuestId="68160" StepId="2"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 3">
-				<GetTo ZoneId="620" XYZ="-263.3452, 256.9996, 696.3071"/>
+				<LisbethTravel Zone="620" Position="-263.3452, 256.9996, 696.3071"/>
 				<LLTalkTo NpcId="1021359" XYZ="-263.3452, 256.9996, 696.3071" QuestId="68160" StepId="3"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 4">
 				<If Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 0">
-					<GetTo ZoneId="620" XYZ="-277.3094, 258.9065, 781.6879"/>
+					<LisbethTravel Zone="620" Position="-277.3094, 258.9065, 781.6879"/>
 					<LLTalkTo NpcId="1021591" XYZ="-277.3094, 258.9065, 781.6879" QuestId="68160" StepId="4"/>
 					<WaitWhile Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 0"/>
 				</If>
 				<If Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 1">
-					<GetTo ZoneId="620" XYZ="-233.5301, 258.9065, 782.9395"/>
+					<LisbethTravel Zone="620" Position="-233.5301, 258.9065, 782.9395"/>
 					<LLTalkTo NpcId="1021595" XYZ="-233.5301, 258.9065, 782.9395" QuestId="68160" StepId="4"/>
 					<WaitWhile Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 1"/>
 				</If>
 				<If Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 2">
-					<GetTo ZoneId="620" XYZ="-218.7188, 257.5265, 738.5011"/>
+					<LisbethTravel Zone="620" Position="-218.7188, 257.5265, 738.5011"/>
 					<LLTalkTo NpcId="1020870" XYZ="-218.7188, 257.5265, 738.5011" QuestId="68160" StepId="4"/>
 					<WaitWhile Condition="GetQuestById(68160).GetTodoArgs(4, 0).Item1 == 2"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68160) == 5">
-				<GetTo ZoneId="620" XYZ="-243.6874, 257.5265, 744.6713"/>
+				<LisbethTravel Zone="620" Position="-243.6874, 257.5265, 744.6713"/>
 				<LLTalkTo NpcId="1022381" XYZ="-243.6874, 257.5265, 744.6713" QuestId="68160" StepId="5"/>
 			</If>
 			<If Condition="GetQuestStep(68160) == 255">
 				<While Condition="not HasAtLeast(17948,5)">
-					<If Condition="not IsOnMap(621)">
-						<GetTo ZoneId="621" XYZ="-651.8341, 50.00002, -5.081966"/>
-					</If>
-					<ExMoveTo XYZ="-739.371, 112.4997, -634.7165"/>
-					<WaitWhile Condition="Condition.IsTimeBetween(18,4.1) or Condition.IsTimeBetween(6,16.1)"/>
-					<If Condition="Condition.IsTimeBetween(4,6) or Condition.IsTimeBetween(16,18)">
-						<ExGather loops="1" SpawnTimeout="5" While="not HqHasAtLeast(17948,5)">
-							<GatherObjects>
-								<GatherObject>Unspoiled Lush Vegetation Patch</GatherObject>
-							</GatherObjects>
-							<ItemNames>
-								<ItemName>Rhalgr's Streak</ItemName>
-							</ItemNames>
-							<GatherRotation>Yield</GatherRotation>
-							<HotSpots>
-								<HotSpot XYZ="-739.371, 112.4997, -634.7165" Radius="120"/>
-							</HotSpots>
-						</ExGather>
-					</If>
+					<Lisbeth Json="[{'Group':1,'Item':17948,'Amount':5,'Enabled':true,'Type':'Gather'}]"/><!-- Rhalgr's Streak -->
 				</While>
 				<If Condition="HasAtLeast(17948,5)">
-					<GetTo ZoneId="478" XYZ="-44.54691, 209.2032, -89.48778"/>
+					<LisbethTravel Zone="478" Position="-44.54691, 209.2032, -89.48778"/>
 					<LLTurnIn ItemIds="17948" QuestId="68160" NpcId="1021349" XYZ="-44.54691, 209.2032, -89.48778"/>
 					<LogMessage Message="Level 70 - Edgyth's Winning Streak - Completed."/>
 					<WaitTimer WaitTime="2"/>

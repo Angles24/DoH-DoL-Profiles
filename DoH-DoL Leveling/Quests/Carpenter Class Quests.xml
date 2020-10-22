@@ -43,7 +43,7 @@ Angles24
     <If Condition="ClassName == ClassJobType.Carpenter">
       <!-- The Lance's Lesson  (Level 20) -->
       <If Condition="IsQuestCompleted(65677) and not HasQuest(65678) and not IsQuestCompleted(65678) and Core.Player.ClassLevel &gt; 19">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65678)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65678" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -53,7 +53,7 @@ Angles24
         <While Condition="not HasItem(1827)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1827,'Amount':1,'Enabled':true,'Type':'Carpenter','QuickSynth':true}]"/>
         </While>
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
 		<If Condition="&meld; == 0">
 		<If Condition="GetQuestStep(65678) == 255">
           <RunCode Name="Requires_Melding"/>
@@ -68,21 +68,21 @@ Angles24
       </If>
       <!-- A Crisis of Confidence (Level 25) -->
       <If Condition="IsQuestCompleted(65678) and not HasQuest(65704) and not IsQuestCompleted(65704) and Core.Player.ClassLevel &gt; 24">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65704)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65704" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(65704) and not IsQuestCompleted(65704) and GetQuestStep(65704) == 1">
-        <GetTo ZoneId="132" XYZ="-77.95837, -3.695303, 53.08606"/>
+        <LisbethTravel Zone="132" Position="-77.95837, -3.695303, 53.08606"/>
         <LLTalkTo NpcId="1000162" XYZ="-77.95837, -3.695303, 53.08606" QuestId="65704" StepId="1"/>
       </If>
       <If Condition="HasQuest(65704) and not IsQuestCompleted(65704) and GetQuestStep(65704) == 255">
         <While Condition="not HasHqItem(5371)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':5371,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65704" ItemId="5371" RequiresHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -91,7 +91,7 @@ Angles24
       </If>
       <!-- Between Captain and Conjurer (Level 30) -->
       <If Condition="IsQuestCompleted(65704) and not HasQuest(65705) and not IsQuestCompleted(65705) and Core.Player.ClassLevel &gt; 29">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(65705)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="65705" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -101,23 +101,23 @@ Angles24
         <While Condition="not HasHqItem(2015)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2015,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLHandOver ItemId="2015" RequiresHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="65705" StepId="1"/>
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 2">
-        <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
+        <LisbethTravel Zone="132" Position="-56.26001, -0.5033983, -0.1679077"/>
         <LLHandOver ItemId="2015" RequiresHq="True" NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="65705" StepId="2"/>
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 3">
-        <GetTo ZoneId="133" XYZ="-231.2325, -4, -7.087078"/>
+        <LisbethTravel Zone="133" Position="-231.2325, -4, -7.087078"/>
         <LLHandOver ItemId="2015" RequiresHq="True" NpcId="1000235" XYZ="-231.2325, -4, -7.087078" QuestId="65705" StepId="3"/>
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 4">
-        <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
+        <LisbethTravel Zone="132" Position="-56.26001, -0.5033983, -0.1679077"/>
         <LLTalkTo NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="65705" StepId="4"/>
       </If>
       <If Condition="HasQuest(65705) and not IsQuestCompleted(65705) and GetQuestStep(65705) == 255">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65705" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -126,7 +126,7 @@ Angles24
       </If>
       <!-- Growing Apart (Level 35) -->
       <If Condition="IsQuestCompleted(65705) and not HasQuest(66072) and not IsQuestCompleted(66072) and Core.Player.ClassLevel &gt; 34">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66072)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="66072" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -136,15 +136,15 @@ Angles24
         <While Condition="not HasHqItem(1917)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1917,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLHandOver ItemId="1917" RequiresHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="66072" StepId="1"/>
       </If>
       <If Condition="HasQuest(66072) and not IsQuestCompleted(66072) and GetQuestStep(66072) == 2">
-        <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
+        <LisbethTravel Zone="132" Position="-56.26001, -0.5033983, -0.1679077"/>
         <LLHandOver ItemId="1917" RequiresHq="True" NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="66072" StepId="2"/>
       </If>
       <If Condition="HasQuest(66072) and not IsQuestCompleted(66072) and GetQuestStep(66072) == 255">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="66072" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -153,7 +153,7 @@ Angles24
       </If>
       <!-- Memento Mori (Level 40) -->
       <If Condition="IsQuestCompleted(66072) and not HasQuest(66073) and not IsQuestCompleted(66073) and Core.Player.ClassLevel &gt; 39">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66073)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="66073" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
@@ -163,15 +163,15 @@ Angles24
         <While Condition="not HasHqItem(1925)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1925,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLHandOver ItemId="1925" RequiresHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="66073" StepId="1"/>
       </If>
       <If Condition="HasQuest(66073) and not IsQuestCompleted(66073) and GetQuestStep(66073) == 2">
-        <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
+        <LisbethTravel Zone="132" Position="-56.26001, -0.5033983, -0.1679077"/>
         <LLHandOver ItemId="1925" RequiresHq="True" NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="66073" StepId="2"/>
       </If>
       <If Condition="HasQuest(66073) and not IsQuestCompleted(66073) and GetQuestStep(66073) == 255">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="66073" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -180,18 +180,18 @@ Angles24
       </If>
       <!-- Gone till the Sixth Astral Moon (Level 45) -->
       <If Condition="IsQuestCompleted(66073) and not HasQuest(66074) and not IsQuestCompleted(66074) and Core.Player.ClassLevel &gt; 44">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66074)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="66074" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 1">
-        <GetTo ZoneId="132" XYZ="-77.95837, -3.695303, 53.08606"/>
+        <LisbethTravel Zone="132" Position="-77.95837, -3.695303, 53.08606"/>
         <LLTalkTo NpcId="1000162" XYZ="-77.95837, -3.695303, 53.08606" QuestId="66074" StepId="1"/>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 2">
-        <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
+        <LisbethTravel Zone="132" Position="-56.26001, -0.5033983, -0.1679077"/>
         <LLTalkTo NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="66074" StepId="2"/>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 3">
@@ -204,15 +204,15 @@ Angles24
         <While Condition="not HasHqItem(2039)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2039,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLHandOver ItemIds="1937, 1862, 2039" RequiresHq="True, True, True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="66074" StepId="3"/>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 4">
-        <GetTo ZoneId="132" XYZ="-56.26001, -0.5033983, -0.1679077"/>
+        <LisbethTravel Zone="132" Position="-56.26001, -0.5033983, -0.1679077"/>
         <LLHandOver ItemIds="1937,1862,2039" RequiresHq="True, True, True" NpcId="1000125" XYZ="-56.26001, -0.5033983, -0.1679077" QuestId="66074" StepId="4"/>
       </If>
       <If Condition="HasQuest(66074) and not IsQuestCompleted(66074) and GetQuestStep(66074) == 255">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="66074" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -221,28 +221,28 @@ Angles24
       </If>
       <!-- Saving Captain Gairhard (Level 50) -->
       <If Condition="IsQuestCompleted(66074) and not HasQuest(66075) and not IsQuestCompleted(66075) and Core.Player.ClassLevel &gt; 49">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(66075)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="66075" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(66075) and not IsQuestCompleted(66075) and GetQuestStep(66075) == 1">
-        <GetTo ZoneId="132" XYZ="-77.95837, -3.695303, 53.08606"/>
+        <LisbethTravel Zone="132" Position="-77.95837, -3.695303, 53.08606"/>
         <LLTalkTo NpcId="1000162" InteractDistance="2" UseMesh="True" XYZ="-77.95837, -3.695303, 53.08606"/>
       </If>
       <If Condition="HasQuest(66075) and not IsQuestCompleted(66075) and GetQuestStep(66075) == 2">
         <While Condition="not HasHqItem(5376)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':5376,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLHandOver ItemId="5376" RequireHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="66075" StepId="2"/>
       </If>
       <If Condition="HasQuest(66075) and not IsQuestCompleted(66075) and GetQuestStep(66075) == 3">
         <While Condition="not HasHqItem(1942)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':1942,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="154" XYZ="162.005, -27.84127, 309.9564"/>
+        <LisbethTravel Zone="154" Position="162.005, -27.84127, 309.9564"/>
 		<If Condition="&meld; == 0">
 		<If Condition="GetQuestStep(66075) == 3">
           <RunCode Name="Requires_Melding"/>
@@ -252,7 +252,7 @@ Angles24
         <LLHandOver ItemId="1942" RequireHq="True" NpcId="1003072" XYZ="162.005, -27.84127, 309.9564" QuestId="66075" StepId="3"/>
       </If>
       <If Condition="HasQuest(66075) and not IsQuestCompleted(66075) and GetQuestStep(66075) == 255">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="66075" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -261,18 +261,18 @@ Angles24
       </If>
       <!-- Lance of a Lifetime (Level 50) -->
       <If Condition="IsQuestCompleted(66075) and not HasQuest(67533) and not IsQuestCompleted(67533) and Core.Player.ClassLevel &gt; 49">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <If Condition="IsQuestAcceptQualified(67533)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67533" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(67533) and not IsQuestCompleted(67533) and GetQuestStep(67533) == 1">
-        <GetTo ZoneId="418" XYZ="108.2627, 24.38417, 12.06982"/>
+        <LisbethTravel Zone="418" Position="108.2627, 24.38417, 12.06982"/>
         <LLHandOver ItemId="2001681" NpcId="1012499" XYZ="108.2627, 24.38417, 12.06982" QuestId="67533" StepId="1"/>
       </If>
       <If Condition="HasQuest(67533) and not IsQuestCompleted(67533) and GetQuestStep(67533) == 255">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <LLTurnIn QuestId="67533" ItemId="2001681" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -281,7 +281,7 @@ Angles24
       </If>
       <!-- A-hunting He Will Go (Level 53) -->
       <If Condition="IsQuestCompleted(67533) and not HasQuest(67534) and not IsQuestCompleted(67534) and Core.Player.ClassLevel &gt; 52">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67534)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67534" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
@@ -291,15 +291,15 @@ Angles24
         <While Condition="not HasHqItem(10611)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10611,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <LLHandOver ItemId="10611" RequiresHq="True" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135" QuestId="67534" StepId="1"/>
       </If>
       <If Condition="HasQuest(67534) and not IsQuestCompleted(67534) and GetQuestStep(67534) == 2">
-        <GetTo ZoneId="418" XYZ="-141.558, 19.06319, -13.26007"/>
+        <LisbethTravel Zone="418" Position="-141.558, 19.06319, -13.26007"/>
         <LLTalkTo NpcId="1012501" XYZ="-141.558, 19.06319, -13.26007" QuestId="67534" StepId="2"/>
       </If>
       <If Condition="HasQuest(67534) and not IsQuestCompleted(67534) and GetQuestStep(67534) == 255">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <LLTurnIn QuestId="67534" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -308,25 +308,25 @@ Angles24
       </If>
       <!-- Ministers Of Grace Defend Him (Level 55) -->
       <If Condition="IsQuestCompleted(67534) and not HasQuest(67535) and not IsQuestCompleted(67535) and Core.Player.ClassLevel &gt; 54">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67535)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67535" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         </If>
       </If>
       <If Condition="HasQuest(67535) and not IsQuestCompleted(67535) and GetQuestStep(67535) == 1">
-        <GetTo ZoneId="418" XYZ="-30.6554, 5.504704, 23.72772"/>
+        <LisbethTravel Zone="418" Position="-30.6554, 5.504704, 23.72772"/>
         <LLTalkTo NpcId="1012502" XYZ="-30.6554, 5.504704, 23.72772" QuestId="67535" StepId="1"/>
       </If>
       <If Condition="HasQuest(67535) and not IsQuestCompleted(67535) and GetQuestStep(67535) == 2">
         <While Condition="not HasHqItem(10636)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10636,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="418" XYZ="-30.6554, 5.504704, 23.72772"/>
+        <LisbethTravel Zone="418" Position="-30.6554, 5.504704, 23.72772"/>
         <LLHandOver ItemId="10636" RequiresHq="True" NpcId="1012502" XYZ="-30.6554, 5.504704, 23.72772" QuestId="67535" StepId="2"/>
       </If>
       <If Condition="HasQuest(67535) and not IsQuestCompleted(67535) and GetQuestStep(67535) == 255">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <LLTurnIn QuestId="67535" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -335,29 +335,29 @@ Angles24
       </If>
       <!-- The Son Also Rises (Level 58) -->
       <If Condition="IsQuestCompleted(67535) and not HasQuest(67536) and not IsQuestCompleted(67536) and Core.Player.ClassLevel &gt; 57">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67536)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67536" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         </If>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 1">
-        <GetTo ZoneId="418" XYZ="-138.0484, 5.467082, 34.86682"/>
+        <LisbethTravel Zone="418" Position="-138.0484, 5.467082, 34.86682"/>
         <LLTalkTo NpcId="1012505" XYZ="-138.0484, 5.467082, 34.86682" QuestId="67536" StepId="1"/>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 2">
-        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67536" StepId="2"/>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 3">
-        <GetTo ZoneId="155" XYZ="115.3429, 287.0294, 142.1377"/>
+        <LisbethTravel Zone="155" Position="115.3429, 287.0294, 142.1377"/>
         <LLTalkTo NpcId="1000776" XYZ="115.3429, 287.0294, 142.1377" QuestId="67536" StepId="3"/>
       </If>
       <If Condition="HasQuest(67536) and not IsQuestCompleted(67536) and GetQuestStep(67536) == 255">
         <While Condition="not HqHasAtLeast(12583,3)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12583,'Amount':3,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <LLTurnIn QuestId="67536" ItemId="12583" RequireHq="True" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -366,42 +366,42 @@ Angles24
       </If>
       <!-- More Fierce than Fire (Level 60) -->
       <If Condition="IsQuestCompleted(67536) and not HasQuest(67537) and not IsQuestCompleted(67537) and Core.Player.ClassLevel &gt; 59">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <If Condition="IsQuestAcceptQualified(67537)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67537" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135"/>
         </If>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 1">
-        <GetTo ZoneId="397" XYZ="-294.5449, 125.4943, -18.6618"/>
+        <LisbethTravel Zone="397" Position="-294.5449, 125.4943, -18.6618"/>
         <LLTalkTo NpcId="1013596" XYZ="-294.5449, 125.4943, -18.6618" QuestId="67537" StepId="1"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 2">
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <LLHandOver ItemId="2001682" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135" QuestId="67537" StepId="2"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 3">
         <While Condition="not HasItem(10609)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10609,'Amount':1,'Enabled':true,'Type':'Carpenter','Hq':true}]"/>
         </While>
-        <GetTo ZoneId="418" XYZ="96.57422, -20.02087, 64.7135"/>
+        <LisbethTravel Zone="418" Position="96.57422, -20.02087, 64.7135"/>
         <LLHandOver ItemId="10609" AllowHq="True" NpcId="1012498" XYZ="96.57422, -20.02087, 64.7135" QuestId="67537" StepId="3"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 4">
-        <GetTo ZoneId="418" XYZ="-138.0484, 5.467082, 34.86682"/>
+        <LisbethTravel Zone="418" Position="-138.0484, 5.467082, 34.86682"/>
         <LLTalkTo NpcId="1012505" XYZ="-138.0484, 5.467082, 34.86682" QuestId="67537" StepId="4"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 5">
-        <GetTo ZoneId="397" XYZ="-270.0085, 80.85996, -350.6066"/>
+        <LisbethTravel Zone="397" Position="-270.0085, 80.85996, -350.6066"/>
         <LLTalkTo NpcId="1013597" XYZ="-270.0085, 80.85996, -350.6066" QuestId="67537" StepId="5"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 6">
-        <GetTo ZoneId="397" XYZ="-270.0085, 80.85996, -350.6066"/>
+        <LisbethTravel Zone="397" Position="-270.0085, 80.85996, -350.6066"/>
 		<Dismount/>
         <LLTalkTo NpcId="1013600" XYZ="-270.0085, 80.85996, -350.6066" QuestId="67537" StepId="6"/>
       </If>
       <If Condition="HasQuest(67537) and not IsQuestCompleted(67537) and GetQuestStep(67537) == 255">
-	    <GetTo ZoneId="397" XYZ="542.2294, 176.8043, -554.4976"/>
+	    <LisbethTravel Zone="397" Position="542.2294, 176.8043, -554.4976"/>
         <LLTurnIn QuestId="67537" NpcId="1013686" XYZ="542.2294, 176.8043, -554.4976"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -410,34 +410,34 @@ Angles24
       </If>
       <!-- Uncharted Territory (Level 60) -->
       <If Condition="IsQuestCompleted(67537) and not HasQuest(67977) and not IsQuestCompleted(67977) and Core.Player.ClassLevel &gt; 59">
-        <GetTo ZoneId="132" XYZ="-45.0408, -1.250016, 58.37101"/>
+        <LisbethTravel Zone="132" Position="-45.0408, -1.250016, 58.37101"/>
         <If Condition="IsQuestAcceptQualified(67977)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67977" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 1">
-        <GetTo ZoneId="132" XYZ="-22.00138, -3.25, 35.37772"/>
+        <LisbethTravel Zone="132" Position="-22.00138, -3.25, 35.37772"/>
         <LLTalkTo NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251" QuestId="67977" StepId="1"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 2 and GetQuestById(67977).GetTodoArgs(2, 0).Item1 == 0">
-        <GetTo ZoneId="132" XYZ="30.89977, -8, 111.3071"/>
+        <LisbethTravel Zone="132" Position="30.89977, -8, 111.3071"/>
         <LLTalkTo NpcId="1000384" XYZ="30.80798, -8, 112.2301" QuestId="67977"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 2 and GetQuestById(67977).GetTodoArgs(2, 0).Item1 == 1">
-        <GetTo ZoneId="132" XYZ="33.73767, -8, 118.5474"/>
+        <LisbethTravel Zone="132" Position="33.73767, -8, 118.5474"/>
         <LLTalkTo NpcId="1000139" XYZ="33.73767, -8, 118.5474" QuestId="67977"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 2 and GetQuestById(67977).GetTodoArgs(2, 0).Item1 == 2">
-        <GetTo ZoneId="132" XYZ="34.2773, -18.8, 95.46662"/>
+        <LisbethTravel Zone="132" Position="34.2773, -18.8, 95.46662"/>
         <LLTalkTo NpcId="1000140" XYZ="33.58508, -18.81439, 94.49902" QuestId="67977"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 3">
-        <GetTo ZoneId="132" XYZ="26.31469, -8, 102.1364"/>
+        <LisbethTravel Zone="132" Position="26.31469, -8, 102.1364"/>
         <LLTalkTo NpcId="1020902" XYZ="25.46729, -8, 102.037" QuestId="67977" StepId="3"/>
       </If>
       <If Condition="HasQuest(67977) and not IsQuestCompleted(67977) and GetQuestStep(67977) == 255">
-        <GetTo ZoneId="132" XYZ="-45.10997, -1.250017, 57.86028"/>
+        <LisbethTravel Zone="132" Position="-45.10997, -1.250017, 57.86028"/>
         <LLTurnIn QuestId="67977" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -446,51 +446,51 @@ Angles24
       </If>
       <!-- The Game of Confidence (Level 63) -->
       <If Condition="IsQuestCompleted(67977) and not HasQuest(67978) and not IsQuestCompleted(67978) and Core.Player.ClassLevel &gt; 62">
-        <GetTo ZoneId="132" XYZ="-45.10997, -1.250017, 57.86028"/>
+        <LisbethTravel Zone="132" Position="-45.10997, -1.250017, 57.86028"/>
         <If Condition="IsQuestAcceptQualified(67978)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67978" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         </If>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 1">
-        <GetTo ZoneId="628" XYZ="-46.4557, 3.013504, -69.9194"/>
+        <LisbethTravel Zone="628" Position="-46.4557, 3.013504, -69.9194"/>
         <LLTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67978" StepId="1"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 2">
-        <GetTo ZoneId="628" XYZ="44.50636, 4.000001, 85.82306"/>
+        <LisbethTravel Zone="628" Position="44.50636, 4.000001, 85.82306"/>
         <LLTalkTo NpcId="1020904" XYZ="45.48706, 4.000001, 85.34363" QuestId="67978" StepId="2"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 3 and GetQuestById(67978).GetTodoArgs(3, 0).Item1 == 0">
-        <GetTo ZoneId="628" XYZ="31.49495, 4.000001, 52.55272"/>
+        <LisbethTravel Zone="628" Position="31.49495, 4.000001, 52.55272"/>
         <LLTalkTo NpcId="1020906" XYZ="31.44885, 4.000001, 51.80432" QuestId="67978"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 3 and GetQuestById(67978).GetTodoArgs(3, 0).Item1 == 1">
-        <GetTo ZoneId="628" XYZ="54.80767, 4, 69.25572"/>
+        <LisbethTravel Zone="628" Position="54.80767, 4, 69.25572"/>
         <LLTalkTo NpcId="1020907" XYZ="55.00867, 4.05, 69.84058" QuestId="67978"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 3 and GetQuestById(67978).GetTodoArgs(3, 0).Item1 == 2">
-        <GetTo ZoneId="628" XYZ="74.19947, 4, 54.21334"/>
+        <LisbethTravel Zone="628" Position="74.19947, 4, 54.21334"/>
         <LLTalkTo NpcId="1020908" XYZ="75.45581, 4.05, 52.90295" QuestId="67978"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 4">
-        <GetTo ZoneId="628" XYZ="-46.50515, 3.013504, -70.01102"/>
+        <LisbethTravel Zone="628" Position="-46.50515, 3.013504, -70.01102"/>
         <LLTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67978" StepId="4" DialogOption="1"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 5">
         <While Condition="not HasHqItem(17878)">
 			<If Condition="not HasItem(17877)">
-			<GetTo ZoneId="628" XYZ="-45.65387, 3.013504, -69.74326"/>
+			<LisbethTravel Zone="628" Position="-45.65387, 3.013504, -69.74326"/>
 			 <LLTalkTo NpcId="1020903" XYZ="-45.65387, 3.013504, -69.74326" QuestId="67978"/>
 			 </If>
 			 <If Condition="HasItem(17877)">
           <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17878,'Amount':1,'Enabled':true,'Type':'Carpenter'}]"/>
 		  </If>
         </While>
-        <GetTo ZoneId="628" XYZ="-47.7025, 3.013503, -74.11468"/>
+        <LisbethTravel Zone="628" Position="-47.7025, 3.013503, -74.11468"/>
         <LLHandOver ItemId="17878" RequireHq="True" NpcId="1020909" XYZ="-46.40277, 3.013503, -74.72345" QuestId="67978" StepId="5"/>
       </If>
       <If Condition="HasQuest(67978) and not IsQuestCompleted(67978) and GetQuestStep(67978) == 255">
-        <GetTo ZoneId="628" XYZ="-46.65266, 3.013504, -69.99533"/>
+        <LisbethTravel Zone="628" Position="-46.65266, 3.013504, -69.99533"/>
         <LLTurnIn QuestId="67978" NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -499,7 +499,7 @@ Angles24
       </If>
       <!-- A Lesson in Listening (Level 65) -->
       <If Condition="IsQuestCompleted(67978) and not HasQuest(67979) and not IsQuestCompleted(67979) and Core.Player.ClassLevel &gt; 64">
-        <GetTo ZoneId="628" XYZ="-46.65266, 3.013504, -69.99533"/>
+        <LisbethTravel Zone="628" Position="-46.65266, 3.013504, -69.99533"/>
         <If Condition="IsQuestAcceptQualified(67979)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67979" NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166"/>
@@ -514,21 +514,21 @@ Angles24
         <LLTalkTo NpcId="1020912" XYZ="-13.07703, 0.25, -86.22876" QuestId="67979"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 2 and GetQuestById(67979).GetTodoArgs(2, 0).Item1 == 1">
-        <GetTo ZoneId="628" XYZ="1.974976, 0, -68.85121"/>
+        <LisbethTravel Zone="628" Position="1.974976, 0, -68.85121"/>
         <LLTalkTo NpcId="1019063" XYZ="3.341675, 7.450581E-09, -67.73486" QuestId="67979"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 2 and GetQuestById(67979).GetTodoArgs(2, 0).Item1 == 2">
-        <GetTo ZoneId="628" XYZ="10.14571, 0, -75.16724"/>
+        <LisbethTravel Zone="628" Position="10.14571, 0, -75.16724"/>
         <LLTalkTo NpcId="1019062" XYZ="9.506287, 0, -76.12726" QuestId="67979"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 3">
-        <GetTo ZoneId="628" XYZ="-45.9142, 3.013504, -69.86348"/>
+        <LisbethTravel Zone="628" Position="-45.9142, 3.013504, -69.86348"/>
         <LLTalkTo NpcId="1020903" XYZ="-46.95203, 3.013504, -69.0166" QuestId="67979" StepId="3" DialogOption="2"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 4">
         <While Condition="not HasHqItem(17880)">
           <If Condition="not HasItem(17879)">
-			<GetTo ZoneId="628" XYZ="-45.65387, 3.013504, -69.74326"/>
+			<LisbethTravel Zone="628" Position="-45.65387, 3.013504, -69.74326"/>
 			 <LLTalkTo NpcId="1020903" XYZ="-45.65387, 3.013504, -69.74326" QuestId="67979"/>
 			 </If>
 			 <If Condition="HasItem(17879)">
@@ -539,7 +539,7 @@ Angles24
         <LLHandOver ItemId="17880" RequireHq="True" NpcId="1019061" XYZ="-0.04577637, 0, -80.8576" QuestId="67979" StepId="4"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 255">
-        <GetTo ZoneId="628" XYZ="-50.98821, -2.9, -51.92702"/>
+        <LisbethTravel Zone="628" Position="-50.98821, -2.9, -51.92702"/>
         <LLTurnIn QuestId="67979" NpcId="1020994" XYZ="-51.89594, -2.9, -50.91937" RewardSlot="4"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -548,55 +548,55 @@ Angles24
       </If>
       <!-- Live and Let Dine (Level 68) -->
       <If Condition="IsQuestCompleted(67979) and not HasQuest(67980) and not IsQuestCompleted(67980) and Core.Player.ClassLevel &gt; 67">
-        <GetTo ZoneId="628" XYZ="-48.06082, -2.9, -52.78751"/>
+        <LisbethTravel Zone="628" Position="-48.06082, -2.9, -52.78751"/>
         <If Condition="IsQuestAcceptQualified(67980)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67980" NpcId="1019002" XYZ="-48.05072, -2.9, -50.24799"/>
         </If>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 1">
-        <GetTo ZoneId="614" XYZ="480.8924, 57.41007, -167.5075"/>
+        <LisbethTravel Zone="614" Position="480.8924, 57.41007, -167.5075"/>
         <LLTalkTo NpcId="1020913" XYZ="480.949, 57.51844, -168.4749" QuestId="67980" StepId="1"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 2">
-        <GetTo ZoneId="614" XYZ="466.0222, 68.22433, -119.8152"/>
+        <LisbethTravel Zone="614" Position="466.0222, 68.22433, -119.8152"/>
         <LLTalkTo NpcId="1019279" XYZ="466.4835, 68.22433, -120.7447" QuestId="67980" StepId="2"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 3 and GetQuestById(67980).GetTodoArgs(3, 0).Item1 == 0">
-        <GetTo ZoneId="614" XYZ="467.596, 68.02505, -94.73309"/>
+        <LisbethTravel Zone="614" Position="467.596, 68.02505, -94.73309"/>
         <LLTalkTo NpcId="1019257" XYZ="468.5587, 68.02771, -93.21747" QuestId="67980"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 3 and GetQuestById(67980).GetTodoArgs(3, 0).Item1 == 1">
-        <GetTo ZoneId="614" XYZ="394.8227, 72.07918, -83.17698"/>
+        <LisbethTravel Zone="614" Position="394.8227, 72.07918, -83.17698"/>
         <LLTalkTo NpcId="1019256" XYZ="394.7356, 72.07918, -81.77313" QuestId="67980"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 3 and GetQuestById(67980).GetTodoArgs(3, 0).Item1 == 2">
-        <GetTo ZoneId="614" XYZ="369.4804, 84.94711, -201.8471"/>
+        <LisbethTravel Zone="614" Position="369.4804, 84.94711, -201.8471"/>
         <LLTalkTo NpcId="1019258" XYZ="368.4595, 85.00467, -202.8077" QuestId="67980"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 4">
-        <GetTo ZoneId="614" XYZ="481.0121, 57.41946, -167.716"/>
+        <LisbethTravel Zone="614" Position="481.0121, 57.41946, -167.716"/>
         <LLTalkTo NpcId="1020913" XYZ="480.949, 57.51844, -168.4749" QuestId="67980" StepId="4" DialogOption="2"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 5">
         <While Condition="not HasHqItem(17882)">
 			<If Condition="not HasItem(17881)">
-			<GetTo ZoneId="614" XYZ="480.6881, 57.60501, -168.9152"/>
+			<LisbethTravel Zone="614" Position="480.6881, 57.60501, -168.9152"/>
 			 <LLTalkTo NpcId="1020913" XYZ="480.6881, 57.60501, -168.9152" QuestId="67980"/>
 			 </If>
 			 <If Condition="HasItem(17881)">
           <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17882,'Amount':1,'Enabled':true,'Type':'Carpenter'}]"/>
 		  </If>
         </While>
-        <GetTo ZoneId="614" XYZ="466.6603, 68.22433, -119.884"/>
+        <LisbethTravel Zone="614" Position="466.6603, 68.22433, -119.884"/>
         <LLHandOver ItemId="17882" RequiresHq="True" NpcId="1019279" XYZ="466.4835, 68.22433, -120.7447" QuestId="67980" StepId="5"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 6">
-        <GetTo ZoneId="132" XYZ="-11.86295, -3.25, 35.07083"/>
+        <LisbethTravel Zone="132" Position="-11.86295, -3.25, 35.07083"/>
         <WaitWhile Condition="HasQuest(67980) and not IsQuestCompleted(67980) and not GetQuestStep(67980) == 255"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 255">
-        <GetTo ZoneId="132" XYZ="-22.08097, -3.25, 35.43846"/>
+        <LisbethTravel Zone="132" Position="-22.08097, -3.25, 35.43846"/>
         <LLTurnIn QuestId="67980" NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -605,47 +605,47 @@ Angles24
       </If>
       <!-- Tea Party Rules (Level 70) -->
       <If Condition="IsQuestCompleted(67980) and not HasQuest(67981) and not IsQuestCompleted(67981) and Core.Player.ClassLevel &gt; 69">
-        <GetTo ZoneId="132" XYZ="-22.18031, -3.25, 35.30078"/>
+        <LisbethTravel Zone="132" Position="-22.18031, -3.25, 35.30078"/>
         <If Condition="IsQuestAcceptQualified(67981)">
 		<RunCode Name="SmallTalk"/>
           <LLPickupQuest QuestId="67981" NpcId="1020901" XYZ="-22.87329, -3.25, 35.20251"/>
         </If>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 1">
-        <GetTo ZoneId="132" XYZ="-44.8852, -1.250004, 57.72015"/>
+        <LisbethTravel Zone="132" Position="-44.8852, -1.250004, 57.72015"/>
         <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981" StepId="1"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 2">
-        <GetTo ZoneId="132" XYZ="-68.87189, -1.963174, 22.31291"/>
+        <LisbethTravel Zone="132" Position="-68.87189, -1.963174, 22.31291"/>
         <LLTalkTo NpcId="1020917" XYZ="-69.47443, -1.903866, 22.75116" QuestId="67981" StepId="2"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 3">
-        <GetTo ZoneId="133" XYZ="-146.9552, 7.680779, -132.6617"/>
+        <LisbethTravel Zone="133" Position="-146.9552, 7.680779, -132.6617"/>
         <LLTalkTo NpcId="1020918" XYZ="-147.6616, 7.702551, -132.2805" QuestId="67981" StepId="3"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 4">
-        <GetTo ZoneId="132" XYZ="-45.05016, -1.250016, 57.89428"/>
+        <LisbethTravel Zone="132" Position="-45.05016, -1.250016, 57.89428"/>
         <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981" StepId="4" DialogOption="1"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 5">
         <While Condition="not HasHqItem(17884)">
           <If Condition="not HasItem(17883)">
-			<GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+			<LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
 			 <LLTalkTo NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" QuestId="67981"/>
 			 </If>
 			 <If Condition="HasItem(17883)">
           <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17884,'Amount':1,'Enabled':true,'Type':'Carpenter'}]"/>
 		  </If>
         </While>
-        <GetTo ZoneId="132" XYZ="-46.23624, -1.250003, 54.72165"/>
+        <LisbethTravel Zone="132" Position="-46.23624, -1.250003, 54.72165"/>
         <LLHandOver ItemId="17884" RequireHq="True" NpcId="1020916" XYZ="-45.76184, -1.250005, 53.91003" QuestId="67981" StepId="5"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 6">
-        <GetTo ZoneId="133" XYZ="-33.32317, 10.30855, -249.344"/>
+        <LisbethTravel Zone="133" Position="-33.32317, 10.30855, -249.344"/>
         <LLTalkTo NpcId="1020920" XYZ="-32.02869, 10.20999, -249.1035" QuestId="67981" StepId="6"/>
       </If>
       <If Condition="HasQuest(67981) and not IsQuestCompleted(67981) and GetQuestStep(67981) == 255">
-        <GetTo ZoneId="132" XYZ="-45.06167, -1.250014, 57.76295"/>
+        <LisbethTravel Zone="132" Position="-45.06167, -1.250014, 57.76295"/>
         <LLTurnIn QuestId="67981" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
