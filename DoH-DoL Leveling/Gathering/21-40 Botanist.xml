@@ -23,26 +23,20 @@ Angles24
 		<If Condition="not IsQuestCompleted(65543)">
 			<If Condition="not HasQuest(65543)">
 				<LogMessage Message="Picking up Level 20 - Dressed to Harvest."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65543)">
 					<LLPickupQuest NpcId="1000815" QuestId="65543" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
 			</If>
 			<If Condition="not NqHasAtLeast(5599,99)">
-				<If Condition="not IsOnMap(138)">
-					<GetTo ZoneId="138" XYZ="261.1299, -22.75, 224.9563"/><!-- Aleport -->
-				</If>
-				<ExGather while="not NqHasAtLeast(5599,99)">
-					<GatherObject>Mature Tree</GatherObject>
-					<HotSpots>
-						<HotSpot Radius="90" XYZ="278.5872, -12.85054, 128.0697"/>
-					</HotSpots>
-					<Slot>0</Slot>
-				</ExGather>
+        <Lisbeth Json="[{'Group':1, 'Item':5599, 'Amount':99 ,'Enabled':true, 'Type':'Gather', 'AmountMode':'Restock'}]"/>
 			</If>
 			<If Condition="NqHasAtLeast(5599,99)">
 				<If Condition="GetQuestStep(65543) == 255">
-					<GetTo ZoneId="133" XYZ="-235.7631, 8, -147.0039"/>
+					<LisbethTravel Zone="133" Position="-235.7631, 8, -147.0039"/>
+          <If Condition="ClassName != ClassJobType.Botanist">
+		       <ChangeClass Job="Botanist"/>
+	        </If>
 					<LLTurnIn ItemId="5599" QuestId="65543" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
 					<LogMessage Message="Level 20 - Dressed to Harvest - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -58,15 +52,7 @@ Angles24
 		<!--Start Grind to Level 26-->
 		<If Condition="Core.Player.ClassLevel &lt; 26">
 			<LogMessage Message="Starting the Grind to Level 26."/>
-			<GetTo ZoneId="145" XYZ="-330.0593, -30.75064, -35.12579"/><!-- Camp Drybone -->
-			<ExGather while="Core.Player.ClassLevel &lt; 26">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="-330.0593, -30.75064, -35.12579"/>
-				</HotSpots>
-				<Slot>2</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':4835, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':26, 'ConditionalJob':'Botanist'}]"/><!-- Ala Mhigan Mustard -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 26">
 			<LogMessage Message="Congrats on Level 26, moving on."/>
@@ -80,7 +66,7 @@ Angles24
 		<If Condition="IsQuestCompleted(65543) and not IsQuestCompleted(65544)">
 			<If Condition="not HasQuest(65544)">
 				<LogMessage Message="Picking Up Level 25 - Aromatic Aspirations."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65544)">
 					<LLPickupQuest NpcId="1000815" QuestId="65544" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
@@ -89,7 +75,7 @@ Angles24
 				<Lisbeth Json="[{'Item': 5542,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 			</If>
 			<If Condition="GetQuestStep(65544) == 255">
-				<GetTo ZoneId="133" XYZ="-235.7631, 8, -147.0039"/>
+				<LisbethTravel Zone="133" Position="-235.7631, 8, -147.0039"/>
 				<LLTurnIn ItemId="5542" RequiresHq="true" QuestId="65544" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
 				<LogMessage Message="Level 25 - Aromatic Aspirations - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -104,15 +90,7 @@ Angles24
 		<!--Start Grind to Level 31-->
 		<If Condition="Core.Player.ClassLevel &lt; 31">
 			<LogMessage Message="Starting the Grind to Level 31."/>
-			<GetTo ZoneId="154" XYZ="96.47213, -33.04591, 242.6844"/><!-- Fallgourd Float -->
-			<ExGather while="Core.Player.ClassLevel &lt; 31">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="96.47213, -33.04591, 242.6844"/>
-				</HotSpots>
-				<Slot>2</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':4822, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':31, 'ConditionalJob':'Botanist'}]"/><!-- Jade Peas -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 31">
 			<LogMessage Message="Congrats on Level 31, moving on."/>
@@ -126,7 +104,7 @@ Angles24
 		<If Condition="not IsQuestCompleted(65545)">
 			<If Condition="not HasQuest(65545)">
 				<LogMessage Message="Picking Up Level 30 - What Nature Giveth."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65545)">
 					<LLPickupQuest NpcId="1000815" QuestId="65545" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
@@ -142,7 +120,7 @@ Angles24
 			</If>
 			<If Condition="HqHasAtLeast(4813,15)">
 				<If Condition="GetQuestStep(65545) == 255">
-					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn ItemId="4813" RequiresHq="true" QuestId="65545" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 					<LogMessage Message="Level 30 - What Nature Giveth - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -153,77 +131,11 @@ Angles24
 				</If>
 			</If>
 		</If>
-		<!--<If Condition="not IsQuestCompleted(65545)">
-			<If Condition="not HasQuest(65545)">
-				<LogMessage Message="Picking Up Level 30 - What Nature Giveth."/>
-				<If Condition="not IsOnMap(133)">
-					<TeleportTo Name="New Gridania" AetheryteId="2"/>
-				</If>
-				<If Condition="IsOnMap(132)">
-					<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772"/>
-				</If>
-				<If Condition="IsOnMap(133)">
-					<MoveTo Name="Fufucha" Distance="1" UseMesh="True" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<If Condition="IsQuestAcceptQualified(65545)">
-						<LLPickupQuest NpcId="1000815" QuestId="65545" XYZ="-232.9017, 6.263501, -169.7613"/>
-					</If>
-				</If>
-			</If>
-			<If Condition="GetQuestStep(65545) == 1">
-				<If Condition="not IsOnMap(148)">
-					<TeleportTo Name="Bentbranch Meadows" AetheryteId="3"/>
-				</If>
-				<LLTalkTo InteractDistance="3.0" NpcId="1000129" XYZ="-45.41326, 0.551909, -29.84514"/>
-			</If>
-			<If Condition="not HqHasAtLeast(4813,15)">
-				<If Condition="not IsOnMap(153)">
-					<GetTo ZoneId="153" XYZ="181.2881, 8.417254, -63.92673"/>
-				</If>
-				<Gather while="not HqHasAtLeast(4813,15)">
-					<GatherObject>Mature Tree</GatherObject>
-					<HotSpots>
-						<HotSpot Radius="90" XYZ="253.4341, 15.48578, -126.8392"/>
-					</HotSpots>
-					<Slot>1</Slot>
-					<GatheringSkillOrder>
-						<GatheringSkill SpellName="Leaf Turn" TimesToCast="1"/>
-					</GatheringSkillOrder>
-				</Gather>
-			</If>
-			<If Condition="HqHasAtLeast(4813,15)">
-				<If Condition="GetQuestStep(65545) == 255">
-					<If Condition="not IsOnMap(133)">
-						<TeleportTo Name="New Gridania" AetheryteId="2"/>
-					</If>
-					<If Condition="IsOnMap(132)">
-						<MoveTo Name="Old Gridania" Distance="0" XYZ="13.86192, 1.113221, -16.00772"/>
-					</If>
-					<If Condition="IsOnMap(133)">
-						<LLTurnIn ItemId="4813" RequiresHq="true" QuestId="65545" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
-						<LogMessage Message="Level 30 - What Nature Giveth - Completed."/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="AutoEquip"/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="UpdateGearSet"/>
-						<WaitTimer WaitTime="2"/>
-					</If>
-				</If>
-			</If>
-		</If>-->
-		<!--End What Nature Giveth-->
 
 		<!--Start Grind to Level 36-->
 		<If Condition="Core.Player.ClassLevel &lt; 36">
 			<LogMessage Message="Starting the Grind to Level 36."/>
-			<GetTo ZoneId="134" XYZ="-219.4212, 14.04899, -384.9479"/><!-- Summerford Farms -->
-			<ExGather while="Core.Player.ClassLevel &lt; 36">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="-219.4212, 14.04899, -384.9479"/>
-				</HotSpots>
-				<Slot>5</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5815, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':36, 'ConditionalJob':'Botanist'}]"/><!-- Red Pigment -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 36">
 			<LogMessage Message="Congrats on Level 36, moving on."/>
@@ -237,7 +149,7 @@ Angles24
 		<If Condition="IsQuestCompleted(65545) and not IsQuestCompleted(65546)">
 			<If Condition="not HasQuest(65546)">
 				<LogMessage Message="Picking Up Level 35 - A Feast to Say the Least."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65546)">
 					<LLPickupQuest NpcId="1000815" QuestId="65546" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
@@ -247,16 +159,16 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(65546) == 1">
 				<If Condition="HqHasAtLeast(4839,20)">
-					<GetTo ZoneId="133" XYZ="-233.54, 6.246956, -170.5644"/>
+					<LisbethTravel Zone="133" Position="-233.54, 6.246956, -170.5644"/>
 					<LLHandOver ItemId="4839" RequiresHq="true" QuestId="65546" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65546) == 2">
-				<GetTo ZoneId="133" XYZ="-297.4848, 7.373582, -168.8218"/>
+				<LisbethTravel Zone="133" Position="-297.4848, 7.373582, -168.8218"/>
 				<LLHandOver ItemId="4839" RequiresHq="true" QuestId="65546" StepId="2" NpcId="1000774" InteractDistance="1.0" XYZ="-297.4848, 7.373582, -168.8218"/>
 			</If>
 			<If Condition="GetQuestStep(65546) == 255">
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<LLTurnIn QuestId="65546" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 				<LogMessage Message="Level 35 - A Feast to Say the Least - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -270,16 +182,8 @@ Angles24
 
 		<!--Start Grind to Level 40-->
 		<If Condition="Core.Player.ClassLevel &lt; 40">
-			<LogMessage Message="Starting the Grind to Level 41."/>
-			<GetTo ZoneId="137" XYZ="-19.13964, 41.59203, 373.395"/><!-- Wineport -->
-			<ExGather while="Core.Player.ClassLevel &lt; 41">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="60" XYZ="-19.13964, 41.59203, 373.395"/>
-				</HotSpots>
-				<Slot>2</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<LogMessage Message="Starting the Grind to Level 40."/>
+			<Lisbeth Json="[{'Group':0, 'Item':4840, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':40, 'ConditionalJob':'Botanist'}]"/><!-- Mugwort -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 40">
 			<LogMessage Message="Congrats on Level 40, moving on."/>

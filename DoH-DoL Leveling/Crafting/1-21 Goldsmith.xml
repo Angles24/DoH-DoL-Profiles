@@ -26,7 +26,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 1 Quest -->
 	<!-- My First Chaser Hammer (Level 1) -->
       <If Condition="IsQuestCompleted(66144) and not HasQuest(66146) and not IsQuestCompleted(66146)">
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66146)">
           <LLPickupQuest QuestId="66146" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         </If>
@@ -35,7 +35,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not HasItem(5062)">
           <Lisbeth Json="[{'Item': 5062,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66146" ItemId="5062" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -51,7 +51,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 5 Quest -->
 	<!-- Gorgets Rising (Level 5) -->
       <If Condition="IsQuestCompleted(66146) and not HasQuest(66147) and not IsQuestCompleted(66147) and Core.Player.ClassLevel &gt; 4">
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66147)">
           <LLPickupQuest QuestId="66147" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         </If>
@@ -60,7 +60,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not (HqHasAtLeast(4305, 3) or NqHasAtLeast(4305, 3))">
           <Lisbeth Json="[{'Item': 4305,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66147" ItemIds="4305, 4305, 4305" AllowHq="True, True, True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -76,7 +76,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 10 Quest -->
 	<!-- Throw Some Rings on It (Level 10) -->
       <If Condition="IsQuestCompleted(66147) and not HasQuest(66149) and not IsQuestCompleted(66149) and Core.Player.ClassLevel &gt; 9">
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66149)">
           <LLPickupQuest QuestId="66149" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         </If>
@@ -85,15 +85,15 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not (HqHasAtLeast(5086, 12) or NqHasAtLeast(5086, 12))">
           <Lisbeth Json="[{'Item': 5086,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': true,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLHandOver ItemId="5086" AllowHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" QuestId="66149" StepId="1"/>
       </If>
       <If Condition="HasQuest(66149) and not IsQuestCompleted(66149) and GetQuestStep(66149) == 2">
-        <GetTo ZoneId="131" XYZ="-22.17145, 14, 73.28906"/>
+        <LisbethTravel Zone="131" Position="-22.17145, 14, 73.28906"/>
         <LLHandOver ItemId="5086" AllowHq="True" NpcId="1004097" XYZ="-22.17145, 14, 73.28906" QuestId="66149" StepId="2"/>
       </If>
       <If Condition="HasQuest(66149) and not IsQuestCompleted(66149) and GetQuestStep(66149) == 255">
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66149" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
@@ -112,7 +112,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 15 Quest -->
 	<!-- Objectively Speaking (Level 15) -->
       <If Condition="IsQuestCompleted(66149) and not HasQuest(66150) and not IsQuestCompleted(66150) and Core.Player.ClassLevel &gt; 14">
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66150)">
           <LLPickupQuest QuestId="66150" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         </If>
@@ -124,15 +124,15 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not HasItem(4309)">
           <Lisbeth Json="[{'Item': 4309,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLHandOver ItemIds="4204, 4309" AllowHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" QuestId="66150" StepId="1"/>
       </If>
       <If Condition="HasQuest(66150) and not IsQuestCompleted(66150) and GetQuestStep(66150) == 2">
-        <GetTo ZoneId="131" XYZ="-22.17145, 14, 73.28906"/>
+        <LisbethTravel Zone="131" Position="-22.17145, 14, 73.28906"/>
         <LLHandOver ItemIds="4204, 4309" AllowHq="True" NpcId="1004097" XYZ="-22.17145, 14, 73.28906" QuestId="66150" StepId="2"/>
       </If>
       <If Condition="HasQuest(66150) and not IsQuestCompleted(66150) and GetQuestStep(66150) == 255">
-        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66150" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>

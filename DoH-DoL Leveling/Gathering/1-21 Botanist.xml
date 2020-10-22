@@ -23,7 +23,7 @@ Angles24
 		<If Condition="not IsQuestCompleted(65744)">
 			<If Condition="not HasQuest(65744)">
 				<LogMessage Message="Picking up Level 1 - My First Hatchet."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65744)">
 					<LLPickupQuest NpcId="1000815" QuestId="65744" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
@@ -33,7 +33,7 @@ Angles24
 					<Lisbeth Json="[{'Item': 5509,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 				</While>
 				<If Condition="NqHasAtLeast(5509,10)">
-					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn ItemId="5509" QuestId="65744" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LogMessage Message="Level 1 - My First Hatchet - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -49,15 +49,7 @@ Angles24
 		<!--Start - Grind to Level 6-->
 		<If Condition="Core.Player.ClassLevel &lt; 6">
 			<LogMessage Message="Starting the Grind to Level 6."/>
-			<GetTo ZoneId="148" XYZ="61.03972, 4.745368, -179.8398"/>
-			<ExGather while="Core.Player.ClassLevel &lt; 6">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="61.03972, 4.745368, -179.8398"/>
-				</HotSpots>
-				<Slot>3</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5509, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':6, 'ConditionalJob':'Botanist'}]"/><!-- Latex -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 6">
 			<LogMessage Message="Congrats on Level 6, moving on."/>
@@ -71,7 +63,7 @@ Angles24
 		<If Condition="IsQuestCompleted(65744) and not IsQuestCompleted(65540)">
 			<If Condition="not HasQuest(65540)">
 				<LogMessage Message="Picking up Level 5 - Sap for Smiles."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65540)">
 					<LLPickupQuest NpcId="1000815" QuestId="65540" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
@@ -81,7 +73,7 @@ Angles24
 					<Lisbeth Json="[{'Item': 5498,'Group': 0,'Amount': 25,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 				</While>
 				<If Condition="NqHasAtLeast(5498,50)">
-					<GetTo ZoneId="133" XYZ="-236.451, 8.000312, -155.7238"/>
+					<LisbethTravel Zone="133" Position="-236.451, 8.000312, -155.7238"/>
 					<LLTurnIn ItemId="5498" QuestId="65540" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
 					<LogMessage Message="Level 5 - Sap for Smiles - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -97,15 +89,7 @@ Angles24
 		<!--Start Grind to Level 11-->
 		<If Condition="Core.Player.ClassLevel &lt; 11">
 			<LogMessage Message="Starting the Grind to Level 11"/>
-			<GetTo ZoneId="148" XYZ="243.2079, -12.19825, -55.7188"/><!-- Bentbranch Meadows -->
-			<ExGather while="Core.Player.ClassLevel &lt; 11">
-				<GatherObject>Mature Tree</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="243.2079, -12.19825, -55.7188"/>
-				</HotSpots>
-				<Slot>7</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5534, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':11, 'ConditionalJob':'Botanist'}]"/><!-- Tinolqa Mistletoe -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 11">
 			<LogMessage Message="Congrats on Level 11, moving on."/>
@@ -119,7 +103,7 @@ Angles24
 		<If Condition="IsQuestCompleted(65540) and not IsQuestCompleted(65541)">
 			<If Condition="not HasQuest(65541)">
 				<LogMessage Message="Picking up Level 10 - Weapons of a Feather."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<If Condition="IsQuestAcceptQualified(65541)">
 						<LLPickupQuest NpcId="1000815" QuestId="65541" XYZ="-232.9017, 6.263501, -169.7613"/>
 					</If>
@@ -129,11 +113,9 @@ Angles24
 			</While>
 			<If Condition="NqHasAtLeast(5352,99)">
 				<If Condition="GetQuestStep(65541) == 255">
-					<GetTo ZoneId="133" XYZ="-236.451, 8.000312, -155.7238"/>
+					<LisbethTravel Zone="133" Position="-236.451, 8.000312, -155.7238"/>
 						<LLTurnIn ItemId="5352" QuestId="65541" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
 						<LogMessage Message="Level 10 - Weapons of a Feather - Completed."/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="BTNWeapon2"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
@@ -147,15 +129,7 @@ Angles24
 		<!--Start Grind to Level 16-->
 		<If Condition="Core.Player.ClassLevel &lt; 16">
 			<LogMessage Message="Starting the Grind to Level 16."/>
-			<GetTo ZoneId="148" XYZ="40.93684, -8.794018, 114.2742"/><!-- Bentbranch Meadows -->
-			<ExGather while="Core.Player.ClassLevel &lt; 16">
-				<GatherObject>Lush Vegetation Patch</GatherObject>
-				<HotSpots>
-					<HotSpot Radius="95" XYZ="40.93684, -8.794018, 114.2742"/>
-				</HotSpots>
-				<Slot>3</Slot>
-				<GatherRotation>Chance</GatherRotation>
-			</ExGather>
+			<Lisbeth Json="[{'Group':0, 'Item':5343, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':16, 'ConditionalJob':'Botanist'}]"/><!-- Cotton Boll -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 16">
 			<LogMessage Message="Congrats on Level 16, moving on."/>
@@ -169,13 +143,13 @@ Angles24
 		<If Condition="IsQuestCompleted(65541) and not IsQuestCompleted(65542)">
 			<If Condition="not HasQuest(65542)">
 				<LogMessage Message="Picking up Level 15 - Haste Makes Waste."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65542)">
 					<LLPickupQuest NpcId="1000815" QuestId="65542" XYZ="-232.9017, 6.263501, -169.7613"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65542) == 1">
-				<GetTo ZoneId="133" XYZ="167.8746, 15.69992, -117.8252"/>
+				<LisbethTravel Zone="133" Position="167.8746, 15.69992, -117.8252"/>
 				<LLTalkTo InteractDistance="3.0" NpcId="1000239" XYZ="167.8746, 15.69992, -117.8252"/>
 			</If>
 			<If Condition="GetQuestStep(65542) == 2">
@@ -184,11 +158,11 @@ Angles24
 				</While>
 			</If>
 			<If Condition="GetQuestStep(65542) == 2">
-				<GetTo ZoneId="133" XYZ="167.8746, 15.69992, -117.8252"/>
+				<LisbethTravel Zone="133" Position="167.8746, 15.69992, -117.8252"/>
 				<LLHandOver ItemId="4832" RequiresHq="true" QuestId="65542" StepId="2" NpcId="1000239" InteractDistance="2.0" XYZ="167.8746, 15.69992, -117.8252"/>
 			</If>
 			<If Condition="GetQuestStep(65542) == 255">
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<LLTurnIn QuestId="65542" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<LogMessage Message="Level 15 - Haste Makes Waste - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -203,7 +177,7 @@ Angles24
 		<!--Start Grind to Level 21-->
 		<If Condition="Core.Player.ClassLevel &lt; 21">
 			<LogMessage Message="Starting the Grind to Level 21."/>
-			<Lisbeth Json="[{'Group':0, 'Item':4834, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Botanist'}]"/>
+			<Lisbeth Json="[{'Group':0, 'Item':4834, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':21, 'ConditionalJob':'Botanist'}]"/><!-- Galago Mint -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 21">
 			<LogMessage Message="Congrats on Level 21, moving on."/>

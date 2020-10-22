@@ -16,26 +16,26 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 		<LLStopBot/>
 	</If>
 		<If Condition="IsQuestCompleted(67783) and not HasQuest(69208) and not IsQuestCompleted(69208)"><!-- Pickup Firmament Quest -->
-			<GetTo ZoneId="418" XYZ="-73.0267, 9.244665, 17.78088"/>
+			<LisbethTravel Zone="418" Position="-73.0267, 9.244665, 17.78088"/>
 			<RunCode Name="SwitchCombatJob"/>
 			<If Condition="IsQuestAcceptQualified(69208)">
 				<LLPickupQuest NpcId="2010850" QuestId="69208" XYZ="-73.0267, 9.244665, 17.78088"/>
 			</If>
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 1"><!-- Talk to Thomelin -->
-			<GetTo ZoneId="418" XYZ="151.4828, -20, 63.83766"/>
+			<LisbethTravel Zone="418" Position="151.4828, -20, 63.83766"/>
 			<LLTalkTo NpcId="1031682" XYZ="151.4828, -20, 63.83766" QuestId="69208" StepId="1"/>
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 2"><!-- Wait for passerby @ Jewel Crozier -->
-			<GetTo ZoneId="419" XYZ="-141.4035, -12.63491, -32.7417"/>
+			<LisbethTravel Zone="419" Position="-141.4035, -12.63491, -32.7417"/>
 			<UseTransport NpcId="2010920" XYZ="-141.4035, -12.63491, -32.7417" QuestId="69208" StepId="2"/>
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 3"><!-- Talk to Francel -->
-			<GetTo ZoneId="419" XYZ="-140.007, -12.63491, -33.14103"/>
+			<LisbethTravel Zone="419" Position="-140.007, -12.63491, -33.14103"/>
 			<LLTalkTo NpcId="1031989" XYZ="-140.007, -12.63491, -33.14103" QuestId="69208" StepId="3"/>
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 4"><!-- LLHandOver mulled wine to Thomelin -->
-			<GetTo ZoneId="418" XYZ="151.4828, -20, 63.83766"/>
+			<LisbethTravel Zone="418" Position="151.4828, -20, 63.83766"/>
 			<LLHandOver ItemId="2002954" QuestId="69208" StepId="4" NpcId="1031682" XYZ="151.4828, -20, 63.83766"/>
 			<WaitTimer WaitTime="10"/>
 		</If>
