@@ -74,8 +74,6 @@ Angles24
 				<LLSmallTalk/>
 				<LogMessage Message="Level 63 - Thick Skin - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -171,8 +169,6 @@ Angles24
 				<LLSmallTalk/>
 				<LogMessage Message="Level 65 - Pedal to the Metal - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -235,8 +231,6 @@ Angles24
 					<LisbethTravel Zone="478" Position="-19.1375, 211.2449, -29.66669"/>
 					<LLTurnIn ItemIds="17943" RequiresHq="True" NpcId="1013713" XYZ="-19.1375, 211.2449, -29.66669" QuestId="68093" StepId="2"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -262,8 +256,6 @@ Angles24
 				<LLTurnIn QuestId="68093" NpcId="1019863" XYZ="54.71909, 207.3399, -7.805041"/>
 				<LLSmallTalk/>
 				<LogMessage Message="Level 68 - Where the Money Takes You - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -336,8 +328,6 @@ Angles24
 				<LLSmallTalk/>
 				<LogMessage Message="Level 70 - A Miner Success - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -351,11 +341,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="MINWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);

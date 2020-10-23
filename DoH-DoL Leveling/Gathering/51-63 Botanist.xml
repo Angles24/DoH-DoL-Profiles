@@ -42,8 +42,6 @@ Angles24
 				<LLSmallTalk/>
 				<WaitTimer WaitTime="2"/>
 				<LogMessage Message="Level 50 - Call From The Clouds - Completed."/>
-			    <WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -121,8 +119,6 @@ Angles24
 					<LLTurnIn ItemId="12878" RequiresHq="true" QuestId="67585" StepId="2" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -133,8 +129,6 @@ Angles24
 				<LLSmallTalk/>
 				<WaitTimer WaitTime="2"/>
 				<LogMessage Message="Level 53 - Onions Of Life Bestowing - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -201,8 +195,6 @@ Angles24
 					<LLTurnIn ItemId="12879" RequiresHq="true" QuestId="67586" StepId="5" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -212,8 +204,6 @@ Angles24
 				<LLTurnIn RewardSlot="0" QuestId="67586" NpcId="1013240" XYZ="-84.45868, 8.05915, 37.12512"/>
 				<LLSmallTalk/>
 				<LogMessage Message="Level 55 - Two Nations, One Seed - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -270,8 +260,6 @@ Angles24
 					<LLTurnIn ItemId="12579" RequiresHq="true" QuestId="67587" StepId="3" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -281,8 +269,6 @@ Angles24
 				<LLTurnIn RewardSlot="0" QuestId="67587" NpcId="1013240" XYZ="-84.45868, 8.05915, 37.12512"/>
 				<LLSmallTalk/>
 				<LogMessage Message="Level 58 - Love For Harmony - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -361,8 +347,6 @@ Angles24
 				<WaitTimer WaitTime="2"/>
 				<LogMessage Message="Level 60 - Seeds Know No Borders - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -389,8 +373,6 @@ Angles24
 				<LLTurnIn QuestId="68156" NpcId="1021349" XYZ="-44.56588, 209.2288, -90.81387"/>
 				<LLSmallTalk/>
 				<LogMessage Message="Level 40 - Crisis of Faith - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -432,11 +414,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);

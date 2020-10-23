@@ -39,8 +39,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66071" ItemId="5333" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -66,8 +64,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66123" ItemIds="3274, 3274, 3274" AllowHq="True" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -93,8 +89,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn QuestId="66125" ItemId="5324" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -131,8 +125,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="157.3662, 7.792007, 98.92419"/>
         <LLTurnIn ItemIds="2670,3322" AllowHq="True" QuestId="66126" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -162,11 +154,4 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
-	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
-	</CodeChunks>
 </Profile>

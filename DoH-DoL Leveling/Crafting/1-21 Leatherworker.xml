@@ -39,8 +39,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65745" ItemId="5275" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -66,8 +64,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -96,8 +92,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65671" ItemId="5276" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -131,8 +125,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="59.30462, 8, -141.0205"/>
         <LLTurnIn QuestId="65672" NpcId="1000681" XYZ="58.73193, 7.980469, -138.5672" Emote="kneel"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -161,11 +153,4 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
-	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
-	</CodeChunks>
 </Profile>

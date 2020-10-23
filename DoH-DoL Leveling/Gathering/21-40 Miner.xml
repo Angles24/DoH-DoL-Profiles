@@ -44,8 +44,6 @@ Angles24
 					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk/>
 					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed."/>
-					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -86,8 +84,6 @@ Angles24
 					<LLTurnIn ItemId="5491" QuestId="66141" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk/>
 					<LogMessage Message="Level 25 - Water From Stone - Completed."/>
-					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -144,8 +140,6 @@ Angles24
 				<LLSmallTalk/>
 				<LogMessage Message="Level 30 - Obsidian Race - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -188,8 +182,6 @@ Angles24
 					<LLTurnIn ItemId="5138" QuestId="66179" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 					<LLSmallTalk/>
 					<LogMessage Message="Level 35 - Amethysts Are Forever - Completed."/>
-					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -218,11 +210,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="MINWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);

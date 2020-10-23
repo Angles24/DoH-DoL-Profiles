@@ -40,8 +40,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LLTurnIn QuestId="65741" ItemId="5361" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk/>
 		<WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
-		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
 	
@@ -66,8 +64,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65675" ItemIds="2219, 2219, 2219" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -93,8 +89,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65676" ItemId="5364" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -138,8 +132,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="132" Position="-44.87683, -1.250002, 56.83984"/>
         <LLTurnIn QuestId="65677" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -164,11 +156,4 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
-	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
-	</CodeChunks>
 </Profile>

@@ -39,8 +39,6 @@ Angles24
 					<LLSmallTalk/>
 					<LogMessage Message="Level 1 - My First Hatchet - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -81,8 +79,6 @@ Angles24
 					<LLSmallTalk/>
 					<LogMessage Message="Level 5 - Sap for Smiles - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -122,8 +118,6 @@ Angles24
 						<LLTurnIn ItemId="5352" QuestId="65541" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
 						<LLSmallTalk/>
 						<LogMessage Message="Level 10 - Weapons of a Feather - Completed."/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="5"/>
@@ -176,8 +170,6 @@ Angles24
 				<LLSmallTalk/>
 				<LogMessage Message="Level 15 - Haste Makes Waste - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -204,11 +196,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);

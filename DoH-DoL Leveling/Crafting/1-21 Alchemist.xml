@@ -39,8 +39,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66113" ItemId="5487" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -66,8 +64,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66114" ItemId="4564" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -93,8 +89,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66116" ItemId="5515" NpcId="1002299" Nq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -133,8 +127,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -162,11 +154,4 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
-	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
-	</CodeChunks>
 </Profile>

@@ -31,8 +31,6 @@ Angles24
 	</If>
 	
 	<WaitTimer WaitTime="2"/>
-	<RunCode Name="SmallTalk"/>
-	<WaitTimer WaitTime="2"/>
 	<RunCode Name="Disable_Flight"/>
 	<WaitTimer WaitTime="2"/>
 	
@@ -45,7 +43,7 @@ Angles24
       <If Condition="IsQuestCompleted(66150) and not HasQuest(66151) and not IsQuestCompleted(66151) and Core.Player.ClassLevel &gt; 19">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66151)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="66151" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -63,8 +61,6 @@ Angles24
 		</If>
         <LLTurnIn QuestId="66151" ItemId="2111" NpcId="1004093" AllowHq="True" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -72,7 +68,7 @@ Angles24
       <If Condition="IsQuestCompleted(66151) and not HasQuest(66152) and not IsQuestCompleted(66152) and Core.Player.ClassLevel &gt; 24">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66152)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="66152" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -84,8 +80,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66152" ItemId="5064" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -93,7 +87,7 @@ Angles24
       <If Condition="IsQuestCompleted(66152) and not HasQuest(66153) and not IsQuestCompleted(66153) and Core.Player.ClassLevel &gt; 29">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66153)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="66153" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -118,8 +112,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn ItemId="2000509" QuestId="66153" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -127,7 +119,7 @@ Angles24
       <If Condition="IsQuestCompleted(66153) and not HasQuest(66191) and not IsQuestCompleted(66191) and Core.Player.ClassLevel &gt; 34">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66191)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="66191" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -139,8 +131,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66191" ItemId="2078" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -148,7 +138,7 @@ Angles24
       <If Condition="IsQuestCompleted(66191) and not HasQuest(66192) and not IsQuestCompleted(66192) and Core.Player.ClassLevel &gt; 39">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66192)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="66192" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -173,8 +163,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66192" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -182,7 +170,7 @@ Angles24
       <If Condition="IsQuestCompleted(66192) and not HasQuest(66193) and not IsQuestCompleted(66193) and Core.Player.ClassLevel &gt; 44">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66193)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="66193" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -224,8 +212,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <LLTurnIn QuestId="66193" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -233,7 +219,7 @@ Angles24
       <If Condition="IsQuestCompleted(66193) and not HasQuest(66194) and not IsQuestCompleted(66194) and Core.Player.ClassLevel &gt; 49">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(66194)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="66194" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -267,8 +253,6 @@ Angles24
 		
         <LLTurnIn QuestId="66194" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -276,7 +260,7 @@ Angles24
       <If Condition="IsQuestCompleted(66194) and not HasQuest(67606) and not IsQuestCompleted(67606) and Core.Player.ClassLevel &gt; 49">
         <LisbethTravel Zone="131" Position="-25.16223, 12.2, 110.7957"/>
         <If Condition="IsQuestAcceptQualified(67606)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="67606" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -303,8 +287,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <LLTurnIn NpcId="1012528" QuestId="67606" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -312,7 +294,7 @@ Angles24
       <If Condition="IsQuestCompleted(67606) and not HasQuest(67607) and not IsQuestCompleted(67607) and Core.Player.ClassLevel &gt; 52">
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <If Condition="IsQuestAcceptQualified(67607)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="67607" NpcId="1012528" XYZ="-57.406, 18.5041, 66.5633"/>
           <LLSmallTalk/>
         </If>
@@ -334,8 +316,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <LLTurnIn NpcId="1012528" ItemId="11068" QuestId="67607" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -343,7 +323,7 @@ Angles24
       <If Condition="IsQuestCompleted(67607) and not HasQuest(67608) and not IsQuestCompleted(67608) and Core.Player.ClassLevel &gt; 54">
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <If Condition="IsQuestAcceptQualified(67608)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="67608" NpcId="1012528" XYZ="-57.406, 18.5041, 66.5633"/>
           <LLSmallTalk/>
         </If>
@@ -375,8 +355,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <LLTurnIn NpcId="1012528" ItemId="2001722" QuestId="67608" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -384,7 +362,7 @@ Angles24
       <If Condition="IsQuestCompleted(67608) and not HasQuest(67609) and not IsQuestCompleted(67609) and Core.Player.ClassLevel &gt; 57">
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <If Condition="IsQuestAcceptQualified(67609)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="67609" NpcId="1012528" XYZ="-57.406, 18.5041, 66.5633"/>
           <LLSmallTalk/>
         </If>
@@ -411,8 +389,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <LLTurnIn NpcId="1012528" QuestId="67609" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -420,7 +396,7 @@ Angles24
       <If Condition="IsQuestCompleted(67609) and not HasQuest(67610) and not IsQuestCompleted(67610) and Core.Player.ClassLevel &gt; 59">
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <If Condition="IsQuestAcceptQualified(67610)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="67610" NpcId="1012528" XYZ="-57.406, 18.5041, 66.5633"/>
           <LLSmallTalk/>
         </If>
@@ -450,8 +426,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-57.406, 18.5041, 66.5633"/>
         <LLTurnIn NpcId="1012528" QuestId="67610" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -459,7 +433,7 @@ Angles24
       <If Condition="IsQuestCompleted(67610) and not HasQuest(68135) and not IsQuestCompleted(68135) and Core.Player.ClassLevel &gt; 59">
         <LisbethTravel Zone="131" Position="-25.57596, 12.2, 110.1033"/>
         <If Condition="IsQuestAcceptQualified(68135)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="68135" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
           <LLSmallTalk/>
         </If>
@@ -488,8 +462,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-33.10773, 13.59999, 98.55938"/>
         <LLTurnIn QuestId="68135" NpcId="1002280" XYZ="-35.38574, 13.59997, 97.24573"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -497,7 +469,7 @@ Angles24
       <If Condition="IsQuestCompleted(68135) and not HasQuest(68136) and not IsQuestCompleted(68136) and Core.Player.ClassLevel &gt; 62">
         <LisbethTravel Zone="131" Position="-33.10773, 13.59999, 98.55938"/>
         <If Condition="IsQuestAcceptQualified(68136)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="68136" NpcId="1002280" XYZ="-35.38574, 13.59997, 97.24573"/>
           <LLSmallTalk/>
         </If>
@@ -546,8 +518,6 @@ Angles24
         <LisbethTravel Zone="635" Position="-76.9677, 0.01000077, 46.56393"/>
         <LLTurnIn ItemIds="17902" QuestId="68136" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -555,7 +525,7 @@ Angles24
       <If Condition="IsQuestCompleted(68136) and not HasQuest(68137) and not IsQuestCompleted(68137) and Core.Player.ClassLevel &gt; 64">
         <LisbethTravel Zone="635" Position="-76.9677, 0.01000077, 46.56393"/>
         <If Condition="IsQuestAcceptQualified(68137)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="68137" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
           <LLSmallTalk/>
         </If>
@@ -599,8 +569,6 @@ Angles24
         <LisbethTravel Zone="635" Position="-77.05145, 0.01000082, 46.10489"/>
         <LLTurnIn ItemIds="17904" QuestId="68137" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -608,7 +576,7 @@ Angles24
       <If Condition="IsQuestCompleted(68137) and not HasQuest(68138) and not IsQuestCompleted(68138) and Core.Player.ClassLevel &gt; 67">
         <LisbethTravel Zone="635" Position="-77.05145, 0.01000082, 46.10489"/>
         <If Condition="IsQuestAcceptQualified(68138)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="68138" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
           <LLSmallTalk/>
         </If>
@@ -661,8 +629,6 @@ Angles24
         <LisbethTravel Zone="635" Position="-76.95066, 0.01000094, 45.4845"/>
         <LLTurnIn ItemIds="17906" QuestId="68138" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -670,7 +636,7 @@ Angles24
       <If Condition="IsQuestCompleted(68138) and not HasQuest(68139) and not IsQuestCompleted(68139) and Core.Player.ClassLevel &gt; 69">
         <LisbethTravel Zone="635" Position="-76.95066, 0.01000094, 45.4845"/>
         <If Condition="IsQuestAcceptQualified(68139)">
-		<RunCode Name="SmallTalk"/>
+		      <LLSmallTalk/>
           <LLPickupQuest QuestId="68139" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
           <LLSmallTalk/>
         </If>
@@ -719,8 +685,6 @@ Angles24
         <LisbethTravel Zone="131" Position="-38.23554, 13.5, 111.0385"/>
         <LLTurnIn QuestId="68139" NpcId="1021158" XYZ="-38.65112, 13.5, 111.4366"/>
         <LLSmallTalk/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>

@@ -42,8 +42,6 @@ Angles24
 					<LLSmallTalk/>
 					<LogMessage Message="Level 20 - Dressed to Harvest - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -82,8 +80,6 @@ Angles24
 				<LLTurnIn ItemId="5542" RequiresHq="true" QuestId="65544" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
 				<LLSmallTalk/>
 				<LogMessage Message="Level 25 - Aromatic Aspirations - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
@@ -130,8 +126,6 @@ Angles24
 					<LLTurnIn ItemId="4813" RequiresHq="true" QuestId="65545" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 					<LLSmallTalk/>
 					<LogMessage Message="Level 30 - What Nature Giveth - Completed."/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
@@ -183,8 +177,6 @@ Angles24
 				<LLSmallTalk/>
 				<LogMessage Message="Level 35 - A Feast to Say the Least - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -211,11 +203,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);

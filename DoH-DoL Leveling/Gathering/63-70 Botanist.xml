@@ -69,8 +69,6 @@ Angles24
 				<LLSmallTalk/>
 				<LogMessage Message="Level 63 - You Say Popoto, I Say.... - Completed"/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -172,8 +170,6 @@ Angles24
 					<LLSmallTalk/>
 					<LogMessage Message="Level 65 - Walking for Walker's - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -264,8 +260,6 @@ Angles24
 				<LLTurnIn ItemIds="2002168" QuestId="68159" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<LLSmallTalk/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
@@ -345,8 +339,6 @@ Angles24
 					<LLSmallTalk/>
 					<LogMessage Message="Level 70 - Edgyth's Winning Streak - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="5"/>
 				</If>
@@ -361,11 +353,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);

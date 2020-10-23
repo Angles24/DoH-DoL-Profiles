@@ -109,8 +109,6 @@ Angles24
 					<LLTurnIn ItemId="4870" QuestId="66644" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 				</If>
@@ -219,8 +217,6 @@ Angles24
 						<LLTurnIn ItemId="4874" QuestId="66645" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
@@ -283,8 +279,6 @@ Angles24
 						<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 						<LLTurnIn ItemId="4930" RequiresHq="true" QuestId="66646" StepId="255" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<LLSmallTalk/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
@@ -438,8 +432,6 @@ Angles24
 					<LLTurnIn QuestId="66647" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
@@ -506,8 +498,6 @@ Angles24
 						<LisbethTravel Zone="129" Position="-185.8396, 4, 169.604"/>
 						<LLTurnIn ItemId="4955" QuestId="66648" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
 						<LLSmallTalk/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
@@ -639,8 +629,6 @@ Angles24
 						<LLTurnIn ItemId="4963" QuestId="66649" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
@@ -731,8 +719,6 @@ Angles24
 					<LLTurnIn QuestId="66650" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
@@ -807,8 +793,6 @@ Angles24
 						<LLTurnIn ItemId="5033" QuestId="66651" StepId="255" NpcId="1003628" XYZ="-184.7715, 4, 169.2683"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
@@ -878,8 +862,6 @@ Angles24
 						<LisbethTravel Zone="129" Position="-171.8929, 4, 175.3108"/>
 						<LLTurnIn ItemId="4905" QuestId="66652" NpcId="1003629" XYZ="-171.8929, 4, 175.3108"/>
 						<LLSmallTalk/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
@@ -1021,8 +1003,6 @@ Angles24
 						<LLTurnIn ItemId="5040" QuestId="66653" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
@@ -1106,8 +1086,6 @@ Angles24
 						<LLTurnIn ItemId="4917" QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
             <AutoInventoryEquip/>
 					</If>
 				</If>
@@ -1116,8 +1094,6 @@ Angles24
 					<NoCombatMoveTo Name="Sisipu" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLTurnIn QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
@@ -1156,8 +1132,6 @@ Angles24
 					<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 					<LLTurnIn QuestId="67621" NpcId="1013250" ItemId="2001886" XYZ="100.3585, 15.00001, 24.3075"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
@@ -1291,8 +1265,6 @@ Angles24
 						<LLTurnIn ItemId="12713" RequiresHq="true" QuestId="67622" NpcId="1013252" XYZ="459.6169, 200.2377, 665.8884"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
@@ -1374,16 +1346,12 @@ Angles24
 						<LLTurnIn ItemId="12769" RequiresHq="true" StepId="3" QuestId="67623" NpcId="1013254" XYZ="523.6133, -51.424, 62.54675"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 					</If>
 				</If>
 				<If Condition="GetQuestStep(67623) == 255">
 					<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 					<LLTurnIn QuestId="67623" StepId="255" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
@@ -1475,16 +1443,12 @@ Angles24
 						<LLTurnIn ItemId="12793" RequiresHq="true" StepId="4" QuestId="67624" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 					</If>
 				</If>
 				<If Condition="GetQuestStep(67624) == 255">
 					<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 					<LLTurnIn ItemId="12793" RequiresHq="true" StepId="255" QuestId="67624" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
@@ -1578,8 +1542,6 @@ Angles24
 						<LLTurnIn ItemId="12829" RequiresHq="true" StepId="255" QuestId="67625" NpcId="1013830" XYZ="400.7477, -123.263, 674.9523"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Dismount"/>
@@ -1627,8 +1589,6 @@ Angles24
 					<LLTurnIn ItemId="12829" StepId="255" QuestId="68431" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
 					<RunCode Name="Dismount"/>
@@ -1664,8 +1624,6 @@ Angles24
 			<NoCombatMoveTo XYZ="294.1786, -98.43597, -413.3516"/>
 			<LLTurnIn QuestId="68458" NpcId="1023621" XYZ="294.1786, -98.43597, -413.3516"/>
 			<LLSmallTalk/>
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="SmallTalk"/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="2"/>
@@ -1733,16 +1691,12 @@ Angles24
 						<LLHandOver ItemId="17949" StepId="2" QuestId="68432" NpcId="1021396" XYZ="-229.7856, 60.06992, -635.7367"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 					</If>
 				</If>
 				<If Condition="GetQuestStep(68432) == 255">
 					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTurnIn StepId="255" QuestId="68432" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
@@ -1897,16 +1851,12 @@ Angles24
 						<LLSmallTalk/>
 						<RunCode Name="Enable_Flight"/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 					</If>
 				</If>
 				<If Condition="GetQuestStep(68433) == 255">
 					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTurnIn StepId="255" QuestId="68433" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
@@ -2016,8 +1966,6 @@ Angles24
 						<LLHandOver ItemIds="17951" RequiresHq="True" NpcId="1021409" XYZ="703.1814, 2.949344, 513.6339" QuestId="68434" StepId="5"/>
 						<LLSmallTalk/>
 						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
-						<WaitTimer WaitTime="2"/>
 					</If>
 				</If>
 				<If Condition="HasQuest(68434) and not IsQuestCompleted(68434) and GetQuestStep(68434) == 6">
@@ -2031,15 +1979,11 @@ Angles24
 					<LLHandOver ItemIds="2002180" NpcId="1021412" XYZ="359.3347, -119.9429, -239.2767" QuestId="68434" StepId="7"/>
 					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 				</If>
 				<If Condition="GetQuestStep(68434) == 255">
 					<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 					<LLTurnIn StepId="255" QuestId="68434" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 					<LLSmallTalk/>
-					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
 					<WaitTimer WaitTime="2"/>
@@ -2113,8 +2057,6 @@ Angles24
 						<LisbethTravel Zone="613" Position="-749.6351, 1.559595, -456.9331"/>
 						<LLTurnIn ItemIds="17952" RequiresHq="True" QuestId="68435" NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977"/>
 						<LLSmallTalk/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="SmallTalk"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
 						<WaitTimer WaitTime="2"/>
@@ -2226,11 +2168,6 @@ Angles24
                                                         .Where(bs => bs.IsDesynthesizable && bs.Item.Rarity < 2 && bs.Item.EquipmentCatagory == ItemUiCategory.Seafood && bs.Item.StackSize == 999)
                                                         .OrderBy(x => x.Item.ItemLevel);
             await LlamaLibrary.Reduce.Reduce.Desynth(fish);
-			]]>
-		</CodeChunk>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="Sneak">
