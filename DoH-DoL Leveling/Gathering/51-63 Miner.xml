@@ -244,14 +244,17 @@ Angles24
 				<LisbethTravel Zone="399" Position="386.1599, 77.16479, 286.5186"/>
 				<If Condition="GameObjectManager.GetObjectByNPCId(2005949).IsVisible">
 					<UseObject NpcId="2005949" XYZ="386.1599, 77.16479, 286.5186" Radius="10" UseTimes="1" BlacklistAfter="True"/>
+          <LLSmallTalk/>
 				</If>
 				<LisbethTravel Zone="399" Position="350.3623, 103.4714, 333.8826"/>
 				<If Condition="GameObjectManager.GetObjectByNPCId(2005948).IsVisible">
 					<UseObject NpcId="2005948" XYZ="350.3623, 103.4714, 333.8826" Radius="10" UseTimes="1" BlacklistAfter="True"/>
+          <LLSmallTalk/>
 				</If>
 				<LisbethTravel Zone="399" Position="338.8571, 92.48486, 314.2595"/>
 				<If Condition="GameObjectManager.GetObjectByNPCId(2005950).IsVisible">
 					<UseObject NpcId="2005950" XYZ="338.8571, 92.48486, 314.2595" Radius="10" UseTimes="1" BlacklistAfter="True"/>
+          <LLSmallTalk/>
 				</If>
 			</While>
 			<If Condition="GetQuestStep(67619) == 3">
