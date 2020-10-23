@@ -312,29 +312,6 @@ Angles24
 			<If Condition="GetQuestStep(67588) == 3">
 				<While Condition="not HqHasAtLeast(12900,3)">
 					<Lisbeth Json="[{'Group':1,'Item':12900,'Amount':3,'Enabled':true,'Type':'Gather','Hq':true}]"/><!-- Force HQ Chysahl Greens -->
-          <If Condition="not IsOnMap(397)">
-						<GetTo ZoneId="397" XYZ="461.0736, 212.5399, 699.8669"/>
-					</If>
-					<WaitWhile Condition="Condition.IsTimeBetween(22,8.1) or Condition.IsTimeBetween(10,20.1)"/>
-					<If Condition="Condition.IsTimeBetween(8,10) or Condition.IsTimeBetween(20,22)">
-					<ExGather While="not HqHasAtLeast(12900,3)">
-						<GatherObjects>
-							<GatherObject>Unspoiled Lush Vegetation Patch</GatherObject>
-						</GatherObjects>
-						<ItemNames>
-							<ItemName>Chysahl Greens</ItemName>
-						</ItemNames>
-						<HotSpots>
-							<HotSpot Radius="90" XYZ="-684.4172, 130.6977, -600.1046"/>
-						</HotSpots>
-						<GatheringSkillOrder>
-							<GatheringSkill SpellName="Leaf Turn II" TimesToCast="1"/>
-						</GatheringSkillOrder>
-					</ExGather>
-          <If Condition="not HqHasAtLeast(12900,3)">
-          <WaitWhile Condition="Condition.IsTimeBetween(8,10.1) or Condition.IsTimeBetween(20,22.1)"/>
-          </If>
-					</If>
 				</While>
 				<If Condition="HqHasAtLeast(12900,3)">
 					<RunCode Name="Enable_Flight"/>
