@@ -17,10 +17,12 @@ Kayla / Angles24
 			<LogMessage Message="Going to Learn Desynth!"/>
 			<LisbethTravel Zone="131" Position="138.4237, 4, -58.45789"/>
 			<LLPickupQuest NpcId="1001679" QuestId="65688"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
 			<LisbethTravel Zone="141" Position="96.27642, 27.04044, -352.4858"/>
 			<LLTurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Learnt Desynth!"/>
 		</If>
 		<!-- End - Gone to Pieces -->
@@ -30,10 +32,12 @@ Kayla / Angles24
 			<LogMessage Message="Going to Learn Collectables!"/>
 			<LisbethTravel Zone="418" Position="-54.42902, 15.14058, -38.10181"/>
 			<LLPickupQuest NpcId="1012161" QuestId="67631"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(67631) and not IsQuestCompleted(67631) and GetQuestStep(67631) == 255">
 			<LisbethTravel Zone="156" Position="45.60925, 31.19533, -732.9061"/>
 			<LLTurnIn QuestId="67631" NpcId="1013395" ItemId="2001784" XYZ="45.60925, 31.19533, -732.9061"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Learnt Collectables!"/>
 		</If>
 		<!-- End - Inscrutable Tastes -->
@@ -51,10 +55,12 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Just Tooling Around!"/>
 			<LisbethTravel Zone="156" Position="24.42652, 28.99997, -729.7811"/>
 			<LLPickupQuest NpcId="1006971" QuestId="66959"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66959) and not IsQuestCompleted(66959) and GetQuestStep(66959) == 255">
 			<LisbethTravel Zone="156" Position="24.42652, 28.99997, -729.7811"/>
 			<LLTurnIn QuestId="66959" NpcId="1006971" XYZ="24.42652, 28.99997, -729.7811"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - Tooling Around!"/>
 		</If>
 		<!-- End - Just Tooling Around -->
@@ -70,14 +76,17 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - A Self-improving Man!"/>
 			<LisbethTravel Zone="156" Position="32.37394, 28.99997, -736.4222"/>
 			<LLPickupQuest NpcId="1006969" QuestId="66957"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66957) and GetQuestStep(66957) == 1">
 			<LisbethTravel Zone="156" Position="25.62783, 29, -823.5121"/>
 			<LLHandOver ItemId="2001238" NpcId="1001304" XYZ="25.62783, 29, -823.5121" QuestId="66957" StepId="1"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66957) and not IsQuestCompleted(66957) and GetQuestStep(66957) == 255">
 			<LisbethTravel Zone="156" Position="32.37394, 28.99997, -736.4222"/>
 			<LLTurnIn QuestId="66957" NpcId="1006969" XYZ="32.37394, 28.99997, -736.4222"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - A Self-improving Man!"/>
 		</If>
 		<!-- End - A Self-improving Man -->
@@ -87,14 +96,17 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Submission Impossible!"/>
 			<LisbethTravel Zone="156" Position="32.37394, 28.99997, -736.4222"/>
 			<LLPickupQuest NpcId="1006969" QuestId="66958"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66958) and GetQuestStep(66958) == 1">
 			<LisbethTravel Zone="156" Position="25.62783, 29, -823.5121"/>
 			<LLHandOver ItemId="2001239" NpcId="1001304" XYZ="25.62783, 29, -823.5121" QuestId="66958" StepId="1"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66958) and not IsQuestCompleted(66958) and GetQuestStep(66958) == 255">
 			<LisbethTravel Zone="156" Position="32.37394, 28.99997, -736.4222"/>
 			<LLTurnIn QuestId="66958" NpcId="1006969" XYZ="32.37394, 28.99997, -736.4222"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - Submission Impossible!"/>
 		</If>
 		<!-- End - Submission Impossible -->
@@ -104,10 +116,12 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Beloved of the Builder!"/>
 			<LisbethTravel Zone="156" Position="46.35824, 31.19733, -731.7603"/>
 			<LLPickupQuest NpcId="1013395" QuestId="67632"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(67632) and not IsQuestCompleted(67632) and GetQuestStep(67632) == 255">
 			<LisbethTravel Zone="419" Position="172.2491, -12.53903, -26.55138"/>
 			<LLTurnIn QuestId="67632" NpcId="1012179" ItemId="2001785" XYZ="172.2491, -12.53903, -26.55138"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - Beloved of the Builder!"/>
 		</If>
 		<!-- End - Beloved of the Builder -->
@@ -117,10 +131,12 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Go West, Craftsman!"/>
 			<LisbethTravel Zone="156" Position="46.35824, 31.19733, -731.7603"/>
 			<LLPickupQuest NpcId="1013395" QuestId="67634"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(67634) and not IsQuestCompleted(67634) and GetQuestStep(67634) == 255">
 			<LisbethTravel Zone="478" Position="-16.45746, 206.4994, 47.3041"/>
 			<LLTurnIn QuestId="67634" NpcId="1012299" ItemId="2001787" XYZ="-16.45746, 206.4994, 47.3041"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - Go West, Craftsman!"/>
 		</If>
 		<!-- End - Go West, Craftsman -->
@@ -130,6 +146,7 @@ Kayla / Angles24
 			<LogMessage Message="Completed Quest - Reach Long and Prosper!"/>
 			<LisbethTravel Zone="635" Position="-69.19054, 0.00999999, 62.08514"/>
 			<LLTalkTo NpcId="1019459" XYZ="-69.19054, 0.00999999, 62.08514" QuestId="68477"/>
+			<LLSmallTalk/>
 		</If>
 		<!-- End - Reach Long and Prosper -->
 	</If>
@@ -144,10 +161,12 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - No Longer a Collectable!"/>
 			<LisbethTravel Zone="156" Position="46.35824, 31.19733, -731.7603"/>
 			<LLPickupQuest NpcId="1013395" QuestId="67633"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(67633) and not IsQuestCompleted(67633) and GetQuestStep(67633) == 255">
 			<LisbethTravel Zone="141" Position="115.89, 30.76108, -359.7155"/>
 			<LLTurnIn QuestId="67633" NpcId="1001428" ItemId="2001786" XYZ="115.89, 30.76108, -359.7155"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - No Longer a Collectable!"/>
 		</If>
 		<!-- End - No Longer a Collectable -->
@@ -157,10 +176,12 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Marvelously Mutable Materia!"/>
 			<LisbethTravel Zone="141" Position="115.8703, 30.70554, -360.6193"/>
 			<LLPickupQuest NpcId="1001428" QuestId="66999"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66999) and not IsQuestCompleted(66999) and GetQuestStep(66999) == 255">
 			<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
 			<LLTurnIn QuestId="66999" NpcId="1001425" XYZ="115.5356, 31, -390.4169"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - Marvelously Mutable Materia!"/>
 		</If>
 		<!-- End - Marvelously Mutable Materia -->
@@ -170,10 +191,12 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Forging the Spirit!"/>
 			<LisbethTravel Zone="141" Position="123.1886, 30.99999, -383.7392"/>
 			<LLPickupQuest NpcId="1001426" QuestId="66174"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66174) and not IsQuestCompleted(66174) and GetQuestStep(66174) == 255">
 			<LisbethTravel Zone="141" Position="123.1886, 30.99999, -383.7392"/>
 			<LLTurnIn QuestId="66174" NpcId="1001426" XYZ="123.1886, 30.99999, -383.7392"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - Forging the Spirit!"/>
 		</If>
 		<!-- End - Forging the Spirit -->
@@ -189,10 +212,12 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Waking the Spirit!"/>
 			<LisbethTravel Zone="141" Position="104.0803, 30.92101, -378.1381"/>
 			<LLPickupQuest NpcId="1001427" QuestId="66175"/>
+			<LLSmallTalk/>
 		</If>
 		<If Condition="HasQuest(66175) and not IsQuestCompleted(66175) and GetQuestStep(66175) == 255">
 			<LisbethTravel Zone="141" Position="104.0803, 30.92101, -378.1381"/>
 			<LLTurnIn QuestId="66175" NpcId="1001427" XYZ="104.0803, 30.92101, -378.1381"/>
+			<LLSmallTalk/>
 			<LogMessage Message="Completed Quest - Waking the Spirit!"/>
 		</If>
 		<!-- End - Waking the Spirit -->
@@ -202,6 +227,7 @@ Kayla / Angles24
 			<LogMessage Message="Picking Up - Melding Materia Muchly!"/>
 			<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
 			<LLPickupQuest NpcId="1001425" QuestId="66176"/>
+			<LLSmallTalk/>
 		</If>
 	</If>
 		

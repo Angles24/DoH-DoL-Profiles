@@ -29,6 +29,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66113)">
           <LLPickupQuest QuestId="66113" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(66113) and not IsQuestCompleted(66113) and GetQuestStep(66113) == 255">
@@ -37,6 +38,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66113" ItemId="5487" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
@@ -54,6 +56,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66114)">
           <LLPickupQuest QuestId="66114" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(66114) and not IsQuestCompleted(66114) and GetQuestStep(66114) == 255">
@@ -62,6 +65,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66114" ItemId="4564" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
@@ -79,6 +83,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66116)">
           <LLPickupQuest QuestId="66116" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(66116) and not IsQuestCompleted(66116) and GetQuestStep(66116) == 255">
@@ -87,6 +92,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66116" ItemId="5515" NpcId="1002299" Nq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
@@ -104,6 +110,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66117)">
           <LLPickupQuest QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 1">
@@ -115,14 +122,17 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLHandOver ItemIds="4597,4595" AllowHq="True" QuestId="66117" StepId="1" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk/>
       </If>
       <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 2">
         <LisbethTravel Zone="131" Position="-80.1557, 7.014143, -5.142395"/>
         <LLHandOver ItemIds="4597,4595" AllowHq="True" QuestId="66117" StepId="2" NpcId="1003926" XYZ="-80.1557, 7.014143, -5.142395"/>
+        <LLSmallTalk/>
       </If>
       <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 255">
         <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk/>
         <WaitTimer WaitTime="2"/>
 		<RunCode Name="SmallTalk"/>
 		<WaitTimer WaitTime="2"/>
