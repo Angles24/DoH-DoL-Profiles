@@ -29,6 +29,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65828)">
           <LLPickupQuest QuestId="65828" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(65828) and not IsQuestCompleted(65828) and GetQuestStep(65828) == 255">
@@ -37,8 +38,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <LLTurnIn QuestId="65828" ItemId="5056" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
+        <LLSmallTalk/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -54,6 +54,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65829)">
           <LLPickupQuest QuestId="65829" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(65829) and not IsQuestCompleted(65829) and GetQuestStep(65829) == 255">
@@ -62,8 +63,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <LLTurnIn QuestId="65829" ItemIds="2341, 2341, 2341" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
+        <LLSmallTalk/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -79,6 +79,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65830)">
           <LLPickupQuest QuestId="65830" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(65830) and not IsQuestCompleted(65830) and GetQuestStep(65830) == 255">
@@ -87,8 +88,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <LLTurnIn QuestId="65830" ItemId="5091" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
+        <LLSmallTalk/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -104,11 +104,13 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <If Condition="IsQuestAcceptQualified(65831)">
           <LLPickupQuest QuestId="65831" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLSmallTalk/>
         </If>
       </If>
       <If Condition="HasQuest(65831) and not IsQuestCompleted(65831) and GetQuestStep(65831) == 1">
         <LisbethTravel Zone="128" Position="-52.35376, 42.49961, 211.5968"/>
         <LLTalkTo NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968" QuestId="65831" StepId="1"/>
+        <LLSmallTalk/>
       </If>
       <If Condition="HasQuest(65831) and not IsQuestCompleted(65831) and GetQuestStep(65831) == 255">
         <While Condition="not HasItem(1605)">
@@ -119,8 +121,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="128" Position="-31.26581, 44.49997, 185.5344"/>
         <LLTurnIn QuestId="65831" ItemIds="1605,1753" AllowHq="True" NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968"/>
-        <WaitTimer WaitTime="2"/>
-		<RunCode Name="SmallTalk"/>
+        <LLSmallTalk/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -143,11 +144,4 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
-	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
-	</CodeChunks>
 </Profile>

@@ -19,7 +19,7 @@ Angles24
 		<RunCode Name="Enable_Flight"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
   
 		<!-- Level 70-71 -->
 		<If Condition="Core.Player.ClassLevel &lt; 71">
@@ -30,7 +30,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 71, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 71-->
 		
@@ -43,7 +43,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 73, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 73-->
 		
@@ -56,7 +56,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 75, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 76-->
 		
@@ -69,7 +69,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 78, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 78-->
 		
@@ -82,7 +82,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 80, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 80-->
 	</If>

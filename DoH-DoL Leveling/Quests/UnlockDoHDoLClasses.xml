@@ -15,6 +15,7 @@
 				<LisbethTravel Zone="129" Position="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
 				<If Condition="IsQuestAcceptQualified(66670)">
 					<LLTalkTo NpcId="1000859" QuestId="66670" XYZ="-166.4096, 4.54997, 152.0395"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 		</If>
@@ -29,6 +30,7 @@
 				<If Condition="GetQuestStep(66643) == 255">
 					<LisbethTravel Zone="129" Position="-166.1612, 4.550006, 165.4742"/>
 					<LLTurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 					<If Condition="ClassName != ClassJobType.Fisher">
 						<ChangeClass Job="Fisher"/>
@@ -48,6 +50,7 @@
 			<LisbethTravel Zone="128" Position="-61.18506, 42.29994, -161.9528"/>
 				<If Condition="IsQuestAcceptQualified(65727)">
 					<LLTalkTo NpcId="1000946" QuestId="65727" XYZ="-61.18506, 42.29994, -161.9528"/>
+					<LLSmallTalk/>
 				</If>
 		</If>
     </If>
@@ -62,6 +65,7 @@
 				<If Condition="GetQuestStep(65807) == 255">
 					<LisbethTravel Zone="128" Position="-54.52119, 44.17484, -149.4378"/>
 					<LLTurnIn QuestId="65807" StepId="255" NpcId="1000947" InteractDistance="1.0" XYZ="-54.52119, 44.17484, -149.4378"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Culinarian">
 							<ChangeClass Job="Culinarian"/>
@@ -82,6 +86,7 @@
 			<LisbethTravel Zone="128" Position="-49.96643, 42.79987, 190.44"/>
 				<If Condition="IsQuestAcceptQualified(65722)">
 					<LLTalkTo NpcId="1000998" QuestId="65722" XYZ="-49.96643, 42.79987, 190.44"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -97,6 +102,7 @@
 				<If Condition="GetQuestStep(65809) == 255">
 					<LisbethTravel Zone="128" Position="-32.81106, 41.49998, 207.5591"/>
 					<LLTurnIn QuestId="65809" StepId="255" NpcId="1001000" InteractDistance="1.0" XYZ="-32.81106, 41.49998, 207.5591"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Armorer">
 							<ChangeClass Job="Armorer"/>
@@ -117,6 +123,7 @@
 			<LisbethTravel Zone="128" Position="-50.23656, 42.79998, 192.5967"/>
 				<If Condition="IsQuestAcceptQualified(65721)">
 					<LLTalkTo NpcId="1000995" QuestId="65721" XYZ="-50.23656, 42.79998, 192.5967"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -132,6 +139,7 @@
 				<If Condition="GetQuestStep(65827) == 255">
 					<LisbethTravel Zone="128" Position="-32.22669, 44.6637, 184.621"/>
 					<LLTurnIn QuestId="65827" StepId="255" NpcId="1000997" InteractDistance="1.0" XYZ="-32.22669, 44.6637, 184.621"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Blacksmith">
 							<ChangeClass Job="Blacksmith"/>
@@ -152,6 +160,7 @@
 			<LisbethTravel Zone="132" Position="-17.67216, -3.25, 45.76995"/>
 				<If Condition="IsQuestAcceptQualified(65720)">
 					<LLTalkTo NpcId="1000148" QuestId="65720" XYZ="-17.67216, -3.25, 45.76995"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -167,6 +176,7 @@
 				<If Condition="GetQuestStep(65674) == 255">
 					<LisbethTravel Zone="132" Position="-45.85313, -1.250001, 57.11108"/>
 					<LLTurnIn QuestId="65674" StepId="255" NpcId="1000153" InteractDistance="1.0" XYZ="-45.85313, -1.250001, 57.11108"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Carpenter">
 							<ChangeClass Job="Carpenter"/>
@@ -187,6 +197,7 @@
 			<LisbethTravel Zone="133" Position="63.3223, 8, -145.0385"/>
 				<If Condition="IsQuestAcceptQualified(65724)">
 					<LLTalkTo NpcId="1000352" QuestId="65724" XYZ="63.3223, 8, -145.0385"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -202,6 +213,7 @@
 				<If Condition="GetQuestStep(65641) == 255">
 					<LisbethTravel Zone="133" Position="71.08187, 8, -165.4199"/>
 					<LLTurnIn QuestId="65641" StepId="255" NpcId="1000691" InteractDistance="1.0" XYZ="71.08187, 8, -165.4199"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Leatherworker">
 							<ChangeClass Job="Leatherworker"/>
@@ -222,6 +234,7 @@
 			<LisbethTravel Zone="133" Position="-237.854, 8, -145.268"/>
 				<If Condition="IsQuestAcceptQualified(65729)">
 					<LLTalkTo NpcId="1000294" QuestId="65729" XYZ="-237.854, 8, -145.268"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -237,6 +250,7 @@
 				<If Condition="GetQuestStep(65539) == 255">
 					<LisbethTravel Zone="133" Position="-233.4313, 6.248232, -168.6552"/>
 					<LLTurnIn QuestId="65539" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-233.4313, 6.248232, -168.6552"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Botanist">
 							<ChangeClass Job="Botanist"/>
@@ -255,6 +269,7 @@
 			<LisbethTravel Zone="131" Position="-34.21239, 13.59995, 98.9277"/>
 				<If Condition="IsQuestAcceptQualified(65723)">
 					<LLTalkTo NpcId="1002280" QuestId="65723" XYZ="-34.21239, 13.59995, 98.9277"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -264,12 +279,14 @@
 			<LisbethTravel Zone="131" Position="-34.21239, 13.59995, 98.9277"/>
 				<If Condition="IsQuestAcceptQualified(66144)">
 					<LLPickupQuest NpcId="1002280" QuestId="66144" XYZ="-34.21239, 13.59995, 98.9277"/>
+					<LLSmallTalk/>
 				</If>
 		</If>
 			<If Condition="HasQuest(66144)">
 				<If Condition="GetQuestStep(66144) == 255">
 					<LisbethTravel Zone="131" Position="-25.54107, 12.2, 109.7778"/>
 					<LLTurnIn QuestId="66144" StepId="255" NpcId="1004093" InteractDistance="1.0" XYZ="-25.54107, 12.2, 109.7778"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Goldsmith">
 							<ChangeClass Job="Goldsmith"/>
@@ -290,6 +307,7 @@
 			<LisbethTravel Zone="131" Position="136.8372, 7.591891, 97.83977"/>
 				<If Condition="IsQuestAcceptQualified(65725)">
 					<LLTalkTo NpcId="1002283" QuestId="65725" XYZ="136.8372, 7.591891, 97.83977"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -299,12 +317,14 @@
 			<LisbethTravel Zone="131" Position="136.8372, 7.591891, 97.83977"/>
 				<If Condition="IsQuestAcceptQualified(66070)">
 					<LLPickupQuest NpcId="1002283" QuestId="66070" XYZ="136.8372, 7.591891, 97.83977"/>
+					<LLSmallTalk/>
 				</If>
 		</If>
 			<If Condition="HasQuest(66070)">
 				<If Condition="GetQuestStep(66070) == 255">
 					<LisbethTravel Zone="131" Position="156.6901, 7.792007, 100.3423"/>
 					<LLTurnIn QuestId="66070" StepId="255" NpcId="1003818" InteractDistance="1.0" XYZ="156.6901, 7.792007, 100.3423"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Weaver">
 							<ChangeClass Job="Weaver"/>
@@ -325,6 +345,7 @@
 			<LisbethTravel Zone="131" Position="-114.7261, 41.59998, 120.8445"/>
 				<If Condition="IsQuestAcceptQualified(65726)">
 					<LLTalkTo NpcId="1002281" QuestId="65726" XYZ="-114.7261, 41.59998, 120.8445"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
       </If>
@@ -334,12 +355,14 @@
 			<LisbethTravel Zone="131" Position="-114.7261, 41.59998, 120.8445"/>
 				<If Condition="IsQuestAcceptQualified(66111)">
 					<LLPickupQuest NpcId="1002281" QuestId="66111" XYZ="-114.7261, 41.59998, 120.8445"/>
+					<LLSmallTalk/>
 				</If>
 		</If>
 			<If Condition="HasQuest(66111)">
 				<If Condition="GetQuestStep(66111) == 255">
 					<LisbethTravel Zone="131" Position="-98.68385, 40.2, 122.3508"/>
 					<LLTurnIn QuestId="66111" StepId="255" NpcId="1002299" InteractDistance="1.0" XYZ="-98.68385, 40.2, 122.3508"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Alchemist">
 							<ChangeClass Job="Alchemist"/>
@@ -360,6 +383,7 @@
 			<LisbethTravel Zone="131" Position="1.417394, 7.599999, 153.6795"/>
 				<If Condition="IsQuestAcceptQualified(65728)">
 					<LLTalkTo NpcId="1002282" QuestId="65728" XYZ="1.417394, 7.599999, 153.6795"/>
+					<LLSmallTalk/>
 				</If>
 			<!--</If>-->
 		</If>
@@ -369,12 +393,14 @@
 			<LisbethTravel Zone="131" Position="1.417394, 7.599999, 153.6795"/>
 				<If Condition="IsQuestAcceptQualified(66133)">
 					<LLPickupQuest NpcId="1002282" QuestId="66133" XYZ="1.417394, 7.599999, 153.6795"/>
+					<LLSmallTalk/>
 				</If>
 		</If>
 			<If Condition="HasQuest(66133)">
 				<If Condition="GetQuestStep(66133) == 255">
 					<LisbethTravel Zone="131" Position="-16.52736, 6.2, 157.8005"/>
 					<LLTurnIn QuestId="66133" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.52736, 6.2, 157.8005"/>
+					<LLSmallTalk/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Miner">
 							<ChangeClass Job="Miner"/>

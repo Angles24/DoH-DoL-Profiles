@@ -17,7 +17,7 @@ Angles24
     <If Condition="ClassName == ClassJobType.Botanist">
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		
 		<!--Level 40 - Crisis of Faith-->
 		<If Condition="not IsQuestCompleted(65547)">
@@ -26,6 +26,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65547)">
 					<LLPickupQuest NpcId="1000815" QuestId="65547" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65547) == 1">
@@ -37,21 +38,22 @@ Angles24
 				<If Condition="HqHasAtLeast(4792,20)">
 					<LisbethTravel Zone="133" Position="-233.54, 6.246956, -170.5644"/>
 					<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65547) == 2">
 				<LisbethTravel Zone="133" Position="-239.5238, 8, -146.7241"/>
 				<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="2" NpcId="1000775" InteractDistance="1.0" XYZ="-239.5238, 8, -146.7241"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(65547) == 255">
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<LLTurnIn ItemId="2000569" QuestId="65547" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
+				<LLSmallTalk/>
 				<LogMessage Message="Level 40 - Crisis of Faith - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Crisis of Faith-->
@@ -65,7 +67,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 46, moving on."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Grind to Level 46-->
 
@@ -76,11 +78,13 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65548)">
 					<LLPickupQuest NpcId="1000815" QuestId="65548" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65548) == 1">
 				<LisbethTravel Zone="132" Position="-56.474, -1.717168, 9.29583"/>
 				<LLTalkTo InteractDistance="3.0" NpcId="1000193" XYZ="-56.474, -1.717168, 9.29583"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(65548) == 255">
 				<If Condition="not HqHasAtLeast(5536,20)">
@@ -91,12 +95,11 @@ Angles24
 				<If Condition="HqHasAtLeast(5536,20)">
 					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn ItemId="5536" RequiresHq="true" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLSmallTalk/>
 					<LogMessage Message="Level 45 - Botanist in a Bind - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
-					<WaitTimer WaitTime="10"/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 		</If>
@@ -111,7 +114,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 50, moving to final quest."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Grind to Level 50-->
 
@@ -122,16 +125,19 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65549)">
 					<LLPickupQuest NpcId="1000815" QuestId="65549" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="HasQuest(65549)">
 				<If Condition="GetQuestStep(65549) == 1">
 					<LisbethTravel Zone="133" Position="-297.7843, 7.369169, -168.7761"/>
 					<LLTalkTo InteractDistance="2.0" NpcId="1000774" XYZ="-297.7843, 7.369169, -168.7761"/>
+					<LLSmallTalk/>
 				</If>
 				<If Condition="GetQuestStep(65549) == 2">
 					<LisbethTravel Zone="155" Position="118.2649, 285.9804, 140.2907"/><!-- Camp Dragonhead -->
 					<LLTalkTo InteractDistance="2.0" NpcId="1000776" XYZ="118.2649, 285.9804, 140.2907"/>
+					<LLSmallTalk/>
 				</If>
 				<While Condition="not NqHasAtLeast(5395,3)">
 					<Lisbeth Json="[{'Group':1,'Item':5395,'Amount':3,'Enabled':true,'Type':'Gather'}]"/><!-- Spruce Log -->
@@ -139,20 +145,21 @@ Angles24
 				<If Condition="NqHasAtLeast(5395,3)">
 					<LisbethTravel Zone="155" Position="118.2649, 285.9804, 140.2907"/>
 					<LLHandOver ItemId="5395" QuestId="65549" StepId="4" NpcId="1000776" InteractDistance="1.0" XYZ="118.2649, 285.9804, 140.2907"/>
+					<LLSmallTalk/>
 				</If>
 				<If Condition="GetQuestStep(65549) == 4">
 					<LisbethTravel Zone="155" Position="7.677456, 207.2478, 434.1476"/>
 					<LLTalkTo InteractDistance="2.0" NpcId="1000777" XYZ="7.677456, 207.2478, 434.1476"/>
+					<LLSmallTalk/>
 				</If>
 				<If Condition="GetQuestStep(65549) == 255">
 					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLSmallTalk/>
 					<LogMessage Message="Level 50 - Seeds of Hope - Completed."/>
 					<WaitTimer WaitTime="2"/>
-					<RunCode Name="SmallTalk"/>
-					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
-					<WaitTimer WaitTime="10"/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 		</If>
@@ -167,7 +174,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 51, moving to final quest."/>
 			<WaitTimer WaitTime="2"/>
 			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Grind to Level 51-->
 	</If>
@@ -178,11 +185,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="BTNWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Botanists_Primary_Tool);

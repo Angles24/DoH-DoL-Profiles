@@ -19,7 +19,7 @@ Angles24
 		<RunCode Name="Enable_Flight"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		
 		<!--Level 50 - Breaking New Ground-->
 		<If Condition="not IsQuestCompleted(67616)">
@@ -28,30 +28,30 @@ Angles24
 				<LisbethTravel Zone="131" Position="-18.9975, 6.2, 157.4272"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(67616)">
 					<LLPickupQuest NpcId="1002298" QuestId="67616" XYZ="-18.9975, 6.2, 157.4272"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67616) == 1">
 				<LisbethTravel Zone="131" Position="1.129661, 7.599999, 153.545"/><!-- Ul'dah - Steps of Thal -->
 				<LLTalkTo QuestId="67616" StepId="1" NpcId="1002282" XYZ="3.555298, 7.599962, 153.2157"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67616) == 2">
 				<LisbethTravel Zone="419" Position="16.617, 15.96505, 3.677429"/><!-- The Pillars -->
 				<LLTurnIn ItemId="2001726" QuestId="67616" StepId="2" NpcId="1013232" XYZ="16.617, 15.96505, 3.677429"/>
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
+				<LLSmallTalk/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 			<If Condition="GetQuestStep(67616) == 255">
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/><!-- Foundation -->
 				<LLTurnIn QuestId="67616" NpcId="1013230" ItemId="0" XYZ="85.19104, 15.00001, 40.66516"/>
+				<LLSmallTalk/>
 				<LogMessage Message="Level 50 - Breaking New Ground - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Breaking New Ground-->
@@ -65,7 +65,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 51, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 51 Grind-->
 
@@ -78,7 +78,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 52, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 52 Grind-->
 
@@ -91,7 +91,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 54, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 54 Grind-->
 
@@ -102,11 +102,13 @@ Angles24
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<If Condition="IsQuestAcceptQualified(67617)">
 					<LLPickupQuest NpcId="1013230" QuestId="67617" XYZ="85.19104, 15.00001, 40.66516"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67617) == 1">
 				<LisbethTravel Zone="397" Position="299.6719, 157.9135, 103.2578"/>
 				<LLTalkTo QuestId="67617" StepId="1" NpcId="1013233" XYZ="299.6719, 157.9135, 103.2578"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67617) == 2">
 				<If Condition="not HqHasAtLeast(12534,10)">
@@ -122,17 +124,17 @@ Angles24
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="397" Position="299.6719, 157.9135, 103.2578"/>
 					<LLHandOver ItemId="12534" RequiresHq="true" QuestId="67617" StepId="2" NpcId="1013233" InteractDistance="2.0" XYZ="299.6719, 157.9135, 103.2578"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67617) == 255">
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<LLTurnIn QuestId="67617" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
+				<LLSmallTalk/>
 				<LogMessage Message="Level 53 - Sellspade - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Sellspade-->
@@ -146,7 +148,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 56, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 56 Grind-->
 
@@ -157,19 +159,23 @@ Angles24
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<If Condition="IsQuestAcceptQualified(67618)">
 					<LLPickupQuest NpcId="1013230" QuestId="67618" XYZ="85.19104, 15.00001, 40.66516"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67618) == 1">
 				<LisbethTravel Zone="131" Position="-18.9975, 6.2, 157.4272"/>
 				<LLHandOver ItemId="2001727" QuestId="67618" StepId="1" NpcId="1002298" XYZ="-18.9975, 6.2, 157.4272"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67618) == 2">
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<LLHandOver ItemId="2001727" QuestId="67618" StepId="2" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67618) == 3">
 				<LisbethTravel Zone="398" Position="388.3573, -43.08157, -368.9174"/>
 				<LLTalkTo QuestId="67618" StepId="3" NpcId="1013933" XYZ="388.3573, -43.08157, -368.9174"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67618) == 4">
 				<If Condition="not HqHasAtLeast(12537,10)">
@@ -185,17 +191,17 @@ Angles24
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="398" Position="388.3573, -43.08157, -368.9174"/>
 					<LLHandOver ItemId="12537" RequiresHq="true" QuestId="67618" StepId="4" NpcId="1013933" XYZ="388.3573, -43.08157, -368.9174"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67618) == 255">
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<LLTurnIn QuestId="67618" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
+				<LLSmallTalk/>
 				<LogMessage Message="Level 55 - The Same Vein - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End The Same Vein-->
@@ -209,7 +215,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 58, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 58 Grind-->
 
@@ -220,6 +226,7 @@ Angles24
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<If Condition="IsQuestAcceptQualified(67619)">
 					<LLPickupQuest NpcId="1013230" QuestId="67619" XYZ="85.19104, 15.00001, 40.66516"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67619) == 1">
@@ -228,6 +235,7 @@ Angles24
 				</If>
 				<LisbethTravel Zone="399" Position="552.3003, 94.17663, 161.7609"/>
 				<LLTalkTo QuestId="67619" StepId="1" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
+				<LLSmallTalk/>
 			</If>
 			<While Condition="GetQuestStep(67619) == 2">
 				<If Condition="not IsOnMap(399)">
@@ -252,6 +260,7 @@ Angles24
 				</If>
 				<LisbethTravel Zone="399" Position="552.3003, 94.17663, 161.7609"/>
 				<LLHandOver ItemId="2001728" QuestId="67619" StepId="3" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67619) == 4">
 				<If Condition="not HqHasAtLeast(12535,10)">
@@ -267,17 +276,17 @@ Angles24
 					<RunCode Name="Enable_Flight"/>
 					<NoCombatMoveTo Name="Haimirich" XYZ="552.3003, 94.17663, 161.7609"/>
 					<LLHandOver ItemId="12535" RequiresHq="true" QuestId="67619" StepId="4" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67619) == 255">
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<LLTurnIn QuestId="67619" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
+				<LLSmallTalk/>
 				<LogMessage Message="Level 58 - Digging Deeper - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Digging Deeper-->
@@ -291,7 +300,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 60, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 60 Grind-->
 
@@ -302,15 +311,18 @@ Angles24
 				<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 				<If Condition="IsQuestAcceptQualified(67620)">
 					<LLPickupQuest NpcId="1013230" QuestId="67620" XYZ="85.19104, 15.00001, 40.66516"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67620) == 1">
 				<LisbethTravel Zone="478" Position="116.0448, 206.9609, 80.15564"/>
 				<LLTalkTo QuestId="67620" StepId="1" NpcId="1013956" XYZ="116.0448, 206.9609, 80.15564"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 2">
 				<LisbethTravel Zone="478" Position="-26.84064, 206.4995, 28.67163"/>
 				<LLTalkTo QuestId="67620" StepId="2" NpcId="1012133" XYZ="-26.84064, 206.4995, 28.67163"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 3">
 				<While Condition="not HqHasAtLeast(12538,3)">
@@ -320,16 +332,16 @@ Angles24
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="478" Position="59.67798, 207.1303, 3.311157"/>
 					<LLTurnIn ItemId="12538" RequiresHq="true" QuestId="67620" StepId="3" NpcId="1013958" XYZ="59.67798, 207.1303, 3.311157"/>
-					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
+					<LLSmallTalk/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67620) == 4">
 				<LisbethTravel Zone="478" Position="116.0448, 206.9609, 80.15564"/>
 				<LLTalkTo QuestId="67620" StepId="4" NpcId="1013956" XYZ="116.0448, 206.9609, 80.15564"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 5">
 				<If Condition="not IsOnMap(399)">
@@ -337,21 +349,22 @@ Angles24
 				</If>
 				<NoCombatMoveTo Name="Haimirich" XYZ="116.0448, 206.9609, 80.15564"/>
 				<LLTalkTo QuestId="67620" StepId="5" NpcId="1013959" XYZ="169.6345, 202.7997, 494.8042"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 6">
 				<LisbethTravel Zone="478" Position="-26.84064, 206.4995, 28.67163"/>
 				<LLHandOver ItemId="2001729" QuestId="67620" StepId="6" NpcId="1012133" XYZ="-26.84064, 206.4995, 28.67163"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(67620) == 255">
 				<If Condition="not IsOnMap(418)">
 					<LisbethTravel Zone="418" Position="95.00264, 15.00001, 39.64268"/>
 					<LLTurnIn QuestId="67620" NpcId="1013230" XYZ="85.19104, 15.00001, 40.66516"/>
+					<LLSmallTalk/>
 					<LogMessage Message="Level 60 - The Hole Truth - Completed."/>
-					<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
 		</If>
@@ -364,29 +377,32 @@ Angles24
 				<LisbethTravel Zone="131" Position="-17.52845, 6.2, 157.5762"/>
 				<If Condition="IsQuestAcceptQualified(68090)">
 					<LLPickupQuest QuestId="68090" NpcId="1002298" XYZ="-17.52845, 6.2, 157.5762"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68090) == 1">
 				<LisbethTravel Zone="131" Position="1.556316, 7.599999, 153.5215"/>
 				<LLTalkTo NpcId="1002282" XYZ="1.556316, 7.599999, 153.5215" QuestId="68090" StepId="1"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(68090) == 2">
 				<LisbethTravel Zone="478" Position="54.72661, 207.3399, -7.817912"/>
 				<LLHandOver ItemIds="2002057" NpcId="1019863" XYZ="54.72661, 207.3399, -7.817912" QuestId="68090" StepId="2"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(68090) == 3">
 				<LisbethTravel Zone="478" Position="81.93546, 214.1, -91.00903"/>
 				<LLTalkTo NpcId="1019864" XYZ="81.93546, 214.1, -91.00903" QuestId="68090" StepId="3"/>
+				<LLSmallTalk/>
 			</If>
 			<If Condition="GetQuestStep(68090) == 255">
 				<LisbethTravel Zone="478" Position="54.56663, 207.3399, -8.392662"/>
 				<LLTurnIn QuestId="68090" NpcId="1019863" XYZ="54.56663, 207.3399, -8.392662"/>
+				<LLSmallTalk/>
 				<LogMessage Message="Level 60 - Gift of the Gob - Completed."/>
 				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SmallTalk"/>
-				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="10"/>
+				<WaitTimer WaitTime="5"/>
 			</If>
 		</If>
 		<!--End Gift of the Gob-->
@@ -400,7 +416,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 62, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 62 Grind-->
 		
@@ -413,7 +429,7 @@ Angles24
 			<LogMessage Message="Congrats on Level 64, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="10"/>
+		<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Level 63 Grind-->
 		
@@ -425,11 +441,6 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
-		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
-			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="MINWeapon">
 			<![CDATA[
 				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);

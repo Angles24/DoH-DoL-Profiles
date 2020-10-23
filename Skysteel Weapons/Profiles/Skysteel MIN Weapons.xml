@@ -19,11 +19,13 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
 					<LLPickupQuest NpcId="1032897" DialogOption="0" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LLSmallTalk/>
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="Coffer"/>
 			</If>
@@ -34,6 +36,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
 					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
+					<LLSmallTalk/>
 				</If>
 			</If>
 		</If>
@@ -207,6 +210,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
 				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk/>
 			</If>
 		</If>
 		

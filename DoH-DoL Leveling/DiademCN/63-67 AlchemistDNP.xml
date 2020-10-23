@@ -9,7 +9,7 @@ Authors:  Kayla / Angles24
 	<!-- Leave Diadem -->
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
-		<WaitTimer waitTime="7"/>
+		<WaitTimer WaitTime="3"/>
 		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
 		
@@ -27,7 +27,7 @@ Authors:  Kayla / Angles24
 		</If>
 		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoInventoryEquip/>
-			<WaitTimer waitTime="10"/>
+			<WaitTimer WaitTime="5"/>
 			<Lisbeth Json="[{'Group':1,'Item':29814,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 		</If>
 	</If>
@@ -47,7 +47,7 @@ Authors:  Kayla / Angles24
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 67 on Alchemist, moving on."/>
 	<AutoInventoryEquip/>
-	<WaitTimer waitTime="10"/>
+	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>
 		
 </Order>
