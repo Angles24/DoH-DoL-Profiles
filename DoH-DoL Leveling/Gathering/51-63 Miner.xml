@@ -274,7 +274,7 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(12535,10)">
 					<RunCode Name="Enable_Flight"/>
-					<NoCombatMoveTo Name="Haimirich" XYZ="552.3003, 94.17663, 161.7609"/>
+					<LisbethTravel Zone="399" Subzone="2009" Position="552.0469, 94.21478, 162.2147"/>
 					<LLHandOver ItemId="12535" RequiresHq="true" QuestId="67619" StepId="4" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
 					<LLSmallTalk/>
 				</If>
