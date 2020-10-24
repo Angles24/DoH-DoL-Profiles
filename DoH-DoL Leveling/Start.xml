@@ -443,7 +443,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 
 		
 		<!-- Craft Gathering and Crafting Gear 63 -->
-			<If Condition="&craft63; == 1">
+			<If Condition="(&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 198) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 198) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 198) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 198) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 198) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 198) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 198) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 198) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 198) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 198)">
 				<LogMessage Message="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft63 setting to 0 on start profile."/>
 				<RunCode Name="craft63"/>
 				<LLStopBot/>
