@@ -391,7 +391,7 @@ Profile and fixes by Angles
 	
 	  <!--9-->
       <If Condition="not IsAetherCurrentCompleted(614,13)">
-        <GetTo ZoneId="614" XYZ="384.7675, 80.89209, -227.6463" Distance="0.5"/>
+        <LisbethTravel Zone="614" Position="384.7675, 80.89209, -227.6463"/>
 			<UseObject NpcId="2008006" XYZ="384.7675, 80.89209, -227.6463" Condition="not IsAetherCurrentCompleted(614,13)"/>
 		</If>
 	  

@@ -511,7 +511,7 @@ Profile and fixes by Anges
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="HasQuest(67333) and not IsQuestCompleted(67333) and GetQuestStep(67333) == 1 and GetQuestById(67333).GetTodoArgs(1, 0).Item1 == 2">
-					<GetTo ZoneId="398" XYZ="625.3038, -26.78107, -407.2412" Distance="0.2"/>
+					<LisbethTravel Zone="398" Position="625.3038, -26.78107, -407.2412"/>
 					<MoveTo XYZ="656.5858, -19.03242, -404.9117" Distance="0.2" UseMesh="False"/>
 					<MoveTo XYZ="684.6665, -24.41711, -268.053" Distance="0.2" UseMesh="False"/>
 					<LLTalkTo NpcId="1011932" XYZ="684.6665, -24.41711, -268.053" QuestId="67333"/>

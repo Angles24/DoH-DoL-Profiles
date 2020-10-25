@@ -480,7 +480,7 @@ Angles24
         <LLSmallTalk WaitTime="1500"/>
       </If>
       <If Condition="HasQuest(68136) and not IsQuestCompleted(68136) and GetQuestStep(68136) == 2">
-        <GetTo ZoneId="635" XYZ="42.97636, -1.192093E-07, 77.73982"/>
+        <LisbethTravel Zone="635" Position="42.97636, -1.192093E-07, 77.73982"/>
         <LLTalkTo NpcId="1021143" XYZ="42.06909, -7.450581E-09, 78.6908" QuestId="68136" StepId="2"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>

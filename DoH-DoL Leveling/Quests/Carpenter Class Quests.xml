@@ -548,12 +548,12 @@ Angles24
         </If>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 1">
-        <GetTo ZoneId="628" XYZ="-1.756881, 4.768372E-07, -77.39175"/>
+        <LisbethTravel Zone="628" Position="-1.756881, 4.768372E-07, -77.39175"/>
         <LLTalkTo NpcId="1020910" XYZ="-1.175049, 1.266599E-07, -78.04993" QuestId="67979" StepId="1"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
       <If Condition="HasQuest(67979) and not IsQuestCompleted(67979) and GetQuestStep(67979) == 2 and GetQuestById(67979).GetTodoArgs(2, 0).Item1 == 0">
-        <GetTo ZoneId="628" XYZ="-12.33821, 7.152557E-07, -85.17715"/>
+        <LisbethTravel Zone="628" Position="-12.33821, 7.152557E-07, -85.17715"/>
         <LLTalkTo NpcId="1020912" XYZ="-13.07703, 0.25, -86.22876" QuestId="67979"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
@@ -583,7 +583,7 @@ Angles24
           <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17880,'Amount':1,'Enabled':true,'Type':'Carpenter'}]"/>
 		  </If>
         </While>
-        <GetTo ZoneId="628" XYZ="-0.6076822, -1.192093E-07, -78.38664"/>
+        <LisbethTravel Zone="628" Position="-0.6076822, -1.192093E-07, -78.38664"/>
         <LLHandOver ItemId="17880" RequireHq="True" NpcId="1019061" XYZ="-0.04577637, 0, -80.8576" QuestId="67979" StepId="4"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>

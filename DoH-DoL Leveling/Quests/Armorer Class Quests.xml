@@ -463,7 +463,7 @@ Angles24
         </If>
       </If>
       <If Condition="HasQuest(68131) and not IsQuestCompleted(68131) and GetQuestStep(68131) == 1">
-        <GetTo ZoneId="628" XYZ="1.133246, 1.311302E-06, -51.98818"/>
+        <LisbethTravel Zone="628" Position="1.133246, 1.311302E-06, -51.98818"/>
         <LLTalkTo NpcId="1021368" XYZ="0.07623291, 1.363456E-06, -52.17065" QuestId="68131" StepId="1"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
@@ -550,7 +550,7 @@ Angles24
         </If>
       </If>
       <If Condition="HasQuest(68133) and not IsQuestCompleted(68133) and GetQuestStep(68133) == 1">
-        <GetTo ZoneId="628" XYZ="-3.835736, -2.026558E-06, -50.92547"/>
+        <LisbethTravel Zone="628" Position="-3.835736, -2.026558E-06, -50.92547"/>
         <LLTalkTo NpcId="1021372" XYZ="-4.867676, -2.168119E-06, -50.98041" QuestId="68133" StepId="1"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>

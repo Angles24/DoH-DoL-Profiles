@@ -17,14 +17,14 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
-				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
+				<LisbethTravel Zone="418" Position="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
 					<LLPickupQuest NpcId="1032897" DialogOption="0" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
-				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
 				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
@@ -34,7 +34,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
-				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
 					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -43,7 +43,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		</If>
 		
 		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644))">
-			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<LisbethTravel Zone="418" Position="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29622" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
@@ -53,13 +53,13 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</While>
 			<While Condition="not HasAtLeast(30136,50)">
 				<Log Message="Buy some Signature Skyball from Foundation!"/>
-				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+				<LisbethTravel Zone="418" Position="-161.5168, 16.99999, -57.14508"/>
 				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 			</While>
 			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
 			<Log Color="&LogTxt;" Message="Going to fish some Thinker's Coral!"/>
 			<If Condition="not HqHasAtLeast(29673,40)">
-				<GetTo ZoneId="399" XYZ="30.28768, 52.93113, 87.8614"/>
+				<LisbethTravel Zone="399" Position="30.28768, 52.93113, 87.8614"/>
 			</If>
 			<RunCode Name="DisableMount"/>
 			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29673,40)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
@@ -76,7 +76,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</ExFish>
 			<RunCode Name="EnableMount"/>
 			<While Condition="HasItem(29622) and HqHasAtLeast(29673,40)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29622">
 					<ChangeClass Job="Fisher"/>
 					<WaitTimer WaitTime="3"/>
@@ -97,12 +97,12 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</While>
 			<While Condition="not HasAtLeast(30136,50)">
 				<Log Color="&LogTxt;" Message="Buy some Signature Skyball from Foundation!"/>
-				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+				<LisbethTravel Zone="418" Position="-161.5168, 16.99999, -57.14508"/>
 				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 			</While>
 			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
 			<Log Color="&LogTxt;" Message="Going to fish some Dragonspine!"/>
-			<GetTo ZoneId="397" XYZ="-680.4474, 99.50026, -618.0323"/>
+			<LisbethTravel Zone="397" Position="-680.4474, 99.50026, -618.0323"/>
 			<RunCode Name="DisableMount"/>
 			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29678,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
 				<Keepers>
@@ -118,7 +118,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</ExFish>
 			<RunCode Name="EnableMount"/>
 			<While Condition="HasItem(29633) and HqHasAtLeast(29678,60)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29633">
 					<ChangeClass Job="Fisher"/>
 					<WaitTimer WaitTime="3"/>
@@ -142,7 +142,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
-				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
