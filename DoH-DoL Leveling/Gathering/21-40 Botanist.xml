@@ -26,7 +26,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65543)">
 					<LLPickupQuest NpcId="1000815" QuestId="65543" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="not NqHasAtLeast(5599,99)">
@@ -39,7 +39,7 @@ Angles24
 		       <ChangeClass Job="Botanist"/>
 	        </If>
 					<LLTurnIn ItemId="5599" QuestId="65543" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 20 - Dressed to Harvest - Completed."/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -69,7 +69,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65544)">
 					<LLPickupQuest NpcId="1000815" QuestId="65544" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="not HqHasAtLeast(5542,15)">
@@ -78,7 +78,7 @@ Angles24
 			<If Condition="GetQuestStep(65544) == 255">
 				<LisbethTravel Zone="133" Position="-235.7631, 8, -147.0039"/>
 				<LLTurnIn ItemId="5542" RequiresHq="true" QuestId="65544" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
-				<LLSmallTalk/>
+				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 25 - Aromatic Aspirations - Completed."/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -107,7 +107,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65545)">
 					<LLPickupQuest NpcId="1000815" QuestId="65545" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65545) == 1">
@@ -115,7 +115,7 @@ Angles24
 					<TeleportTo Name="Bentbranch Meadows" AetheryteId="3"/>
 				</If>
 				<LLTalkTo InteractDistance="3.0" NpcId="1000129" XYZ="-45.41326, 0.551909, -29.84514"/>
-				<LLSmallTalk/>
+				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="not HqHasAtLeast(4813,15)">
 				<Lisbeth Json="[{'Item': 4813,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': true,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
@@ -124,7 +124,7 @@ Angles24
 				<If Condition="GetQuestStep(65545) == 255">
 					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn ItemId="4813" RequiresHq="true" QuestId="65545" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 30 - What Nature Giveth - Completed."/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -153,7 +153,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65546)">
 					<LLPickupQuest NpcId="1000815" QuestId="65546" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="not HqHasAtLeast(4839,20)">
@@ -163,18 +163,18 @@ Angles24
 				<If Condition="HqHasAtLeast(4839,20)">
 					<LisbethTravel Zone="133" Position="-233.54, 6.246956, -170.5644"/>
 					<LLHandOver ItemId="4839" RequiresHq="true" QuestId="65546" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65546) == 2">
 				<LisbethTravel Zone="133" Position="-297.4848, 7.373582, -168.8218"/>
 				<LLHandOver ItemId="4839" RequiresHq="true" QuestId="65546" StepId="2" NpcId="1000774" InteractDistance="1.0" XYZ="-297.4848, 7.373582, -168.8218"/>
-				<LLSmallTalk/>
+				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(65546) == 255">
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<LLTurnIn QuestId="65546" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
-				<LLSmallTalk/>
+				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 35 - A Feast to Say the Least - Completed."/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>

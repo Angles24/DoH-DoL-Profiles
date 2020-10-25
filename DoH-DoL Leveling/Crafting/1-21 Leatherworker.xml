@@ -29,7 +29,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65745)">
           <LLPickupQuest NpcId="1000691" QuestId="65745" XYZ="71.97681, 8, -166.5217"/>
-          <LLSmallTalk/>
+          <LLSmallTalk WaitTime="1500"/>
         </If>
       </If>
       <If Condition="HasQuest(65745) and not IsQuestCompleted(65745) and GetQuestStep(65745) == 255">
@@ -38,7 +38,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65745" ItemId="5275" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
-        <LLSmallTalk/>
+        <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -54,7 +54,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65642)">
           <LLPickupQuest QuestId="65642" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
-          <LLSmallTalk/>
+          <LLSmallTalk WaitTime="1500"/>
         </If>
       </If>
       <If Condition="HasQuest(65642) and not IsQuestCompleted(65642) and GetQuestStep(65642) == 255">
@@ -63,7 +63,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
-        <LLSmallTalk/>
+        <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -82,7 +82,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65671)">
           <LLPickupQuest QuestId="65671" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
-          <LLSmallTalk/>
+          <LLSmallTalk WaitTime="1500"/>
         </If>
       </If>
       <If Condition="HasQuest(65671) and not IsQuestCompleted(65671) and GetQuestStep(65671) == 255">
@@ -91,7 +91,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <LLTurnIn QuestId="65671" ItemId="5276" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
-        <LLSmallTalk/>
+        <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
@@ -107,7 +107,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <If Condition="IsQuestAcceptQualified(65672)">
           <LLPickupQuest QuestId="65672" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
-          <LLSmallTalk/>
+          <LLSmallTalk WaitTime="1500"/>
         </If>
       </If>
       <If Condition="HasQuest(65672) and not IsQuestCompleted(65672) and GetQuestStep(65672) == 1">
@@ -119,12 +119,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         </While>
         <LisbethTravel Zone="133" Position="71.97681, 8, -166.5217"/>
         <LLTurnIn ItemIds="3772, 4308" AllowHq="True" NpcId="1000691" XYZ="71.97681, 8, -166.5217" QuestId="65672" StepId="1"/>
-        <LLSmallTalk/>
+        <LLSmallTalk WaitTime="1500"/>
       </If>
       <If Condition="HasQuest(65672) and not IsQuestCompleted(65672) and GetQuestStep(65672) == 255">
         <LisbethTravel Zone="133" Position="59.30462, 8, -141.0205"/>
         <LLTurnIn QuestId="65672" NpcId="1000681" XYZ="58.73193, 7.980469, -138.5672" Emote="kneel"/>
-        <LLSmallTalk/>
+        <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
