@@ -609,7 +609,7 @@ Angles24
         <LLSmallTalk WaitTime="1500"/>
       </If>
       <If Condition="HasQuest(67980) and not IsQuestCompleted(67980) and GetQuestStep(67980) == 2">
-        <LisbethTravel Zone="614" Position="466.0222, 68.22433, -119.8152"/>
+        <LisbethTravel Zone="614" Subzone="2793" Position="472.9279, 68.02625, -109.1126"/>
         <LLTalkTo NpcId="1019279" XYZ="466.4835, 68.22433, -120.7447" QuestId="67980" StepId="2"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
@@ -644,7 +644,7 @@ Angles24
           <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17882,'Amount':1,'Enabled':true,'Type':'Carpenter'}]"/>
 		  </If>
         </While>
-        <LisbethTravel Zone="614" Position="466.6603, 68.22433, -119.884"/>
+        <LisbethTravel Zone="614" Subzone="2793" Position="472.9279, 68.02625, -109.1126"/>
         <LLHandOver ItemId="17882" RequiresHq="True" NpcId="1019279" XYZ="466.4835, 68.22433, -120.7447" QuestId="67980" StepId="5"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
