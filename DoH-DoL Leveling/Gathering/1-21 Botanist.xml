@@ -26,7 +26,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65744)">
 					<LLPickupQuest NpcId="1000815" QuestId="65744" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65744) == 255">
@@ -36,7 +36,7 @@ Angles24
 				<If Condition="NqHasAtLeast(5509,10)">
 					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn ItemId="5509" QuestId="65744" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 1 - My First Hatchet - Completed."/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -66,7 +66,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65540)">
 					<LLPickupQuest NpcId="1000815" QuestId="65540" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65540) == 255">
@@ -76,7 +76,7 @@ Angles24
 				<If Condition="NqHasAtLeast(5498,50)">
 					<LisbethTravel Zone="133" Position="-236.451, 8.000312, -155.7238"/>
 					<LLTurnIn ItemId="5498" QuestId="65540" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 5 - Sap for Smiles - Completed."/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -106,7 +106,7 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 					<If Condition="IsQuestAcceptQualified(65541)">
 						<LLPickupQuest NpcId="1000815" QuestId="65541" XYZ="-232.9017, 6.263501, -169.7613"/>
-						<LLSmallTalk/>
+						<LLSmallTalk WaitTime="1500"/>
 					</If>
 			</If>
 			<While Condition="not NqHasAtLeast(5352,99)">
@@ -116,7 +116,7 @@ Angles24
 				<If Condition="GetQuestStep(65541) == 255">
 					<LisbethTravel Zone="133" Position="-236.451, 8.000312, -155.7238"/>
 						<LLTurnIn ItemId="5352" QuestId="65541" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
-						<LLSmallTalk/>
+						<LLSmallTalk WaitTime="1500"/>
 						<LogMessage Message="Level 10 - Weapons of a Feather - Completed."/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
@@ -146,13 +146,13 @@ Angles24
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65542)">
 					<LLPickupQuest NpcId="1000815" QuestId="65542" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk/>
+					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65542) == 1">
 				<LisbethTravel Zone="133" Position="167.8746, 15.69992, -117.8252"/>
 				<LLTalkTo InteractDistance="3.0" NpcId="1000239" XYZ="167.8746, 15.69992, -117.8252"/>
-				<LLSmallTalk/>
+				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(65542) == 2">
 				<While Condition="not HqHasAtLeast(4832,10)">
@@ -162,12 +162,12 @@ Angles24
 			<If Condition="GetQuestStep(65542) == 2">
 				<LisbethTravel Zone="133" Position="167.8746, 15.69992, -117.8252"/>
 				<LLHandOver ItemId="4832" RequiresHq="true" QuestId="65542" StepId="2" NpcId="1000239" InteractDistance="2.0" XYZ="167.8746, 15.69992, -117.8252"/>
-				<LLSmallTalk/>
+				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(65542) == 255">
 				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
 				<LLTurnIn QuestId="65542" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
-				<LLSmallTalk/>
+				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 15 - Haste Makes Waste - Completed."/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
