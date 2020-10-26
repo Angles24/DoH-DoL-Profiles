@@ -45,7 +45,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		</If>
 		
 		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644) or HasItem(29644) or HasItem(30292) or HasItem(30303))">
-			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<LisbethTravel Zone="418" Position="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29622" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
