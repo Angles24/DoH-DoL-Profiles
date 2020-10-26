@@ -20,14 +20,14 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
-				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
+				<LisbethTravel Zone="418" Position="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
 					<LLPickupQuest NpcId="1032897" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
-				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
 				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
@@ -37,7 +37,7 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
-				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
 					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -46,7 +46,7 @@ Required: LLamaLibrary BotBase
 		</If>
 		
 		<If Condition="not (HasItem(29617) or HasItem(29628) or HasItem(29639) or HasItem(29639) or HasItem(30287) or HasItem(30298))">
-			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<LisbethTravel Zone="418" Position="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29617" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
@@ -55,7 +55,7 @@ Required: LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29650,'Amount':20,'Hq':true,'Enabled':true,'Type':'Weaver'}]"/>
 			</If>
 			<If Condition="HasItem(29617) and HqHasAtLeast(29650,20)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29617">
 					<ChangeClass Job="Weaver"/>
 					<WaitTimer WaitTime="3"/>
@@ -74,7 +74,7 @@ Required: LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29658,'Amount':30,'Hq':true,'Enabled':true,'Type':'Weaver'}]"/>
 			</If>
 			<If Condition="HasItem(29628) and HqHasAtLeast(29658,30)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29628">
 					<ChangeClass Job="Weaver"/>
 					<WaitTimer WaitTime="3"/>
@@ -97,7 +97,7 @@ Required: LLamaLibrary BotBase
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
-				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -107,59 +107,59 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
 			<If Condition="not HasQuest(69428) and not IsQuestCompleted(69428) and IsQuestCompleted(69384)">
-				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69428)">
 					<LLPickupQuest NpcId="1032898" QuestId="69428" XYZ="-163.47, 16.97958, -29.31262"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(69428) and not IsQuestCompleted(69428) and GetQuestStep(69428) == 255">
-				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69428" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
 		<While Condition="not HasQuest(69429) and HasItem(29639)">	
-			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 			<RunCode Name="EverSkyward"/>
 		</While>
 		<If Condition="HasQuest(69429) and HasItem(29639) and GetQuestStep(69429) == 255">
 			<If Condition="LLHasItemCollectable(31106)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="not HasAtLeast(30325,90)"> <!-- Weaver's Gobbiegoo -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31106,'Amount':30,'Enabled':true,'Type':'Weaver'}]"/>
 			</If>
 			<If Condition="LLHasItemCollectable(31106)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="TurnIn"/>
 			</If>	
 			<If Condition="HasAtLeast(30325,90)">
-				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 				<ChangeClass Job="Weaver" force="True"/>
 				<LLTurnIn QuestId="69429" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
 		<While Condition="not HasQuest(69430) and HasItem(30287)">	
-			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 			<RunCode Name="ToolsOfTomorrow"/>
 		</While>
 		<If Condition="HasQuest(69430) and HasItem(30287) and GetQuestStep(69430) == 255">
 			<If Condition="LLHasItemCollectable(31114)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="not HasAtLeast(30326,105)"> <!-- Highly Viscous Weaver's Gobbiegoo -->
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31114,'Amount':30,'Enabled':true,'Type':'Weaver'}]"/>
 			</If>	
 			<If Condition="LLHasItemCollectable(31114)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="HasAtLeast(30326,105)">
-				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 				<ChangeClass Job="Weaver" force="True"/>
 				<LLTurnIn QuestId="69430" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>

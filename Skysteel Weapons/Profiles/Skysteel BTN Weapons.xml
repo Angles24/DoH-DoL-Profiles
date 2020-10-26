@@ -16,14 +16,14 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
-				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
+				<LisbethTravel Zone="418" Position="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
 					<LLPickupQuest NpcId="1032897" DialogOption="0" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
-				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
 				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
@@ -33,7 +33,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
-				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
 					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -67,7 +67,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<WaitTimer WaitTime="3"/>
 				<AutoEquip/>
 				<If Condition="not IsOnMap(398)">
-					<GetTo ZoneId="398" XYZ="402.4343, -43.95806, -251.7982"/>
+					<LisbethTravel Zone="398" Position="402.4343, -43.95806, -251.7982"/>
 				</If>-->
 				<!-- Fossil Dust -->
 				<!--<ExGather while="not HasAtLeast(29670,120)" CordialType="Auto">
@@ -109,7 +109,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</ExGather>
 			</If>-->
 			<While Condition="HasItem(29620) and HqHasAtLeast(29669,340) and HasAtLeast(29670,120)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29620">
 					<ChangeClass Job="Botanist"/>
 					<WaitTimer WaitTime="3"/>
@@ -145,7 +145,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<WaitTimer WaitTime="3"/>
 				<AutoEquip/>
 				<If Condition="not IsOnMap(397)">
-					<GetTo ZoneId="397" XYZ="-617.2984, 118.947, -166.7891"/>
+					<LisbethTravel Zone="397" Position="-617.2984, 118.947, -166.7891"/>
 				</If>-->
 				<!-- Striking Stone -->
 				<!--<ExGather while="not HasAtLeast(29675,180)" CordialType="Auto">
@@ -181,7 +181,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</ExGather>
 			</If>-->
 			<While Condition="HasItem(29631) and HasAtLeast(29675,180) and HqHasAtLeast(29674,510)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29631">
 					<ChangeClass Job="Botanist"/>
 					<WaitTimer WaitTime="3"/>
@@ -205,7 +205,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
-				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
