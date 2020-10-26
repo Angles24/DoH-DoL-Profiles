@@ -66,14 +66,14 @@ Required: LLamaLibrary BotBase
 				<LLoadProfile Path="Profiles/Skysteel CUL Weapons.xml"/>
 			</If>
 		</If>
-		<If Condition="&min; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(29643)">
-				<LLoadProfile Path="Profiles/Skysteel MIN Weapons.xml"/>
-			</If>
-		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &gt; 79 and not HasItem(29642)">
 				<LLoadProfile Path="Profiles/Skysteel BTN Weapons.xml"/>
+			</If>
+		</If>
+		<If Condition="&min; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(29643)">
+				<LLoadProfile Path="Profiles/Skysteel MIN Weapons.xml"/>
 			</If>
 		</If>
 		<If Condition="&fsh; == 1">

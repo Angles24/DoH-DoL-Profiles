@@ -10,6 +10,8 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	
 	<RunCode Name="Enable_Flight"/>
 	
+	<EtxSellItem ItemIds="31130,31125,31132,31127"/>
+	
 	<If Condition="ClassName != ClassJobType.Fisher">
 		<ChangeClass Job="Fisher"/>
 	</If>
@@ -42,9 +44,9 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644))">
+		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644) or HasItem(29644) or HasItem(30292) or HasItem(30303))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-			<BuyItem ItemId="29622" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29622" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
 		<While Condition="HasItem(29622)"><!-- Skysteel Fishing Rod -->
@@ -153,7 +155,109 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	
 	</Order>
-	<CodeChunks>
+	<CodeChunks>		
+		<CodeChunk Name="TurnIn">
+		<![CDATA[
+			Logging.Write("[Skysteel Handin] calling");
+			await LlamaLibrary.TesterBase.TurninSkySteelGathering();
+		]]>
+		</CodeChunk>		
+		<CodeChunk Name="ManualTurnIn">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Please manually turn in collectables and press start again.", TimeSpan.FromMilliseconds(10000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(3000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="EverSkyward">
+			<![CDATA[ 
+				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
+
+				if (!npcId.IsWithinInteractRange)
+				{
+					var _target = npcId.Location;
+					Navigator.PlayerMover.MoveTowards(_target);
+					while (_target.Distance2D(Core.Me.Location) >= 4)
+					{
+						Navigator.PlayerMover.MoveTowards(_target);
+						await Coroutine.Sleep(100);
+					}
+					Navigator.PlayerMover.MoveStop();
+				}
+
+				npcId.Interact();
+				
+				await Coroutine.Wait(5000, () => SelectIconString.IsOpen);
+				SelectIconString.ClickSlot(0);
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => SelectIconString.IsOpen);
+				SelectString.ClickSlot(1);
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+				JournalAccept.Accept();
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }				
+				
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="ToolsOfTomorrow">
+			<![CDATA[ 
+				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
+
+				if (!npcId.IsWithinInteractRange)
+				{
+					var _target = npcId.Location;
+					Navigator.PlayerMover.MoveTowards(_target);
+					while (_target.Distance2D(Core.Me.Location) >= 4)
+					{
+						Navigator.PlayerMover.MoveTowards(_target);
+						await Coroutine.Sleep(100);
+					}
+					Navigator.PlayerMover.MoveStop();
+				}
+
+				npcId.Interact();
+				
+				await Coroutine.Wait(5000, () => SelectIconString.IsOpen);
+				SelectIconString.ClickSlot(0);
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => SelectIconString.IsOpen);
+				SelectString.ClickSlot(1);
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+				JournalAccept.Accept();
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }				
+				
+			]]>
+		</CodeChunk>
 		<CodeChunk Name="Sort">
 			<![CDATA[ 
 				await Buddy.Coroutines.Coroutine.Sleep(1000);
