@@ -322,7 +322,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<EtxSellItem ItemIds="31130,31125"/>
+		<LLSellItem ItemIds="31130,31125"/>
 		
 	</If>
 	

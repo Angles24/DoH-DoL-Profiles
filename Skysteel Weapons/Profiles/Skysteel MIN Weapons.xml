@@ -9,7 +9,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	
 	<RunCode Name="Disable_Flight"/>
 	
-	<EtxSellItem ItemIds="31130,31125"/>
+	<LLSellItem ItemIds="31130,31125"/>
 	
 	<If Condition="ClassName != ClassJobType.Miner">
 		<ChangeClass Job="Miner"/>
@@ -327,7 +327,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<EtxSellItem ItemIds="31130,31125,31132,31127"/>
+		<LLSellItem ItemIds="31130,31125,31132,31127"/>
 		
 	</If>
 	

@@ -10,7 +10,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	
 	<RunCode Name="Enable_Flight"/>
 	
-	<EtxSellItem ItemIds="31130,31125,31132,31127"/>
+	<LLSellItem ItemIds="31130,31125,31132,31127"/>
 	
 	<If Condition="ClassName != ClassJobType.Fisher">
 		<ChangeClass Job="Fisher"/>
