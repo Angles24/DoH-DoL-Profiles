@@ -1,0 +1,2195 @@
+[
+  {
+    "Id": 1,
+    "Item": 5092,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 2,
+    "Item": 4696,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 3,
+    "Item": 5091,
+    "Amount": 7,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 4,
+    "Item": 5071,
+    "Amount": 7,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 5,
+    "Item": 4826,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 6,
+    "Item": 5510,
+    "Amount": 3,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 7,
+    "Item": 4728,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 8,
+    "Item": 5489,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 9,
+    "Item": 5361,
+    "Amount": 9,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 10,
+    "Item": 5275,
+    "Amount": 9,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 11,
+    "Item": 4850,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 12,
+    "Item": 5333,
+    "Amount": 28,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 13,
+    "Item": 5276,
+    "Amount": 8,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 14,
+    "Item": 4863,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 15,
+    "Item": 5487,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 16,
+    "Item": 5334,
+    "Amount": 4,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 17,
+    "Item": 5062,
+    "Amount": 19,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 18,
+    "Item": 4856,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 19,
+    "Item": 5056,
+    "Amount": 45,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 20,
+    "Item": 5063,
+    "Amount": 4,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 21,
+    "Item": 5364,
+    "Amount": 3,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 22,
+    "Item": 5503,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 23,
+    "Item": 4777,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 24,
+    "Item": 5590,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 25,
+    "Item": 5107,
+    "Amount": 2,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 26,
+    "Item": 4862,
+    "Amount": 2,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 27,
+    "Item": 5433,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 28,
+    "Item": 5447,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 29,
+    "Item": 4780,
+    "Amount": 2,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 30,
+    "Item": 5518,
+    "Amount": 8,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 31,
+    "Item": 5548,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 32,
+    "Item": 5434,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 33,
+    "Item": 4930,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 34,
+    "Item": 4785,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 35,
+    "Item": 5488,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 36,
+    "Item": 5341,
+    "Amount": 2,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 37,
+    "Item": 4751,
+    "Amount": 2,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 38,
+    "Item": 5197,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 39,
+    "Item": 5498,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 40,
+    "Item": 5380,
+    "Amount": 3,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 41,
+    "Item": 4782,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 42,
+    "Item": 5111,
+    "Amount": 4,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 43,
+    "Item": 5526,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 44,
+    "Item": 5560,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 45,
+    "Item": 4829,
+    "Amount": 5,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 46,
+    "Item": 4760,
+    "Amount": 2,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 47,
+    "Item": 5352,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 48,
+    "Item": 5106,
+    "Amount": 7,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 49,
+    "Item": 4828,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 50,
+    "Item": 5455,
+    "Amount": 2,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 51,
+    "Item": 4830,
+    "Amount": 4,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 52,
+    "Item": 5516,
+    "Amount": 36,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 53,
+    "Item": 5492,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 54,
+    "Item": 5319,
+    "Amount": 3,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 55,
+    "Item": 5442,
+    "Amount": 3,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 56,
+    "Item": 5383,
+    "Amount": 36,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 57,
+    "Item": 5402,
+    "Amount": 3,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 58,
+    "Item": 5291,
+    "Amount": 1,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 59,
+    "Item": 5318,
+    "Amount": 3,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 60,
+    "Item": 5292,
+    "Amount": 12,
+    "Type": "Purchase",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 61,
+    "Group": 1,
+    "Item": 5405,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 62,
+    "Group": 1,
+    "Item": 12888,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 63,
+    "Group": 1,
+    "Item": 4811,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 64,
+    "Group": 1,
+    "Item": 4837,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 65,
+    "Group": 1,
+    "Item": 5528,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 66,
+    "Group": 1,
+    "Item": 5551,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 67,
+    "Group": 1,
+    "Item": 5436,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 68,
+    "Group": 1,
+    "Item": 4792,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 69,
+    "Group": 1,
+    "Item": 4844,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 70,
+    "Group": 1,
+    "Item": 5543,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 71,
+    "Group": 1,
+    "Item": 4842,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 72,
+    "Group": 1,
+    "Item": 5465,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 73,
+    "Group": 1,
+    "Item": 4812,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 74,
+    "Group": 1,
+    "Item": 5542,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 75,
+    "Group": 1,
+    "Item": 5564,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 76,
+    "Group": 1,
+    "Item": 5386,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 77,
+    "Group": 1,
+    "Item": 5393,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 78,
+    "Group": 1,
+    "Item": 5414,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 79,
+    "Group": 1,
+    "Item": 4796,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 80,
+    "Group": 1,
+    "Item": 5388,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 81,
+    "Group": 1,
+    "Item": 5113,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 82,
+    "Group": 1,
+    "Item": 5535,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 83,
+    "Group": 1,
+    "Item": 5491,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 84,
+    "Group": 1,
+    "Item": 5359,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 85,
+    "Group": 1,
+    "Item": 4814,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 86,
+    "Group": 1,
+    "Item": 4788,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 87,
+    "Group": 1,
+    "Item": 4787,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 88,
+    "Group": 1,
+    "Item": 5524,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 89,
+    "Group": 1,
+    "Item": 4839,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 90,
+    "Group": 1,
+    "Item": 4843,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 91,
+    "Group": 1,
+    "Item": 6146,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 92,
+    "Group": 1,
+    "Item": 12642,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 93,
+    "Group": 1,
+    "Item": 12531,
+    "Amount": 12,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 94,
+    "Group": 1,
+    "Item": 12883,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 95,
+    "Group": 1,
+    "Item": 5403,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 96,
+    "Group": 1,
+    "Item": 12887,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 97,
+    "Group": 1,
+    "Item": 12579,
+    "Amount": 15,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 98,
+    "Group": 1,
+    "Item": 12535,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 99,
+    "Group": 1,
+    "Item": 12585,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 100,
+    "Group": 1,
+    "Item": 12885,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 101,
+    "Group": 1,
+    "Item": 12879,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 102,
+    "Group": 1,
+    "Item": 12893,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 103,
+    "Group": 1,
+    "Item": 12878,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 104,
+    "Group": 1,
+    "Item": 5444,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 105,
+    "Group": 1,
+    "Item": 5494,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 106,
+    "Group": 1,
+    "Item": 5322,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 107,
+    "Group": 1,
+    "Item": 4767,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 108,
+    "Group": 1,
+    "Item": 12875,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 109,
+    "Group": 1,
+    "Item": 12873,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 110,
+    "Group": 1,
+    "Item": 5321,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 111,
+    "Group": 1,
+    "Item": 5456,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 112,
+    "Group": 1,
+    "Item": 5300,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 113,
+    "Group": 1,
+    "Item": 4769,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 114,
+    "Group": 1,
+    "Item": 12630,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 115,
+    "Group": 1,
+    "Item": 5355,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 116,
+    "Group": 1,
+    "Item": 5320,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 117,
+    "Group": 1,
+    "Item": 12628,
+    "Amount": 10,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 118,
+    "Group": 1,
+    "Item": 12600,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 119,
+    "Group": 1,
+    "Item": 12876,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 120,
+    "Group": 1,
+    "Item": 4768,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 121,
+    "Group": 1,
+    "Item": 4775,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 122,
+    "Group": 1,
+    "Item": 5348,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 123,
+    "Group": 1,
+    "Item": 5435,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 124,
+    "Group": 1,
+    "Item": 4766,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 125,
+    "Group": 1,
+    "Item": 5553,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Grind",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 126,
+    "Group": 1,
+    "Item": 7594,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 127,
+    "Group": 1,
+    "Item": 6152,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 128,
+    "Group": 1,
+    "Item": 5350,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 129,
+    "Group": 1,
+    "Item": 12877,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 130,
+    "Group": 1,
+    "Item": 12936,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 131,
+    "Group": 1,
+    "Item": 12937,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 132,
+    "Group": 1,
+    "Item": 12901,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 133,
+    "Group": 1,
+    "Item": 12898,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 134,
+    "Group": 1,
+    "Item": 12882,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 135,
+    "Group": 2,
+    "Item": 5376,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 136,
+    "Group": 2,
+    "Item": 5374,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 137,
+    "Group": 2,
+    "Item": 1925,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 138,
+    "Group": 2,
+    "Item": 12580,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 139,
+    "Group": 2,
+    "Item": 12582,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 140,
+    "Group": 2,
+    "Item": 5371,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 141,
+    "Group": 2,
+    "Item": 5373,
+    "Amount": 8,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 142,
+    "Group": 2,
+    "Item": 5367,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 143,
+    "Group": 2,
+    "Item": 12581,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 144,
+    "Group": 2,
+    "Item": 12583,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Carpenter",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 145,
+    "Group": 3,
+    "Item": 5094,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 146,
+    "Group": 3,
+    "Item": 5059,
+    "Amount": 9,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 147,
+    "Group": 3,
+    "Item": 2349,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 148,
+    "Group": 3,
+    "Item": 12529,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 149,
+    "Group": 3,
+    "Item": 12525,
+    "Amount": 5,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 150,
+    "Group": 3,
+    "Item": 12524,
+    "Amount": 9,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 151,
+    "Group": 3,
+    "Item": 5058,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 152,
+    "Group": 3,
+    "Item": 12519,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 153,
+    "Group": 3,
+    "Item": 5099,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 154,
+    "Group": 3,
+    "Item": 5057,
+    "Amount": 5,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 155,
+    "Group": 3,
+    "Item": 12530,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 156,
+    "Group": 3,
+    "Item": 12518,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 157,
+    "Group": 3,
+    "Item": 5065,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 158,
+    "Group": 3,
+    "Item": 12526,
+    "Amount": 9,
+    "Enabled": true,
+    "Type": "Blacksmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 159,
+    "Group": 4,
+    "Item": 5084,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 160,
+    "Group": 4,
+    "Item": 5079,
+    "Amount": 7,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 161,
+    "Group": 4,
+    "Item": 2664,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 162,
+    "Group": 4,
+    "Item": 5083,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 163,
+    "Group": 4,
+    "Item": 5073,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 164,
+    "Group": 4,
+    "Item": 2802,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 165,
+    "Group": 4,
+    "Item": 5072,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 166,
+    "Group": 4,
+    "Item": 5089,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Armorer",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 167,
+    "Group": 5,
+    "Item": 5182,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 168,
+    "Group": 5,
+    "Item": 5185,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 169,
+    "Group": 5,
+    "Item": 5064,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 170,
+    "Group": 5,
+    "Item": 5068,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 171,
+    "Group": 5,
+    "Item": 5171,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 172,
+    "Group": 5,
+    "Item": 5196,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 173,
+    "Group": 5,
+    "Item": 5198,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 174,
+    "Group": 5,
+    "Item": 5066,
+    "Amount": 16,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 175,
+    "Group": 5,
+    "Item": 5194,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 176,
+    "Group": 5,
+    "Item": 5262,
+    "Amount": 7,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 177,
+    "Group": 5,
+    "Item": 12644,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 178,
+    "Group": 5,
+    "Item": 5184,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 179,
+    "Group": 5,
+    "Item": 12521,
+    "Amount": 5,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 180,
+    "Group": 5,
+    "Item": 12548,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 181,
+    "Group": 5,
+    "Item": 12520,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 182,
+    "Group": 5,
+    "Item": 12561,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 183,
+    "Group": 5,
+    "Item": 12522,
+    "Amount": 15,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 184,
+    "Group": 5,
+    "Item": 12545,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 185,
+    "Group": 5,
+    "Item": 12544,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 186,
+    "Group": 5,
+    "Item": 12549,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Goldsmith",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 187,
+    "Group": 6,
+    "Item": 5280,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 188,
+    "Group": 6,
+    "Item": 5285,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 189,
+    "Group": 6,
+    "Item": 5284,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 190,
+    "Group": 6,
+    "Item": 5282,
+    "Amount": 10,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 191,
+    "Group": 6,
+    "Item": 5277,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 192,
+    "Group": 6,
+    "Item": 12563,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 193,
+    "Group": 6,
+    "Item": 12565,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 194,
+    "Group": 6,
+    "Item": 12564,
+    "Amount": 5,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 195,
+    "Group": 6,
+    "Item": 12566,
+    "Amount": 5,
+    "Enabled": true,
+    "Type": "Leatherworker",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 196,
+    "Group": 7,
+    "Item": 5328,
+    "Amount": 7,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 197,
+    "Group": 7,
+    "Item": 5329,
+    "Amount": 7,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 198,
+    "Group": 7,
+    "Item": 5337,
+    "Amount": 7,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 199,
+    "Group": 7,
+    "Item": 5335,
+    "Amount": 11,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 200,
+    "Group": 7,
+    "Item": 12589,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 201,
+    "Group": 7,
+    "Item": 5326,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 202,
+    "Group": 7,
+    "Item": 5324,
+    "Amount": 10,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 203,
+    "Group": 7,
+    "Item": 5325,
+    "Amount": 9,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 204,
+    "Group": 7,
+    "Item": 12591,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 205,
+    "Group": 7,
+    "Item": 5327,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 206,
+    "Group": 7,
+    "Item": 12590,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 207,
+    "Group": 7,
+    "Item": 12594,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 208,
+    "Group": 7,
+    "Item": 12595,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 209,
+    "Group": 7,
+    "Item": 5336,
+    "Amount": 5,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 210,
+    "Group": 7,
+    "Item": 12596,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 211,
+    "Group": 7,
+    "Item": 12592,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Weaver",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 212,
+    "Group": 8,
+    "Item": 5522,
+    "Amount": 5,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 213,
+    "Group": 8,
+    "Item": 5485,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 214,
+    "Group": 8,
+    "Item": 5505,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 215,
+    "Group": 8,
+    "Item": 5472,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 216,
+    "Group": 8,
+    "Item": 5476,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 217,
+    "Group": 8,
+    "Item": 2147,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 218,
+    "Group": 8,
+    "Item": 12607,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 219,
+    "Group": 8,
+    "Item": 5471,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 220,
+    "Group": 8,
+    "Item": 4608,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 221,
+    "Group": 8,
+    "Item": 12603,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 222,
+    "Group": 8,
+    "Item": 5507,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 223,
+    "Group": 8,
+    "Item": 5506,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 224,
+    "Group": 8,
+    "Item": 5508,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 225,
+    "Group": 8,
+    "Item": 12614,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 226,
+    "Group": 8,
+    "Item": 12616,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 227,
+    "Group": 8,
+    "Item": 12615,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 228,
+    "Group": 8,
+    "Item": 12613,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Alchemist",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 229,
+    "Group": 9,
+    "Item": 4848,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 230,
+    "Group": 9,
+    "Item": 4861,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 231,
+    "Group": 9,
+    "Item": 4858,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 232,
+    "Group": 9,
+    "Item": 4756,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 233,
+    "Group": 9,
+    "Item": 4865,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 234,
+    "Group": 9,
+    "Item": 4852,
+    "Amount": 2,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 235,
+    "Group": 9,
+    "Item": 12894,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 236,
+    "Group": 9,
+    "Item": 12881,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 237,
+    "Group": 9,
+    "Item": 4859,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 238,
+    "Group": 9,
+    "Item": 4847,
+    "Amount": 6,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 239,
+    "Group": 9,
+    "Item": 4853,
+    "Amount": 1,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 240,
+    "Group": 9,
+    "Item": 4857,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Culinarian",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 241,
+    "Group": 10,
+    "Item": 4,
+    "Amount": 203,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 242,
+    "Group": 10,
+    "Item": 3,
+    "Amount": 90,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 243,
+    "Group": 10,
+    "Item": 6,
+    "Amount": 97,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 244,
+    "Group": 10,
+    "Item": 5,
+    "Amount": 127,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 245,
+    "Group": 10,
+    "Item": 10,
+    "Amount": 54,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 246,
+    "Group": 10,
+    "Item": 9,
+    "Amount": 19,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 247,
+    "Group": 10,
+    "Item": 12,
+    "Amount": 18,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 248,
+    "Group": 10,
+    "Item": 11,
+    "Amount": 31,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 249,
+    "Group": 10,
+    "Item": 13,
+    "Amount": 44,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 250,
+    "Group": 10,
+    "Item": 2,
+    "Amount": 145,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 251,
+    "Group": 10,
+    "Item": 8,
+    "Amount": 64,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 252,
+    "Group": 10,
+    "Item": 16,
+    "Amount": 8,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 253,
+    "Group": 10,
+    "Item": 15,
+    "Amount": 3,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 254,
+    "Group": 10,
+    "Item": 14,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 255,
+    "Group": 10,
+    "Item": 17,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 256,
+    "Group": 10,
+    "Item": 18,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  },
+  {
+    "Id": 257,
+    "Group": 10,
+    "Item": 19,
+    "Amount": 4,
+    "Enabled": true,
+    "Type": "Gather",
+    "AmountMode": "Restock"
+  }
+]
