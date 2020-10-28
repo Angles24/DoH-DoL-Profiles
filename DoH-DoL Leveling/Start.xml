@@ -5,12 +5,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY craft21 "1"><!-- Change this to 0 if you already have pre made gear set or if you finished making them after getting told to -->
-<!ENTITY craft40 "1">
-<!ENTITY craft51 "1">
-<!ENTITY craft63 "1">
 <!ENTITY craftClass "1"><!-- Just remember after you finished crafting you meld items before restarting. -->
-<!ENTITY craft70 "1">
 <!ENTITY crp "1">
 <!ENTITY bsm "1">
 <!ENTITY arm "1">
@@ -121,7 +116,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 							
 		<!-- Craft Gathering and Crafting Gear 21 -->
 			<If Condition="(&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 18) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 18) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 18) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 18) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 18) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 18) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 18) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 18) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 18) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 18)">
-				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft21 setting to 0 on start profile. Equip the latest gear and update your gearsets afterwards."/>
+				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft21"/>
 				<LLStopBot/>
 			</If>
@@ -231,7 +226,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		<!-- Craft Level 40 Gathering Gear -->
 			<If Condition="(&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 38) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 38)">
-				<LogMessage Message="Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft40 setting to 0 on start profile."/>
+				<LogMessage Message="Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft40"/>
 				<LLStopBot/>
 			</If>
@@ -285,7 +280,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				
 		<!-- Craft Gathering and Crafting Gear 51 -->
 			<If Condition="(&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 53) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 53) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 53) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 53) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 53) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 53) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 53) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 53) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 58) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 58)">
-				<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft51 setting to 0 on start profile."/>
+				<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft51"/>
 				<LLStopBot/>
 			</If>
@@ -444,7 +439,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		<!-- Craft Gathering and Crafting Gear 63 -->
 			<If Condition="(&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 198) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 198) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 198) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 198) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 198) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 198) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 198) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 198) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 198) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 198)">
-				<LogMessage Message="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and set craft63 setting to 0 on start profile."/>
+				<LogMessage Message="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft63"/>
 				<LLStopBot/>
 			</If>
@@ -731,7 +726,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 
 		<!-- Farm Yellow Scrip Level 70 Gear -->
 			<If Condition="(&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 348) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 348) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 348) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 348) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 348) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 348) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 348) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 348) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 348) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 348)">
-				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and set craft70 setting to 0 on start profile."/>
+				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft70"/>
 				<LLStopBot/>
 			</If>
@@ -992,25 +987,25 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</CodeChunk>
 		<CodeChunk Name="craft21">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 21 craft and gather gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft21 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 21 craft and gather gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="craft40">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 40 gathering gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft40 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 40 gathering gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="craft51">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 51 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft51 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 51 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="craft63">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 63 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n set craft63 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Craft level 63 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
@@ -1028,7 +1023,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</CodeChunk>
 		<CodeChunk Name="craft70">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Get level 70 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to get and\n set craft70 setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Get level 70 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to get and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
