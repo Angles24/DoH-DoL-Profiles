@@ -345,6 +345,10 @@ Angles24
 			</If>
 		</If>
 		<!--End Edgyth's Winning Streak-->
+    
+    <If Condition="HasItem(17945) or HasItem(17946) or HasItem(17947) or HasItem(17948)">
+      <LLSellItem ItemIds="17945,17946,17947,17948"/>
+    </If>
 	</If>
 	
 	<LLoadProfile Path="../Start.xml"/>
