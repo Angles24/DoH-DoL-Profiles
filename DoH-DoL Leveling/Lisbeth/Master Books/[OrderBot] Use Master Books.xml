@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+  <Name>Use Master Books</Name>
+  <Order>
+    <RunCode Name="UseBooks"/>
+  </Order>
+  <CodeChunks>
+    <CodeChunk Name="UseBooks">
+      <![CDATA[
+            await Coroutine.Sleep(3000);
+            await Coroutine.Wait(30000, () => !Core.Me.IsCasting && !ff14bot.Behavior.CommonBehaviors.IsLoading && !QuestLogManager.InCutscene);
+            await Coroutine.Sleep(2000);
+
+            List<BagSlot> items = InventoryManager.FilledSlots
+                                                  .Where(bs => bs.EnglishName.StartsWith("Master")
+                                                               && (bs.EnglishName.EndsWith("I") || bs.EnglishName.EndsWith("V"))
+                                                               && bs.Item.ItemAction > 0
+                                                               && bs.CanUse())
+                                                  .ToList();
+
+            if (items.Any())
+            {
+                foreach (var slot in items)
+                {
+                    Logging.Write("Using: {0}", slot.Name);
+                    slot.UseItem();
+                    if (await Coroutine.Wait(4500, () => Core.Me.IsCasting))
+                    {
+                        await Coroutine.Wait(5000, () => !Core.Me.IsCasting);
+                        await Coroutine.Sleep(2500);
+                    }
+                }
+            }
+	]]>
+    </CodeChunk>
+  </CodeChunks>
+</Profile>
