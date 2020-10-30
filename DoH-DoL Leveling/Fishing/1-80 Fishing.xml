@@ -17,7 +17,7 @@ Angles24
 		
 	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
 
-	<RunCode Name="Enable_Flight"/>
+  <RunCode Name="Disable_Flight"/>
 			
 	<While Condition="not IsQuestCompleted(65688)">
 		<If Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian) and (not Core.Player.ClassLevel &gt; 29)">
@@ -68,8 +68,7 @@ Angles24
 						<ChangeClass Job="Fisher"/>
 					</If>
 					<If Condition="ClassName == ClassJobType.Fisher">
-						<RunCode Name="AutoEquip"/>
-						<RunCode Name="UpdateGearSet"/>
+						<AutoInventoryEquip/>
 					</If>
 				</If>
 			</If>
@@ -174,7 +173,6 @@ Angles24
 			<If Condition="&EXPManuals; == 1">
 				
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -190,7 +188,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66645)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66645)">
@@ -232,7 +229,6 @@ Angles24
 		<While Condition="not IsQuestCompleted(66646) and Core.Me.Levels[ClassJobType.Fisher] &gt; 9 and IsQuestCompleted(66645)">
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -248,7 +244,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66646)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66646)">
@@ -291,13 +286,11 @@ Angles24
 		</While>
 	<!--End The Princess and the Fish-->
 
-	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 20 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 20">
 		<If Condition="&EXPManuals; == 1">
 			<While Condition="not HasAtLeast(12668,1)">
-				<RunCode Name="Disable_Flight"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
 			<While Condition="ClassName != ClassJobType.Fisher">
@@ -307,7 +300,6 @@ Angles24
 				<RunCode Name="CSManual"/>
 			</While>
 		</If>
-		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -322,11 +314,8 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 20 and HasAtLeast(29717,5)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<RunCode Name="Disable_Flight"/>
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
-				<RunCode Name="Enable_Flight"/>
 			</While>
-			<RunCode Name="Disable_Flight"/>
 			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 20 and HasAtLeast(29717,1)">
 				<FishSpots>
@@ -363,7 +352,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -379,7 +367,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66647)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66647)">
@@ -407,16 +394,16 @@ Angles24
 					<While Condition="not NqHasAtLeast(4882,5)">
 						<If Condition="not HasAtLeast(2591,10)">
 							<LisbethTravel Zone="138" Position="240.2533, -24.99897, 231.4336"/>
-							<BuyItem ItemId="2591" ItemCount="25" DialogOption="2" NpcId="1003264" XYZ="240.2533, -24.99897, 231.4336"/>
+							<BuyItem ItemId="2591" ItemCount="75" DialogOption="2" NpcId="1003264" XYZ="240.2533, -24.99897, 231.4336"/>
 						</If>
-						<LisbethTravel Zone="138" Position="488.4257, 11.5766, 344.7761"/>
+						<LisbethTravel Zone="138" Subzone="170" Position="451.0222, 10.45387, 433.024"/>
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
 						<ExFish Stealth="True" Mooch="0" Bait="Rat Tail" MinFish="15" MaxFish="25" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4882,5)">
 							<FishSpots>
-								<FishSpot XYZ="454.892, 11.20673, 447.12" Heading="1.12"/>
-								<FishSpot XYZ="436.8279, 12.02531, 439.6364" Heading="4.85"/>
+								<FishSpot XYZ="456.7867, 10.52981, 443.5609" Heading="1.257315"/>
+								<FishSpot XYZ="437.7345, 11.78907, 438.7166" Heading="4.229977"/>
 							</FishSpots>
 						</ExFish>
 					</While>
@@ -452,7 +439,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -468,7 +454,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66648)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66648)">
@@ -510,13 +495,11 @@ Angles24
 		</While>
 	<!--End A Fish in Hot Water-->
 
-	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 40 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 40">
 		<If Condition="&EXPManuals; == 1">
 			<While Condition="not HasAtLeast(12668,1)">
-				<RunCode Name="Disable_Flight"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
 			<While Condition="ClassName != ClassJobType.Fisher">
@@ -526,7 +509,6 @@ Angles24
 				<RunCode Name="CSManual"/>
 			</While>
 		</If>
-		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -541,11 +523,8 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 40 and HasAtLeast(29717,5)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<RunCode Name="Disable_Flight"/>
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
-				<RunCode Name="Enable_Flight"/>
 			</While>
-			<RunCode Name="Disable_Flight"/>
 			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 40 and HasAtLeast(29717,1)">
 				<FishSpots>
@@ -582,7 +561,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -598,7 +576,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66649)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66649)">
@@ -650,7 +627,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -666,7 +642,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66650)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66650)">
@@ -739,7 +714,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -755,7 +729,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66651)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66651)">
@@ -814,7 +787,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -830,7 +802,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66652)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66652)">
@@ -874,13 +845,11 @@ Angles24
 		</While>
 	<!--End Fishing In The Rain -->
 
-	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 51 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 51">
 		<If Condition="&EXPManuals; == 1">
 			<While Condition="not HasAtLeast(12668,1)">
-				<RunCode Name="Disable_Flight"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
 			<While Condition="ClassName != ClassJobType.Fisher">
@@ -890,7 +859,6 @@ Angles24
 				<RunCode Name="CSManual"/>
 			</While>
 		</If>
-		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -905,11 +873,8 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 51 and HasAtLeast(29717,5)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<RunCode Name="Disable_Flight"/>
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
-				<RunCode Name="Enable_Flight"/>
 			</While>
-			<RunCode Name="Disable_Flight"/>
 			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 51 and HasAtLeast(29717,1)">
 				<FishSpots>
@@ -946,7 +911,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -962,7 +926,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66653)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66653)">
@@ -1024,7 +987,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1040,7 +1002,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(66654)">
 				<LisbethTravel Zone="129" Position="-165.2705, 5.250006, 164.2938"/>
 				<If Condition="IsQuestAcceptQualified(66654)">
@@ -1143,13 +1104,11 @@ Angles24
 		</While>
 	<!--End Plenty More Fish in the Sea-->
 
-	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 63 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 63">
 		<If Condition="&EXPManuals; == 1">
 			<While Condition="not HasAtLeast(12668,1)">
-				<RunCode Name="Disable_Flight"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
 			<While Condition="ClassName != ClassJobType.Fisher">
@@ -1159,7 +1118,6 @@ Angles24
 				<RunCode Name="CSManual"/>
 			</While>
 		</If>
-		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -1174,11 +1132,8 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 63 and HasAtLeast(29717,5)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<RunCode Name="Disable_Flight"/>
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
-				<RunCode Name="Enable_Flight"/>
 			</While>
-			<RunCode Name="Disable_Flight"/>
 			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 63 and HasAtLeast(29717,1)">
 				<FishSpots>
@@ -1215,7 +1170,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1231,7 +1185,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67622)">
 				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<LLPickupQuest NpcId="1013250" QuestId="67622" XYZ="100.3585, 15.00001, 24.3075"/>
@@ -1245,10 +1198,8 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(67622) == 255">
 					<While Condition="not HqHasAtLeast(12713,3)">
-						<If Condition="not IsOnMap(397)">
-							<LisbethTravel Zone="397" Position="474.8097, 212.5399, 721.9003"/>
-						</If>
 						<If Condition="not HasAtLeast(12704,10)">
+              <LisbethTravel Zone="397" Subzone="2204" Position="499.8187, 212.5399, 716.6222"/>
 							<NoCombatMoveTo Name="Independent Merchant" XYZ="504.5396, 212.7327, 718.5625"/>
 							<BuyItem ItemId="12704" ItemCount="99" DialogOption="4" NpcId="1011228" XYZ="504.5396, 212.7327, 718.5625"/>
 						</If>
@@ -1286,7 +1237,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1302,7 +1252,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67623)">
 				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<If Condition="IsQuestAcceptQualified(67623)">
@@ -1324,10 +1273,8 @@ Angles24
 				<If Condition="GetQuestStep(67623) == 3">
 					<While Condition="not HqHasAtLeast(12769,3)">
 						<If Condition="not HasAtLeast(12711,10)">
-							<RunCode Name="Disable_Flight"/>
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
-						<RunCode Name="Enable_Flight"/>
 						<If Condition="ClassName != ClassJobType.Fisher">
 							<ChangeClass Job="Fisher"/>
 						</If>
@@ -1373,7 +1320,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1389,7 +1335,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67624)">
 				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<If Condition="IsQuestAcceptQualified(67624)">
@@ -1404,14 +1349,12 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(67624) == 2">
-					<RunCode Name="Disable_Flight"/>
 					<LisbethTravel Zone="400" Position="406.7596, -73.59544, 702.571"/>
 					<LLTalkTo QuestId="67624" StepId="2" NpcId="1012079" XYZ="406.7596, -73.59544, 702.571"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LisbethTravel Zone="400" Position="255.1211, -42.15409, 586.8893"/>
 				</If>
 				<If Condition="GetQuestStep(67624) == 3">
-					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="400" Position="441.306, -29.3383, 218.1277"/>
 					<LLTalkTo QuestId="67624" StepId="3" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -1419,10 +1362,8 @@ Angles24
 				<If Condition="GetQuestStep(67624) == 4">
 					<While Condition="not HqHasAtLeast(12793,1)">
 						<If Condition="not HasAtLeast(12712,10)">
-							<RunCode Name="Disable_Flight"/>
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12712,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
-						<RunCode Name="Enable_Flight"/>
 						<If Condition="ClassName != ClassJobType.Fisher">
 							<ChangeClass Job="Fisher"/>
 						</If>
@@ -1430,11 +1371,10 @@ Angles24
 							<LisbethTravel Zone="400" Position="252.6177, -42.16244, 590.2133"/>
 						</If>
 						<LisbethTravel Zone="400" Position="440.869, -29.54482, 218.6229"/>
-						<RunCode Name="Disable_Flight"/>
 						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Bait="Giant Crane Fly" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12712,10) and not HqHasAtLeast(12793,1)"><!-- Letter Puffer -->
 							<FishSpots>
-								<FishSpot XYZ="447.4596, -31.1029, 221.3827" Heading="0.8094413"/>
-								<FishSpot XYZ="486.9679, -15.76843, 197.2486" Heading="0.476438"/>
+								<FishSpot XYZ="444.9158, -31.74853, 222.8789" Heading="0.5723944"/>
+                <FishSpot XYZ="452.3007, -29.60526, 217.5842" Heading="0.6325054"/>
 							</FishSpots>
 						</ExFish>
 					</While>
@@ -1470,7 +1410,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1486,7 +1425,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(67625)">
 				<LisbethTravel Zone="418" Position="100.3585, 15.00001, 24.3075"/>
 				<If Condition="IsQuestAcceptQualified(67625)">
@@ -1511,19 +1449,15 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(67625) == 4">
-					<RunCode Name="Disable_Flight"/>
 					<LisbethTravel Area="The Sea of Clouds" Position="420.2487, -186.5173, 814.2061"/>
 					<LLHandOver ItemId="2001721" QuestId="67625" StepId="4" NpcId="1013829" XYZ="420.2487, -186.5173, 814.2061"/>
 					<LLSmallTalk WaitTime="1500"/>
-					<RunCode Name="Enable_Flight"/>
 				</If>
 				<If Condition="GetQuestStep(67625) == 255">
 					<While Condition="not HqHasAtLeast(12829,1)">
 						<If Condition="not HasAtLeast(12711,10)">
-							<RunCode Name="Disable_Flight"/>
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
-						<RunCode Name="Enable_Flight"/>
 						<If Condition="ClassName != ClassJobType.Fisher">
 							<ChangeClass Job="Fisher"/>
 						</If>
@@ -1615,13 +1549,11 @@ Angles24
 			</If>
 		</If>
 		<If Condition="HasQuest(68458) and not IsQuestCompleted(68458) and GetQuestStep(68458) == 255">
-			<RunCode Name="Disable_Flight"/>
 			<TeleportTo Name="Tamamizu" AetheryteId="105" Force="True"/>
 			<NoCombatMoveTo XYZ="327.994, -120.3422, -306.8709"/>
 			<RunCode Name="Move_Forward"/>
 			<WaitTimer WaitTime="5"/>
-			<RunCode Name="Enable_Flight"/>
-			<NoCombatMoveTo XYZ="294.1786, -98.43597, -413.3516"/>
+			<LisbethTravel Zone="613" Subzone="2750" Position="294.2591, -98.5356, -412.8039"/>
 			<LLTurnIn QuestId="68458" NpcId="1023621" XYZ="294.1786, -98.43597, -413.3516"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<WaitTimer WaitTime="2"/>
@@ -1640,7 +1572,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1656,7 +1587,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68432)">
 				<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 				<If Condition="IsQuestAcceptQualified(68432)">
@@ -1672,13 +1602,11 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(68432) == 2">
 					<While Condition="not (NqHasAtLeast(17949,3) or HqHasAtLeast(17949,3))">
-						<If Condition="not IsOnMap(612)">
-							<LisbethTravel Zone="612" Position="474.8097, 212.5399, 721.9003"/>
-						</If>
 						<If Condition="not HasAtLeast(20613,50)">
-							<NoCombatMoveTo Name="Independent Merchant" XYZ="-634.1802, 130.086, -526.0853"/>
+							<LisbethTravel Zone="612" Subzone="2613" Position="-632.6987, 130.1143, -523.9323"/>
 							<BuyItem ItemId="20613" ItemCount="99" DialogOption="6" NpcId="1019513" XYZ="-634.1802, 130.086, -526.0853"/>
 						</If>
+            <LisbethTravel Zone="612" Subzone="2601" Position="-227.2903, 59.35556, -635.7797"/>
 						<ExFish Stealth="True" Bait="Salmon Roe" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not (NqHasAtLeast(17949,3) or HqHasAtLeast(17949,3)) and HasAtLeast(20613,10)">
 							<FishSpots>
 								<FishSpot XYZ="-226.8359, 59.29554, -636.3755" Heading="1.404261"/>
@@ -1708,13 +1636,11 @@ Angles24
 		</While>
 	<!--End A Rousing Reunion-->
 	
-	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 70 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70">
 		<If Condition="&EXPManuals; == 1">
 			<While Condition="not HasAtLeast(12668,1)">
-				<RunCode Name="Disable_Flight"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
 			<While Condition="ClassName != ClassJobType.Fisher">
@@ -1724,7 +1650,6 @@ Angles24
 				<RunCode Name="CSManual"/>
 			</While>
 		</If>
-		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -1739,11 +1664,8 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and HasAtLeast(29717,5)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<RunCode Name="Disable_Flight"/>
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
-				<RunCode Name="Enable_Flight"/>
 			</While>
-			<RunCode Name="Disable_Flight"/>
 			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and HasAtLeast(29717,1)">
 				<FishSpots>
@@ -1780,7 +1702,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1796,7 +1717,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68433)">
 				<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 				<If Condition="IsQuestAcceptQualified(68433)">
@@ -1817,12 +1737,10 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(68433) == 3">
-					<RunCode Name="Disable_Flight"/>
 					<TeleportTo Name="Onokoro" Force="True" AetheryteId="106"/>
 					<LisbethTravel Area="The Ruby Sea" Position="524.5593, -0.007716715, -244.8616"/>
 					<LLTalkTo QuestId="68433" StepId="3" NpcId="1021402" XYZ="524.5593, -0.007716715, -244.8616"/>
 					<LLSmallTalk WaitTime="1500"/>
-					<RunCode Name="Enable_Flight"/>
 				</If>
 				<If Condition="GetQuestStep(68433) == 4">
 					<While Condition="not HqHasAtLeast(17950,3)">
@@ -1845,11 +1763,9 @@ Angles24
 						</ExFish>
 					</While>
 					<If Condition="HqHasAtLeast(17950,3)">
-						<RunCode Name="Disable_Flight"/>
 						<LisbethTravel Zone="613" Subzone="2767" Position="524.2776, -0.01325494, -245.0822"/>
 						<LLHandOver ItemId="17950" RequiresHq="true" StepId="4" QuestId="68433" NpcId="1021402" XYZ="524.5593, -0.007716715, -244.8616"/>
 						<LLSmallTalk WaitTime="1500"/>
-						<RunCode Name="Enable_Flight"/>
 						<WaitTimer WaitTime="2"/>
 					</If>
 				</If>
@@ -1878,7 +1794,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
@@ -1894,7 +1809,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68434)">
 				<LisbethTravel Zone="129" Position="-155.108, 4.070978, 202.7161"/>
 				<If Condition="IsQuestAcceptQualified(68434)">
@@ -1932,9 +1846,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(68434) == 5">
 					<If Condition="not HqHasAtLeast(17951,3)">
-						<LisbethTravel Zone="614" Position="473.6446, 70.4106, -46.08875"/>
-						<NoCombatMoveTo XYZ="-560.9194, 36.27979, 647.9481"/>
-						<RunCode Name="GoSwimming"/>
+						<LisbethTravel Zone="614" Subzone="2753" Position="-506.9365, -72.31187, 674.6205"/>
 					</If>
 					<RunCode Name="TruthOfOceans"/>
 					<RunCode Name="Fathom"/>
@@ -1961,8 +1873,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 					</While>
 					<If Condition="HqHasAtLeast(17951,3)">
-						<LisbethTravel Zone="614" Position="473.6446, 70.4106, -46.08875"/>
-						<NoCombatMoveTo XYZ="703.4661, 2.646878, 514.4102"/>
+						<LisbethTravel Zone="614" Position="703.4661, 2.646878, 514.4102"/>
 						<LLHandOver ItemIds="17951" RequiresHq="True" NpcId="1021409" XYZ="703.1814, 2.949344, 513.6339" QuestId="68434" StepId="5"/>
 						<LLSmallTalk WaitTime="1500"/>
 						<WaitTimer WaitTime="2"/>
@@ -2005,7 +1916,6 @@ Angles24
 			</If>
 			<If Condition="&EXPManuals; == 1">
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
-					<RunCode Name="Disable_Flight"/>
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -2015,7 +1925,6 @@ Angles24
 					<RunCode Name="RSManual"/>
 				</While>
 			</If>
-			<RunCode Name="Enable_Flight"/>
 			<If Condition="not HasQuest(68435)">
 				<LisbethTravel Zone="129" Position="-154.8356, 3.999995, 199.8452"/>
 				<If Condition="IsQuestAcceptQualified(68435)">
@@ -2069,13 +1978,11 @@ Angles24
 		</While>
 	<!--End Farewell, and Thanks for the Fish-->
 	
-	<RunCode Name="Disable_Flight"/>
 	
 	<!--Start - Level 80 Grind-->
 	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 80">
 		<If Condition="&EXPManuals; == 1">
 			<While Condition="not HasAtLeast(26553,1)">
-				<RunCode Name="Disable_Flight"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 			</While>
 			<While Condition="ClassName != ClassJobType.Fisher">
@@ -2085,7 +1992,6 @@ Angles24
 				<RunCode Name="RSManual"/>
 			</While>
 		</If>
-		<RunCode Name="Enable_Flight"/>
 		<While Condition="not HasAtLeast(29717,5)">
 			<While Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -2100,11 +2006,8 @@ Angles24
 		</While>
 		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and HasAtLeast(29717,5)">
 			<While Condition="WorldManager.ZoneId != 901">
-				<RunCode Name="Disable_Flight"/>
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
-				<RunCode Name="Enable_Flight"/>
 			</While>
-			<RunCode Name="Disable_Flight"/>
 			<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and HasAtLeast(29717,1)">
 				<FishSpots>
@@ -2143,16 +2046,16 @@ Angles24
 	<CodeChunks>
 		<CodeChunk name="Leave">
 			<![CDATA[
-				if (DutyManager.InInstance)
-				{
-				DutyManager.LeaveActiveDuty();
-				if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
-				{
-				await Coroutine.Yield();
-				await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
-				await Coroutine.Sleep(1000);
-				}
-				}
+            if (DutyManager.InInstance)
+            {
+                DutyManager.LeaveActiveDuty();
+                if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+                {
+                    await Coroutine.Yield();
+                    await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+                    await Coroutine.Sleep(1000);
+                }
+            }
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="TurnIn">
@@ -2206,30 +2109,6 @@ Angles24
 				ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
 			]]>
 		</CodeChunk>
-		<CodeChunk Name="FSHWeapon">
-			<![CDATA[ 
-				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
-				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
-				{
-					if(slot.RawItemId == 2580)
-					{
-						slot.Move(EquipSlot);
-					}
-				}
-			]]>
-		</CodeChunk>
-		<CodeChunk Name="Enable_Flight">
-			<![CDATA[
-				foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
-				{
-				try
-				{
-				if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
-				}
-				catch (Exception ex) {  }
-				}
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="Disable_Flight">
 			<![CDATA[
 				foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
@@ -2276,18 +2155,6 @@ Angles24
 				await Coroutine.Sleep(500);
 			]]>
 		</CodeChunk>
-		<CodeChunk Name="SPEARWeapon">
-			<![CDATA[ 
-				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.OffHand];
-				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
-				{
-					if(slot.RawItemId == 17726)
-					{
-						slot.Move(EquipSlot);
-					}
-				}
-			]]>
-		</CodeChunk>
 		<CodeChunk Name="SwitchDoHJob">
 			<![CDATA[ 
 				var DoH = Enumerable.Range(8, 7);
@@ -2297,20 +2164,6 @@ Angles24
 				{
 					gearSets.First().Activate();
 					await Coroutine.Sleep(2000);
-				}
-			]]>
-		</CodeChunk>
-		<CodeChunk name="Leave">
-			<![CDATA[
-				if (DutyManager.InInstance)
-				{
-				DutyManager.LeaveActiveDuty();
-				if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
-				{
-				await Coroutine.Yield();
-				await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
-				await Coroutine.Sleep(1000);
-				}
 				}
 			]]>
 		</CodeChunk>

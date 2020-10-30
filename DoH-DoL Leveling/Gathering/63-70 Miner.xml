@@ -333,6 +333,10 @@ Angles24
 			</If>
 		</If>
 		<!--End A Miner Success-->
+    
+    <If Condition="HasItem(17941) or HasItem(17942) or HasItem(17943) or HasItem(17944)">
+      <LLSellItem ItemIds="17941,17942,17943,17944"/>
+    </If>
 	</If>
 	
 	<LLoadProfile Path="../Start.xml"/>
