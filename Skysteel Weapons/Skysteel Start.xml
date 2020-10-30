@@ -84,14 +84,14 @@ Required: LLamaLibrary BotBase
 	
 	
 
-	<LogMessage Message="Congrats on getting all the SKysteel Weapons you wanted."/>
+	<LogMessage Message="Congrats on getting all the Skysteel Weapons you wanted."/>
 	<RunCode Name="finish"/>
 	
 	</Order>
 	<CodeChunks>
 		<CodeChunk Name="finish">
 		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Congrats on getting all the SKysteel Weapons you wanted.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Congrats on getting all the Skysteel Weapons you wanted.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(40000);
 		]]>
 		</CodeChunk>
