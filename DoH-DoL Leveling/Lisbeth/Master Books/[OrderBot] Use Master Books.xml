@@ -7,20 +7,19 @@
   <CodeChunks>
     <CodeChunk Name="UseBooks">
       <![CDATA[
+            await LlamaLibrary.Helpers.GeneralFunctions.StopBusy();
             await Coroutine.Sleep(3000);
-            await Coroutine.Wait(30000, () => !Core.Me.IsCasting && !ff14bot.Behavior.CommonBehaviors.IsLoading && !QuestLogManager.InCutscene);
-            await Coroutine.Sleep(2000);
 
-            List<BagSlot> items = InventoryManager.FilledSlots
-                                                  .Where(bs => bs.EnglishName.StartsWith("Master")
-                                                               && (bs.EnglishName.EndsWith("I") || bs.EnglishName.EndsWith("V"))
-                                                               && bs.Item.ItemAction > 0
-                                                               && bs.CanUse())
+            List<BagSlot> books = InventoryManager.FilledSlots
+                                                  .Where(bs => bs.Item.ItemAction > 0
+                                                               && bs.CanUse()
+                                                               && ((bs.EnglishName.StartsWith("Master") && (bs.EnglishName.EndsWith("I") || bs.EnglishName.EndsWith("V")))
+                                                                   || (bs.EnglishName.StartsWith("Tome of Botanical") || bs.EnglishName.StartsWith("Tome of Geological") || bs.EnglishName.StartsWith("Tome of Ichthyological"))))
                                                   .ToList();
 
-            if (items.Any())
+            if (books.Any())
             {
-                foreach (var slot in items)
+                foreach (var slot in books)
                 {
                     Logging.Write("Using: {0}", slot.Name);
                     slot.UseItem();
