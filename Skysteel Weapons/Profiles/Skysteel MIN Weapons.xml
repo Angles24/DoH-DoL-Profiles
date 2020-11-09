@@ -18,14 +18,14 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
-				<LisbethTravel Zone="418" Position="150.3899, -20, 64.72313"/>
+				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
 				<If Condition="IsQuestAcceptQualified(69384)">
 					<LLPickupQuest NpcId="1032897" DialogOption="0" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
-				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
@@ -35,7 +35,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
 			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
-				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69385)">
 					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -44,7 +44,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		</If>
 		
 		<If Condition="not (HasItem(29621) or HasItem(29632) or HasItem(29643) or HasItem(29643) or HasItem(30291) or HasItem(30302))">
-			<LisbethTravel Zone="418" Position="-161.5168, 16.99999, -57.14508"/>
+			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29621" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
@@ -106,7 +106,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</ExGather>
 			</If>-->
 			<While Condition="HasItem(29621) and HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29621">
 					<ChangeClass Job="Miner"/>
 					<WaitTimer WaitTime="3"/>
@@ -186,7 +186,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</ExGather>
 			</If>-->
 			<While Condition="HasItem(29632) and HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29632">
 					<ChangeClass Job="Miner"/>
 					<WaitTimer WaitTime="3"/>
@@ -210,7 +210,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<WaitTimer WaitTime="3"/>
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
-				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -220,25 +220,25 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
 			<If Condition="not HasQuest(69428) and not IsQuestCompleted(69428) and IsQuestCompleted(69384)">
-				<LisbethTravel Zone="418" Position="-163.47, 16.97958, -29.31262"/>
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
 				<If Condition="IsQuestAcceptQualified(69428)">
 					<LLPickupQuest NpcId="1032898" QuestId="69428" XYZ="-163.47, 16.97958, -29.31262"/>
 					<LLSmallTalk/>
 				</If>
 			</If>
 			<If Condition="HasQuest(69428) and not IsQuestCompleted(69428) and GetQuestStep(69428) == 255">
-				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLTurnIn QuestId="69428" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk/>
 			</If>
 		</If>
 		<While Condition="not HasQuest(69429) and HasItem(29643)">
-			<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 			<RunCode Name="EverSkyward"/>
 		</While>
 		<If Condition="HasQuest(69429) and HasItem(29643) and GetQuestStep(69429) == 255">
 			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
@@ -248,7 +248,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<Lisbeth Json="[{'Group':1,'Item':31128,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31127,'Amount':500,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
 			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
@@ -258,7 +258,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31127,'Amount':500,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
 			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
@@ -268,24 +268,24 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31128,'Amount':180,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
 			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="HasAtLeast(30335,50) and HasAtLeast(31128,180)">
-				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<ChangeClass Job="Miner" force="True"/>
 				<LLTurnIn QuestId="69429" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk/>
 			</If>
 		</If>
 		<While Condition="not HasQuest(69430) and HasItem(30291)">	
-			<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 			<RunCode Name="ToolsOfTomorrow"/>
 		</While>
 		<If Condition="HasQuest(69430) and HasItem(30291) and GetQuestStep(69430) == 255">
 			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
@@ -295,7 +295,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<Lisbeth Json="[{'Group':1,'Item':31133,'Amount':200,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31132,'Amount':600,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
 			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
@@ -305,7 +305,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31132,'Amount':600,'Enabled':true,'Type':'Gather','Hq':true}]"/>
 			</If>
 			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
@@ -315,12 +315,12 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31133,'Amount':200,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
 			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
-				<LisbethTravel Zone="418" Position="-160.8965, 17.06712, -55.63131"/>				
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
 			</If>
 			<If Condition="HasAtLeast(30337,60) and HasAtLeast(31133,200)">
-				<LisbethTravel Zone="418" Position="-165.3315, 16.97958, -30.53339"/>
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<ChangeClass Job="Miner" force="True"/>
 				<LLTurnIn QuestId="69430" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk/>
