@@ -115,7 +115,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			
 							
 		<!-- Craft Gathering and Crafting Gear 21 -->
-			<If Condition="(&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 18) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 18) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 18) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 18) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 18) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 18) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 18) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 18) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 18) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 18)">
+			<If Condition="(&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 17) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 17) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 17) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 17) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 17) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 17) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 17) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 17) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 17) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 17)">
 				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft21"/>
 				<LLStopBot/>
