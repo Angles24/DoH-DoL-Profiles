@@ -23,7 +23,7 @@ Angles24
 		<If Condition="not IsQuestCompleted(65547)">
 			<If Condition="not HasQuest(65547)">
 				<LogMessage Message="Picking Up Level 40 - Crisis of Faith."/>
-				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65547)">
 					<LLPickupQuest NpcId="1000815" QuestId="65547" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -36,18 +36,18 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(65547) == 1">
 				<If Condition="HqHasAtLeast(4792,20)">
-					<LisbethTravel Zone="133" Position="-233.54, 6.246956, -170.5644"/>
+					<GetTo ZoneId="133" XYZ="-233.54, 6.246956, -170.5644"/>
 					<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65547) == 2">
-				<LisbethTravel Zone="133" Position="-239.5238, 8, -146.7241"/>
+				<GetTo ZoneId="133" XYZ="-239.5238, 8, -146.7241"/>
 				<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="2" NpcId="1000775" InteractDistance="1.0" XYZ="-239.5238, 8, -146.7241"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(65547) == 255">
-				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<LLTurnIn ItemId="2000569" QuestId="65547" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 40 - Crisis of Faith - Completed."/>
@@ -75,14 +75,14 @@ Angles24
 		<If Condition="IsQuestCompleted(65547) and not IsQuestCompleted(65548)">
 			<If Condition="not HasQuest(65548)">
 				<LogMessage Message="Picking Up Level 45 - Botanist in a Bind."/>
-				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65548)">
 					<LLPickupQuest NpcId="1000815" QuestId="65548" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65548) == 1">
-				<LisbethTravel Zone="132" Position="-56.474, -1.717168, 9.29583"/>
+				<GetTo ZoneId="132" XYZ="-56.474, -1.717168, 9.29583"/>
 				<LLTalkTo InteractDistance="3.0" NpcId="1000193" XYZ="-56.474, -1.717168, 9.29583"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -93,7 +93,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(65548) == 255">
 				<If Condition="HqHasAtLeast(5536,20)">
-					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
+					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn ItemId="5536" RequiresHq="true" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 45 - Botanist in a Bind - Completed."/>
@@ -122,7 +122,7 @@ Angles24
 		<If Condition="IsQuestCompleted(65548) and not IsQuestCompleted(65549)">
 			<If Condition="not HasQuest(65549)">
 				<LogMessage Message="Picking Up Level 50 - Seeds of Hope."/>
-				<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
+				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<If Condition="IsQuestAcceptQualified(65549)">
 					<LLPickupQuest NpcId="1000815" QuestId="65549" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -130,7 +130,7 @@ Angles24
 			</If>
 			<If Condition="HasQuest(65549)">
 				<If Condition="GetQuestStep(65549) == 1">
-					<LisbethTravel Zone="133" Position="-297.7843, 7.369169, -168.7761"/>
+					<GetTo ZoneId="133" XYZ="-297.7843, 7.369169, -168.7761"/>
 					<LLTalkTo InteractDistance="2.0" NpcId="1000774" XYZ="-297.7843, 7.369169, -168.7761"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
@@ -153,7 +153,7 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(65549) == 255">
-					<LisbethTravel Zone="133" Position="-232.9017, 6.263501, -169.7613"/>
+					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLTurnIn QuestId="65549" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 50 - Seeds of Hope - Completed."/>

@@ -13,7 +13,7 @@
             List<BagSlot> books = InventoryManager.FilledSlots
                                                   .Where(bs => bs.Item.ItemAction > 0
                                                                && bs.CanUse()
-                                                               && ((bs.EnglishName.StartsWith("Master") && (bs.EnglishName.EndsWith("I") || bs.EnglishName.EndsWith("V")))
+                                                               && ((bs.EnglishName.StartsWith("Master") && (bs.EnglishName.EndsWith("I") || bs.EnglishName.EndsWith("V") || bs.EnglishName.EndsWith("Demimateria")))
                                                                    || (bs.EnglishName.StartsWith("Tome of Botanical") || bs.EnglishName.StartsWith("Tome of Geological") || bs.EnglishName.StartsWith("Tome of Ichthyological"))))
                                                   .ToList();
 

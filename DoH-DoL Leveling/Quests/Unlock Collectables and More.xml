@@ -15,7 +15,7 @@ Kayla / Angles24
 		<!-- Gone to Pieces -->
 		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
 			<LogMessage Message="Going to Learn Desynth!"/>
-			<LisbethTravel Zone="131" Position="138.4237, 4, -58.45789"/>
+			<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789"/>
 			<LLPickupQuest NpcId="1001679" QuestId="65688"/>
 			<LLSmallTalk WaitTime="1500"/>
 		</If>
@@ -30,7 +30,7 @@ Kayla / Angles24
 		<!-- Inscrutable Tastes -->
 		<If Condition="not IsQuestCompleted(67631) and not HasQuest(67631)">
 			<LogMessage Message="Going to Learn Collectables!"/>
-			<LisbethTravel Zone="418" Position="-54.42902, 15.14058, -38.10181"/>
+			<GetTo ZoneId="418" XYZ="-54.42902, 15.14058, -38.10181"/>
 			<LLPickupQuest NpcId="1012161" QuestId="67631"/>
 			<LLSmallTalk WaitTime="1500"/>
 		</If>
@@ -119,7 +119,7 @@ Kayla / Angles24
 			<LLSmallTalk WaitTime="1500"/>
 		</If>
 		<If Condition="HasQuest(67632) and not IsQuestCompleted(67632) and GetQuestStep(67632) == 255">
-			<LisbethTravel Zone="419" Position="172.2491, -12.53903, -26.55138"/>
+			<GetTo ZoneId="419" XYZ="172.2491, -12.53903, -26.55138"/>
 			<LLTurnIn QuestId="67632" NpcId="1012179" ItemId="2001785" XYZ="172.2491, -12.53903, -26.55138"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Beloved of the Builder!"/>
@@ -134,7 +134,7 @@ Kayla / Angles24
 			<LLSmallTalk WaitTime="1500"/>
 		</If>
 		<If Condition="HasQuest(67634) and not IsQuestCompleted(67634) and GetQuestStep(67634) == 255">
-			<LisbethTravel Zone="478" Position="-16.45746, 206.4994, 47.3041"/>
+			<GetTo ZoneId="478" XYZ="-16.45746, 206.4994, 47.3041"/>
 			<LLTurnIn QuestId="67634" NpcId="1012299" ItemId="2001787" XYZ="-16.45746, 206.4994, 47.3041"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Go West, Craftsman!"/>
@@ -144,7 +144,7 @@ Kayla / Angles24
 		<!-- Reach Long and Prosper -->
 		<If Condition="IsQuestCompleted(67634) and not IsQuestCompleted(68477) and not HasQuest(68477)">
 			<LogMessage Message="Completed Quest - Reach Long and Prosper!"/>
-			<LisbethTravel Zone="635" Position="-69.19054, 0.00999999, 62.08514"/>
+			<GetTo ZoneId="635" XYZ="-69.19054, 0.00999999, 62.08514"/>
 			<LLTalkTo NpcId="1019459" XYZ="-69.19054, 0.00999999, 62.08514" QuestId="68477"/>
 			<LLSmallTalk WaitTime="1500"/>
 		</If>

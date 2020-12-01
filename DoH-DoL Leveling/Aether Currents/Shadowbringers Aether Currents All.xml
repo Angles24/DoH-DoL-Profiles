@@ -10,7 +10,7 @@ Authors:  Sodimm
     <If Condition="not IsAetherCurrentZoneComplete(813) and IsQuestCompleted(68840)">
       <!-- A Jobb Well Done -->
       <If Condition="IsQuestCompleted(68837) and not HasQuest(68916) and not IsQuestCompleted(68916)">
-        <LisbethTravel Zone="819" Position="41.78729, 2.232896, 262.3155"/>
+        <GetTo ZoneId="819" XYZ="41.78729, 2.232896, 262.3155"/>
         <If Condition="IsQuestAcceptQualified(68916)">
           <LLPickupQuest QuestId="68916" NpcId="1027948" XYZ="40.42102, 2.232896, 261.4938"/>
           <LLSmallTalk WaitTime="1500"/>

@@ -25,19 +25,19 @@ Angles24
 		<If Condition="not IsQuestCompleted(68157)">
 			<If Condition="not HasQuest(68157)">
 				<LogMessage Message="Picking Up Level 63 - You Say Popoto, I Say...."/>
-				<LisbethTravel Zone="478" Position="-44.56588, 209.2288, -90.81387"/>
+				<GetTo ZoneId="478" XYZ="-44.56588, 209.2288, -90.81387"/>
 				<If Condition="IsQuestAcceptQualified(68157)">
 					<LLPickupQuest QuestId="68157" NpcId="1021349" XYZ="-44.56588, 209.2288, -90.81387"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68157) == 1">
-				<LisbethTravel Zone="132" Position="7.248971, -0.3256242, 6.911566"/>
+				<GetTo ZoneId="132" XYZ="7.248971, -0.3256242, 6.911566"/>
 				<LLTalkTo NpcId="1021350" XYZ="7.248971, -0.3256242, 6.911566" QuestId="68157" StepId="1"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(68157) == 2">
-				<LisbethTravel Zone="133" Position="-233.5398, 6.245102, -169.8389"/>
+				<GetTo ZoneId="133" XYZ="-233.5398, 6.245102, -169.8389"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.5398, 6.245102, -169.8389" QuestId="68157" StepId="2"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -64,7 +64,7 @@ Angles24
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68157) == 255">
-				<LisbethTravel Zone="478" Position="-44.95714, 209.2252, -90.96803"/>
+				<GetTo ZoneId="478" XYZ="-44.95714, 209.2252, -90.96803"/>
 				<LLTurnIn QuestId="68157" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 63 - You Say Popoto, I Say.... - Completed"/>
@@ -105,14 +105,14 @@ Angles24
 		<If Condition="IsQuestCompleted(68157) and not IsQuestCompleted(68158)">
 			<If Condition="not HasQuest(68158)">
 				<LogMessage Message="Picking Up Level 65 - Walking for Walker's."/>
-				<LisbethTravel Zone="478" Position="-44.95714, 209.2252, -90.96803"/>
+				<GetTo ZoneId="478" XYZ="-44.95714, 209.2252, -90.96803"/>
 				<If Condition="IsQuestAcceptQualified(68158)">
 					<LLPickupQuest QuestId="68158" NpcId="1021349" XYZ="-44.95714, 209.2252, -90.96803"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68158) == 1">
-				<LisbethTravel Zone="133" Position="-233.8733, 6.235486, -169.9786"/>
+				<GetTo ZoneId="133" XYZ="-233.8733, 6.235486, -169.9786"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.8733, 6.235486, -169.9786" QuestId="68158" StepId="1"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -135,15 +135,15 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68158) == 4">
 				<If Condition="not IsOnMap(628)">
-					<LisbethTravel Zone="628" Position="58.82053, 4, 66.71966"/>
+					<GetTo ZoneId="628" XYZ="58.82053, 4, 66.71966"/>
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(4, 0).Item1 == 0">
-					<LisbethTravel Zone="628" Position="58.82053, 4, 66.71966"/>
+					<GetTo ZoneId="628" XYZ="58.82053, 4, 66.71966"/>
 					<LLTalkTo NpcId="1019064" XYZ="58.82053, 4, 66.71966" QuestId="68158" StepId="4"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestById(68158).GetTodoArgs(4, 0).Item1 == 1">
-					<LisbethTravel Zone="628" Position="79.15508, 4, 57.17901"/>
+					<GetTo ZoneId="628" XYZ="79.15508, 4, 57.17901"/>
 					<LLTalkTo NpcId="1019065" XYZ="79.15508, 4, 57.17901" QuestId="68158" StepId="4"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
@@ -165,7 +165,7 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(17946,5)">
 					<RunCode Name="Enable_Flight"/>
-					<LisbethTravel Zone="478" Position="-44.67389, 209.2242, -90.67441"/>
+					<GetTo ZoneId="478" XYZ="-44.67389, 209.2242, -90.67441"/>
 					<LLTurnIn ItemIds="17946" RequiresHq="True" QuestId="68158" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 65 - Walking for Walker's - Completed."/>
@@ -207,34 +207,34 @@ Angles24
 		<If Condition="IsQuestCompleted(68158) and not IsQuestCompleted(68159)">
 			<If Condition="not HasQuest(68159)">
 				<LogMessage Message="Picking Up Level 68 - The White Death."/>
-				<LisbethTravel Zone="478" Position="-44.67389, 209.2242, -90.67441"/>
+				<GetTo ZoneId="478" XYZ="-44.67389, 209.2242, -90.67441"/>
 				<If Condition="IsQuestAcceptQualified(68159)">
 					<LLPickupQuest QuestId="68159" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68159) == 1">
-				<LisbethTravel Zone="133" Position="-233.5393, 6.245116, -170.4607"/>
+				<GetTo ZoneId="133" XYZ="-233.5393, 6.245116, -170.4607"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.5393, 6.245116, -170.4607" QuestId="68159" StepId="1"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 2">
-				<LisbethTravel Zone="478" Position="-46.29791, 209.2066, -87.10259"/>
+				<GetTo ZoneId="478" XYZ="-46.29791, 209.2066, -87.10259"/>
 				<UseObject NpcId="2008181" XYZ="-46.29791, 209.2066, -87.10259" QuestId="68159" StepId="2"/>
 				<WaitWhile Condition="GetQuestStep(68159) == 2"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 3">
-				<LisbethTravel Zone="478" Position="-46.29791, 209.2066, -87.10259"/>
+				<GetTo ZoneId="478" XYZ="-46.29791, 209.2066, -87.10259"/>
 				<UseObject NpcId="2008181" XYZ="-46.29791, 209.2066, -87.10259" QuestId="68159" StepId="3"/>
 				<WaitWhile Condition="GetQuestStep(68159) == 3"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 4">
-				<LisbethTravel Zone="478" Position="-44.63303, 209.2276, -90.81181"/>
+				<GetTo ZoneId="478" XYZ="-44.63303, 209.2276, -90.81181"/>
 				<LLHandOver ItemIds="2002166" NpcId="1021349" XYZ="-44.63303, 209.2276, -90.81181" QuestId="68159" StepId="4" DialogOption="1"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(68159) == 5">
-				<LisbethTravel Zone="478" Position="74.81849, 214.12, -91.51659"/>
+				<GetTo ZoneId="478" XYZ="74.81849, 214.12, -91.51659"/>
 				<LLHandOver ItemIds="2002167" NpcId="1017106" XYZ="74.81849, 214.12, -91.51659" QuestId="68159" StepId="5"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -250,13 +250,13 @@ Angles24
 				</If>
 				<If Condition="HqHasAtLeast(17947,8)">
 					<RunCode Name="Enable_Flight"/>
-					<LisbethTravel Zone="478" Position="74.53394, 214.12, -91.56881"/>
+					<GetTo ZoneId="478" XYZ="74.53394, 214.12, -91.56881"/>
 					<LLHandOver ItemIds="17947" RequiresHq="True" NpcId="1017106" XYZ="74.53394, 214.12, -91.56881" QuestId="68159" StepId="6"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68159) == 255">
-				<LisbethTravel Zone="478" Position="-44.62869, 209.2269, -90.77264"/>
+				<GetTo ZoneId="478" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<LLTurnIn ItemIds="2002168" QuestId="68159" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
@@ -283,14 +283,14 @@ Angles24
 		<If Condition="IsQuestCompleted(68159) and not IsQuestCompleted(68160)">
 			<If Condition="not HasQuest(68160)">
 				<LogMessage Message="Picking Up Level 70 - Edgyth's Winning Streak."/>
-				<LisbethTravel Zone="478" Position="-44.62869, 209.2269, -90.77264"/>
+				<GetTo ZoneId="478" XYZ="-44.62869, 209.2269, -90.77264"/>
 				<If Condition="IsQuestAcceptQualified(68160)">
 					<LLPickupQuest QuestId="68160" NpcId="1021349" XYZ="-44.62869, 209.2269, -90.77264"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(68160) == 1">
-				<LisbethTravel Zone="133" Position="-233.303, 6.252198, -170.7122"/>
+				<GetTo ZoneId="133" XYZ="-233.303, 6.252198, -170.7122"/>
 				<LLTalkTo NpcId="1000815" XYZ="-233.303, 6.252198, -170.7122" QuestId="68160" StepId="1"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -334,7 +334,7 @@ Angles24
 					<Lisbeth Json="[{'Group':1,'Item':17948,'Amount':5,'Enabled':true,'Type':'Gather'}]"/><!-- Rhalgr's Streak -->
 				</While>
 				<If Condition="HasAtLeast(17948,5)">
-					<LisbethTravel Zone="478" Position="-44.54691, 209.2032, -89.48778"/>
+					<GetTo ZoneId="478" XYZ="-44.54691, 209.2032, -89.48778"/>
 					<LLTurnIn ItemIds="17948" QuestId="68160" NpcId="1021349" XYZ="-44.54691, 209.2032, -89.48778"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 70 - Edgyth's Winning Streak - Completed."/>

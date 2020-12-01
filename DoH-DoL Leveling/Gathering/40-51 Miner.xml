@@ -23,14 +23,14 @@ Angles24
 		<If Condition="not IsQuestCompleted(66180)">
 			<If Condition="not HasQuest(66180)">
 				<LogMessage Message="Picking up Level 40 - To Die For."/>
-				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66180)">
 					<LLPickupQuest NpcId="1002298" QuestId="66180" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66180) == 1">
-				<LisbethTravel Zone="131" Position="-5.622513, 6.2, 165.3229"/>
+				<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLTalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -39,7 +39,7 @@ Angles24
 			</If>
 			<If Condition="HqHasAtLeast(5168,20)">
 				<If Condition="GetQuestStep(66180) == 255">
-					<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 					<LLTurnIn ItemId="5168" QuestId="66180" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 40 - To Die For - Completed."/>
@@ -68,14 +68,14 @@ Angles24
 		<If Condition="IsQuestCompleted(66180) and not IsQuestCompleted(66181)">
 			<If Condition="not HasQuest(66181)">
 				<LogMessage Message="Picking up Level 45 - Gulley of Woes."/>
-				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66181)">
 					<LLPickupQuest NpcId="1002298" QuestId="66181" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66181) == 1">
-				<LisbethTravel Zone="131" Position="-5.622513, 6.2, 165.3229"/>
+				<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLTalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -84,7 +84,7 @@ Angles24
 			</If>
 			<If Condition="HqHasAtLeast(5115,20)">
 				<If Condition="GetQuestStep(66181) == 255">
-					<LisbethTravel Zone="131" Position="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
+					<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
 					<LLTurnIn ItemId="5115" QuestId="66181" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 45 - Gulley of Woes - Completed."/>
@@ -113,29 +113,29 @@ Angles24
 		<If Condition="IsQuestCompleted(66181) and not IsQuestCompleted(66182)">
 			<If Condition="not HasQuest(66182)">
 				<LogMessage Message="Picking up Level 50 - Canyon of Regret."/>
-				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 				<If Condition="IsQuestAcceptQualified(66182)">
 					<LLPickupQuest NpcId="1002298" QuestId="66182" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66182) == 1">
-				<LisbethTravel Zone="131" Position="-5.622513, 6.2, 165.3229"/>
+				<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLTalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(66182) == 2">
-				<LisbethTravel Zone="131" Position="18.15764, 9.009788, 168.1369"/>
+				<GetTo ZoneId="131" XYZ="18.15764, 9.009788, 168.1369"/>
 				<LLTalkTo NpcId="1003909" InteractDistance="1.0" XYZ="18.15764, 9.009788, 168.1369"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(66182) == 3">
-				<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/>
+				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
 				<LLTalkTo NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(66182) == 4">
-				<LisbethTravel Zone="131" Position="-5.622513, 6.2, 165.3229"/>
+				<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLTalkTo NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
@@ -144,7 +144,7 @@ Angles24
 					<Lisbeth Json="[{'Group':1,'Item':5121,'Amount':3,'Enabled':true,'Type':'Gather'}]"/>
 				</While>
 				<If Condition="NqHasAtLeast(5121,3)">
-					<LisbethTravel Zone="131" Position="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
 					<LLHandOver ItemId="5121" QuestId="66182" StepId="5" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
