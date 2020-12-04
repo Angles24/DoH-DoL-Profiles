@@ -26,7 +26,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 1 Quest -->
 	<!-- My First Alembic (Level 1) -->
       <If Condition="IsQuestCompleted(66111) and not HasQuest(66113) and not IsQuestCompleted(66113)">
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66113)">
           <LLPickupQuest QuestId="66113" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
           <LLSmallTalk WaitTime="1500"/>
@@ -36,7 +36,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not HasItem(5487)">
           <Lisbeth Json="[{'Item': 5487,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66113" ItemId="5487" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
@@ -51,7 +51,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 5 Quest -->
 	<!-- The Second Principle (Level 5) -->
       <If Condition="IsQuestCompleted(66113) and not HasQuest(66114) and not IsQuestCompleted(66114) and Core.Player.ClassLevel &gt; 4">
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66114)">
           <LLPickupQuest QuestId="66114" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
           <LLSmallTalk WaitTime="1500"/>
@@ -61,7 +61,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not HasItem(4564)">
           <Lisbeth Json="[{'Item': 4564,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66114" ItemId="4564" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
@@ -76,7 +76,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 10 Quest -->
 	<!-- All of Your Beeswax (Level 10) -->
       <If Condition="IsQuestCompleted(66114) and not HasQuest(66116) and not IsQuestCompleted(66116) and Core.Player.ClassLevel &gt; 9">
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66116)">
           <LLPickupQuest QuestId="66116" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
           <LLSmallTalk WaitTime="1500"/>
@@ -86,7 +86,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not (HqHasAtLeast(5515, 12) or NqHasAtLeast(5515, 12))">
           <Lisbeth Json="[{'Item': 5515,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66116" ItemId="5515" NpcId="1002299" Nq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
@@ -101,7 +101,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<!-- Do Level 15 Quest -->
 	<!-- For Fair Love (Level 15) -->
       <If Condition="IsQuestCompleted(66116) and not HasQuest(66117) and not IsQuestCompleted(66117) and Core.Player.ClassLevel &gt; 14">
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <If Condition="IsQuestAcceptQualified(66117)">
           <LLPickupQuest QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
           <LLSmallTalk WaitTime="1500"/>
@@ -114,17 +114,17 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
         <While Condition="not HasItem(4595)">
           <Lisbeth Json="[{'Item': 4595,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLHandOver ItemIds="4597,4595" AllowHq="True" QuestId="66117" StepId="1" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
       <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 2">
-        <LisbethTravel Zone="131" Position="-80.1557, 7.014143, -5.142395"/>
+        <GetTo ZoneId="131" XYZ="-80.1557, 7.014143, -5.142395"/>
         <LLHandOver ItemIds="4597,4595" AllowHq="True" QuestId="66117" StepId="2" NpcId="1003926" XYZ="-80.1557, 7.014143, -5.142395"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
       <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 255">
-        <LisbethTravel Zone="131" Position="-98.8938, 40.19999, 120.8362"/>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLTurnIn QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>

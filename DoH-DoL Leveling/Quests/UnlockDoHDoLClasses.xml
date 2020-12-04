@@ -12,7 +12,7 @@
 <!--Unlocking Fisher-->
 		<If Condition="not IsQuestCompleted(66670)">
 			<If Condition="not HasQuest(66670)">
-				<LisbethTravel Zone="129" Position="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
+				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
 				<If Condition="IsQuestAcceptQualified(66670)">
 					<LLTalkTo NpcId="1000859" QuestId="66670" XYZ="-166.4096, 4.54997, 152.0395"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -21,14 +21,14 @@
 		</If>
 		<If Condition="not IsQuestCompleted(66643)">
 			<If Condition="not HasQuest(66643)">
-				<LisbethTravel Zone="129" Position="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
+				<GetTo ZoneId="129" XYZ="-166.7397, 4.550005, 152.6919"/><!-- N'nmulika-->
 				<If Condition="IsQuestAcceptQualified(66643)">
 					<PickupQuest NpcId="1000859" QuestId="66643" XYZ="-166.4096, 4.54997, 152.0395"/>
 				</If>
 			</If>
 			<If Condition="HasQuest(66643)">
 				<If Condition="GetQuestStep(66643) == 255">
-					<LisbethTravel Zone="129" Position="-166.1612, 4.550006, 165.4742"/>
+					<GetTo ZoneId="129" XYZ="-166.1612, 4.550006, 165.4742"/>
 					<LLTurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -47,7 +47,7 @@
 <!--Unlocking Culinarian-->
     <If Condition="not IsQuestCompleted(65727)">
 		<If Condition="not HasQuest(65727)">
-			<LisbethTravel Zone="128" Position="-61.18506, 42.29994, -161.9528"/>
+			<GetTo ZoneId="128" XYZ="-61.18506, 42.29994, -161.9528"/>
 				<If Condition="IsQuestAcceptQualified(65727)">
 					<LLTalkTo NpcId="1000946" QuestId="65727" XYZ="-61.18506, 42.29994, -161.9528"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -56,14 +56,14 @@
     </If>
     <If Condition="not IsQuestCompleted(65807)">
 		<If Condition="not HasQuest(65807)">
-			<LisbethTravel Zone="128" Position="-61.18506, 42.29994, -161.9528"/>
+			<GetTo ZoneId="128" XYZ="-61.18506, 42.29994, -161.9528"/>
 				<If Condition="IsQuestAcceptQualified(65807)">
 					<PickupQuest NpcId="1000946" QuestId="65807" XYZ="-61.18506, 42.29994, -161.9528"/>
 				</If>
 		</If>
 			<If Condition="HasQuest(65807)">
 				<If Condition="GetQuestStep(65807) == 255">
-					<LisbethTravel Zone="128" Position="-54.52119, 44.17484, -149.4378"/>
+					<GetTo ZoneId="128" XYZ="-54.52119, 44.17484, -149.4378"/>
 					<LLTurnIn QuestId="65807" StepId="255" NpcId="1000947" InteractDistance="1.0" XYZ="-54.52119, 44.17484, -149.4378"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -83,7 +83,7 @@
 <!--Unlocking Armorer-->
     <If Condition="not IsQuestCompleted(65722)">
 		<If Condition="not HasQuest(65722)">
-			<LisbethTravel Zone="128" Position="-49.96643, 42.79987, 190.44"/>
+			<GetTo ZoneId="128" XYZ="-49.96643, 42.79987, 190.44"/>
 				<If Condition="IsQuestAcceptQualified(65722)">
 					<LLTalkTo NpcId="1000998" QuestId="65722" XYZ="-49.96643, 42.79987, 190.44"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -93,14 +93,14 @@
     </If>
     <If Condition="not IsQuestCompleted(65809)">
 		<If Condition="not HasQuest(65809)">
-			<LisbethTravel Zone="128" Position="-49.96643, 42.79987, 190.44"/>
+			<GetTo ZoneId="128" XYZ="-49.96643, 42.79987, 190.44"/>
 				<If Condition="IsQuestAcceptQualified(65809)">
 					<PickupQuest NpcId="1000998" QuestId="65809" XYZ="-49.96643, 42.79987, 190.44"/>
 				</If>
 		</If>
 			<If Condition="HasQuest(65809)">
 				<If Condition="GetQuestStep(65809) == 255">
-					<LisbethTravel Zone="128" Position="-32.81106, 41.49998, 207.5591"/>
+					<GetTo ZoneId="128" XYZ="-32.81106, 41.49998, 207.5591"/>
 					<LLTurnIn QuestId="65809" StepId="255" NpcId="1001000" InteractDistance="1.0" XYZ="-32.81106, 41.49998, 207.5591"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -120,7 +120,7 @@
 <!--Unlocking Blacksmith-->
     <If Condition="not IsQuestCompleted(65721)">
 		<If Condition="not HasQuest(65721)">
-			<LisbethTravel Zone="128" Position="-50.23656, 42.79998, 192.5967"/>
+			<GetTo ZoneId="128" XYZ="-50.23656, 42.79998, 192.5967"/>
 				<If Condition="IsQuestAcceptQualified(65721)">
 					<LLTalkTo NpcId="1000995" QuestId="65721" XYZ="-50.23656, 42.79998, 192.5967"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -130,14 +130,14 @@
     </If>
     <If Condition="not IsQuestCompleted(65827)">
 		<If Condition="not HasQuest(65827)">
-			<LisbethTravel Zone="128" Position="-50.23656, 42.79998, 192.5967"/>
+			<GetTo ZoneId="128" XYZ="-50.23656, 42.79998, 192.5967"/>
 				<If Condition="IsQuestAcceptQualified(65827)">
 					<PickupQuest NpcId="1000995" QuestId="65827" XYZ="-50.23656, 42.79998, 192.5967"/>
 				</If>
 		</If>
 			<If Condition="HasQuest(65827)">
 				<If Condition="GetQuestStep(65827) == 255">
-					<LisbethTravel Zone="128" Position="-32.22669, 44.6637, 184.621"/>
+					<GetTo ZoneId="128" XYZ="-32.22669, 44.6637, 184.621"/>
 					<LLTurnIn QuestId="65827" StepId="255" NpcId="1000997" InteractDistance="1.0" XYZ="-32.22669, 44.6637, 184.621"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -157,7 +157,7 @@
 <!--Unlocking Carpenter -->
     <If Condition="not IsQuestCompleted(65720)">
 		<If Condition="not HasQuest(65720)">
-			<LisbethTravel Zone="132" Position="-17.67216, -3.25, 45.76995"/>
+			<GetTo ZoneId="132" XYZ="-17.67216, -3.25, 45.76995"/>
 				<If Condition="IsQuestAcceptQualified(65720)">
 					<LLTalkTo NpcId="1000148" QuestId="65720" XYZ="-17.67216, -3.25, 45.76995"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -167,14 +167,14 @@
     </If>
     <If Condition="not IsQuestCompleted(65674)">
 		<If Condition="not HasQuest(65674)">
-			<LisbethTravel Zone="132" Position="-17.67216, -3.25, 45.76995"/>
+			<GetTo ZoneId="132" XYZ="-17.67216, -3.25, 45.76995"/>
 				<If Condition="IsQuestAcceptQualified(65674)">
 					<PickupQuest NpcId="1000148" QuestId="65674" XYZ="-17.67216, -3.25, 45.76995"/>
 				</If>
 		</If>
 			<If Condition="HasQuest(65674)">
 				<If Condition="GetQuestStep(65674) == 255">
-					<LisbethTravel Zone="132" Position="-45.85313, -1.250001, 57.11108"/>
+					<GetTo ZoneId="132" XYZ="-45.85313, -1.250001, 57.11108"/>
 					<LLTurnIn QuestId="65674" StepId="255" NpcId="1000153" InteractDistance="1.0" XYZ="-45.85313, -1.250001, 57.11108"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -194,7 +194,7 @@
 <!--Unlocking Leatherworker-->
     <If Condition="not IsQuestCompleted(65724)">
 		<If Condition="not HasQuest(65724)">
-			<LisbethTravel Zone="133" Position="63.3223, 8, -145.0385"/>
+			<GetTo ZoneId="133" XYZ="63.3223, 8, -145.0385"/>
 				<If Condition="IsQuestAcceptQualified(65724)">
 					<LLTalkTo NpcId="1000352" QuestId="65724" XYZ="63.3223, 8, -145.0385"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -204,14 +204,14 @@
     </If>
     <If Condition="not IsQuestCompleted(65641)">
 		<If Condition="not HasQuest(65641)">
-			<LisbethTravel Zone="133" Position="63.3223, 8, -145.0385"/>
+			<GetTo ZoneId="133" XYZ="63.3223, 8, -145.0385"/>
 				<If Condition="IsQuestAcceptQualified(65641)">
 					<PickupQuest NpcId="1000352" QuestId="65641" XYZ="63.3223, 8, -145.0385"/>
 				</If>
 		</If>
 			<If Condition="HasQuest(65641)">
 				<If Condition="GetQuestStep(65641) == 255">
-					<LisbethTravel Zone="133" Position="71.08187, 8, -165.4199"/>
+					<GetTo ZoneId="133" XYZ="71.08187, 8, -165.4199"/>
 					<LLTurnIn QuestId="65641" StepId="255" NpcId="1000691" InteractDistance="1.0" XYZ="71.08187, 8, -165.4199"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -231,7 +231,7 @@
 <!-- Unlocking Botanist -->
     <If Condition="not IsQuestCompleted(65729)">
 		<If Condition="not HasQuest(65729)">
-			<LisbethTravel Zone="133" Position="-237.854, 8, -145.268"/>
+			<GetTo ZoneId="133" XYZ="-237.854, 8, -145.268"/>
 				<If Condition="IsQuestAcceptQualified(65729)">
 					<LLTalkTo NpcId="1000294" QuestId="65729" XYZ="-237.854, 8, -145.268"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -241,14 +241,14 @@
     </If>
     <If Condition="not IsQuestCompleted(65539)">
 		<If Condition="not HasQuest(65539)">
-			<LisbethTravel Zone="133" Position="-237.854, 8, -145.268"/>
+			<GetTo ZoneId="133" XYZ="-237.854, 8, -145.268"/>
 				<If Condition="IsQuestAcceptQualified(65539)">
 					<PickupQuest NpcId="1000294" QuestId="65539" XYZ="-237.854, 8, -145.268"/>
 				</If>
 		</If>
 			<If Condition="HasQuest(65539)">
 				<If Condition="GetQuestStep(65539) == 255">
-					<LisbethTravel Zone="133" Position="-233.4313, 6.248232, -168.6552"/>
+					<GetTo ZoneId="133" XYZ="-233.4313, 6.248232, -168.6552"/>
 					<LLTurnIn QuestId="65539" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-233.4313, 6.248232, -168.6552"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -266,7 +266,7 @@
 <!--Unlocking Goldsmith-->
     <If Condition="not IsQuestCompleted(65723)">
 		<If Condition="not HasQuest(65723)">
-			<LisbethTravel Zone="131" Position="-34.21239, 13.59995, 98.9277"/>
+			<GetTo ZoneId="131" XYZ="-34.21239, 13.59995, 98.9277"/>
 				<If Condition="IsQuestAcceptQualified(65723)">
 					<LLTalkTo NpcId="1002280" QuestId="65723" XYZ="-34.21239, 13.59995, 98.9277"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -276,7 +276,7 @@
 	</If>
     <If Condition="not IsQuestCompleted(66144)">
 		<If Condition="not HasQuest(66144)">
-			<LisbethTravel Zone="131" Position="-34.21239, 13.59995, 98.9277"/>
+			<GetTo ZoneId="131" XYZ="-34.21239, 13.59995, 98.9277"/>
 				<If Condition="IsQuestAcceptQualified(66144)">
 					<LLPickupQuest NpcId="1002280" QuestId="66144" XYZ="-34.21239, 13.59995, 98.9277"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -284,7 +284,7 @@
 		</If>
 			<If Condition="HasQuest(66144)">
 				<If Condition="GetQuestStep(66144) == 255">
-					<LisbethTravel Zone="131" Position="-25.54107, 12.2, 109.7778"/>
+					<GetTo ZoneId="131" XYZ="-25.54107, 12.2, 109.7778"/>
 					<LLTurnIn QuestId="66144" StepId="255" NpcId="1004093" InteractDistance="1.0" XYZ="-25.54107, 12.2, 109.7778"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -304,7 +304,7 @@
 <!--Unlocking Weaver-->
     <If Condition="not IsQuestCompleted(65725)">
 		<If Condition="not HasQuest(65725)">
-			<LisbethTravel Zone="131" Position="136.8372, 7.591891, 97.83977"/>
+			<GetTo ZoneId="131" XYZ="136.8372, 7.591891, 97.83977"/>
 				<If Condition="IsQuestAcceptQualified(65725)">
 					<LLTalkTo NpcId="1002283" QuestId="65725" XYZ="136.8372, 7.591891, 97.83977"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -314,7 +314,7 @@
     </If>
     <If Condition="not IsQuestCompleted(66070)">
 		<If Condition="not HasQuest(66070)">
-			<LisbethTravel Zone="131" Position="136.8372, 7.591891, 97.83977"/>
+			<GetTo ZoneId="131" XYZ="136.8372, 7.591891, 97.83977"/>
 				<If Condition="IsQuestAcceptQualified(66070)">
 					<LLPickupQuest NpcId="1002283" QuestId="66070" XYZ="136.8372, 7.591891, 97.83977"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -322,7 +322,7 @@
 		</If>
 			<If Condition="HasQuest(66070)">
 				<If Condition="GetQuestStep(66070) == 255">
-					<LisbethTravel Zone="131" Position="156.6901, 7.792007, 100.3423"/>
+					<GetTo ZoneId="131" XYZ="156.6901, 7.792007, 100.3423"/>
 					<LLTurnIn QuestId="66070" StepId="255" NpcId="1003818" InteractDistance="1.0" XYZ="156.6901, 7.792007, 100.3423"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -342,7 +342,7 @@
 <!--Unlocking Alchemist-->
     <If Condition="not IsQuestCompleted(65726)">
 		<If Condition="not HasQuest(65726)">
-			<LisbethTravel Zone="131" Position="-114.7261, 41.59998, 120.8445"/>
+			<GetTo ZoneId="131" XYZ="-114.7261, 41.59998, 120.8445"/>
 				<If Condition="IsQuestAcceptQualified(65726)">
 					<LLTalkTo NpcId="1002281" QuestId="65726" XYZ="-114.7261, 41.59998, 120.8445"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -352,7 +352,7 @@
     </If>
     <If Condition="not IsQuestCompleted(66111)">
 		<If Condition="not HasQuest(66111)">
-			<LisbethTravel Zone="131" Position="-114.7261, 41.59998, 120.8445"/>
+			<GetTo ZoneId="131" XYZ="-114.7261, 41.59998, 120.8445"/>
 				<If Condition="IsQuestAcceptQualified(66111)">
 					<LLPickupQuest NpcId="1002281" QuestId="66111" XYZ="-114.7261, 41.59998, 120.8445"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -360,7 +360,7 @@
 		</If>
 			<If Condition="HasQuest(66111)">
 				<If Condition="GetQuestStep(66111) == 255">
-					<LisbethTravel Zone="131" Position="-98.68385, 40.2, 122.3508"/>
+					<GetTo ZoneId="131" XYZ="-98.68385, 40.2, 122.3508"/>
 					<LLTurnIn QuestId="66111" StepId="255" NpcId="1002299" InteractDistance="1.0" XYZ="-98.68385, 40.2, 122.3508"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
@@ -380,7 +380,7 @@
 <!--Unlocking Miner-->
     <If Condition="not IsQuestCompleted(65728)">
 		<If Condition="not HasQuest(65728)">
-			<LisbethTravel Zone="131" Position="1.417394, 7.599999, 153.6795"/>
+			<GetTo ZoneId="131" XYZ="1.417394, 7.599999, 153.6795"/>
 				<If Condition="IsQuestAcceptQualified(65728)">
 					<LLTalkTo NpcId="1002282" QuestId="65728" XYZ="1.417394, 7.599999, 153.6795"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -390,7 +390,7 @@
 	</If>
     <If Condition="not IsQuestCompleted(66133)">
 		<If Condition="not HasQuest(66133)">
-			<LisbethTravel Zone="131" Position="1.417394, 7.599999, 153.6795"/>
+			<GetTo ZoneId="131" XYZ="1.417394, 7.599999, 153.6795"/>
 				<If Condition="IsQuestAcceptQualified(66133)">
 					<LLPickupQuest NpcId="1002282" QuestId="66133" XYZ="1.417394, 7.599999, 153.6795"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -398,7 +398,7 @@
 		</If>
 			<If Condition="HasQuest(66133)">
 				<If Condition="GetQuestStep(66133) == 255">
-					<LisbethTravel Zone="131" Position="-16.52736, 6.2, 157.8005"/>
+					<GetTo ZoneId="131" XYZ="-16.52736, 6.2, 157.8005"/>
 					<LLTurnIn QuestId="66133" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.52736, 6.2, 157.8005"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>

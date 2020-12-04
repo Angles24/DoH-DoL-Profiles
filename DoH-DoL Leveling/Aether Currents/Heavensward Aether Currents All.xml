@@ -917,7 +917,7 @@ Profile and fixes by Anges
 
 		<If Condition="not IsQuestCompleted(67410)">
 			<If Condition="not HasQuest(67410)">
-				<LisbethTravel Zone="419" Position="12.93354, 15.96505, -15.44089"/>
+				<GetTo ZoneId="419" XYZ="12.93354, 15.96505, -15.44089"/>
 				<If Condition="IsQuestAcceptQualified(67410)">
 					<LLPickupQuest NpcId="1014720" QuestId="67410" XYZ="12.93354, 15.96505, -15.44089"/>
 					<LLSmallTalk WaitTime="1500"/>
@@ -965,7 +965,7 @@ Profile and fixes by Anges
 						</If>
 						<If Condition="not Managers.WorldManager.HasAetheryteId(73)">
 							<If Condition="not IsOnMap(419)">
-								<LisbethTravel Zone="419" Position="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
+								<GetTo ZoneId="419" XYZ="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
 							</If>
 							<If Condition="IsOnMap(419)">
 								<UseTransport Name="Blue Window" InteractDistance="3.0" NpcId="1011212" XYZ="147.3258, -12.63491, -12.40564"/>
@@ -988,7 +988,7 @@ Profile and fixes by Anges
 						</If>
 						<If Condition="not Managers.WorldManager.HasAetheryteId(73)">
 							<If Condition="not IsOnMap(419)">
-								<LisbethTravel Zone="419" Position="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
+								<GetTo ZoneId="419" XYZ="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
 							</If>
 							<If Condition="IsOnMap(419)">
 								<UseTransport Name="Blue Window" InteractDistance="3.0" NpcId="1011212" XYZ="147.3258, -12.63491, -12.40564"/>
@@ -1012,7 +1012,7 @@ Profile and fixes by Anges
 					</If>
 					<If Condition="not Managers.WorldManager.HasAetheryteId(73)">
 						<If Condition="not IsOnMap(419)">
-							<LisbethTravel Zone="419" Position="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
+							<GetTo ZoneId="419" XYZ="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
 						</If>
 						<If Condition="IsOnMap(419)">
 							<UseTransport Name="Blue Window" InteractDistance="3.0" NpcId="1011212" XYZ="147.3258, -12.63491, -12.40564"/>
@@ -1033,7 +1033,7 @@ Profile and fixes by Anges
 						</If>
 						<If Condition="not Managers.WorldManager.HasAetheryteId(73)">
 							<If Condition="not IsOnMap(419)">
-								<LisbethTravel Zone="419" Position="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
+								<GetTo ZoneId="419" XYZ="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
 							</If>
 							<If Condition="IsOnMap(419)">
 								<UseTransport Name="Blue Window" InteractDistance="3.0" NpcId="1011212" XYZ="147.3258, -12.63491, -12.40564"/>
@@ -1057,7 +1057,7 @@ Profile and fixes by Anges
 						</If>
 						<If Condition="not Managers.WorldManager.HasAetheryteId(73)">
 							<If Condition="not IsOnMap(419)">
-								<LisbethTravel Zone="419" Position="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
+								<GetTo ZoneId="419" XYZ="-48.65455, -8.234923, -59.07746"/><!-- The Pillars -->
 							</If>
 							<If Condition="IsOnMap(419)">
 								<UseTransport Name="Blue Window" InteractDistance="3.0" NpcId="1011212" XYZ="147.3258, -12.63491, -12.40564"/>
@@ -1109,14 +1109,14 @@ Profile and fixes by Anges
 		</If>
 		<If Condition="IsQuestCompleted(67179)">
 			<If Condition="not IsOnMap(129)">
-				<LisbethTravel Zone="129" Position="-84.08636, 18.60033, -12.41393"/>--><!-- Limsa Lominsa Lower Decks -->
+				<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/>--><!-- Limsa Lominsa Lower Decks -->
 			<!-- </If>
 			<If Condition="Managers.WorldManager.HasAetheryteId(73)">
 				<TeleportTo Name="Ok' Zundu" AetheryteId="73"/>
 			</If>
 			<If Condition="not Managers.WorldManager.HasAetheryteId(73)">
 				<If Condition="not IsOnMap(419)">
-					<LisbethTravel Zone="419" Position="-48.65455, -8.234923, -59.07746"/>--><!-- The Pillars -->
+					<GetTo ZoneId="419" XYZ="-48.65455, -8.234923, -59.07746"/>--><!-- The Pillars -->
 				<!-- </If>
 				<If Condition="IsOnMap(419)">
 					<UseTransport Name="Blue Window" InteractDistance="3.0" NpcId="1011212" XYZ="147.3258, -12.63491, -12.40564"/>
@@ -1241,7 +1241,7 @@ Profile and fixes by Anges
 		<If Condition="not IsQuestCompleted(67481)">
 			<If Condition="not HasQuest(67481)">
 				<If Condition="not IsOnMap(478)">
-					<LisbethTravel Zone="478" Position="68.67902, 207.3838, -6.457279"/><!-- Idyllshire -->
+					<GetTo ZoneId="478" XYZ="68.67902, 207.3838, -6.457279"/><!-- Idyllshire -->
 				</If>
 				<MoveTo Name="Halfsix" XYZ="72.40405, 205.6816, 31.63196"/>
 				<If Condition="not IsQuestAcceptQualified(67481)">
@@ -1266,11 +1266,11 @@ Profile and fixes by Anges
 							<HotSpot XYZ="458.7014, 83.7262, 34.74475" Radius="10"/>
 						</HotSpots>
 					</UseObject>
-					<LisbethTravel Zone="478" Position="68.67902, 207.3838, -6.457279"/>
+					<GetTo ZoneId="478" XYZ="68.67902, 207.3838, -6.457279"/>
 				</If>
 				<If Condition="GetQuestStep(67481) == 255">
 					<If Condition="not IsOnMap(478)">
-						<LisbethTravel Zone="478" Position="68.67902, 207.3838, -6.457279"/><!-- Idyllshire -->
+						<GetTo ZoneId="478" XYZ="68.67902, 207.3838, -6.457279"/><!-- Idyllshire -->
 					</If>
 					<MoveTo Name="Halfsix" XYZ="72.40405, 205.6816, 31.63196"/>
 					<LLTurnIn QuestId="67481" NpcId="1012102" ItemId="2001696" XYZ="72.40405, 205.6816, 31.63196"/>
@@ -1284,7 +1284,7 @@ Profile and fixes by Anges
 		<If Condition="not IsQuestCompleted(67499)">
 			<If Condition="not HasQuest(67499)">
 				<If Condition="not IsOnMap(478)">
-					<LisbethTravel Zone="478" Position="68.67902, 207.3838, -6.457279"/><!-- Idyllshire -->
+					<GetTo ZoneId="478" XYZ="68.67902, 207.3838, -6.457279"/><!-- Idyllshire -->
 				</If>
 				<MoveTo Name="Midnight Dew" XYZ="-26.84064, 206.5, 28.67163"/>
 				<If Condition="not IsQuestAcceptQualified(67499)">

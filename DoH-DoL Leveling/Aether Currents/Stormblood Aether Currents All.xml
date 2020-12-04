@@ -57,12 +57,12 @@ Profile and fixes by Angles
       <LLSmallTalk WaitTime="1500"/>
     </If>
     <If Condition="HasQuest(68223) and not IsQuestCompleted(68223) and GetQuestStep(68223) == 2">
-      <LisbethTravel Zone="628" Position="133.2922, 12, 69.90587"/>
+      <GetTo ZoneId="628" XYZ="133.2922, 12, 69.90587"/>
       <LLHandOver ItemIds="2002223,2002224" NpcId="1022122" XYZ="133.2922, 12, 69.90587" QuestId="68223" StepId="2"/>
       <LLSmallTalk WaitTime="1500"/>
     </If>
     <If Condition="HasQuest(68223) and not IsQuestCompleted(68223) and GetQuestStep(68223) == 3">
-      <LisbethTravel Zone="628" Position="-129.3015, -4.999999, 141.4579"/>
+      <GetTo ZoneId="628" XYZ="-129.3015, -4.999999, 141.4579"/>
       <LLHandOver ItemIds="2002223,2002224" NpcId="1019049" XYZ="-129.3015, -4.999999, 141.4579" QuestId="68223" StepId="3"/>
       <LLSmallTalk WaitTime="1500"/>
     </If>
