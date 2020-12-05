@@ -103,7 +103,11 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<!-- Part 2 -->
+		<!-- Part 2 -->	
+			
+		<While Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</While>
 		
 		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
 			<If Condition="not HasQuest(69428) and not IsQuestCompleted(69428) and IsQuestCompleted(69384)">
