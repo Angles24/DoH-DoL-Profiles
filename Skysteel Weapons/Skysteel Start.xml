@@ -16,9 +16,9 @@ Required: LLamaLibrary BotBase
 <!ENTITY wvr "1">
 <!ENTITY alc "1">
 <!ENTITY cul "1">
-<!ENTITY min "0">
-<!ENTITY btn "0">
-<!ENTITY fsh "0">
+<!ENTITY min "1">
+<!ENTITY btn "1">
+<!ENTITY fsh "1">
 ]>
 <Profile>
 	<Name>Skysteel Start</Name>
@@ -77,8 +77,8 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		<If Condition="&fsh; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(29644)">
-				<LLoadProfile Path="Profiles/Skysteel FSH Weapons.xml"/>
+			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(30303)">
+				<LLoadProfile Path="Profiles/Skysteel FSH Weapons2.xml"/>
 			</If>
 		</If>
 	

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Authors: Angles24 / Kayla / Lokibunny
+Requires: ExBuddy Plugin & LLamaLibrary BotBase
+-->
+<!DOCTYPE Profile [ <!ENTITY LogTxt "#f542c5"><!ENTITY MinFish "15"><!ENTITY MaxFish "25">]>
+<Profile>
+	<Name>Dragonsung Fishing Rod</Name>
+	<Order>
+	
+	<RunCode Name="Disable_Flight"/>
+	
+	<LLSellItem ItemIds="31130,31125,31132,31127"/>
+	
+	<If Condition="ClassName != ClassJobType.Fisher">
+		<ChangeClass Job="Fisher"/>
+	</If>
+	<If Condition="ClassName == ClassJobType.Fisher and Core.Player.ClassLevel &gt; 79">
+		
+		<If Condition="not IsQuestCompleted(69384)">
+			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
+				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
+				<If Condition="IsQuestAcceptQualified(69384)">
+					<LLPickupQuest NpcId="1032897" DialogOption="0" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+			</If>
+			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LLSmallTalk WaitTime="1500"/>
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="Coffer"/>
+			</If>
+		</If>
+		
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
+			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<If Condition="IsQuestAcceptQualified(69385)">
+					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+			</If>
+		</If>
+		
+		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644) or HasItem(29644) or HasItem(30292) or HasItem(30303))">
+			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29622" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+		</If>
+		
+		<While Condition="HasItem(29622)"><!-- Skysteel Fishing Rod -->
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher"/>
+			</While>
+			<While Condition="not HasAtLeast(30136,50)">
+				<Log Message="Buy some Signature Skyball from Foundation!"/>
+				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+			</While>
+			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
+			<Log Color="&LogTxt;" Message="Going to fish some Thinker's Coral!"/>
+			<If Condition="not HqHasAtLeast(29673,40)">
+				<LisbethTravel Zone="399" Position="30.28768, 52.93113, 87.8614"/>
+			</If>
+			<RunCode Name="DisableMount"/>
+			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29673,40)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+				<Keepers>
+					<Keeper Name="piece of thinker's coral"/>
+                </Keepers>
+				<FishSpots>
+					<FishSpot XYZ="30.23421, 52.84451, 88.72885" Heading="4.72" Sit="True"/>
+					<FishSpot XYZ="29.48251, 52.56403, 28.53448" Heading="3.68" Sit="True"/>
+				</FishSpots>
+				<PatienceTugs>
+				  <PatienceTug Mooch="0" TugType="Light"/>
+				</PatienceTugs>
+			</ExFish>
+			<RunCode Name="EnableMount"/>
+			<While Condition="HasItem(29622) and HqHasAtLeast(29673,40)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29622">
+					<ChangeClass Job="Fisher"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29622">
+						<RunCode Name="SwitchCombatJob"/>
+					</While>
+				</While>
+				<RunCode Name="Sort"/>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29633" SelectString="0"/>
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</While>
+		</While>
+			
+		<While Condition="HasItem(29633)"><!-- Skysteel Fishing Rod +1 -->
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher"/>
+			</While>
+			<While Condition="not HasAtLeast(30136,50)">
+				<Log Color="&LogTxt;" Message="Buy some Signature Skyball from Foundation!"/>
+				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+			</While>
+			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
+			<Log Color="&LogTxt;" Message="Going to fish some Dragonspine!"/>
+			<LisbethTravel Zone="397" Position="-680.4474, 99.50026, -618.0323"/>
+			<RunCode Name="DisableMount"/>
+			<ExFish EnableKeeper="True" Stealth="true" Condition="HasAtLeast(30136,1) and not HqHasAtLeast(29678,60)" Mooch="0" Snagging="False" CordialType="Auto" MinFish="&MinFish;" MaxFish="&MaxFish;" ShuffleFishSpots="True" Bait="Signature Skyball" Mount="False" Patience="Patience" MinimumGPPatience="400">
+				<Keepers>
+					<Keeper Name="Dragonspine"/>
+                </Keepers>
+				<FishSpots>
+					<FishSpot XYZ="-701.0602, 104.3623, -641.2723" Heading="5.14" Sit="True"/>
+					<FishSpot XYZ="-673.9434, 99.63255, -598.0843" Heading="3.06" Sit="True"/>
+				</FishSpots>
+				<PatienceTugs>
+				  <PatienceTug Mooch="0" TugType="Light"/>
+				</PatienceTugs>
+			</ExFish>
+			<RunCode Name="EnableMount"/>
+			<While Condition="HasItem(29633) and HqHasAtLeast(29678,60)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29633">
+					<ChangeClass Job="Fisher"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29633">
+						<RunCode Name="SwitchCombatJob"/>
+					</While>
+				</While>
+				<RunCode Name="Sort"/>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29644" SelectString="1"/><!-- Buy Skysteel Fishing Rod +1 -->
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</While>
+		</While>
+		
+		<If Condition="HasItem(29644) and HasQuest(69385)">
+			<While Condition="ClassName != ClassJobType.Fisher">
+				<ChangeClass Job="Fisher"/>
+			</While>
+			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29644">
+				<RunCode Name="SkysteelFSH3"/><!-- Equip Dragonsung Fishing Rod -->
+				<WaitTimer WaitTime="3"/>
+			</While>
+			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk WaitTime="1500"/>
+			</If>
+		</If>
+		
+		<!-- Part 2 -->	
+			
+		<While Condition="ClassName != ClassJobType.Fisher">
+			<ChangeClass Job="Fisher"/>
+		</While>
+		
+		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
+			<If Condition="not HasQuest(69428) and not IsQuestCompleted(69428) and IsQuestCompleted(69384)">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<If Condition="IsQuestAcceptQualified(69428)">
+					<LLPickupQuest NpcId="1032898" QuestId="69428" XYZ="-163.47, 16.97958, -29.31262"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
+			<If Condition="HasQuest(69428) and not IsQuestCompleted(69428) and GetQuestStep(69428) == 255">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLTurnIn QuestId="69428" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk/>
+			</If>
+		</If>
+		
+		<!-- Ever Skyward - Fisher -->
+		<While Condition="not HasQuest(69429) and HasItem(29644)">
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<Log Message="Accepting 'Ever Skyward - Fisher'" />
+			<RunCode Name="EverSkyward"/>
+		</While>
+		<If Condition="HasQuest(69429) and HasItem(29644) and GetQuestStep(69429) == 255">
+			<If Condition="not HasAtLeast(30339,6) and HqHasAtLeast(31129,60)">
+				<Log Message="Turning in Petal Shell for Fisher's Gobbiegoo" />
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="not HasAtLeast(30339,6) and not HqHasAtLeast(31129,60)">
+				<Log Message="Farming Petal Shell" />
+				<ChangeClass Job="Fisher" force="True"/>
+				<EquipWeapon ItemId="29644"/> <!-- Equip Dragonsung Fishing Rod -->
+				<While Condition="not HqHasAtLeast(31129,60)">
+					<If Condition="not HasAtLeast(30136,250)">
+						<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+						<BuyItem NpcId="1032900" DialogOption="6" ItemId="30136" ItemCount="999" XYZ="-161.5168, 16.99999, -57.14508"/>
+					</If>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29644">
+						<EquipWeapon ItemId="29644"/> <!-- Equip Dragonsung Fishing Rod -->
+					</While>
+					<Lisbeth Json="[{'Id':1,'Group':1,'Item':31129,'Amount':60,'Enabled':true,'Type':'Fisher','Hq':true,'AmountMode':'Restock'}]"/>
+				</While>	
+			</If>
+			<If Condition="not HasAtLeast(30339,6) and HqHasAtLeast(31129,60)">
+				<Log Message="Turning in Petal Shell for Fisher's Gobbiegoo" />
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="HasAtLeast(30339,6)">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<ChangeClass Job="Fisher" force="True"/>
+				<LLTurnIn QuestId="69429" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk/>
+			</If>
+		</If>		
+			
+		<!-- The Tools of Tomorrow - Fisher -->
+		<While Condition="not HasQuest(69430) and HasItem(30292)">	
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<RunCode Name="ToolsOfTomorrow"/>
+		</While>
+		<If Condition="HasQuest(69430) and HasItem(30292) and GetQuestStep(69430) == 255">
+			<If Condition="not HasAtLeast(30340,7) and HqHasAtLeast(31134,70)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="not HasAtLeast(30340,7) and not HqHasAtLeast(31134,70)">
+				<Log Message="Farming Allagan Hunter" />
+				<ChangeClass Job="Fisher" force="True"/>
+				<EquipWeapon ItemId="30292"/> <!-- Equip Augmented Dragonsung Fishing Rod -->
+				<While Condition="not HqHasAtLeast(31129,60)">					
+					<If Condition="not HasAtLeast(30136,250)">
+						<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+						<BuyItem NpcId="1032900" DialogOption="6" ItemId="30136" ItemCount="999" XYZ="-161.5168, 16.99999, -57.14508"/>
+					</If>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 30292">
+						<EquipWeapon ItemId="30292"/> <!-- Equip Augmented Dragonsung Fishing Rod -->
+					</While>
+					<Lisbeth Json="[{'Group':1,'Item':31134,'Amount':70,'Enabled':true,'Type':'Fisher','Hq':true,'AmountMode':'Restock'}]"/>
+				</While>	
+			</If>
+			
+			<If Condition="not HasAtLeast(30340,7) and HqHasAtLeast(31134,70)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="HasAtLeast(30340,7)">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<ChangeClass Job="Fisher" force="True"/>
+				<LLTurnIn QuestId="69430" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk/>
+			</If>
+		</If>
+		
+		
+	</If>
+	
+	<LLoadProfile Path="../Skysteel Start.xml"/>
+	
+	</Order>
+	<CodeChunks>		
+		<CodeChunk Name="TurnIn">
+		<![CDATA[
+			Logging.Write("[Skysteel Handin] calling");
+			await LlamaLibrary.TesterBase.TurninSkySteelGathering();
+		]]>
+		</CodeChunk>		
+		<CodeChunk Name="ManualTurnIn">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Please manually turn in collectables and press start again.", TimeSpan.FromMilliseconds(10000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(3000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="EverSkyward">
+			<![CDATA[ 
+				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
+
+				if (!npcId.IsWithinInteractRange)
+				{
+					var _target = npcId.Location;
+					Navigator.PlayerMover.MoveTowards(_target);
+					while (_target.Distance2D(Core.Me.Location) >= 4)
+					{
+						Navigator.PlayerMover.MoveTowards(_target);
+						await Coroutine.Sleep(100);
+					}
+					Navigator.PlayerMover.MoveStop();
+				}
+
+				npcId.Interact();
+				
+				await Coroutine.Wait(5000, () => SelectIconString.IsOpen);
+				SelectIconString.ClickSlot(0);
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => SelectIconString.IsOpen);
+				SelectString.ClickSlot(1);
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+				JournalAccept.Accept();
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }				
+				
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="ToolsOfTomorrow">
+			<![CDATA[ 
+				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
+
+				if (!npcId.IsWithinInteractRange)
+				{
+					var _target = npcId.Location;
+					Navigator.PlayerMover.MoveTowards(_target);
+					while (_target.Distance2D(Core.Me.Location) >= 4)
+					{
+						Navigator.PlayerMover.MoveTowards(_target);
+						await Coroutine.Sleep(100);
+					}
+					Navigator.PlayerMover.MoveStop();
+				}
+
+				npcId.Interact();
+				
+				await Coroutine.Wait(5000, () => SelectIconString.IsOpen);
+				SelectIconString.ClickSlot(0);
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => SelectIconString.IsOpen);
+				SelectString.ClickSlot(1);
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+				JournalAccept.Accept();
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }				
+				
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="Sort">
+			<![CDATA[ 
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				ff14bot.Managers.ChatManager.SendChat("/itemsort condition inventory hq des");
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				ff14bot.Managers.ChatManager.SendChat("/itemsort execute inventory");
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="CloseShop">
+			<![CDATA[ 
+				var windowName = "ShopExchangeItem";
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName(windowName) != null);				
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName(windowName);					
+				windowByName = RaptureAtkUnitManager.GetWindowByName("ShopExchangeItem");
+				await Coroutine.Wait(5000, () => windowByName != null);
+				if (windowByName != null)
+				windowByName.SendAction(1, 3uL, 4294967295uL);		
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="Coffer">
+			<![CDATA[		
+				foreach (var bagslot in InventoryManager.FilledSlots.Where(bagslot => bagslot.Item.ItemAction == 388))
+				{
+                bagslot.UseItem();
+                await Coroutine.Sleep(5000);
+				}
+			]]> 
+		</CodeChunk>
+		<CodeChunk Name="SkysteelFSH">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29622)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SkysteelFSH2">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29633)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SkysteelFSH3">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29644)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+		<![CDATA[
+			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+			{
+			try
+			{
+				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+			}
+			catch (Exception ex) {  }
+			}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="DisableMount">
+			<![CDATA[ ff14bot.Settings.CharacterSettings.Instance.UseMount = false; ]]>
+		</CodeChunk>
+		<CodeChunk Name="EnableMount">
+			<![CDATA[ ff14bot.Settings.CharacterSettings.Instance.UseMount = true; ]]>
+		</CodeChunk>
+	</CodeChunks>
+</Profile>
