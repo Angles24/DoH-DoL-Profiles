@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 3 Skybuilders' Plywood -->
+	<!-- Grade 4 Skybuilders' Plywood -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 20) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 51)">
 		<If Condition="ClassName != ClassJobType.Carpenter">
 			<ChangeClass Job="Carpenter"/>

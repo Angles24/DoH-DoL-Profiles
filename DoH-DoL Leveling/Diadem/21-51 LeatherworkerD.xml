@@ -20,7 +20,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 3 Skybuilders' Leather -->
+	<!-- Grade 4 Skybuilders' Leather -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 20) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker"/>
