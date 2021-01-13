@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Authors:  Kayla / Angles24 
+Authors:  Kayla / Angles24
 -->
 <Profile>
 <Name>Crafting Armorer to 80</Name>
 <Order>
-	
+
 	<!-- Leave Diadem -->
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
 		<WaitTimer WaitTime="3"/>
 		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
-		
+
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
 		</While>
 	</If>
-	
-	<!-- Grade 3 Skybuilders' Mesail -->
+
+	<!-- Grade 4 Skybuilders' Mesail -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 69) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 80)">
 		<If Condition="ClassName != ClassJobType.Armorer">
 			<ChangeClass Job="Armorer"/>
@@ -28,28 +28,28 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Armorer">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':31210,'Amount':15,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':31939,'Amount':15,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
 		</If>
 	</If>
-	
+
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
 		</While>
 	</If>
-	
+
 	<!-- Reload Profile -->
 	<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">
 		<LLoadProfile Path="70-80 ArmorerD.xml"/>
 	</If>
-	
+
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 80 on Armorer, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>
-		
+
 </Order>
 <CodeChunks>
 	<CodeChunk name="Leave">
