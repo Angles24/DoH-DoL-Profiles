@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Authors:  Kayla / Angles24 
+Authors:  Kayla / Angles24
 -->
 <Profile>
 <Name>Crafting Alchemist to 63</Name>
 <Order>
-	
+
 	<!-- Leave Diadem -->
 	<If Condition="(WorldManager.ZoneId == 901)">
 		<RunCode Name="Leave"/>
 		<WaitTimer WaitTime="3"/>
 		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
-		
+
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
 		</While>
 	</If>
-	
-	<!-- Grade 3 Skybuilders' Plant Oil -->
+
+	<!-- Grade 4 Skybuilders' Plant Oil -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 50) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 63)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist"/>
@@ -29,32 +29,32 @@ Authors:  Kayla / Angles24
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31198,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31927,'Amount':15,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31198,'Amount':30,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31927,'Amount':30,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
-	
+
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
 			<RunCode Name="TurnIn"/>
 		</While>
 	</If>
-	
+
 	<!-- Reload Profile -->
 	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">
 		<LLoadProfile Path="51-63 AlchemistD.xml"/>
 	</If>
-	
+
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 63 on Alchemist, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>
-		
+
 </Order>
 <CodeChunks>
 	<CodeChunk name="Leave">
