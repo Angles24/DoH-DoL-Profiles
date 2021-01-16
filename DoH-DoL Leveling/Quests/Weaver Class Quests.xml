@@ -5,7 +5,7 @@ Angles24
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
 <!ENTITY meld "1">
- 	 
+
 <!--		Items required for meld setting being "0" [Level 20 Quest // Level 50 Quest]
 			CRP - [Iron Lance (Materia Enhanced) // HQ Crab Bow (Melded with: Savage Aim Materia III)]
 			BSM - [Iron Cross-Pein Hammer (Materia Enhanced) // HQ Cobalt Winglet (Melded with: Savage Might Materia III)]
@@ -15,7 +15,7 @@ Angles24
 			WVR - [Cotton Acton (Materia-enhanced) // None]
 			ALC - [Engraved Hard Leather Grimoire (Materia Enhanced) // HQ Budding Rosewood Wand (Melded with: Quicktongue III Materia)]
 			CUL - [None]
-			
+
 			HQ - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Weaver','Hq':true}]
 			QS - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Weaver','QuickSynth':true}]
 			HQ - [{'Id':1,'Group':1,'Item':####,'Amount':1,'Enabled':true,'Type':'Weaver'}]
@@ -24,16 +24,16 @@ Angles24
 <Profile>
 	<Name>Weaver Class Quests</Name>
 	<Order>
-	
+
 	<If Condition="FreeItemSlots() &lt; 16">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
-	
+
 	<WaitTimer WaitTime="2"/>
 	<RunCode Name="Disable_Flight"/>
 	<WaitTimer WaitTime="2"/>
-	
+
 	<If Condition="not IsQuestCompleted(67971)">
 		<ChangeClass Job="Weaver"/>
 		<AutoInventoryEquip/>
@@ -621,7 +621,7 @@ Angles24
 			 <LLSmallTalk WaitTime="1500"/>
 			 </If>
 			 <If Condition="HasItem(17923)">
-          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17924,'Amount':1,'Enabled':true,'Type':'Weaver'}]"/>
+          <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17924,'Amount':2,'Enabled':true,'Type':'Weaver'}]"/>
         </If>
         </While>
         <GetTo ZoneId="628" XYZ="-7.305711, 5.908822, -146.7726"/>
@@ -636,7 +636,7 @@ Angles24
 		<AutoInventoryEquip/>
       </If>
     </If>
-	
+
 	<LLSellItem ItemIds="5824,2318,5388,5825,2332,2320,5346,5390,2322,5336,
 						  4766,2336,4767,5322,5405,2324,5492,5442,5499,
 						  5826,5524,5116,5551,5494,5391,
@@ -650,13 +650,13 @@ Angles24
 						  2398,2399,11884,5444,2412,2401,12615,12628,11927,11885,
 						  19520,13760,2446,11892,2448,2460,2452,2449,2463,4775,
 						  11935,12597,12596,5337,11893,12616,19522"/>
-	
+
 	<LLoadProfile Path="../Start.xml"/>
-	
+
 	</Order>
 	<CodeChunks>
 		<CodeChunk Name="SmallTalk">
-			<![CDATA[ 
+			<![CDATA[
 			    await LlamaLibrary.Helpers.GeneralFunctions.SmallTalk();
 			]]>
 		</CodeChunk>
