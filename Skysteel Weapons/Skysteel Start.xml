@@ -26,19 +26,19 @@ Required: LLamaLibrary BotBase
 	
 	<RunCode Name="Disable_Flight"/>
 
-		<If Condition="&alc; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &gt; 79 and not HasItem(31720)">
-			<LLoadProfile Path="Profiles/Skysteel ALC Weapons.xml"/>
+		<If Condition="&min; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(31723)">
+				<LLoadProfile Path="Profiles/Skysteel MIN Weapons.xml"/>
 			</If>
 		</If>
-		<If Condition="&arm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &gt; 79 and not HasItem(31716)">
-				<LLoadProfile Path="Profiles/Skysteel ARM Weapons.xml"/>
+		<If Condition="&btn; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &gt; 79 and not HasItem(31722)">
+				<LLoadProfile Path="Profiles/Skysteel BTN Weapons.xml"/>
 			</If>
 		</If>
-		<If Condition="&bsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79 and not HasItem(31715)">
-				<LLoadProfile Path="Profiles/Skysteel BSM Weapons.xml"/>
+		<If Condition="&fsh; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(30303)">
+				<LLoadProfile Path="Profiles/Skysteel FSH Weapons2.xml"/>
 			</If>
 		</If>	
 		<If Condition="&crp; == 1">
@@ -46,11 +46,16 @@ Required: LLamaLibrary BotBase
 				<LLoadProfile Path="Profiles/Skysteel CRP Weapons.xml"/>
 			</If>
 		</If>
-		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &gt; 79 and not HasItem(31721)">
-				<LLoadProfile Path="Profiles/Skysteel CUL Weapons.xml"/>
+		<If Condition="&bsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79 and not HasItem(31715)">
+				<LLoadProfile Path="Profiles/Skysteel BSM Weapons.xml"/>
 			</If>
-		</If>		
+		</If>	
+		<If Condition="&arm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &gt; 79 and not HasItem(31716)">
+				<LLoadProfile Path="Profiles/Skysteel ARM Weapons.xml"/>
+			</If>
+		</If>	
 		<If Condition="&gsm; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &gt; 79 and not HasItem(31717)">
 				<LLoadProfile Path="Profiles/Skysteel GSM Weapons.xml"/>
@@ -66,21 +71,16 @@ Required: LLamaLibrary BotBase
 				<LLoadProfile Path="Profiles/Skysteel WVR Weapons.xml"/>
 			</If>
 		</If>
-		<If Condition="&btn; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &gt; 79 and not HasItem(31722)">
-				<LLoadProfile Path="Profiles/Skysteel BTN Weapons.xml"/>
+		<If Condition="&alc; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &gt; 79 and not HasItem(31720)">
+			<LLoadProfile Path="Profiles/Skysteel ALC Weapons.xml"/>
 			</If>
 		</If>
-		<If Condition="&fsh; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(30303)">
-				<LLoadProfile Path="Profiles/Skysteel FSH Weapons2.xml"/>
+		<If Condition="&cul; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &gt; 79 and not HasItem(31721)">
+				<LLoadProfile Path="Profiles/Skysteel CUL Weapons.xml"/>
 			</If>
 		</If>		
-		<If Condition="&min; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(31723)">
-				<LLoadProfile Path="Profiles/Skysteel MIN Weapons.xml"/>
-			</If>
-		</If>
 
 	
 	
