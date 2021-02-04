@@ -320,17 +320,11 @@ Angles24
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 20 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;"/>
-					<FishSpot XYZ="-536.0193, 304.3223, 690.8101" Heading="0.9838769" Sit="&Sit;"/>
 					<FishSpot XYZ="-561.6622, 329.8265, 601.4625" Heading="2.481561" Sit="&Sit;"/>
-					<FishSpot XYZ="-537.2352, 304.6775, 686.505" Heading="1.395771" Sit="&Sit;"/>
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;"/>
-					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;"/>
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;"/>
-					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;"/>
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;"/>
-					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;"/>
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;"/>
-					<FishSpot XYZ="-523.6066, 304.4359, 692.4307" Heading="5.578282" Sit="&Sit;"/>
 				</FishSpots>
 			</ExFish>
 		</While>
@@ -529,17 +523,11 @@ Angles24
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 40 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;"/>
-					<FishSpot XYZ="-536.0193, 304.3223, 690.8101" Heading="0.9838769" Sit="&Sit;"/>
 					<FishSpot XYZ="-561.6622, 329.8265, 601.4625" Heading="2.481561" Sit="&Sit;"/>
-					<FishSpot XYZ="-537.2352, 304.6775, 686.505" Heading="1.395771" Sit="&Sit;"/>
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;"/>
-					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;"/>
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;"/>
-					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;"/>
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;"/>
-					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;"/>
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;"/>
-					<FishSpot XYZ="-523.6066, 304.4359, 692.4307" Heading="5.578282" Sit="&Sit;"/>
 				</FishSpots>
 			</ExFish>
 		</While>
@@ -879,17 +867,11 @@ Angles24
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 51 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;"/>
-					<FishSpot XYZ="-536.0193, 304.3223, 690.8101" Heading="0.9838769" Sit="&Sit;"/>
 					<FishSpot XYZ="-561.6622, 329.8265, 601.4625" Heading="2.481561" Sit="&Sit;"/>
-					<FishSpot XYZ="-537.2352, 304.6775, 686.505" Heading="1.395771" Sit="&Sit;"/>
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;"/>
-					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;"/>
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;"/>
-					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;"/>
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;"/>
-					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;"/>
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;"/>
-					<FishSpot XYZ="-523.6066, 304.4359, 692.4307" Heading="5.578282" Sit="&Sit;"/>
 				</FishSpots>
 			</ExFish>
 		</While>
@@ -1138,17 +1120,11 @@ Angles24
 			<ExFish ShuffleFishSpots="True" Patience="Patience" MinimumGPPatience="400" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 63 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;"/>
-					<FishSpot XYZ="-536.0193, 304.3223, 690.8101" Heading="0.9838769" Sit="&Sit;"/>
 					<FishSpot XYZ="-561.6622, 329.8265, 601.4625" Heading="2.481561" Sit="&Sit;"/>
-					<FishSpot XYZ="-537.2352, 304.6775, 686.505" Heading="1.395771" Sit="&Sit;"/>
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;"/>
-					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;"/>
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;"/>
-					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;"/>
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;"/>
-					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;"/>
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;"/>
-					<FishSpot XYZ="-523.6066, 304.4359, 692.4307" Heading="5.578282" Sit="&Sit;"/>
 				</FishSpots>
 			</ExFish>
 		</While>
@@ -1670,17 +1646,11 @@ Angles24
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;"/>
-					<FishSpot XYZ="-536.0193, 304.3223, 690.8101" Heading="0.9838769" Sit="&Sit;"/>
 					<FishSpot XYZ="-561.6622, 329.8265, 601.4625" Heading="2.481561" Sit="&Sit;"/>
-					<FishSpot XYZ="-537.2352, 304.6775, 686.505" Heading="1.395771" Sit="&Sit;"/>
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;"/>
-					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;"/>
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;"/>
-					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;"/>
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;"/>
-					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;"/>
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;"/>
-					<FishSpot XYZ="-523.6066, 304.4359, 692.4307" Heading="5.578282" Sit="&Sit;"/>
 				</FishSpots>
 			</ExFish>
 		</While>
@@ -2012,17 +1982,11 @@ Angles24
 			<ExFish ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" MinFish="&MinFish;" MaxFish="&MaxFish;" Stealth="True" Bait="Versatile Lure" Condition="WorldManager.ZoneId == 901 and Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and HasAtLeast(29717,1)">
 				<FishSpots>
 					<FishSpot XYZ="-553.1573, 329.8265, 561.5015" Heading="2.646815" Sit="&Sit;"/>
-					<FishSpot XYZ="-536.0193, 304.3223, 690.8101" Heading="0.9838769" Sit="&Sit;"/>
 					<FishSpot XYZ="-561.6622, 329.8265, 601.4625" Heading="2.481561" Sit="&Sit;"/>
-					<FishSpot XYZ="-537.2352, 304.6775, 686.505" Heading="1.395771" Sit="&Sit;"/>
 					<FishSpot XYZ="-562.6907, 330.7975, 592.0357" Heading="2.550677" Sit="&Sit;"/>
-					<FishSpot XYZ="-540.6711, 304.8059, 696.2794" Heading="0.3967462" Sit="&Sit;"/>
 					<FishSpot XYZ="-548.6597, 329.8265, 594.0488" Heading="3.28581" Sit="&Sit;"/>
-					<FishSpot XYZ="-532.4877, 304.1201, 695.6782" Heading="1.150729" Sit="&Sit;"/>
 					<FishSpot XYZ="-554.8502, 330.5003, 584.5988" Heading="2.720323" Sit="&Sit;"/>
-					<FishSpot XYZ="-538.7556, 304.2522, 702.1933" Heading="1.094182" Sit="&Sit;"/>
 					<FishSpot XYZ="-540.5654, 330.6608, 582.7802" Heading="3.702595" Sit="&Sit;"/>
-					<FishSpot XYZ="-523.6066, 304.4359, 692.4307" Heading="5.578282" Sit="&Sit;"/>
 				</FishSpots>
 			</ExFish>
 		</While>
