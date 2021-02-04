@@ -45,9 +45,9 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not (HasItem(29613) or HasItem(29624) or HasItem(29635) or HasItem(29635) or HasItem(30283) or HasItem(30294))">
+		<If Condition="not (HasItem(29613) or HasItem(29624) or HasItem(29635) or HasItem(29635) or HasItem(30283) or HasItem(30294) or HasItem(31715))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-			<BuyItem ItemId="29613" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29613" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
 		<While Condition="HasItem(29613)"><!-- Skysteel Cross-pein Hammer -->
@@ -169,6 +169,73 @@ Required: LLamaLibrary BotBase
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
+		
+		<!-- Part 3 -->
+		
+		<While Condition="ClassName != ClassJobType.Blacksmith">
+			<ChangeClass Job="Blacksmith"/>
+		</While>		
+
+		<!-- Oddness in the End -->
+		<If Condition="not HasQuest(69518) and not IsQuestCompleted(69518)">
+		  <GetTo ZoneId="418" XYZ="-161.9582, 16.97958, -29.96986"/>
+		  <If Condition="IsQuestAcceptQualified(69518)">
+			<LLPickupQuest QuestId="69518" NpcId="1032898"/>
+			<LLSmallTalk/>
+		  </If>
+		</If>
+		<If Condition="GetQuestStep(69518) == 255">
+		  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+		  <LLTurnIn NpcId="1035012" XYZ="-72.67877, -10, 169.1157" QuestId="69518" StepId="255"/>
+		</If>
+
+		<If Condition="HasItem(30294)"><!-- Skysung Cross-pein Hammer -->
+			<!--  The Pinnacle of Possibility -->
+			<If Condition="not HasQuest(69519)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+			  <If Condition="IsQuestAcceptQualified(69519)">
+				<RunCode name="Pinnacle"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<While Condition="GetQuestStep(69519) == 255">
+				<While Condition="not HasAtLeast(31737,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->
+				  <If Condition="not LLHasItemCollectable(31751)"> <!-- Oddly Delicate Silver gear -->
+					<Lisbeth Json="[{'Group':1,'Item':31751,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':true}]"/>
+				  </If>
+				  <If Condition="LLHasItemCollectable(31751)"> <!-- Oddly Delicate Silver gear -->
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<RunCode Name="TurnInOddly"/>
+				  </If>
+				</While>
+				<While Condition="HasAtLeast(31737,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->
+				  <ChangeClass Job="Blacksmith" force="True"/>
+				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
+				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
+				  <LLSmallTalk/>
+				</While>	
+			</While>
+		</If>	
+
+		<If Condition="HasItem(31715)"><!-- Skybuilders' Cross-pein Hammer -->
+			<!--  Greater Heights -->
+			<If Condition="not HasQuest(69520)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>
+			  <If Condition="IsQuestAcceptQualified(69520)">
+				<LLPickupQuest QuestId="69520" NpcId="1035013"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<If Condition="GetQuestStep(69520) == 1">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTalkTo NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262" QuestId="69520" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69520) == 255">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+			  <LLSmallTalk/>
+			</If>		
+		</If>		
 		
 	</If>
 	
@@ -346,5 +413,89 @@ Required: LLamaLibrary BotBase
 			}
 		]]>
 		</CodeChunk>
+		<CodeChunk Name="Pinnacle">
+			<![CDATA[
+				var npcId = GameObjectManager.GetObjectByNPCId(1035012);
+
+					if (!npcId.IsWithinInteractRange)
+
+						{
+							var _target = npcId.Location;
+							Navigator.PlayerMover.MoveTowards(_target);
+							while (_target.Distance2D(Core.Me.Location) >= 4)
+								{
+									Navigator.PlayerMover.MoveTowards(_target);
+									await Coroutine.Sleep(100);
+								}
+									Navigator.PlayerMover.MoveStop();
+								}
+
+					npcId.Interact();			
+
+					await Coroutine.Wait(10000, () => SelectIconString.IsOpen);
+					
+					if (!SelectIconString.IsOpen)
+					{
+						npcId.Interact();
+
+						await Coroutine.Wait(10000, () => SelectIconString.IsOpen);
+					}	
+	
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					{
+						Logging.WriteDiagnostic("Choosing 'The Pinnacle of Possibility'.");
+						ff14bot.RemoteWindows.SelectIconString.ClickSlot(0);
+					}					
+
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}	
+					
+					await Coroutine.Wait(10000, () => SelectString.IsOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					{
+						Logging.WriteDiagnostic("Choosing current class.");
+						ff14bot.RemoteWindows.SelectString.ClickSlot(1);
+					}
+
+					await Buddy.Coroutines.Coroutine.Sleep(1000);
+					await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+					JournalAccept.Accept();					
+
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}
+					
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}					
+
+					
+			]]>			
+		</CodeChunk>
+		<CodeChunk Name="TurnInOddly">
+		<![CDATA[
+			Logging.Write("[Skysteel Handin] calling");
+			await LlamaLibrary.Helpers.GeneralFunctions.TurninOddlyDelicate();
+		]]>
+		</CodeChunk>		
 	</CodeChunks>
 </Profile>

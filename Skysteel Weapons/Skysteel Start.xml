@@ -8,16 +8,16 @@ Required: LLamaLibrary BotBase
 -->
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
-<!ENTITY crp "1"><!-- If you don't want to collect a certain weapon change "1" to "0" -->
-<!ENTITY bsm "1">
+<!ENTITY alc "1">
 <!ENTITY arm "1">
+<!ENTITY bsm "1">
+<!ENTITY crp "1"><!-- If you don't want to collect a certain weapon change "1" to "0" -->
+<!ENTITY cul "1">
 <!ENTITY gsm "1">
 <!ENTITY ltw "1">
 <!ENTITY wvr "1">
-<!ENTITY alc "1">
-<!ENTITY cul "1">
-<!ENTITY min "1">
 <!ENTITY btn "1">
+<!ENTITY min "1">
 <!ENTITY fsh "1">
 ]>
 <Profile>
@@ -25,62 +25,63 @@ Required: LLamaLibrary BotBase
 	<Order>
 	
 	<RunCode Name="Disable_Flight"/>
-	
-		<If Condition="&crp; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &gt; 79 and not HasItem(30293)">
-				<LLoadProfile Path="Profiles/Skysteel CRP Weapons.xml"/>
-			</If>
-		</If>
-		<If Condition="&bsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79 and not HasItem(30294)">
-				<LLoadProfile Path="Profiles/Skysteel BSM Weapons.xml"/>
+
+		<If Condition="&alc; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &gt; 79 and not HasItem(31720)">
+			<LLoadProfile Path="Profiles/Skysteel ALC Weapons.xml"/>
 			</If>
 		</If>
 		<If Condition="&arm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &gt; 79 and not HasItem(30295)">
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &gt; 79 and not HasItem(31716)">
 				<LLoadProfile Path="Profiles/Skysteel ARM Weapons.xml"/>
 			</If>
 		</If>
+		<If Condition="&bsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79 and not HasItem(31715)">
+				<LLoadProfile Path="Profiles/Skysteel BSM Weapons.xml"/>
+			</If>
+		</If>	
+		<If Condition="&crp; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &gt; 79 and not HasItem(31714)">
+				<LLoadProfile Path="Profiles/Skysteel CRP Weapons.xml"/>
+			</If>
+		</If>
+		<If Condition="&cul; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &gt; 79 and not HasItem(31721)">
+				<LLoadProfile Path="Profiles/Skysteel CUL Weapons.xml"/>
+			</If>
+		</If>		
 		<If Condition="&gsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &gt; 79 and not HasItem(30296)">
+			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &gt; 79 and not HasItem(31717)">
 				<LLoadProfile Path="Profiles/Skysteel GSM Weapons.xml"/>
 			</If>
 		</If>
 		<If Condition="&ltw; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &gt; 79 and not HasItem(30297)">
+			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &gt; 79 and not HasItem(31718)">
 				<LLoadProfile Path="Profiles/Skysteel LTW Weapons.xml"/>
 			</If>
 		</If>
 		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &gt; 79 and not HasItem(30298)">
+			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &gt; 79 and not HasItem(31719)">
 				<LLoadProfile Path="Profiles/Skysteel WVR Weapons.xml"/>
 			</If>
 		</If>
-		<If Condition="&alc; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &gt; 79 and not HasItem(30299)">
-			<LLoadProfile Path="Profiles/Skysteel ALC Weapons.xml"/>
-			</If>
-		</If>
-		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &gt; 79 and not HasItem(30300)">
-				<LLoadProfile Path="Profiles/Skysteel CUL Weapons.xml"/>
-			</If>
-		</If>
 		<If Condition="&btn; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &gt; 79 and not HasItem(30301)">
+			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &gt; 79 and not HasItem(31722)">
 				<LLoadProfile Path="Profiles/Skysteel BTN Weapons.xml"/>
-			</If>
-		</If>
-		<If Condition="&min; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(30302)">
-				<LLoadProfile Path="Profiles/Skysteel MIN Weapons.xml"/>
 			</If>
 		</If>
 		<If Condition="&fsh; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(30303)">
 				<LLoadProfile Path="Profiles/Skysteel FSH Weapons2.xml"/>
 			</If>
+		</If>		
+		<If Condition="&min; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(31723)">
+				<LLoadProfile Path="Profiles/Skysteel MIN Weapons.xml"/>
+			</If>
 		</If>
+
 	
 	
 

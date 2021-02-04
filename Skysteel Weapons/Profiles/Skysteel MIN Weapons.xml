@@ -43,9 +43,9 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not (HasItem(29621) or HasItem(29632) or HasItem(29643) or HasItem(29643) or HasItem(30291) or HasItem(30302))">
+		<If Condition="not (HasItem(29621) or HasItem(29632) or HasItem(29643) or HasItem(29643) or HasItem(30291) or HasItem(30302) or HasItem(31723))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-			<BuyItem ItemId="29621" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29621" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
 		<While Condition="HasItem(29621)"><!-- Skysteel Saw -->
@@ -330,6 +330,63 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<LLSmallTalk/>
 			</If>
 		</If>
+		
+		<!-- Part 3 -->
+		
+		<While Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
+		</While>		
+
+		<!-- Oddness in the End -->
+		<If Condition="not HasQuest(69518) and not IsQuestCompleted(69518)">
+		  <GetTo ZoneId="418" XYZ="-161.9582, 16.97958, -29.96986"/>
+		  <If Condition="IsQuestAcceptQualified(69518)">
+			<LLPickupQuest QuestId="69518" NpcId="1032898"/>
+			<LLSmallTalk/>
+		  </If>
+		</If>
+		<If Condition="GetQuestStep(69518) == 255">
+		  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+		  <LLTurnIn NpcId="1035012" XYZ="-72.67877, -10, 169.1157" QuestId="69518" StepId="255"/>
+		</If>
+
+		<If Condition="HasItem(30302)"><!-- Skysung Pickaxe -->
+			<!--  The Pinnacle of Possibility -->
+			<If Condition="not HasQuest(69519)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+			  <If Condition="IsQuestAcceptQualified(69519)">
+				<RunCode name="Pinnacle"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<While Condition="GetQuestStep(69519) == 255">
+				<While Condition="not HasAtLeast(31746,250)"> <!-- Oddly Delicate Pickaxe Part -->
+				  <If Condition="not LLHasItemCollectable(31768)"> <!-- Oddly Delicate Adamantite Ore -->
+					<Lisbeth Json="[{'Group':1,'Item':31768,'Amount':20,'Enabled':true,'Type':'Gather','Collectable':true,'AmountMode':'Restock'}]"/>
+				  </If>
+				  <If Condition="LLHasItemCollectable(31768)"> <!-- Oddly Delicate Adamantite Ore -->
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<RunCode Name="TurnInOddly"/>
+				  </If>
+				</While>
+				<While Condition="not HasAtLeast(31747,25)"> <!-- Inconceivably Delicate Pickaxe Part -->
+				  <If Condition="not HqHasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->
+					<Lisbeth Json="[{'Group':1,'Item':31769,'Amount':750,'Enabled':true,'Type':'Gather','Hq':true,'AmountMode':'Restock'}]"/>
+				  </If>
+				  <If Condition="HqHasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<BuyShopExchangeItem NpcId="1035014" ItemId="31747" SelectString="1" Count="25"/><!-- Inconceivably Delicate Pickaxe Part -->
+				  </If>
+				</While>				
+				<While Condition="HasAtLeast(31746,250) and HasAtLeast(31747,25)"> <!-- Oddly Delicate Adamantite Ore and Inconceivably Delicate Pickaxe Part -->
+				  <ChangeClass Job="Miner" force="True"/>
+				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
+				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
+				  <LLSmallTalk/>
+				</While>	
+			</While>
+		</If>		
+		
 		
 		<LLSellItem ItemIds="31130,31125,31132,31127"/>
 		
