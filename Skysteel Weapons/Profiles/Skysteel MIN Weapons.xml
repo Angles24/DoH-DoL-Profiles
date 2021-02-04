@@ -362,6 +362,8 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="GetQuestStep(69519) == 255">
 				<While Condition="not HasAtLeast(31746,250)"> <!-- Oddly Delicate Pickaxe Part -->
 				  <If Condition="not LLHasItemCollectable(31768)"> <!-- Oddly Delicate Adamantite Ore -->
+				<ChangeClass Job="Miner" force="True"/>
+				<EquipWeapon ItemId="30302"/>
 					<Lisbeth Json="[{'Group':1,'Item':31768,'Amount':20,'Enabled':true,'Type':'Gather','Collectable':true,'AmountMode':'Restock'}]"/>
 				  </If>
 				  <If Condition="LLHasItemCollectable(31768)"> <!-- Oddly Delicate Adamantite Ore -->
@@ -371,6 +373,8 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</While>
 				<While Condition="not HasAtLeast(31747,25)"> <!-- Inconceivably Delicate Pickaxe Part -->
 				  <If Condition="not HqHasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->
+				<ChangeClass Job="Miner" force="True"/>
+				<EquipWeapon ItemId="30302"/>
 					<Lisbeth Json="[{'Group':1,'Item':31769,'Amount':750,'Enabled':true,'Type':'Gather','Hq':true,'AmountMode':'Restock'}]"/>
 				  </If>
 				  <If Condition="HqHasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->

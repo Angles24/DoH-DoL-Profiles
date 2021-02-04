@@ -357,6 +357,8 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="GetQuestStep(69519) == 255">
 				<While Condition="not HasAtLeast(31744,250)"> <!-- Oddly Delicate Hatchet Part -->
 				  <If Condition="not LLHasItemCollectable(31766)"> <!-- Oddly Delicate Feather -->
+					<ChangeClass Job="Botanist" force="True"/>
+					<EquipWeapon ItemId="30301"/>
 					<Lisbeth Json="[{'Group':1,'Item':31766,'Amount':20,'Enabled':true,'Type':'Gather','Collectable':true,'AmountMode':'Restock'}]"/>
 				  </If>
 				  <If Condition="LLHasItemCollectable(31766)"> <!-- Oddly Delicate Feather -->
@@ -366,6 +368,8 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</While>
 				<While Condition="not HasAtLeast(31745,25)"> <!-- Inconceivably Delicate Hatchet Part -->
 				  <If Condition="not HqHasAtLeast(31767,750)"> <!-- Oddly Delicate Birch Log -->
+					<ChangeClass Job="Botanist" force="True"/>
+					<EquipWeapon ItemId="30301"/>
 					<Lisbeth Json="[{'Group':1,'Item':31767,'Amount':750,'Enabled':true,'Type':'Gather','Hq':true,'AmountMode':'Restock'}]"/>
 				  </If>
 				  <If Condition="HqHasAtLeast(31767,750)"> <!-- Oddly Delicate Birch Log -->
