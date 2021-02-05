@@ -199,15 +199,12 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<While Condition="not HasAtLeast(31738,60)"> <!-- Oddly Delicate Raising Hammer part -->
-				  <If Condition="not LLHasItemCollectable(31752)"> <!-- Oddly Delicate Wolfram Square -->
-					<Lisbeth Json="[{'Group':1,'Item':31752,'Amount':5,'Enabled':true,'Type':'Armorer','Collectable':true}]"/>
-				  </If>
-				  <If Condition="LLHasItemCollectable(31752)"> <!-- Oddly Delicate Wolfram Square -->
+				<Lisbeth Json="[{'Group':1,'Item':32000,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':31996,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+				<While Condition="not HasAtLeast(31738,60)"> <!-- Oddly Delicate Raising Hammer Part -->		
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31752,'Amount':5,'Enabled':true,'Type':'Armorer','Collectable':true}]"/> <!-- Oddly Delicate Wolfram Square -->
 					<RunCode Name="TurnInOddly"/>
-				  </If>
-				</While>
+				</While>			
 				<While Condition="HasAtLeast(31738,60)"> <!-- Oddly Delicate Raising Hammer part -->
 				  <ChangeClass Job="Armorer" force="True"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30295">
@@ -225,7 +222,9 @@ Required: LLamaLibrary BotBase
 		</If>
 
 		<If Condition="HasItem(31716)">
+			<EquipWeapon ItemID="31716"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<LLSellItem ItemIds="32000,31996,31752,31738"/>
 		</If>		
 
 		<If Condition="HasItem(31716) and not IsQuestCompleted(69520)"><!-- Skybuilders' Raising Hammer -->

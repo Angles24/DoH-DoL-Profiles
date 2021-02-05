@@ -199,15 +199,12 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<While Condition="not HasAtLeast(31737,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->
-				  <If Condition="not LLHasItemCollectable(31751)"> <!-- Oddly Delicate Silver gear -->
-					<Lisbeth Json="[{'Group':1,'Item':31751,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':true}]"/>
-				  </If>
-				  <If Condition="LLHasItemCollectable(31751)"> <!-- Oddly Delicate Silver gear -->
+				<Lisbeth Json="[{'Group':1,'Item':31999,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':31996,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+				<While Condition="not HasAtLeast(31737,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->		
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31751,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':true}]"/> <!-- Oddly Delicate Silver Gear -->
 					<RunCode Name="TurnInOddly"/>
-				  </If>
-				</While>
+				</While>					
 				<While Condition="HasAtLeast(31737,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->
 				  <ChangeClass Job="Blacksmith" force="True"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30294">
@@ -222,10 +219,12 @@ Required: LLamaLibrary BotBase
 				  <LLSmallTalk/>				  
 				</While>	
 			</While>
-		</If>	
-		
+		</If>
+
 		<If Condition="HasItem(31715)">
+			<EquipWeapon ItemID="31715"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<LLSellItem ItemIds="31737,31751,31996,31999"/>
 		</If>		
 
 		<If Condition="HasItem(31715) and not IsQuestCompleted(69520)"><!-- Skybuilders' Cross-pein Hammer -->

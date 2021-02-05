@@ -199,16 +199,13 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<While Condition="not HasAtLeast(31736,60)"> <!-- Oddly Delicate Saw Part -->
-				  <If Condition="not LLHasItemCollectable(31750)"> <!-- Oddly Delicate Pine Lumber -->
-					<Lisbeth Json="[{'Group':1,'Item':31750,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':true}]"/>
-				  </If>
-				  <If Condition="LLHasItemCollectable(31750)"> <!-- Oddly Delicate Pine Lumber -->
+				<Lisbeth Json="[{'Group':1,'Item':31991,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':31995,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+				<While Condition="not HasAtLeast(31736,60)"> <!-- Oddly Delicate Saw Part -->		
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31750,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':true}]"/> <!-- Oddly Delicate Pine Lumber -->
 					<RunCode Name="TurnInOddly"/>
-				  </If>
 				</While>
-				<While Condition="HasAtLeast(31736,60)"> <!-- Oddly Delicate Frypan Part -->
+				<While Condition="HasAtLeast(31736,60)"> <!-- Oddly Delicate Saw Part -->
 				  <ChangeClass Job="Carpenter" force="True"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30293">
 						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
@@ -225,7 +222,9 @@ Required: LLamaLibrary BotBase
 		</If>
 
 		<If Condition="HasItem(31714)">
+			<EquipWeapon ItemID="31714"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<LLSellItem ItemIds="31750,31736,31991,31995"/>
 		</If>			
 
 		<If Condition="HasItem(31714) and not IsQuestCompleted(69520)"><!-- Skybuilders' Saw -->

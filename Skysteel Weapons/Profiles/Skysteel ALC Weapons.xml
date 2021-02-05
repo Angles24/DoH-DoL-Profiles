@@ -199,15 +199,12 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<While Condition="not HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->
-				  <If Condition="not LLHasItemCollectable(31756)"> <!-- Oddly Delicate Holy Water -->
-					<Lisbeth Json="[{'Group':1,'Item':31756,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':true}]"/>
-				  </If>
-				  <If Condition="LLHasItemCollectable(31756)"> <!-- Oddly Delicate Holy Water -->
+				<Lisbeth Json="[{'Group':1,'Item':31978,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':31992,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+				<While Condition="not HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->		
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31756,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':true}]"/> <!-- Oddly Delicate Holy Water -->
 					<RunCode Name="TurnInOddly"/>
-				  </If>
-				</While>
+				</While>			
 				<While Condition="HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->
 				  <ChangeClass Job="Alchemist" force="True"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30299">
@@ -225,7 +222,9 @@ Required: LLamaLibrary BotBase
 		</If>
 		
 		<If Condition="HasItem(31720)">
+			<EquipWeapon ItemID="31720"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<LLSellItem ItemIds="31756,31742,31978,31992"/>
 		</If>		
 
 		<If Condition="HasItem(31720) and not IsQuestCompleted(69520)"><!-- Skybuilders' Alembic -->

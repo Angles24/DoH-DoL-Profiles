@@ -199,21 +199,18 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<While Condition="not HasAtLeast(31741,60)"> <!-- Oddly Delicate Needle Part -->
-				  <If Condition="not LLHasItemCollectable(31755)"> <!-- Oddly Delicate Rhea Cloth -->
-					<Lisbeth Json="[{'Group':1,'Item':31755,'Amount':5,'Enabled':true,'Type':'Weaver','Collectable':true}]"/>
-				  </If>
-				  <If Condition="LLHasItemCollectable(31755)"> <!-- Oddly Delicate Rhea Cloth -->
+				<Lisbeth Json="[{'Group':1,'Item':31991,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':31993,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+				<While Condition="not HasAtLeast(31741,60)"> <!-- Oddly Delicate Needle Part -->		
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31755,'Amount':5,'Enabled':true,'Type':'Weaver','Collectable':true}]"/> <!-- Oddly Delicate Needle Part -->
 					<RunCode Name="TurnInOddly"/>
-				  </If>
-				</While>
+				</While>			
 				<While Condition="HasAtLeast(31741,60)"> <!-- Oddly Delicate Needle Part -->
 				  <ChangeClass Job="Weaver" force="True"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30298">
 						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
-						<LisbethTravel Area="Middle La Noscea" Position="200.0367, 98.50204, -205.0951"/>
-						<BuyItem NpcId="1003257" ItemId="2443" ItemCount="1" DialogOption="1" XYZ="201.709,98.42287,-206.1036"/>
+						<LisbethTravel Area="Central Thanalan" Position="-10.76859, -2.04808, -149.7865"/>
+						<BuyItem NpcId="1001563" ItemId="2443" ItemCount="1" DialogOption="1" XYZ="-8.346741,-2.04808,-149.3401"/>
 						<EquipWeapon ItemID="2443"/>
 						<WaitTimer WaitTime="3" />
 					</While>				  
@@ -225,7 +222,9 @@ Required: LLamaLibrary BotBase
 		</If>
 
 		<If Condition="HasItem(31719)">
+			<EquipWeapon ItemID="31719"/>
 			<AutoEquip UpdateGearSet="true"/>
+			<LLSellItem ItemIds="31741,31755,31991,31993"/>
 		</If>		
 
 		<If Condition="HasItem(31719)"><!-- Skybuilders' Needle -->
