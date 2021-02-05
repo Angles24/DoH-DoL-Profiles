@@ -210,14 +210,25 @@ Required: LLamaLibrary BotBase
 				</While>
 				<While Condition="HasAtLeast(31743,60)"> <!-- Oddly Delicate Frypan Part -->
 				  <ChangeClass Job="Culinarian" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30300">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="Middle La Noscea" Position="200.0367, 98.50204, -205.0951"/>
+						<BuyItem NpcId="1003257" ItemId="2494" ItemCount="1" DialogOption="1" XYZ="201.709,98.42287,-206.1036"/>
+						<EquipWeapon ItemID="2494"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>
-				</While>	
-			</While>
-		</If>	
+				</While>				
+			</While>			
+		</If>
 
-		<If Condition="HasItem(31721)"><!-- Skybuilders' Frypan -->
+		<If Condition="HasItem(31721)">
+			<AutoEquip UpdateGearSet="true"/>
+		</If>		
+
+		<If Condition="HasItem(31721) and not IsQuestCompleted(69520)"><!-- Skybuilders' Frypan -->
 			<!--  Greater Heights -->
 			<If Condition="not HasQuest(69520)">
 			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>
@@ -237,12 +248,24 @@ Required: LLamaLibrary BotBase
 			</If>		
 		</If>
 		
+		<If Condition="HasItem(31721)">
+		  <If Condition="HasAtLeast(31743,1)"> <!-- Oddly Delicate Frypan Part -->
+			<RunCode name="DiscardOddlyDelicateFrypanPart"/>
+		  </If>	
+		</If>		
+		
 	</If>
 	
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	
 	</Order>
-	<CodeChunks>		
+	<CodeChunks>
+		<CodeChunk Name="DiscardOddlyDelicateFrypanPart">
+		  <![CDATA[ 
+            BagSlot toDiscard = InventoryManager.FilledInventoryAndArmory.First(x => x.RawItemId == 31743);
+            if (toDiscard != null && toDiscard.IsFilled) LlamaLibrary.Extensions.BagSlotExtensions.Discard(toDiscard);
+		  ]]>
+		</CodeChunk>	
 		<CodeChunk Name="TurnIn">
 		<![CDATA[
 			Logging.Write("[Skysteel Handin] calling");

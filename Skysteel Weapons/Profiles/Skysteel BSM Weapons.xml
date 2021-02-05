@@ -210,14 +210,25 @@ Required: LLamaLibrary BotBase
 				</While>
 				<While Condition="HasAtLeast(31737,60)"> <!-- Oddly Delicate Cross-pein Hammer part -->
 				  <ChangeClass Job="Blacksmith" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30294">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="Middle La Noscea" Position="200.0367, 98.50204, -205.0951"/>
+						<BuyItem NpcId="1003257" ItemId="2341" ItemCount="1" DialogOption="1" XYZ="201.709,98.42287,-206.1036"/>
+						<EquipWeapon ItemID="2341"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
-				  <LLSmallTalk/>
+				  <LLSmallTalk/>				  
 				</While>	
 			</While>
 		</If>	
+		
+		<If Condition="HasItem(31715)">
+			<AutoEquip UpdateGearSet="true"/>
+		</If>		
 
-		<If Condition="HasItem(31715)"><!-- Skybuilders' Cross-pein Hammer -->
+		<If Condition="HasItem(31715) and not IsQuestCompleted(69520)"><!-- Skybuilders' Cross-pein Hammer -->
 			<!--  Greater Heights -->
 			<If Condition="not HasQuest(69520)">
 			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>
@@ -235,6 +246,12 @@ Required: LLamaLibrary BotBase
 			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 			  <LLSmallTalk/>
 			</If>		
+		</If>
+
+		<If Condition="HasItem(31715)">
+		  <If Condition="HasAtLeast(31737,1)"> <!-- Oddly Delicate Cross-pein Hammer part -->
+			<RunCode name="DiscardOddlyDelicateCrosspeinHammerpart"/>
+		  </If>	
 		</If>		
 		
 	</If>
@@ -242,7 +259,13 @@ Required: LLamaLibrary BotBase
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	
 	</Order>
-	<CodeChunks>		
+	<CodeChunks>
+		<CodeChunk Name="DiscardOddlyDelicateCrosspeinHammerpart">
+		  <![CDATA[ 
+            BagSlot toDiscard = InventoryManager.FilledInventoryAndArmory.First(x => x.RawItemId == 31737);
+            if (toDiscard != null && toDiscard.IsFilled) LlamaLibrary.Extensions.BagSlotExtensions.Discard(toDiscard);
+		  ]]>
+		</CodeChunk>	
 		<CodeChunk Name="TurnIn">
 		<![CDATA[
 			Logging.Write("[Skysteel Handin] calling");

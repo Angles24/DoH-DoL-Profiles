@@ -379,14 +379,25 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</While>				
 				<While Condition="HasAtLeast(31744,250) and HasAtLeast(31745,25)"> <!-- Oddly Delicate Hatchet Part and Inconceivably Delicate Hatchet Part -->
 				  <ChangeClass Job="Botanist" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30301">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="North Shroud" Position="332.9388, -5.550671, 330.6815"/>
+						<BuyItem NpcId="1000718" ItemId="2546" ItemCount="1" DialogOption="1" XYZ="332.2346,-5.550671,332.4788"/>
+						<EquipWeapon ItemID="2546"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
-				  <LLSmallTalk/>
+				  <LLSmallTalk/>				  
 				</While>	
-			</While>
-		</If>	
+			</While>			
+		</If>
 
-		<If Condition="HasItem(31721)"><!-- Skybuilders' Frypan -->
+		<If Condition="HasItem(31721)">
+			<AutoEquip UpdateGearSet="true"/>
+		</If>		
+
+		<If Condition="HasItem(31721) and not IsQuestCompleted(69520)"><!-- Skybuilders' Frypan -->
 			<!--  Greater Heights -->
 			<If Condition="not HasQuest(69520)">
 			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>

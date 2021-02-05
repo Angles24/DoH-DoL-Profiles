@@ -210,14 +210,25 @@ Required: LLamaLibrary BotBase
 				</While>
 				<While Condition="HasAtLeast(31736,60)"> <!-- Oddly Delicate Frypan Part -->
 				  <ChangeClass Job="Carpenter" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30293">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="North Shroud" Position="332.9388, -5.550671, 330.6815"/>
+						<BuyItem NpcId="1000718" ItemId="2315" ItemCount="1" DialogOption="1" XYZ="332.2346,-5.550671,332.4788"/>
+						<EquipWeapon ItemID="2315"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>
-				</While>	
-			</While>
-		</If>	
+				</While>				
+			</While>			
+		</If>
 
-		<If Condition="HasItem(31714)"><!-- Skybuilders' Saw -->
+		<If Condition="HasItem(31714)">
+			<AutoEquip UpdateGearSet="true"/>
+		</If>			
+
+		<If Condition="HasItem(31714) and not IsQuestCompleted(69520)"><!-- Skybuilders' Saw -->
 			<!--  Greater Heights -->
 			<If Condition="not HasQuest(69520)">
 			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>
@@ -235,6 +246,12 @@ Required: LLamaLibrary BotBase
 			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 			  <LLSmallTalk/>
 			</If>		
+		</If>
+
+		<If Condition="HasItem(31714)">
+		  <If Condition="HasAtLeast(31736,1)"> <!-- Oddly Delicate Saw Part -->
+			<RunCode name="DiscardOddlyDelicateSawPart"/>
+		  </If>	
 		</If>		
 		
 	</If>
@@ -242,7 +259,13 @@ Required: LLamaLibrary BotBase
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	
 	</Order>
-	<CodeChunks>		
+	<CodeChunks>
+		<CodeChunk Name="DiscardOddlyDelicateSawPart">
+		  <![CDATA[ 
+            BagSlot toDiscard = InventoryManager.FilledInventoryAndArmory.First(x => x.RawItemId == 31736);
+            if (toDiscard != null && toDiscard.IsFilled) LlamaLibrary.Extensions.BagSlotExtensions.Discard(toDiscard);
+		  ]]>
+		</CodeChunk>	
 		<CodeChunk Name="TurnIn">
 		<![CDATA[
 			Logging.Write("[Skysteel Handin] calling");

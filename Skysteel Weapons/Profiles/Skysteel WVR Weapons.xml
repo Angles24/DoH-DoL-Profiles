@@ -210,12 +210,23 @@ Required: LLamaLibrary BotBase
 				</While>
 				<While Condition="HasAtLeast(31741,60)"> <!-- Oddly Delicate Needle Part -->
 				  <ChangeClass Job="Weaver" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30298">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="Middle La Noscea" Position="200.0367, 98.50204, -205.0951"/>
+						<BuyItem NpcId="1003257" ItemId="2443" ItemCount="1" DialogOption="1" XYZ="201.709,98.42287,-206.1036"/>
+						<EquipWeapon ItemID="2443"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
-				  <LLSmallTalk/>
+				  <LLSmallTalk/>				  
 				</While>	
-			</While>
-		</If>	
+			</While>			
+		</If>
+
+		<If Condition="HasItem(31719)">
+			<AutoEquip UpdateGearSet="true"/>
+		</If>		
 
 		<If Condition="HasItem(31719)"><!-- Skybuilders' Needle -->
 			<!--  Greater Heights -->
@@ -235,6 +246,12 @@ Required: LLamaLibrary BotBase
 			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 			  <LLSmallTalk/>
 			</If>		
+		</If>
+
+		<If Condition="HasItem(31719)">
+		  <If Condition="HasAtLeast(31741,1)"> <!-- Oddly Delicate Needle Part -->
+			<RunCode name="DiscardOddlyDelicateNeedlePart"/>
+		  </If>	
 		</If>		
 		
 	</If>
@@ -242,7 +259,13 @@ Required: LLamaLibrary BotBase
 	<LLoadProfile Path="../Skysteel Start.xml"/>
 	
 	</Order>
-	<CodeChunks>		
+	<CodeChunks>
+		<CodeChunk Name="DiscardOddlyDelicateNeedlePart">
+		  <![CDATA[ 
+            BagSlot toDiscard = InventoryManager.FilledInventoryAndArmory.First(x => x.RawItemId == 31741);
+            if (toDiscard != null && toDiscard.IsFilled) LlamaLibrary.Extensions.BagSlotExtensions.Discard(toDiscard);
+		  ]]>
+		</CodeChunk>	
 		<CodeChunk Name="TurnIn">
 		<![CDATA[
 			Logging.Write("[Skysteel Handin] calling");

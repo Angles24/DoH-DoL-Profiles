@@ -384,11 +384,42 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				</While>				
 				<While Condition="HasAtLeast(31746,250) and HasAtLeast(31747,25)"> <!-- Oddly Delicate Adamantite Ore and Inconceivably Delicate Pickaxe Part -->
 				  <ChangeClass Job="Miner" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30302">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="Western Thanalan" Position="208.6721, 52.03812, 135.4593"/>
+						<BuyItem NpcId="1003724" ItemId="2520" ItemCount="1" DialogOption="1" XYZ="207.1716,52.03812,134.1726"/>
+						<EquipWeapon ItemID="2520"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
 				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
-				  <LLSmallTalk/>
+				  <LLSmallTalk/>			  
 				</While>	
-			</While>
+			</While>			
+		</If>
+
+		<If Condition="HasItem(31723)">
+			<AutoEquip UpdateGearSet="true"/>
+		</If>		
+
+		<If Condition="HasItem(31723) and not IsQuestCompleted(69520)"><!-- Skybuilders' Pickaxe -->
+			<!--  Greater Heights -->
+			<If Condition="not HasQuest(69520)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>
+			  <If Condition="IsQuestAcceptQualified(69520)">
+				<LLPickupQuest QuestId="69520" NpcId="1035013"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<If Condition="GetQuestStep(69520) == 1">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTalkTo NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262" QuestId="69520" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69520) == 255">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+			  <LLSmallTalk/>
+			</If>		
 		</If>		
 		
 		
@@ -681,5 +712,11 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					
 			]]>			
 		</CodeChunk>
+		<CodeChunk Name="TurnInOddly">
+		<![CDATA[
+			Logging.Write("[Skysteel Handin] calling");
+			await LlamaLibrary.Helpers.GeneralFunctions.TurninOddlyDelicate();
+		]]>
+		</CodeChunk>		
 	</CodeChunks>
 </Profile>
