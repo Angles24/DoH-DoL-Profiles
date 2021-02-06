@@ -199,10 +199,11 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<Lisbeth Json="[{'Group':1,'Item':31978,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':31992,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':18,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':19,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'},{'Id':2,'Group':1,'Item':31764,'Amount':60,'Enabled':true,'Type':'Exchange','AmountMode':'Restock'},{'Id':3,'Group':1,'Item':31997,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':4,'Group':1,'Item':31992,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
 				<While Condition="not HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->		
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
 					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31756,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':true}]"/> <!-- Oddly Delicate Holy Water -->
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
 					<RunCode Name="TurnInOddly"/>
 				</While>			
 				<While Condition="HasAtLeast(31742,60)"> <!-- Oddly Delicate Alembic Part -->

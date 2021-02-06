@@ -199,10 +199,11 @@ Required: LLamaLibrary BotBase
 			  </If>
 			</If>
 			<While Condition="GetQuestStep(69519) == 255">
-				<Lisbeth Json="[{'Group':1,'Item':31991,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':31993,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':16,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'},{'Id':1,'Group':1,'Item':17,'Amount':180,'Enabled':true,'Type':'Gather','AmountMode':'Restock'},{'Id':2,'Group':1,'Item':31762,'Amount':60,'Enabled':true,'Type':'Exchange','AmountMode':'Restock'},{'Id':3,'Group':1,'Item':31991,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'},{'Id':4,'Group':1,'Item':31993,'Amount':300,'Enabled':true,'Type':'ResourceApproval','AmountMode':'Restock'}]"/>					
 				<While Condition="not HasAtLeast(31740,60)"> <!-- Oddly Delicate Round Knife Part -->	
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
 					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':31754,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':true}]"/> <!-- Oddly Delicate Gazelle Leather -->
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
 					<RunCode Name="TurnInOddly"/>
 				</While>			
 				<While Condition="HasAtLeast(31740,60)"> <!-- Oddly Delicate Round Knife Part -->
