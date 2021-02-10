@@ -44,7 +44,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 		</If>
 		
-		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644) or HasItem(29644) or HasItem(30292) or HasItem(30303))">
+		<If Condition="not (HasItem(29622) or HasItem(29633) or HasItem(29644) or HasItem(29644) or HasItem(30292) or HasItem(30303) or HasItem(31724))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 			<BuyItem ItemId="29622" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
@@ -252,6 +252,98 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<LLSmallTalk/>
 			</If>
 		</If>
+		
+		<!-- Part 3 -->
+		
+		<While Condition="ClassName != ClassJobType.Fisher">
+			<ChangeClass Job="Fisher"/>
+		</While>		
+
+		<!-- Oddness in the End -->
+		<If Condition="not HasQuest(69518) and not IsQuestCompleted(69518)">
+		  <GetTo ZoneId="418" XYZ="-161.9582, 16.97958, -29.96986"/>
+		  <If Condition="IsQuestAcceptQualified(69518)">
+			<LLPickupQuest QuestId="69518" NpcId="1032898"/>
+			<LLSmallTalk/>
+		  </If>
+		</If>
+		<If Condition="GetQuestStep(69518) == 255">
+		  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+		  <LLTurnIn NpcId="1035012" XYZ="-72.67877, -10, 169.1157" QuestId="69518" StepId="255"/>
+		</If>
+
+		<If Condition="HasItem(30303)"><!-- Skysung Fishing Rod -->
+			<!--  The Pinnacle of Possibility -->
+			<If Condition="not HasQuest(69519)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+			  <If Condition="IsQuestAcceptQualified(69519)">
+				<RunCode name="Pinnacle"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<While Condition="GetQuestStep(69519) == 255">
+				<If condition="not HasAtLeast(30136,500)">
+					<Lisbeth Json="[{'Group':1,'Item':30136,'Amount':999,'Enabled':true,'Type':'Purchase','AmountMode':'Restock'}]"/> <!-- Signature Skyball -->
+				</If>	
+				<While Condition="not HasAtLeast(31749,200)"> <!-- Oddly Delicate Fishing Reel Part -->
+					<EquipWeapon ItemID="30303"/>
+					<Lisbeth Json="[{'Group':1,'Item':31771,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Pickled Pom -->					
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<RunCode Name="TurnInOddly"/>
+				</While>
+				<While Condition="not HasAtLeast(31748,200)"> <!-- Oddly Delicate Fishing Rod Part -->		
+					<EquipWeapon ItemID="30303"/>
+					<Lisbeth Json="[{'Group':1,'Item':31770,'Amount':10,'Enabled':true,'Type':'Fisher','Collectable':true}]"/> <!-- Flintstrike -->					
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<RunCode Name="TurnInOddly"/>
+				</While>				
+				<While Condition="HasAtLeast(31749,200) and HasAtLeast(31748,200)"> <!-- Oddly Delicate Raising Hammer part -->
+				  <ChangeClass Job="Fisher" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30303">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="Middle La Noscea" Position="200.0367, 98.50204, -205.0951"/>
+						<BuyItem NpcId="1003257" ItemId="2572" ItemCount="1" DialogOption="1" XYZ="201.709,98.42287,-206.1036"/>
+						<EquipWeapon ItemID="2572"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
+				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
+				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
+				  <LLSmallTalk/>
+				</While>			
+			</While>			
+		</If>
+
+		<If Condition="HasItem(31724)">
+			<EquipWeapon ItemID="31724"/>
+			<AutoEquip UpdateGearSet="true"/>
+			<LLSellItem ItemIds="2572,31749,31748"/>
+		</If>		
+
+		<If Condition="HasItem(31724) and not IsQuestCompleted(69520)"><!-- Skybuilders' Fishing Rod -->
+			<!--  Greater Heights -->
+			<If Condition="not HasQuest(69520)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>
+			  <If Condition="IsQuestAcceptQualified(69520)">
+				<LLPickupQuest QuestId="69520" NpcId="1035013"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<If Condition="GetQuestStep(69520) == 1">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTalkTo NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262" QuestId="69520" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69520) == 255">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+			  <LLSmallTalk/>
+			</If>		
+		</If>
+
+		<If Condition="HasItem(31716)">
+		  <If Condition="HasAtLeast(31738,1)">
+			<RunCode name="DiscardOddlyDelicateRaisingHammerpart"/>
+		  </If>	
+		</If>				
 		
 		
 	</If>
@@ -469,5 +561,89 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<CodeChunk Name="EnableMount">
 			<![CDATA[ ff14bot.Settings.CharacterSettings.Instance.UseMount = true; ]]>
 		</CodeChunk>
+		<CodeChunk Name="Pinnacle">
+			<![CDATA[
+				var npcId = GameObjectManager.GetObjectByNPCId(1035012);
+
+					if (!npcId.IsWithinInteractRange)
+
+						{
+							var _target = npcId.Location;
+							Navigator.PlayerMover.MoveTowards(_target);
+							while (_target.Distance2D(Core.Me.Location) >= 4)
+								{
+									Navigator.PlayerMover.MoveTowards(_target);
+									await Coroutine.Sleep(100);
+								}
+									Navigator.PlayerMover.MoveStop();
+								}
+
+					npcId.Interact();			
+
+					await Coroutine.Wait(10000, () => SelectIconString.IsOpen);
+					
+					if (!SelectIconString.IsOpen)
+					{
+						npcId.Interact();
+
+						await Coroutine.Wait(10000, () => SelectIconString.IsOpen);
+					}	
+	
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					{
+						Logging.WriteDiagnostic("Choosing 'The Pinnacle of Possibility'.");
+						ff14bot.RemoteWindows.SelectIconString.ClickSlot(0);
+					}					
+
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}	
+					
+					await Coroutine.Wait(10000, () => SelectString.IsOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					{
+						Logging.WriteDiagnostic("Choosing current class.");
+						ff14bot.RemoteWindows.SelectString.ClickSlot(1);
+					}
+
+					await Buddy.Coroutines.Coroutine.Sleep(1000);
+					await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+					JournalAccept.Accept();					
+
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}
+					
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}					
+
+					
+			]]>			
+		</CodeChunk>
+		<CodeChunk Name="TurnInOddly">
+		<![CDATA[
+			Logging.Write("[Skysteel Handin] calling");
+			await LlamaLibrary.Helpers.GeneralFunctions.TurninOddlyDelicate();
+		]]>
+		</CodeChunk>		
 	</CodeChunks>
 </Profile>
