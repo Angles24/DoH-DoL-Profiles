@@ -72,7 +72,7 @@ Required: LLamaLibrary BotBase
 			</If>
 		</If>
 		<If Condition="&fsh; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(30303)">
+			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(31724)">
 				<LLoadProfile Path="Profiles/Skysteel FSH Weapons2.xml"/>
 			</If>
 		</If>		
