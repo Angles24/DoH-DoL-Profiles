@@ -14,7 +14,7 @@ Required: LLamaLibrary BotBase
 	<StopCrafting/>
 	
 	<If Condition="ClassName != ClassJobType.Weaver">
-		<ChangeClass Job="Weaver"/>
+		<ChangeClass Job="Weaver" force="True"/>
 	</If>
 	<If Condition="ClassName == ClassJobType.Weaver and Core.Player.ClassLevel &gt; 79">
 		
@@ -57,7 +57,7 @@ Required: LLamaLibrary BotBase
 			<If Condition="HasItem(29617) and HqHasAtLeast(29650,20)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29617">
-					<ChangeClass Job="Weaver"/>
+					<ChangeClass Job="Weaver" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29617">
 						<RunCode Name="SwitchCombatJob"/>
@@ -76,7 +76,7 @@ Required: LLamaLibrary BotBase
 			<If Condition="HasItem(29628) and HqHasAtLeast(29658,30)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29628">
-					<ChangeClass Job="Weaver"/>
+					<ChangeClass Job="Weaver" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29628">
 						<RunCode Name="SwitchCombatJob"/>
@@ -90,7 +90,7 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="HasItem(29639) and HasQuest(69385)"><!-- Dragonsung Needle -->
 			<While Condition="ClassName != ClassJobType.Weaver">
-				<ChangeClass Job="Weaver"/>
+				<ChangeClass Job="Weaver" force="True"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29639">
 				<RunCode Name="SkysteelWVR3"/><!-- Dragonsung Needle -->
@@ -106,7 +106,7 @@ Required: LLamaLibrary BotBase
 		<!-- Part 2 -->	
 			
 		<While Condition="ClassName != ClassJobType.Weaver">
-			<ChangeClass Job="Weaver"/>
+			<ChangeClass Job="Weaver" force="True"/>
 		</While>
 		
 		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
@@ -173,7 +173,7 @@ Required: LLamaLibrary BotBase
 		<!-- Part 3 -->
 		
 		<While Condition="ClassName != ClassJobType.Weaver">
-			<ChangeClass Job="Weaver"/>
+			<ChangeClass Job="Weaver" force="True"/>
 		</While>		
 
 		<!-- Oddness in the End -->

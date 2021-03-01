@@ -13,7 +13,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	<LLSellItem ItemIds="31130,31125,31132,31127"/>
 	
 	<If Condition="ClassName != ClassJobType.Fisher">
-		<ChangeClass Job="Fisher"/>
+		<ChangeClass Job="Fisher" force="True"/>
 	</If>
 	<If Condition="ClassName == ClassJobType.Fisher and Core.Player.ClassLevel &gt; 79">
 		
@@ -51,7 +51,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<While Condition="HasItem(29622)"><!-- Skysteel Fishing Rod -->
 			<While Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher"/>
+				<ChangeClass Job="Fisher" force="True"/>
 			</While>
 			<While Condition="not HasAtLeast(30136,50)">
 				<Log Message="Buy some Signature Skyball from Foundation!"/>
@@ -80,7 +80,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="HasItem(29622) and HqHasAtLeast(29673,40)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29622">
-					<ChangeClass Job="Fisher"/>
+					<ChangeClass Job="Fisher" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29622">
 						<RunCode Name="SwitchCombatJob"/>
@@ -95,7 +95,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			
 		<While Condition="HasItem(29633)"><!-- Skysteel Fishing Rod +1 -->
 			<While Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher"/>
+				<ChangeClass Job="Fisher" force="True"/>
 			</While>
 			<While Condition="not HasAtLeast(30136,50)">
 				<Log Color="&LogTxt;" Message="Buy some Signature Skyball from Foundation!"/>
@@ -122,7 +122,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="HasItem(29633) and HqHasAtLeast(29678,60)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29633">
-					<ChangeClass Job="Fisher"/>
+					<ChangeClass Job="Fisher" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29633">
 						<RunCode Name="SwitchCombatJob"/>
@@ -137,7 +137,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="HasItem(29644) and HasQuest(69385)">
 			<While Condition="ClassName != ClassJobType.Fisher">
-				<ChangeClass Job="Fisher"/>
+				<ChangeClass Job="Fisher" force="True"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29644">
 				<RunCode Name="SkysteelFSH3"/><!-- Equip Dragonsung Fishing Rod -->
@@ -153,7 +153,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<!-- Part 2 -->	
 			
 		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher"/>
+			<ChangeClass Job="Fisher" force="True"/>
 		</While>
 		
 		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
@@ -256,7 +256,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<!-- Part 3 -->
 		
 		<While Condition="ClassName != ClassJobType.Fisher">
-			<ChangeClass Job="Fisher"/>
+			<ChangeClass Job="Fisher" force="True"/>
 		</While>		
 
 		<!-- Oddness in the End -->

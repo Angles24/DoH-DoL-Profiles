@@ -10,7 +10,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 	<RunCode Name="Disable_Flight"/>
 	
 	<If Condition="ClassName != ClassJobType.Botanist">
-		<ChangeClass Job="Botanist"/>
+		<ChangeClass Job="Botanist" force="True"/>
 	</If>
 	<If Condition="ClassName == ClassJobType.Botanist and Core.Player.ClassLevel &gt; 79">
 		
@@ -58,7 +58,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 			<!--<If Condition="not HqHasAtLeast(29669,340) or not HasAtLeast(29670,120)">
 				<If Condition="ClassName != ClassJobType.Botanist">
-					<ChangeClass Job="Botanist"/>
+					<ChangeClass Job="Botanist" force="True"/>
 				</If>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29620">
 					<RunCode Name="SkysteelBTN"/>
@@ -111,7 +111,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="HasItem(29620) and HqHasAtLeast(29669,340) and HasAtLeast(29670,120)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29620">
-					<ChangeClass Job="Botanist"/>
+					<ChangeClass Job="Botanist" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29620">
 					<RunCode Name="SwitchCombatJob"/>
@@ -136,7 +136,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>
 			<!--<If Condition="not HasAtLeast(29675,180)or not HqHasAtLeast(29674,510)">
 				<If Condition="ClassName != ClassJobType.Botanist">
-					<ChangeClass Job="Botanist"/>
+					<ChangeClass Job="Botanist" force="True"/>
 				</If>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29631">
 					<RunCode Name="SkysteelBTN2"/>
@@ -183,7 +183,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="HasItem(29631) and HasAtLeast(29675,180) and HqHasAtLeast(29674,510)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29631">
-					<ChangeClass Job="Botanist"/>
+					<ChangeClass Job="Botanist" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29631">
 						<RunCode Name="SwitchCombatJob"/>
@@ -198,7 +198,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		
 		<If Condition="HasItem(29642) and HasQuest(69385)">
 			<While Condition="ClassName != ClassJobType.Botanist">
-				<ChangeClass Job="Botanist"/>
+				<ChangeClass Job="Botanist" force="True"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29642">
 				<RunCode Name="SkysteelBTN3"/><!-- Equip Dragonsung Hatchet -->
@@ -214,7 +214,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<!-- Part 2 -->	
 			
 		<While Condition="ClassName != ClassJobType.Botanist">
-			<ChangeClass Job="Botanist"/>
+			<ChangeClass Job="Botanist" force="True"/>
 		</While>
 		
 		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
@@ -329,7 +329,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<!-- Part 3 -->
 		
 		<While Condition="ClassName != ClassJobType.Botanist">
-			<ChangeClass Job="Botanist"/>
+			<ChangeClass Job="Botanist" force="True"/>
 		</While>		
 
 		<!-- Oddness in the End -->

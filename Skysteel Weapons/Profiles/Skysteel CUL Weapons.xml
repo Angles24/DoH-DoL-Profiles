@@ -14,7 +14,7 @@ Required: LLamaLibrary BotBase
 	<StopCrafting/>
 	
 	<If Condition="ClassName != ClassJobType.Culinarian">
-		<ChangeClass Job="Culinarian"/>
+		<ChangeClass Job="Culinarian" force="True"/>
 	</If>
 	<If Condition="ClassName == ClassJobType.Culinarian and Core.Player.ClassLevel &gt; 79">
 		
@@ -57,7 +57,7 @@ Required: LLamaLibrary BotBase
 			<If Condition="HasItem(29619) and HqHasAtLeast(29652,20)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29619">
-					<ChangeClass Job="Culinarian"/>
+					<ChangeClass Job="Culinarian" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29619">
 						<RunCode Name="SwitchCombatJob"/>
@@ -76,7 +76,7 @@ Required: LLamaLibrary BotBase
 			<If Condition="HasItem(29630) and HqHasAtLeast(29660,30)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29630">
-					<ChangeClass Job="Culinarian"/>
+					<ChangeClass Job="Culinarian" force="True"/>
 					<WaitTimer WaitTime="3"/>
 					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29630">
 						<RunCode Name="SwitchCombatJob"/>
@@ -90,7 +90,7 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="HasItem(29641) and HasQuest(69385)"><!-- Dragonsung Frypan -->
 			<While Condition="ClassName != ClassJobType.Culinarian">
-				<ChangeClass Job="Culinarian"/>
+				<ChangeClass Job="Culinarian" force="True"/>
 			</While>
 			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29641">
 				<RunCode Name="SkysteelCUL3"/><!-- Dragonsung Frypan -->
@@ -106,7 +106,7 @@ Required: LLamaLibrary BotBase
 		<!-- Part 2 -->	
 			
 		<While Condition="ClassName != ClassJobType.Culinarian">
-			<ChangeClass Job="Culinarian"/>
+			<ChangeClass Job="Culinarian" force="True"/>
 		</While>
 		
 		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
@@ -173,7 +173,7 @@ Required: LLamaLibrary BotBase
 		<!-- Part 3 -->
 		
 		<While Condition="ClassName != ClassJobType.Culinarian">
-			<ChangeClass Job="Culinarian"/>
+			<ChangeClass Job="Culinarian" force="True"/>
 		</While>		
 
 		<!-- Oddness in the End -->
