@@ -417,7 +417,10 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			</If>		
 		</If>		
 		
-		<LLSellItem ItemIds="31130,31125"/>
+		<If Condition="HasItem(31722)">
+			<LLSellItem ItemIds="31130,31125"/>
+		</If>	
+		
 		
 	</If>
 	
