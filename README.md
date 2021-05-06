@@ -23,7 +23,7 @@ Yes this works for chinese aswell, I don't understand chinese however there are 
 Don't hesitate to ask questions in my discord channel through the discord link below.
 
 ## Discord Links
-[LLamaLibrary & DoH80-DoL80](https://discord.gg/GRczqQj)
+[LLamaLibrary & DoH80-DoL80](https://discord.gg/bmgCq39)
 
 [Lisbeth](https://discord.gg/P6fYE2B)
 
