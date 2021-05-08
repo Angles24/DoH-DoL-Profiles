@@ -176,42 +176,42 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Carpenter.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Blacksmith.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Armorer.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Goldsmith.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Leatherworker.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Weaver.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Alchemist.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 51">
-					<LLoadProfile Path="DiademCN/21-51 Culinarian.xml"/>
+					<LLoadProfile Path="DiademCN/21-51 CulinarianD.xml"/>
 				</If>
 			</If>
 		</If>
@@ -340,42 +340,42 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Carpenter.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Blacksmith.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Armorer.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Goldsmith.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Leatherworker.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Weaver.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Alchemist.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">
-					<LLoadProfile Path="DiademCN/51-63 Culinarian.xml"/>
+					<LLoadProfile Path="DiademCN/51-63 CulinarianD.xml"/>
 				</If>
 			</If>
 		</If>
@@ -504,42 +504,42 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="not Core.Me.HasAura(1411) and IsCNClient()">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 CarpenterNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 CarpenterDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 BlacksmithNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 BlacksmithDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 ArmorerNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 ArmorerDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 GoldsmithNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 GoldsmithDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 LeatherworkerNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 LeatherworkerDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 WeaverNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 WeaverDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 AlchemistNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 AlchemistDNP.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 67">
-					<LLoadProfile Path="DiademCN/63-67 CulinarianNP.xml"/>
+					<LLoadProfile Path="DiademCN/63-67 CulinarianDNP.xml"/>
 				</If>
 			</If>
 		</If>
@@ -645,42 +645,42 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Carpenter.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Blacksmith.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Armorer.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Goldsmith.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Leatherworker.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Weaver.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Alchemist.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 70">
-					<LLoadProfile Path="DiademCN/63-70 Culinarian.xml"/>
+					<LLoadProfile Path="DiademCN/63-70 CulinarianD.xml"/>
 				</If>
 			</If>
 		</If>
@@ -800,42 +800,42 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="IsCNClient()">
 			<If Condition="&crp; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Carpenter.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 CarpenterD.xml"/>
 				</If>
 			</If>
 			<If Condition="&bsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Blacksmith.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 BlacksmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&arm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Armorer.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 ArmorerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&gsm; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Goldsmith.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 GoldsmithD.xml"/>
 				</If>
 			</If>
 			<If Condition="&ltw; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Leatherworker.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 LeatherworkerD.xml"/>
 				</If>
 			</If>
 			<If Condition="&wvr; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Weaver.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 WeaverD.xml"/>
 				</If>
 			</If>
 			<If Condition="&alc; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Alchemist.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 AlchemistD.xml"/>
 				</If>
 			</If>
 			<If Condition="&cul; == 1">
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 80">
-					<LLoadProfile Path="DiademCN/70-80 Culinarian.xml"/>
+					<LLoadProfile Path="DiademCN/70-80 CulinarianD.xml"/>
 				</If>
 			</If>
 		</If>
