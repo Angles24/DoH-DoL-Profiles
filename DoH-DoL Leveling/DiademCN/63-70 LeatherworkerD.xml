@@ -29,10 +29,10 @@ Authors:  Kayla / Angles24
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':29812,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31204,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':29812,'Amount':30,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31204,'Amount':30,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
