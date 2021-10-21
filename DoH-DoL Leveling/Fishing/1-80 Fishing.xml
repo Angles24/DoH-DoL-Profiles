@@ -1996,7 +1996,7 @@ Angles24
 	</If>
 
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 80 or not IsQuestCompleted(68435)">
-		<LLoadProfile Path="1-80 Fishing Not Official Release Quests.xml"/>
+		<LLoadProfile Path="1-80 Fishing.xml"/>
 	</If>
 	
 	<!-- Turn in-->
