@@ -106,8 +106,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21 or not IsQuestCompleted(65794)">
 					<LLoadProfile Path="Crafting/1-21 Culinarian.xml"/>
 				</If>
-			</If>
-		
+			</If>	
 		
 		
 		<!-- Unlock Ishgard -->
@@ -120,15 +119,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 			
 			
-							
 		<!-- Craft Gathering and Crafting Gear 21 -->
 			<If Condition="&craft21; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 17) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 17) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 17) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 17) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 17) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 17) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 17) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 17) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 17) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 17))">
 				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft21"/>
 				<LLStopBot/>
 			</If>
-
-			
 		
 		<!-- 21-51 Ishgard Crafting -->
 		<If Condition="not IsCNClient()">
@@ -216,8 +212,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 	
-		
-	
+			
 		<!-- Gatherer's to 40 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66179) or Core.Me.Levels[ClassJobType.Miner] &lt; 40">
@@ -238,8 +233,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLStopBot/>
 			</If>
 		
-		
-		
+				
 		<!-- Gatherer's to 51 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66182) or Core.Me.Levels[ClassJobType.Miner] &lt; 51">
@@ -284,7 +278,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		
-				
 		<!-- Craft Gathering and Crafting Gear 51 -->
 			<If Condition="&craft51; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 50) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 50) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 50) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 50) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 50) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 50) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 50) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 50) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 54) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 54))">
 				<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
@@ -292,8 +285,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLStopBot/>
 			</If>
 		
-		
-		
+				
 		<!-- 51-63 Ishgard Crafting -->
 		<If Condition="not IsCNClient()">
 			<If Condition="&crp; == 1">
@@ -378,8 +370,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					<LLoadProfile Path="DiademCN/51-63 CulinarianD.xml"/>
 				</If>
 			</If>
-		</If>
-		
+		</If>		
 		
 		
 		<!-- Stormblood Aether Currents -->
@@ -414,8 +405,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(621,9) and IsAetherCurrentCompleted(621,10) and IsAetherCurrentCompleted(621,11)
 				and IsAetherCurrentCompleted(621,12) and IsAetherCurrentCompleted(621,13) and IsAetherCurrentCompleted(621,14))">
 			<LLoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
-		</If>
-		
+		</If>		
 				
 		
 		<!-- Gatherer's to 63 -->
@@ -428,8 +418,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<If Condition="not IsQuestCompleted(68156) or Core.Me.Levels[ClassJobType.Botanist] &lt; 63">
 				<LLoadProfile Path="Gathering/51-63 Botanist.xml"/>
 			</If>
-		</If>
-		
+		</If>		
 		
 		
 		<!-- Check to see if we have unlocked Collectables and More -->
@@ -442,15 +431,13 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLoadProfile Path="Quests/Unlock Collectables and More.xml"/>
 			</If>
 
-
 		
 		<!-- Craft Gathering and Crafting Gear 63 -->
 			<If Condition="&craft63; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 190) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 190) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 190) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 190) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 190) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 190) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 190) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 190) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 190) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 190))">
 				<LogMessage Message="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft63"/>
 				<LLStopBot/>
-			</If>
-			
+			</If>			
 			
 			
 		<!-- NoN Preferred Realm to 67 in Crafting -->
@@ -542,8 +529,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					<LLoadProfile Path="DiademCN/63-67 CulinarianDNP.xml"/>
 				</If>
 			</If>
-		</If>
-			
+		</If>			
 			
 		
 		<!-- Craft Class Quest Items and Get Master III Books -->
@@ -551,8 +537,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LogMessage Message="Get Master III books and then Craft class quest items, import orders into lisbeth. You can find it under Quest Items folder, clear bags before beginning and store items in a safe place for later and set craftClass setting to 0 on start profile."/>
 				<RunCode Name="craftClass"/>
 				<LLStopBot/>
-			</If>
-		
+			</If>		
 		
 				
 		<!-- Start Class Quest Profiles -->
@@ -595,8 +580,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<If Condition="not IsQuestCompleted(68147)">
 					<LLoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
 				</If>
-			</If>
-			
+			</If>			
 		
 		
 		<!-- 63-70 Ishgard Crafting -->
@@ -686,7 +670,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 
 
-
 		<!-- NoN Preferred Realm Class Quest Profiles -->
 			<If Condition="&crp; == 1">
 				<If Condition="not IsQuestCompleted(67981)">
@@ -727,8 +710,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<If Condition="not IsQuestCompleted(68144)">
 					<LLoadProfile Path="Quests/Culinarian Class Quests.xml"/>
 				</If>
-			</If>
-			
+			</If>			
 			
 
 		<!-- Farm Yellow Scrip Level 70 Gear -->
@@ -736,8 +718,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and make sure your gearsets are updated with the new gear."/>
 				<RunCode Name="craft70"/>
 				<LLStopBot/>
-			</If>
-		
+			</If>		
 		
 		
 		<!-- Gatherer's to 70 -->
@@ -750,8 +731,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<If Condition="not IsQuestCompleted(68160) or Core.Me.Levels[ClassJobType.Botanist] &lt; 70">
 				<LLoadProfile Path="Gathering/63-70 Botanist.xml"/>
 			</If>
-		</If>
-		
+		</If>		
 		
 		
 		<!-- 70-80 Ishgard Crafting -->
@@ -838,8 +818,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					<LLoadProfile Path="DiademCN/70-80 CulinarianD.xml"/>
 				</If>
 			</If>
-		</If>
-		
+		</If>		
 		
 		
 		<!-- Shadowbringer's Aether Currents -->
@@ -874,8 +853,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(818,9) and IsAetherCurrentCompleted(818,10) and IsAetherCurrentCompleted(818,11)
 				and IsAetherCurrentCompleted(818,12) and IsAetherCurrentCompleted(818,13) and IsAetherCurrentCompleted(818,14))">
 			<LLoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
-		</If>
-		
+		</If>		
 		
 			
 		<!-- Gatherer's to 80 -->

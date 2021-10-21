@@ -1,6 +1,5 @@
 Requirements:
 	+ LLamaLibrary (BotBase) https://github.com/nt153133/LlamaLibrary/archive/master.zip
-	+ AutoRepair (Plugin) https://github.com/nt153133/AutoRepair/archive/master.zip
 	+ ExBuddy (Plugin) https://github.com/Entrax643/ExBuddy/archive/master.zip
 	+ Level 30 or higher DoH to learn Desynth
 	+ Level 80 BTN & MIN (For farming Survival Manuals)
