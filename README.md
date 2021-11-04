@@ -10,7 +10,6 @@ These profiles will not work unless you have LLamaLibrary, Lisbeth and Exbuddy i
 1. Download [LLamaLibrary](https://github.com/nt153133/LlamaLibrary) extract it to Botbases and rename the folder to "LLamaLibrary"
 2. Download [Lisbeth](https://lisbeth.io/downloads/v52/Lisbeth.zip) [CN](https://lisbeth.io/downloads/v51/Lisbeth.zip) extract it to Botbases and rename the folder to "Lisbeth"
 3. Download [Exbuddy](https://github.com/Entrax643/ExBuddy) extract it to Plugins and rename the folder to "ExBuddy"
-4. Optional, Download [AutoRepair](https://github.com/nt153133/AutoRepair) extract it to plugins and rename folder to "AutoRepair"
 
 You will need to purchase a Lisbeth key if you haven't already.
 
