@@ -41,6 +41,9 @@ Angles24
 			<If Condition="NqHasAtLeast(5599,99)">
 				<If Condition="GetQuestStep(66140) == 255">
 					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+					<If Condition="ClassName != ClassJobType.Miner">
+						<ChangeClass Job="Miner"/>
+					</If>
 					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed."/>
