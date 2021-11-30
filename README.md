@@ -7,9 +7,9 @@ These profiles will not work unless you have LLamaLibrary, Lisbeth and Exbuddy i
 
 **Note:** Any github repo can be updated through program like SVNTortoise or even Zimble's [repoBuddy](https://github.com/Zimgineering/repoBuddy) without the need to redownload.
 
-1. Download [LLamaLibrary](https://github.com/nt153133/LlamaLibrary) extract it to Botbases and rename the folder to "LLamaLibrary"
-2. Download [Lisbeth](https://lisbeth.io/downloads/v52/Lisbeth.zip) [CN](https://lisbeth.io/downloads/v51/Lisbeth.zip) extract it to Botbases and rename the folder to "Lisbeth"
-3. Download [Exbuddy](https://github.com/Entrax643/ExBuddy) extract it to Plugins and rename the folder to "ExBuddy"
+1. [__LlamaLibrary](https://github.com/nt153133/__LlamaLibrary) is required to run these profiles. It will be auto-installed by using repoBuddy above (recommened.) For manual installation see the [ReadMe.](https://github.com/nt153133/__LlamaLibrary/blob/main/README.md)
+3. Download [Lisbeth](https://lisbeth.io/downloads/v52/Lisbeth.zip) [CN](https://lisbeth.io/downloads/v51/Lisbeth.zip) extract it to Botbases and rename the folder to "Lisbeth"
+4. Download [Exbuddy](https://github.com/Entrax643/ExBuddy) extract it to Plugins and rename the folder to "ExBuddy"
 
 You will need to purchase a Lisbeth key if you haven't already.
 
