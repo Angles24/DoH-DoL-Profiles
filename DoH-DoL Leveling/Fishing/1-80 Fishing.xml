@@ -2025,7 +2025,7 @@ Angles24
 		<CodeChunk Name="TurnIn">
 			<![CDATA[
 				Logging.Write("[Handin] calling");
-				await LlamaLibrary.IshgardHandinBase.Handin();
+				await LlamaLibrary.Utilities.Ishgard.Handin();
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="Desynth">
@@ -2034,7 +2034,7 @@ Angles24
             IEnumerable<BagSlot> fish = InventoryManager.FilledSlots
                                                         .Where(bs => bs.IsDesynthesizable && bs.Item.Rarity < 2 && bs.Item.EquipmentCatagory == ItemUiCategory.Seafood && bs.Item.StackSize == 999)
                                                         .OrderBy(x => x.Item.ItemLevel);
-            await LlamaLibrary.Reduce.Reduce.Desynth(fish);
+            await LlamaLibrary.Utilities.Inventory.Desynth(fish);
 			]]>
 		</CodeChunk>
 		<CodeChunk Name="Sneak">
