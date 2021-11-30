@@ -70,7 +70,7 @@ Authors:  Kayla / Angles24
 	<CodeChunk Name="TurnIn">
 	<![CDATA[
 		Logging.Write("[Handin] calling");
-		await LlamaLibrary.IshgardHandinBase.Handin();
+		await LlamaLibrary.Utilities.Ishgard.Handin();
 	]]>
 	</CodeChunk>
 </CodeChunks>
