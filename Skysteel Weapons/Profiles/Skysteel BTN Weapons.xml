@@ -431,7 +431,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		<CodeChunk Name="TurnIn">
 		<![CDATA[
 			Logging.Write("[Skysteel Handin] calling");
-			await LlamaLibrary.Helpers.GeneralFunctions.TurninSkySteelGathering();
+			await LlamaLibrary.Helpers.GeneralFunctions.TurninSkySteelCrafting();
 		]]>
 		</CodeChunk>		
 		<CodeChunk Name="ManualTurnIn">
