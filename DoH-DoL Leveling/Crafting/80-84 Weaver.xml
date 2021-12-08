@@ -6,7 +6,7 @@ Authors:  Kayla / Angles24
 <Name>Crafting Weaver to 84</Name>
 <Order>
 
-	<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+	<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 
 	<!-- 80-82  -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 79) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 82)">
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Weaver">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35652,'Amount':5,'Enabled':true,'Type':'Weaver','Collectable':false, 'ConditionalLevel':84, 'ConditionalJob':'Weaver'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+			<Lisbeth Json="[{'Group':1,'Item':35652,'Amount':5,'Enabled':true,'Type':'Weaver','Collectable':false, 'ConditionalLevel':84, 'ConditionalJob':'Weaver'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 		</If>
 	</If>
 	

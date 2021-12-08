@@ -6,7 +6,7 @@ Authors:  Kayla / Angles24
 <Name>Crafting Blacksmith to 84</Name>
 <Order>
 
-	<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+	<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 
 	<!-- 80-82  -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 82)">
@@ -16,7 +16,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Blacksmith">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35631,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':false, 'ConditionalLevel':82, 'ConditionalJob':'Blacksmith'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+			<Lisbeth Json="[{'Group':1,'Item':35631,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':false, 'ConditionalLevel':82, 'ConditionalJob':'Blacksmith'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 		</If>
 	</If>
 
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Blacksmith">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35632,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':false, 'ConditionalLevel':84, 'ConditionalJob':'Blacksmith'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+			<Lisbeth Json="[{'Group':1,'Item':35632,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':false, 'ConditionalLevel':84, 'ConditionalJob':'Blacksmith'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 		</If>
 	</If>
 	
