@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24
+-->
+<Profile>
+<Name>Crafting Leatherworker to 84</Name>
+<Order>
+
+	<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+
+	<!-- 80-82  -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 79) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 82)">
+		<If Condition="ClassName != ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Leatherworker">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35646,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':false, 'ConditionalLevel':82, 'ConditionalJob':'Leatherworker'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+		</If>
+	</If>
+
+	<!-- 80-82  -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 81) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 84)">
+		<If Condition="ClassName != ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Leatherworker">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35647,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':false, 'ConditionalLevel':84, 'ConditionalJob':'Leatherworker'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh']"/>
+		</If>
+	</If>
+	
+	<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 84">		
+		<WaitTimer WaitTime="5"/>
+		<LLoadProfile Path="80-84 Leatherworker.xml"/>
+	</If>
+
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 84 on Leatherworker, moving on."/>
+	<AutoInventoryEquip/>
+	<WaitTimer WaitTime="5"/>
+	<LLoadProfile Path="../Start.xml"/>
+
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.Utilities.Ishgard.Handin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<Profile>
+	<Name>80-85 Botanist</Name>
+	<KillRadius>90</KillRadius>
+	
+	<Order>
+		      
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
+	
+	<If Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist"/>
+	</If>
+				
+    <If Condition="ClassName == ClassJobType.Botanist">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+				
+		<!-- Level 85-87 -->
+		<If Condition="Core.Player.ClassLevel &lt; 87">
+			<LogMessage Message="Starting the Grind to Level 87."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36089, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':87, 'ConditionalJob':'Botanist'},{'Group':0, 'Item':36205, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':87, 'ConditionalJob':'Botanist'}]"/> <!-- Scarlet Moko Grass, Giant Popoto -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 87">
+			<LogMessage Message="Congrats on Level 87, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 87-->
+		
+		<!-- Level 87-88 -->
+		<If Condition="Core.Player.ClassLevel &lt; 88">
+			<LogMessage Message="Starting the Grind to Level 88."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36095, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':88, 'ConditionalJob':'Botanist'}]"/> <!-- Elder Nutmeg Seeds -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 88">
+			<LogMessage Message="Congrats on Level 88, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 88-->
+		
+		<!-- Level 88-89 -->
+		<If Condition="Core.Player.ClassLevel &lt; 89">
+			<LogMessage Message="Starting the Grind to Level 89."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36194, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':89, 'ConditionalJob':'Botanist'}]"/> <!-- Integral Log -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 89">
+			<LogMessage Message="Congrats on Level 89, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 89-->
+		
+		<!-- Level 89-90 -->
+		<If Condition="Core.Player.ClassLevel &lt; 90">
+			<LogMessage Message="Starting the Grind to Level 90."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36206, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':90, 'ConditionalJob':'Botanist'}]"/> <!-- AR-Caean Cotton -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 90">
+			<LogMessage Message="Congrats on Level 90, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 90-->
+		
+	</If>
+	
+	<LLoadProfile Path="../Start.xml"/>
+	
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+	<CodeChunks>
+		<CodeChunk Name="MINWeapon">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.MainHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="MINWeapon2">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Secondary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.OffHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Sneak">
+			<![CDATA[ 
+				if(!Core.Player.HasAura(47)) 
+				{ 
+					ff14bot.Managers.ActionManager.DoAction("Sneak",Core.Player); 
+					await Coroutine.Wait(5000, () => Core.Player.HasAura(47)); 
+				} 
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	</CodeChunks>
+</Profile>

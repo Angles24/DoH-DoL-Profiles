@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<Profile>
+	<Name>80-85 Miner</Name>
+	<KillRadius>90</KillRadius>
+	
+	<Order>
+		      
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
+	
+	<If Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner"/>
+	</If>
+				
+    <If Condition="ClassName == ClassJobType.Miner">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		
+		<!-- Level 80-81 -->
+		<If Condition="Core.Player.ClassLevel &lt; 81">
+			<LogMessage Message="Starting the Grind to Level 81."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36180, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':81, 'ConditionalJob':'Miner'},{'Group':0, 'Item':36162, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':81, 'ConditionalJob':'Miner'}]"/> <!-- High Durium Sand, Chloroschist -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 81">
+			<LogMessage Message="Congrats on Level 81, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 81-->
+		
+		<!-- Level 81-82 -->
+		<If Condition="Core.Player.ClassLevel &lt; 82">
+			<LogMessage Message="Starting the Grind to Level 82."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36174, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':82, 'ConditionalJob':'Miner'}]"/> <!-- Raw Ametrine -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 82">
+			<LogMessage Message="Congrats on Level 82, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 82-->
+		
+		<!-- Level 82-83 -->
+		<If Condition="Core.Player.ClassLevel &lt; 83">
+			<LogMessage Message="Starting the Grind to Level 83."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36163, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':83, 'ConditionalJob':'Miner'}]"/> <!-- High Durium Ore -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 83">
+			<LogMessage Message="Congrats on Level 83, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 83-->
+		
+		<!-- Level 83-84 -->
+		<If Condition="Core.Player.ClassLevel &lt; 84">
+			<LogMessage Message="Starting the Grind to Level 84."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36175, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':84, 'ConditionalJob':'Miner'}]"/> <!-- Pewter Ore -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 84">
+			<LogMessage Message="Congrats on Level 84, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 84-->
+		
+		<!-- Level 84-85 -->
+		<If Condition="Core.Player.ClassLevel &lt; 85">
+			<LogMessage Message="Starting the Grind to Level 85."/>
+			<Lisbeth Json="[{'Group':0, 'Item':36241, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':85, 'ConditionalJob':'Miner'},{'Group':0, 'Item':36176, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':85, 'ConditionalJob':'Miner'}]"/> <!-- Phrygian Ore, Eblan Alumen -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 85">
+			<LogMessage Message="Congrats on Level 85, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 85-->
+		
+	</If>
+	
+	<LLoadProfile Path="../Start.xml"/>	
+	
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+	<CodeChunks>
+		<CodeChunk Name="MINWeapon">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.MainHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="MINWeapon2">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Secondary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.OffHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Sneak">
+			<![CDATA[ 
+				if(!Core.Player.HasAura(47)) 
+				{ 
+					ff14bot.Managers.ActionManager.DoAction("Sneak",Core.Player); 
+					await Coroutine.Wait(5000, () => Core.Player.HasAura(47)); 
+				} 
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	</CodeChunks>
+</Profile>
