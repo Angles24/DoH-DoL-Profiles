@@ -905,7 +905,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		<!-- Crafters to 84 -->
-		<!--<If Condition="&crp; == 1">
+		<If Condition="&crp; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 84">
 				<LLoadProfile Path="Crafting/80-84 Carpenter.xml"/>
 			</If>
@@ -944,7 +944,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 84">
 				<LLoadProfile Path="Crafting/80-84 Culinarian.xml"/>
 			</If>
-		</If>-->
+		</If>
 		
 		<!-- Crafters to 90 -->
 		<!--<If Condition="&crp; == 1">
