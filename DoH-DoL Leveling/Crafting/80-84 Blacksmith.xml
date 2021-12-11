@@ -6,8 +6,14 @@ Authors:  Kayla / Angles24
 <Name>Crafting Blacksmith to 84</Name>
 <Order>
 
-	<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
-		<BuyInclusionShopItem ItemId="33927" Count="1"/>
+	<!-- Check to see if have collectables -->
+	<While Condition="(ItemCount(25199) &gt; 249) or (HasItem(35631)) or (HasItem(35632))">
+		<While Condition="(HasItem(35631)) or (HasItem(35632))">
+			<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
+		</While>		
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="1"/>
+		</While>
 	</While>
 
 	<!-- 80-82  -->
@@ -22,8 +28,14 @@ Authors:  Kayla / Angles24
 		</If>
 	</If>
 
-	<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
-		<BuyInclusionShopItem ItemId="33927" Count="1"/>
+	<!-- Check to see if have collectables -->
+	<While Condition="(ItemCount(25199) &gt; 249) or (HasItem(35631)) or (HasItem(35632))">
+		<While Condition="(HasItem(35631)) or (HasItem(35632))">
+			<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
+		</While>		
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="1"/>
+		</While>
 	</While>
 
 	<!-- 80-82  -->
@@ -37,6 +49,16 @@ Authors:  Kayla / Angles24
 			<Lisbeth Json="[{'Group':1,'Item':35632,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':false, 'ConditionalLevel':84, 'ConditionalJob':'Blacksmith'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 		</If>
 	</If>
+
+	<!-- Check to see if have collectables -->
+	<While Condition="(ItemCount(25199) &gt; 249) or (HasItem(35631)) or (HasItem(35632))">
+		<While Condition="(HasItem(35631)) or (HasItem(35632))">
+			<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
+		</While>		
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="1"/>
+		</While>
+	</While>
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 84">		
 		<WaitTimer WaitTime="5"/>
