@@ -5,13 +5,14 @@ Author: Angles24, Manta
 <Profile>
   <Name>Endwalker Aether Currents</Name>
   <Order>
-	
-	<RunCode Name="SwitchCombatJob"/>
-	<RunCode Name="Disable_Flight"/>
 
     <!-- Labyrinthos - 88 - Bonds of Adamant(ite) - 69984 -->
 
-    <If Condition="IsQuestCompleted(69984) and not IsAetherCurrentCompleted(956, 5)">
+    <If Condition="IsQuestCompleted(69984) and not (IsAetherCurrentCompleted(956,0) and IsAetherCurrentCompleted(956,1) and IsAetherCurrentCompleted(956,2)
+				and IsAetherCurrentCompleted(956,3) and IsAetherCurrentCompleted(956,4) and IsAetherCurrentCompleted(956,5)
+				and IsAetherCurrentCompleted(956,6)	and IsAetherCurrentCompleted(956,7) and IsAetherCurrentCompleted(956,8)
+				and IsAetherCurrentCompleted(956,9) and IsAetherCurrentCompleted(956,10) and IsAetherCurrentCompleted(956,11)
+				and IsAetherCurrentCompleted(956,12) and IsAetherCurrentCompleted(956,13) and IsAetherCurrentCompleted(956,14))">
       <LogMessage Message="Going to unlock Labyrinthos Flying."/>
       <LLToast message="Going to unlock Labyrinthos Flying."/>
 
@@ -179,7 +180,11 @@ Author: Angles24, Manta
 
     <!-- Thavnair - 85 - Simple Pleasures - 69952 -->
 
-    <If Condition="IsQuestCompleted(69952) and not IsAetherCurrentCompleted(957, 5)">
+    <If Condition="IsQuestCompleted(69952) and not (IsAetherCurrentCompleted(957,0) and IsAetherCurrentCompleted(957,1) and IsAetherCurrentCompleted(957,2)
+				and IsAetherCurrentCompleted(957,3) and IsAetherCurrentCompleted(957,4) and IsAetherCurrentCompleted(957,5)
+				and IsAetherCurrentCompleted(957,6) and IsAetherCurrentCompleted(957,7) and IsAetherCurrentCompleted(957,8)
+				and IsAetherCurrentCompleted(957,9) and IsAetherCurrentCompleted(957,10) and IsAetherCurrentCompleted(957,11)
+				and IsAetherCurrentCompleted(957,12) and IsAetherCurrentCompleted(957,13) and IsAetherCurrentCompleted(957,14))">
       <LogMessage Message="Going to unlock Thavnair Flying."/>
       <LLToast message="Going to unlock Thavnair Flying."/>
 
@@ -399,7 +404,11 @@ Author: Angles24, Manta
 
     <!-- Garlemald - 83 - Gateway of the Gods - 69931 -->
 
-    <If Condition="IsQuestCompleted(69931) and not IsAetherCurrentCompleted(958, 5)">
+    <If Condition="IsQuestCompleted(69931) and not (IsAetherCurrentCompleted(958,0) and IsAetherCurrentCompleted(958,1) and IsAetherCurrentCompleted(958,2)
+				and IsAetherCurrentCompleted(958,3) and IsAetherCurrentCompleted(958,4) and IsAetherCurrentCompleted(958,5)
+				and IsAetherCurrentCompleted(958,6) and IsAetherCurrentCompleted(958,7) and IsAetherCurrentCompleted(958,8)
+				and IsAetherCurrentCompleted(958,9) and IsAetherCurrentCompleted(958,10) and IsAetherCurrentCompleted(958,11)
+				and IsAetherCurrentCompleted(958,12) and IsAetherCurrentCompleted(958,13) and IsAetherCurrentCompleted(958,14))">
       <LogMessage Message="Going to unlock Garlemald Flying."/>
       <LLToast message="Going to unlock Garlemald Flying."/>
 
@@ -623,7 +632,11 @@ Author: Angles24, Manta
 
     <!-- Mare Lamentorum - 84 - Heart of the Matter - 69943 -->
 
-    <If Condition="IsQuestCompleted(69943) and not IsAetherCurrentCompleted(959, 5)">
+    <If Condition="IsQuestCompleted(69943) and not (IsAetherCurrentCompleted(959,0) and IsAetherCurrentCompleted(959,1) and IsAetherCurrentCompleted(959,2)
+				and IsAetherCurrentCompleted(959,3) and IsAetherCurrentCompleted(959,4) and IsAetherCurrentCompleted(959,5)
+				and IsAetherCurrentCompleted(959,6) and IsAetherCurrentCompleted(959,7) and IsAetherCurrentCompleted(959,8)
+				and IsAetherCurrentCompleted(959,9) and IsAetherCurrentCompleted(959,10) and IsAetherCurrentCompleted(959,11)
+				and IsAetherCurrentCompleted(959,12) and IsAetherCurrentCompleted(959,13) and IsAetherCurrentCompleted(959,14))">
       <LogMessage Message="Going to unlock Mare Lamentorum Flying."/>
       <LLToast message="Going to unlock Mare Lamentorum Flying."/>
 
@@ -838,7 +851,11 @@ Author: Angles24, Manta
 
     <!-- Elpis - 87 - Caging the Messenger - 69973 -->
 
-    <If Condition="IsQuestCompleted(69973) and not IsAetherCurrentCompleted(961, 5)">
+    <If Condition="IsQuestCompleted(69973) and not (IsAetherCurrentCompleted(961,0) and IsAetherCurrentCompleted(961,1) and IsAetherCurrentCompleted(961,2)
+				and IsAetherCurrentCompleted(961,3) and IsAetherCurrentCompleted(961,4) and IsAetherCurrentCompleted(961,5)
+				and IsAetherCurrentCompleted(961,6) and IsAetherCurrentCompleted(961,7) and IsAetherCurrentCompleted(961,8)
+				and IsAetherCurrentCompleted(961,9) and IsAetherCurrentCompleted(961,10) and IsAetherCurrentCompleted(961,11)
+				and IsAetherCurrentCompleted(961,12) and IsAetherCurrentCompleted(961,13) and IsAetherCurrentCompleted(961,14))">
       <LogMessage Message="Going to unlock Elpis Flying."/>
       <LLToast message="Going to unlock Elpis Flying."/>
 
@@ -1047,7 +1064,11 @@ Author: Angles24, Manta
 
     <!-- Ultima Thule - 90 - You're Not Alone - 69999 -->
 
-    <If Condition="IsQuestCompleted(69999) and not IsAetherCurrentCompleted(960, 5)">
+    <If Condition="IsQuestCompleted(69999) and not (IsAetherCurrentCompleted(960,0) and IsAetherCurrentCompleted(960,1) and IsAetherCurrentCompleted(960,2)
+				and IsAetherCurrentCompleted(960,3) and IsAetherCurrentCompleted(960,4) and IsAetherCurrentCompleted(960,5)
+				and IsAetherCurrentCompleted(960,6)	and IsAetherCurrentCompleted(960,7) and IsAetherCurrentCompleted(960,8)
+				and IsAetherCurrentCompleted(960,9) and IsAetherCurrentCompleted(960,10) and IsAetherCurrentCompleted(960,11)
+				and IsAetherCurrentCompleted(960,12) and IsAetherCurrentCompleted(960,13) and IsAetherCurrentCompleted(960,14))">
       <LogMessage Message="Going to unlock Ultima Thule Flying."/>
       <LLToast message="Going to unlock Ultima Thule Flying."/>
 
@@ -1133,7 +1154,8 @@ Author: Angles24, Manta
         </If>
       </If>
       <If Condition="GetQuestStep(69890) == 1">
-        <GetTo ZoneId="960" XYZ="657.2791, 437.885, 303.7708"/>
+        <GetTo ZoneId="960" XYZ="469.4522, 437.0018, 317.3898"/>
+        <MoveTo XYZ="657.2791, 437.885, 303.7708"/>
         <!-- Subzone="3981" Area="" -->
         <UseItem ItemId="2003273" NpcId="11017" XYZ="338.4907, 2.304016, 94.77368" InCombat="True" UseHealthPercent="10" QuestId="69890" StepId="1" UseTimes="1"/>
         <WaitWhile Condition="not GetQuestStep(69890) == 255"/>
@@ -1194,7 +1216,7 @@ Author: Angles24, Manta
         <UseObject NpcId="2012038" XYZ="637.195, 439.241, 289.665" Condition="not IsAetherCurrentCompleted(960, 6)" />
         <LLClimbHill Start="637.195, 439.241, 289.665" End="628.9454, 438.6276, 293.3263" Distance="2.5" />
       </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 5)">=
+      <If Condition="not IsAetherCurrentCompleted(960, 5)">
         <GetTo ZoneId="960" XYZ="567.498, 440.93, 402.135" />
         <UseObject NpcId="2012039" XYZ="567.498, 440.93, 402.135" Condition="not IsAetherCurrentCompleted(960, 5)" />
       </If>
@@ -1264,9 +1286,8 @@ Author: Angles24, Manta
       <LogMessage Message="Congrats on Endwalker Flying."/>
       <LLToast message="Congrats on Endwalker Flying."/>
     </If>
-		
-		<ALoadProfile Path="../Start.xml"/>
 
+	<ALoadProfile Path="../Start.xml"/>
 
   </Order>
   <GrindAreas>
@@ -1459,30 +1480,6 @@ Author: Angles24, Manta
     <CodeChunk Name="TurnOnMount">
       <![CDATA[
         ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
-      ]]>
-    </CodeChunk>
-		<CodeChunk Name="SwitchCombatJob">
-            <![CDATA[ 
-            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
-            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
-
-            if (gearSets.Any())
-            {
-                gearSets.First().Activate();
-                await Coroutine.Sleep(2000);
-            }
-            ]]>
-        </CodeChunk>
-		<CodeChunk Name="Disable_Flight">
-      <![CDATA[
-        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
-        {
-          try
-          {
-            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
-          }
-          catch (Exception ex) {  }
-        }
       ]]>
     </CodeChunk>
   </CodeChunks>
