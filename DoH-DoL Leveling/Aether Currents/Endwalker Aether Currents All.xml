@@ -11,12 +11,12 @@ Author: Angles24, Manta
 
     <!-- Labyrinthos - 88 - Bonds of Adamant(ite) - 69984 -->
 
-    <If Condition="IsQuestCompleted(69984)">
+    <If Condition="IsQuestCompleted(69984) and not IsAetherCurrentCompleted(956, 5)">
       <LogMessage Message="Going to unlock Labyrinthos Flying."/>
       <LLToast message="Going to unlock Labyrinthos Flying."/>
 
       <!-- Lost Little Troll -->
-      <If Condition="not IsQuestCompleted(70016) and not IsAetherCurrentCompleted(956, 5)">
+      <If Condition="not IsQuestCompleted(70016)">
         <If Condition="not HasQuest(70016)">
           <GetTo ZoneId="956" XYZ="444.7638, 65.162, -106.4432"/>
           <!-- Subzone="3842" Area="Labyrinthos (North)" -->
