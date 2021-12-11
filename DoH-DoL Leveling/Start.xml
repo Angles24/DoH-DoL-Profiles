@@ -909,7 +909,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		<!-- Gatherers to 85 -->
 		<If Condition="&min; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 58">
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 85">
 				<LLoadProfile Path="Gathering/80-85 Miner.xml"/>
 			</If>
 		</If>
