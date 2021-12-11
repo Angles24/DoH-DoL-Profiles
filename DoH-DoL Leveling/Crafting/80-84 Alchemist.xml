@@ -6,9 +6,9 @@ Authors:  Kayla / Angles24
 <Name>Crafting Alchemist to 84</Name>
 <Order>
 
-	<If Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
-		<BuyInclusionShopItem ItemId="33927" Count="-1"/>
-	</If>
+	<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+		<BuyInclusionShopItem ItemId="33927" Count="1"/>
+	</While>
 
 	<!-- 80-82  -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 79) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 82)">
@@ -22,9 +22,9 @@ Authors:  Kayla / Angles24
 		</If>
 	</If>
 
-	<If Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
-		<BuyInclusionShopItem ItemId="33927" Count="-1"/>
-	</If>
+	<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+		<BuyInclusionShopItem ItemId="33927" Count="1"/>
+	</While>
 
 	<!-- 80-82  -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 81) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 83)">
