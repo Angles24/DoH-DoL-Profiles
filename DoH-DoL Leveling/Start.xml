@@ -12,8 +12,9 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 <!ENTITY craft63 "1">
 <!ENTITY craft70 "1">
 <!ENTITY craft70 "1">
+<!ENTITY craft80 "1">
 
-<!ENTITY craftClass "0"><!-- Just remember after you finished crafting you meld items before restarting. -->
+<!ENTITY craftClass "1"><!-- Just remember after you finished crafting you meld items before restarting. -->
 <!ENTITY crp "1">
 <!ENTITY bsm "1">
 <!ENTITY arm "1">
@@ -1155,7 +1156,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
-		<CodeChunk Name="announcement">
+		<CodeChunk Name="announcment">
 		<![CDATA[ 
 			Core.OverlayManager.AddToast(() => "Please see #doh-dol-issues channel for update on Endwalker.", TimeSpan.FromMilliseconds(5000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(5000);
