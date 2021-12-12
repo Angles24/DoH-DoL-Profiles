@@ -5,6 +5,9 @@ Author: Angles24, Manta
 <Profile>
   <Name>Endwalker Aether Currents</Name>
   <Order>
+	
+	<RunCode Name="SwitchCombatJob"/>
+	<RunCode Name="Disable_Flight"/>
 
     <!-- Labyrinthos - 88 - Bonds of Adamant(ite) - 69984 -->
 
@@ -1480,6 +1483,30 @@ Author: Angles24, Manta
     <CodeChunk Name="TurnOnMount">
       <![CDATA[
         ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
+      ]]>
+    </CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
       ]]>
     </CodeChunk>
   </CodeChunks>
