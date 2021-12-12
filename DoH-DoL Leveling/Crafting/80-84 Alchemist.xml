@@ -5,14 +5,12 @@ Authors:  Kayla / Angles24
 <Profile>
 <Name>Crafting Alchemist to 84</Name>
 <Order>
-
+	
 	<!-- Check to see if have collectables -->
-	<While Condition="(ItemCount(25199) &gt; 249) or (HasItem(35656)) or (HasItem(35657))">
-		<While Condition="(HasItem(35656)) or (HasItem(35657))">
-			<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
-		</While>		
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
-			<BuyInclusionShopItem ItemId="33927" Count="1"/>
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
 		</While>
 	</While>
 
@@ -24,41 +22,29 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35656,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalLevel':82, 'ConditionalJob':'Alchemist'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':35656,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalJob':'Alchemist'}]"/>
 		</If>
 	</If>
-
+	
 	<!-- Check to see if have collectables -->
-	<While Condition="(ItemCount(25199) &gt; 249) or (HasItem(35656)) or (HasItem(35657))">
-		<While Condition="(HasItem(35656)) or (HasItem(35657))">
-			<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
-		</While>		
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
 		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
-			<BuyInclusionShopItem ItemId="33927" Count="1"/>
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
 		</While>
 	</While>
 
-	<!-- 80-82  -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 81) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 83)">
+	<!-- 82-84  -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 81) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 84)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35657,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalLevel':84, 'ConditionalJob':'Alchemist'},{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':35657,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalJob':'Alchemist'}]"/>
 		</If>
 	</If>
-
-	<!-- Check to see if have collectables -->
-	<While Condition="(ItemCount(25199) &gt; 249) or (HasItem(35656)) or (HasItem(35657))">
-		<While Condition="(HasItem(35656)) or (HasItem(35657))">
-			<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
-		</While>		
-		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
-			<BuyInclusionShopItem ItemId="33927" Count="1"/>
-		</While>
-	</While>
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 84">		
 		<WaitTimer WaitTime="5"/>
