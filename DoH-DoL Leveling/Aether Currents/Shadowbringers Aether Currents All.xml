@@ -6,6 +6,9 @@ Authors:  Sodimm
 <Profile>
   <Name>[Orderbot] Shadowbringers Aether Currents</Name>
   <Order>
+	
+	<RunCode Name="SwitchCombatJob"/>
+	<RunCode Name="Disable_Flight"/>
     <!-- Lakeland -->
     <If Condition="not IsAetherCurrentZoneComplete(813) and IsQuestCompleted(68840)">
       <!-- A Jobb Well Done -->
@@ -1403,6 +1406,30 @@ Authors:  Sodimm
           if (SelectString.IsOpen) {  SelectString.ClickSlot(1);  }
           if (Talk.DialogOpen)  {  Talk.Next();  }
           await Coroutine.Yield();
+        }
+      ]]>
+    </CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
         }
       ]]>
     </CodeChunk>
