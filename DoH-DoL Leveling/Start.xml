@@ -421,7 +421,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			
 			
 		<!-- NoN Preferred Realm to 67 in Crafting -->
-		<If Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian) and (not Core.Player.ClassLevel &lt; 67)">
+		<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &lt; 67) or (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 67) or (Core.Me.Levels[ClassJobType.Armorer] &lt; 67) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 67) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 67) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 67) or (Core.Me.Levels[ClassJobType.Alchemist] &lt; 67) or (Core.Me.Levels[ClassJobType.Culinarian] &lt; 67)">
 			<WaitTimer WaitTime="2"/>
 			<RunCode Name="SwitchDoHJob"/>
 			<WaitTimer WaitTime="2"/>
@@ -853,14 +853,14 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		<!-- Endwalker MSQ Check -->
-		<!--<If Condition="not IsQuestCompleted(69999)">
+		<If Condition="not IsQuestCompleted(69999)">
 			<LogMessage Message="Please finish the MSQ quest 'You're Not Alone' before continuing."/>
 			<RunCode Name="MSQ"/>		
 			<LLStopBot/>
-		</If>-->
+		</If>
 		
-		<!-- Shadowbringer's Aether Currents -->
-		<!--<If Condition="not (IsAetherCurrentCompleted(956,0) and IsAetherCurrentCompleted(956,1) and IsAetherCurrentCompleted(956,2)
+		<!-- Endwalkers's Aether Currents -->
+		<If Condition="not (IsAetherCurrentCompleted(956,0) and IsAetherCurrentCompleted(956,1) and IsAetherCurrentCompleted(956,2)
 				and IsAetherCurrentCompleted(956,3) and IsAetherCurrentCompleted(956,4) and IsAetherCurrentCompleted(956,5)
 				and IsAetherCurrentCompleted(956,6)	and IsAetherCurrentCompleted(956,7) and IsAetherCurrentCompleted(956,8)
 				and IsAetherCurrentCompleted(956,9) and IsAetherCurrentCompleted(956,10) and IsAetherCurrentCompleted(956,11)
@@ -891,7 +891,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(960,9) and IsAetherCurrentCompleted(960,10) and IsAetherCurrentCompleted(960,11)
 				and IsAetherCurrentCompleted(960,12) and IsAetherCurrentCompleted(960,13) and IsAetherCurrentCompleted(960,14))">
 			<LLoadProfile Path="Aether Currents/Endwalker Aether Currents All.xml"/>
-		</If>-->
+		</If>
 	
 		<!-- Expanding House of Splendors -->
 		<If Condition="not IsQuestCompleted(69711)">
@@ -901,7 +901,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<WaitTimer WaitTime="2"/>
 				<GetTo ZoneID="963" XYZ="25.21487, 0.5999998, -83.04614"/>
 				<If Condition="IsQuestAcceptQualified(69711)">
-					<LLPickupQuest QuestId="69711" NpcId="1037323"/>
+					<LLTalkTo NpcId="1037323"/>
 					<LLSmallTalk/>
 				</If>
 			</If>
@@ -1019,7 +1019,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/><!-- Limsa Lominsa Lower Decks -->
 		</If>
 		<LogMessage Message="Congrats on level 90 on BTN/MIN and all Crafters."/>
-		<RunCode Name="finish"/>
+		<RunCode Name="finish2"/>
 	
 	</Order>
 	<CodeChunks>
@@ -1089,6 +1089,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<CodeChunk Name="finish">
 		<![CDATA[
 			Core.OverlayManager.AddToast(() => "Congrats on level 80 on BTN/MIN and all Crafters.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(40000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="finish2">
+		<![CDATA[
+			Core.OverlayManager.AddToast(() => "Congrats on level 84+ on BTN/MIN and all Crafters.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(40000);
 		]]>
 		</CodeChunk>
