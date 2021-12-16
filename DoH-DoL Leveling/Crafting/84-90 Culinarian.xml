@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Culinarian to 84</Name>
+<Name>Crafting Culinarian to 90</Name>
 <Order>
 	
 	<!-- Check to see if have collectables -->
@@ -14,15 +14,15 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-	<!-- 80-82  -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 79) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 82)">
+	<!-- 84-86 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 83) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 86)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Culinarian">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35661,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':35663,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
 		</If>
 	</If>
 	
@@ -34,21 +34,41 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-	<!-- 82-84  -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 81) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 84)">
+	<!-- 86-88 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 85) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 88)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Culinarian">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35662,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':35664,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
 		</If>
 	</If>
 	
-	<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 84">		
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 88-90 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 87) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 90)">
+		<If Condition="ClassName != ClassJobType.Culinarian">
+			<ChangeClass Job="Culinarian"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Culinarian">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35665,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
+		</If>
+	</If>
+	
+	<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 90">		
 		<WaitTimer WaitTime="5"/>
-		<LLoadProfile Path="80-84 Culinarian.xml"/>
+		<LLoadProfile Path="84-90 Culinarian.xml"/>
 	</If>
 
 	<!-- Load Start -->

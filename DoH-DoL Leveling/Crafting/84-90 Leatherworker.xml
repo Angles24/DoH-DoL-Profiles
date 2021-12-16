@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24
+-->
+<Profile>
+<Name>Crafting Leatherworker to 90</Name>
+<Order>	
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 84-86 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 83) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 86)">
+		<If Condition="ClassName != ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Leatherworker">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35648,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':false, 'ConditionalJob':'Leatherworker'}]"/>
+		</If>
+	</If>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 86-88 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 85) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 88)">
+		<If Condition="ClassName != ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Leatherworker">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35649,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':false, 'ConditionalJob':'Leatherworker'}]"/>
+		</If>
+	</If>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 88-90 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 87) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 90)">
+		<If Condition="ClassName != ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Leatherworker">
+			<If Condition="not HasItem(36206) &gt; 49"> <!-- AR-Caean Cotton -->
+				<If Condition="ClassName != ClassJobType.Botanist">
+					<ChangeClass Job="Botanist"/>
+				</If>
+				<GetTo ZoneId="960" XYZ="-352.734, 86.8394, 274.3643"/>
+				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36206) &gt; 49">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<ItemNames>
+						<ItemName>AR-Caean Cotton</ItemName>
+					</ItemNames>
+					<HotSpots>
+						<HotSpots XYZ="-352.734, 86.8394, 274.3643" Radius="20" />
+						<HotSpots XYZ="-247.7067, 80.52891, 347.7692" Radius="20" />
+						<HotSpots XYZ="-416.0974, 88.50111, 382.3748" Radius="20" />
+					</HotSpots>
+				</ExGather>
+			</If>
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35650,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':false, 'ConditionalJob':'Leatherworker'}]"/>
+		</If>
+	</If>
+	
+	<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 90">		
+		<WaitTimer WaitTime="5"/>
+		<LLoadProfile Path="84-90 Leatherworker.xml"/>
+	</If>
+
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 84 on Leatherworker, moving on."/>
+	<AutoInventoryEquip/>
+	<WaitTimer WaitTime="5"/>
+	<LLoadProfile Path="../Start.xml"/>
+
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.Utilities.Ishgard.Handin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>

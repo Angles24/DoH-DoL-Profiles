@@ -8,7 +8,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
-		<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
+		<LLTurnInCollectables/>
 		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
 			<BuyInclusionShopItem ItemId="33927" Count="0"/>
 		</While>
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
-		<Lisbeth Json="[{'Group':5,'Amount':1,'Enabled':true,'Type':'RetainerRefresh'}]"/>
+		<LLTurnInCollectables/>
 		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
 			<BuyInclusionShopItem ItemId="33927" Count="0"/>
 		</While>

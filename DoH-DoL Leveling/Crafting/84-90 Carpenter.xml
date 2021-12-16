@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24
+-->
+<Profile>
+<Name>Crafting Carpenter to 90</Name>
+<Order>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+		</While>
+	</While>
+	
+	<!-- 84-86 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 83) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 86)">
+		<If Condition="ClassName != ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Carpenter">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35628,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':false, 'ConditionalJob':'Carpenter'}]"/>
+		</If>
+	</If>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+		</While>
+	</While>
+	
+	<!-- 86-88 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 85) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 88)">
+		<If Condition="ClassName != ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Carpenter">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35629,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':false, 'ConditionalJob':'Carpenter'}]"/>
+		</If>
+	</If>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(25199) &gt; 249"> <!-- 25199 = White Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+		</While>
+	</While>
+	
+	<!-- 88-90 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 87) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 90)">
+		<If Condition="ClassName != ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Carpenter">
+			<If Condition="not HasItem(36194) &gt; 49"> <!-- Integral Log -->
+				<If Condition="ClassName != ClassJobType.Botanist">
+					<ChangeClass Job="Botanist"/>
+				</If>
+				<GetTo ZoneId="960" XYZ="-603.6246, 70.03349, 84.75305"/>
+				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36194) &gt; 49">
+					<GatherObjects>
+						<GatherObject>Mature Tree</GatherObject>
+					</GatherObjects>
+					<ItemNames>
+						<ItemName>Integral Log</ItemName>
+					</ItemNames>
+					<GatherSpots>
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-613.2001, 70.96008, 84.32868" nodeLocation="-614.3435, 72.52612, 84.21448" />
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-614.6254, 70.60738, 79.96552" nodeLocation="-615.198, 71.79371, 82.01721" />
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-760.3845, 59.96397, 36.20824" nodeLocation="-760.6202, 61.49334, 34.71832" />
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-762.4124, 60.40506, 36.00818" nodeLocation="-763.0071, 61.6693, 34.5165" />
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-712.595, 69.87288, -47.60133" nodeLocation="-713.5771, 70.89957, -48.86489" />
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-691.1491, 69.09055, -89.47324" nodeLocation="-691.3116, 70.68101, -91.12169" />
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-613.814, 70.5579, 80.79462" nodeLocation="-615.198, 71.79371, 82.01721" />
+						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-613.6422, 71.28991, 84.10622" nodeLocation="-614.3435, 72.52612, 84.21448" />
+					</GatherSpots>			
+					<HotSpots>
+						<HotSpots Radius="45" XYZ="-603.6246, 70.03349, 84.75305" />
+						<HotSpots Radius="45" XYZ="-752.2568, 59.46293, 33.39579"/>
+						<HotSpots Radius="45" XYZ="-694.3452, 69.7803, -67.01098"/>
+					</HotSpots>
+				</ExGather>
+			</If>
+			<If Condition="not HasItem(36206) &gt; 49"> <!-- AR-Caean Cotton -->
+				<If Condition="ClassName != ClassJobType.Botanist">
+					<ChangeClass Job="Botanist"/>
+				</If>
+				<GetTo ZoneId="960" XYZ="-352.734, 86.8394, 274.3643"/>
+				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36206) &gt; 49">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<ItemNames>
+						<ItemName>AR-Caean Cotton</ItemName>
+					</ItemNames>
+					<HotSpots>
+						<HotSpots XYZ="-352.734, 86.8394, 274.3643" Radius="20" />
+						<HotSpots XYZ="-247.7067, 80.52891, 347.7692" Radius="20" />
+						<HotSpots XYZ="-416.0974, 88.50111, 382.3748" Radius="20" />
+					</HotSpots>
+				</ExGather>
+			</If>
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':35630,'Amount':5,'Enabled':true,'Type':'Carpenter','Collectable':false, 'ConditionalJob':'Carpenter'}]"/>
+		</If>
+	</If>
+	
+	<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 90">		
+		<WaitTimer WaitTime="5"/>
+		<LLoadProfile Path="84-90 Carpenter.xml"/>
+	</If>
+
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 84 on Carpenter, moving on."/>
+	<AutoInventoryEquip/>
+	<WaitTimer WaitTime="5"/>
+	<LLoadProfile Path="../Start.xml"/>
+	
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.Utilities.Ishgard.Handin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>
