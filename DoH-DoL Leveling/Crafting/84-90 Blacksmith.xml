@@ -60,64 +60,6 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Blacksmith"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Blacksmith">
-			<If Condition="not HasItem(36194) &gt; 49"> <!-- Integral Log -->
-				<If Condition="ClassName != ClassJobType.Botanist">
-					<ChangeClass Job="Botanist"/>
-				</If>
-				<GetTo ZoneId="960" XYZ="-603.6246, 70.03349, 84.75305"/>
-				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36194) &gt; 49">
-					<GatherObjects>
-						<GatherObject>Mature Tree</GatherObject>
-					</GatherObjects>
-					<ItemNames>
-						<ItemName>Integral Log</ItemName>
-					</ItemNames>
-					<GatherSpots>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-613.2001, 70.96008, 84.32868" nodeLocation="-614.3435, 72.52612, 84.21448" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-614.6254, 70.60738, 79.96552" nodeLocation="-615.198, 71.79371, 82.01721" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-760.3845, 59.96397, 36.20824" nodeLocation="-760.6202, 61.49334, 34.71832" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-762.4124, 60.40506, 36.00818" nodeLocation="-763.0071, 61.6693, 34.5165" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-712.595, 69.87288, -47.60133" nodeLocation="-713.5771, 70.89957, -48.86489" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-691.1491, 69.09055, -89.47324" nodeLocation="-691.3116, 70.68101, -91.12169" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-613.814, 70.5579, 80.79462" nodeLocation="-615.198, 71.79371, 82.01721" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-613.6422, 71.28991, 84.10622" nodeLocation="-614.3435, 72.52612, 84.21448" />
-					</GatherSpots>			
-					<HotSpots>
-						<HotSpots Radius="45" XYZ="-603.6246, 70.03349, 84.75305" />
-						<HotSpots Radius="45" XYZ="-752.2568, 59.46293, 33.39579"/>
-						<HotSpots Radius="45" XYZ="-694.3452, 69.7803, -67.01098"/>
-					</HotSpots>
-				</ExGather>
-			</If>
-			<If Condition="not HasItem(36166) &gt; 49"> <!-- Chondrite -->
-				<If Condition="ClassName != ClassJobType.Miner">
-					<ChangeClass Job="Miner"/>
-				</If>
-				<GetTo ZoneId="960" XYZ="-80.46867, 275.5401, -523.4323"/>
-				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36166) &gt; 49">
-					<GatherObjects>
-						<GatherObject>Mineral Deposit</GatherObject>
-					</GatherObjects>
-					<ItemNames>
-						<ItemName>Chondrite</ItemName>
-					</ItemNames>
-					<GatherSpots>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-73.15296, 277.3208, -533.947" nodeLocation="-73.15296, 277.3208, -533.9477" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-189.2272, 282.7411, -481.769" nodeLocation="-189.2272, 282.7411, -481.7691" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-168.3538, 275.071, -353.099" nodeLocation="-168.3538, 275.071, -353.0997" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-142.8093, 289.2221, -362.752" nodeLocation="-142.8093, 289.2221, -362.7527" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-79.47173, 276.6187, -527.383" nodeLocation="-79.47173, 276.6187, -527.3834" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-209.8961, 272.4175, -468.808" nodeLocation="-209.7576, 272.4133, -467.9081"/>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-203.9531, 275.9996, -476.61" nodeLocation="-203.9531, 275.9996, -476.613" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-176.5796, 273.2389, -357.4093" nodeLocation="-175.9021, 273.3181, -357.6351"/>
-					</GatherSpots>			
-					<HotSpots>
-						<HotSpots XYZ="-80.46867, 275.5401, -523.4323"  Radius="40" />
-						<HotSpots XYZ="-189.2272, 282.7411, -481.769"  Radius="40" />
-						<HotSpots XYZ="-155.2744, 285.3008, -367.3569"  Radius="40" />
-					</HotSpots>
-				</ExGather>
-			</If>
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<Lisbeth Json="[{'Group':1,'Item':35635,'Amount':5,'Enabled':true,'Type':'Blacksmith','Collectable':false, 'ConditionalJob':'Blacksmith'}]"/>

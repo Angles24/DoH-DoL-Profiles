@@ -60,25 +60,6 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Leatherworker"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Leatherworker">
-			<If Condition="not HasItem(36206) &gt; 49"> <!-- AR-Caean Cotton -->
-				<If Condition="ClassName != ClassJobType.Botanist">
-					<ChangeClass Job="Botanist"/>
-				</If>
-				<GetTo ZoneId="960" XYZ="-352.734, 86.8394, 274.3643"/>
-				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36206) &gt; 49">
-					<GatherObjects>
-						<GatherObject>Lush Vegetation Patch</GatherObject>
-					</GatherObjects>
-					<ItemNames>
-						<ItemName>AR-Caean Cotton</ItemName>
-					</ItemNames>
-					<HotSpots>
-						<HotSpots XYZ="-352.734, 86.8394, 274.3643" Radius="20" />
-						<HotSpots XYZ="-247.7067, 80.52891, 347.7692" Radius="20" />
-						<HotSpots XYZ="-416.0974, 88.50111, 382.3748" Radius="20" />
-					</HotSpots>
-				</ExGather>
-			</If>
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<Lisbeth Json="[{'Group':1,'Item':35650,'Amount':5,'Enabled':true,'Type':'Leatherworker','Collectable':false, 'ConditionalJob':'Leatherworker'}]"/>

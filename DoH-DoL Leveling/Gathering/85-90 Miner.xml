@@ -48,31 +48,7 @@ Angles24
 		<!-- Level 89-90 -->
 		<If Condition="Core.Player.ClassLevel &lt; 90">
 			<LogMessage Message="Starting the Grind to Level 90."/>
-				<GetTo ZoneId="960" XYZ="-80.46867, 275.5401, -523.4323"/>
-				<ExGather CordialType="Auto" CordialTime="Auto" While="Core.Player.ClassLevel &lt; 90">
-					<GatherObjects>
-						<GatherObject>Mineral Deposit</GatherObject>
-					</GatherObjects>
-					<ItemNames>
-						<ItemName>Chondrite</ItemName>
-					</ItemNames>
-					<GatherSpots>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-73.15296, 277.3208, -533.947" nodeLocation="-73.15296, 277.3208, -533.9477" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-189.2272, 282.7411, -481.769" nodeLocation="-189.2272, 282.7411, -481.7691" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-168.3538, 275.071, -353.099" nodeLocation="-168.3538, 275.071, -353.0997" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-142.8093, 289.2221, -362.752" nodeLocation="-142.8093, 289.2221, -362.7527" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-79.47173, 276.6187, -527.383" nodeLocation="-79.47173, 276.6187, -527.3834" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-209.8961, 272.4175, -468.808" nodeLocation="-209.7576, 272.4133, -467.9081"/>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-203.9531, 275.9996, -476.61" nodeLocation="-203.9531, 275.9996, -476.613" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-176.5796, 273.2389, -357.4093" nodeLocation="-175.9021, 273.3181, -357.6351"/>
-					</GatherSpots>			
-					<HotSpots>
-						<HotSpots XYZ="-80.46867, 275.5401, -523.4323"  Radius="40" />
-						<HotSpots XYZ="-189.2272, 282.7411, -481.769"  Radius="40" />
-						<HotSpots XYZ="-155.2744, 285.3008, -367.3569"  Radius="40" />
-					</HotSpots>
-				</ExGather>
-			<!--<Lisbeth Json="[{'Group':0, 'Item':36178, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':90, 'ConditionalJob':'Miner'},{'Group':0, 'Item':36166, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':90, 'ConditionalJob':'Miner'}]"/> --><!-- Chondrite, Raw Star Quartz -->
+			<Lisbeth Json="[{'Group':0, 'Item':36178, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':90, 'ConditionalJob':'Miner'},{'Group':0, 'Item':36166, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':90, 'ConditionalJob':'Miner'}]"/> <!-- Chondrite, Raw Star Quartz -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 90">
 			<LogMessage Message="Congrats on Level 90, moving on."/>

@@ -60,62 +60,6 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Goldsmith"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Goldsmith">
-			<If Condition="not HasItem(36178) &gt; 49"> <!-- Raw Star Quartz -->
-				<If Condition="ClassName != ClassJobType.Miner">
-					<ChangeClass Job="Miner"/>
-				</If>
-				<GetTo ZoneId="960" XYZ="70.74876, 66.68904, 582.3747"/>
-				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36178) &gt; 49">
-					<GatherObjects>
-					  <GatherObject>Rocky Outcrop</GatherObject>
-					</GatherObjects>
-					<ItemNames>
-					  <ItemName>Raw Star Quartz</ItemName>
-					</ItemNames>
-					<GatherSpots>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-90.78428, 58.68839, 512.9146" nodeLocation="-89.04427, 60.13459, 512.3419" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-50.43852, 60.91457, 667.493" nodeLocation="-49.20927, 63.09399, 665.772" />
-					</GatherSpots>				
-					<HotSpots>
-						<HotSpots Radius="10" XYZ="70.74876, 66.68904, 582.3747"/>
-						<HotSpots Radius="15" XYZ="59.44584, 66.97221, 595.7346"/>
-						<HotSpots Radius="10" XYZ="72.24758, 79.21242, 628.9758"/>
-						<HotSpots Radius="15" XYZ="-47.50812, 61.01706, 669.4283"/>
-						<HotSpots Radius="10" XYZ="-63.42207, 62.0164, 687.6512"/>
-						<HotSpots Radius="20" XYZ="-83.24052, 58.70886, 524.9519"/>
-						<HotSpots Radius="20" XYZ="-63.18159, 58.60059, 489.9554"/>
-					</HotSpots>
-				</ExGather>
-			</If>
-			<If Condition="not HasItem(36166) &gt; 49"> <!-- Chondrite -->
-				<If Condition="ClassName != ClassJobType.Miner">
-					<ChangeClass Job="Miner"/>
-				</If>
-			<GetTo ZoneId="960" XYZ="-80.46867, 275.5401, -523.4323"/>
-				<ExGather CordialType="Auto" CordialTime="Auto" While="not HasItem(36166) &gt; 49">
-					<GatherObjects>
-						<GatherObject>Mineral Deposit</GatherObject>
-					</GatherObjects>
-					<ItemNames>
-						<ItemName>Chondrite</ItemName>
-					</ItemNames>
-					<GatherSpots>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-73.15296, 277.3208, -533.947" nodeLocation="-73.15296, 277.3208, -533.9477" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-189.2272, 282.7411, -481.769" nodeLocation="-189.2272, 282.7411, -481.7691" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-168.3538, 275.071, -353.099" nodeLocation="-168.3538, 275.071, -353.0997" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-142.8093, 289.2221, -362.752" nodeLocation="-142.8093, 289.2221, -362.7527" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-79.47173, 276.6187, -527.383" nodeLocation="-79.47173, 276.6187, -527.3834" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-209.8961, 272.4175, -468.808" nodeLocation="-209.7576, 272.4133, -467.9081"/>
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-203.9531, 275.9996, -476.61" nodeLocation="-203.9531, 275.9996, -476.613" />
-						<IndirectApproachGatherSpot ReturnToApproachLocation="false" ApproachLocation="-176.5796, 273.2389, -357.4093" nodeLocation="-175.9021, 273.3181, -357.6351"/>
-					</GatherSpots>			
-					<HotSpots>
-						<HotSpots XYZ="-80.46867, 275.5401, -523.4323"  Radius="40" />
-						<HotSpots XYZ="-189.2272, 282.7411, -481.769"  Radius="40" />
-						<HotSpots XYZ="-155.2744, 285.3008, -367.3569"  Radius="40" />
-					</HotSpots>
-				</ExGather>
-			</If>
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<Lisbeth Json="[{'Group':1,'Item':35645,'Amount':5,'Enabled':true,'Type':'Goldsmith','Collectable':false, 'ConditionalJob':'Goldsmith'}]"/>
