@@ -172,10 +172,10 @@ Angles24
 		<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 9 and not IsQuestCompleted(66645) and IsQuestCompleted(66644)">
 			<If Condition="&EXPManuals; == 1">
 				
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -228,10 +228,10 @@ Angles24
 	<!--Level 10 - The Princess and the Fish-->
 		<While Condition="not IsQuestCompleted(66646) and Core.Me.Levels[ClassJobType.Fisher] &gt; 9 and IsQuestCompleted(66645)">
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -345,10 +345,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -432,10 +432,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -548,10 +548,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -614,10 +614,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -701,10 +701,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -774,10 +774,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -892,10 +892,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -968,10 +968,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1145,10 +1145,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1212,10 +1212,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1295,10 +1295,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1385,10 +1385,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1547,10 +1547,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1671,10 +1671,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1763,10 +1763,10 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(12668,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':12668,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -1885,7 +1885,7 @@ Angles24
 				<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 			</If>
 			<If Condition="&EXPManuals; == 1">
-				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(12668,1)">
+				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 69 and  Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
 				<If Condition="ClassName != ClassJobType.Fisher">
