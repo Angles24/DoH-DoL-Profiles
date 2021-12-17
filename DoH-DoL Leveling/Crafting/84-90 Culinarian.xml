@@ -42,7 +42,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Culinarian">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35664,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':35663,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
 		</If>
 	</If>
 	
