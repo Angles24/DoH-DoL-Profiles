@@ -333,7 +333,8 @@ Author: Angles24, Manta
         <LLTalkTo NpcId="1040862" XYZ="-27.02374, 26.58384, -178.6375" QuestId="69793" StepId="1"/>
       </If>
       <If Condition="GetQuestStep(69793) == 2">
-        <RunCode name="TurnOffMount"/>
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
         <WaitTimer WaitTime="3"/>
         <MoveTo XYZ="13.94738, 25.79158, -183.5201"/>
         <WaitTimer WaitTime="3"/>
@@ -459,7 +460,8 @@ Author: Angles24, Manta
         <LLTalkTo NpcId="1041754" XYZ="-340.8408, 22, 500.5721" QuestId="70034" StepId="2"/>
       </If>
       <If Condition="GetQuestStep(70034) == 3">
-        <RunCode name="TurnOffMount"/>
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
         <WaitTimer WaitTime="5"/>
         <GetTo ZoneId="958" XYZ="-333.4559, 22.37715, 458.0285"/>
         <!-- Subzone="3903" Area="Garlemald" -->
@@ -484,7 +486,8 @@ Author: Angles24, Manta
         <LLTalkTo NpcId="1040899" XYZ="-233.4478, 22.17031, 443.717" QuestId="69752" StepId="1"/>
       </If>
       <If Condition="GetQuestStep(69752) == 2">
-        <RunCode name="TurnOffMount"/>
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
         <WaitTimer WaitTime="3"/>
         <MoveTo XYZ="-175.2147, 6.432508, 452.7315"/>
         <WaitTimer WaitTime="3"/>
@@ -602,32 +605,31 @@ Author: Angles24, Manta
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 7)">
         <GetTo ZoneId="958" XYZ="84.92862, 10.5, -340.66" />
-
-        <RunCode name="TurnOffMount"/>
-        <ClimbHill Start="84.92862, 10.5, -340.66" End="72.78697, 14.01106, -349.8062" />
-        <ClimbHill Start="72.78697, 14.01106, -349.8062" End="73.35172, 15.69851, -356.3765" />
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
+        <LLClimbHill Distance="2.5" Start="84.92862, 10.5, -340.66" End="72.78697, 14.01106, -349.8062" />
+        <LLClimbHill Distance="2.5" Start="72.78697, 14.01106, -349.8062" End="73.35172, 15.69851, -356.3765" />
         <RunCode name="TurnOnMount"/>
-
         <GetTo ZoneId="958" XYZ="79.9136, 37.8851, -518.181" />
         <UseObject NpcId="2012007" XYZ="79.9136, 37.8851, -518.181" Condition="not IsAetherCurrentCompleted(958, 7)" />
-
-        <ClimbHill Start="79.9136, 37.8851, -518.181" End="95.63257, 10.8, -535.3679" />
+        <LLClimbHill Distance="2.5" Start="79.9136, 37.8851, -518.181" End="95.63257, 10.8, -535.3679" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 6)">
         <GetTo ZoneId="958" XYZ="131.6041, 10.8146, -162.225" />
-
-        <RunCode name="TurnOffMount"/>
-        <ClimbHill Start="131.6041, 10.8146, -162.225" End="134.928, 14.3984, -172.249" />
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
+        <LLClimbHill Distance="2.5" Start="131.6041, 10.8146, -162.225" End="134.928, 14.3984, -172.249" />
         <UseObject NpcId="2012008" XYZ="134.928, 14.3984, -172.249" Condition="not IsAetherCurrentCompleted(958, 6)" />
-        <ClimbHill Start="134.928, 14.3984, -172.249" End="139.4676, 10.8, -161.884" />
+        <LLClimbHill Distance="2.5" SpamJump="True" End="139.4676, 10.8, -161.884" />
         <RunCode name="TurnOnMount"/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 5)">
         <GetTo ZoneId="958" XYZ="-155.4925, 11.38934, -400.2436" />
-        <RunCode name="TurnOffMount"/>
-        <ClimbHill Start="-155.4925, 11.38934, -400.2436" End="-151.0025, 16.15989, -420.5258" Distance="0.5"/>
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
+        <LLClimbHill Distance="2.5" Start="-155.4925, 11.38934, -400.2436" End="-151.0025, 16.15989, -420.5258"/>
         <UseObject NpcId="2012009" XYZ="-144.924, 17.5785, -420.515" Condition="not IsAetherCurrentCompleted(958, 5)" />
-        <ClimbHill Start="-144.924, 17.5785, -420.515" End="-133.8798, 11.38934, -403.0633" />
+        <LLClimbHill Distance="2.5" Start="-144.924, 17.5785, -420.515" End="-133.8798, 11.38934, -403.0633" />
         <RunCode name="TurnOnMount"/>
       </If>
     </If>
@@ -710,10 +712,16 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69777) == 1 and GetQuestById(69777).QuestI8A == 0">
         <GetTo ZoneId="959" XYZ="-346.2328, -161.8501, -651.5731"/>
         <!-- Subzone="3968" Area="" -->
-        <RunCode Name="Dinner1" />
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-346.2328, -161.8501, -651.5731" End="-344.1151, -160.4042, -654.298"/>
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-344.1151, -160.4042, -654.298" End="-338.9936, -155.9042, -646.7946"/>
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-338.9936, -155.9042, -646.7946" End="-332.1223, -152.9042, -645.6963"/>
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-332.1223, -152.9042, -645.6963" End="-329.6756, -151.2613, -656.1037"/>
         <RunCode Name="697771" />
         <WaitWhile Condition="GetQuestStep(69777) == 1 and not GetQuestById(69777).QuestI8A == 1"/>
-        <RunCode Name="Dinner2" />
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-329.6756, -151.2613, -656.1037" End="-322.0023, -161.1392, -634.4977"/>
+        <RunCode name="TurnOnMount"/>
       </If>
       <If Condition="GetQuestStep(69777) == 1 and GetQuestById(69777).QuestI8A == 1">
         <GetTo ZoneId="959" XYZ="-482.0173, -167.5, -545.6169"/>
@@ -725,10 +733,15 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69777) == 1 and GetQuestById(69777).QuestI8A == 2">
         <GetTo ZoneId="959" XYZ="-441.1549, -168, -418.4973"/>
         <!-- Subzone="3968" Area="" -->
-        <RunCode Name="Dinner3" />
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-441.1549, -168, -418.4973" End="-432.1943, -162.0541, -409.2291"/>
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-432.1943, -162.0541, -409.2291" End="-425.5305, -159.0541, -409.0136"/>
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-425.5305, -159.0541, -409.0136" End="-409.507, -158.8891, -428.4722"/>
         <RunCode Name="697773" />
         <WaitWhile Condition="not GetQuestStep(69777) == 255"/>
-        <RunCode Name="Dinner4" />
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="-409.507, -158.8891, -428.4722" End="-393.6332, -168, -430.6089"/>
+        <RunCode name="TurnOnMount"/>
       </If>
       <If Condition="GetQuestStep(69776) == 1">
         <GetTo ZoneId="959" XYZ="-558.4612, -168, -475.4071"/>
@@ -807,11 +820,12 @@ Author: Angles24, Manta
       </If>
       <If Condition="not IsAetherCurrentCompleted(959, 12)">
         <GetTo ZoneId="959" XYZ="302.1018, -144, -557.6024" />
-        <RunCode name="TurnOffMount"/>
-        <ClimbHill Start="302.1018, -144, -557.6024" End="319.1552, -156.2334, -574.8775" />
-        <ClimbHill Start="313.8791, -156.2261, -589.9079" End="316.401, -154.978, -595.519" />
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
+        <LLClimbHill Distance="2.5" Start="302.1018, -144, -557.6024" End="319.1552, -156.2334, -574.8775" />
+        <LLClimbHill Distance="2.5" Start="313.8791, -156.2261, -589.9079" End="316.401, -154.978, -595.519" />
         <UseObject NpcId="2012012" XYZ="316.401, -154.978, -595.519" Condition="not IsAetherCurrentCompleted(959, 12)" />
-        <ClimbHill Start="316.401, -154.978, -595.519" End="340.8135, -168, -607.7444" />
+        <LLClimbHill Distance="2.5" Start="316.401, -154.978, -595.519" End="340.8135, -168, -607.7444" />
         <RunCode name="TurnOnMount"/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(959, 11)">
@@ -884,7 +898,8 @@ Author: Angles24, Manta
         <LLTalkTo NpcId="1041329" XYZ="233.9971, 8.289929, 270.7103" QuestId="70043" StepId="2"/>
       </If>
       <If Condition="GetQuestStep(70043) == 3 and GetQuestById(70043).QuestI8A == 0">
-        <RunCode name="TurnOffMount"/>
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
         <WaitTimer WaitTime="3"/>
         <GetTo ZoneId="961" XYZ="116.2392, 7.385857, 304.5458"/>
         <!-- Subzone="3928" Area="" -->
@@ -989,7 +1004,8 @@ Author: Angles24, Manta
         <LLTalkTo DialogOption="0" NpcId="1041848" XYZ="258.3505, -10.14066, -95.71985" QuestId="69849" StepId="1"/>
       </If>
       <If Condition="GetQuestStep(69849) == 2">
-        <RunCode name="TurnOffMount"/>
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
         <MoveTo XYZ="239.4212, -10.20134, -103.5353" Distance="0.5"/>
         <WaitTimer WaitTime="1"/>
         <MoveTo XYZ="157.5393, -10.1387, -112.7437" Distance="0.5"/>
