@@ -46,11 +46,6 @@ Authors:  Kayla / Angles24
 		</If>
 	</If>
 	
-	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 90">		
-		<WaitTimer WaitTime="5"/>
-		<LLoadProfile Path="84-90 Alchemist.xml"/>
-	</If>
-	
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
