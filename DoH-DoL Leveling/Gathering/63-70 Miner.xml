@@ -64,7 +64,7 @@ Angles24
 				<If Condition="HasAtLeast(17941,3)">
 					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="478" XYZ="81.84147, 214.1, -91.26829"/>
-					<LLHandOver ItemIds="17941" RequiresHq="True" NpcId="1019864" XYZ="81.84147, 214.1, -91.26829" QuestId="68091" StepId="4"/>
+					<LLHandOver ItemIds="17941" RequiresHq="false" NpcId="1019864" XYZ="81.84147, 214.1, -91.26829" QuestId="68091" StepId="4"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
@@ -153,7 +153,7 @@ Angles24
 				</If>
 				<If Condition="HasAtLeast(17942,5)">
 					<GetTo ZoneId="478" XYZ="81.84147, 214.1, -91.26829"/>
-					<LLHandOver ItemIds="17942" RequiresHq="True" NpcId="1019864" XYZ="81.84147, 214.1, -91.26829" QuestId="68092" StepId="5"/>
+					<LLHandOver ItemIds="17942" RequiresHq="false" NpcId="1019864" XYZ="81.84147, 214.1, -91.26829" QuestId="68092" StepId="5"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
@@ -229,7 +229,7 @@ Angles24
 				<If Condition="HasAtLeast(17943,8)">
 					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="478" XYZ="-19.1375, 211.2449, -29.66669"/>
-					<LLTurnIn ItemIds="17943" RequiresHq="True" NpcId="1013713" XYZ="-19.1375, 211.2449, -29.66669" QuestId="68093" StepId="2"/>
+					<LLTurnIn ItemIds="17943" RequiresHq="false" NpcId="1013713" XYZ="-19.1375, 211.2449, -29.66669" QuestId="68093" StepId="2"/>
 					<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
