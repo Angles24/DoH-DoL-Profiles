@@ -253,7 +253,7 @@ Angles24
 			</If>
 			<If Condition="HasQuest(66646)">
 				<If Condition="GetQuestStep(66646) == 255">
-					<If Condition="not HqHasAtLeast(4930,1)">
+					<If Condition="not HasAtLeast(4930,1)">
 						<If Condition="not HasAtLeast(2586,90)">
 							<GetTo ZoneId="129" XYZ="-245.3774, 16.2, 40.53"/>
 							<BuyItem ItemId="2586" ItemCount="99" DialogOption="2" NpcId="1003254" XYZ="-245.3774, 16.2, 40.53"/>
@@ -262,7 +262,7 @@ Angles24
 						<WaitTimer WaitTime="2"/>
 						<RunCode Name="Sneak"/>
 						<WaitTimer WaitTime="2"/>
-						<ExFish Stealth="True" Mooch="0" Bait="Moth Pupa" MinFish="15" MaxFish="20" Condition="not HqHasAtLeast(4930,1)">
+						<ExFish Stealth="True" Mooch="0" Bait="Moth Pupa" MinFish="15" MaxFish="20" Condition="not HasAtLeast(4930,1)">
 							<FishSpots>
 								<FishSpot XYZ="-38.5459, 39.96041, 68.37025" Heading="5.13"/>
 								<FishSpot XYZ="-58.01261, 38.42447, 71.26994" Heading="5.13"/>
@@ -270,7 +270,7 @@ Angles24
 							</FishSpots>
 						</ExFish>
 					</If>
-					<If Condition="HqHasAtLeast(4930,1)">
+					<If Condition="HasAtLeast(4930,1)">
 						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<LLTurnIn ItemId="4930" RequiresHq="true" QuestId="66646" StepId="255" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -473,7 +473,7 @@ Angles24
 							</FishSpots>
 						</ExFish>
 					</While>
-					<If Condition="NqHasAtLeast(4955,5) or HqHasAtLeast(4955,5)">
+					<If Condition="NqHasAtLeast(4955,5) or HasAtLeast(4955,5)">
 						<GetTo ZoneId="129" XYZ="-185.8396, 4, 169.604"/>
 						<LLTurnIn ItemId="4955" QuestId="66648" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1173,21 +1173,21 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(67622) == 255">
-					<While Condition="not HqHasAtLeast(12713,3)">
+					<While Condition="not HasAtLeast(12713,3)">
 						<If Condition="not HasAtLeast(12704,10)">
               <LisbethTravel Zone="397" Subzone="2204" Position="499.8187, 212.5399, 716.6222"/>
 							<NoCombatMoveTo Name="Independent Merchant" XYZ="504.5396, 212.7327, 718.5625"/>
 							<BuyItem ItemId="12704" ItemCount="99" DialogOption="4" NpcId="1011228" XYZ="504.5396, 212.7327, 718.5625"/>
 						</If>
 						<LisbethTravel Zone="397" Position="285.1617, 132.4532, -249.6214"/>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="0" Bait="Stonefly Nymph" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12704,10) and not HqHasAtLeast(12713,3)">
+						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="0" Bait="Stonefly Nymph" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12704,10) and not HasAtLeast(12713,3)">
 							<FishSpots>
 								<FishSpot XYZ="299.7361, 132.1549, -248.1964" Heading="1.919566"/>
 								<FishSpot XYZ="287.2595, 132.0735, -230.8772" Heading="5.957568"/>
 							</FishSpots>
 						</ExFish>
 					</While>
-					<If Condition="HqHasAtLeast(12713,3)">
+					<If Condition="HasAtLeast(12713,3)">
 						<LisbethTravel Zone="397" Position="456.0768, 200.2136, 668.635"/>
 						<LLTurnIn ItemId="12713" RequiresHq="true" QuestId="67622" NpcId="1013252" XYZ="459.6169, 200.2377, 665.8884"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1247,7 +1247,7 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(67623) == 3">
-					<While Condition="not HqHasAtLeast(12769,3)">
+					<While Condition="not HasAtLeast(12769,3)">
 						<If Condition="not HasAtLeast(12711,10)">
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
@@ -1257,14 +1257,14 @@ Angles24
 						<If Condition="not IsOnMap(398)">
 							<LisbethTravel Zone="398" Position="527.918, -51.27571, 41.3532"/>
 						</If>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Bait="Brute Leech" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12711,10) and not HqHasAtLeast(12769,3)">
+						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Bait="Brute Leech" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12711,10) and not HasAtLeast(12769,3)">
 							<FishSpots>
 								<FishSpot XYZ="277.9648, -21.38772, -580.2007" Heading="2.044546"/>
 								<FishSpot XYZ="414.1869, -7.255656, -600.8729" Heading="1.525935"/>
 							</FishSpots>
 						</ExFish>
 					</While>
-					<If Condition="HqHasAtLeast(12769,3)">
+					<If Condition="HasAtLeast(12769,3)">
 						<LisbethTravel Zone="398" Position="523.6133, -51.424, 62.54675"/>
 						<LLTurnIn ItemId="12769" RequiresHq="true" StepId="3" QuestId="67623" NpcId="1013254" XYZ="523.6133, -51.424, 62.54675"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1336,7 +1336,7 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(67624) == 4">
-					<While Condition="not HqHasAtLeast(12793,1)">
+					<While Condition="not HasAtLeast(12793,1)">
 						<If Condition="not HasAtLeast(12712,10)">
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12712,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
@@ -1347,14 +1347,14 @@ Angles24
 							<LisbethTravel Zone="400" Position="252.6177, -42.16244, 590.2133"/>
 						</If>
 						<LisbethTravel Zone="400" Position="440.869, -29.54482, 218.6229"/>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Bait="Giant Crane Fly" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12712,10) and not HqHasAtLeast(12793,1)"><!-- Letter Puffer -->
+						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Bait="Giant Crane Fly" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12712,10) and not HasAtLeast(12793,1)"><!-- Letter Puffer -->
 							<FishSpots>
 								<FishSpot XYZ="444.9158, -31.74853, 222.8789" Heading="0.5723944"/>
                 <FishSpot XYZ="452.3007, -29.60526, 217.5842" Heading="0.6325054"/>
 							</FishSpots>
 						</ExFish>
 					</While>
-					<If Condition="HqHasAtLeast(12793,1)">
+					<If Condition="HasAtLeast(12793,1)">
 						<LisbethTravel Zone="400" Position="441.306, -29.3383, 218.1277"/>
 						<LLTurnIn ItemId="12793" RequiresHq="true" StepId="4" QuestId="67624" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1430,7 +1430,7 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(67625) == 255">
-					<While Condition="not HqHasAtLeast(12829,1)">
+					<While Condition="not HasAtLeast(12829,1)">
 						<If Condition="not HasAtLeast(12711,10)">
 							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
 						</If>
@@ -1440,14 +1440,14 @@ Angles24
 						<If Condition="not IsOnMap(401)">
 							<LisbethTravel Zone="401" Position="-626.617, -122.5, 539.8152"/>
 						</If>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Snagging="true" Bait="Brute Leech" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HqHasAtLeast(12829,1) and HasAtLeast(12711,10)"><!-- Catkiller -->
+						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Snagging="true" Bait="Brute Leech" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HasAtLeast(12829,1) and HasAtLeast(12711,10)"><!-- Catkiller -->
 							<FishSpots>
 								<FishSpot XYZ="404.9829, -186.4827, 830.9991" Heading="6.278952"/>
 								<FishSpot XYZ="420.9894, -186.4232, 818.8319" Heading="1.183289"/>
 							</FishSpots>
 						</ExFish>
 					</While>
-					<If Condition="HqHasAtLeast(12829,1)">
+					<If Condition="HasAtLeast(12829,1)">
 						<LisbethTravel Zone="401" Position="400.7477, -123.263, 674.9523"/>
 						<LLTurnIn ItemId="12829" RequiresHq="true" StepId="255" QuestId="67625" NpcId="1013830" XYZ="400.7477, -123.263, 674.9523"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1577,20 +1577,20 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(68432) == 2">
-					<While Condition="not (NqHasAtLeast(17949,3) or HqHasAtLeast(17949,3))">
+					<While Condition="not (NqHasAtLeast(17949,3) or HasAtLeast(17949,3))">
 						<If Condition="not HasAtLeast(20613,50)">
 							<LisbethTravel Zone="612" Subzone="2613" Position="-632.6987, 130.1143, -523.9323"/>
 							<BuyItem ItemId="20613" ItemCount="99" DialogOption="6" NpcId="1019513" XYZ="-634.1802, 130.086, -526.0853"/>
 						</If>
             <LisbethTravel Zone="612" Subzone="2601" Position="-227.2903, 59.35556, -635.7797"/>
-						<ExFish Stealth="True" Bait="Salmon Roe" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not (NqHasAtLeast(17949,3) or HqHasAtLeast(17949,3)) and HasAtLeast(20613,10)">
+						<ExFish Stealth="True" Bait="Salmon Roe" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not (NqHasAtLeast(17949,3) or HasAtLeast(17949,3)) and HasAtLeast(20613,10)">
 							<FishSpots>
 								<FishSpot XYZ="-226.8359, 59.29554, -636.3755" Heading="1.404261"/>
 								<FishSpot XYZ="-230.8704, 60.15094, -622.243" Heading="1.425203"/>
 							</FishSpots>
 						</ExFish>
 					</While>
-					<If Condition="NqHasAtLeast(17949,3) or HqHasAtLeast(17949,3)">
+					<If Condition="NqHasAtLeast(17949,3) or HasAtLeast(17949,3)">
 						<LisbethTravel Zone="612" Position="-229.7856, 60.06992, -635.7367"/>
 						<LLHandOver ItemId="17949" StepId="2" QuestId="68432" NpcId="1021396" XYZ="-229.7856, 60.06992, -635.7367"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1713,7 +1713,7 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(68433) == 4">
-					<While Condition="not HqHasAtLeast(17950,3)">
+					<While Condition="not HasAtLeast(17950,3)">
 						<If Condition="not IsOnMap(613)">
 							<LisbethTravel Zone="613" Position="96.49239, 3.033221, -585.4243"/>
 						</If>
@@ -1722,7 +1722,7 @@ Angles24
 							<BuyItem ItemId="20617" ItemCount="50" DialogOption="6" NpcId="1021501" XYZ="93.21729, 2.087148, -612.3598"/>
 						</If>
 						<LisbethTravel Zone="613" Position="570.0244, 9.866471, -724.6882"/>
-						<ExFish Stealth="True" Bait="Live Shrimp" Patience="Patience2" MinimumGPPatience="650" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HqHasAtLeast(17950,3) and HasAtLeast(20617,10)">
+						<ExFish Stealth="True" Bait="Live Shrimp" Patience="Patience2" MinimumGPPatience="650" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HasAtLeast(17950,3) and HasAtLeast(20617,10)">
 							<FishSpots>
 								<FishSpot XYZ="513.9774, 0.241725, -623.5388" Heading="1.404261"/>
 								<FishSpot XYZ="523.3707, -0.3130698, -601.9462" Heading="1.425203"/>
@@ -1732,7 +1732,7 @@ Angles24
 						</PatienceTugs>
 						</ExFish>
 					</While>
-					<If Condition="HqHasAtLeast(17950,3)">
+					<If Condition="HasAtLeast(17950,3)">
 						<LisbethTravel Zone="613" Subzone="2767" Position="524.2776, -0.01325494, -245.0822"/>
 						<LLHandOver ItemId="17950" RequiresHq="true" StepId="4" QuestId="68433" NpcId="1021402" XYZ="524.5593, -0.007716715, -244.8616"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1815,12 +1815,12 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(68434) == 5">
-					<If Condition="not HqHasAtLeast(17951,3)">
+					<If Condition="not HasAtLeast(17951,3)">
 						<LisbethTravel Zone="614" Subzone="2753" Position="-506.9365, -72.31187, 674.6205"/>
 					</If>
 					<RunCode Name="TruthOfOceans"/>
 					<RunCode Name="Fathom"/>
-					<While Condition="not HqHasAtLeast(17951,3) and Core.Me.HasAura(1166) and Core.Me.HasAura(1173)">
+					<While Condition="not HasAtLeast(17951,3) and Core.Me.HasAura(1166) and Core.Me.HasAura(1173)">
 						<ExSpearFish VeteranTradeDepth="2" GigId="2" GatherStrategy="FishAndGo">
 							<Items>
 								<SpearFish Name="Ichthyosaur"/>
@@ -1842,7 +1842,7 @@ Angles24
 						</ExSpearFish>
 						<WaitTimer WaitTime="2"/>
 					</While>
-					<If Condition="HqHasAtLeast(17951,3)">
+					<If Condition="HasAtLeast(17951,3)">
 						<LisbethTravel Zone="614" Position="703.4661, 2.646878, 514.4102"/>
 						<LLHandOver ItemIds="17951" RequiresHq="True" NpcId="1021409" XYZ="703.1814, 2.949344, 513.6339" QuestId="68434" StepId="5"/>
 						<LLSmallTalk WaitTime="1500"/>
@@ -1914,7 +1914,7 @@ Angles24
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 				<If Condition="GetQuestStep(68435) == 255">
-					<While Condition="not HqHasAtLeast(17952,5)">
+					<While Condition="not HasAtLeast(17952,5)">
 						<If Condition="not HasAtLeast(20617,50)">
 							<LisbethTravel Zone="613" Position="94.41652, 2.080172, -610.312"/>
 							<BuyItem ItemId="20617" ItemCount="99" DialogOption="6" InteractDistance="3.0" NpcId="1021501" XYZ="93.21729, 2.087148, -612.3598"/>
@@ -1922,7 +1922,7 @@ Angles24
 						<If Condition="not IsOnMap(613)">
 							<LisbethTravel Zone="613" Position="95.49872, 0.568496, -552.3418"/>
 						</If>
-						<Fish Stealth="True" Mooch="0" Bait="Live Shrimp" MinFish="20" MaxFish="50" ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" Condition="HasAtLeast(20617,10) and not HqHasAtLeast(17952,5)">
+						<Fish Stealth="True" Mooch="0" Bait="Live Shrimp" MinFish="20" MaxFish="50" ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" Condition="HasAtLeast(20617,10) and not HasAtLeast(17952,5)">
 							<FishSpots>
 								<FishSpot XYZ="94.0839, -0.06910139, -539.1041" Heading="6.21"/>
 								<FishSpot XYZ="149.8477, -0.07072884, -584.2156" Heading="0.73"/>
@@ -1932,7 +1932,7 @@ Angles24
 							</PatienceTugs>
 						</Fish>
 					</While>
-					<If Condition="HqHasAtLeast(17952,5)">
+					<If Condition="HasAtLeast(17952,5)">
 						<LisbethTravel Zone="613" Position="-749.6351, 1.559595, -456.9331"/>
 						<LLTurnIn ItemIds="17952" RequiresHq="True" QuestId="68435" NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977"/>
 						<LLSmallTalk WaitTime="1500"/>

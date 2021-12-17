@@ -113,7 +113,7 @@ Angles24
 						<Lisbeth Json="[{'Item': 12878,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 					</If>
 				</If>
-				<If Condition="HqHasAtLeast(12878,10)">
+				<If Condition="HasAtLeast(12878,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="401" Position="-670.8019, -127.9738, 639.9481"/><!-- Camp Cloudtop -->
 					<LLTurnIn ItemId="12878" RequiresHq="true" QuestId="67585" StepId="2" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
@@ -189,7 +189,7 @@ Angles24
 						<Lisbeth Json="[{'Item': 12879,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 					</If>
 				</If>
-				<If Condition="HqHasAtLeast(12879,10)">
+				<If Condition="HasAtLeast(12879,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="401" Position="-670.8019, -127.9738, 639.9481"/><!-- Camp Cloudtop -->
 					<LLTurnIn ItemId="12879" RequiresHq="true" QuestId="67586" StepId="5" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
@@ -254,7 +254,7 @@ Angles24
 						<Lisbeth Json="[{'Item': 12579,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 					</If>
 				</If>
-				<If Condition="HqHasAtLeast(12579,10)">
+				<If Condition="HasAtLeast(12579,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="401" Position="-670.8019, -127.9738, 639.9481"/><!-- Camp Cloudtop -->
 					<LLTurnIn ItemId="12579" RequiresHq="true" QuestId="67587" StepId="3" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
@@ -313,7 +313,7 @@ Angles24
 				<While Condition="not HasAtLeast(12900,3)">
 					<Lisbeth Json="[{'Group':1,'Item':12900,'Amount':3,'Enabled':true,'Type':'Gather','Hq':true}]"/><!-- Force HQ Chysahl Greens -->
 				</While>
-				<If Condition="HqHasAtLeast(12900,3)">
+				<If Condition="HasAtLeast(12900,3)">
 					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="419" XYZ="-136.9193, 14.55313, -150.3167"/><!-- The Pillars -->
 					<LLTurnIn ItemId="12900" RequiresHq="true" QuestId="67588" StepId="3" NpcId="1013245" InteractDistance="2.0" XYZ="-136.9193, 14.55313, -150.3167"/>

@@ -56,7 +56,7 @@ Angles24
 						<Lisbeth Json="[{'Item': 17945,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 					</If>
 				</If>
-				<If Condition="HqHasAtLeast(17945,3)">
+				<If Condition="HasAtLeast(17945,3)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="612" Position="-445.4772, 52.69365, 32.55148"/>
 					<LLHandOver ItemIds="17945" RequiresHq="True" NpcId="1021352" XYZ="-445.4772, 52.69365, 32.55148" QuestId="68157" StepId="4"/>
@@ -163,7 +163,7 @@ Angles24
 						<Lisbeth Json="[{'Item': 17946,'Group': 0,'Amount': 5,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 					</If>
 				</If>
-				<If Condition="HqHasAtLeast(17946,5)">
+				<If Condition="HasAtLeast(17946,5)">
 					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="478" XYZ="-44.67389, 209.2242, -90.67441"/>
 					<LLTurnIn ItemIds="17946" RequiresHq="True" QuestId="68158" NpcId="1021349" XYZ="-44.67389, 209.2242, -90.67441"/>
@@ -248,7 +248,7 @@ Angles24
 						<Lisbeth Json="[{'Item': 17947,'Group': 0,'Amount': 8,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
 					</If>
 				</If>
-				<If Condition="HqHasAtLeast(17947,8)">
+				<If Condition="HasAtLeast(17947,8)">
 					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="478" XYZ="74.53394, 214.12, -91.56881"/>
 					<LLHandOver ItemIds="17947" RequiresHq="True" NpcId="1017106" XYZ="74.53394, 214.12, -91.56881" QuestId="68159" StepId="6"/>
