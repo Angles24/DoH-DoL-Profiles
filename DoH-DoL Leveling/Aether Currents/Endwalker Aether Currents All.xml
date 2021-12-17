@@ -620,7 +620,7 @@ Author: Angles24, Manta
 		<Dismount/>
         <LLClimbHill Distance="2.5" Start="131.6041, 10.8146, -162.225" End="134.928, 14.3984, -172.249" />
         <UseObject NpcId="2012008" XYZ="134.928, 14.3984, -172.249" Condition="not IsAetherCurrentCompleted(958, 6)" />
-        <LLClimbHill Distance="2.5" SpamJump="True" End="139.4676, 10.8, -161.884" />
+        <LLClimbHill Distance="2.5" SpamJump="True" Start="134.928, 14.3984, -172.249" End="139.4676, 10.8, -161.884" />
         <RunCode name="TurnOnMount"/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 5)">
