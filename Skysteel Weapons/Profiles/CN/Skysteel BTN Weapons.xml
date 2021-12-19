@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Authors: Angles24 / Kayla / Lokibunny
+Requires: ExBuddy Plugin & LLamaLibrary BotBase
+-->
+<Profile>
+	<Name>Dragonsung Hatchet</Name>
+	<Order>
+	
+	<RunCode Name="Disable_Flight"/>
+	
+	<If Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist" force="True"/>
+	</If>
+	<If Condition="ClassName == ClassJobType.Botanist and Core.Player.ClassLevel &gt; 79">
+		
+		<If Condition="not IsQuestCompleted(69384)">
+			<If Condition="not HasQuest(69384) and not IsQuestCompleted(69384) and IsQuestCompleted(69208)">
+				<GetTo ZoneId="418" XYZ="150.3899, -20, 64.72313"/>
+				<If Condition="IsQuestAcceptQualified(69384)">
+					<LLPickupQuest NpcId="1032897" DialogOption="0" QuestId="69384" XYZ="150.3899, -20, 64.72313"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+			</If>
+			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+				<LLSmallTalk WaitTime="1500"/>
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="Coffer"/>
+			</If>
+		</If>
+		
+		<If Condition="not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
+			<If Condition="not HasQuest(69385) and not IsQuestCompleted(69385) and IsQuestCompleted(69384)">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<If Condition="IsQuestAcceptQualified(69385)">
+					<LLPickupQuest NpcId="1032898" QuestId="69385" XYZ="-163.47, 16.97958, -29.31262"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+			</If>
+		</If>
+		
+		<If Condition="not (HasItem(29620) or HasItem(29631) or HasItem(29642) or HasItem(29642) or HasItem(30290) or HasItem(30301) or HasItem(31722))">
+			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29620" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+		</If>
+		
+		<While Condition="HasItem(29620)"><!-- Skysteel Hatchet -->
+			<If Condition="not HqHasAtLeast(29669,340) and not HasAtLeast(29670,120)">
+				<Lisbeth Json="[{'Group':1,'Item':29670,'Amount':120,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29669,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="HqHasAtLeast(29669,340) and not HasAtLeast(29670,120)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29670,'Amount':120,'Enabled':true,'Type':'Gather'}]"/>
+			</If>
+			<If Condition="not HqHasAtLeast(29669,340) and HasAtLeast(29670,120)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29669,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<!--<If Condition="not HqHasAtLeast(29669,340) or not HasAtLeast(29670,120)">
+				<If Condition="ClassName != ClassJobType.Botanist">
+					<ChangeClass Job="Botanist" force="True"/>
+				</If>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29620">
+					<RunCode Name="SkysteelBTN"/>
+					<WaitTimer WaitTime="3"/>
+				</While>
+				<WaitTimer WaitTime="3"/>
+				<AutoEquip/>
+				<If Condition="not IsOnMap(398)">
+					<LisbethTravel Zone="398" Position="402.4343, -43.95806, -251.7982"/>
+				</If>-->
+				<!-- Fossil Dust -->
+				<!--<ExGather while="not HasAtLeast(29670,120)" CordialType="Auto">
+					<GatherObject>Mature Tree</GatherObject>
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="382.2864, -46.41497, -149.7691" NodeLocation="379.8401, -46.12787, -149.9247" ReturnToApproachLocation="False"/>
+					</GatherSpots>
+					<HotSpots>
+						<HotSpots Radius="30" X="381.0077" Y="-46.62662" Z="-147.4933"/>
+						<HotSpots Radius="30" X="402.4373" Y="-43.95806" Z="-251.7982"/>
+						<HotSpots Radius="30" X="301.5232" Y="-50.06977" Z="-288.1936"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Fossil Dust</ItemName>
+						<ItemName>Oddly Specific Latex</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Blessed Harvest II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>-->
+				<!-- Latex -->
+				<!--<ExGather while="not HqHasAtLeast(29669,340)" CordialType="Auto">
+					<GatherObject>Mature Tree</GatherObject>
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="382.2864, -46.41497, -149.7691" NodeLocation="379.8401, -46.12787, -149.9247" ReturnToApproachLocation="False"/>
+					</GatherSpots>
+					<HotSpots>
+						<HotSpots Radius="30" X="381.0077" Y="-46.62662" Z="-147.4933"/>
+						<HotSpots Radius="30" X="402.4373" Y="-43.95806" Z="-251.7982"/>
+						<HotSpots Radius="30" X="301.5232" Y="-50.06977" Z="-288.1936"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Latex</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Leaf Turn III" TimesToCast="1"/>
+						<GatheringSkill SpellName="Blessed Harvest II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>
+			</If>-->
+			<While Condition="HasItem(29620) and HqHasAtLeast(29669,340) and HasAtLeast(29670,120)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29620">
+					<ChangeClass Job="Botanist" force="True"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29620">
+					<RunCode Name="SwitchCombatJob"/>
+					</While>
+				</While>
+				<RunCode Name="Sort"/>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29631" SelectString="0"/><!-- Buy Skysteel Hatchet +1 -->
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</While>
+		</While>
+			
+		<While Condition="HasItem(29631)"><!-- Skysteel Hatchet +1 -->
+			<If Condition="not HasAtLeast(29675,180) and not HqHasAtLeast(29674,510)">
+				<Lisbeth Json="[{'Group':1,'Item':29675,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29674,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="HasAtLeast(29675,180) and not HqHasAtLeast(29674,510)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29674,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="not HasAtLeast(29675,180) and HqHasAtLeast(29674,510)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29675,'Amount':180,'Enabled':true,'Type':'Gather'}]"/>
+			</If>
+			<!--<If Condition="not HasAtLeast(29675,180)or not HqHasAtLeast(29674,510)">
+				<If Condition="ClassName != ClassJobType.Botanist">
+					<ChangeClass Job="Botanist" force="True"/>
+				</If>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29631">
+					<RunCode Name="SkysteelBTN2"/>
+					<WaitTimer WaitTime="3"/>
+				</While>
+				<WaitTimer WaitTime="3"/>
+				<AutoEquip/>
+				<If Condition="not IsOnMap(397)">
+					<LisbethTravel Zone="397" Position="-617.2984, 118.947, -166.7891"/>
+				</If>-->
+				<!-- Striking Stone -->
+				<!--<ExGather while="not HasAtLeast(29675,180)" CordialType="Auto">
+					<GatherObject>Lush Vegetation Patch</GatherObject>
+					<HotSpots>
+						<HotSpot XYZ="-539.5354, 118.947, -189.7633" Radius="20"/>
+						<HotSpot XYZ="-624.0922, 118.947, -252.8722" Radius="30"/>
+						<HotSpot XYZ="-617.2984, 118.947, -166.7891" Radius="30"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Bauble</ItemName>
+						<ItemName>Oddly Specific Amber</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Blessed Harvest II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>-->
+				<!-- Amber -->
+				<!--<ExGather while="not HqHasAtLeast(29674,510)" CordialType="Auto">
+					<GatherObject>Lush Vegetation Patch</GatherObject>
+					<HotSpots>
+						<HotSpot XYZ="-539.5354, 118.947, -189.7633" Radius="20"/>
+						<HotSpot XYZ="-624.0922, 118.947, -252.8722" Radius="30"/>
+						<HotSpot XYZ="-617.2984, 118.947, -166.7891" Radius="30"/>
+					</HotSpots>
+					<ItemNames>
+						<ItemName>Oddly Specific Amber</ItemName>
+					</ItemNames>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Leaf Turn III" TimesToCast="1"/>
+						<GatheringSkill SpellName="Blessed Harvest II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>
+			</If>-->
+			<While Condition="HasItem(29631) and HasAtLeast(29675,180) and HqHasAtLeast(29674,510)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29631">
+					<ChangeClass Job="Botanist" force="True"/>
+					<WaitTimer WaitTime="3"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29631">
+						<RunCode Name="SwitchCombatJob"/>
+					</While>
+				</While>
+				<RunCode Name="Sort"/>
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29642" SelectString="1"/><!-- Buy Dragonsung Hatchet -->
+				<WaitTimer WaitTime="3"/>
+				<RunCode Name="CloseShop"/>
+			</While>
+		</While>
+		
+		<If Condition="HasItem(29642) and HasQuest(69385)">
+			<While Condition="ClassName != ClassJobType.Botanist">
+				<ChangeClass Job="Botanist" force="True"/>
+			</While>
+			<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId != 29642">
+				<RunCode Name="SkysteelBTN3"/><!-- Equip Dragonsung Hatchet -->
+				<WaitTimer WaitTime="3"/>
+			</While>
+			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk WaitTime="1500"/>
+			</If>
+		</If>
+		
+		<!-- Part 2 -->	
+			
+		<While Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist" force="True"/>
+		</While>
+		
+		<If Condition="not IsQuestCompleted(69428) and IsQuestCompleted(69385)">	
+			<If Condition="not HasQuest(69428) and not IsQuestCompleted(69428) and IsQuestCompleted(69384)">
+				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
+				<If Condition="IsQuestAcceptQualified(69428)">
+					<LLPickupQuest NpcId="1032898" QuestId="69428" XYZ="-163.47, 16.97958, -29.31262"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
+			<If Condition="HasQuest(69428) and not IsQuestCompleted(69428) and GetQuestStep(69428) == 255">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLTurnIn QuestId="69428" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk/>
+			</If>
+		</If>
+		<While Condition="not HasQuest(69429) and HasItem(29642)">
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<RunCode Name="EverSkyward"/>
+		</While>
+		<If Condition="HasQuest(69429) and HasItem(29642) and GetQuestStep(69429) == 255">
+			<If Condition="not HasAtLeast(30331,50) and HqHasAtLeast(31125,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="not HasAtLeast(31126,180) and not HasAtLeast(30331,50)">
+				<ChangeClass Job="Botanist" force="True"/>
+				<EquipWeapon ItemId="29642"/>
+				<Lisbeth Json="[{'Group':1,'Item':31126,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31125,'Amount':500,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="not HasAtLeast(30331,50) and HqHasAtLeast(31125,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="HasAtLeast(31126,180) and not HasAtLeast(30331,50)">
+				<ChangeClass Job="Botanist" force="True"/>
+				<EquipWeapon ItemId="29642"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31125,'Amount':500,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="not HasAtLeast(30331,50) and HqHasAtLeast(31125,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="not HasAtLeast(31126,180) and HasAtLeast(30331,50)">
+				<ChangeClass Job="Botanist" force="True"/>
+				<EquipWeapon ItemId="29642"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31126,'Amount':180,'Enabled':true,'Type':'Gather'}]"/>
+			</If>
+			<If Condition="not HasAtLeast(30331,50) and HqHasAtLeast(31125,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="HasAtLeast(30331,50) and HasAtLeast(31126,180)">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<ChangeClass Job="Botanist" force="True"/>
+				<LLTurnIn QuestId="69429" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk/>
+			</If>
+		</If>
+		<While Condition="not HasQuest(69430) and HasItem(30290)">	
+			<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+			<RunCode Name="ToolsOfTomorrow"/>
+		</While>
+		<If Condition="HasQuest(69430) and HasItem(30290) and GetQuestStep(69430) == 255">
+			<If Condition="not HasAtLeast(30333,60) and HqHasAtLeast(31130,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="not HasAtLeast(31131,200) and not HasAtLeast(30333,60)">
+				<ChangeClass Job="Botanist" force="True"/>
+				<EquipWeapon ItemId="30290"/>
+				<Lisbeth Json="[{'Group':1,'Item':31131,'Amount':200,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31130,'Amount':600,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="not HasAtLeast(30333,60) and HqHasAtLeast(31130,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="HasAtLeast(31131,200) and not HasAtLeast(30333,60)">
+				<ChangeClass Job="Botanist" force="True"/>
+				<EquipWeapon ItemId="30290"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31130,'Amount':600,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			</If>
+			<If Condition="not HasAtLeast(30333,60) and HqHasAtLeast(31130,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="not HasAtLeast(31131,200) and HasAtLeast(30333,60)">
+				<ChangeClass Job="Botanist" force="True"/>
+				<EquipWeapon ItemId="30290"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31131,'Amount':200,'Enabled':true,'Type':'Gather'}]"/>
+			</If>
+			<If Condition="not HasAtLeast(30333,60) and HqHasAtLeast(31130,10)">
+				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
+				<RunCode Name="Sort"/>
+				<RunCode Name="TurnIn"/>
+			</If>
+			<If Condition="HasAtLeast(30333,60) and HasAtLeast(31131,200)">
+				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<ChangeClass Job="Botanist" force="True"/>
+				<LLTurnIn QuestId="69430" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<LLSmallTalk/>
+			</If>
+		</If>
+		
+		<!-- Part 3 -->
+		
+		<While Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist" force="True"/>
+		</While>		
+
+		<!-- Oddness in the End -->
+		<If Condition="not HasQuest(69518) and not IsQuestCompleted(69518)">
+		  <GetTo ZoneId="418" XYZ="-161.9582, 16.97958, -29.96986"/>
+		  <If Condition="IsQuestAcceptQualified(69518)">
+			<LLPickupQuest QuestId="69518" NpcId="1032898"/>
+			<LLSmallTalk/>
+		  </If>
+		</If>
+		<If Condition="GetQuestStep(69518) == 255">
+		  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+		  <LLTurnIn NpcId="1035012" XYZ="-72.67877, -10, 169.1157" QuestId="69518" StepId="255"/>
+		</If>
+
+		<If Condition="HasItem(30301)"><!-- Skysung Hatchet -->
+			<!--  The Pinnacle of Possibility -->
+			<If Condition="not HasQuest(69519)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
+			  <If Condition="IsQuestAcceptQualified(69519)">
+				<RunCode name="Pinnacle"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<While Condition="GetQuestStep(69519) == 255">
+				<While Condition="not HasAtLeast(31744,250)"> <!-- Oddly Delicate Hatchet Part -->
+				  <If Condition="not LLHasItemCollectable(31766)"> <!-- Oddly Delicate Feather -->
+					<ChangeClass Job="Botanist" force="True"/>
+					<EquipWeapon ItemId="30301"/>
+					<Lisbeth Json="[{'Group':1,'Item':31766,'Amount':20,'Enabled':true,'Type':'Gather','Collectable':true,'AmountMode':'Restock'}]"/>
+				  </If>
+				  <If Condition="LLHasItemCollectable(31766)"> <!-- Oddly Delicate Feather -->
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<RunCode Name="TurnInOddly"/>
+				  </If>
+				</While>
+				<While Condition="not HasAtLeast(31745,25)"> <!-- Inconceivably Delicate Hatchet Part -->
+				  <If Condition="not HqHasAtLeast(31767,750)"> <!-- Oddly Delicate Birch Log -->
+					<ChangeClass Job="Botanist" force="True"/>
+					<EquipWeapon ItemId="30301"/>
+					<Lisbeth Json="[{'Group':1,'Item':31767,'Amount':750,'Enabled':true,'Type':'Gather','Hq':true,'AmountMode':'Restock'}]"/>
+				  </If>
+				  <If Condition="HqHasAtLeast(31767,750)"> <!-- Oddly Delicate Birch Log -->
+					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
+					<BuyShopExchangeItem NpcId="1035014" ItemId="31745" SelectString="1" Count="25"/><!-- Inconceivably Delicate Hatchet Part -->
+				  </If>
+				</While>				
+				<While Condition="HasAtLeast(31744,250) and HasAtLeast(31745,25)"> <!-- Oddly Delicate Hatchet Part and Inconceivably Delicate Hatchet Part -->
+				  <ChangeClass Job="Botanist" force="True"/>
+					<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 30301">
+						<Log Message="Skysung Tool equipped, going to purchase differnt tool." />
+						<LisbethTravel Area="North Shroud" Position="332.9388, -5.550671, 330.6815"/>
+						<BuyItem NpcId="1000718" ItemId="2546" ItemCount="1" DialogOption="1" XYZ="332.2346,-5.550671,332.4788"/>
+						<EquipWeapon ItemID="2546"/>
+						<WaitTimer WaitTime="3" />
+					</While>				  
+				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
+				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
+				  <LLSmallTalk/>				  
+				</While>	
+			</While>			
+		</If>
+
+		<If Condition="HasItem(31721)">
+			<AutoEquip UpdateGearSet="true"/>
+		</If>		
+
+		<If Condition="HasItem(31721) and not IsQuestCompleted(69520)"><!-- Skybuilders' Frypan -->
+			<!--  Greater Heights -->
+			<If Condition="not HasQuest(69520)">
+			  <LisbethTravel Zone="886" Subzone="3526" Position="-73.99271, -10, 170.6874"/>
+			  <If Condition="IsQuestAcceptQualified(69520)">
+				<LLPickupQuest QuestId="69520" NpcId="1035013"/>
+				<LLSmallTalk/>
+			  </If>
+			</If>
+			<If Condition="GetQuestStep(69520) == 1">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTalkTo NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262" QuestId="69520" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69520) == 255">
+			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
+			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+			  <LLSmallTalk/>
+			</If>		
+		</If>		
+		
+		<If Condition="HasItem(31722)">
+			<LLSellItem ItemIds="31130,31125"/>
+		</If>	
+		
+		
+	</If>
+	
+	<LLoadProfile Path="../Skysteel Start.xml"/>
+	
+	</Order>
+	<CodeChunks>		
+		<CodeChunk Name="TurnIn">
+		<![CDATA[
+			Logging.Write("[Skysteel Handin] calling");
+			await LlamaLibrary.Helpers.GeneralFunctions.TurninSkySteelCrafting();
+		]]>
+		</CodeChunk>		
+		<CodeChunk Name="ManualTurnIn">
+		<![CDATA[ 
+			Core.OverlayManager.AddToast(() => "Please manually turn in collectables and press start again.", TimeSpan.FromMilliseconds(10000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			await Coroutine.Sleep(3000);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="EverSkyward">
+			<![CDATA[ 
+				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
+
+				if (!npcId.IsWithinInteractRange)
+				{
+					var _target = npcId.Location;
+					Navigator.PlayerMover.MoveTowards(_target);
+					while (_target.Distance2D(Core.Me.Location) >= 4)
+					{
+						Navigator.PlayerMover.MoveTowards(_target);
+						await Coroutine.Sleep(100);
+					}
+					Navigator.PlayerMover.MoveStop();
+				}
+
+				npcId.Interact();
+				
+				await Coroutine.Wait(5000, () => SelectIconString.IsOpen);
+				SelectIconString.ClickSlot(0);
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => SelectIconString.IsOpen);
+				SelectString.ClickSlot(1);
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+				JournalAccept.Accept();
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }				
+				
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="ToolsOfTomorrow">
+			<![CDATA[ 
+				var npcId = GameObjectManager.GetObjectByNPCId(1032899);
+
+				if (!npcId.IsWithinInteractRange)
+				{
+					var _target = npcId.Location;
+					Navigator.PlayerMover.MoveTowards(_target);
+					while (_target.Distance2D(Core.Me.Location) >= 4)
+					{
+						Navigator.PlayerMover.MoveTowards(_target);
+						await Coroutine.Sleep(100);
+					}
+					Navigator.PlayerMover.MoveStop();
+				}
+
+				npcId.Interact();
+				
+				await Coroutine.Wait(5000, () => SelectIconString.IsOpen);
+				SelectIconString.ClickSlot(0);
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => SelectIconString.IsOpen);
+				SelectString.ClickSlot(1);
+				
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+				JournalAccept.Accept();
+				
+				await Coroutine.Wait(5000, () => Talk.DialogOpen);
+                while (Talk.DialogOpen)
+                {
+                    Talk.Next();
+                    await Coroutine.Sleep(1000);
+                }				
+				
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="Sort">
+			<![CDATA[ 
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				ff14bot.Managers.ChatManager.SendChat("/itemsort condition inventory hq des");
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+				ff14bot.Managers.ChatManager.SendChat("/itemsort execute inventory");
+				await Buddy.Coroutines.Coroutine.Sleep(1000);
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="CloseShop">
+			<![CDATA[ 
+				var windowName = "ShopExchangeItem";
+				await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName(windowName) != null);				
+				AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName(windowName);					
+				windowByName = RaptureAtkUnitManager.GetWindowByName("ShopExchangeItem");
+				await Coroutine.Wait(5000, () => windowByName != null);
+				if (windowByName != null)
+				windowByName.SendAction(1, 3uL, 4294967295uL);		
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="Coffer">
+			<![CDATA[		
+				foreach (var bagslot in InventoryManager.FilledSlots.Where(bagslot => bagslot.Item.ItemAction == 388))
+				{
+                bagslot.UseItem();
+                await Coroutine.Sleep(5000);
+				}
+			]]> 
+		</CodeChunk>
+		<CodeChunk Name="SkysteelBTN">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29620)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SkysteelBTN2">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29631)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SkysteelBTN3">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 29642)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+		<![CDATA[
+			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+			{
+			try
+			{
+				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+			}
+			catch (Exception ex) {  }
+			}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Pinnacle">
+			<![CDATA[
+				var npcId = GameObjectManager.GetObjectByNPCId(1035012);
+
+					if (!npcId.IsWithinInteractRange)
+
+						{
+							var _target = npcId.Location;
+							Navigator.PlayerMover.MoveTowards(_target);
+							while (_target.Distance2D(Core.Me.Location) >= 4)
+								{
+									Navigator.PlayerMover.MoveTowards(_target);
+									await Coroutine.Sleep(100);
+								}
+									Navigator.PlayerMover.MoveStop();
+								}
+
+					npcId.Interact();			
+
+					await Coroutine.Wait(10000, () => SelectIconString.IsOpen);
+					
+					if (!SelectIconString.IsOpen)
+					{
+						npcId.Interact();
+
+						await Coroutine.Wait(10000, () => SelectIconString.IsOpen);
+					}	
+	
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					{
+						Logging.WriteDiagnostic("Choosing 'The Pinnacle of Possibility'.");
+						ff14bot.RemoteWindows.SelectIconString.ClickSlot(0);
+					}					
+
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}	
+					
+					await Coroutine.Wait(10000, () => SelectString.IsOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					{
+						Logging.WriteDiagnostic("Choosing current class.");
+						ff14bot.RemoteWindows.SelectString.ClickSlot(1);
+					}
+
+					await Buddy.Coroutines.Coroutine.Sleep(1000);
+					await Coroutine.Wait(1000, () => JournalAccept.IsOpen);
+					JournalAccept.Accept();					
+
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}
+					
+					await Coroutine.Wait(10000, () => Talk.DialogOpen);
+					await Buddy.Coroutines.Coroutine.Sleep(500);
+					while (Talk.DialogOpen)
+					{
+						Talk.Next();
+						await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+						await Coroutine.Wait(1000, () => Talk.DialogOpen);
+						await Coroutine.Yield();
+					}					
+
+					
+			]]>			
+		</CodeChunk>
+		<CodeChunk Name="TurnInOddly">
+		<![CDATA[
+			Logging.Write("[Skysteel Handin] calling");
+			await LlamaLibrary.Helpers.GeneralFunctions.TurninOddlyDelicate();
+		]]>
+		</CodeChunk>			
+	</CodeChunks>
+</Profile>
