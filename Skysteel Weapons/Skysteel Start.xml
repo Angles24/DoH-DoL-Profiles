@@ -26,16 +26,20 @@ Required: LLamaLibrary BotBase
 	
 	<RunCode Name="Disable_Flight"/>
 	
-		<If Condition="&min; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(31723)">
-				<LLoadProfile Path="Profiles/Skysteel MIN Weapons.xml"/>
+		
+		<If Condition="IsCNClient()">
+			<If Condition="&min; == 1">
+				<If Condition="Core.Me.Levels[ClassJobType.Miner] &gt; 79 and not HasItem(31723)">
+					<LLoadProfile Path="Profiles/CN/Skysteel MIN Weapons.xml"/>
+				</If>
 			</If>
-		</If>
-		<If Condition="&btn; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &gt; 79 and not HasItem(31722)">
-				<LLoadProfile Path="Profiles/Skysteel BTN Weapons.xml"/>
+			<If Condition="&btn; == 1">
+				<If Condition="Core.Me.Levels[ClassJobType.Botanist] &gt; 79 and not HasItem(31722)">
+					<LLoadProfile Path="Profiles/CN/Skysteel BTN Weapons.xml"/>
+				</If>
 			</If>
-		</If>
+		</If>		
+		
 		<If Condition="&crp; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &gt; 79 and not HasItem(31714)">
 				<LLoadProfile Path="Profiles/Skysteel CRP Weapons.xml"/>
@@ -76,6 +80,15 @@ Required: LLamaLibrary BotBase
 				<LLoadProfile Path="Profiles/Skysteel CUL Weapons.xml"/>
 			</If>
 		</If>
+		
+		<If Condition="IsCNClient()">
+			<If Condition="&fsh; == 1">
+				<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(31724)">
+					<LLoadProfile Path="Profiles/CN/Skysteel FSH Weapons.xml"/>
+				</If>
+			</If>	
+		</If>
+		
 		<If Condition="&fsh; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 79 and not HasItem(31724)">
 				<LLoadProfile Path="Profiles/Skysteel FSH Weapons.xml"/>

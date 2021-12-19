@@ -1094,7 +1094,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</CodeChunk>
 		<CodeChunk Name="finish2">
 		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Congrats on level 84+ on BTN/MIN and all Crafters.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Congrats on level 90 on BTN/MIN and all Crafters.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(40000);
 		]]>
 		</CodeChunk>
