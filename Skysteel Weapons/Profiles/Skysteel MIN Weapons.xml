@@ -49,16 +49,16 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		</If>
 		
 		<While Condition="HasItem(29621)"><!-- Skysteel Saw -->
-			<If Condition="not HqHasAtLeast(29671,340) and not HasAtLeast(29672,120)">
-				<Lisbeth Json="[{'Group':1,'Item':29672,'Amount':120,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			<If Condition="not HasAtLeast(29671,340) and not HasAtLeast(29672,120)">
+				<Lisbeth Json="[{'Group':1,'Item':29672,'Amount':120,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="HqHasAtLeast(29671,340) and not HasAtLeast(29672,120)">
+			<If Condition="HasAtLeast(29671,340) and not HasAtLeast(29672,120)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29672,'Amount':120,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			<If Condition="not HasAtLeast(29671,340) and HasAtLeast(29672,120)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29671,'Amount':340,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<!--<If Condition="not HqHasAtLeast(29671,340) or not HasAtLeast(29672,120)">
+			<!--<If Condition="not HasAtLeast(29671,340) or not HasAtLeast(29672,120)">
 				<If Condition="ClassName != ClassJobType.Miner">
 					<ChangeClass Job="Miner" force="True"/>
 				</If>
@@ -89,7 +89,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</GatheringSkillOrder>
 				</ExGather>-->
 				<!-- Obsidian -->
-				<!--<ExGather While="not HqHasAtLeast(29671,340)" CordialType="Auto">
+				<!--<ExGather While="not HasAtLeast(29671,340)" CordialType="Auto">
 					<GatherObject>Mineral Deposit</GatherObject>
 					<HotSpots>
 						<HotSpots Radius="10" X="-440.793854" Y="236.3336" Z="376.54425"/>
@@ -105,7 +105,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</GatheringSkillOrder>
 				</ExGather>
 			</If>-->
-			<While Condition="HasItem(29621) and HqHasAtLeast(29671,340) and HasAtLeast(29672,120)">
+			<While Condition="HasItem(29621) and HasAtLeast(29671,340) and HasAtLeast(29672,120)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29621">
 					<ChangeClass Job="Miner" force="True"/>
@@ -122,16 +122,16 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 		</While>
 			
 		<While Condition="HasItem(29632)"><!-- Skysteel Saw +1 -->
-			<If Condition="not HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)">
-				<Lisbeth Json="[{'Group':1,'Item':29677,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			<If Condition="not HasAtLeast(29677,180) and not HasAtLeast(29676,510)">
+				<Lisbeth Json="[{'Group':1,'Item':29677,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="HasAtLeast(29677,180) and not HqHasAtLeast(29676,510)">
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+			<If Condition="HasAtLeast(29677,180) and not HasAtLeast(29676,510)">
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29676,'Amount':510,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">
+			<If Condition="not HasAtLeast(29677,180) and HasAtLeast(29676,510)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29677,'Amount':180,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<!--<If Condition="not HasAtLeast(29677,180) or not HqHasAtLeast(29676,510)">
+			<!--<If Condition="not HasAtLeast(29677,180) or not HasAtLeast(29676,510)">
 				<If Condition="ClassName != ClassJobType.Miner">
 					<ChangeClass Job="Miner" force="True"/>
 				</If>
@@ -165,7 +165,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</GatheringSkillOrder>
 				</ExGather>-->
 				<!-- Dark Matter -->
-				<!--<ExGather while="not HqHasAtLeast(29676,510)" CordialType="Auto">
+				<!--<ExGather while="not HasAtLeast(29676,510)" CordialType="Auto">
 					<GatherObject>Rocky Outcrop</GatherObject>
 					<GatherSpots>
 						<IndirectApproachGatherSpot ApproachLocation="395.5583, 112.1888, 373.3869" NodeLocation="394.8522, 111.9116, 371.4661" ReturnToApproachLocation="False"/>
@@ -185,7 +185,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 					</GatheringSkillOrder>
 				</ExGather>
 			</If>-->
-			<While Condition="HasItem(29632) and HasAtLeast(29677,180) and HqHasAtLeast(29676,510)">
+			<While Condition="HasItem(29632) and HasAtLeast(29677,180) and HasAtLeast(29676,510)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29632">
 					<ChangeClass Job="Miner" force="True"/>
@@ -241,7 +241,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<RunCode Name="EverSkyward"/>
 		</While>
 		<If Condition="HasQuest(69429) and HasItem(29643) and GetQuestStep(69429) == 255">
-			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
+			<If Condition="not HasAtLeast(30335,50) and HasAtLeast(31127,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -249,9 +249,9 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<If Condition="not HasAtLeast(31128,180) and not HasAtLeast(30335,50)">
 				<ChangeClass Job="Miner" force="True"/>
 				<EquipWeapon ItemId="29643"/>
-				<Lisbeth Json="[{'Group':1,'Item':31128,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31127,'Amount':500,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31128,'Amount':180,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31127,'Amount':500,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
+			<If Condition="not HasAtLeast(30335,50) and HasAtLeast(31127,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -259,9 +259,9 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<If Condition="HasAtLeast(31128,180) and not HasAtLeast(30335,50)">
 				<ChangeClass Job="Miner" force="True"/>
 				<EquipWeapon ItemId="29643"/>
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31127,'Amount':500,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31127,'Amount':500,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
+			<If Condition="not HasAtLeast(30335,50) and HasAtLeast(31127,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -271,7 +271,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<EquipWeapon ItemId="29643"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31128,'Amount':180,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HasAtLeast(30335,50) and HqHasAtLeast(31127,10)">
+			<If Condition="not HasAtLeast(30335,50) and HasAtLeast(31127,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -288,7 +288,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<RunCode Name="ToolsOfTomorrow"/>
 		</While>
 		<If Condition="HasQuest(69430) and HasItem(30291) and GetQuestStep(69430) == 255">
-			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
+			<If Condition="not HasAtLeast(30337,60) and HasAtLeast(31132,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -296,9 +296,9 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<If Condition="not HasAtLeast(31133,200) and not HasAtLeast(30337,60)">
 				<ChangeClass Job="Miner" force="True"/>
 				<EquipWeapon ItemId="30291"/>
-				<Lisbeth Json="[{'Group':1,'Item':31133,'Amount':200,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31132,'Amount':600,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31133,'Amount':200,'Enabled':true,'Type':'Gather'},{'Id':1,'Group':1,'Item':31132,'Amount':600,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
+			<If Condition="not HasAtLeast(30337,60) and HasAtLeast(31132,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -306,9 +306,9 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<If Condition="HasAtLeast(31133,200) and not HasAtLeast(30337,60)">
 				<ChangeClass Job="Miner" force="True"/>
 				<EquipWeapon ItemId="30291"/>
-				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31132,'Amount':600,'Enabled':true,'Type':'Gather','Hq':true}]"/>
+				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31132,'Amount':600,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
+			<If Condition="not HasAtLeast(30337,60) and HasAtLeast(31132,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -318,7 +318,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				<EquipWeapon ItemId="30291"/>
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':31133,'Amount':200,'Enabled':true,'Type':'Gather'}]"/>
 			</If>
-			<If Condition="not HasAtLeast(30337,60) and HqHasAtLeast(31132,10)">
+			<If Condition="not HasAtLeast(30337,60) and HasAtLeast(31132,10)">
 				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>				
 				<RunCode Name="Sort"/>
 				<RunCode Name="TurnIn"/>
@@ -372,12 +372,12 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 				  </If>
 				</While>
 				<While Condition="not HasAtLeast(31747,25)"> <!-- Inconceivably Delicate Pickaxe Part -->
-				  <If Condition="not HqHasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->
+				  <If Condition="not HasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->
 				<ChangeClass Job="Miner" force="True"/>
 				<EquipWeapon ItemId="30302"/>
-					<Lisbeth Json="[{'Group':1,'Item':31769,'Amount':750,'Enabled':true,'Type':'Gather','Hq':true,'AmountMode':'Restock'}]"/>
+					<Lisbeth Json="[{'Group':1,'Item':31769,'Amount':750,'Enabled':true,'Type':'Gather','AmountMode':'Restock'}]"/>
 				  </If>
-				  <If Condition="HqHasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->
+				  <If Condition="HasAtLeast(31769,750)"> <!-- Oddly Delicate Raw Jade -->
 					<LisbethTravel Area="The Firmament" Position="-73.19273, -10, 172.5722"/>
 					<BuyShopExchangeItem NpcId="1035014" ItemId="31747" SelectString="1" Count="25"/><!-- Inconceivably Delicate Pickaxe Part -->
 				  </If>
