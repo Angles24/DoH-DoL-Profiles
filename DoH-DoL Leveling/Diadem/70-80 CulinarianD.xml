@@ -16,6 +16,7 @@ Authors:  Kayla / Angles24
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<GetTo ZoneId="886" XYZ="50.08479, -16, 168.9252"/>
 			<RunCode Name="TurnIn"/>
 		</While>
 	</If>
@@ -35,6 +36,7 @@ Authors:  Kayla / Angles24
 	<!-- Turn in-->
 	<If Condition="WorldManager.ZoneId != 901">
 		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<GetTo ZoneId="886" XYZ="50.08479, -16, 168.9252"/>
 			<RunCode Name="TurnIn"/>
 		</While>
 	</If>
