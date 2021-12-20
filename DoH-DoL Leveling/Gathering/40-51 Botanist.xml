@@ -37,13 +37,13 @@ Angles24
 			<If Condition="GetQuestStep(65547) == 1">
 				<If Condition="HasAtLeast(4792,20)">
 					<GetTo ZoneId="133" XYZ="-233.54, 6.246956, -170.5644"/>
-					<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
+					<LLHandOver ItemId="4792" QuestId="65547" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65547) == 2">
 				<GetTo ZoneId="133" XYZ="-239.5238, 8, -146.7241"/>
-				<LLHandOver ItemId="4792" RequiresHq="true" QuestId="65547" StepId="2" NpcId="1000775" InteractDistance="1.0" XYZ="-239.5238, 8, -146.7241"/>
+				<LLHandOver ItemId="4792" QuestId="65547" StepId="2" NpcId="1000775" InteractDistance="1.0" XYZ="-239.5238, 8, -146.7241"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(65547) == 255">
@@ -94,7 +94,7 @@ Angles24
 			<If Condition="GetQuestStep(65548) == 255">
 				<If Condition="HasAtLeast(5536,20)">
 					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLTurnIn ItemId="5536" RequiresHq="true" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<LLTurnIn ItemId="5536" QuestId="65548" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 45 - Botanist in a Bind - Completed."/>
 					<WaitTimer WaitTime="2"/>

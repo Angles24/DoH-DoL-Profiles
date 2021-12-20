@@ -77,7 +77,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(65544) == 255">
 				<GetTo ZoneId="133" XYZ="-235.7631, 8, -147.0039"/>
-				<LLTurnIn ItemId="5542" RequiresHq="true" QuestId="65544" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
+				<LLTurnIn ItemId="5542" QuestId="65544" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 25 - Aromatic Aspirations - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -123,7 +123,7 @@ Angles24
 			<If Condition="HasAtLeast(4813,15)">
 				<If Condition="GetQuestStep(65545) == 255">
 					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLTurnIn ItemId="4813" RequiresHq="true" QuestId="65545" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
+					<LLTurnIn ItemId="4813" QuestId="65545" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 30 - What Nature Giveth - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -162,13 +162,13 @@ Angles24
 			<If Condition="GetQuestStep(65546) == 1">
 				<If Condition="HasAtLeast(4839,20)">
 					<GetTo ZoneId="133" XYZ="-233.54, 6.246956, -170.5644"/>
-					<LLHandOver ItemId="4839" RequiresHq="true" QuestId="65546" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
+					<LLHandOver ItemId="4839" QuestId="65546" StepId="1" NpcId="1000815" InteractDistance="2.0" XYZ="-233.54, 6.246956, -170.5644"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(65546) == 2">
 				<GetTo ZoneId="133" XYZ="-297.4848, 7.373582, -168.8218"/>
-				<LLHandOver ItemId="4839" RequiresHq="true" QuestId="65546" StepId="2" NpcId="1000774" InteractDistance="1.0" XYZ="-297.4848, 7.373582, -168.8218"/>
+				<LLHandOver ItemId="4839" QuestId="65546" StepId="2" NpcId="1000774" InteractDistance="1.0" XYZ="-297.4848, 7.373582, -168.8218"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(65546) == 255">

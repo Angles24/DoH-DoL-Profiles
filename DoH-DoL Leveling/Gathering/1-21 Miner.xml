@@ -163,7 +163,7 @@ Angles24
 			  <If Condition="HasAtLeast(5519,10)">
 				  <If Condition="GetQuestStep(66139) == 255">
 					  <GetTo ZoneId="131" XYZ="18.72768, 9.00961, 168.2022"/>
-						  <LLTurnIn ItemId="5519" QuestId="66139" RequiresHq="true" StepId="255" NpcId="1003909" InteractDistance="1.0" XYZ="18.72768, 9.00961, 168.2022"/>
+						  <LLTurnIn ItemId="5519" QuestId="66139" StepId="255" NpcId="1003909" InteractDistance="1.0" XYZ="18.72768, 9.00961, 168.2022"/>
 						  <LLSmallTalk WaitTime="1500"/>
 						  <LogMessage Message="Level 15 - Getting in Deep - Completed."/>
 				<WaitTimer WaitTime="2"/>

@@ -161,7 +161,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(65542) == 2">
 				<GetTo ZoneId="133" XYZ="167.8746, 15.69992, -117.8252"/>
-				<LLHandOver ItemId="4832" RequiresHq="true" QuestId="65542" StepId="2" NpcId="1000239" InteractDistance="2.0" XYZ="167.8746, 15.69992, -117.8252"/>
+				<LLHandOver ItemId="4832" QuestId="65542" StepId="2" NpcId="1000239" InteractDistance="2.0" XYZ="167.8746, 15.69992, -117.8252"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(65542) == 255">

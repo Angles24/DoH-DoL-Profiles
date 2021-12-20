@@ -40,7 +40,7 @@ Angles24
 			<If Condition="HasAtLeast(5168,20)">
 				<If Condition="GetQuestStep(66180) == 255">
 					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5168" QuestId="66180" RequiresHq="true" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+					<LLTurnIn ItemId="5168" QuestId="66180" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 40 - To Die For - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -85,7 +85,7 @@ Angles24
 			<If Condition="HasAtLeast(5115,20)">
 				<If Condition="GetQuestStep(66181) == 255">
 					<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5115" QuestId="66181" RequiresHq="true" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
+					<LLTurnIn ItemId="5115" QuestId="66181" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 45 - Gulley of Woes - Completed."/>
 				<WaitTimer WaitTime="2"/>
