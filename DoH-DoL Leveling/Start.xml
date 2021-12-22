@@ -116,7 +116,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<RunCode Name="Profile2"/>
 				<LLStopBot/>
 			</If>
-			<If Condition="IsQuestCompleted(67783) and not IsQuestCompleted(69208)">
+			<If Condition="IsQuestCompleted(67783) and (not IsQuestCompleted(69208) or not IsQuestCompleted(69708))">
 				<LLoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
 			</If>
 			
