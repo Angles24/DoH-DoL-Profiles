@@ -11,7 +11,7 @@ Angles24
 
 ]>
 <Profile>
-	<Name>1-80 Fishing</Name>
+	<Name>1-90 Fishing</Name>
 	<KillRadius>90</KillRadius>
 	<Order>
 		
@@ -1992,11 +1992,225 @@ Angles24
 		</While>
 	</While>
 	<!--End - Level 80 Grind-->
+	
+		<If Condition="ExBuddy.Windows.GuildLeve.Allowances &lt; 3">
+	  <LLToast message="80-90 FSH is recommended to have at least 3 leves per level please"/>
+	  <LogMessage Message="80-90 FSH is recommended to have at least 3 leves per level please wait for more before starting the profile."/>
+	  <LLToast message="wait for more before starting the profile."/>
+	  <WaitTimer WaitTime="1"/>
+	  <LLStopBot/>	  
+	</If>
+
+    <!-- Level 80 - 82 -->
+	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 79) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 82)">
+	  <While Condition="not ItemCount(36395) &gt; 8">
+	    <While Condition="not HasAtLeast(26553,1)">
+		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	    </While>
+	    <While Condition="ClassName != ClassJobType.Fisher">
+		  <ChangeClass Job="Fisher"/>
+	    </While>
+	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		  <RunCode Name="RSManual"/>
+	    </While>	    
+		<If Condition="not HasAtLeast(36588,30)">
+		  <GetTo ZoneId="962" XYZ="76.1526, 5.149997, -46.88182"/>
+		  <BuyItem ItemId="36588" ItemCount="99" InteractDistance="5.0" NpcId="1037054" XYZ="79.11792, 5.15, -46.52478"/>
+		</If>
+		<LisbethTravel ZoneId="962" XYZ="-156.536, 9.683057, -16.7944"/>		
+        <ExFish condition="(HasAtLeast(36588,1)) and (not HasAtLeast(36395,9)) and (Core.Me.HasAura(46))" Bait="Gold Salmon Roe" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+		  <Keepers>
+		    <Keeper Name="Ponderer"/>
+		  </Keepers>
+          <FishSpots>
+            <FishSpot XYZ="-170.5678, 8.329226, -17.23495" Heading="3.298871" />
+            <FishSpot XYZ="-164.4025, 8.360573, -22.08364" Heading="3.998397" />
+            <FishSpot XYZ="-164.6299, 8.187684, -30.43165" Heading="5.217336" />
+            <FishSpot XYZ="-174.2337, 10.93477, -36.18143" Heading="0.278754" />
+            <FishSpot XYZ="-181.6324, 8.564054, -28.31185" Heading="1.746925" />
+            <FishSpot XYZ="-176.8491, 9.976626, -20.83557" Heading="1.9061" />
+            <FishSpot XYZ="-171.0468, 7.96882, -23.72962" Heading="3.416338" />
+          </FishSpots>
+        </ExFish>
+	  </While>
+	  <While Condition="ItemCount(36395) &gt; 2">	  
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExPickupGuildLeve LeveIds="1678" LeveType="Fieldcraft" NpcId="1037263" NpcLocation="46.82996, -15.64699, 107.866" Timeout="3" />
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExTurnInGuildLeve NpcId="1037265" NpcLocation="55.375, -15.64699, 109.7275"/>
+	  </While>
+	</While>
+
+    <!-- Level 82 - 84 -->
+	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 81) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 84)">
+	  <While Condition="not ItemCount(36409) &gt; 8">
+	    <While Condition="not HasAtLeast(26553,1)">
+		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	    </While>
+	    <While Condition="ClassName != ClassJobType.Fisher">
+		  <ChangeClass Job="Fisher"/>
+	    </While>
+	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		  <RunCode Name="RSManual"/>
+	    </While>	    
+		<If Condition="not HasAtLeast(36588,30)">
+		  <GetTo ZoneId="962" XYZ="76.1526, 5.149997, -46.88182"/>
+		  <BuyItem ItemId="36588" ItemCount="99" InteractDistance="5.0" NpcId="1037054" XYZ="79.11792, 5.15, -46.52478"/>
+		</If>
+		<LisbethTravel ZoneId="956" XYZ="522.4028, 163.4431, -335.5536"/>		
+        <ExFish condition="(HasAtLeast(36588,1)) and (not HasAtLeast(36409,9)) and (Core.Me.HasAura(46))" Bait="Gold Salmon Roe" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+		  <Keepers>
+		    <Keeper Name="Macrobrachium Lar"/>
+		  </Keepers>
+          <FishSpots>
+		    <FishSpot XYZ="531.0275, 152.3224, -313.5032" Heading="0.1861525" />  
+			<FishSpot XYZ="536.3055, 154.1737, -333.2013" Heading="2.240754" />
+			<FishSpot XYZ="543.2056, 153.7895, -326.3884" Heading="5.811698" />
+			<FishSpot XYZ="547.179, 155.4887, -349.3099" Heading="2.389457" />
+			<FishSpot XYZ="555.2501, 156.187, -355.0832" Heading="2.747598" />
+			<FishSpot XYZ="559.7838, 156.889, -370.156" Heading="5.847303" />
+			<FishSpot XYZ="583.9833, 158.6809, -392.8065" Heading="2.632407" />
+			<FishSpot XYZ="597.2646, 160.4015, -428.9208" Heading="2.682672" />
+			<FishSpot XYZ="607.3138, 160.4621, -472.1648" Heading="3.151835" />
+			<FishSpot XYZ="603.8311, 161.3334, -485.8647" Heading="0.2175879" />
+			<FishSpot XYZ="601.8434, 160.4629, -439.9978" Heading="6.008587" />
+			<FishSpot XYZ="589.8422, 160.6916, -432.4719" Heading="1.099325" />
+          </FishSpots>
+        </ExFish>
+	  </While>
+	  <While Condition="ItemCount(36409) &gt; 2">	  
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExPickupGuildLeve LeveIds="1680" LeveType="Fieldcraft" NpcId="1037263" NpcLocation="46.82996, -15.64699, 107.866" Timeout="3" />
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExTurnInGuildLeve NpcId="1037265" NpcLocation="55.375, -15.64699, 109.7275"/>
+	  </While>
+	</While>
+
+    <!-- Level 84 - 86 -->
+	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 83) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 86)">
+	  <While Condition="not ItemCount(36434) &gt; 8">
+	    <While Condition="not HasAtLeast(26553,1)">
+		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	    </While>
+	    <While Condition="ClassName != ClassJobType.Fisher">
+		  <ChangeClass Job="Fisher"/>
+	    </While>
+	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		  <RunCode Name="RSManual"/>
+	    </While>	    
+		<If Condition="not HasAtLeast(36589,30)">
+		  <GetTo ZoneId="962" XYZ="76.1526, 5.149997, -46.88182"/>
+		  <BuyItem ItemId="36589" ItemCount="99" InteractDistance="5.0" NpcId="1037054" XYZ="79.11792, 5.15, -46.52478"/>
+		</If>
+		<LisbethTravel ZoneId="957" XYZ="-2.597936, 89.35657, -637.3389"/>		
+        <ExFish condition="(HasAtLeast(36589,1)) and (not HasAtLeast(36434,9)) and (Core.Me.HasAura(46))" Bait="Leech" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+		  <Keepers>
+		    <Keeper Name="Bluegill"/>
+		  </Keepers>
+          <FishSpots>
+            <FishSpot XYZ="-63.49694, 89.66112, -671.7955" Heading="2.675026" />
+			<FishSpot XYZ="-7.703034, 89.63315, -649.8784" Heading="3.633274" />
+			<FishSpot XYZ="-0.6207371, 89.63313, -664.7914" Heading="4.336991" />
+			<FishSpot XYZ="2.346993, 89.63313, -672.0101" Heading="4.676282" />
+			<FishSpot XYZ="-1.772979, 89.63313, -653.8435" Heading="3.934865" />
+			<FishSpot XYZ="-16.11443, 89.63315, -649.8536" Heading="2.923274" />
+			<FishSpot XYZ="-47.65335, 89.63315, -659.0559" Heading="2.931652" />
+			<FishSpot XYZ="-36.27607, 89.63315, -656.1131" Heading="2.879982" />
+			<FishSpot XYZ="-70.63344, 89.66032, -676.6024" Heading="1.864201" />
+			<FishSpot XYZ="-67.01882, 89.65157, -672.8917" Heading="2.794112" />
+			<FishSpot XYZ="-60.2654, 89.65199, -671.261" Heading="2.938625" />
+			<FishSpot XYZ="-55.3675, 89.63927, -669.7709" Heading="2.086206" />
+			<FishSpot XYZ="-55.24789, 89.6391, -665.4978" Heading="1.742725" />
+          </FishSpots>
+        </ExFish>
+	  </While>
+	  <While Condition="ItemCount(36434) &gt; 2">	  
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExPickupGuildLeve LeveIds="1682" LeveType="Fieldcraft" NpcId="1037263" NpcLocation="46.82996, -15.64699, 107.866" Timeout="3" />
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExTurnInGuildLeve NpcId="1037265" NpcLocation="55.375, -15.64699, 109.7275"/>
+	  </While>
+	</While>
+
+    <!-- Level 86 - 90 -->
+	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 85) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)">
+	  <While Condition="not ItemCount(36471) &gt; 8">
+	    <While Condition="not HasAtLeast(26553,1)">
+		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	    </While>
+	    <While Condition="ClassName != ClassJobType.Fisher">
+		  <ChangeClass Job="Fisher"/>
+	    </While>
+	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		  <RunCode Name="RSManual"/>
+	    </While>	    
+		<If Condition="not HasAtLeast(36594,30)">
+		  <GetTo ZoneId="959" XYZ="-21.32582, -132.9464, -461.3702"/>
+		  <BuyItem ItemId="36594" ItemCount="99" InteractDistance="5.0" DialogOption="6" NpcId="1037791" XYZ="-19.88251, -132.9464, -461.3871"/>
+		</If>
+		<LisbethTravel ZoneId="959" XYZ="368.6325, 88.67308, 532.7613"/>		
+        <ExFish condition="(HasAtLeast(36594,1)) and (not HasAtLeast(36471,9)) and (Core.Me.HasAura(46)) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)" Bait="Grey Worm" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+		  <Keepers>
+		    <Keeper Name="Protomyke #987"/>
+		  </Keepers>
+          <FishSpots>
+		    <FishSpot XYZ="466.2694, 64.09885, 479.8155" Heading="0.3063016" />
+			<FishSpot XYZ="435.9133, 70.91212, 544.3618" Heading="3.611064" />
+			<FishSpot XYZ="441.8171, 69.93472, 545.683" Heading="0.9469941" />
+			<FishSpot XYZ="452.2454, 68.82848, 540.1769" Heading="0.358469" />
+			<FishSpot XYZ="466.9709, 68.69052, 542.1863" Heading="5.412244" />
+			<FishSpot XYZ="474.5659, 69.89394, 551.6652" Heading="4.526314" />
+			<FishSpot XYZ="486.9834, 65.58482, 512.3471" Heading="2.177733" />
+			<FishSpot XYZ="485.6223, 64.62037, 504.314" Heading="1.687645" />
+			<FishSpot XYZ="482.2256, 63.82856, 497.524" Heading="4.531833" />
+			<FishSpot XYZ="493.1799, 61.69534, 488.5956" Heading="0.4708009" />
+			<FishSpot XYZ="508.8138, 62.14854, 492.2572" Heading="5.352833" />
+			<FishSpot XYZ="511.5064, 63.18925, 498.7076" Heading="5.256491" />
+			<FishSpot XYZ="465.6198, 64.2468, 479.816" Heading="6.09844" />
+			<FishSpot XYZ="481.6696, 62.40211, 484.4208" Heading="5.333984" />
+			<FishSpot XYZ="461.967, 66.62142, 513.2704" Heading="3.013537" />
+			<FishSpot XYZ="454.6178, 67.23898, 512.4486" Heading="2.814569" />
+			<FishSpot XYZ="439.4633, 68.82434, 524.9957" Heading="5.607143" />
+			<FishSpot XYZ="430.7424, 69.76411, 523.5264" Heading="6.254312" />
+          </FishSpots>
+        </ExFish>
+	  </While>
+	  <While Condition="ItemCount(36471) &gt; 2">	  
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExPickupGuildLeve LeveIds="1684" LeveType="Fieldcraft" NpcId="1037263" NpcLocation="46.82996, -15.64699, 107.866" Timeout="3" />
+        <If Condition="not IsOnMap(962)">
+          <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
+        </If>
+        <ExTurnInGuildLeve NpcId="1037265" NpcLocation="55.375, -15.64699, 109.7275"/>
+	  </While>
+	</While>
+  
+	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 90">	  
+	  <TeleportTo Name="Old Sharlayan" AetheryteId="182" Force="True"/>
+	  <LLToast message="Congrats on Level 90 Fisher!"/>
+	  <LogMessage Message="Congrats on Level 90 Fisher!"/>
+	  <WaitTimer WaitTime="1"/>
+	  <LLStopBot/>	  
+	</If>
 
 	</If>
 
-	<If Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 80 or not IsQuestCompleted(68435)">
-		<LLoadProfile Path="1-80 Fishing.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 90 or not IsQuestCompleted(68435)">
+		<LLoadProfile Path="1-90 Fishing.xml"/>
 	</If>
 	
 	<!-- Turn in-->
