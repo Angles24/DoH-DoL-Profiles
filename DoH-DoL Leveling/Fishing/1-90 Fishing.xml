@@ -13,7 +13,9 @@ Angles24
 <Profile>
 	<Name>1-90 Fishing</Name>
 	<KillRadius>90</KillRadius>
-	<Order>
+	<Order>	
+	
+	<RunCode name="TurnOnMount"/>
 		
 	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
 
@@ -2160,14 +2162,16 @@ Angles24
 		  <GetTo ZoneId="959" XYZ="-21.32582, -132.9464, -461.3702"/>
 		  <BuyItem ItemId="36594" ItemCount="99" InteractDistance="5.0" DialogOption="6" NpcId="1037791" XYZ="-19.88251, -132.9464, -461.3871"/>
 		</If>
-		<LisbethTravel ZoneId="959" XYZ="368.6325, 88.67308, 532.7613"/>		
+		<LisbethTravel ZoneId="959" XYZ="368.6325, 88.67308, 532.7613"/>			
+        <RunCode name="TurnOffMount"/> 
+		<Dismount/>
         <ExFish condition="(HasAtLeast(36594,1)) and (not HasAtLeast(36471,9)) and (Core.Me.HasAura(46)) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)" Bait="Grey Worm" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
 		  <Keepers>
 		    <Keeper Name="Protomyke #987"/>
 		  </Keepers>
           <FishSpots>
+			<FishSpot XYZ="430.7424, 69.76411, 523.5264" Heading="6.254312" />
 		    <FishSpot XYZ="466.2694, 64.09885, 479.8155" Heading="0.3063016" />
-			<FishSpot XYZ="435.9133, 70.91212, 544.3618" Heading="3.611064" />
 			<FishSpot XYZ="441.8171, 69.93472, 545.683" Heading="0.9469941" />
 			<FishSpot XYZ="452.2454, 68.82848, 540.1769" Heading="0.358469" />
 			<FishSpot XYZ="466.9709, 68.69052, 542.1863" Heading="5.412244" />
@@ -2180,14 +2184,13 @@ Angles24
 			<FishSpot XYZ="511.5064, 63.18925, 498.7076" Heading="5.256491" />
 			<FishSpot XYZ="465.6198, 64.2468, 479.816" Heading="6.09844" />
 			<FishSpot XYZ="481.6696, 62.40211, 484.4208" Heading="5.333984" />
-			<FishSpot XYZ="461.967, 66.62142, 513.2704" Heading="3.013537" />
+			<FishSpot XYZ="461.967, 66.62142, 513.2704" Heading="3.013537" /> 
 			<FishSpot XYZ="454.6178, 67.23898, 512.4486" Heading="2.814569" />
-			<FishSpot XYZ="439.4633, 68.82434, 524.9957" Heading="5.607143" />
-			<FishSpot XYZ="430.7424, 69.76411, 523.5264" Heading="6.254312" />
           </FishSpots>
         </ExFish>
 	  </While>
-	  <While Condition="ItemCount(36471) &gt; 2">	  
+	  <While Condition="ItemCount(36471) &gt; 2 and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)">
+        <RunCode name="TurnOnMount"/>	  
         <If Condition="not IsOnMap(962)">
           <GetTo ZoneId="962" XYZ="45.58461, -15.64699, 109.8795" />
         </If>
@@ -2198,6 +2201,8 @@ Angles24
         <ExTurnInGuildLeve NpcId="1037265" NpcLocation="55.375, -15.64699, 109.7275"/>
 	  </While>
 	</While>
+	
+	<RunCode name="TurnOnMount"/>
   
 	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 90">	  
 	  <TeleportTo Name="Old Sharlayan" AetheryteId="182" Force="True"/>
@@ -2222,6 +2227,16 @@ Angles24
 	<GrindAreas>
 	</GrindAreas>
 	<CodeChunks>
+		<CodeChunk Name="TurnOffMount">
+		  <![CDATA[
+			ff14bot.Settings.CharacterSettings.Instance.UseMount = false;
+		  ]]>
+		</CodeChunk>
+		<CodeChunk Name="TurnOnMount">
+		  <![CDATA[
+			ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
+		  ]]>
+		</CodeChunk>
 		<CodeChunk name="Leave">
 			<![CDATA[
             if (DutyManager.InInstance)
