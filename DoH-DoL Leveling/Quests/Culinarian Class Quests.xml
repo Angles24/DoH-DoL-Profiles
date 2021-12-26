@@ -387,7 +387,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12855,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
-        <LLTurnIn NpcId="1012568" ItemId="12849, 12862, 12855" RequiresHq="True, True, True" QuestId="67581" XYZ="69.7248, 44.3999, 135.967" RewardSlot="4"/>
+        <LLTurnIn NpcId="1012568" ItemId="12849, 12862, 12855" RequiresHq="True, True, True" QuestId="67581" XYZ="69.7248, 44.3999, 135.967" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>

@@ -319,7 +319,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67545) and not IsQuestCompleted(67545) and GetQuestStep(67545) == 255">
         <GetTo ZoneId="418" XYZ="83.63464, 23.97186, -32.76117"/>
-        <LLTurnIn QuestId="67545" NpcId="2005898" XYZ="83.63464, 23.97186, -32.76117" RewardSlot="4"/>
+        <LLTurnIn QuestId="67545" NpcId="2005898" XYZ="83.63464, 23.97186, -32.76117" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>

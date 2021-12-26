@@ -337,7 +337,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':10881,'Amount':1,'Enabled':true,'Type':'Weaver','Hq':true}]"/>
         </While>
         <GetTo ZoneId="419" XYZ="86.1737, -4.73493, -30.4632"/>
-        <LLTurnIn ItemId="10881" RequiresHq="True" NpcId="1012548" QuestId="67540" XYZ="86.1737, -4.73493, -30.4632" RewardSlot="4"/>
+        <LLTurnIn ItemId="10881" RequiresHq="True" NpcId="1012548" QuestId="67540" XYZ="86.1737, -4.73493, -30.4632" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
