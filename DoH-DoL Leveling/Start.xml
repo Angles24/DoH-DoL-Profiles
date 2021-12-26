@@ -846,7 +846,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		<!-- Craft Gathering and Crafting Gear 80 -->
-		<If Condition="&craft80; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 500) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 500) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 500) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 500) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 500) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 500) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 500) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 500) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 500) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 500))">
+		<If Condition="&craft80; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 490) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 490) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 490) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 490) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 490) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 490) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 490) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 490) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 490) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 490))">
 			<LogMessage Message="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 			<RunCode Name="craft80"/>
 			<LLStopBot/>
@@ -1166,7 +1166,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</CodeChunk>
 		<CodeChunk Name="craft80">
 		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Get level 80 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to get and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
+			Core.OverlayManager.AddToast(() => "Get level 80 gear, import order into lisbeth.\n You can find it under Gear Sets folder, make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(25000);
 		]]>
 		</CodeChunk>
