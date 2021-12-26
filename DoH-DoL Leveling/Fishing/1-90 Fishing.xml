@@ -1846,7 +1846,7 @@ Angles24
 					</While>
 					<If Condition="HasAtLeast(17951,3)">
 						<LisbethTravel Zone="614" Position="703.4661, 2.646878, 514.4102"/>
-						<LLHandOver ItemIds="17951" RequiresHq="True" NpcId="1021409" XYZ="703.1814, 2.949344, 513.6339" QuestId="68434" StepId="5"/>
+						<LLHandOver ItemIds="17951" NpcId="1021409" XYZ="703.1814, 2.949344, 513.6339" QuestId="68434" StepId="5"/>
 						<LLSmallTalk WaitTime="1500"/>
 						<WaitTimer WaitTime="2"/>
 					</If>
@@ -1936,7 +1936,7 @@ Angles24
 					</While>
 					<If Condition="HasAtLeast(17952,5)">
 						<LisbethTravel Zone="613" Position="-749.6351, 1.559595, -456.9331"/>
-						<LLTurnIn ItemIds="17952" RequiresHq="True" QuestId="68435" NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977"/>
+						<LLTurnIn ItemIds="17952" QuestId="68435" NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977"/>
 						<LLSmallTalk WaitTime="1500"/>
 						<WaitTimer WaitTime="2"/>
 						<AutoInventoryEquip/>
