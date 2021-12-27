@@ -172,8 +172,7 @@ Angles24
 	
 	 <!--Level 5 - Bigger Fish To Fry-->
 		<If Condition="Core.Me.Levels[ClassJobType.Fisher] &gt; 9 and not IsQuestCompleted(66645) and IsQuestCompleted(66644)">
-			<If Condition="&EXPManuals; == 1">
-				
+			<If Condition="&EXPManuals; == 1">				
 				<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 70 and not HasAtLeast(26553,1)">
 					<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
 				</While>
@@ -2005,22 +2004,24 @@ Angles24
 
     <!-- Level 80 - 82 -->
 	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 79) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 82)">
-	  <While Condition="not ItemCount(36395) &gt; 8">
-	    <While Condition="not HasAtLeast(26553,1)">
-		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-	    </While>
-	    <While Condition="ClassName != ClassJobType.Fisher">
-		  <ChangeClass Job="Fisher"/>
-	    </While>
-	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-		  <RunCode Name="RSManual"/>
-	    </While>	    
+	  <While Condition="not ItemCount(36395) &gt; 8">	    
+		<If Condition="&EXPManuals; == 1">				
+	      <While Condition="not HasAtLeast(26553,1)">
+		    <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	      </While>
+	      <While Condition="ClassName != ClassJobType.Fisher">
+		    <ChangeClass Job="Fisher"/>
+	      </While>
+	      <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		    <RunCode Name="RSManual"/>
+	      </While>	
+		</If>
 		<If Condition="not HasAtLeast(36588,30)">
 		  <GetTo ZoneId="962" XYZ="76.1526, 5.149997, -46.88182"/>
 		  <BuyItem ItemId="36588" ItemCount="99" InteractDistance="5.0" NpcId="1037054" XYZ="79.11792, 5.15, -46.52478"/>
 		</If>
 		<LisbethTravel ZoneId="962" XYZ="-156.536, 9.683057, -16.7944"/>		
-        <ExFish condition="(HasAtLeast(36588,1)) and (not HasAtLeast(36395,9)) and (Core.Me.HasAura(46))" Bait="Gold Salmon Roe" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+        <ExFish condition="(HasAtLeast(36588,1)) and (not HasAtLeast(36395,9))" Bait="Gold Salmon Roe" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
 		  <Keepers>
 		    <Keeper Name="Ponderer"/>
 		  </Keepers>
@@ -2049,22 +2050,24 @@ Angles24
 
     <!-- Level 82 - 84 -->
 	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 81) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 84)">
-	  <While Condition="not ItemCount(36409) &gt; 8">
-	    <While Condition="not HasAtLeast(26553,1)">
-		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-	    </While>
-	    <While Condition="ClassName != ClassJobType.Fisher">
-		  <ChangeClass Job="Fisher"/>
-	    </While>
-	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-		  <RunCode Name="RSManual"/>
-	    </While>	    
+	  <While Condition="not ItemCount(36409) &gt; 8">	    
+		<If Condition="&EXPManuals; == 1">	
+	      <While Condition="not HasAtLeast(26553,1)">
+		    <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	      </While>
+	      <While Condition="ClassName != ClassJobType.Fisher">
+		    <ChangeClass Job="Fisher"/>
+	      </While>
+	      <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		    <RunCode Name="RSManual"/>
+	      </While>	
+		</If>    
 		<If Condition="not HasAtLeast(36588,30)">
 		  <GetTo ZoneId="962" XYZ="76.1526, 5.149997, -46.88182"/>
 		  <BuyItem ItemId="36588" ItemCount="99" InteractDistance="5.0" NpcId="1037054" XYZ="79.11792, 5.15, -46.52478"/>
 		</If>
 		<LisbethTravel ZoneId="956" XYZ="522.4028, 163.4431, -335.5536"/>		
-        <ExFish condition="(HasAtLeast(36588,1)) and (not HasAtLeast(36409,9)) and (Core.Me.HasAura(46))" Bait="Gold Salmon Roe" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+        <ExFish condition="(HasAtLeast(36588,1)) and (not HasAtLeast(36409,9))" Bait="Gold Salmon Roe" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
 		  <Keepers>
 		    <Keeper Name="Macrobrachium Lar"/>
 		  </Keepers>
@@ -2098,22 +2101,24 @@ Angles24
 
     <!-- Level 84 - 86 -->
 	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 83) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 86)">
-	  <While Condition="not ItemCount(36434) &gt; 8">
-	    <While Condition="not HasAtLeast(26553,1)">
-		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-	    </While>
-	    <While Condition="ClassName != ClassJobType.Fisher">
-		  <ChangeClass Job="Fisher"/>
-	    </While>
-	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-		  <RunCode Name="RSManual"/>
-	    </While>	    
+	  <While Condition="not ItemCount(36434) &gt; 8">	    
+		<If Condition="&EXPManuals; == 1">	
+	      <While Condition="not HasAtLeast(26553,1)">
+		    <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	      </While>
+	      <While Condition="ClassName != ClassJobType.Fisher">
+		    <ChangeClass Job="Fisher"/>
+	      </While>
+	      <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		    <RunCode Name="RSManual"/>
+	      </While>	
+		</If>    
 		<If Condition="not HasAtLeast(36589,30)">
 		  <GetTo ZoneId="962" XYZ="76.1526, 5.149997, -46.88182"/>
 		  <BuyItem ItemId="36589" ItemCount="99" InteractDistance="5.0" NpcId="1037054" XYZ="79.11792, 5.15, -46.52478"/>
 		</If>
 		<LisbethTravel ZoneId="957" XYZ="-2.597936, 89.35657, -637.3389"/>		
-        <ExFish condition="(HasAtLeast(36589,1)) and (not HasAtLeast(36434,9)) and (Core.Me.HasAura(46))" Bait="Leech" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+        <ExFish condition="(HasAtLeast(36589,1)) and (not HasAtLeast(36434,9))" Bait="Leech" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
 		  <Keepers>
 		    <Keeper Name="Bluegill"/>
 		  </Keepers>
@@ -2148,16 +2153,18 @@ Angles24
 
     <!-- Level 86 - 90 -->
 	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 85) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)">
-	  <While Condition="not ItemCount(36471) &gt; 8">
-	    <While Condition="not HasAtLeast(26553,1)">
-		  <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
-	    </While>
-	    <While Condition="ClassName != ClassJobType.Fisher">
-		  <ChangeClass Job="Fisher"/>
-	    </While>
-	    <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
-		  <RunCode Name="RSManual"/>
-	    </While>	    
+	  <While Condition="not ItemCount(36471) &gt; 8">	    
+		<If Condition="&EXPManuals; == 1">	
+	      <While Condition="not HasAtLeast(26553,1)">
+		    <Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
+	      </While>
+	      <While Condition="ClassName != ClassJobType.Fisher">
+		    <ChangeClass Job="Fisher"/>
+	      </While>
+	      <While Condition="not Core.Me.HasAura(46) and HasAtLeast(26553,1)">
+		    <RunCode Name="RSManual"/>
+	      </While>
+		</If>
 		<If Condition="not HasAtLeast(36594,30)">
 		  <GetTo ZoneId="959" XYZ="-21.32582, -132.9464, -461.3702"/>
 		  <BuyItem ItemId="36594" ItemCount="99" InteractDistance="5.0" DialogOption="6" NpcId="1037791" XYZ="-19.88251, -132.9464, -461.3871"/>
@@ -2165,7 +2172,7 @@ Angles24
 		<LisbethTravel ZoneId="959" XYZ="368.6325, 88.67308, 532.7613"/>			
         <RunCode name="TurnOffMount"/> 
 		<Dismount/>
-        <ExFish condition="(HasAtLeast(36594,1)) and (not HasAtLeast(36471,9)) and (Core.Me.HasAura(46)) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)" Bait="Grey Worm" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
+        <ExFish condition="(HasAtLeast(36594,1)) and (not HasAtLeast(36471,9)) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)" Bait="Grey Worm" IdenticalCast="True" MinFish="15" MaxFish="25" ShuffleFishSpots="True" SitRate="0.65" Radius="1.0">
 		  <Keepers>
 		    <Keeper Name="Protomyke #987"/>
 		  </Keepers>
