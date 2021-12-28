@@ -941,7 +941,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69824) == 1">
         <GetTo ZoneId="961" XYZ="-614.5603, -22.39482, 510.7697"/>
         <!-- Subzone="3929" Area="" -->
-        <LLTalkTo InteractDistance="0.5" NpcId="1041141" XYZ="-614.313, -22.39482, 509.7277" QuestId="69824" StepId="1"/>
+        <UseObject InteractDistance="0.5" NpcId="1041141" XYZ="-614.313, -22.39482, 509.7277" UseTimes="1"/>
         <WaitTimer WaitTime="2"/>
         <MoveTo XYZ="-654.0692, -22.39482, 501.2624" Distance="0.5"/>
         <WaitTimer WaitTime="2"/>
