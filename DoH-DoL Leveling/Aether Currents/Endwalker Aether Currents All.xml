@@ -718,7 +718,8 @@ Author: Angles24, Manta
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-344.1151, -160.4042, -654.298" End="-338.9936, -155.9042, -646.7946"/>
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-338.9936, -155.9042, -646.7946" End="-332.1223, -152.9042, -645.6963"/>
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-332.1223, -152.9042, -645.6963" End="-329.6756, -151.2613, -656.1037"/>
-        <RunCode Name="697771" />
+        <!--<RunCode Name="697771" />-->
+        <LLSendChat Say="carrot of happiness" NpcId="1041789" XYZ="-329.6756, -151.2613, -656.1037"/>
         <WaitWhile Condition="GetQuestStep(69777) == 1 and not GetQuestById(69777).QuestI8A == 1"/>
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-329.6756, -151.2613, -656.1037" End="-322.0023, -161.1392, -634.4977"/>
         <RunCode name="TurnOnMount"/>
@@ -726,7 +727,8 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69777) == 1 and GetQuestById(69777).QuestI8A == 1">
         <GetTo ZoneId="959" XYZ="-482.0173, -167.5, -545.6169"/>
         <!-- Subzone="3968" Area="" -->
-        <RunCode Name="697772" />
+        <!--<RunCode Name="697772" />-->
+        <LLSendChat Say="carrot of happiness" NpcId="1041790" XYZ="-482.0173, -167.5, -545.6169"/>
         <WaitWhile Condition="GetQuestStep(69777) == 1 and not GetQuestById(69777).QuestI8A == 2"/>
         <WaitTimer WaitTime="10"/>
       </If>
@@ -738,7 +740,8 @@ Author: Angles24, Manta
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-441.1549, -168, -418.4973" End="-432.1943, -162.0541, -409.2291"/>
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-432.1943, -162.0541, -409.2291" End="-425.5305, -159.0541, -409.0136"/>
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-425.5305, -159.0541, -409.0136" End="-409.507, -158.8891, -428.4722"/>
-        <RunCode Name="697773" />
+        <!--<RunCode Name="697773" />-->
+        <LLSendChat Say="carrot of happiness" NpcId="1041791" XYZ="-409.507, -158.8891, -428.4722"/>
         <WaitWhile Condition="not GetQuestStep(69777) == 255"/>
         <LLClimbHill Distance="2.5" SpamJump="True" Start="-409.507, -158.8891, -428.4722" End="-393.6332, -168, -430.6089"/>
         <RunCode name="TurnOnMount"/>
