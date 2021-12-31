@@ -1162,14 +1162,14 @@ Profile and fixes by Anges
 		<!--<If Condition="not IsAetherCurrentCompleted(401,14)">
         <LisbethTravel Zone="401" Position="-595.0256, -166.2471, 582.4215"/>
 			<UseObject NpcId="2006225" XYZ="-595.0256, -166.2471, 582.4215" Condition="not IsAetherCurrentCompleted(401,14)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #3 -->
 
 		<!--<If Condition="not IsAetherCurrentCompleted(401,12)">
         <LisbethTravel Zone="401" Position="-313.6187, -185.3513, 755.4589"/>
 			<UseObject NpcId="2006227" XYZ="-313.6187, -185.3513, 755.4589" Condition="not IsAetherCurrentCompleted(401,12)"/>
-		</If>
+		</If>-->
 
 		<!-- <If Condition="not IsQuestCompleted(67179)">
 			<LogMessage Message="Into the Blue quest is required to continue!"/>
