@@ -185,9 +185,13 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2005536).IsVisible">
 			<UseObject NpcId="2005536" XYZ="402.0293, 191.5159, 561.4252" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,14)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,14)">
         <LisbethTravel Zone="397" Position="402.0293, 191.5159, 561.4252"/>
 			<UseObject NpcId="2005536" XYZ="402.0293, 191.5159, 561.4252" Condition="not IsAetherCurrentCompleted(397,14)"/>
+		</If>-->
+		<If Condition="not IsAetherCurrentCompleted(397,8)">
+        <LisbethTravel Zone="397" Position="402.0293, 191.5159, 561.4252"/>
+			<UseObject NpcId="2005536" XYZ="402.0293, 191.5159, 561.4252" Condition="not IsAetherCurrentCompleted(397,8)"/>
 		</If>
 
 		<!-- Aether Current #2 -->
@@ -196,10 +200,10 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006193).IsVisible">
 			<UseObject NpcId="2006193" XYZ="375.326, 161.6388, -159.35" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,6)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,6)">
         <LisbethTravel Zone="397" Position="375.326, 161.6388, -159.35"/>
 			<UseObject NpcId="2006193" XYZ="375.326, 161.6388, -159.35" Condition="not IsAetherCurrentCompleted(397,6)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #3 -->
 
@@ -207,10 +211,10 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006192).IsVisible">
 			<UseObject NpcId="2006192" XYZ="328.5114, 168.6274, 183.1539" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,7)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,7)">
         <LisbethTravel Zone="397" Position="328.5114, 168.6274, 183.1539"/>
 			<UseObject NpcId="2006192" XYZ="328.5114, 168.6274, 183.1539" Condition="not IsAetherCurrentCompleted(397,7)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #4 -->
 
@@ -218,10 +222,10 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006186).IsVisible">
 			<UseObject NpcId="2006186" XYZ="627.2831, 78.41602, 225.9403" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,13)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,13)">
         <LisbethTravel Zone="397" Position="627.2831, 78.41602, 225.9403"/>
 			<UseObject NpcId="2006186" XYZ="627.2831, 78.41602, 225.9403" Condition="not IsAetherCurrentCompleted(397,13)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #5 -->
 
@@ -236,7 +240,7 @@ Profile and fixes by Anges
 			<UseObject NpcId="2006187" XYZ="451.5297, 171.2214, -535.6985" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>
 		<RunCode Name="AetherCurrent5Complete"/>-->
-		<If Condition="not IsAetherCurrentCompleted(397,12)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,12)">
         <LisbethTravel Zone="397" Position="435.6338, 171.2269, -554.9074"/>
 		<Dismount/>
 		<WaitTimer WaitTime="1"/>
@@ -252,6 +256,23 @@ Profile and fixes by Anges
 		<WaitTimer WaitTime="1"/>
 			<UseObject NpcId="2006187" XYZ="451.5297, 171.2214, -535.6985" Condition="not IsAetherCurrentCompleted(397,12)"/>
 		<RunCode Name="AetherCurrent5Complete"/>
+		</If>-->
+		<If Condition="not IsAetherCurrentCompleted(397,7)">
+        <LisbethTravel Zone="397" Position="435.6338, 171.2269, -554.9074"/>
+		<Dismount/>
+		<WaitTimer WaitTime="1"/>
+		<RunCode Name="AetherCurrent5"/>
+		<WaitTimer WaitTime="1"/>
+		<MoveTo Name="Aether Current #5" XYZ="436.0315, 170.1193, -545.9077" UseMesh="False"/>
+		<WaitTimer WaitTime="1"/>
+		<MoveTo Name="Aether Current #5" XYZ="445.1338, 171.2269, -545.1742" UseMesh="False"/>
+		<WaitTimer WaitTime="1"/>
+		<MoveTo Name="Aether Current #5" XYZ="443.9939, 171.2269, -533.9135" UseMesh="False"/>
+		<WaitTimer WaitTime="1"/>
+		<MoveTo Name="Aether Current #5" XYZ="450.0945, 171.2269, -536.9135" UseMesh="False"/>
+		<WaitTimer WaitTime="1"/>
+			<UseObject NpcId="2006187" XYZ="451.5297, 171.2214, -535.6985" Condition="not IsAetherCurrentCompleted(397,7)"/>
+		<RunCode Name="AetherCurrent5Complete"/>
 		</If>
 
 		<!-- Aether Current #6 -->
@@ -260,9 +281,13 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006190).IsVisible">
 			<UseObject NpcId="2006190" XYZ="-660.1511, 135.5153, -376.6384" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,9)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,9)">
         <LisbethTravel Zone="397" Position="-660.1511, 135.5153, -376.6384"/>
 			<UseObject NpcId="2006190" XYZ="-660.1511, 135.5153, -376.6384" Condition="not IsAetherCurrentCompleted(397,9)"/>
+		</If>-->
+		<If Condition="not IsAetherCurrentCompleted(397,5)">
+        <LisbethTravel Zone="397" Position="-660.1511, 135.5153, -376.6384"/>
+			<UseObject NpcId="2006190" XYZ="-660.1511, 135.5153, -376.6384" Condition="not IsAetherCurrentCompleted(397,5)"/>
 		</If>
 
 		<!-- Aether Current #7 -->
@@ -271,10 +296,10 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006188).IsVisible">
 			<UseObject NpcId="2006188" XYZ="-100.4807, 88.09033, -682.2462" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,11)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,11)">
         <LisbethTravel Zone="397" Position="-100.4807, 88.09033, -682.2462"/>
 			<UseObject NpcId="2006188" XYZ="-100.4807, 88.09033, -682.2462" Condition="not IsAetherCurrentCompleted(397,11)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #8 -->
 
@@ -282,9 +307,13 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006189).IsVisible">
 			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,10)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,10)">
         <LisbethTravel Zone="397" Position="-334.0353, 133.9894, -10.14728"/>
 			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Condition="not IsAetherCurrentCompleted(397,10)"/>
+		</If>-->
+		<If Condition="not IsAetherCurrentCompleted(397,6)">
+        <LisbethTravel Zone="397" Position="-334.0353, 133.9894, -10.14728"/>
+			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Condition="not IsAetherCurrentCompleted(397,6)"/>
 		</If>
 
 		<!-- Aether Current #9 -->
@@ -293,10 +322,10 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006191).IsVisible">
 			<UseObject NpcId="2006191" XYZ="-311.4824, 96.20813, -191.6381" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,8)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,8)">
         <LisbethTravel Zone="397" Position="-311.4824, 96.20813, -191.6381"/>
 			<UseObject NpcId="2006191" XYZ="-311.4824, 96.20813, -191.6381" Condition="not IsAetherCurrentCompleted(397,8)"/>
-		</If>
+		</If>-->
 		
 		<!-- Aether Current #10 -->
 
@@ -304,10 +333,10 @@ Profile and fixes by Anges
 		<If Condition="GameObjectManager.GetObjectByNPCId(2006194).IsVisible">
 			<UseObject NpcId="2006194" XYZ="-85.67944, 111.1313, -61.87543" Radius="10" UseTimes="1" BlacklistAfter="True"/>
 		</If>-->
-		<If Condition="not IsAetherCurrentCompleted(397,5)">
+		<!--<If Condition="not IsAetherCurrentCompleted(397,5)">
         <LisbethTravel Zone="397" Position="-85.67944, 111.1313, -61.87543"/>
 			<UseObject NpcId="2006194" XYZ="-85.67944, 111.1313, -61.87543" Condition="not IsAetherCurrentCompleted(397,5)"/>
-		</If>
+		</If>-->
 
 		<LogMessage Message="You've attuned to the Aether Currents in Coerthas Western Highlands!"/>
 		
@@ -536,54 +565,69 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #1 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,14)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,14)">
         <LisbethTravel Zone="398" Position="765.0111, -15.82361, 289.082"/>
 			<UseObject NpcId="2006195" XYZ="765.0111, -15.82361, 289.082" Condition="not IsAetherCurrentCompleted(398,14)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(398,8)">
+        <LisbethTravel Zone="398" Position="765.0111, -15.82361, 289.082"/>
+			<UseObject NpcId="2006195" XYZ="765.0111, -15.82361, 289.082" Condition="not IsAetherCurrentCompleted(398,8)"/>
 		</If>
 		
 		<!-- Aether Current #2 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,13)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,13)">
         <LisbethTravel Zone="398" Position="868.406, -38.28497, -29.52625"/>
 			<UseObject NpcId="2006196" XYZ="868.406, -38.28497, -29.52625" Condition="not IsAetherCurrentCompleted(398,13)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #3 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,12)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,12)">
         <LisbethTravel Zone="398" Position="433.5544, -47.77606, -286.244"/>
 			<UseObject NpcId="2006197" XYZ="433.5544, -47.77606, -286.244" Condition="not IsAetherCurrentCompleted(398,12)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(398,7)">
+        <LisbethTravel Zone="398" Position="433.5544, -47.77606, -286.244"/>
+			<UseObject NpcId="2006197" XYZ="433.5544, -47.77606, -286.244" Condition="not IsAetherCurrentCompleted(398,7)"/>
 		</If>
 		
 		<!-- Aether Current #4 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,11)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,11)">
         <LisbethTravel Zone="398" Position="489.6771, -51.28564, 54.0321"/>
 			<UseObject NpcId="2006198" XYZ="489.6771, -51.28564, 54.0321" Condition="not IsAetherCurrentCompleted(398,11)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #5 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,10)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,10)">
         <LisbethTravel Zone="398" Position="98.92419, -50.8584, -134.6609"/>
 			<UseObject NpcId="2006199" XYZ="98.92419, -50.8584, -134.6609" Condition="not IsAetherCurrentCompleted(398,10)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #6 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,6)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,6)">
         <LisbethTravel Zone="398" Position="-261.7991, -61.66174, 352.4376"/>
 			<UseObject NpcId="2006203" XYZ="-261.7991, -61.66174, 352.4376" Condition="not IsAetherCurrentCompleted(398,6)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #7 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,9)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,9)">
         <LisbethTravel Zone="398" Position="207.3853, -96.26923, 374.6547"/>
 			<UseObject NpcId="2006200" XYZ="207.3853, -96.26923, 374.6547" Condition="not IsAetherCurrentCompleted(398,9)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #8-->
+
+		<!--<If Condition="not IsAetherCurrentCompleted(398,5)">
+        <LisbethTravel Zone="398" Position="406.7596, -89.82996, 686.6101"/>
+			<UseObject NpcId="2006204" XYZ="406.7596, -89.82996, 686.6101" Condition="not IsAetherCurrentCompleted(398,5)"/>
+		</If>-->
 
 		<If Condition="not IsAetherCurrentCompleted(398,5)">
         <LisbethTravel Zone="398" Position="406.7596, -89.82996, 686.6101"/>
@@ -592,16 +636,21 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #9 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,7)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,7)">
         <LisbethTravel Zone="398" Position="-405.356, -35.41626, 222.7053"/>
 			<UseObject NpcId="2006202" XYZ="-405.356, -35.41626, 222.7053" Condition="not IsAetherCurrentCompleted(398,7)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #10 -->
 
-		<If Condition="not IsAetherCurrentCompleted(398,8)">
+		<!--<If Condition="not IsAetherCurrentCompleted(398,8)">
         <LisbethTravel Zone="398" Position="-480.2778, -5.996826, -425.2842"/>
 			<UseObject NpcId="2006201" XYZ="-480.2778, -5.996826, -425.2842" Condition="not IsAetherCurrentCompleted(398,8)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(398,6)">
+        <LisbethTravel Zone="398" Position="-480.2778, -5.996826, -425.2842"/>
+			<UseObject NpcId="2006201" XYZ="-480.2778, -5.996826, -425.2842" Condition="not IsAetherCurrentCompleted(398,6)"/>
 		</If>
 
 		<LogMessage Message="You've attuned to the Aether Currents in The Dravanian Forelands!"/>
@@ -782,33 +831,43 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #2 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,13)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,13)">
         <LisbethTravel Zone="400" Position="421.1894, -43.04549, 661.7982"/>
 			<UseObject NpcId="2006216" XYZ="421.1894, -43.04549, 661.7982" Condition="not IsAetherCurrentCompleted(400,13)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(400,8)">
+        <LisbethTravel Zone="400" Position="421.1894, -43.04549, 661.7982"/>
+			<UseObject NpcId="2006216" XYZ="421.1894, -43.04549, 661.7982" Condition="not IsAetherCurrentCompleted(400,8)"/>
 		</If>
 
 		<!-- Aether Current #9 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,6)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,6)">
         <LisbethTravel Zone="400" Position="669.3064, -32.39496, 563.6224"/>
 			<UseObject NpcId="2006223" XYZ="669.3064, -32.39496, 563.6224" Condition="not IsAetherCurrentCompleted(400,6)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #1 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,14)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,14)">
         <LisbethTravel Zone="400" Position="296.8948, -35.935, 291.371"/>
 			<UseObject NpcId="2006215" XYZ="296.8948, -35.935, 291.371" Condition="not IsAetherCurrentCompleted(400,14)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #8 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,7)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,7)">
         <LisbethTravel Zone="400" Position="595.2894, -11.89169, -344.529"/>
 			<UseObject NpcId="2006222" XYZ="601.8004, -9.475891, -336.3242" Condition="not IsAetherCurrentCompleted(400,7)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #10 -->
+
+		<!--<If Condition="not IsAetherCurrentCompleted(400,5)">
+        <LisbethTravel Zone="400" Position="340.0167, -25.37579, -130.541"/>
+			<UseObject NpcId="2006224" XYZ="340.0167, -25.37579, -130.541" Condition="not IsAetherCurrentCompleted(400,5)"/>
+		</If>-->
 
 		<If Condition="not IsAetherCurrentCompleted(400,5)">
         <LisbethTravel Zone="400" Position="340.0167, -25.37579, -130.541"/>
@@ -817,30 +876,35 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #7 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,8)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,8)">
         <LisbethTravel Zone="400" Position="272.6445, -13.4525, 180.1947"/>
 			<MoveTo XYZ="265.7668, -11.41952, 185.1255" Distance="1" UseMesh="False"/>
 			<UseObject NpcId="2006221" XYZ="246.601, -11.55109, 180.8651" Condition="not IsAetherCurrentCompleted(400,8)"/>
 			<MoveTo XYZ="243.0246, -21.86147, 170.7207" Distance="1" UseMesh="False"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #3 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,12)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,12)">
         <LisbethTravel Zone="400" Position="-86.93073, -8.712891, 245.655"/>
 			<UseObject NpcId="2006217" XYZ="-86.93073, -8.712891, 245.655" Condition="not IsAetherCurrentCompleted(400,12)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(400,7)">
+        <LisbethTravel Zone="400" Position="-86.93073, -8.712891, 245.655"/>
+			<UseObject NpcId="2006217" XYZ="-86.93073, -8.712891, 245.655" Condition="not IsAetherCurrentCompleted(400,7)"/>
 		</If>
 
 		<!-- Aether Current #6 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,9)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,9)">
         <LisbethTravel Zone="400" Position="-74.2962, -0.2289429, 378.7441"/>
 			<UseObject NpcId="2006220" XYZ="-74.2962, -0.2289429, 378.7441" Condition="not IsAetherCurrentCompleted(400,9)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #5 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,10)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,10)">
         <LisbethTravel Zone="400" Position="-273.8715, 30.37311, 570.6412"/>
 			<WaitTimer WaitTime="3"/>
 			<Dismount/>
@@ -848,13 +912,18 @@ Profile and fixes by Anges
 			<MoveTo XYZ="-278.7672, 37.12512, 555.5656" Distance="1" UseMesh="False"/>
 			<UseObject NpcId="2006219" XYZ="-278.7672, 37.12512, 555.5656" Condition="not IsAetherCurrentCompleted(400,10)"/>
 			<MoveTo XYZ="-283.196, 35.35236, 552.0666" Distance="1" UseMesh="False"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #4 -->
 
-		<If Condition="not IsAetherCurrentCompleted(400,11)">
+		<!--<If Condition="not IsAetherCurrentCompleted(400,11)">
         <LisbethTravel Zone="400" Position="-775.2651, 123.7354, 243.7018"/>
 			<UseObject NpcId="2006218" XYZ="-775.2651, 123.7354, 243.7018" Condition="not IsAetherCurrentCompleted(400,11)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(400,6)">
+        <LisbethTravel Zone="400" Position="-775.2651, 123.7354, 243.7018"/>
+			<UseObject NpcId="2006218" XYZ="-775.2651, 123.7354, 243.7018" Condition="not IsAetherCurrentCompleted(400,6)"/>
 		</If>
 
 		<LogMessage Message="You've attuned to the Aether Currents in Churning Mists!"/>
@@ -1081,23 +1150,23 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #2 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,13)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,13)">
         <LisbethTravel Zone="401" Position="-657.6039, -123.8093, 517.3193"/>
 			<MoveTo XYZ="-664.271, -124.8036, 524.8033" Distance="1" UseMesh="False"/>
 			<UseObject NpcId="2006226" XYZ="-664.271, -124.8036, 524.8033" Condition="not IsAetherCurrentCompleted(401,13)"/>
 			<MoveTo XYZ="-657.6039, -123.8093, 517.3193" Distance="1" UseMesh="False"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #1 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,14)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,14)">
         <LisbethTravel Zone="401" Position="-595.0256, -166.2471, 582.4215"/>
 			<UseObject NpcId="2006225" XYZ="-595.0256, -166.2471, 582.4215" Condition="not IsAetherCurrentCompleted(401,14)"/>
 		</If>
 
 		<!-- Aether Current #3 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,12)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,12)">
         <LisbethTravel Zone="401" Position="-313.6187, -185.3513, 755.4589"/>
 			<UseObject NpcId="2006227" XYZ="-313.6187, -185.3513, 755.4589" Condition="not IsAetherCurrentCompleted(401,12)"/>
 		</If>
@@ -1127,23 +1196,42 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #4 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,11)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,11)">
         <LisbethTravel Zone="401" Position="-747.097, -57.11456, 163.8361"/>
 			<UseObject NpcId="2006228" XYZ="-747.097, -57.11456, 163.8361" Condition="not IsAetherCurrentCompleted(401,11)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(401,8)">
+        <LisbethTravel Zone="401" Position="-747.097, -57.11456, 163.8361"/>
+			<UseObject NpcId="2006228" XYZ="-747.097, -57.11456, 163.8361" Condition="not IsAetherCurrentCompleted(401,8)"/>
 		</If>
 
 		<!-- Aether Current #5 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,10)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,10)">
         <LisbethTravel Zone="401" Position="-754.3656, -13.87734, -120.4015"/>
 		<Dismount/>
 		<RunCode Name="AetherCurrent5.2"/>
 			<MoveTo XYZ="-759.4263, -9.201294, -110.8568" Distance="1" UseMesh="False"/>
 			<UseObject NpcId="2006229" XYZ="-759.4263, -9.201294, -110.8568" Condition="not IsAetherCurrentCompleted(401,10)"/>
 			<MoveTo XYZ="-753.8975, -13.87735, -119.7341" Distance="1" UseMesh="False"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(401,7)">
+        <LisbethTravel Zone="401" Position="-754.3656, -13.87734, -120.4015"/>
+		<Dismount/>
+		<RunCode Name="AetherCurrent5.2"/>
+			<MoveTo XYZ="-759.4263, -9.201294, -110.8568" Distance="1" UseMesh="False"/>
+			<UseObject NpcId="2006229" XYZ="-759.4263, -9.201294, -110.8568" Condition="not IsAetherCurrentCompleted(401,7)"/>
+			<MoveTo XYZ="-753.8975, -13.87735, -119.7341" Distance="1" UseMesh="False"/>
 		</If>
 
 		<!-- Aether Current #10 -->
+
+		<!--<If Condition="not IsAetherCurrentCompleted(401,5)">
+        <LisbethTravel Zone="401" Position="-564.8127, -36.698, -349.0807"/>
+			<UseObject NpcId="2006234" XYZ="-564.8127, -36.698, -349.0807" Condition="not IsAetherCurrentCompleted(401,5)"/>
+		</If>-->
 
 		<If Condition="not IsAetherCurrentCompleted(401,5)">
         <LisbethTravel Zone="401" Position="-564.8127, -36.698, -349.0807"/>
@@ -1152,31 +1240,36 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #9 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,6)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,6)">
         <LisbethTravel Zone="401" Position="-499.1379, -55.86328, -536.7056"/>
 			<UseObject NpcId="2006233" XYZ="-499.1379, -55.86328, -536.7056" Condition="not IsAetherCurrentCompleted(401,6)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #8 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,7)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,7)">
         <LisbethTravel Zone="401" Position="-366.4149, -56.26001, -659.6018"/>
 			<UseObject NpcId="2006232" XYZ="-366.4149, -56.26001, -659.6018" Condition="not IsAetherCurrentCompleted(401,7)"/>
-		</If>
+		</If>-->
 			
 		<!-- Aether Current #7 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,8)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,8)">
         <LisbethTravel Zone="401" Position="-180.3159, -14.96918, -543.1144"/>
 			<UseObject NpcId="2006231" XYZ="-180.3159, -14.96918, -543.1144" Condition="not IsAetherCurrentCompleted(401,8)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(401,6)">
+        <LisbethTravel Zone="401" Position="-180.3159, -14.96918, -543.1144"/>
+			<UseObject NpcId="2006231" XYZ="-180.3159, -14.96918, -543.1144" Condition="not IsAetherCurrentCompleted(401,6)"/>
 		</If>
 
 		<!-- Aether Current #6 -->
 
-		<If Condition="not IsAetherCurrentCompleted(401,9)">
+		<!--<If Condition="not IsAetherCurrentCompleted(401,9)">
         <LisbethTravel Zone="401" Position="238.7578, 26.19971, -579.7666"/>
 			<UseObject NpcId="2006230" XYZ="238.7578, 26.19971, -579.7666" Condition="not IsAetherCurrentCompleted(401,9)"/>
-		</If>
+		</If>-->
 
 		<LogMessage Message="You've attuned to the Aether Currents in The Sea of Clouds!"/>
 		</If>
@@ -1391,54 +1484,74 @@ Profile and fixes by Anges
 		
 		<!-- Aether Current #6 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,10)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,10)">
         <LisbethTravel Zone="399" Position="-199.6643, 110.7653, -449.9428"/>
 			<UseObject NpcId="2006209" XYZ="-199.6643, 110.7653, -449.9428" Condition="not IsAetherCurrentCompleted(399,10)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #7 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,11)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,11)">
         <LisbethTravel Zone="399" Position="98.89368, 73.07532, -174.3649"/>
 			<UseObject NpcId="2006208" XYZ="98.89368, 73.07532, -174.3649" Condition="not IsAetherCurrentCompleted(399,11)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(399,7)">
+        <LisbethTravel Zone="399" Position="98.89368, 73.07532, -174.3649"/>
+			<UseObject NpcId="2006208" XYZ="98.89368, 73.07532, -174.3649" Condition="not IsAetherCurrentCompleted(399,7)"/>
 		</If>
 		
 		<!-- Aether Current #9 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,13)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,13)">
         <LisbethTravel Zone="399" Position="348.3481, 84.33655, -58.85406"/>
 			<UseObject NpcId="2006206" XYZ="348.3481, 84.33655, -58.8540" Condition="not IsAetherCurrentCompleted(399,13)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #8 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,12)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,12)">
         <LisbethTravel Zone="399" Position="468.2091, 86.78419, -29.68172"/>
 			<UseObject NpcId="2006207" XYZ="468.2091, 86.78419, -29.68172" Condition="not IsAetherCurrentCompleted(399,12)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #10 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,14)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,14)">
         <LisbethTravel Zone="399" Position="729.2133, 134.9354, 150.8964"/>
 			<UseObject NpcId="2006205" XYZ="729.2133, 134.9354, 150.8964" Condition="not IsAetherCurrentCompleted(399,14)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(399,8)">
+        <LisbethTravel Zone="399" Position="729.2133, 134.9354, 150.8964"/>
+			<UseObject NpcId="2006205" XYZ="729.2133, 134.9354, 150.8964" Condition="not IsAetherCurrentCompleted(399,8)"/>
 		</If>
 
 		<!-- Aether Current #5 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,9)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,9)">
         <LisbethTravel Zone="399" Position="-486.0762, 148.9127, -281.1475"/>
 			<UseObject NpcId="2006210" XYZ="-486.0762, 148.9127, -281.1475" Condition="not IsAetherCurrentCompleted(399,9)"/>
+		</If>-->
+
+		<If Condition="not IsAetherCurrentCompleted(399,6)">
+        <LisbethTravel Zone="399" Position="-486.0762, 148.9127, -281.1475"/>
+			<UseObject NpcId="2006210" XYZ="-486.0762, 148.9127, -281.1475" Condition="not IsAetherCurrentCompleted(399,6)"/>
 		</If>
 
 		<!-- Aether Current #4 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,8)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,8)">
         <LisbethTravel Zone="399" Position="-392.5689, 154.8333, 111.162"/>
 			<UseObject NpcId="2006211" XYZ="-392.5689, 154.8333, 111.162" Condition="not IsAetherCurrentCompleted(399,8)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #1 -->
+
+		<!--<If Condition="not IsAetherCurrentCompleted(399,5)">
+        <LisbethTravel Zone="399" Position="-455.1003, 139.208, 671.3817"/>
+			<UseObject NpcId="2006214" XYZ="-455.1003, 139.208, 671.3817" Condition="not IsAetherCurrentCompleted(399,5)"/>
+		</If>-->
 
 		<If Condition="not IsAetherCurrentCompleted(399,5)">
         <LisbethTravel Zone="399" Position="-455.1003, 139.208, 671.3817"/>
@@ -1447,17 +1560,17 @@ Profile and fixes by Anges
 
 		<!-- Aether Current #3 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,7)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,7)">
         <LisbethTravel Zone="399" Position="-48.60004, 152.3613, 722.0721"/>
 			<UseObject NpcId="2006212" XYZ="-48.60004, 152.3613, 722.0721" Condition="not IsAetherCurrentCompleted(399,7)"/>
-		</If>
+		</If>-->
 
 		<!-- Aether Current #2 -->
 
-		<If Condition="not IsAetherCurrentCompleted(399,6)">
+		<!--<If Condition="not IsAetherCurrentCompleted(399,6)">
         <LisbethTravel Zone="399" Position="131.1207, 219.3179, 719.0203"/>
 			<UseObject NpcId="2006213" XYZ="131.1207, 219.3179, 719.0203" Condition="not IsAetherCurrentCompleted(399,6)"/>
-		</If>
+		</If>-->
 
 		<LogMessage Message="You've attuned to the Aether Currents in The Dravanian Hinterlands!"/>
 		</If>
