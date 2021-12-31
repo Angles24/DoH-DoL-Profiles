@@ -509,11 +509,11 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					<LLoadProfile Path="DiademCN/63-67 CulinarianDNP.xml"/>
 				</If>
 			</If>
-		</If>			
+		</If>				
 			
 		
 		<!-- Craft Class Quest Items and Get Master III Books -->
-			<If Condition="&craftClass; == 1">
+			<If Condition="(&craftClass; == 1) and not (IsQuestCompleted(67979) and IsQuestCompleted(68153) and IsQuestCompleted(68132) and IsQuestCompleted(68137) and IsQuestCompleted(67969) and IsQuestCompleted(67974) and IsQuestCompleted(68142) and IsQuestCompleted(68147))">
 				<LogMessage Message="Get Master III books and then Craft class quest items, import orders into lisbeth. You can find it under Quest Items folder, clear bags before beginning and store items in a safe place for later and set craftClass setting to 0 on start profile."/>
 				<RunCode Name="craftClass"/>
 				<LLStopBot/>
@@ -846,7 +846,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		<!-- Craft Gathering and Crafting Gear 80 -->
-		<If Condition="&craft80; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 490) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 490) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 490) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 490) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 490) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 490) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 490) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 490) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 490) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 490))">
+		<If Condition="&craft80; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 489) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 489) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 489) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 489) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 489) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 489) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 489) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 489) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 489) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 489))">
 			<LogMessage Message="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 			<RunCode Name="craft80"/>
 			<LLStopBot/>
