@@ -17,9 +17,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<Order>
 	
 	<!-- Change Class GSM - 1 Copper Ingot 5062 // 5 Ragstone Whetstone 5258 // 14 Brass Ingot 5063 -->
-	<If Condition="ClassName != ClassJobType.Goldsmith">
+	<While Condition="ClassName != ClassJobType.Goldsmith">
 		<ChangeClass Job="Goldsmith"/>
-	</If>
+	</While>
 	<If Condition="ClassName == ClassJobType.Goldsmith">
 		<AutoInventoryEquip/>
 	

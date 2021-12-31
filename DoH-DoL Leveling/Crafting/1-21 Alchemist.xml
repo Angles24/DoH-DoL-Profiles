@@ -17,9 +17,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<Order>
 	
 	<!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->
-	<If Condition="ClassName != ClassJobType.Alchemist">
+	<While Condition="ClassName != ClassJobType.Alchemist">
 		<ChangeClass Job="Alchemist"/>
-	</If>
+	</While>
 	<If Condition="ClassName == ClassJobType.Alchemist">
 		<AutoInventoryEquip/>
 	

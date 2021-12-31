@@ -17,9 +17,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<Order>
 	
 	<!-- Change Class ARM - 1 Bronze Rivet 5091 // 14 Iron Rivets 5092 -->
-	<If Condition="ClassName != ClassJobType.Armorer">
+	<While Condition="ClassName != ClassJobType.Armorer">
 		<ChangeClass Job="Armorer"/>
-	</If>
+	</While>
 	<If Condition="ClassName == ClassJobType.Armorer">
 		<AutoInventoryEquip/>
 	

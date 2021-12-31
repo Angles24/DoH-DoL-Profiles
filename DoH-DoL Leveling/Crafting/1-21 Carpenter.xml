@@ -17,9 +17,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<Order>
 	
 	<!-- Change Class CRP - 1 Maple Lumber 5361 // 10 Ash Lumber 5364 // 16 Elm Lumber 5367 -->
-	<If Condition="ClassName != ClassJobType.Carpenter">
+	<While Condition="ClassName != ClassJobType.Carpenter">
 		<ChangeClass Job="Carpenter"/>
-	</If>
+	</While>
 	<If Condition="ClassName == ClassJobType.Carpenter">
 		<AutoInventoryEquip/>
 	

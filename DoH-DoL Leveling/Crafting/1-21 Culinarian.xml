@@ -17,9 +17,9 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<Order>
 	
 	<!-- Change Class CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 Gelatin150 4863-->
-	<If Condition="ClassName != ClassJobType.Culinarian">
+	<While Condition="ClassName != ClassJobType.Culinarian">
 		<ChangeClass Job="Culinarian"/>
-	</If>
+	</While>
 	<If Condition="ClassName == ClassJobType.Culinarian">
 		<AutoInventoryEquip/>
 	
