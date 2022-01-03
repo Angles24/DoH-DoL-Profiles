@@ -390,12 +390,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<!-- Gatherer's to 63 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(68090) or Core.Me.Levels[ClassJobType.Miner] &lt; 63">
-				<LLoadProfile Path="Gathering/51-63 Miner2.xml"/>
+				<LLoadProfile Path="Gathering/51-63 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(68156) or Core.Me.Levels[ClassJobType.Botanist] &lt; 63">
-				<LLoadProfile Path="Gathering/51-63 Botanist2.xml"/>
+				<LLoadProfile Path="Gathering/51-63 Botanist.xml"/>
 			</If>
 		</If>		
 		

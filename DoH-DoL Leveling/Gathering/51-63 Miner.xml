@@ -123,7 +123,7 @@ Angles24
 				<If Condition="HasAtLeast(12534,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="397" Position="299.6719, 157.9135, 103.2578"/>
-					<LLHandOver ItemId="12534" RequiresHq="true" QuestId="67617" StepId="2" NpcId="1013233" InteractDistance="2.0" XYZ="299.6719, 157.9135, 103.2578"/>
+					<LLHandOver ItemId="12534" QuestId="67617" StepId="2" NpcId="1013233" InteractDistance="2.0" XYZ="299.6719, 157.9135, 103.2578"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
@@ -190,7 +190,7 @@ Angles24
 				<If Condition="HasAtLeast(12537,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="398" Position="388.3573, -43.08157, -368.9174"/>
-					<LLHandOver ItemId="12537" RequiresHq="true" QuestId="67618" StepId="4" NpcId="1013933" XYZ="388.3573, -43.08157, -368.9174"/>
+					<LLHandOver ItemId="12537" QuestId="67618" StepId="4" NpcId="1013933" XYZ="388.3573, -43.08157, -368.9174"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
@@ -278,7 +278,7 @@ Angles24
 				<If Condition="HasAtLeast(12535,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="399" Subzone="2009" Position="552.0469, 94.21478, 162.2147"/>
-					<LLHandOver ItemId="12535" RequiresHq="true" QuestId="67619" StepId="4" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
+					<LLHandOver ItemId="12535" QuestId="67619" StepId="4" NpcId="1013943" XYZ="552.3003, 94.17663, 161.7609"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
@@ -334,7 +334,7 @@ Angles24
 				<If Condition="HasAtLeast(12538,3)">
 					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="478" XYZ="59.67798, 207.1303, 3.311157"/>
-					<LLTurnIn ItemId="12538" RequiresHq="true" QuestId="67620" StepId="3" NpcId="1013958" XYZ="59.67798, 207.1303, 3.311157"/>
+					<LLTurnIn ItemId="12538" QuestId="67620" StepId="3" NpcId="1013958" XYZ="59.67798, 207.1303, 3.311157"/>
 					<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>

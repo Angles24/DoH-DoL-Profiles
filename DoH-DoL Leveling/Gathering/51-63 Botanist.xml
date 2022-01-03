@@ -116,7 +116,7 @@ Angles24
 				<If Condition="HasAtLeast(12878,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="401" Position="-670.8019, -127.9738, 639.9481"/><!-- Camp Cloudtop -->
-					<LLTurnIn ItemId="12878" RequiresHq="true" QuestId="67585" StepId="2" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
+					<LLTurnIn ItemId="12878" QuestId="67585" StepId="2" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -192,7 +192,7 @@ Angles24
 				<If Condition="HasAtLeast(12879,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="401" Position="-670.8019, -127.9738, 639.9481"/><!-- Camp Cloudtop -->
-					<LLTurnIn ItemId="12879" RequiresHq="true" QuestId="67586" StepId="5" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
+					<LLTurnIn ItemId="12879" QuestId="67586" StepId="5" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -257,7 +257,7 @@ Angles24
 				<If Condition="HasAtLeast(12579,10)">
 					<RunCode Name="Enable_Flight"/>
 					<LisbethTravel Zone="401" Position="-670.8019, -127.9738, 639.9481"/><!-- Camp Cloudtop -->
-					<LLTurnIn ItemId="12579" RequiresHq="true" QuestId="67587" StepId="3" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
+					<LLTurnIn ItemId="12579" QuestId="67587" StepId="3" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -316,13 +316,13 @@ Angles24
 				<If Condition="HasAtLeast(12900,3)">
 					<RunCode Name="Enable_Flight"/>
 					<GetTo ZoneId="419" XYZ="-136.9193, 14.55313, -150.3167"/><!-- The Pillars -->
-					<LLTurnIn ItemId="12900" RequiresHq="true" QuestId="67588" StepId="3" NpcId="1013245" InteractDistance="2.0" XYZ="-136.9193, 14.55313, -150.3167"/>
+					<LLTurnIn ItemId="12900" QuestId="67588" StepId="3" NpcId="1013245" InteractDistance="2.0" XYZ="-136.9193, 14.55313, -150.3167"/>
 					<LLSmallTalk WaitTime="1500"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67588) == 4">
 				<LisbethTravel Zone="401" Position="-670.8019, -127.9738, 639.9481"/><!-- Camp Cloudtop -->
-				<LLTurnIn ItemId="12900" RequiresHq="true" QuestId="67588" StepId="4" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
+				<LLTurnIn ItemId="12900" QuestId="67588" StepId="4" NpcId="1013241" InteractDistance="2.0" XYZ="-670.8019, -127.9738, 639.9481"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(67588) == 5">
