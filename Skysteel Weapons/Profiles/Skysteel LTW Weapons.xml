@@ -47,7 +47,7 @@ Required: LLamaLibrary BotBase
 		
 		<If Condition="not (HasItem(29616) or HasItem(29627) or HasItem(29638) or HasItem(29638) or HasItem(30286) or HasItem(30297) or HasItem(31718))">
 			<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-			<BuyItem ItemId="29616" ItemCount="1" DialogOption="2" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+			<BuyItem ItemId="29616" ItemCount="1" DialogOption="4" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 		</If>
 		
 		<While Condition="HasItem(29616)"><!-- Skysteel Round Knife -->
@@ -55,7 +55,7 @@ Required: LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29649,'Amount':20,'Hq':true,'Enabled':true,'Type':'Leatherworker'}]"/>
 			</If>
 			<If Condition="HasItem(29616) and HqHasAtLeast(29649,20)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29616">
 					<ChangeClass Job="Leatherworker" force="True"/>
 					<WaitTimer WaitTime="3"/>
@@ -63,7 +63,7 @@ Required: LLamaLibrary BotBase
 						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29627" SelectString="0"/><!-- Buy Skysteel Round Knife +1 -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29627" SelectString="0" XYZ="-161.5168, 16.99999, -57.14508"/><!-- Buy Skysteel Round Knife +1 -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
 			</If>
@@ -74,7 +74,7 @@ Required: LLamaLibrary BotBase
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':29657,'Amount':30,'Hq':true,'Enabled':true,'Type':'Leatherworker'}]"/>
 			</If>
 			<If Condition="HasItem(29627) and HqHasAtLeast(29657,30)">
-				<GetTo ZoneId="418" XYZ="-160.8965, 17.06712, -55.63131"/>
+				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
 				<While Condition="ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand].RawItemId == 29627">
 					<ChangeClass Job="Leatherworker" force="True"/>
 					<WaitTimer WaitTime="3"/>
@@ -82,7 +82,7 @@ Required: LLamaLibrary BotBase
 						<RunCode Name="SwitchCombatJob"/>
 					</While>
 				</While>
-				<BuyShopExchangeItem NpcId="1032900" ItemId="29638" SelectString="1"/><!-- Buy Dragonsung Round Knife -->
+				<BuyShopExchangeItem NpcId="1032900" ItemId="29638" SelectString="1" XYZ="-161.5168, 16.99999, -57.14508"/><!-- Buy Dragonsung Round Knife -->
 				<WaitTimer WaitTime="3"/>
 				<RunCode Name="CloseShop"/>
 			</If>
