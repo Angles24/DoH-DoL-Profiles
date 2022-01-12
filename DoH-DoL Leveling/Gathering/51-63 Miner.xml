@@ -329,7 +329,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(67620) == 3">
 				<While Condition="not HasAtLeast(12538,3)">
-					<Lisbeth Json="[{'Group':1,'Item':12538,'Amount':3,'Enabled':true,'Type':'Gather','Hq':true}]"/><!-- Force HQ Adamantite Ore -->
+					<Lisbeth Json="[{'Group':1,'Item':12538,'Amount':3,'Enabled':true,'Type':'Gather'}]"/><!-- Force HQ Adamantite Ore -->
 				</While>
 				<If Condition="HasAtLeast(12538,3)">
 					<RunCode Name="Enable_Flight"/>
