@@ -16,10 +16,6 @@ Authors:  Kayla / Angles24
 	
 	<!-- 80-82  -->
 	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 79) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 82)">			
-		<If Condition="not HasAtLeast(36386,5)">			
-			<LLToast message="Please buy Northern Herring x10 from Marketboard."/>
-			<LLStopBot/>
-		</If>
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
