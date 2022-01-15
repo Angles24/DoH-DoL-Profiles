@@ -30,7 +30,7 @@ Angles24
 				</If>
 			</If>
 			<If Condition="not NqHasAtLeast(5599,99)">
-        <Lisbeth Json="[{'Group':1, 'Item':5599, 'Amount':99 ,'Enabled':true, 'Type':'Gather', 'AmountMode':'Restock'}]"/>
+        <Lisbeth Json="[{'Group':1, 'Item':5599, 'Amount':15 ,'Enabled':true, 'Type':'Gather', 'AmountMode':'Restock'}]"/>
 			</If>
 			<If Condition="NqHasAtLeast(5599,99)">
 				<If Condition="GetQuestStep(65543) == 255">

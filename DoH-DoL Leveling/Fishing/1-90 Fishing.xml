@@ -199,16 +199,7 @@ Angles24
 			<If Condition="HasQuest(66645)">
 				<If Condition="GetQuestStep(66645) == 255">
 					<If Condition="not NqHasAtLeast(4874,3)">
-						<If Condition="not HasAtLeast(2587,99)">
-							<GetTo ZoneId="129" XYZ="-245.3774, 16.2, 40.53"/>
-							<BuyItem ItemId="2587" ItemCount="99" DialogOption="2" NpcId="1003254" XYZ="-245.3774, 16.2, 40.53"/>
-						</If>
-						<GetTo ZoneId="129" XYZ="-182.1713, 1.999995, 198.2991"/>
-						<ExFish Mooch="0" Bait="Pill Bug" MinFish="10" MaxFish="15" Condition="not NqHasAtLeast(4874,3)">
-							<FishSpots>
-								<FishSpot XYZ="-182.1713, 1.999995, 198.2991" Heading="1.16"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4874,'Amount':3,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</If>
 					<If Condition="NqHasAtLeast(4874,3)">
 						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
@@ -255,21 +246,7 @@ Angles24
 			<If Condition="HasQuest(66646)">
 				<If Condition="GetQuestStep(66646) == 255">
 					<If Condition="not HasAtLeast(4930,1)">
-						<If Condition="not HasAtLeast(2586,90)">
-							<GetTo ZoneId="129" XYZ="-245.3774, 16.2, 40.53"/>
-							<BuyItem ItemId="2586" ItemCount="99" DialogOption="2" NpcId="1003254" XYZ="-245.3774, 16.2, 40.53"/>
-						</If>
-						<LisbethTravel Zone="134" Position="222.3688, 113.1, -256.9429"/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="Sneak"/>
-						<WaitTimer WaitTime="2"/>
-						<ExFish Stealth="True" Mooch="0" Bait="Moth Pupa" MinFish="15" MaxFish="20" Condition="not HasAtLeast(4930,1)">
-							<FishSpots>
-								<FishSpot XYZ="-38.5459, 39.96041, 68.37025" Heading="5.13"/>
-								<FishSpot XYZ="-58.01261, 38.42447, 71.26994" Heading="5.13"/>
-								<FishSpot XYZ="-69.02532, 38.08934, 77.13954" Heading="5.13"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4930,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</If>
 					<If Condition="HasAtLeast(4930,1)">
 						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
@@ -387,20 +364,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(66647) == 4">
 					<While Condition="not NqHasAtLeast(4882,5)">
-						<If Condition="not HasAtLeast(2591,10)">
-							<LisbethTravel Zone="138" Position="240.2533, -24.99897, 231.4336"/>
-							<BuyItem ItemId="2591" ItemCount="75" DialogOption="2" NpcId="1003264" XYZ="240.2533, -24.99897, 231.4336"/>
-						</If>
-						<LisbethTravel Zone="138" Subzone="170" Position="451.0222, 10.45387, 433.024"/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="Sneak"/>
-						<WaitTimer WaitTime="2"/>
-						<ExFish Stealth="True" Mooch="0" Bait="Rat Tail" MinFish="15" MaxFish="25" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4882,5)">
-							<FishSpots>
-								<FishSpot XYZ="456.7867, 10.52981, 443.5609" Heading="1.257315"/>
-								<FishSpot XYZ="437.7345, 11.78907, 438.7166" Heading="4.229977"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4882,'Amount':5,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(4882,5)">
 						<WaitTimer WaitTime="2"/>
@@ -459,20 +423,7 @@ Angles24
 			<If Condition="HasQuest(66648)">
 				<If Condition="GetQuestStep(66648) == 255">
 					<While Condition="not NqHasAtLeast(4955,5)">
-						<If Condition="not HasAtLeast(2614,1)">
-							<LisbethTravel Zone="139" Position="-329.6712, -2.533815, 136.2782"/>
-							<BuyItem ItemId="2614" ItemCount="1" DialogOption="4" NpcId="1003267" XYZ="-329.6712, -2.533815, 136.2782"/>
-						</If>
-						<LisbethTravel Zone="139" Position="-329.6712, -2.533815, 136.2782"/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="Sneak"/>
-						<WaitTimer WaitTime="2"/>
-						<ExFish Mooch="0" Bait="Crow Fly" MinFish="5" MaxFish="10" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4955,5)"><!-- Warmwater Trout -->
-							<FishSpots>
-								<FishSpot XYZ="-307.0479, -2.285982, 155.0588" Heading="1.05"/>
-								<FishSpot XYZ="-367.0322, -1.988216, 127.7129" Heading="4.54"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4955,'Amount':5,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(4955,5) or HasAtLeast(4955,5)">
 						<GetTo ZoneId="129" XYZ="-185.8396, 4, 169.604"/>
@@ -575,20 +526,7 @@ Angles24
 			<If Condition="HasQuest(66649)">
 				<If Condition="GetQuestStep(66649) == 255">
 					<While Condition="not NqHasAtLeast(4963,1)">
-						<If Condition="not HasAtLeast(2586,10)">
-							<GetTo ZoneId="129" XYZ="-246.1743, 16.2, 40.10863"/>
-							<BuyItem ItemId="2586" ItemCount="50" DialogOption="2" NpcId="1003254" XYZ="-246.6011, 16.2, 37.12512"/>
-						</If>
-						<LisbethTravel Zone="154" Position="-43.92079, -40.88041, 241.8634"/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="Sneak"/>
-						<WaitTimer WaitTime="2"/>
-						<ExFish Stealth="True" Mooch="1" Bait="Moth Pupa" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4963,1)"><!-- Shadow Catfish -->
-							<FishSpots>
-								<FishSpot XYZ="-36.05458, -39.68947, 205.9507" Heading="4.44"/>
-								<FishSpot XYZ="-10.98111, -40.95001, 197.69" Heading="1.32"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4963,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(4963,1)">
 						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
@@ -651,26 +589,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(66650) == 3">
 					<While Condition="not NqHasAtLeast(4898,10)">
-						<If Condition="not IsOnMap(137)">
-							<LisbethTravel Zone="137" Position="493.9612, 17.39324, 463.9441"/><!-- Costa del Sol -->
-							<WaitTimer WaitTime="2"/>
-							<RunCode Name="Sneak"/>
-							<WaitTimer WaitTime="2"/>
-						</If>
-						<If Condition="not HasAtLeast(2596,10)">
-							<LisbethTravel Zone="137" Position="460.3798, 17.12659, 486.5948"/>
-							<BuyItem ItemId="2596" ItemCount="50" DialogOption="4" NpcId="1003261" XYZ="460.3798, 17.12659, 486.5948"/>
-						</If>
-						<If Condition="not IsTimeBetween(18,6)">
-							<LogMessage Message="Waiting until 18pm for fishing"/>
-							<WaitWhile Condition="not IsTimeBetween(18,6)"/>
-						</If>
-						<ExFish Stealth="True" Mooch="0" Bait="Spoon Worm" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4898,10) and IsTimeBetween(18,6)"><!-- Fullmoon Sardine -->
-							<FishSpots>
-								<FishSpot XYZ="568.5176, 20.45889, 497.8033" Heading="1.43"/>
-								<FishSpot XYZ="626.373, 23.93624, 459.1942" Heading="1.47"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4898,'Amount':10,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(4898,10)">
 						<GetTo ZoneId="129" XYZ="-184.7715, 4, 169.2683"/>
@@ -733,22 +652,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(66651) == 255">
 					<While Condition="not NqHasAtLeast(5033,1)">
-						<If Condition="not IsOnMap(146)">
-							<LisbethTravel Zone="146" Position="-321.7947, 8.260907, 408.605"/>
-							<WaitTimer WaitTime="2"/>
-							<RunCode Name="Sneak"/>
-							<WaitTimer WaitTime="2"/>
-						</If>
-						<If Condition="not HasAtLeast(2600,10)">
-							<MoveTo Name="Merchant &amp; Mender" XYZ="-278.7976, 8, 378.8662"/>
-							<BuyItem ItemId="2600" ItemCount="50" DialogOption="4" InteractDistance="3.0" NpcId="1004430" XYZ="-278.7976, 8, 378.8662"/>
-						</If>
-						<ExFish Stealth="True" Mooch="0" Bait="Sand Leech" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(5033,1)"><!-- Desert Catfish -->
-							<FishSpots>
-								<FishSpot XYZ="197.901, 1.393917, 777.8427" Heading="2.61"/>
-								<FishSpot XYZ="179.2327, -1.87568, 725.4612" Heading="1.41"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':5033,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(5033,1)">
 						<GetTo ZoneId="129" XYZ="-184.7715, 4, 169.2683"/>
@@ -806,17 +710,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(66652) == 255">
 					<While Condition="not NqHasAtLeast(4905,5)">
-						<If Condition="not HasAtLeast(2601,10)">
-							<LisbethTravel Zone="139" Position="427.2678, 4.098778, 115.2819"/>
-							<BuyItem ItemId="2601" ItemCount="99" DialogOption="2" NpcId="1003268" XYZ="427.2678, 4.098778, 115.2819"/>
-						</If>
-						<GetTo ZoneId="132" XYZ="29.56105, 1.691584, 33.32197"/>
-						<ExFish Mooch="0" Weather="Rain" Bait="Stem Borer" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4905,5)"><!-- Raincaller -->
-							<FishSpots>
-								<FishSpot XYZ="70.09777, -7.775955, 115.4598" Heading="6.15"/>
-								<FishSpot XYZ="116.3833, -15.31266, 149.7385" Heading="5.40"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4905,'Amount':5,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(4905,5)">
 						<GetTo ZoneId="129" XYZ="-171.8929, 4, 175.3108"/>
@@ -929,20 +823,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(66653) == 255">
 					<While Condition="not NqHasAtLeast(5040,5)">
-						<LisbethTravel Zone="155" Position="223.9285, 312, -240.9699"/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="Sneak"/>
-						<WaitTimer WaitTime="2"/>
-						<If Condition="not HasAtLeast(2605,10)">
-							<LisbethTravel Zone="155" Subzone="402" Position="-414.2118, 211, -271.992"/>
-							<BuyItem ItemId="2605" ItemCount="50" DialogOption="4" NpcId="1006800" XYZ="-410.6966, 210.8949, -276.1425"/>
-						</If>
-						<ExFish Stealth="True" Mooch="0" Bait="Hoverworm" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(5040,5)"><!-- Cloud Cutter -->
-							<FishSpots>
-								<FishSpot XYZ="-373.9706, 198.4853, -320.7455" Heading="2.713604"/>
-								<FishSpot XYZ="-404.2428, 191.7843, -334.0057" Heading="3.084312"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':5040,'Amount':5,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(5040,5)">
 						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
@@ -1010,20 +891,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(66654) == 4">
 					<While Condition="not NqHasAtLeast(4917,1)">
-						<If Condition="not HasAtLeast(2591,10)">
-							<LisbethTravel Zone="138" Position="240.2533, -24.99897, 231.4336"/>
-							<BuyItem ItemId="2591" ItemCount="50" DialogOption="2" NpcId="1003264" XYZ="240.2533, -24.99897, 231.4336"/>
-						</If>
-						<LisbethTravel Zone="137" Position="493.9612, 17.39324, 463.9441"/>
-						<WaitTimer WaitTime="2"/>
-						<RunCode Name="Sneak"/>
-						<WaitTimer WaitTime="2"/>
-						<ExFish Stealth="True" Mooch="2" Bait="Rat Tail" MinFish="10" MaxFish="15" ShuffleFishSpots="True" Condition="not NqHasAtLeast(4917,1)"><!-- Mazlaya Marlin -->
-							<FishSpots>
-								<FishSpot XYZ="559.2889, 15.5846, 101.3109" Heading="2.519588"/>
-								<FishSpot XYZ="557.1368, 15.5846, 105.8826" Heading="5.771746"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':4917,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(4917,1)">
 						<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
@@ -1175,18 +1043,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(67622) == 255">
 					<While Condition="not HasAtLeast(12713,3)">
-						<If Condition="not HasAtLeast(12704,10)">
-              <LisbethTravel Zone="397" Subzone="2204" Position="499.8187, 212.5399, 716.6222"/>
-							<NoCombatMoveTo Name="Independent Merchant" XYZ="504.5396, 212.7327, 718.5625"/>
-							<BuyItem ItemId="12704" ItemCount="99" DialogOption="4" NpcId="1011228" XYZ="504.5396, 212.7327, 718.5625"/>
-						</If>
-						<LisbethTravel Zone="397" Position="285.1617, 132.4532, -249.6214"/>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="0" Bait="Stonefly Nymph" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12704,10) and not HasAtLeast(12713,3)">
-							<FishSpots>
-								<FishSpot XYZ="299.7361, 132.1549, -248.1964" Heading="1.919566"/>
-								<FishSpot XYZ="287.2595, 132.0735, -230.8772" Heading="5.957568"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':12713,'Amount':3,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="HasAtLeast(12713,3)">
 						<LisbethTravel Zone="397" Position="456.0768, 200.2136, 668.635"/>
@@ -1249,21 +1106,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(67623) == 3">
 					<While Condition="not HasAtLeast(12769,3)">
-						<If Condition="not HasAtLeast(12711,10)">
-							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
-						</If>
-						<If Condition="ClassName != ClassJobType.Fisher">
-							<ChangeClass Job="Fisher"/>
-						</If>
-						<If Condition="not IsOnMap(398)">
-							<LisbethTravel Zone="398" Position="527.918, -51.27571, 41.3532"/>
-						</If>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Bait="Brute Leech" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12711,10) and not HasAtLeast(12769,3)">
-							<FishSpots>
-								<FishSpot XYZ="277.9648, -21.38772, -580.2007" Heading="2.044546"/>
-								<FishSpot XYZ="414.1869, -7.255656, -600.8729" Heading="1.525935"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':12769,'Amount':3,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="HasAtLeast(12769,3)">
 						<LisbethTravel Zone="398" Position="523.6133, -51.424, 62.54675"/>
@@ -1338,22 +1181,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(67624) == 4">
 					<While Condition="not HasAtLeast(12793,1)">
-						<If Condition="not HasAtLeast(12712,10)">
-							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12712,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
-						</If>
-						<If Condition="ClassName != ClassJobType.Fisher">
-							<ChangeClass Job="Fisher"/>
-						</If>
-						<If Condition="not IsOnMap(400)">
-							<LisbethTravel Zone="400" Position="252.6177, -42.16244, 590.2133"/>
-						</If>
-						<LisbethTravel Zone="400" Position="440.869, -29.54482, 218.6229"/>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Bait="Giant Crane Fly" MinFish="20" MaxFish="25" ShuffleFishSpots="True" Condition="HasAtLeast(12712,10) and not HasAtLeast(12793,1)"><!-- Letter Puffer -->
-							<FishSpots>
-								<FishSpot XYZ="444.9158, -31.74853, 222.8789" Heading="0.5723944"/>
-                <FishSpot XYZ="452.3007, -29.60526, 217.5842" Heading="0.6325054"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':12793,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="HasAtLeast(12793,1)">
 						<LisbethTravel Zone="400" Position="441.306, -29.3383, 218.1277"/>
@@ -1432,21 +1260,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(67625) == 255">
 					<While Condition="not HasAtLeast(12829,1)">
-						<If Condition="not HasAtLeast(12711,10)">
-							<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
-						</If>
-						<If Condition="ClassName != ClassJobType.Fisher">
-							<ChangeClass Job="Fisher"/>
-						</If>
-						<If Condition="not IsOnMap(401)">
-							<LisbethTravel Zone="401" Position="-626.617, -122.5, 539.8152"/>
-						</If>
-						<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Snagging="true" Bait="Brute Leech" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HasAtLeast(12829,1) and HasAtLeast(12711,10)"><!-- Catkiller -->
-							<FishSpots>
-								<FishSpot XYZ="404.9829, -186.4827, 830.9991" Heading="6.278952"/>
-								<FishSpot XYZ="420.9894, -186.4232, 818.8319" Heading="1.183289"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':12829,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="HasAtLeast(12829,1)">
 						<LisbethTravel Zone="401" Position="400.7477, -123.263, 674.9523"/>
@@ -1579,17 +1393,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(68432) == 2">
 					<While Condition="not (NqHasAtLeast(17949,3) or HasAtLeast(17949,3))">
-						<If Condition="not HasAtLeast(20613,50)">
-							<LisbethTravel Zone="612" Subzone="2613" Position="-632.6987, 130.1143, -523.9323"/>
-							<BuyItem ItemId="20613" ItemCount="99" DialogOption="6" NpcId="1019513" XYZ="-634.1802, 130.086, -526.0853"/>
-						</If>
-            <LisbethTravel Zone="612" Subzone="2601" Position="-227.2903, 59.35556, -635.7797"/>
-						<ExFish Stealth="True" Bait="Salmon Roe" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not (NqHasAtLeast(17949,3) or HasAtLeast(17949,3)) and HasAtLeast(20613,10)">
-							<FishSpots>
-								<FishSpot XYZ="-226.8359, 59.29554, -636.3755" Heading="1.404261"/>
-								<FishSpot XYZ="-230.8704, 60.15094, -622.243" Heading="1.425203"/>
-							</FishSpots>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':17949,'Amount':3,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="NqHasAtLeast(17949,3) or HasAtLeast(17949,3)">
 						<LisbethTravel Zone="612" Position="-229.7856, 60.06992, -635.7367"/>
@@ -1715,23 +1519,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(68433) == 4">
 					<While Condition="not HasAtLeast(17950,3)">
-						<If Condition="not IsOnMap(613)">
-							<LisbethTravel Zone="613" Position="96.49239, 3.033221, -585.4243"/>
-						</If>
-						<If Condition="not HasAtLeast(20617,10)">
-							<LisbethTravel Zone="613" Position="93.21729, 2.087148, -612.3598"/>
-							<BuyItem ItemId="20617" ItemCount="50" DialogOption="6" NpcId="1021501" XYZ="93.21729, 2.087148, -612.3598"/>
-						</If>
-						<LisbethTravel Zone="613" Position="570.0244, 9.866471, -724.6882"/>
-						<ExFish Stealth="True" Bait="Live Shrimp" Patience="Patience2" MinimumGPPatience="650" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HasAtLeast(17950,3) and HasAtLeast(20617,10)">
-							<FishSpots>
-								<FishSpot XYZ="513.9774, 0.241725, -623.5388" Heading="1.404261"/>
-								<FishSpot XYZ="523.3707, -0.3130698, -601.9462" Heading="1.425203"/>
-							</FishSpots>
-							<PatienceTugs>
-								<PatienceTug Mooch="0" TugType="Light"/>
-						</PatienceTugs>
-						</ExFish>
+						<Lisbeth Json="[{'Group':1,'Item':17950,'Amount':3,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="HasAtLeast(17950,3)">
 						<LisbethTravel Zone="613" Subzone="2767" Position="524.2776, -0.01325494, -245.0822"/>
@@ -1916,22 +1704,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(68435) == 255">
 					<While Condition="not HasAtLeast(17952,5)">
-						<If Condition="not HasAtLeast(20617,50)">
-							<LisbethTravel Zone="613" Position="94.41652, 2.080172, -610.312"/>
-							<BuyItem ItemId="20617" ItemCount="99" DialogOption="6" InteractDistance="3.0" NpcId="1021501" XYZ="93.21729, 2.087148, -612.3598"/>
-						</If>
-						<If Condition="not IsOnMap(613)">
-							<LisbethTravel Zone="613" Position="95.49872, 0.568496, -552.3418"/>
-						</If>
-						<Fish Stealth="True" Mooch="0" Bait="Live Shrimp" MinFish="20" MaxFish="50" ShuffleFishSpots="True" Patience="Patience2" MinimumGPPatience="650" Condition="HasAtLeast(20617,10) and not HasAtLeast(17952,5)">
-							<FishSpots>
-								<FishSpot XYZ="94.0839, -0.06910139, -539.1041" Heading="6.21"/>
-								<FishSpot XYZ="149.8477, -0.07072884, -584.2156" Heading="0.73"/>
-							</FishSpots>
-							<PatienceTugs>
-								<PatienceTug Mooch="0" TugType="Heavy"/>
-							</PatienceTugs>
-						</Fish>
+						<Lisbeth Json="[{'Group':1,'Item':17952,'Amount':5,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 					</While>
 					<If Condition="HasAtLeast(17952,5)">
 						<LisbethTravel Zone="613" Position="-749.6351, 1.559595, -456.9331"/>
