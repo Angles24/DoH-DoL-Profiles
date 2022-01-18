@@ -311,8 +311,8 @@ Profile and fixes by Anges
 			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Condition="not IsAetherCurrentCompleted(397,10)"/>
 		</If>-->
 		<If Condition="not IsAetherCurrentCompleted(397,6)">
-        <GetTo ZoneId="397" XYZ="-334.0353, 133.9894, -10.14728"/>
-			<UseObject NpcId="2006189" XYZ="-334.0353, 133.9894, -10.14728" Condition="not IsAetherCurrentCompleted(397,6)"/>
+        <GetTo ZoneId="397" XYZ="-332.9061, 126.8177, -29.95355"/>
+			<UseObject NpcId="2006189" XYZ="-332.9061, 126.8177, -29.95355" Condition="not IsAetherCurrentCompleted(397,6)"/>
 		</If>
 
 		<!-- Aether Current #9 -->
