@@ -15,7 +15,7 @@ Authors:  Kayla / Angles24
 	</While>
 
 	<!-- 84-86 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 83) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 86)">
+	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 83) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 88)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
