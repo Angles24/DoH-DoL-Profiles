@@ -14,8 +14,8 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	
-	<!-- 80-82  -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 79) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 82)">			
+	<!-- 80-84  -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 79) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 84)">			
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
@@ -33,22 +33,6 @@ Authors:  Kayla / Angles24
 			<BuyInclusionShopItem ItemId="33927" Count="0"/>
 		</While>
 	</While>
-
-	<!-- 82-84  -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 81) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 84)">
-		<If Condition="ClassName != ClassJobType.Culinarian">
-			<ChangeClass Job="Culinarian"/>
-		</If>			
-		<If Condition="not HasAtLeast(36523,5)">			
-			<LLToast message="Please buy Spiny King Crab x10 from Marketboard."/>
-			<LLStopBot/>
-		</If>
-		<If Condition="ClassName == ClassJobType.Culinarian">
-			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':35662,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
-		</If>
-	</If>
 	
 	<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 84">		
 		<WaitTimer WaitTime="5"/>
