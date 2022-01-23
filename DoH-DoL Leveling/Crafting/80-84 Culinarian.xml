@@ -20,6 +20,9 @@ Authors:  Kayla / Angles24
 			<ChangeClass Job="Culinarian"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Culinarian">
+			<If Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 80 and ItemCount(36386) &lt; 5">
+				<UserDialog IsBotContinueAllowed="True" DialogText="Please buy 'Northern Herring' from the Marketboard and then hit continue on this window.\n\n- If you are level 80, buy 20\n- If you are level 81, buy 15\n- If you are level 82, buy 10\n- If you are level 83, buy 5"/>
+			</If>	
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<Lisbeth Json="[{'Group':1,'Item':35661,'Amount':5,'Enabled':true,'Type':'Culinarian','Collectable':false, 'ConditionalJob':'Culinarian'}]"/>
