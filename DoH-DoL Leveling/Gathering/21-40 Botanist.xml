@@ -5,39 +5,38 @@ Angles24
 <Profile>
 	<Name>21-40 Botanist</Name>
 	<KillRadius>90</KillRadius>
-	
 	<Order>
-		
-	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
-			
-	<If Condition="ClassName != ClassJobType.Botanist">
-		<ChangeClass Job="Botanist"/>
-	</If>
-				
-    <If Condition="ClassName == ClassJobType.Botanist">
-		<WaitTimer WaitTime="2"/>
-		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="5"/>
-		
-		<!--Level 20 - Dressed to Harvest-->
-		<If Condition="not IsQuestCompleted(65543)">
-			<If Condition="not HasQuest(65543)">
-				<LogMessage Message="Picking up Level 20 - Dressed to Harvest."/>
-				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-				<If Condition="IsQuestAcceptQualified(65543)">
-					<LLPickupQuest NpcId="1000815" QuestId="65543" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLSmallTalk WaitTime="1500"/>
+		<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
+
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
+		</If>
+
+		<If Condition="ClassName == ClassJobType.Botanist">
+			<WaitTimer WaitTime="2"/>
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+
+			<!--Level 20 - Dressed to Harvest-->
+			<If Condition="not IsQuestCompleted(65543)">
+				<If Condition="not HasQuest(65543)">
+					<LogMessage Message="Picking up Level 20 - Dressed to Harvest."/>
+					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<If Condition="IsQuestAcceptQualified(65543)">
+						<LLPickupQuest NpcId="1000815" QuestId="65543" XYZ="-232.9017, 6.263501, -169.7613"/>
+						<LLSmallTalk WaitTime="1500"/>
+					</If>
 				</If>
-			</If>
-			<If Condition="not NqHasAtLeast(5599,99)">
-        <Lisbeth Json="[{'Group':1, 'Item':5599, 'Amount':15 ,'Enabled':true, 'Type':'Gather', 'AmountMode':'Restock'}]"/>
-			</If>
-			<If Condition="NqHasAtLeast(5599,99)">
-				<If Condition="GetQuestStep(65543) == 255">
+
+				<If Condition="not NqHasAtLeast(5599,15)">
+					<Lisbeth Json="[{'Group':1, 'Item':5599, 'Amount':15 ,'Enabled':true, 'Type':'Gather', 'AmountMode':'Restock'}]"/>
+				</If>
+
+				<If Condition="GetQuestStep(65543) == 255 and NqHasAtLeast(5599,15)">
 					<GetTo ZoneId="133" XYZ="-235.7631, 8, -147.0039"/>
-          <If Condition="ClassName != ClassJobType.Botanist">
-		       <ChangeClass Job="Botanist"/>
-	        </If>
+					<If Condition="ClassName != ClassJobType.Botanist">
+						<ChangeClass Job="Botanist"/>
+					</If>
 					<LLTurnIn ItemId="5599" QuestId="65543" StepId="255" NpcId="1000292" InteractDistance="2.0" XYZ="-235.7631, 8, -147.0039"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 20 - Dressed to Harvest - Completed."/>
@@ -52,7 +51,8 @@ Angles24
 		<!--Start Grind to Level 26-->
 		<If Condition="Core.Player.ClassLevel &lt; 26">
 			<LogMessage Message="Starting the Grind to Level 26."/>
-			<Lisbeth Json="[{'Group':0, 'Item':4835, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':26, 'ConditionalJob':'Botanist'}]"/><!-- Ala Mhigan Mustard -->
+			<Lisbeth Json="[{'Group':0, 'Item':4835, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':26, 'ConditionalJob':'Botanist'}]"/>
+			<!-- Ala Mhigan Mustard -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 26">
 			<LogMessage Message="Congrats on Level 26, moving on."/>
@@ -90,7 +90,8 @@ Angles24
 		<!--Start Grind to Level 31-->
 		<If Condition="Core.Player.ClassLevel &lt; 31">
 			<LogMessage Message="Starting the Grind to Level 31."/>
-			<Lisbeth Json="[{'Group':0, 'Item':4822, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':31, 'ConditionalJob':'Botanist'}]"/><!-- Jade Peas -->
+			<Lisbeth Json="[{'Group':0, 'Item':4822, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':31, 'ConditionalJob':'Botanist'}]"/>
+			<!-- Jade Peas -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 31">
 			<LogMessage Message="Congrats on Level 31, moving on."/>
@@ -136,7 +137,8 @@ Angles24
 		<!--Start Grind to Level 36-->
 		<If Condition="Core.Player.ClassLevel &lt; 36">
 			<LogMessage Message="Starting the Grind to Level 36."/>
-			<Lisbeth Json="[{'Group':0, 'Item':4822, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':36, 'ConditionalJob':'Botanist'}]"/><!-- Jade Peas -->
+			<Lisbeth Json="[{'Group':0, 'Item':4822, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':36, 'ConditionalJob':'Botanist'}]"/>
+			<!-- Jade Peas -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 36">
 			<LogMessage Message="Congrats on Level 36, moving on."/>
@@ -186,7 +188,8 @@ Angles24
 		<!--Start Grind to Level 40-->
 		<If Condition="Core.Player.ClassLevel &lt; 40">
 			<LogMessage Message="Starting the Grind to Level 40."/>
-			<Lisbeth Json="[{'Group':0, 'Item':4840, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':40, 'ConditionalJob':'Botanist'}]"/><!-- Mugwort -->
+			<Lisbeth Json="[{'Group':0, 'Item':4840, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':40, 'ConditionalJob':'Botanist'}]"/>
+			<!-- Mugwort -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 40">
 			<LogMessage Message="Congrats on Level 40, moving on."/>
@@ -195,10 +198,8 @@ Angles24
 			<WaitTimer WaitTime="5"/>
 		</If>
 		<!--End Grind to Level 40-->
-	</If>
-	
-	<LLoadProfile Path="../Start.xml"/>
-	
+
+		<LLoadProfile Path="../Start.xml"/>
 	</Order>
 	<GrindAreas>
 	</GrindAreas>
