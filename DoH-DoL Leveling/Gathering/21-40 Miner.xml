@@ -5,204 +5,212 @@ Angles24
 <Profile>
 	<Name>21-40 Miner</Name>
 	<KillRadius>90</KillRadius>
-	
 	<Order>
-		      
-	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
-	
-	<If Condition="ClassName != ClassJobType.Miner">
-		<ChangeClass Job="Miner"/>
-	</If>
-				
-    <If Condition="ClassName == ClassJobType.Miner">
-		<WaitTimer WaitTime="2"/>
-		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="5"/>
-		
-		<!--Level 20 - Old Wisdom, New Ways-->
-		<If Condition="not IsQuestCompleted(66140)">
-			<If Condition="not HasQuest(66140)">
-				<LogMessage Message="Picking up Level 20 - Old Wisdom, New Ways"/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
-				<If Condition="IsQuestAcceptQualified(66140)">
-					<LLPickupQuest NpcId="1002298" QuestId="66140" XYZ="-16.45324, 6.2, 157.4644"/>
-					<LLSmallTalk WaitTime="1500"/>
+		<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
+
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
+		</If>
+
+		<If Condition="ClassName == ClassJobType.Miner">
+			<WaitTimer WaitTime="2"/>
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+
+			<!--Level 20 - Old Wisdom, New Ways-->
+			<If Condition="not IsQuestCompleted(66140)">
+				<If Condition="not HasQuest(66140)">
+					<LogMessage Message="Picking up Level 20 - Old Wisdom, New Ways"/>
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					<!-- Ul'dah - Steps of Thal -->
+					<If Condition="IsQuestAcceptQualified(66140)">
+						<LLPickupQuest NpcId="1002298" QuestId="66140" XYZ="-16.45324, 6.2, 157.4644"/>
+						<LLSmallTalk WaitTime="1500"/>
+					</If>
 				</If>
-			</If>
-			<If Condition="not NqHasAtLeast(5599,15)">
-				<Lisbeth Json="[{'Item': 5599,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-			</If>
-			<If Condition="NqHasAtLeast(5599,99)">
-				<If Condition="GetQuestStep(66140) == 255">
-					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
+				<If Condition="not NqHasAtLeast(5599,15)">
+					<Lisbeth Json="[{'Item': 5599,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="GetQuestStep(66140) == 255 and NqHasAtLeast(5599,15)">
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					<!-- Ul'dah - Steps of Thal -->
 					<If Condition="ClassName != ClassJobType.Miner">
 						<ChangeClass Job="Miner"/>
 					</If>
 					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="5"/>
+					<WaitTimer WaitTime="2"/>
+					<AutoInventoryEquip/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
-		</If>
-		<!--End Old Wisdom, New Ways -->
+			<!--End Old Wisdom, New Ways -->
 
-		<!--Start - Grind to Level 26-->
-		<If Condition="Core.Player.ClassLevel &lt; 26">
-			<LogMessage Message="Starting the Grind to Level 26."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5524, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':26, 'ConditionalJob':'Miner'}]"/><!-- Alumen -->
-		</If>
-		<If Condition="Core.Player.ClassLevel == 26">
-			<LogMessage Message="Congrats on Level 26, moving on."/>
-			<WaitTimer WaitTime="2"/>
-		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="5"/>
-		</If>
-		<!--End Level 26 Grind-->
-
-		<!--Level 25 - Water From Stone-->
-		<If Condition="IsQuestCompleted(66140) and not IsQuestCompleted(66141)">
-			<If Condition="not HasQuest(66141)">
-			<LogMessage Message="Picking up Level 25 - Water From Stone"/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
-				<If Condition="IsQuestAcceptQualified(66141)">
-					<LLPickupQuest NpcId="1002298" QuestId="66141" XYZ="-16.45324, 6.2, 157.4644"/>
-					<LLSmallTalk WaitTime="1500"/>
-				</If>
+			<!--Start - Grind to Level 26-->
+			<If Condition="Core.Player.ClassLevel &lt; 26">
+				<LogMessage Message="Starting the Grind to Level 26."/>
+				<Lisbeth Json="[{'Group':0, 'Item':5524, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':26, 'ConditionalJob':'Miner'}]"/>
+				<!-- Alumen -->
 			</If>
-			<If Condition="not HasAtLeast(5491,15)">
-				<Lisbeth Json="[{'Item': 5491,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-			</If>
-			<If Condition="HasAtLeast(5491,15)">
-				<If Condition="GetQuestStep(66141) == 255">
-					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5491" QuestId="66141" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
-					<LLSmallTalk WaitTime="1500"/>
-					<LogMessage Message="Level 25 - Water From Stone - Completed."/>
-				<WaitTimer WaitTime="2"/>
-				<AutoInventoryEquip/>
-				<WaitTimer WaitTime="5"/>
-				</If>
-			</If>
-		</If>
-		<!--End Water From Stone-->
-
-		<!--Start - Grind to Level 31-->
-		<If Condition="Core.Player.ClassLevel &lt; 31">
-			<LogMessage Message="Starting the Grind to Level 31."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5528, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':31, 'ConditionalJob':'Miner'}]"/><!-- Bomb Ash -->
-		</If>
-		<If Condition="Core.Player.ClassLevel == 31">
-			<LogMessage Message="Congrats on Level 31, moving on."/>
-			<WaitTimer WaitTime="2"/>
-		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="5"/>
-		</If>
-		<!--End Level 31 Grind-->
-
-		<!--Level 30 - Obsidian Race-->
-		<If Condition="IsQuestCompleted(66141) and not IsQuestCompleted(66142)">
-			<If Condition="not HasQuest(66142)">
-				<LogMessage Message="Picking up Level 30 - Obsidian Race."/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
-				<If Condition="IsQuestAcceptQualified(66142)">
-					<LLPickupQuest NpcId="1002298" QuestId="66142" XYZ="-16.45324, 6.2, 157.4644"/>
-					<LLSmallTalk WaitTime="1500"/>
-				</If>
-			</If>
-			<If Condition="GetQuestStep(66142) == 1">
-				<GetTo ZoneId="131" XYZ="-5.715219, 6.2, 165.6139"/>
-				<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.715219, 6.2, 165.6139"/>
-				<LLSmallTalk WaitTime="1500"/>
-			</If>
-			<If Condition="GetQuestStep(66142) == 2">
-				<GetTo ZoneId="131" XYZ="-80.49365, 6.98457, 9.430854"/>
-				<LLTalkTo InteractDistance="1.0" NpcId="1003911" XYZ="-80.49365, 6.98457, 9.430854"/>
-				<LLSmallTalk WaitTime="1500"/>
-			</If>
-			<If Condition="not HasAtLeast(5125,15)">
-				<Lisbeth Json="[{'Item': 5125,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-			</If>
-			<If Condition="HasAtLeast(5125,15)">
-				<If Condition="GetQuestStep(66142) == 3">
-					<GetTo ZoneId="131" XYZ="-5.64079, 6.2, 166.6474"/><!-- Ul'dah - Steps of Thal -->
-					<LLHandOver ItemId="5125" QuestId="66142" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.64079, 6.2, 166.6474"/>
-					<LLSmallTalk WaitTime="1500"/>
-				</If>
-			</If>
-			<If Condition="GetQuestStep(66142) == 255">
-				<LLTurnIn QuestId="66142" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
-				<LLSmallTalk WaitTime="1500"/>
-				<LogMessage Message="Level 30 - Obsidian Race - Completed."/>
+			<If Condition="Core.Player.ClassLevel == 26">
+				<LogMessage Message="Congrats on Level 26, moving on."/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
 			</If>
-		</If>
-		<!--End Obsidian Race-->
+			<!--End Level 26 Grind-->
 
-		<!--Start - Grind to Level 36-->
-		<If Condition="Core.Player.ClassLevel &lt; 36">
-			<LogMessage Message="Starting the Grind to Level 36."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5114, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':36, 'ConditionalJob':'Miner'}]"/><!-- Mythril Ore-->
-		</If>
-		<If Condition="Core.Player.ClassLevel == 36">
-			<LogMessage Message="Congrats on Level 36, moving on."/>
-			<WaitTimer WaitTime="2"/>
-		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="5"/>
-		</If>
-		<!--End Level 36 Grind-->
-
-		<!--Level 35 - Amethysts Are Forever-->
-		<If Condition="IsQuestCompleted(66142) and not IsQuestCompleted(66179)">
-			<If Condition="not HasQuest(66179)">
-				<LogMessage Message="Picking up Level 35 - Amethysts Are Forever."/>
-				<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
-				<If Condition="IsQuestAcceptQualified(66179)">
-					<LLPickupQuest NpcId="1002298" QuestId="66179" XYZ="-16.45324, 6.2, 157.4644"/>
-					<LLSmallTalk WaitTime="1500"/>
+			<!--Level 25 - Water From Stone-->
+			<If Condition="IsQuestCompleted(66140) and not IsQuestCompleted(66141)">
+				<If Condition="not HasQuest(66141)">
+					<LogMessage Message="Picking up Level 25 - Water From Stone"/>
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					<!-- Ul'dah - Steps of Thal -->
+					<If Condition="IsQuestAcceptQualified(66141)">
+						<LLPickupQuest NpcId="1002298" QuestId="66141" XYZ="-16.45324, 6.2, 157.4644"/>
+						<LLSmallTalk WaitTime="1500"/>
+					</If>
+				</If>
+				<If Condition="not HasAtLeast(5491,15)">
+					<Lisbeth Json="[{'Item': 5491,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="HasAtLeast(5491,15)">
+					<If Condition="GetQuestStep(66141) == 255">
+						<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+						<!-- Ul'dah - Steps of Thal -->
+						<LLTurnIn ItemId="5491" QuestId="66141" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+						<LLSmallTalk WaitTime="1500"/>
+						<LogMessage Message="Level 25 - Water From Stone - Completed."/>
+						<WaitTimer WaitTime="2"/>
+						<AutoInventoryEquip/>
+						<WaitTimer WaitTime="5"/>
+					</If>
 				</If>
 			</If>
-			<If Condition="GetQuestStep(66179) == 1">
-				<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.306236, 6.2, 165.6101"/>
-				<LLSmallTalk WaitTime="1500"/>
+			<!--End Water From Stone-->
+
+			<!--Start - Grind to Level 31-->
+			<If Condition="Core.Player.ClassLevel &lt; 31">
+				<LogMessage Message="Starting the Grind to Level 31."/>
+				<Lisbeth Json="[{'Group':0, 'Item':5528, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':31, 'ConditionalJob':'Miner'}]"/>
+				<!-- Bomb Ash -->
 			</If>
-			<If Condition="not HasAtLeast(5138,20)">
-				<Lisbeth Json="[{'Item': 5138,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
-			</If>
-			<If Condition="HasAtLeast(5138,20)">
-				<If Condition="GetQuestStep(66179) == 255">
-					<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5138" QuestId="66179" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
-					<LLSmallTalk WaitTime="1500"/>
-					<LogMessage Message="Level 35 - Amethysts Are Forever - Completed."/>
+			<If Condition="Core.Player.ClassLevel == 31">
+				<LogMessage Message="Congrats on Level 31, moving on."/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
 				<WaitTimer WaitTime="5"/>
+			</If>
+			<!--End Level 31 Grind-->
+
+			<!--Level 30 - Obsidian Race-->
+			<If Condition="IsQuestCompleted(66141) and not IsQuestCompleted(66142)">
+				<If Condition="not HasQuest(66142)">
+					<LogMessage Message="Picking up Level 30 - Obsidian Race."/>
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					<!-- Ul'dah - Steps of Thal -->
+					<If Condition="IsQuestAcceptQualified(66142)">
+						<LLPickupQuest NpcId="1002298" QuestId="66142" XYZ="-16.45324, 6.2, 157.4644"/>
+						<LLSmallTalk WaitTime="1500"/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(66142) == 1">
+					<GetTo ZoneId="131" XYZ="-5.715219, 6.2, 165.6139"/>
+					<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.715219, 6.2, 165.6139"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+				<If Condition="GetQuestStep(66142) == 2">
+					<GetTo ZoneId="131" XYZ="-80.49365, 6.98457, 9.430854"/>
+					<LLTalkTo InteractDistance="1.0" NpcId="1003911" XYZ="-80.49365, 6.98457, 9.430854"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+				<If Condition="not HasAtLeast(5125,15)">
+					<Lisbeth Json="[{'Item': 5125,'Group': 0,'Amount': 15,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="HasAtLeast(5125,15)">
+					<If Condition="GetQuestStep(66142) == 3">
+						<GetTo ZoneId="131" XYZ="-5.64079, 6.2, 166.6474"/>
+						<!-- Ul'dah - Steps of Thal -->
+						<LLHandOver ItemId="5125" QuestId="66142" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.64079, 6.2, 166.6474"/>
+						<LLSmallTalk WaitTime="1500"/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(66142) == 255">
+					<LLTurnIn QuestId="66142" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+					<LLSmallTalk WaitTime="1500"/>
+					<LogMessage Message="Level 30 - Obsidian Race - Completed."/>
+					<WaitTimer WaitTime="2"/>
+					<AutoInventoryEquip/>
+					<WaitTimer WaitTime="5"/>
 				</If>
 			</If>
-		</If>
-		<!--End Amethysts Are Forever-->
+			<!--End Obsidian Race-->
 
-		<!--Start - Grind to Level 40-->
-		<If Condition="Core.Player.ClassLevel &lt; 40">
-			<LogMessage Message="Starting the Grind to Level 40."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5525, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':40, 'ConditionalJob':'Miner'}]"/><!-- Black Alumen -->
+			<!--Start - Grind to Level 36-->
+			<If Condition="Core.Player.ClassLevel &lt; 36">
+				<LogMessage Message="Starting the Grind to Level 36."/>
+				<Lisbeth Json="[{'Group':0, 'Item':5114, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':36, 'ConditionalJob':'Miner'}]"/>
+				<!-- Mythril Ore-->
+			</If>
+			<If Condition="Core.Player.ClassLevel == 36">
+				<LogMessage Message="Congrats on Level 36, moving on."/>
+				<WaitTimer WaitTime="2"/>
+				<AutoInventoryEquip/>
+				<WaitTimer WaitTime="5"/>
+			</If>
+			<!--End Level 36 Grind-->
+
+			<!--Level 35 - Amethysts Are Forever-->
+			<If Condition="IsQuestCompleted(66142) and not IsQuestCompleted(66179)">
+				<If Condition="not HasQuest(66179)">
+					<LogMessage Message="Picking up Level 35 - Amethysts Are Forever."/>
+					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
+					<!-- Ul'dah - Steps of Thal -->
+					<If Condition="IsQuestAcceptQualified(66179)">
+						<LLPickupQuest NpcId="1002298" QuestId="66179" XYZ="-16.45324, 6.2, 157.4644"/>
+						<LLSmallTalk WaitTime="1500"/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(66179) == 1">
+					<LLTalkTo InteractDistance="1.0" NpcId="1003910" XYZ="-5.306236, 6.2, 165.6101"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+				<If Condition="not HasAtLeast(5138,20)">
+					<Lisbeth Json="[{'Item': 5138,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Gather','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+				</If>
+				<If Condition="HasAtLeast(5138,20)">
+					<If Condition="GetQuestStep(66179) == 255">
+						<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/>
+						<!-- Ul'dah - Steps of Thal -->
+						<LLTurnIn ItemId="5138" QuestId="66179" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
+						<LLSmallTalk WaitTime="1500"/>
+						<LogMessage Message="Level 35 - Amethysts Are Forever - Completed."/>
+						<WaitTimer WaitTime="2"/>
+						<AutoInventoryEquip/>
+						<WaitTimer WaitTime="5"/>
+					</If>
+				</If>
+			</If>
+			<!--End Amethysts Are Forever-->
+
+			<!--Start - Grind to Level 40-->
+			<If Condition="Core.Player.ClassLevel &lt; 40">
+				<LogMessage Message="Starting the Grind to Level 40."/>
+				<Lisbeth Json="[{'Group':0, 'Item':5525, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':40, 'ConditionalJob':'Miner'}]"/>
+				<!-- Black Alumen -->
+			</If>
+			<If Condition="Core.Player.ClassLevel == 40">
+				<LogMessage Message="Congrats on Level 40, moving on."/>
+				<WaitTimer WaitTime="2"/>
+				<AutoInventoryEquip/>
+				<WaitTimer WaitTime="5"/>
+			</If>
+			<!--End Level 40 Grind-->
 		</If>
-		<If Condition="Core.Player.ClassLevel == 40">
-			<LogMessage Message="Congrats on Level 40, moving on."/>
-			<WaitTimer WaitTime="2"/>
-		<AutoInventoryEquip/>
-		<WaitTimer WaitTime="5"/>
-		</If>
-		<!--End Level 40 Grind-->
-	</If>
-	
-	<LLoadProfile Path="../Start.xml"/>
-	
+
+		<LLoadProfile Path="../Start.xml"/>
+
 	</Order>
 	<GrindAreas>
 	</GrindAreas>
@@ -226,6 +234,6 @@ Angles24
 					item.Move(EquipSlot);
 				}
 		]]>
-		</CodeChunk>		
+		</CodeChunk>
 	</CodeChunks>
 </Profile>
