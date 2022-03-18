@@ -835,15 +835,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 		
-		<If Condition="IsCNClient()">
-			<If Condition="not IsOnMap(129)">
-				<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/><!-- Limsa Lominsa Lower Decks -->
-			</If>
-			<LogMessage Message="Congrats on level 80 on BTN/MIN and all Crafters."/>
-			<RunCode Name="finish"/>		
-			<LLStopBot/>
-		</If>
-		
 		<!-- Craft Gathering and Crafting Gear 80 -->
 		<If Condition="&craft80; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 489) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 489) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 489) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 489) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 489) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 489) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 489) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 489) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 489) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 489))">
 			<LogMessage Message="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
