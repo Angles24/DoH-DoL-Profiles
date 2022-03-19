@@ -149,6 +149,15 @@ Kayla / Angles24
 			<LLSmallTalk WaitTime="1500"/>
 		</If>
 		<!-- End - Reach Long and Prosper -->
+		
+		<!-- The Boutique Always Wins -->
+		<If Condition="IsQuestCompleted(67634) and not IsQuestCompleted(69139) and not HasQuest(69139)">
+			<LogMessage Message="Completed Quest - The Boutique Always Wins!"/>
+			<GetTo ZoneId="820" XYZ="12.98535, 82.05, -25.22321"/>
+			<LLTalkTo NpcId="1027544" XYZ="12.98535, 82.05, -25.22321" QuestId="69139"/>
+			<LLSmallTalk WaitTime="1500"/>
+		</If>
+		<!-- End - The Boutique Always Wins -->
 	</If>
 		
 		<WaitTimer WaitTime="2"/>
