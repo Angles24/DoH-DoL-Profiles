@@ -29,7 +29,12 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Blacksmith">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':31938,'Amount':15,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+			<If Condition="not Core.Me.HasAura(1411)">
+				<Lisbeth Json="[{'Group':1,'Item':31938,'Amount':20,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+			</If>
+			<If Condition="Core.Me.HasAura(1411)">
+				<Lisbeth Json="[{'Group':1,'Item':31938,'Amount':10,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+			</If>
 		</If>
 	</If>
 
