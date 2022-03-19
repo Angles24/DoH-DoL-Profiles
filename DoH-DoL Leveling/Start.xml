@@ -7,7 +7,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 <!-- Profile Settings -->
 <!-- Overrides: Set these to 0 to IGNORE that gear check as you level. -->
 <!ENTITY craft21 "1">
-<!ENTITY craft40 "1">
 <!ENTITY craft51 "1">
 <!ENTITY craft63 "1">
 <!ENTITY craft70 "1">
@@ -39,8 +38,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 	<Name>Start Profile</Name>
 	<Order>
 	
-	<RunCode Name="announcment"/>
-	<RunCode Name="Disable_Flight"/>
+	<DisablePlugin Name="Enable Flight"/>
 	
 	<!-- Check to see if we have unlock all Crafting Profiles -->
 			<If Condition="not (IsQuestCompleted(65807) and IsQuestCompleted(65809) 
@@ -49,7 +47,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 							and IsQuestCompleted(66144) and IsQuestCompleted(66070) 
 							and IsQuestCompleted(66111) and IsQuestCompleted(66133))">
 				<LogMessage Message="Going to learn Classes!"/>
-				<RunCode Name="classes"/>
+				<LLToast message="Going to learn Doh/DoL classes, this profile will stop when completed!"/>
 				<LLoadProfile Path="Quests/UnlockDoHDoLClasses.xml"/>
 			</If>
 			
@@ -112,8 +110,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		<!-- Unlock Ishgard -->
 			<If Condition="not IsQuestCompleted(67783)"><!-- Check to See if Litany of Peace is completed. -->
-				<RunCode Name="Profile2"/>
-				<LLStopBot/>
+				<UserDialog DialogText="You have not completed the quest Litany of Peace HW Patch 3.3.\n\nPlease run through Heavensward MSQ to complete the quest!"/>	
 			</If>
 			<If Condition="IsQuestCompleted(67783) and (not IsQuestCompleted(69208) or not IsQuestCompleted(69708))">
 				<LLoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
@@ -123,8 +120,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<!-- Craft Gathering and Crafting Gear 21 -->
 			<If Condition="&craft21; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 17) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 17) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 17) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 17) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 17) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 17) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 17) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 17) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 17) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 17))">
 				<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
-				<RunCode Name="craft21"/>
-				<LLStopBot/>
+				<UserDialog DialogText="Craft level 21 craft and gather gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change craft21 1 to craft21 0, save and start the bot again."/>	
 			</If>
 		
 		<!-- 21-51 Ishgard Crafting -->
@@ -212,38 +208,17 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				</If>
 			</If>
 		</If>
-	
-			
-		<!-- Gatherer's to 40 -->
-		<If Condition="&min; == 1">
-			<If Condition="not IsQuestCompleted(66179) or Core.Me.Levels[ClassJobType.Miner] &lt; 40">
-				<LLoadProfile Path="Gathering/21-40 Miner.xml"/>
-			</If>
-		</If>
-		<If Condition="&btn; == 1">
-			<If Condition="not IsQuestCompleted(65546) or Core.Me.Levels[ClassJobType.Botanist] &lt; 40">
-				<LLoadProfile Path="Gathering/21-40 Botanist.xml"/>
-			</If>
-		</If>
-			
-		
-		<!-- Craft Level 40 Gathering Gear -->
-			<If Condition="&craft40; == 1 and ((&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 36) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 36))">
-				<LogMessage Message="Craft level 40 gathering gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
-				<RunCode Name="craft40"/>
-				<LLStopBot/>
-			</If>
 		
 				
 		<!-- Gatherer's to 51 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66182) or Core.Me.Levels[ClassJobType.Miner] &lt; 51">
-				<LLoadProfile Path="Gathering/40-51 Miner.xml"/>
+				<LLoadProfile Path="Gathering/21-51 Miner.xml"/>
 			</If>
 		</If>
 		<If Condition="&btn; == 1">
 			<If Condition="not IsQuestCompleted(65549) or Core.Me.Levels[ClassJobType.Botanist] &lt; 51">
-				<LLoadProfile Path="Gathering/40-51 Botanist.xml"/>
+				<LLoadProfile Path="Gathering/21-51 Botanist.xml"/>
 			</If>
 		</If>
 		
@@ -271,9 +246,8 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		<!-- Craft Gathering and Crafting Gear 51 -->
 			<If Condition="&craft51; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 50) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 50) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 50) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 50) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 50) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 50) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 50) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 50) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 54) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 54))">
-				<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
-				<RunCode Name="craft51"/>
-				<LLStopBot/>
+				<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>		
+				<UserDialog DialogText="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft51 1' to 'craft51 0', save and start thebot again."/>	
 			</If>
 		
 				
@@ -405,7 +379,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 							and IsQuestCompleted(67632) and IsQuestCompleted(67633)
 							and IsQuestCompleted(66174) and IsQuestCompleted(66175)
 							and IsQuestCompleted(66999) and IsQuestCompleted(67634)
-							and IsQuestCompleted(68477))">
+							and IsQuestCompleted(68477) and IsQuestCompleted(69139))">
 				<LogMessage Message="Going to learn Collectables and More!"/>
 				<LLoadProfile Path="Quests/Unlock Collectables and More.xml"/>
 			</If>
@@ -414,8 +388,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<!-- Craft Gathering and Crafting Gear 63 -->
 			<If Condition="&craft63; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 190) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 190) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 190) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 190) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 190) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 190) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 190) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 190) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 190) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 190))">
 				<LogMessage Message="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
-				<RunCode Name="craft63"/>
-				<LLStopBot/>
+				<UserDialog DialogText="Craft level 63 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft63 1' to 'craft63 0', save and start thebot again."/>	
 			</If>			
 			
 			
@@ -514,8 +487,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<!-- Craft Class Quest Items and Get Master III Books -->
 			<If Condition="(&craftClass; == 1) and not (IsQuestCompleted(67979) and IsQuestCompleted(68153) and IsQuestCompleted(68132) and IsQuestCompleted(68137) and IsQuestCompleted(67969) and IsQuestCompleted(67974) and IsQuestCompleted(68142) and IsQuestCompleted(68147))">
 				<LogMessage Message="Get Master III books and then Craft class quest items, import orders into lisbeth. You can find it under Quest Items folder, clear bags before beginning and store items in a safe place for later and set craftClass setting to 0 on start profile."/>
-				<RunCode Name="craftClass"/>
-				<LLStopBot/>
+				<UserDialog DialogText="Get Master III books and then Craft class quest items, import orders into lisbeth. You can find it under Quest Items folder, clear bags before beginning and store items in a safe place for later and edit the Start.xml profile and change 'craftClass 1' to 'craftClass 0', save and start thebot again."/>	
 			</If>		
 		
 				
@@ -646,57 +618,13 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					<LLoadProfile Path="DiademCN/63-70 CulinarianD.xml"/>
 				</If>
 			</If>
-		</If>
-
-
-		<!-- NoN Preferred Realm Class Quest Profiles -->
-			<If Condition="&crp; == 1">
-				<If Condition="not IsQuestCompleted(67981)">
-					<LLoadProfile Path="Quests/Carpenter Class Quests.xml"/>
-				</If>
-			</If>
-			<If Condition="&bsm; == 1">
-				<If Condition="not IsQuestCompleted(68155)">
-					<LLoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
-				</If>
-			</If>
-			<If Condition="&arm; == 1">
-				<If Condition="not IsQuestCompleted(68134)">
-					<LLoadProfile Path="Quests/Armorer Class Quests.xml"/>
-				</If>
-			</If>
-			<If Condition="&gsm; == 1">
-				<If Condition="not IsQuestCompleted(68139)">
-					<LLoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
-				</If>
-			</If>
-			<If Condition="&ltw; == 1">
-				<If Condition="not IsQuestCompleted(68151)">
-					<LLoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
-				</If>
-			</If>
-			<If Condition="&wvr; == 1">
-				<If Condition="not IsQuestCompleted(67971)">
-					<LLoadProfile Path="Quests/Weaver Class Quests.xml"/>
-				</If>
-			</If>
-			<If Condition="&alc; == 1">
-				<If Condition="not IsQuestCompleted(67976)">
-				<LLoadProfile Path="Quests/Alchemist Class Quests.xml"/>
-				</If>
-			</If>
-			<If Condition="&cul; == 1">
-				<If Condition="not IsQuestCompleted(68144)">
-					<LLoadProfile Path="Quests/Culinarian Class Quests.xml"/>
-				</If>
-			</If>			
+		</If>			
 			
 
 		<!-- Farm Yellow Scrip Level 70 Gear -->
 			<If Condition="&craft70; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 340) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 340) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 340) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 340) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 340) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 340) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 340) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 340) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 340) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 340))">
 				<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and make sure your gearsets are updated with the new gear."/>
-				<RunCode Name="craft70"/>
-				<LLStopBot/>
+				<UserDialog DialogText="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft70 1' to 'craft70 0', save and start thebot again."/>	
 			</If>		
 		
 		
@@ -838,15 +766,13 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<!-- Craft Gathering and Crafting Gear 80 -->
 		<If Condition="&craft80; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 489) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 489) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 489) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 489) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 489) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 489) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 489) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 489) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 489) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 489))">
 			<LogMessage Message="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
-			<RunCode Name="craft80"/>
-			<LLStopBot/>
+			<UserDialog DialogText="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft80 1' to 'craft80 0', save and start thebot again."/>	
 		</If>
 		
 		<!-- Endwalker MSQ Check -->
 		<If Condition="not IsQuestCompleted(69999)">
 			<LogMessage Message="Please finish the MSQ quest 'You're Not Alone' before continuing."/>
-			<RunCode Name="MSQ"/>		
-			<LLStopBot/>
+			<UserDialog DialogText="Please finish the Endwalker MSQ quest 'You're Not Alone' before continuing."/>	
 		</If>
 		
 		<!-- Endwalkers's Aether Currents -->
@@ -1009,179 +935,14 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/><!-- Limsa Lominsa Lower Decks -->
 		</If>
 		<LogMessage Message="Congrats on level 90 on BTN/MIN and all Crafters."/>
-		<RunCode Name="finish2"/>
+		<UserDialog DialogText="Congrats on level 90 on BTN/MIN and all Crafters."/>
 	
 	</Order>
 	<CodeChunks>
-		<CodeChunk Name="AutoEquip">
-        <![CDATA[ 
-            var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentVtable = patternFinder.Find("48 8D 05 ? ? ? ? C6 43 ? ? 48 89 03 48 8B C3 C7 43 ? ? ? ? ? Add 3 TraceRelative");
-            int id = AgentModule.FindAgentIdByVtable(agentVtable);
-
-            AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-
-            if (windowByName == null)
-            {
-                AgentModule.GetAgentInterfaceById(id).Toggle();
-            }
-
-            await Coroutine.Wait(10000, () => RaptureAtkUnitManager.GetWindowByName("RecommendEquip") != null);
-            
-            windowByName = RaptureAtkUnitManager.GetWindowByName("RecommendEquip");
-            
-            if (windowByName != null)
-            {
-                windowByName.SendAction(1, 3, 0);
-            }
-        ]]>
-        </CodeChunk>
-		<CodeChunk Name="UpdateGearSet">
-		<![CDATA[ 
-		   var patternFinder = new GreyMagic.PatternFinder(Core.Memory);
-            IntPtr agentCharVtable = patternFinder.Find("48 8D 05 ? ? ? ? 89 77 ? Add 3 TraceRelative");
-			int idChar = AgentModule.FindAgentIdByVtable(agentCharVtable);
-
-			AtkAddonControl windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName == null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-
-			await Coroutine.Wait(5000, () => RaptureAtkUnitManager.GetWindowByName("Character") != null);
-
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				windowByName.SendAction(1, 3, 0xF);
-			}
-            
-            await Coroutine.Wait(1000, () => SelectYesno.IsOpen);
-
-            if (SelectYesno.IsOpen)
-                SelectYesno.Yes();
-
-			await Coroutine.Wait(1000, () => !SelectYesno.IsOpen);
-			
-            await Coroutine.Sleep(200);
-			
-			windowByName = RaptureAtkUnitManager.GetWindowByName("Character");
-
-			if (windowByName != null)
-			{
-				AgentModule.GetAgentInterfaceById(idChar).Toggle();
-			}
-			
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="finish">
-		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Congrats on level 80 on BTN/MIN and all Crafters.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(40000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="finish2">
-		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Congrats on level 90 on BTN/MIN and all Crafters.\n:)", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(40000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="chocobo">
-		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Going to learn Chocobo Flying!", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(20000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="classes">
-		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Going to learn Doh/DoL classes, this profile will stop when completed!", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(20000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="Profile2">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "You have not completed the quest Litany of Peace HW Patch 3.3.\n Please run through Heavensward MSQ to complete the quest!", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="meld">
-		<![CDATA[
-			Core.OverlayManager.AddToast(() => "Please set the meld setting atop of Start profile to 0\n and meld any items you crafted and restart the profile.\n Info on required materia atop of Start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(40000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craft21">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 21 craft and gather gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craft40">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 40 gathering gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craft51">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 51 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craft63">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Craft level 63 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to craft and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craftClass">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Get Master III books and then Craft class quest items, import orders into lisbeth.\n You can find it under Quest Items folder, clear bags before beginning and store items in\n a safe place for later and set craftClass setting to 0 on start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);		
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craftClass1">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Clean inventory, set craftClass1 to 0 then restart start profile.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);		
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craft70">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Get level 70 gear, import order into lisbeth.\n You can find it under Gear Sets folder, remove any items you don't want to get and\n make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="craft80">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Get level 80 gear, import order into lisbeth.\n You can find it under Gear Sets folder, make sure your gearsets are updated with the new gear.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="MSQ">
-		<![CDATA[ 
-			Core.OverlayManager.AddToast(() => "Please finish the MSQ quest You're Not Alone before continuing.", TimeSpan.FromMilliseconds(25000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
-			await Coroutine.Sleep(25000);
-		]]>
-		</CodeChunk>
 		<CodeChunk Name="announcment">
 		<![CDATA[ 
 			Core.OverlayManager.AddToast(() => "Please see #doh-dol-issues channel for update on Endwalker.", TimeSpan.FromMilliseconds(5000), System.Windows.Media.Color.FromRgb(29,213,226), System.Windows.Media.Color.FromRgb(13,106,175), new System.Windows.Media.FontFamily("Gautami"));
 			await Coroutine.Sleep(5000);
-		]]>
-		</CodeChunk>
-		<CodeChunk Name="Disable_Flight">
-		<![CDATA[
-			foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
-			{
-			try
-			{
-				if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
-			}
-			catch (Exception ex) {  }
-			}
 		]]>
 		</CodeChunk>
 		<CodeChunk Name="SwitchDoHJob">
