@@ -503,8 +503,10 @@ Angles24
       </If>
       <If Condition="HasQuest(68146) and not IsQuestCompleted(68146) and GetQuestStep(68146) == 3">
         <LisbethTravel Zone="401" Position="-197.9598, -166.6103, 553.6044"/>
-		<RunCode Name="Requires_Melding"/>
-		<LLStopBot/>
+        <BotSettings BlockSkippingCutscenes="1"/>
+		<UserDialog QuestId="68146" StepId="3" DialogText="Please manually complete the Zoomie Zoom."/>	 
+        <WaitWhile Condition="not GetQuestStep(68146) == 4"/>
+        <BotSettings BlockSkippingCutscenes="0"/>
 	 </If>
       <If Condition="HasQuest(68146) and not IsQuestCompleted(68146) and GetQuestStep(68146) == 4">
         <LisbethTravel Zone="401" Position="-616.1193, -52.48719, -451.478"/>
