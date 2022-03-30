@@ -379,7 +379,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 							and IsQuestCompleted(67632) and IsQuestCompleted(67633)
 							and IsQuestCompleted(66174) and IsQuestCompleted(66175)
 							and IsQuestCompleted(66999) and IsQuestCompleted(67634)
-							and IsQuestCompleted(68477) and IsQuestCompleted(69139))">
+							and IsQuestCompleted(68477))">
 				<LogMessage Message="Going to learn Collectables and More!"/>
 				<LLoadProfile Path="Quests/Unlock Collectables and More.xml"/>
 			</If>
@@ -618,7 +618,18 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					<LLoadProfile Path="DiademCN/63-70 CulinarianD.xml"/>
 				</If>
 			</If>
-		</If>			
+		</If>	
+		
+		
+		<!-- Check to see if we have unlocked Collectables and More -->
+			<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
+							and IsQuestCompleted(67632) and IsQuestCompleted(67633)
+							and IsQuestCompleted(66174) and IsQuestCompleted(66175)
+							and IsQuestCompleted(66999) and IsQuestCompleted(67634)
+							and IsQuestCompleted(68477) and IsQuestCompleted(69139))">
+				<LogMessage Message="Going to learn Collectables and More!"/>
+				<LLoadProfile Path="Quests/Unlock Collectables and More.xml"/>
+			</If>		
 			
 
 		<!-- Farm Yellow Scrip Level 70 Gear -->
