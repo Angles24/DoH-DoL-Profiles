@@ -56,7 +56,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="not HasAtLeast(30136,50)">
 				<Log Message="Buy some Signature Skyball from Foundation!"/>
 				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+				<BuyItem ItemId="30136" ItemCount="99" DialogOption="6" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 			</While>
 			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
 			<Log Color="&LogTxt;" Message="Going to fish some Thinker's Coral!"/>
@@ -100,7 +100,7 @@ Requires: ExBuddy Plugin & LLamaLibrary BotBase
 			<While Condition="not HasAtLeast(30136,50)">
 				<Log Color="&LogTxt;" Message="Buy some Signature Skyball from Foundation!"/>
 				<GetTo ZoneId="418" XYZ="-161.5168, 16.99999, -57.14508"/>
-				<BuyItem ItemId="30136" ItemCount="99" DialogOption="3" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
+				<BuyItem ItemId="30136" ItemCount="99" DialogOption="6" NpcId="1032900" XYZ="-161.5168, 16.99999, -57.14508"/>
 			</While>
 			<Log Color="&LogTxt;" Message="Don't leave me unattended!"/>
 			<Log Color="&LogTxt;" Message="Going to fish some Dragonspine!"/>
