@@ -710,7 +710,7 @@ Angles24
 				</If>
 				<If Condition="GetQuestStep(66652) == 255">
 					<While Condition="not NqHasAtLeast(4905,5)">
-						<Lisbeth Json="[{'Group':1,'Item':4905,'Amount':5,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
+						<Lisbeth Json="[{'Group':1,'Item':4905,'Amount':5,'Enabled':true,'Type':'Fisher','Hq':true,'AmountMode':'Restock'}]" />
 					</While>
 					<If Condition="NqHasAtLeast(4905,5)">
 						<GetTo ZoneId="129" XYZ="-171.8929, 4, 175.3108"/>
