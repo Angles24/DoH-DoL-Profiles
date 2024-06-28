@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24
+-->
+<Profile>
+<Name>Crafting Alchemist to 100</Name>
+<Order>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="41766" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 94-96 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 93) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 96)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Alchemist">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':44223,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalJob':'Alchemist'}]"/>
+		</If>
+	</If>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="41766" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 96-98 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 95) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 98)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Alchemist">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':44224,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalJob':'Alchemist'}]"/>
+		</If>
+	</If>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="41766" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 98-100 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 97) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Alchemist">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':44225,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalJob':'Alchemist'}]"/>
+		</If>
+	</If>
+	
+	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 100">		
+		<WaitTimer WaitTime="5"/>
+		<LLoadProfile Path="94-100 Alchemist.xml"/>
+	</If>
+
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 100 on Alchemist, moving on."/>
+	<AutoInventoryEquip/>
+	<WaitTimer WaitTime="5"/>
+	<LLoadProfile Path="../Start.xml"/>
+
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.Utilities.Ishgard.Handin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>

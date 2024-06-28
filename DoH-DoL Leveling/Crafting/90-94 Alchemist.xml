@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Authors:  Kayla / Angles24
+-->
+<Profile>
+<Name>Crafting Alchemist to 94</Name>
+<Order>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 90-92  -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 89) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 92)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Alchemist">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':44221,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalJob':'Alchemist'}]"/>
+		</If>
+	</If>
+	
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+
+	<!-- 92-94  -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 81) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 94)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Alchemist">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{'Group':1,'Item':44222,'Amount':5,'Enabled':true,'Type':'Alchemist','Collectable':false, 'ConditionalJob':'Alchemist'}]"/>
+		</If>
+	</If>
+	
+	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 94">		
+		<WaitTimer WaitTime="5"/>
+		<LLoadProfile Path="90-94 Alchemist.xml"/>
+	</If>
+
+	<!-- Load Start -->
+	<LogMessage Message="Congrats on Level 94 on Alchemist, moving on."/>
+	<AutoInventoryEquip/>
+	<WaitTimer WaitTime="5"/>
+	<LLoadProfile Path="../Start.xml"/>
+
+</Order>
+<CodeChunks>
+	<CodeChunk name="Leave">
+	<![CDATA[
+		if (DutyManager.InInstance)
+		{
+		DutyManager.LeaveActiveDuty();
+		if (await Coroutine.Wait(30000, () => CommonBehaviors.IsLoading))
+		{
+		await Coroutine.Yield();
+		await Coroutine.Wait(Timeout.Infinite, () => !CommonBehaviors.IsLoading);
+		await Coroutine.Sleep(1000);
+		}
+		}
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="TurnIn">
+	<![CDATA[
+		Logging.Write("[Handin] calling");
+		await LlamaLibrary.Utilities.Ishgard.Handin();
+	]]>
+	</CodeChunk>
+</CodeChunks>
+</Profile>
