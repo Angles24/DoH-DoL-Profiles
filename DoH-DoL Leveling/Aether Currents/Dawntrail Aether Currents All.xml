@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Author: Angles24, Manta
+-->
+<Profile>
+  <Name>Dawntrail Aether Currents</Name>
+  <Order>
+	
+	<RunCode Name="SwitchCombatJob"/>
+	<RunCode Name="Disable_Flight"/>
+
+    <!-- Urqopacha -->
+
+    <If Condition="IsQuestCompleted(70431) and not (IsAetherCurrentCompleted(1187,0) and IsAetherCurrentCompleted(1187,1) and IsAetherCurrentCompleted(1187,2)
+				and IsAetherCurrentCompleted(1187,3) and IsAetherCurrentCompleted(1187,4) and IsAetherCurrentCompleted(1187,5)
+				and IsAetherCurrentCompleted(1187,6)	and IsAetherCurrentCompleted(1187,7) and IsAetherCurrentCompleted(1187,8)
+				and IsAetherCurrentCompleted(1187,9) and IsAetherCurrentCompleted(1187,10) and IsAetherCurrentCompleted(1187,11)
+				and IsAetherCurrentCompleted(1187,12) and IsAetherCurrentCompleted(1187,13) and IsAetherCurrentCompleted(1187,14))">
+      <LogMessage Message="Going to unlock Urqopacha Flying."/>
+      <LLToast message="Going to unlock Urqopacha Flying."/>
+	  
+	 <!-- QUESTS HERE -->
+	  
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 14)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="353.57, -107.702, -238.8" />
+		  <UseObject NpcId="2013924" XYZ="353.57, -107.702, -238.8" Condition="not IsAetherCurrentCompleted(1187, 14)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 13)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="-458.305, -29.6484, -493.919" />
+		  <UseObject NpcId="2013925" XYZ="-458.305, -29.6484, -493.919" Condition="not IsAetherCurrentCompleted(1187, 13)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 12)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="-198.46, 23.1426, -56.54" />
+		  <UseObject NpcId="2013929" XYZ="-198.46, 23.1426, -56.54" Condition="not IsAetherCurrentCompleted(1187, 12)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 11)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="-812.893, 57.4816, 105.509" />
+		  <UseObject NpcId="2013930" XYZ="-812.893, 57.4816, 105.509" Condition="not IsAetherCurrentCompleted(1187, 11)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 10)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="-202.8, -72.1271, -199" />
+		  <UseObject NpcId="2013926" XYZ="-202.8, -72.1271, -199" Condition="not IsAetherCurrentCompleted(1187, 10)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 9)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="414.78, -141.037, -681" />
+		  <UseObject NpcId="2013927" XYZ="414.78, -141.037, -681" Condition="not IsAetherCurrentCompleted(1187, 9)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 8)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="-134.576, -93.0551, -582.912" />
+		  <UseObject NpcId="2013928" XYZ="-134.576, -93.0551, -582.912" Condition="not IsAetherCurrentCompleted(1187, 8)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 7)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="70.1898, 0.658536, 746.44" />
+		  <UseObject NpcId="2013931" XYZ="70.1898, 0.658536, 746.44" Condition="not IsAetherCurrentCompleted(1187, 7)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 6)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="368.36, 61.0765, -9.23" />
+		  <UseObject NpcId="2013932" XYZ="368.36, 61.0765, -9.23" Condition="not IsAetherCurrentCompleted(1187, 6)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 5)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1187" XYZ="398.81, 86.0047, 261.39" />
+		  <UseObject NpcId="2013933" XYZ="398.81, 86.0047, 261.39" Condition="not IsAetherCurrentCompleted(1187, 5)" />
+		</If>
+	</If>
+	
+
+    <!-- Kozama'uka -->
+
+    <If Condition="IsQuestCompleted(70424) and not (IsAetherCurrentCompleted(1188,0) and IsAetherCurrentCompleted(1188,1) and IsAetherCurrentCompleted(1188,2)
+				and IsAetherCurrentCompleted(1188,3) and IsAetherCurrentCompleted(1188,4) and IsAetherCurrentCompleted(1188,5)
+				and IsAetherCurrentCompleted(1188,6) and IsAetherCurrentCompleted(1188,7) and IsAetherCurrentCompleted(1188,8)
+				and IsAetherCurrentCompleted(1188,9) and IsAetherCurrentCompleted(1188,10) and IsAetherCurrentCompleted(1188,11)
+				and IsAetherCurrentCompleted(1188,12) and IsAetherCurrentCompleted(1188,13) and IsAetherCurrentCompleted(1188,14))">
+      <LogMessage Message="Going to unlock Kozama'uka Flying."/>
+      <LLToast message="Going to unlock Kozama'uka Flying."/>
+	  
+	  <!-- QUESTS HERE -->
+
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 14)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="299.51, 1.41398, -688.42" />
+		  <UseObject NpcId="2013934" XYZ="299.51, 1.41398, -688.42" Condition="not IsAetherCurrentCompleted(1188, 14)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 13)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="-599.553, 5.1607, -179.443" />
+		  <UseObject NpcId="2013935" XYZ="-599.553, 5.1607, -179.443" Condition="not IsAetherCurrentCompleted(1188, 13)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 12)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="-294.179, 110.762, 640.009" />
+		  <UseObject NpcId="2013939" XYZ="-294.179, 110.762, 640.009" Condition="not IsAetherCurrentCompleted(1188, 12)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 11)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="48.9754, 111.338, 287.171" />
+		  <UseObject NpcId="2013940" XYZ="48.9754, 111.338, 287.171" Condition="not IsAetherCurrentCompleted(1188, 11)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 10)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="-638.039, 6.57127, -486.501" />
+		  <UseObject NpcId="2013936" XYZ="-638.039, 6.57127, -486.501" Condition="not IsAetherCurrentCompleted(1188, 10)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 9)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="918.152, 10.1397, -404.091" />
+		  <UseObject NpcId="2013937" XYZ="918.152, 10.1397, -404.091" Condition="not IsAetherCurrentCompleted(1188, 9)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 8)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="516.83, 17.9898, -348.03" />
+		  <UseObject NpcId="2013938" XYZ="516.83, 17.9898, -348.03" Condition="not IsAetherCurrentCompleted(1188, 8)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 7)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="-754.104, 138.692, 122.687" />
+		  <UseObject NpcId="2013941" XYZ="-754.104, 138.692, 122.687" Condition="not IsAetherCurrentCompleted(1188, 7)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 6)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="130.47, 115.174, 522.93" />
+		  <UseObject NpcId="2013942" XYZ="130.47, 115.174, 522.93" Condition="not IsAetherCurrentCompleted(1188, 6)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 5)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1188" XYZ="485.92, 121.404, 831.311" />
+		  <UseObject NpcId="2013943" XYZ="485.92, 121.404, 831.311" Condition="not IsAetherCurrentCompleted(1188, 5)" />
+		</If>
+	</If>
+	
+
+    <!-- Yak T'el -->
+
+    <If Condition="IsQuestCompleted(70445) and not (IsAetherCurrentCompleted(1189,0) and IsAetherCurrentCompleted(1189,1) and IsAetherCurrentCompleted(1189,2)
+				and IsAetherCurrentCompleted(1189,3) and IsAetherCurrentCompleted(1189,4) and IsAetherCurrentCompleted(1189,5)
+				and IsAetherCurrentCompleted(1189,6)	and IsAetherCurrentCompleted(1189,7) and IsAetherCurrentCompleted(1189,8)
+				and IsAetherCurrentCompleted(1189,9) and IsAetherCurrentCompleted(1189,10) and IsAetherCurrentCompleted(1189,11)
+				and IsAetherCurrentCompleted(1189,12) and IsAetherCurrentCompleted(1189,13) and IsAetherCurrentCompleted(1189,14))">
+      <LogMessage Message="Going to unlock Yak T'el Flying."/>
+      <LLToast message="Going to unlock Yak T'el Flying."/>
+
+      <!-- QUESTS HERE -->
+	  
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 14)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="-114.388, 5.86803, -527.111" />
+		  <UseObject NpcId="2013944" XYZ="-114.388, 5.86803, -527.111" Condition="not IsAetherCurrentCompleted(1189, 14)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 13)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="416.08, 15.5309, -544.98" />
+		  <UseObject NpcId="2013945" XYZ="416.08, 15.5309, -544.98" Condition="not IsAetherCurrentCompleted(1189, 13)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 12)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="-114.32, -212.192, 623.79" />
+		  <UseObject NpcId="2013949" XYZ="-114.32, -212.192, 623.79" Condition="not IsAetherCurrentCompleted(1189, 12)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 11)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="39.3742, -158.612, -2.31141" />
+		  <UseObject NpcId="2013950" XYZ="39.3742, -158.612, -2.31141" Condition="not IsAetherCurrentCompleted(1189, 11)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 10)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="-550.591, -4.35479, -137.652" />
+		  <UseObject NpcId="2013946" XYZ="-550.591, -4.35479, -137.652" Condition="not IsAetherCurrentCompleted(1189, 10)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 9)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="-184.71, 22.9362, -751.675" />
+		  <UseObject NpcId="2013947" XYZ="-184.71, 22.9362, -751.675" Condition="not IsAetherCurrentCompleted(1189, 9)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 8)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="610.773, 9.62139, 233.051" />
+		  <UseObject NpcId="2013948" XYZ="610.773, 9.62139, 233.051" Condition="not IsAetherCurrentCompleted(1189, 8)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 7)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="-676.539, -163.973, 236.164" />
+		  <UseObject NpcId="2013951" XYZ="-676.539, -163.973, 236.164" Condition="not IsAetherCurrentCompleted(1189, 7)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 6)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="205.188, -193.591, 160.998" />
+		  <UseObject NpcId="2013952" XYZ="205.188, -193.591, 160.998" Condition="not IsAetherCurrentCompleted(1189, 6)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 5)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1189" XYZ="747.188, -176.4, 712.672" />
+		  <UseObject NpcId="2013953" XYZ="747.188, -176.4, 712.672" Condition="not IsAetherCurrentCompleted(1189, 5)" />
+		</If>
+    </If>
+	
+
+    <!-- Shaaloani -->
+
+    <If Condition="IsQuestCompleted(70461) and not (IsAetherCurrentCompleted(1190,0) and IsAetherCurrentCompleted(1190,1) and IsAetherCurrentCompleted(1190,2)
+				and IsAetherCurrentCompleted(1190,3) and IsAetherCurrentCompleted(1190,4) and IsAetherCurrentCompleted(1190,5)
+				and IsAetherCurrentCompleted(1190,6) and IsAetherCurrentCompleted(1190,7) and IsAetherCurrentCompleted(1190,8)
+				and IsAetherCurrentCompleted(1190,9) and IsAetherCurrentCompleted(1190,10) and IsAetherCurrentCompleted(1190,11)
+				and IsAetherCurrentCompleted(1190,12) and IsAetherCurrentCompleted(1190,13) and IsAetherCurrentCompleted(1190,14))">
+      <LogMessage Message="Going to unlock Shaaloani Flying."/>
+      <LLToast message="Going to unlock Shaaloani Flying."/>
+
+      <!-- QUESTS HERE -->
+	  
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 14)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="296.071, 2.39316, 504.021" />
+		  <UseObject NpcId="2013954" XYZ="296.071, 2.39316, 504.021" Condition="not IsAetherCurrentCompleted(1190, 14)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 13)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="-709.42, 33.4075, -80.3693" />
+		  <UseObject NpcId="2013955" XYZ="-709.42, 33.4075, -80.3693" Condition="not IsAetherCurrentCompleted(1190, 13)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 12)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="-63.2181, 18.8507, -174.853" />
+		  <UseObject NpcId="2013959" XYZ="-63.2181, 18.8507, -174.853" Condition="not IsAetherCurrentCompleted(1190, 12)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 11)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="380.321, -16.9657, -508.157" />
+		  <UseObject NpcId="2013960" XYZ="380.321, -16.9657, -508.157" Condition="not IsAetherCurrentCompleted(1190, 11)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 10)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="-602.93, 37.75, -352.377" />
+		  <UseObject NpcId="2013956" XYZ="-602.93, 37.75, -352.377" Condition="not IsAetherCurrentCompleted(1190, 10)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 9)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="-192.187, 36.6847, -53.1777" />
+		  <UseObject NpcId="2013957" XYZ="-192.187, 36.6847, -53.1777" Condition="not IsAetherCurrentCompleted(1190, 9)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 8)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="-620.361, -9.0571, 323.397" />
+		  <UseObject NpcId="2013958" XYZ="-620.361, -9.0571, 323.397" Condition="not IsAetherCurrentCompleted(1190, 8)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 7)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="645.594, -11.7386, -417.655" />
+		  <UseObject NpcId="2013961" XYZ="645.594, -11.7386, -417.655" Condition="not IsAetherCurrentCompleted(1190, 7)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 6)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="183.905, 11.9269, -59.3121" />
+		  <UseObject NpcId="2013962" XYZ="183.905, 11.9269, -59.3121" Condition="not IsAetherCurrentCompleted(1190, 6)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 5)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1190" XYZ="658.289, 21.0219, 82.9938" />
+		  <UseObject NpcId="2013963" XYZ="658.289, 21.0219, 82.9938" Condition="not IsAetherCurrentCompleted(1190, 5)" />
+		</If>
+    </If>
+
+
+    <!-- Heritage Found -->
+
+    <If Condition="IsQuestCompleted(70480) and not (IsAetherCurrentCompleted(1191,0) and IsAetherCurrentCompleted(1191,1) and IsAetherCurrentCompleted(1191,2)
+				and IsAetherCurrentCompleted(1191,3) and IsAetherCurrentCompleted(1191,4) and IsAetherCurrentCompleted(1191,5)
+				and IsAetherCurrentCompleted(1191,6) and IsAetherCurrentCompleted(1191,7) and IsAetherCurrentCompleted(1191,8)
+				and IsAetherCurrentCompleted(1191,9) and IsAetherCurrentCompleted(1191,10) and IsAetherCurrentCompleted(1191,11)
+				and IsAetherCurrentCompleted(1191,12) and IsAetherCurrentCompleted(1191,13) and IsAetherCurrentCompleted(1191,14))">
+      <LogMessage Message="Going to unlock Mare Heritage Found Flying."/>
+      <LLToast message="Going to unlock Mare Heritage Found Flying."/>
+
+      <!-- QUESTS HERE -->
+	  
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 14)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="397.89, 145.347, 224.23" />
+		  <UseObject NpcId="2013964" XYZ="397.89, 145.347, 224.23" Condition="not IsAetherCurrentCompleted(1191, 14)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 13)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="204.578, 58.1954, -678.492" />
+		  <UseObject NpcId="2013965" XYZ="204.578, 58.1954, -678.492" Condition="not IsAetherCurrentCompleted(1191, 13)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 12)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="-585.41, 20.1695, -469.43" />
+		  <UseObject NpcId="2013969" XYZ="-585.41, 20.1695, -469.43" Condition="not IsAetherCurrentCompleted(1191, 12)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 11)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="-600.09, 2.21695, 267.44" />
+		  <UseObject NpcId="2013970" XYZ="-600.09, 2.21695, 267.44" Condition="not IsAetherCurrentCompleted(1191, 11)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 10)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="77.55, 93.1042, -144.94" />
+		  <UseObject NpcId="2013966" XYZ="77.55, 93.1042, -144.94" Condition="not IsAetherCurrentCompleted(1191, 10)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 9)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="606.856, 127.574, -190.36" />
+		  <UseObject NpcId="2013967" XYZ="606.856, 127.574, -190.36" Condition="not IsAetherCurrentCompleted(1191, 9)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 8)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="686, 139.201, -516.533" />
+		  <UseObject NpcId="2013968" XYZ="686, 139.201, -516.533" Condition="not IsAetherCurrentCompleted(1191, 8)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 7)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="-286.15, 59.4742, -263.62" />
+		  <UseObject NpcId="2013971" XYZ="-286.15, 59.4742, -263.62" Condition="not IsAetherCurrentCompleted(1191, 7)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 6)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="-28.99, 71.4324, 335.38" />
+		  <UseObject NpcId="2013972" XYZ="-28.99, 71.4324, 335.38" Condition="not IsAetherCurrentCompleted(1191, 6)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 5)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1191" XYZ="-457.64, -13.3964, 693.13" />
+		  <UseObject NpcId="2013973" XYZ="-457.64, -13.3964, 693.13" Condition="not IsAetherCurrentCompleted(1191, 5)" />
+		</If>
+    </If>
+
+
+    <!-- Living Memory -->
+
+    <If Condition="IsQuestCompleted(69973) and not (IsAetherCurrentCompleted(1192,0) and IsAetherCurrentCompleted(1192,1) and IsAetherCurrentCompleted(1192,2)
+				and IsAetherCurrentCompleted(1192,3) and IsAetherCurrentCompleted(1192,4) and IsAetherCurrentCompleted(1192,5)
+				and IsAetherCurrentCompleted(1192,6) and IsAetherCurrentCompleted(1192,7) and IsAetherCurrentCompleted(1192,8)
+				and IsAetherCurrentCompleted(1192,9) and IsAetherCurrentCompleted(1192,10) and IsAetherCurrentCompleted(1192,11)
+				and IsAetherCurrentCompleted(1192,12) and IsAetherCurrentCompleted(1192,13) and IsAetherCurrentCompleted(1192,14))">
+      <LogMessage Message="Going to unlock Living Memory Flying."/>
+      <LLToast message="Going to unlock Living Memory Flying."/>
+
+      <!-- QUESTS HERE -->
+	  
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 14)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="-698.848, 1.00028, 472.007" />
+		  <UseObject NpcId="2013974" XYZ="-698.848, 1.00028, 472.007" Condition="not IsAetherCurrentCompleted(1192, 14)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 13)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="753.37, 45.0924, 347.051" />
+		  <UseObject NpcId="2013975" XYZ="753.37, 45.0924, 347.051" Condition="not IsAetherCurrentCompleted(1192, 13)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 12)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="509.7, 36.9993, -648.81" />
+		  <UseObject NpcId="2013979" XYZ="509.7, 36.9993, -648.81" Condition="not IsAetherCurrentCompleted(1192, 12)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 11)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="-559.59, -6.00049, -508.52" />
+		  <UseObject NpcId="2013980" XYZ="-559.59, -6.00049, -508.52" Condition="not IsAetherCurrentCompleted(1192, 11)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 10)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="-516.675, 0.0500011, 681.003" />
+		  <UseObject NpcId="2013976" XYZ="-516.675, 0.0500011, 681.003" Condition="not IsAetherCurrentCompleted(1192, 10)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 9)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="232.36, 0.000501633, 544.51" />
+		  <UseObject NpcId="2013977" XYZ="232.36, 0.000501633, 544.51" Condition="not IsAetherCurrentCompleted(1192, 9)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 8)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="627.534, 9.05097, 637.736" />
+		  <UseObject NpcId="2013978" XYZ="627.534, 9.05097, 637.736" Condition="not IsAetherCurrentCompleted(1192, 8)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 7)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="315.229, 43.7318, -539.307" />
+		  <UseObject NpcId="2013981" XYZ="315.229, 43.7318, -539.307" Condition="not IsAetherCurrentCompleted(1192, 7)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 6)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="169.581, 29.2416, -308.061" />
+		  <UseObject NpcId="2013982" XYZ="169.581, 29.2416, -308.061" Condition="not IsAetherCurrentCompleted(1192, 6)" />
+		</If>
+		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 5)">
+		  <!-- TODO: Verify pathing works -->
+		  <GetTo ZoneId="1192" XYZ="-484.18, 38, -49.99" />
+		  <UseObject NpcId="2013983" XYZ="-484.18, 38, -49.99" Condition="not IsAetherCurrentCompleted(1192, 5)" />
+		</If>
+    </If>
+
+    <If Condition="not IsQuestCompleted(70431)">
+      <LogMessage Message="Please finish the level 93 MSQ quest 'The Feat of Ice' to unlock Urqopacha Flying."/>
+      <LLToast message="Please finish the level 93 MSQ quest 'The Feat of Ice' to unlock Urqopacha Flying."/>
+      <LLStopBot/>
+    </If>
+    <If Condition="not IsQuestCompleted(70424)">
+      <LogMessage Message="Please finish the level 92 MSQ quest 'Sibling Rescue' and restart profile to unlock Kozama'uka Flying."/>
+      <LLToast message="Please finish the level 92 MSQ quest 'Sibling Rescue' and restart profile to unlock Kozama'uka Flying."/>
+      <LLStopBot/>
+    </If>
+    <If Condition="not IsQuestCompleted(70445)">
+      <LogMessage Message="Please finish the level 95 MSQ quest 'Road to the Golden City' and restart profile to unlock Yak T'el Flying."/>
+      <LLToast message="Please finish the level 95 MSQ quest 'Road to the Golden City' and restart profile to unlock Yak T'el Flying."/>
+      <LLStopBot/>
+    </If>
+    <If Condition="not IsQuestCompleted(70461)">
+      <LogMessage Message="Please finish the level 96 MSQ quest 'A Hot Commodity' and restart profile to unlock Shaaloani Flying."/>
+      <LLToast message="Please finish the level 96 MSQ quest 'A Hot Commodity' and restart profile to unlock Shaaloani Flying."/>
+      <LLStopBot/>
+    </If>
+    <If Condition="not IsQuestCompleted(70480)">
+      <LogMessage Message="Please finish the level 99 MSQ quest 'Unto the Summit' and restart profile to unlock Heritage Found Flying."/>
+      <LLToast message="Please finish the level 99 MSQ quest 'Unto the Summit' and restart profile to unlock Heritage Found Flying."/>
+      <LLStopBot/>
+    </If>
+    <If Condition="not IsQuestCompleted(70494)">
+      <LogMessage Message="Please finish the level 100 MSQ quest 'A Journey Never-ending' and restart profile to unlock Living Memory Flying."/>
+      <LLToast message="Please finish the level 100 MSQ quest 'A Journey Never-ending' and restart profile to unlock Living Memory Flying."/>
+      <LLStopBot/>
+    </If>
+
+    <If Condition="(IsAetherCurrentCompleted(1187,0) and IsAetherCurrentCompleted(1187,1) and IsAetherCurrentCompleted(1187,2)
+				and IsAetherCurrentCompleted(1187,3) and IsAetherCurrentCompleted(1187,4) and IsAetherCurrentCompleted(1187,5)
+				and IsAetherCurrentCompleted(1187,6) and IsAetherCurrentCompleted(1187,7) and IsAetherCurrentCompleted(1187,8)
+				and IsAetherCurrentCompleted(1187,9) and IsAetherCurrentCompleted(1187,10) and IsAetherCurrentCompleted(1187,11)
+				and IsAetherCurrentCompleted(1187,12) and IsAetherCurrentCompleted(1187,13) and IsAetherCurrentCompleted(1187,14)
+				and IsAetherCurrentCompleted(1188,0) and IsAetherCurrentCompleted(1188,1) and IsAetherCurrentCompleted(1188,2)
+				and IsAetherCurrentCompleted(1188,3) and IsAetherCurrentCompleted(1188,4) and IsAetherCurrentCompleted(1188,5)
+				and IsAetherCurrentCompleted(1188,6) and IsAetherCurrentCompleted(1188,7) and IsAetherCurrentCompleted(1188,8)
+				and IsAetherCurrentCompleted(1188,9) and IsAetherCurrentCompleted(1188,10) and IsAetherCurrentCompleted(1188,11)
+				and IsAetherCurrentCompleted(1188,12) and IsAetherCurrentCompleted(1188,13) and IsAetherCurrentCompleted(1188,14)
+				and IsAetherCurrentCompleted(1189,0) and IsAetherCurrentCompleted(1189,1) and IsAetherCurrentCompleted(1189,2)
+				and IsAetherCurrentCompleted(1189,3) and IsAetherCurrentCompleted(1189,4) and IsAetherCurrentCompleted(1189,5)
+				and IsAetherCurrentCompleted(1189,6) and IsAetherCurrentCompleted(1189,7) and IsAetherCurrentCompleted(1189,8)
+				and IsAetherCurrentCompleted(1189,9) and IsAetherCurrentCompleted(1189,10) and IsAetherCurrentCompleted(1189,11)
+				and IsAetherCurrentCompleted(1189,12) and IsAetherCurrentCompleted(1189,13) and IsAetherCurrentCompleted(1189,14)
+				and IsAetherCurrentCompleted(1190,0) and IsAetherCurrentCompleted(1190,1) and IsAetherCurrentCompleted(1190,2)
+				and IsAetherCurrentCompleted(1190,3) and IsAetherCurrentCompleted(1190,4) and IsAetherCurrentCompleted(1190,5)
+				and IsAetherCurrentCompleted(1190,6) and IsAetherCurrentCompleted(1190,7) and IsAetherCurrentCompleted(1190,8)
+				and IsAetherCurrentCompleted(1190,9) and IsAetherCurrentCompleted(1190,10) and IsAetherCurrentCompleted(1190,11)
+				and IsAetherCurrentCompleted(1190,12) and IsAetherCurrentCompleted(1190,13) and IsAetherCurrentCompleted(1190,14)
+				and IsAetherCurrentCompleted(1191,0) and IsAetherCurrentCompleted(1191,1) and IsAetherCurrentCompleted(1191,2)
+				and IsAetherCurrentCompleted(1191,3) and IsAetherCurrentCompleted(1191,4) and IsAetherCurrentCompleted(1191,5)
+				and IsAetherCurrentCompleted(1191,6) and IsAetherCurrentCompleted(1191,7) and IsAetherCurrentCompleted(1191,8)
+				and IsAetherCurrentCompleted(1191,9) and IsAetherCurrentCompleted(1191,10) and IsAetherCurrentCompleted(1191,11)
+				and IsAetherCurrentCompleted(1191,12) and IsAetherCurrentCompleted(1191,13) and IsAetherCurrentCompleted(1191,14)
+				and IsAetherCurrentCompleted(1192,0) and IsAetherCurrentCompleted(1192,1) and IsAetherCurrentCompleted(1192,2)
+				and IsAetherCurrentCompleted(1192,3) and IsAetherCurrentCompleted(1192,4) and IsAetherCurrentCompleted(1192,5)
+				and IsAetherCurrentCompleted(1192,6) and IsAetherCurrentCompleted(1192,7) and IsAetherCurrentCompleted(1192,8)
+				and IsAetherCurrentCompleted(1192,9) and IsAetherCurrentCompleted(1192,10) and IsAetherCurrentCompleted(1192,11)
+				and IsAetherCurrentCompleted(1192,12) and IsAetherCurrentCompleted(1192,13) and IsAetherCurrentCompleted(1192,14))">
+      <LogMessage Message="Congrats on Dawntrail Flying."/>
+      <LLToast message="Congrats on Dawntrail Flying."/>
+    </If>
+
+	<ALoadProfile Path="../Start.xml"/>
+
+  </Order>
+  <GrindAreas>
+  </GrindAreas>
+  <CodeChunks>
+    <CodeChunk Name="TurnOffMount">
+      <![CDATA[
+        ff14bot.Settings.CharacterSettings.Instance.UseMount = false;
+      ]]>
+    </CodeChunk>
+    <CodeChunk Name="TurnOnMount">
+      <![CDATA[
+        ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
+      ]]>
+    </CodeChunk>
+		<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+  </CodeChunks>
+</Profile>
