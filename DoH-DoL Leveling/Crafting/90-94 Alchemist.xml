@@ -35,7 +35,7 @@ Authors:  Kayla / Angles24
 	</While>
 
 	<!-- 92-94  -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 81) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 94)">
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 91) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 94)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist"/>
 		</If>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Angles24
+-->
+<Profile>
+	<Name>95-100 Miner</Name>
+	<KillRadius>90</KillRadius>
+	
+	<Order>
+		      
+	<LogMessage Message="The Journey Begins! Remember to Check up on me!"/>
+	
+	<If Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner"/>
+	</If>
+				
+    <If Condition="ClassName == ClassJobType.Miner">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		
+		<!-- Level 95-96 -->
+		<If Condition="Core.Player.ClassLevel &lt; 96">
+			<LogMessage Message="Starting the Grind to Level 96."/>
+			<Lisbeth Json="[{'Group':0, 'Item':43994, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':96, 'ConditionalJob':'Miner'}]"/> <!-- Cobalt Tungsten Ore -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 96">
+			<LogMessage Message="Congrats on Level 96, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 96-->
+		
+		<!-- Level 95-97 -->
+		<If Condition="Core.Player.ClassLevel &lt; 97">
+			<LogMessage Message="Starting the Grind to Level 97."/>
+			<Lisbeth Json="[{'Group':0, 'Item':44007, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':97, 'ConditionalJob':'Miner'}]"/> <!-- Magnesia Powder -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 97">
+			<LogMessage Message="Congrats on Level 97, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 97-->
+		
+		<!-- Level 97-98 -->
+		<If Condition="Core.Player.ClassLevel &lt; 98">
+			<LogMessage Message="Starting the Grind to Level 98."/>
+			<Lisbeth Json="[{'Group':0, 'Item':43995, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':98, 'ConditionalJob':'Miner'}]"/> <!-- Titanium Gold Ore -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 98">
+			<LogMessage Message="Congrats on Level 98, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 98-->
+		
+		<!-- Level 98-99 -->
+		<If Condition="Core.Player.ClassLevel &lt; 99">
+			<LogMessage Message="Starting the Grind to Level 99."/>
+			<Lisbeth Json="[{'Group':0, 'Item':44005, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':99, 'ConditionalJob':'Miner'}]"/> <!-- White Gold Ore -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 99">
+			<LogMessage Message="Congrats on Level 99, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 99-->
+		
+		<!-- Level 99-100 -->
+		<If Condition="Core.Player.ClassLevel &lt; 100">
+			<LogMessage Message="Starting the Grind to Level 100."/>
+			<Lisbeth Json="[{'Group':0, 'Item':44034, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':100, 'ConditionalJob':'Miner'}]"/> <!-- Yak T'el Spring Water -->
+		</If>
+		<If Condition="Core.Player.ClassLevel == 100">
+			<LogMessage Message="Congrats on Level 100, moving on."/>
+			<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+		<WaitTimer WaitTime="5"/>
+		</If>
+		<!--End Level 100-->
+		
+	</If>
+	
+	<LLoadProfile Path="../Start.xml"/>	
+	
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+	<CodeChunks>
+		<CodeChunk Name="MINWeapon">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Primary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.MainHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="MINWeapon2">
+			<![CDATA[
+				var item = InventoryManager.FilledInventoryAndArmory.FirstOrDefault(i => i.Item.EquipmentCatagory == ItemUiCategory.Miners_Secondary_Tool);
+				BagSlot EquipSlot = InventoryManager.GetBagByInventoryBagId(InventoryBagId.EquippedItems)[EquipmentSlot.OffHand];
+				if (item != null)
+				{
+					item.Move(EquipSlot);
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Sneak">
+			<![CDATA[ 
+				if(!Core.Player.HasAura(47)) 
+				{ 
+					ff14bot.Managers.ActionManager.DoAction("Sneak",Core.Player); 
+					await Coroutine.Wait(5000, () => Core.Player.HasAura(47)); 
+				} 
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Enable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = true;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	<CodeChunk Name="Disable_Flight">
+      <![CDATA[
+        foreach (var plugin in PluginManager.Plugins.Where(p => p.Plugin.Name == "Enable Flight" || p.Plugin.Name == "启用飞行"))
+        {
+          try
+          {
+            if (!plugin.Enabled)  {  break;  }  else  {  plugin.Enabled = false;  }
+          }
+          catch (Exception ex) {  }
+        }
+      ]]>
+    </CodeChunk>
+	</CodeChunks>
+</Profile>

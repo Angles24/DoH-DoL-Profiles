@@ -11,6 +11,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 <!ENTITY craft63 "1">
 <!ENTITY craft70 "1">
 <!ENTITY craft80 "1">
+<!ENTITY craft90 "1">
 
 <!ENTITY craftClass "1"><!-- Just remember after you finished crafting you meld items before restarting. -->
 <!ENTITY crp "1">
@@ -225,7 +226,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		
 		<!-- Heavensward Aether Currents -->
-		<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
+		<!--<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
 				and IsAetherCurrentCompleted(397,3) and IsAetherCurrentCompleted(397,4) and IsAetherCurrentCompleted(397,5)
 				and IsAetherCurrentCompleted(397,6)	and IsAetherCurrentCompleted(397,7) and IsAetherCurrentCompleted(397,8)
 				and IsAetherCurrentCompleted(398,0) and IsAetherCurrentCompleted(398,1) and IsAetherCurrentCompleted(398,2)
@@ -241,7 +242,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(399,3) and IsAetherCurrentCompleted(399,4) and IsAetherCurrentCompleted(399,5)
 				and IsAetherCurrentCompleted(399,6) and IsAetherCurrentCompleted(399,7) and IsAetherCurrentCompleted(399,8))">
 			<LLoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
-		</If>
+		</If>-->
 		
 		
 		<!-- Craft Gathering and Crafting Gear 51 -->
@@ -358,7 +359,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(621,3) and IsAetherCurrentCompleted(621,4) and IsAetherCurrentCompleted(621,5)
 				and IsAetherCurrentCompleted(621,6)	and IsAetherCurrentCompleted(621,7) and IsAetherCurrentCompleted(621,8))">
 			<LLoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
-		</If>		
+		</If>
 				
 		
 		<!-- Gatherer's to 63 -->
@@ -759,7 +760,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(818,3) and IsAetherCurrentCompleted(818,4) and IsAetherCurrentCompleted(818,5)
 				and IsAetherCurrentCompleted(818,6)	and IsAetherCurrentCompleted(818,7) and IsAetherCurrentCompleted(818,8))">
 			<LLoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
-		</If>		
+		</If>	
 		
 			
 		<!-- Gatherer's to 80 -->
@@ -790,33 +791,21 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="not (IsAetherCurrentCompleted(956,0) and IsAetherCurrentCompleted(956,1) and IsAetherCurrentCompleted(956,2)
 				and IsAetherCurrentCompleted(956,3) and IsAetherCurrentCompleted(956,4) and IsAetherCurrentCompleted(956,5)
 				and IsAetherCurrentCompleted(956,6)	and IsAetherCurrentCompleted(956,7) and IsAetherCurrentCompleted(956,8)
-				and IsAetherCurrentCompleted(956,9) and IsAetherCurrentCompleted(956,10) and IsAetherCurrentCompleted(956,11)
-				and IsAetherCurrentCompleted(956,12) and IsAetherCurrentCompleted(956,13) and IsAetherCurrentCompleted(956,14) 
 				and IsAetherCurrentCompleted(957,0) and IsAetherCurrentCompleted(957,1) and IsAetherCurrentCompleted(957,2) 
 				and IsAetherCurrentCompleted(957,3) and IsAetherCurrentCompleted(957,4) and IsAetherCurrentCompleted(957,5) 
 				and IsAetherCurrentCompleted(957,6) and IsAetherCurrentCompleted(957,7) and IsAetherCurrentCompleted(957,8) 
-				and IsAetherCurrentCompleted(957,9) and IsAetherCurrentCompleted(957,10) and IsAetherCurrentCompleted(957,11) 
-				and IsAetherCurrentCompleted(957,12) and IsAetherCurrentCompleted(957,13) and IsAetherCurrentCompleted(957,14) 
 				and IsAetherCurrentCompleted(958,0) and IsAetherCurrentCompleted(958,1) and IsAetherCurrentCompleted(958,2) 
 				and IsAetherCurrentCompleted(958,3) and IsAetherCurrentCompleted(958,4) and IsAetherCurrentCompleted(958,5) 
 				and IsAetherCurrentCompleted(958,6) and IsAetherCurrentCompleted(958,7) and IsAetherCurrentCompleted(958,8) 
-				and IsAetherCurrentCompleted(958,9) and IsAetherCurrentCompleted(958,10) and IsAetherCurrentCompleted(958,11) 
-				and IsAetherCurrentCompleted(958,12) and IsAetherCurrentCompleted(958,13) and IsAetherCurrentCompleted(958,14)
 				and IsAetherCurrentCompleted(959,0) and IsAetherCurrentCompleted(959,1) and IsAetherCurrentCompleted(959,2) 
 				and IsAetherCurrentCompleted(959,3) and IsAetherCurrentCompleted(959,4) and IsAetherCurrentCompleted(959,5) 
 				and IsAetherCurrentCompleted(959,6) and IsAetherCurrentCompleted(959,7) and IsAetherCurrentCompleted(959,8) 
-				and IsAetherCurrentCompleted(959,9) and IsAetherCurrentCompleted(959,10) and IsAetherCurrentCompleted(959,11) 
-				and IsAetherCurrentCompleted(959,12) and IsAetherCurrentCompleted(959,13) and IsAetherCurrentCompleted(959,14) 
 				and IsAetherCurrentCompleted(961,0) and IsAetherCurrentCompleted(961,1) and IsAetherCurrentCompleted(961,2) 
 				and IsAetherCurrentCompleted(961,3) and IsAetherCurrentCompleted(961,4) and IsAetherCurrentCompleted(961,5) 
 				and IsAetherCurrentCompleted(961,6) and IsAetherCurrentCompleted(961,7) and IsAetherCurrentCompleted(961,8) 
-				and IsAetherCurrentCompleted(961,9) and IsAetherCurrentCompleted(961,10) and IsAetherCurrentCompleted(961,11) 
-				and IsAetherCurrentCompleted(961,12) and IsAetherCurrentCompleted(961,13) and IsAetherCurrentCompleted(961,14)
 				and IsAetherCurrentCompleted(960,0) and IsAetherCurrentCompleted(960,1) and IsAetherCurrentCompleted(960,2)
 				and IsAetherCurrentCompleted(960,3) and IsAetherCurrentCompleted(960,4) and IsAetherCurrentCompleted(960,5)
-				and IsAetherCurrentCompleted(960,6)	and IsAetherCurrentCompleted(960,7) and IsAetherCurrentCompleted(960,8)
-				and IsAetherCurrentCompleted(960,9) and IsAetherCurrentCompleted(960,10) and IsAetherCurrentCompleted(960,11)
-				and IsAetherCurrentCompleted(960,12) and IsAetherCurrentCompleted(960,13) and IsAetherCurrentCompleted(960,14))">
+				and IsAetherCurrentCompleted(960,6)	and IsAetherCurrentCompleted(960,7) and IsAetherCurrentCompleted(960,8))">
 			<LLoadProfile Path="Aether Currents/Endwalker Aether Currents All.xml"/>
 		</If>
 	
@@ -941,12 +930,180 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLoadProfile Path="Gathering/85-90 Botanist.xml"/>
 			</If>
 		</If>
+
+		<!-- Craft Gathering and Crafting Gear 90 -->
+		<If Condition="&craft90; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 580) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 580) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 580) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 580) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 580) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 580) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 580) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 580) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 580) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 580))">
+			<LogMessage Message="Craft level 90 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
+			<UserDialog DialogText="Craft level 90 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft90 1' to 'craft90 0', save and start thebot again."/>	
+		</If>
+		
+		<!-- Dreamtrail MSQ Check -->
+		<If Condition="not IsQuestCompleted(70495)">
+			<LogMessage Message="Please finish the MSQ quest 'Dawntrail' before continuing."/>
+			<UserDialog DialogText="Please finish the Dreamtrail MSQ quest 'Dawntrail' before continuing."/>	
+		</If>
+		
+		<!-- Dreamtrail's Aether Currents -->
+		<If Condition="not (IsAetherCurrentCompleted(1187,0) and IsAetherCurrentCompleted(1187,1) and IsAetherCurrentCompleted(1187,2)
+				and IsAetherCurrentCompleted(1187,3) and IsAetherCurrentCompleted(1187,4) and IsAetherCurrentCompleted(1187,5)
+				and IsAetherCurrentCompleted(1187,6)	and IsAetherCurrentCompleted(1187,7) and IsAetherCurrentCompleted(1187,8)
+				and IsAetherCurrentCompleted(1187,9) and IsAetherCurrentCompleted(1187,10) and IsAetherCurrentCompleted(1187,11)
+				and IsAetherCurrentCompleted(1187,12) and IsAetherCurrentCompleted(1187,13) and IsAetherCurrentCompleted(1187,14) 
+				and IsAetherCurrentCompleted(1188,0) and IsAetherCurrentCompleted(1188,1) and IsAetherCurrentCompleted(1188,2) 
+				and IsAetherCurrentCompleted(1188,3) and IsAetherCurrentCompleted(1188,4) and IsAetherCurrentCompleted(1188,5) 
+				and IsAetherCurrentCompleted(1188,6) and IsAetherCurrentCompleted(1188,7) and IsAetherCurrentCompleted(1188,8) 
+				and IsAetherCurrentCompleted(1188,9) and IsAetherCurrentCompleted(1188,10) and IsAetherCurrentCompleted(1188,11) 
+				and IsAetherCurrentCompleted(1188,12) and IsAetherCurrentCompleted(1188,13) and IsAetherCurrentCompleted(1188,14) 
+				and IsAetherCurrentCompleted(1189,0) and IsAetherCurrentCompleted(1189,1) and IsAetherCurrentCompleted(1189,2) 
+				and IsAetherCurrentCompleted(1189,3) and IsAetherCurrentCompleted(1189,4) and IsAetherCurrentCompleted(1189,5) 
+				and IsAetherCurrentCompleted(1189,6) and IsAetherCurrentCompleted(1189,7) and IsAetherCurrentCompleted(1189,8) 
+				and IsAetherCurrentCompleted(1189,9) and IsAetherCurrentCompleted(1189,10) and IsAetherCurrentCompleted(1189,11) 
+				and IsAetherCurrentCompleted(1189,12) and IsAetherCurrentCompleted(1189,13) and IsAetherCurrentCompleted(1189,14)
+				and IsAetherCurrentCompleted(1190,0) and IsAetherCurrentCompleted(1190,1) and IsAetherCurrentCompleted(1190,2) 
+				and IsAetherCurrentCompleted(1190,3) and IsAetherCurrentCompleted(1190,4) and IsAetherCurrentCompleted(1190,5) 
+				and IsAetherCurrentCompleted(1190,6) and IsAetherCurrentCompleted(1190,7) and IsAetherCurrentCompleted(1190,8) 
+				and IsAetherCurrentCompleted(1190,9) and IsAetherCurrentCompleted(1190,10) and IsAetherCurrentCompleted(1190,11) 
+				and IsAetherCurrentCompleted(1190,12) and IsAetherCurrentCompleted(1190,13) and IsAetherCurrentCompleted(1190,14) 
+				and IsAetherCurrentCompleted(1191,0) and IsAetherCurrentCompleted(1191,1) and IsAetherCurrentCompleted(1191,2) 
+				and IsAetherCurrentCompleted(1191,3) and IsAetherCurrentCompleted(1191,4) and IsAetherCurrentCompleted(1191,5) 
+				and IsAetherCurrentCompleted(1191,6) and IsAetherCurrentCompleted(1191,7) and IsAetherCurrentCompleted(1191,8) 
+				and IsAetherCurrentCompleted(1191,9) and IsAetherCurrentCompleted(1191,10) and IsAetherCurrentCompleted(1191,11) 
+				and IsAetherCurrentCompleted(1191,12) and IsAetherCurrentCompleted(1191,13) and IsAetherCurrentCompleted(1191,14)
+				and IsAetherCurrentCompleted(1192,0) and IsAetherCurrentCompleted(1192,1) and IsAetherCurrentCompleted(1192,2)
+				and IsAetherCurrentCompleted(1192,3) and IsAetherCurrentCompleted(1192,4) and IsAetherCurrentCompleted(1192,5)
+				and IsAetherCurrentCompleted(1192,6) and IsAetherCurrentCompleted(1192,7) and IsAetherCurrentCompleted(1192,8)
+				and IsAetherCurrentCompleted(1192,9) and IsAetherCurrentCompleted(1192,10) and IsAetherCurrentCompleted(1192,11)
+				and IsAetherCurrentCompleted(1192,12) and IsAetherCurrentCompleted(1192,13) and IsAetherCurrentCompleted(1192,14))">
+			<LLoadProfile Path="Aether Currents/Dreamtrail Aether Currents All.xml"/>
+		</If>
+	
+		<!-- Dawn of a New Deal -->
+		<If Condition="not IsQuestCompleted(70544)">
+			<If Condition="not HasQuest(70544)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<GetTo ZoneID="1186" XYZ="-159.46468, 0.9219525, -39.158237"/>
+				<If Condition="IsQuestAcceptQualified(70544)">
+					<LLTalkTo NpcId="1049088"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
+		</If>
+		
+		<!-- Gatherers to 95 -->
+		<If Condition="&min; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95">
+				<LLoadProfile Path="Gathering/90-95 Miner.xml"/>
+			</If>
+		</If>
+		<If Condition="&btn; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 95">
+				<LLoadProfile Path="Gathering/90-95 Botanist.xml"/>
+			</If>
+		</If>
+		
+		<!-- Crafters to 94 -->
+		<If Condition="&crp; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Carpenter.xml"/>
+			</If>
+		</If>
+		<If Condition="&bsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Blacksmith.xml"/>
+			</If>
+		</If>
+		<If Condition="&arm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Armorer.xml"/>
+			</If>
+		</If>
+		<If Condition="&gsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Goldsmith.xml"/>
+			</If>
+		</If>
+		<If Condition="&ltw; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Leatherworker.xml"/>
+			</If>
+		</If>
+		<If Condition="&wvr; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Weaver.xml"/>
+			</If>
+		</If>
+		<If Condition="&alc; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Alchemist.xml"/>
+			</If>
+		</If>
+		<If Condition="&cul; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 94">
+				<LLoadProfile Path="Crafting/90-94 Culinarian.xml"/>
+			</If>
+		</If>
+		
+		<!-- Crafters to 100 -->
+		<If Condition="&crp; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Carpenter.xml"/>
+			</If>
+		</If>
+		<If Condition="&bsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Blacksmith.xml"/>
+			</If>
+		</If>
+		<If Condition="&arm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Armorer.xml"/>
+			</If>
+		</If>
+		<If Condition="&gsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Goldsmith.xml"/>
+			</If>
+		</If>
+		<If Condition="&ltw; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Leatherworker.xml"/>
+			</If>
+		</If>
+		<If Condition="&wvr; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Weaver.xml"/>
+			</If>
+		</If>
+		<If Condition="&alc; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Alchemist.xml"/>
+			</If>
+		</If>
+		<If Condition="&cul; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 100">
+				<LLoadProfile Path="Crafting/94-100 Culinarian.xml"/>
+			</If>
+		</If>
+		
+		<!-- Gatherers to 100 -->
+		<If Condition="&min; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 100">
+				<LLoadProfile Path="Gathering/95-100 Miner.xml"/>
+			</If>
+		</If>
+		<If Condition="&btn; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 100">
+				<LLoadProfile Path="Gathering/95-100 Botanist.xml"/>
+			</If>
+		</If>
 	
 		<If Condition="not IsOnMap(129)">
 			<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/><!-- Limsa Lominsa Lower Decks -->
 		</If>
-		<LogMessage Message="Congrats on level 90 on BTN/MIN and all Crafters."/>
-		<UserDialog DialogText="Congrats on level 90 on BTN/MIN and all Crafters."/>
+		<LogMessage Message="Congrats on level 100 on BTN/MIN and all Crafters."/>
+		<UserDialog DialogText="Congrats on level 100 on BTN/MIN and all Crafters."/>
 	
 	</Order>
 	<CodeChunks>

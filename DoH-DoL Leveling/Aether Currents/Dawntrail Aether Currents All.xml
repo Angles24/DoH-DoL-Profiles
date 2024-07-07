@@ -16,61 +16,158 @@ Author: Angles24, Manta
 				and IsAetherCurrentCompleted(1187,6)	and IsAetherCurrentCompleted(1187,7) and IsAetherCurrentCompleted(1187,8)
 				and IsAetherCurrentCompleted(1187,9) and IsAetherCurrentCompleted(1187,10) and IsAetherCurrentCompleted(1187,11)
 				and IsAetherCurrentCompleted(1187,12) and IsAetherCurrentCompleted(1187,13) and IsAetherCurrentCompleted(1187,14))">
-      <LogMessage Message="Going to unlock Urqopacha Flying."/>
-      <LLToast message="Going to unlock Urqopacha Flying."/>
-	  
-	 <!-- QUESTS HERE -->
-	  
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 14)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="353.57, -107.702, -238.8" />
-		  <UseObject NpcId="2013924" XYZ="353.57, -107.702, -238.8" Condition="not IsAetherCurrentCompleted(1187, 14)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 13)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="-458.305, -29.6484, -493.919" />
-		  <UseObject NpcId="2013925" XYZ="-458.305, -29.6484, -493.919" Condition="not IsAetherCurrentCompleted(1187, 13)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 12)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="-198.46, 23.1426, -56.54" />
-		  <UseObject NpcId="2013929" XYZ="-198.46, 23.1426, -56.54" Condition="not IsAetherCurrentCompleted(1187, 12)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 11)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="-812.893, 57.4816, 105.509" />
-		  <UseObject NpcId="2013930" XYZ="-812.893, 57.4816, 105.509" Condition="not IsAetherCurrentCompleted(1187, 11)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 10)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="-202.8, -72.1271, -199" />
-		  <UseObject NpcId="2013926" XYZ="-202.8, -72.1271, -199" Condition="not IsAetherCurrentCompleted(1187, 10)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 9)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="414.78, -141.037, -681" />
-		  <UseObject NpcId="2013927" XYZ="414.78, -141.037, -681" Condition="not IsAetherCurrentCompleted(1187, 9)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 8)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="-134.576, -93.0551, -582.912" />
-		  <UseObject NpcId="2013928" XYZ="-134.576, -93.0551, -582.912" Condition="not IsAetherCurrentCompleted(1187, 8)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 7)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="70.1898, 0.658536, 746.44" />
-		  <UseObject NpcId="2013931" XYZ="70.1898, 0.658536, 746.44" Condition="not IsAetherCurrentCompleted(1187, 7)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 6)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="368.36, 61.0765, -9.23" />
-		  <UseObject NpcId="2013932" XYZ="368.36, 61.0765, -9.23" Condition="not IsAetherCurrentCompleted(1187, 6)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1187, 5)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1187" XYZ="398.81, 86.0047, 261.39" />
-		  <UseObject NpcId="2013933" XYZ="398.81, 86.0047, 261.39" Condition="not IsAetherCurrentCompleted(1187, 5)" />
-		</If>
+		<LogMessage Message="Going to unlock Urqopacha Flying."/>
+		<LLToast message="Going to unlock Urqopacha Flying."/>
+	 
+		<!--  A Crisis of Corruption -->
+			<If Condition="not IsQuestCompleted(70587)">
+				<If Condition="not HasQuest(70587)">
+					<GetTo ZoneId="1187" XYZ="382.2453, -154.52353, -419.87537" />
+					<If Condition="IsQuestAcceptQualified(70587)">
+						<PickupQuest QuestId="70587" NpcId="1051195" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70587) == 1">
+				<GetTo ZoneId="1187" XYZ="382.2453, -154.52353, -419.87537" />
+				<TalkTo NpcId="1051195" XYZ="383.29138, -154.50243, -420.49292" QuestId="70587" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70587) == 2">
+				<GetTo ZoneId="1187" XYZ="297.20786, -172.57524, -485.95627" />
+				<TalkTo NpcId="1051196" XYZ="297.19995, -172.65335, -488.57864" QuestId="70587" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70587) == 255">
+				<GetTo ZoneId="1187" XYZ="381.93646, -154.52348, -420.02838" />
+				<TurnIn QuestId="70587" NpcId="1051195" XYZ="383.29138, -154.50243, -420.49292" />
+			</If>
+
+			<!--  A Traveler to the Rescue -->
+			<If Condition="not IsQuestCompleted(70575)">
+				<If Condition="not HasQuest(70575)">
+					<GetTo ZoneId="1187" XYZ="391.32788, -156.05211, -386.76007" />
+					<If Condition="IsQuestAcceptQualified(70575)">
+						<PickupQuest QuestId="70575" NpcId="1050684" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70575) == 1">
+				<GetTo ZoneId="1187" XYZ="270.74277, -130.2593, -348.91776" />
+				<TalkTo NpcId="1050685" XYZ="256.94666, -129.72865, -355.73358" QuestId="70575" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70575) == 2">
+				<GetTo ZoneId="1187" XYZ="258.53525, -129.74142, -354.5182" />
+				<TalkTo NpcId="1050685" XYZ="256.94666, -129.72865, -355.73358" QuestId="70575" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70575) == 255">
+				<GetTo ZoneId="1187" XYZ="391.9642, -156.05194, -387.41895" />
+				<TurnIn QuestId="70575" NpcId="1050684" XYZ="391.37854, -156.07434, -388.50995" />
+			</If>
+
+			<!--  The Flame Burns No More -->
+			<If Condition="not IsQuestCompleted(70591)">
+				<If Condition="not HasQuest(70591)">
+					<GetTo ZoneId="1187" XYZ="426.41968, 118.935005, 608.3326" />
+					<If Condition="IsQuestAcceptQualified(70591)">
+						<PickupQuest QuestId="70591" NpcId="1051207" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70591) == 1">
+				<GetTo ZoneId="1187" XYZ="212.5573, 21.60396, 246.205" />
+				<TalkTo NpcId="1051208" XYZ="210.92542, 21.49294, 246.6925" QuestId="70591" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70591) == 2">
+				<GetTo ZoneId="1187" XYZ="134.05035, 22.243206, 295.778" />
+				<TalkTo NpcId="2014272" XYZ="133.53162, 22.2323, 295.9182" QuestId="70591" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70591) == 3">
+				<GetTo ZoneId="1187" XYZ="210.79907, 21.483767, 246.71782" />
+				<TalkTo NpcId="1051208" XYZ="210.92542, 21.49294, 246.6925" QuestId="70591" StepId="3" />
+			</If>
+			<If Condition="GetQuestStep(70591) == 255">
+				<GetTo ZoneId="1187" XYZ="425.81406, 118.935005, 608.1002" />
+				<TurnIn QuestId="70591" NpcId="1051207" XYZ="425.07043, 118.935005, 606.13403" />
+			</If>
+
+			<!--  An Illuminating Ritual -->
+			<If Condition="not IsQuestCompleted(70583)">
+				<If Condition="not HasQuest(70583)">
+					<GetTo ZoneId="1187" XYZ="400.2819, 122.53561, 544.73444" />
+					<If Condition="IsQuestAcceptQualified(70583)">
+						<PickupQuest QuestId="70583" NpcId="1048730" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70583) == 1">
+				<GetTo ZoneId="1187" XYZ="397.87686, 122.53636, 547.54034" />
+				<TalkTo NpcId="2014132" XYZ="396.01733, 123.88794, 546.53235" QuestId="70583" StepId="1" />
+			</If>
+			<While Condition="GetQuestStep(70583) == 2">
+				<GetTo ZoneId="1187" XYZ="397.87686, 122.53636, 547.54034" />
+				<TalkTo NpcId="2014132" XYZ="396.01733, 123.88794, 546.53235" QuestId="70583" StepId="2" />
+			</While>
+			<If Condition="GetQuestStep(70583) == 3">
+
+				<If Condition="GetQuestStep(70583) == 3 and GetQuestById(70583).QuestI8A == 0">
+					<GetTo ZoneId="1187" XYZ="387.59436, 131.0597, 640.772" />
+					<UseItem ItemId="2003618" NpcId="2014133" XYZ="387.59436, 131.0597, 640.772" QuestId="70583" StepId="3" Condition="GetQuestById(70583).QuestI8A == 0" />
+				</If>
+				<If Condition="GetQuestStep(70583) == 3 and GetQuestById(70583).QuestI8A == 1">
+					<GetTo ZoneId="1187" XYZ="489.0472, 112.435, 697.6522" />
+					<UseItem ItemId="2003618" NpcId="2014135" XYZ="489.0472, 112.435, 697.6522" QuestId="70583" StepId="3" Condition="GetQuestById(70583).QuestI8A == 1" />
+				</If>
+				<If Condition="GetQuestStep(70583) == 3 and GetQuestById(70583).QuestI8A == 2">
+					<GetTo ZoneId="1187" XYZ="531.20374, 111.134735, 605.12964" />
+					<ClimbHill Start="531.20374, 111.134735, 605.12964" End="533.0832, 112.2412, 603.5307" Distance="1" />
+					<UseItem ItemId="2003618" NpcId="2014134" XYZ="533.53174, 114.24426, 603.0823" QuestId="70583" StepId="3" Condition="GetQuestById(70583).QuestI8A == 2" />
+					<ClimbHill Start="533.0832, 112.2412, 603.5307" End="531.20374, 111.134735, 605.12964" Distance="1" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70583) == 255">
+				<GetTo ZoneId="1187" XYZ="404.78232, 122.53712, 560.9964" />
+				<TurnIn QuestId="70583" NpcId="1048730" XYZ="399.0692, 122.53533, 542.9922" />
+			</If>
+
+			<If Condition="not IsAetherCurrentCompleted(1187, 14)">
+				<GetTo ZoneId="1187" XYZ="353.57, -107.702, -238.8" />
+				<UseObject NpcId="2013924" XYZ="353.57, -107.702, -238.8" Condition="not IsAetherCurrentCompleted(1187, 14)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 13)">
+				<GetTo ZoneId="1187" XYZ="-458.305, -29.6484, -493.919" />
+				<UseObject NpcId="2013925" XYZ="-458.305, -29.6484, -493.919" Condition="not IsAetherCurrentCompleted(1187, 13)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 12)">
+				<GetTo ZoneId="1187" XYZ="-198.46, 23.1426, -56.54" />
+				<UseObject NpcId="2013929" XYZ="-198.46, 23.1426, -56.54" Condition="not IsAetherCurrentCompleted(1187, 12)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 11)">
+				<GetTo ZoneId="1187" XYZ="-812.893, 57.4816, 105.509" />
+				<UseObject NpcId="2013930" XYZ="-812.893, 57.4816, 105.509" Condition="not IsAetherCurrentCompleted(1187, 11)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 10)">
+				<GetTo ZoneId="1187" XYZ="-202.8, -72.1271, -199" />
+				<UseObject NpcId="2013926" XYZ="-202.8, -72.1271, -199" Condition="not IsAetherCurrentCompleted(1187, 10)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 9)">
+				<GetTo ZoneId="1187" XYZ="414.78, -141.037, -681" />
+				<UseObject NpcId="2013927" XYZ="414.78, -141.037, -681" Condition="not IsAetherCurrentCompleted(1187, 9)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 8)">
+				<GetTo ZoneId="1187" XYZ="-134.576, -93.0551, -582.912" />
+				<UseObject NpcId="2013928" XYZ="-134.576, -93.0551, -582.912" Condition="not IsAetherCurrentCompleted(1187, 8)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 7)">
+				<GetTo ZoneId="1187" XYZ="70.1898, 0.658536, 746.44" />
+				<UseObject NpcId="2013931" XYZ="70.1898, 0.658536, 746.44" Condition="not IsAetherCurrentCompleted(1187, 7)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 6)">
+				<GetTo ZoneId="1187" XYZ="368.36, 61.0765, -9.23" />
+				<UseObject NpcId="2013932" XYZ="368.36, 61.0765, -9.23" Condition="not IsAetherCurrentCompleted(1187, 6)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1187, 5)">
+				<GetTo ZoneId="1187" XYZ="398.81, 86.0047, 261.39" />
+				<UseObject NpcId="2013933" XYZ="398.81, 86.0047, 261.39" Condition="not IsAetherCurrentCompleted(1187, 5)" />
+			</If>
 	</If>
 	
 
@@ -81,61 +178,165 @@ Author: Angles24, Manta
 				and IsAetherCurrentCompleted(1188,6) and IsAetherCurrentCompleted(1188,7) and IsAetherCurrentCompleted(1188,8)
 				and IsAetherCurrentCompleted(1188,9) and IsAetherCurrentCompleted(1188,10) and IsAetherCurrentCompleted(1188,11)
 				and IsAetherCurrentCompleted(1188,12) and IsAetherCurrentCompleted(1188,13) and IsAetherCurrentCompleted(1188,14))">
-      <LogMessage Message="Going to unlock Kozama'uka Flying."/>
-      <LLToast message="Going to unlock Kozama'uka Flying."/>
+		<LogMessage Message="Going to unlock Kozama'uka Flying."/>
+		<LLToast message="Going to unlock Kozama'uka Flying."/>	  
 	  
-	  <!-- QUESTS HERE -->
+<!--  Rite of the Wind's Chosen -->
+			<If Condition="not IsQuestCompleted(70617)">
+				<If Condition="not HasQuest(70617)">
+					<GetTo ZoneId="1188" XYZ="-250.11841, 5.5676036, -556.78516" />
+					<If Condition="IsQuestAcceptQualified(70617)">
+						<PickupQuest QuestId="70617" NpcId="1051237" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70617) == 1">
+				<GetTo ZoneId="1188" XYZ="-311.55075, 6.492697, -722.2178" />
+				<TalkTo NpcId="1051238" XYZ="-312.36743, 6.5262628, -723.3234" QuestId="70617" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70617) == 2">
+				<GetTo ZoneId="1188" XYZ="-250.8449, 5.56726, -555.9826" />
+				<TalkTo NpcId="1051237" XYZ="-251.20929, 5.5572896, -554.89435" QuestId="70617" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70617) == 3">
+				<GetTo ZoneId="1188" XYZ="-202.78519, 6.375242, -512.2039" />
+				<TalkTo NpcId="2014316" XYZ="-201.0987, 6.362976, -511.03995" QuestId="70617" StepId="3" />
+			</If>
+			<If Condition="GetQuestStep(70617) == 255">
+				<GetTo ZoneId="1188" XYZ="-128.25476, 9.84216, -422.5972" />
+				<TurnIn QuestId="70617" NpcId="1051242" XYZ="-127.45862, 9.842161, -419.6994" />
+			</If>
 
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 14)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="299.51, 1.41398, -688.42" />
-		  <UseObject NpcId="2013934" XYZ="299.51, 1.41398, -688.42" Condition="not IsAetherCurrentCompleted(1188, 14)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 13)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="-599.553, 5.1607, -179.443" />
-		  <UseObject NpcId="2013935" XYZ="-599.553, 5.1607, -179.443" Condition="not IsAetherCurrentCompleted(1188, 13)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 12)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="-294.179, 110.762, 640.009" />
-		  <UseObject NpcId="2013939" XYZ="-294.179, 110.762, 640.009" Condition="not IsAetherCurrentCompleted(1188, 12)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 11)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="48.9754, 111.338, 287.171" />
-		  <UseObject NpcId="2013940" XYZ="48.9754, 111.338, 287.171" Condition="not IsAetherCurrentCompleted(1188, 11)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 10)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="-638.039, 6.57127, -486.501" />
-		  <UseObject NpcId="2013936" XYZ="-638.039, 6.57127, -486.501" Condition="not IsAetherCurrentCompleted(1188, 10)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 9)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="918.152, 10.1397, -404.091" />
-		  <UseObject NpcId="2013937" XYZ="918.152, 10.1397, -404.091" Condition="not IsAetherCurrentCompleted(1188, 9)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 8)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="516.83, 17.9898, -348.03" />
-		  <UseObject NpcId="2013938" XYZ="516.83, 17.9898, -348.03" Condition="not IsAetherCurrentCompleted(1188, 8)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 7)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="-754.104, 138.692, 122.687" />
-		  <UseObject NpcId="2013941" XYZ="-754.104, 138.692, 122.687" Condition="not IsAetherCurrentCompleted(1188, 7)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 6)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="130.47, 115.174, 522.93" />
-		  <UseObject NpcId="2013942" XYZ="130.47, 115.174, 522.93" Condition="not IsAetherCurrentCompleted(1188, 6)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1188, 5)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1188" XYZ="485.92, 121.404, 831.311" />
-		  <UseObject NpcId="2013943" XYZ="485.92, 121.404, 831.311" Condition="not IsAetherCurrentCompleted(1188, 5)" />
-		</If>
+			<!--  Ripe for the Offering -->
+			<If Condition="not IsQuestCompleted(70600)">
+				<If Condition="not HasQuest(70600)">
+					<GetTo ZoneId="1188" XYZ="-69.36091, 6.5367393, -485.81094" />
+					<If Condition="IsQuestAcceptQualified(70600)">
+						<PickupQuest QuestId="70600" NpcId="1048782" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70600) == 1 and GetQuestById(70600).QuestI8A == 0">
+				<GetTo ZoneId="1188" XYZ="-240.17067, 6.073989, -356.70364" />
+				<UseObject NpcId="2014167" XYZ="-241.56561, 6.0578003, -356.40503" Condition="GetQuestById(70600).QuestI8A == 0" />
+			</If>
+			<If Condition="GetQuestStep(70600) == 1 and GetQuestById(70600).QuestI8A == 1">
+				<GetTo ZoneId="1188" XYZ="-262.03845, 5.000002, -319.88812" />
+				<UseObject NpcId="2014168" XYZ="-262.50098, 4.989685, -318.25745" Condition="GetQuestById(70600).QuestI8A == 1" />
+			</If>
+			<If Condition="GetQuestStep(70600) == 1 and GetQuestById(70600).QuestI8A == 2">
+				<GetTo ZoneId="1188" XYZ="-278.93356, 5.000002, -321.15604" />
+				<UseObject NpcId="2014169" XYZ="-280.81183, 4.989685, -320.8515" Condition="GetQuestById(70600).QuestI8A == 2" />
+			</If>
+			<If Condition="GetQuestStep(70600) == 2">
+				<GetTo ZoneId="1188" XYZ="670.8898, 41.6385, -526.72003" />
+				<HandOver ItemId="2003629" NpcId="1048826" XYZ="672.4802, 41.63828, -527.36707" QuestId="70600" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70600) == 255">
+				<GetTo ZoneId="1188" XYZ="-71.226166, 6.5367393, -484.40707" />
+				<TurnIn QuestId="70600" ItemId="2003630" NpcId="1048782" XYZ="-68.52832, 6.536739, -486.53394" />
+			</If>
+
+			<!--  All Good Potpacts Must Come to an End -->
+			<If Condition="not IsQuestCompleted(70621)">
+				<If Condition="not HasQuest(70621)">
+					<GetTo ZoneId="1188" XYZ="-519.56195, 121.63345, 319.26685" />
+					<If Condition="IsQuestAcceptQualified(70621)">
+						<PickupQuest QuestId="70621" NpcId="1051263" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70621) == 1">
+				<GetTo ZoneId="1188" XYZ="-446.1499, 122.93498, 343.1729" />
+				<TalkTo NpcId="1051264" XYZ="-444.78522, 122.890236, 342.85498" QuestId="70621" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70621) == 2 and GetQuestById(70621).QuestI8A == 0">
+				<GetTo ZoneId="1188" XYZ="-483.9347, 121.633, 330.15894" />
+				<TalkTo NpcId="1048892" XYZ="-485.55737, 121.633, 329.9762" QuestId="70621" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70621) == 2 and GetQuestById(70621).QuestI8A == 1">
+				<GetTo ZoneId="1188" XYZ="-429.08298, 121.63345, 320.44492" />
+				<TalkTo NpcId="1048858" XYZ="-426.87115, 121.63345, 320.88184" QuestId="70621" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70621) == 2 and GetQuestById(70621).QuestI8A == 2">
+				<GetTo ZoneId="1188" XYZ="-463.16934, 121.63344, 279.74808" />
+				<TalkTo NpcId="1048850" XYZ="-472.5567, 121.77377, 271.229" QuestId="70621" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70621) == 255">
+				<GetTo ZoneId="1188" XYZ="-459.67145, 122.89102, 341.57748" />
+				<TurnIn QuestId="70621" NpcId="1051264" XYZ="-444.78522, 122.890236, 342.85498" />
+			</If>
+
+			<!--  Divine Inspiration -->
+			<If Condition="not IsQuestCompleted(70610)">
+				<If Condition="not HasQuest(70610)">
+					<GetTo ZoneId="1188" XYZ="-491.03894, 121.633446, 275.43863" />
+					<If Condition="IsQuestAcceptQualified(70610)">
+						<PickupQuest QuestId="70610" NpcId="1048855" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70610) == 1">
+				<GetTo ZoneId="1188" XYZ="-473.41937, 127.653404, 99.94068" />
+				<TalkTo NpcId="1050709" XYZ="-474.2962, 127.79511, 98.89368" QuestId="70610" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70610) == 2">
+				<GetTo ZoneId="1188" XYZ="-598.9784, 142.85992, 35.817295" />
+				<TalkTo NpcId="1050710" XYZ="-599.7864, 142.85991, 35.934937" QuestId="70610" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70610) == 3">
+				<GetTo ZoneId="1188" XYZ="-547.1174, 139.2539, -60.47515" />
+				<TalkTo NpcId="1050711" XYZ="-541.64954, 139.2539, -66.5141" QuestId="70610" StepId="3" />
+			</If>
+			<If Condition="GetQuestStep(70610) == 4">
+				<GetTo ZoneId="1188" XYZ="-542.3374, 139.2539, -65.14776" />
+				<TalkTo NpcId="1050711" XYZ="-541.64954, 139.2539, -66.5141" QuestId="70610" StepId="4" />
+			</If>
+			<If Condition="GetQuestStep(70610) == 255">
+				<GetTo ZoneId="1188" XYZ="-490.13126, 121.633, 289.4687" />
+				<TurnIn QuestId="70610" NpcId="1048855" XYZ="-491.63043, 121.63846, 271.50366" />
+			</If>
+
+			<If Condition="not IsAetherCurrentCompleted(1188, 14)">
+				<GetTo ZoneId="1188" XYZ="299.51, 1.41398, -688.42" />
+				<UseObject NpcId="2013934" XYZ="299.51, 1.41398, -688.42" Condition="not IsAetherCurrentCompleted(1188, 14)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 13)">
+				<GetTo ZoneId="1188" XYZ="-599.553, 5.1607, -179.443" />
+				<UseObject NpcId="2013935" XYZ="-599.553, 5.1607, -179.443" Condition="not IsAetherCurrentCompleted(1188, 13)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 12)">
+				<GetTo ZoneId="1188" XYZ="-294.179, 110.762, 640.009" />
+				<UseObject NpcId="2013939" XYZ="-294.179, 110.762, 640.009" Condition="not IsAetherCurrentCompleted(1188, 12)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 11)">
+				<GetTo ZoneId="1188" XYZ="48.9754, 111.338, 287.171" />
+				<UseObject NpcId="2013940" XYZ="48.9754, 111.338, 287.171" Condition="not IsAetherCurrentCompleted(1188, 11)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 10)">
+				<GetTo ZoneId="1188" XYZ="-638.039, 6.57127, -486.501" />
+				<UseObject NpcId="2013936" XYZ="-638.039, 6.57127, -486.501" Condition="not IsAetherCurrentCompleted(1188, 10)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 9)">
+				<GetTo ZoneId="1188" XYZ="918.152, 10.1397, -404.091" />
+				<UseObject NpcId="2013937" XYZ="918.152, 10.1397, -404.091" Condition="not IsAetherCurrentCompleted(1188, 9)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 8)">
+				<GetTo ZoneId="1188" XYZ="516.83, 17.9898, -348.03" />
+				<UseObject NpcId="2013938" XYZ="516.83, 17.9898, -348.03" Condition="not IsAetherCurrentCompleted(1188, 8)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 7)">
+				<GetTo ZoneId="1188" XYZ="-754.104, 138.692, 122.687" />
+				<UseObject NpcId="2013941" XYZ="-754.104, 138.692, 122.687" Condition="not IsAetherCurrentCompleted(1188, 7)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 6)">
+				<GetTo ZoneId="1188" XYZ="130.47, 115.174, 522.93" />
+				<UseObject NpcId="2013942" XYZ="130.47, 115.174, 522.93" Condition="not IsAetherCurrentCompleted(1188, 6)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1188, 5)">
+				<GetTo ZoneId="1188" XYZ="485.92, 121.404, 831.311" />
+				<UseObject NpcId="2013943" XYZ="485.92, 121.404, 831.311" Condition="not IsAetherCurrentCompleted(1188, 5)" />
+			</If>
 	</If>
 	
 
@@ -146,61 +347,140 @@ Author: Angles24, Manta
 				and IsAetherCurrentCompleted(1189,6)	and IsAetherCurrentCompleted(1189,7) and IsAetherCurrentCompleted(1189,8)
 				and IsAetherCurrentCompleted(1189,9) and IsAetherCurrentCompleted(1189,10) and IsAetherCurrentCompleted(1189,11)
 				and IsAetherCurrentCompleted(1189,12) and IsAetherCurrentCompleted(1189,13) and IsAetherCurrentCompleted(1189,14))">
-      <LogMessage Message="Going to unlock Yak T'el Flying."/>
-      <LLToast message="Going to unlock Yak T'el Flying."/>
-
-      <!-- QUESTS HERE -->
+        <LogMessage Message="Going to unlock Yak T'el Flying."/>
+        <LLToast message="Going to unlock Yak T'el Flying."/>
 	  
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 14)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="-114.388, 5.86803, -527.111" />
-		  <UseObject NpcId="2013944" XYZ="-114.388, 5.86803, -527.111" Condition="not IsAetherCurrentCompleted(1189, 14)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 13)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="416.08, 15.5309, -544.98" />
-		  <UseObject NpcId="2013945" XYZ="416.08, 15.5309, -544.98" Condition="not IsAetherCurrentCompleted(1189, 13)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 12)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="-114.32, -212.192, 623.79" />
-		  <UseObject NpcId="2013949" XYZ="-114.32, -212.192, 623.79" Condition="not IsAetherCurrentCompleted(1189, 12)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 11)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="39.3742, -158.612, -2.31141" />
-		  <UseObject NpcId="2013950" XYZ="39.3742, -158.612, -2.31141" Condition="not IsAetherCurrentCompleted(1189, 11)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 10)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="-550.591, -4.35479, -137.652" />
-		  <UseObject NpcId="2013946" XYZ="-550.591, -4.35479, -137.652" Condition="not IsAetherCurrentCompleted(1189, 10)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 9)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="-184.71, 22.9362, -751.675" />
-		  <UseObject NpcId="2013947" XYZ="-184.71, 22.9362, -751.675" Condition="not IsAetherCurrentCompleted(1189, 9)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 8)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="610.773, 9.62139, 233.051" />
-		  <UseObject NpcId="2013948" XYZ="610.773, 9.62139, 233.051" Condition="not IsAetherCurrentCompleted(1189, 8)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 7)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="-676.539, -163.973, 236.164" />
-		  <UseObject NpcId="2013951" XYZ="-676.539, -163.973, 236.164" Condition="not IsAetherCurrentCompleted(1189, 7)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 6)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="205.188, -193.591, 160.998" />
-		  <UseObject NpcId="2013952" XYZ="205.188, -193.591, 160.998" Condition="not IsAetherCurrentCompleted(1189, 6)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1189, 5)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1189" XYZ="747.188, -176.4, 712.672" />
-		  <UseObject NpcId="2013953" XYZ="747.188, -176.4, 712.672" Condition="not IsAetherCurrentCompleted(1189, 5)" />
-		</If>
+			<!--  Secrets in the Cinderfield -->
+			<If Condition="not IsQuestCompleted(70630)">
+				<If Condition="not HasQuest(70630)">
+					<GetTo ZoneId="1189" XYZ="38.929848, 8.205902, -631.44556" />
+					<If Condition="IsQuestAcceptQualified(70630)">
+						<PickupQuest QuestId="70630" NpcId="1051073" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70630) == 1">
+				<GetTo ZoneId="1189" XYZ="501.8055, 20.158264, -346.1234" />
+				<UserDialog DialogText="Please complete the follow duty manually. Follow the NPC to the East and use the  trees to hide when he turns around" QuestId="70630" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70630) == 2">
+				<WaitWhile Condition="not GetQuestStep(70630) == 3" />
+			</If>
+			<If Condition="GetQuestStep(70630) == 3">
+				<GetTo ZoneId="1189" XYZ="626.394, 17.48116, 3.1051195" />
+				<TalkTo NpcId="1051362" XYZ="627.7103, 17.481155, 2.9754639" QuestId="70630" StepId="3" />
+			</If>
+			<If Condition="GetQuestStep(70630) == 255">
+				<GetTo ZoneId="1189" XYZ="38.75081, 8.205902, -634.4275" />
+				<TurnIn QuestId="70630" NpcId="1051073" XYZ="41.09253, 8.205902, -629.8467" />
+			</If>
+
+			<!--  Aiming High -->
+			<If Condition="not IsQuestCompleted(70646)">
+				<If Condition="not HasQuest(70646)">
+					<GetTo ZoneId="1189" XYZ="-407.77756, 20.548029, -400.5079" />
+					<If Condition="IsQuestAcceptQualified(70646)">
+						<PickupQuest QuestId="70646" NpcId="1050872" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70646) == 1">
+				<GetTo ZoneId="1189" XYZ="-455.47678, 16.871048, -474.64215" />
+				<TalkTo NpcId="1050873" XYZ="-455.10034, 17.027555, -478.8739" QuestId="70646" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70646) == 2">
+				<GetTo ZoneId="1189" XYZ="-464.5943, 41.293617, -649.1163" />
+				<TalkTo NpcId="2014141" XYZ="-464.86615, 41.275635, -648.9509" QuestId="70646" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70646) == 255">
+				<GetTo ZoneId="1189" XYZ="-455.88702, 16.954824, -477.41214" />
+				<TurnIn QuestId="70646" NpcId="1050873" XYZ="-455.10034, 17.027555, -478.8739" />
+			</If>
+
+			<!--  Beast of the Heartlands -->
+			<If Condition="not IsQuestCompleted(70639)">
+				<If Condition="not HasQuest(70639)">
+					<GetTo ZoneId="1189" XYZ="583.8433, -142.49188, 510.7422" />
+					<If Condition="IsQuestAcceptQualified(70639)">
+						<PickupQuest QuestId="70639" NpcId="1051052" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70639) == 1">
+				<GetTo ZoneId="1189" XYZ="124.822716, -172.59204, 379.8648" />
+				<TalkTo NpcId="1051066" XYZ="121.9043, -172.89474, 381.15503" QuestId="70639" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70639) == 2">
+				<GetTo ZoneId="1189" XYZ="87.56956, -176.13623, 329.07574" />
+				<TalkTo NpcId="2014258" XYZ="87.02222, -176.1654, 328.3894" QuestId="70639" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70639) == 255">
+				<GetTo ZoneId="1189" XYZ="121.58512, -173.10175, 378.6342" />
+				<TurnIn QuestId="70639" NpcId="1051066" XYZ="121.9043, -172.89474, 381.15503" />
+			</If>
+
+			<!--  Lost and Powerless -->
+			<If Condition="not IsQuestCompleted(70650)">
+				<If Condition="not HasQuest(70650)">
+					<GetTo ZoneId="1189" XYZ="531.9312, -142.49185, 492.4084" />
+					<If Condition="IsQuestAcceptQualified(70650)">
+						<PickupQuest QuestId="70650" NpcId="1050884" />
+					</If>
+				</If>
+			</If>
+			<If Condition="GetQuestStep(70650) == 1">
+				<GetTo ZoneId="1189" XYZ="359.0767, -153.50308, 338.62302" />
+				<TalkTo NpcId="1050885" XYZ="338.49072, -155.05281, 322.80444" QuestId="70650" StepId="1" />
+			</If>
+			<If Condition="GetQuestStep(70650) == 2">
+				<GetTo ZoneId="1189" XYZ="340.26733, -154.99734, 321.41037" />
+				<TalkTo NpcId="1050885" XYZ="338.49072, -155.05281, 322.80444" QuestId="70650" StepId="2" />
+			</If>
+			<If Condition="GetQuestStep(70650) == 255">
+				<GetTo ZoneId="1189" XYZ="511.41562, -146.73486, 484.96655" />
+				<TurnIn QuestId="70650" NpcId="1050888" XYZ="515.58704, -146.73436, 477.0122" />
+			</If>
+
+			<If Condition="not IsAetherCurrentCompleted(1189, 14)">
+				<GetTo ZoneId="1189" XYZ="-114.388, 5.86803, -527.111" />
+				<UseObject NpcId="2013944" XYZ="-114.388, 5.86803, -527.111" Condition="not IsAetherCurrentCompleted(1189, 14)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 13)">
+				<GetTo ZoneId="1189" XYZ="416.08, 15.5309, -544.98" />
+				<UseObject NpcId="2013945" XYZ="416.08, 15.5309, -544.98" Condition="not IsAetherCurrentCompleted(1189, 13)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 12)">
+				<GetTo ZoneId="1189" XYZ="-114.32, -212.192, 623.79" />
+				<UseObject NpcId="2013949" XYZ="-114.32, -212.192, 623.79" Condition="not IsAetherCurrentCompleted(1189, 12)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 11)">
+				<GetTo ZoneId="1189" XYZ="39.3742, -158.612, -2.31141" />
+				<UseObject NpcId="2013950" XYZ="39.3742, -158.612, -2.31141" Condition="not IsAetherCurrentCompleted(1189, 11)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 10)">
+				<GetTo ZoneId="1189" XYZ="-550.591, -4.35479, -137.652" />
+				<UseObject NpcId="2013946" XYZ="-550.591, -4.35479, -137.652" Condition="not IsAetherCurrentCompleted(1189, 10)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 9)">
+				<GetTo ZoneId="1189" XYZ="-184.71, 22.9362, -751.675" />
+				<UseObject NpcId="2013947" XYZ="-184.71, 22.9362, -751.675" Condition="not IsAetherCurrentCompleted(1189, 9)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 8)">
+				<GetTo ZoneId="1189" XYZ="610.773, 9.62139, 233.051" />
+				<UseObject NpcId="2013948" XYZ="610.773, 9.62139, 233.051" Condition="not IsAetherCurrentCompleted(1189, 8)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 7)">
+				<GetTo ZoneId="1189" XYZ="-676.539, -163.973, 236.164" />
+				<UseObject NpcId="2013951" XYZ="-676.539, -163.973, 236.164" Condition="not IsAetherCurrentCompleted(1189, 7)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 6)">
+				<GetTo ZoneId="1189" XYZ="205.188, -193.591, 160.998" />
+				<UseObject NpcId="2013952" XYZ="205.188, -193.591, 160.998" Condition="not IsAetherCurrentCompleted(1189, 6)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1189, 5)">
+				<GetTo ZoneId="1189" XYZ="747.188, -176.4, 712.672" />
+				<UseObject NpcId="2013953" XYZ="747.188, -176.4, 712.672" Condition="not IsAetherCurrentCompleted(1189, 5)" />
+			</If>
     </If>
 	
 
@@ -214,58 +494,140 @@ Author: Angles24, Manta
       <LogMessage Message="Going to unlock Shaaloani Flying."/>
       <LLToast message="Going to unlock Shaaloani Flying."/>
 
-      <!-- QUESTS HERE -->
-	  
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 14)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="296.071, 2.39316, 504.021" />
-		  <UseObject NpcId="2013954" XYZ="296.071, 2.39316, 504.021" Condition="not IsAetherCurrentCompleted(1190, 14)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 13)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="-709.42, 33.4075, -80.3693" />
-		  <UseObject NpcId="2013955" XYZ="-709.42, 33.4075, -80.3693" Condition="not IsAetherCurrentCompleted(1190, 13)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 12)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="-63.2181, 18.8507, -174.853" />
-		  <UseObject NpcId="2013959" XYZ="-63.2181, 18.8507, -174.853" Condition="not IsAetherCurrentCompleted(1190, 12)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 11)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="380.321, -16.9657, -508.157" />
-		  <UseObject NpcId="2013960" XYZ="380.321, -16.9657, -508.157" Condition="not IsAetherCurrentCompleted(1190, 11)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 10)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="-602.93, 37.75, -352.377" />
-		  <UseObject NpcId="2013956" XYZ="-602.93, 37.75, -352.377" Condition="not IsAetherCurrentCompleted(1190, 10)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 9)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="-192.187, 36.6847, -53.1777" />
-		  <UseObject NpcId="2013957" XYZ="-192.187, 36.6847, -53.1777" Condition="not IsAetherCurrentCompleted(1190, 9)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 8)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="-620.361, -9.0571, 323.397" />
-		  <UseObject NpcId="2013958" XYZ="-620.361, -9.0571, 323.397" Condition="not IsAetherCurrentCompleted(1190, 8)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 7)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="645.594, -11.7386, -417.655" />
-		  <UseObject NpcId="2013961" XYZ="645.594, -11.7386, -417.655" Condition="not IsAetherCurrentCompleted(1190, 7)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 6)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="183.905, 11.9269, -59.3121" />
-		  <UseObject NpcId="2013962" XYZ="183.905, 11.9269, -59.3121" Condition="not IsAetherCurrentCompleted(1190, 6)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1190, 5)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1190" XYZ="658.289, 21.0219, 82.9938" />
-		  <UseObject NpcId="2013963" XYZ="658.289, 21.0219, 82.9938" Condition="not IsAetherCurrentCompleted(1190, 5)" />
-		</If>
+			<!--  When the Bill Comes Due -->
+			<If Condition="not IsQuestCompleted(70676)">
+				<If Condition="not HasQuest(70676)">
+					<GetTo ZoneId="1190" XYZ="376.03186, -0.2647332, 437.86014" />
+					<If Condition="IsQuestAcceptQualified(70676)">
+						<PickupQuest QuestId="70676" NpcId="1051283" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70676) == 1">
+					<GetTo ZoneId="1190" XYZ="365.20456, 5.9371996, 427.1815" />
+					<TalkTo NpcId="1051284" XYZ="362.84424, 5.937199, 427.2068" QuestId="70676" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70676) == 2">
+					<GetTo ZoneId="1190" XYZ="365.0697, 5.9371996, 427.12323" />
+					<TalkTo NpcId="1051284" XYZ="362.84424, 5.937199, 427.2068" QuestId="70676" StepId="2" />
+				</If>
+				<If Condition="GetQuestStep(70676) == 3">
+					<GetTo ZoneId="1190" XYZ="275.41336, -4.5722146, 464.4625" />
+					<TalkTo NpcId="1051286" XYZ="272.72437, -4.5877395, 464.042" QuestId="70676" StepId="3" />
+				</If>
+				<If Condition="GetQuestStep(70676) == 3">
+					<GetTo ZoneId="1190" XYZ="275.41336, -4.5722146, 464.4625" />
+					<TalkTo NpcId="1051286" XYZ="272.72437, -4.5877395, 464.042" QuestId="70676" StepId="3" />
+				</If>
+				<If Condition="GetQuestStep(70676) == 255">
+					<GetTo ZoneId="1190" XYZ="275.41336, -4.5722146, 464.4625" />
+					<Dismount />
+					<RunCode name="When The Bill Comes Due" />
+				</If>
+			</If>
+
+			<!--  Meeting of the Spirits -->
+			<If Condition="not IsQuestCompleted(70666)">
+				<If Condition="not HasQuest(70666)">
+					<GetTo ZoneId="1190" XYZ="-110.3594, 3.7918262, 319.3572" />
+					<If Condition="IsQuestAcceptQualified(70666)">
+						<PickupQuest QuestId="70666" NpcId="1049324" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70666) == 1">
+					<GetTo ZoneId="1190" XYZ="-648.2558, -9.913089, 330.00937" />
+					<HandOver ItemId="2003586" NpcId="1050645" XYZ="-650.0496, -9.854074, 327.26013" QuestId="70666" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70666) == 255">
+					<GetTo ZoneId="1190" XYZ="-112.07262, 3.5432746, 319.83682" />
+					<TurnIn QuestId="70666" NpcId="1049324" XYZ="-108.659546, 4.055336, 319.5697" />
+				</If>
+			</If>
+
+			<!--  A Bad Case of the Blue Devils -->
+			<If Condition="not IsQuestCompleted(70680)">
+				<If Condition="not HasQuest(70680)">
+					<GetTo ZoneId="1190" XYZ="-379.09305, 18.513042, -115.3842" />
+					<If Condition="IsQuestAcceptQualified(70680)">
+						<PickupQuest QuestId="70680" NpcId="1051316" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70680) == 1">
+					<GetTo ZoneId="1190" XYZ="-73.88837, -7.798724, 77.06848" />
+					<TalkTo NpcId="1051300" XYZ="-69.840576, -8.097445, 78.538086" QuestId="70680" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70680) == 255">
+					<GetTo ZoneId="1190" XYZ="-286.59363, 17.365301, -78.458595" />
+					<TurnIn QuestId="70680" NpcId="1051301" XYZ="-284.1383, 17.312117, -76.676636" />
+				</If>
+			</If>
+
+			<!--  Rroneek Seeker -->
+			<If Condition="not IsQuestCompleted(70674)">
+				<If Condition="not HasQuest(70674)">
+					<GetTo ZoneId="1190" XYZ="289.30957, -15.721843, -479.92322" />
+					<If Condition="IsQuestAcceptQualified(70674)">
+						<PickupQuest QuestId="70674" NpcId="1050655" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70674) == 1">
+					<GetTo ZoneId="1190" XYZ="447.3831, -17.280567, -153.77089" />
+					<TalkTo NpcId="1050656" XYZ="449.05762, -17.316843, -155.6878" QuestId="70674" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70674) == 2">
+					<RunCode name="TurnOffMount" />
+					<WaitTimer WaitTime="5" />
+					<MoveTo XYZ="287.8685, -15.087224, -474.83096" />
+					<UseObject NpcId="2014057" XYZ="287.58667, -15.274292, -476.0052" QuestId="70674" StepId="2" />
+					<RunCode name="TurnOnMount" />
+				</If>
+				<If Condition="GetQuestStep(70674) == 255">
+					<MoveTo XYZ="289.18192, -14.730869, -473.35275" />
+					<TurnIn QuestId="70674" NpcId="1050655" XYZ="289.02112, -15.566031, -478.78235" />
+				</If>
+			</If>
+
+			<If Condition="not IsAetherCurrentCompleted(1190, 14)">
+				<GetTo ZoneId="1190" XYZ="296.071, 2.39316, 504.021" />
+				<UseObject NpcId="2013954" XYZ="296.071, 2.39316, 504.021" Condition="not IsAetherCurrentCompleted(1190, 14)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 13)">
+				<GetTo ZoneId="1190" XYZ="-709.42, 33.4075, -80.3693" />
+				<UseObject NpcId="2013955" XYZ="-709.42, 33.4075, -80.3693" Condition="not IsAetherCurrentCompleted(1190, 13)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 12)">
+				<GetTo ZoneId="1190" XYZ="-63.2181, 18.8507, -174.853" />
+				<UseObject NpcId="2013959" XYZ="-63.2181, 18.8507, -174.853" Condition="not IsAetherCurrentCompleted(1190, 12)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 11)">
+				<GetTo ZoneId="1190" XYZ="380.321, -16.9657, -508.157" />
+				<UseObject NpcId="2013960" XYZ="380.321, -16.9657, -508.157" Condition="not IsAetherCurrentCompleted(1190, 11)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 10)">
+				<GetTo ZoneId="1190" XYZ="-602.93, 37.75, -352.377" />
+				<UseObject NpcId="2013956" XYZ="-602.93, 37.75, -352.377" Condition="not IsAetherCurrentCompleted(1190, 10)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 9)">
+				<GetTo ZoneId="1190" XYZ="-192.187, 36.6847, -53.1777" />
+				<UseObject NpcId="2013957" XYZ="-192.187, 36.6847, -53.1777" Condition="not IsAetherCurrentCompleted(1190, 9)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 8)">
+				<GetTo ZoneId="1190" XYZ="-620.361, -9.0571, 323.397" />
+				<UseObject NpcId="2013958" XYZ="-620.361, -9.0571, 323.397" Condition="not IsAetherCurrentCompleted(1190, 8)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 7)">
+				<GetTo ZoneId="1190" XYZ="645.594, -11.7386, -417.655" />
+				<UseObject NpcId="2013961" XYZ="645.594, -11.7386, -417.655" Condition="not IsAetherCurrentCompleted(1190, 7)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 5)">
+				<GetTo ZoneId="1190" XYZ="658.289, 21.0219, 82.9938" />
+				<UseObject NpcId="2013963" XYZ="658.289, 21.0219, 82.9938" Condition="not IsAetherCurrentCompleted(1190, 5)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1190, 6)">
+				<!-- TODO: Verify pathing works -->
+				<GetTo ZoneId="1190" XYZ="180.66644, 5.7626114, -42.919487" />
+				<ClimbHill Start="183.55371, 5.773327, -43.034687" End="183.905, 11.9269, -59.3121" SpamJump="False" />
+				<UseObject NpcId="2013962" XYZ="183.905, 11.9269, -59.3121" Condition="not IsAetherCurrentCompleted(1190, 6)" />
+			</If>
     </If>
 
 
@@ -279,58 +641,148 @@ Author: Angles24, Manta
       <LogMessage Message="Going to unlock Mare Heritage Found Flying."/>
       <LLToast message="Going to unlock Mare Heritage Found Flying."/>
 
-      <!-- QUESTS HERE -->
-	  
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 14)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="397.89, 145.347, 224.23" />
-		  <UseObject NpcId="2013964" XYZ="397.89, 145.347, 224.23" Condition="not IsAetherCurrentCompleted(1191, 14)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 13)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="204.578, 58.1954, -678.492" />
-		  <UseObject NpcId="2013965" XYZ="204.578, 58.1954, -678.492" Condition="not IsAetherCurrentCompleted(1191, 13)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 12)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="-585.41, 20.1695, -469.43" />
-		  <UseObject NpcId="2013969" XYZ="-585.41, 20.1695, -469.43" Condition="not IsAetherCurrentCompleted(1191, 12)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 11)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="-600.09, 2.21695, 267.44" />
-		  <UseObject NpcId="2013970" XYZ="-600.09, 2.21695, 267.44" Condition="not IsAetherCurrentCompleted(1191, 11)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 10)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="77.55, 93.1042, -144.94" />
-		  <UseObject NpcId="2013966" XYZ="77.55, 93.1042, -144.94" Condition="not IsAetherCurrentCompleted(1191, 10)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 9)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="606.856, 127.574, -190.36" />
-		  <UseObject NpcId="2013967" XYZ="606.856, 127.574, -190.36" Condition="not IsAetherCurrentCompleted(1191, 9)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 8)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="686, 139.201, -516.533" />
-		  <UseObject NpcId="2013968" XYZ="686, 139.201, -516.533" Condition="not IsAetherCurrentCompleted(1191, 8)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 7)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="-286.15, 59.4742, -263.62" />
-		  <UseObject NpcId="2013971" XYZ="-286.15, 59.4742, -263.62" Condition="not IsAetherCurrentCompleted(1191, 7)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 6)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="-28.99, 71.4324, 335.38" />
-		  <UseObject NpcId="2013972" XYZ="-28.99, 71.4324, 335.38" Condition="not IsAetherCurrentCompleted(1191, 6)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1191, 5)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1191" XYZ="-457.64, -13.3964, 693.13" />
-		  <UseObject NpcId="2013973" XYZ="-457.64, -13.3964, 693.13" Condition="not IsAetherCurrentCompleted(1191, 5)" />
-		</If>
+ 			<!--  Stressed Testing -->
+			<If Condition="not IsQuestCompleted(70689)">
+				<If Condition="not HasQuest(70689)">
+					<GetTo ZoneId="1191" XYZ="-180.97563, 30, -599.5557" />
+					<If Condition="IsQuestAcceptQualified(70689)">
+						<PickupQuest QuestId="70689" NpcId="1049443" />
+					</If>
+				</If>
+			</If>
+
+			<!--  Aunty Knows Best -->
+			<If Condition="not IsQuestCompleted(70696)">
+				<If Condition="not HasQuest(70696)">
+					<GetTo ZoneId="1191" XYZ="-152.67146, 34.94971, -576.9634" />
+					<If Condition="IsQuestAcceptQualified(70696)">
+						<PickupQuest QuestId="70696" NpcId="1050805" />
+					</If>
+				</If>
+			</If>
+
+			<!--  Stressed Testing -->
+			<If Condition="not IsQuestCompleted(70689)">
+				<If Condition="GetQuestStep(70689) == 1">
+					<GetTo ZoneId="1191" XYZ="351.13608, 82.116844, -356.1885" />
+					<WaitWhile Condition="GetQuestStep(70689) == 1" />
+				</If>
+				<If Condition="GetQuestStep(70689) == 2">
+					<GetTo ZoneId="1191" XYZ="351.14273, 82.11907, -356.14114" />
+					<TalkTo NpcId="1050664" XYZ="354.3297, 82.042984, -355.7641" QuestId="70689" StepId="2" />
+				</If>
+			</If>
+
+			<!--  Aunty Knows Best -->
+			<If Condition="not IsQuestCompleted(70696)">
+				<If Condition="GetQuestStep(70696) == 1">
+					<GetTo ZoneId="1191" XYZ="213.75656, 92.487465, -298.45978" />
+					<WaitWhile Condition="GetQuestStep(70696) == 1" />
+				</If>
+				<If Condition="GetQuestStep(70696) == 2">
+					<GetTo ZoneId="1191" XYZ="213.75656, 92.487465, -298.45978" />
+					<TalkTo NpcId="1050803" XYZ="217.57837, 92.40237, -296.19293" QuestId="70696" StepId="2" />
+				</If>
+				<If Condition="GetQuestStep(70696) == 255">
+					<GetTo ZoneId="1191" XYZ="-151.99893, 34.949554, -575.9425" />
+					<TurnIn QuestId="70696" NpcId="1050946" XYZ="-153.09375, 34.946026, -581.0178" />
+				</If>
+			</If>
+
+			<!--  Stressed Testing -->
+			<If Condition="GetQuestStep(70689) == 255">
+				<GetTo ZoneId="1191" XYZ="-180.28333, 29.999998, -600.17" />
+				<TurnIn QuestId="70689" NpcId="1049443" XYZ="-177.56934, 29.999998, -601.15967" />
+			</If>
+
+			<!--  Phyt for Survival -->
+			<If Condition="not IsQuestCompleted(70692)">
+				<LLToast message="The escort portion of this ques sometimes messes up and loses the NPC. Watch it." />
+				<If Condition="not HasQuest(70692)">
+					<GetTo ZoneId="1191" XYZ="-593.05005, -2.6074233, -491.02072" />
+					<If Condition="IsQuestAcceptQualified(70692)">
+						<PickupQuest QuestId="70692" NpcId="1049501" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70692) == 1">
+					<GetTo ZoneId="1191" XYZ="-449.99573, 37.34109, -270.49457" />
+					<TalkTo NpcId="1050666" XYZ="-446.79944, 37.14403, -266.62097" QuestId="70692" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70692) == 2">
+					<RunCode name="TurnOffMount" />
+					<WaitTimer WaitTime="7" />
+					<MoveTo XYZ="-593.05005, -2.6074233, -491.02072" />
+					<TalkTo NpcId="1049501" XYZ="-592.7062, -2.4803436, -489.28055" QuestId="70692" StepId="2" />
+					<RunCode name="TurnOnMount" />
+				</If>
+				<If Condition="GetQuestStep(70692) == 255">
+					<GetTo ZoneId="1191" XYZ="-594.3865, -2.4615846, -488.97617" />
+					<TurnIn QuestId="70692" NpcId="1049501" XYZ="-592.7062, -2.4803436, -489.28055" />
+				</If>
+			</If>
+
+			<!--  He Who Remembers -->
+			<If Condition="not IsQuestCompleted(70695)">
+				<If Condition="not HasQuest(70695)">
+					<GetTo ZoneId="1191" XYZ="-214.80441, 7.49638, 595.8527" />
+					<If Condition="IsQuestAcceptQualified(70695)">
+						<PickupQuest QuestId="70695" NpcId="1049505" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70695) == 1">
+					<GetTo ZoneId="1191" XYZ="197.64998, 88.42994, 673.25085" />
+					<TalkTo NpcId="1050668" XYZ="195.08655, 88.5662, 669.36743" QuestId="70695" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70695) == 2">
+					<GetTo ZoneId="1191" XYZ="216.59859, 88.33791, 647.771" />
+					<UseObject NpcIds="2014217,2014095,2014096,2014094" XYZ="216.59859, 88.33791, 647.771" QuestId="70695" StepId="2" />
+				</If>
+				<If Condition="GetQuestStep(70695) == 255">
+					<GetTo ZoneId="1191" XYZ="196.84717, 88.53449, 667.87134" />
+					<TurnIn QuestId="70695" NpcId="1050668" XYZ="195.08655, 88.5662, 669.36743" />
+				</If>
+			</If>
+
+			<If Condition="not IsAetherCurrentCompleted(1191, 14)">
+				<GetTo ZoneId="1191" XYZ="397.89, 145.347, 224.23" />
+				<UseObject NpcId="2013964" XYZ="397.89, 145.347, 224.23" Condition="not IsAetherCurrentCompleted(1191, 14)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 13)">
+				<GetTo ZoneId="1191" XYZ="204.578, 58.1954, -678.492" />
+				<UseObject NpcId="2013965" XYZ="204.578, 58.1954, -678.492" Condition="not IsAetherCurrentCompleted(1191, 13)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 12)">
+				<GetTo ZoneId="1191" XYZ="-585.41, 20.1695, -469.43" />
+				<UseObject NpcId="2013969" XYZ="-585.41, 20.1695, -469.43" Condition="not IsAetherCurrentCompleted(1191, 12)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 11)">
+				<GetTo ZoneId="1191" XYZ="-600.09, 2.21695, 267.44" />
+				<UseObject NpcId="2013970" XYZ="-600.09, 2.21695, 267.44" Condition="not IsAetherCurrentCompleted(1191, 11)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 10)">
+				<GetTo ZoneId="1191" XYZ="77.55, 93.1042, -144.94" />
+				<UseObject NpcId="2013966" XYZ="77.55, 93.1042, -144.94" Condition="not IsAetherCurrentCompleted(1191, 10)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 9)">
+				<GetTo ZoneId="1191" XYZ="606.856, 127.574, -190.36" />
+				<UseObject NpcId="2013967" XYZ="606.856, 127.574, -190.36" Condition="not IsAetherCurrentCompleted(1191, 9)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 8)">
+				<GetTo ZoneId="1191" XYZ="686, 139.201, -516.533" />
+				<UseObject NpcId="2013968" XYZ="686, 139.201, -516.533" Condition="not IsAetherCurrentCompleted(1191, 8)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 7)">
+				<GetTo ZoneId="1191" XYZ="-286.15, 59.4742, -263.62" />
+				<UseObject NpcId="2013971" XYZ="-286.15, 59.4742, -263.62" Condition="not IsAetherCurrentCompleted(1191, 7)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 6)">
+				<GetTo ZoneId="1191" XYZ="-28.99, 71.4324, 335.38" />
+				<UseObject NpcId="2013972" XYZ="-28.99, 71.4324, 335.38" Condition="not IsAetherCurrentCompleted(1191, 6)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1191, 5)">
+				<GetTo ZoneId="1191" XYZ="-457.64, -13.3964, 693.13" />
+				<UseObject NpcId="2013973" XYZ="-457.64, -13.3964, 693.13" Condition="not IsAetherCurrentCompleted(1191, 5)" />
+			</If>
     </If>
 
 
@@ -344,58 +796,143 @@ Author: Angles24, Manta
       <LogMessage Message="Going to unlock Living Memory Flying."/>
       <LLToast message="Going to unlock Living Memory Flying."/>
 
-      <!-- QUESTS HERE -->
-	  
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 14)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="-698.848, 1.00028, 472.007" />
-		  <UseObject NpcId="2013974" XYZ="-698.848, 1.00028, 472.007" Condition="not IsAetherCurrentCompleted(1192, 14)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 13)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="753.37, 45.0924, 347.051" />
-		  <UseObject NpcId="2013975" XYZ="753.37, 45.0924, 347.051" Condition="not IsAetherCurrentCompleted(1192, 13)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 12)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="509.7, 36.9993, -648.81" />
-		  <UseObject NpcId="2013979" XYZ="509.7, 36.9993, -648.81" Condition="not IsAetherCurrentCompleted(1192, 12)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 11)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="-559.59, -6.00049, -508.52" />
-		  <UseObject NpcId="2013980" XYZ="-559.59, -6.00049, -508.52" Condition="not IsAetherCurrentCompleted(1192, 11)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 10)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="-516.675, 0.0500011, 681.003" />
-		  <UseObject NpcId="2013976" XYZ="-516.675, 0.0500011, 681.003" Condition="not IsAetherCurrentCompleted(1192, 10)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 9)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="232.36, 0.000501633, 544.51" />
-		  <UseObject NpcId="2013977" XYZ="232.36, 0.000501633, 544.51" Condition="not IsAetherCurrentCompleted(1192, 9)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 8)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="627.534, 9.05097, 637.736" />
-		  <UseObject NpcId="2013978" XYZ="627.534, 9.05097, 637.736" Condition="not IsAetherCurrentCompleted(1192, 8)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 7)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="315.229, 43.7318, -539.307" />
-		  <UseObject NpcId="2013981" XYZ="315.229, 43.7318, -539.307" Condition="not IsAetherCurrentCompleted(1192, 7)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 6)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="169.581, 29.2416, -308.061" />
-		  <UseObject NpcId="2013982" XYZ="169.581, 29.2416, -308.061" Condition="not IsAetherCurrentCompleted(1192, 6)" />
-		</If>
-		<If Condition="&debugClickables; or not IsAetherCurrentCompleted(1192, 5)">
-		  <!-- TODO: Verify pathing works -->
-		  <GetTo ZoneId="1192" XYZ="-484.18, 38, -49.99" />
-		  <UseObject NpcId="2013983" XYZ="-484.18, 38, -49.99" Condition="not IsAetherCurrentCompleted(1192, 5)" />
-		</If>
+			<!--  Perplexing Puzzles, Endless Fun -->
+			<If Condition="not IsQuestCompleted(70712)">
+				<If Condition="not HasQuest(70712)">
+					<GetTo ZoneId="1192" XYZ="473.76816, -0.035483573, 711.70654" />
+					<If Condition="IsQuestAcceptQualified(70712)">
+						<PickupQuest QuestId="70712" NpcId="1050621" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70712) == 1">
+					<GetTo ZoneId="1192" XYZ="201.85936, 0.000497818, 643.65894" />
+					<UseObject NpcId="2013904" XYZ="199.4812, 1.1749268, 642.96936" QuestId="70712" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70712) == 2">
+					<GetTo ZoneId="1192" XYZ="253.62288, -0.13761163, 622.2622" />
+					<UseObject NpcId="2013905" XYZ="252.30786, 1.5411377, 621.2711" QuestId="70712" StepId="2" />
+				</If>
+				<If Condition="GetQuestStep(70712) == 3">
+					<GetTo ZoneId="1192" XYZ="343.70248, 22.649231, 293.699" />
+					<UseObject NpcId="2013909" XYZ="340.59656, 23.605652, 289.78406" QuestId="70712" StepId="3" />
+				</If>
+				<If Condition="GetQuestStep(70712) == 255">
+					<GetTo ZoneId="1192" XYZ="672.43134, 40.30863, 417.98083" />
+					<TurnIn QuestId="70712" NpcId="1050622" XYZ="669.36743, 40.305832, 417.31885" />
+				</If>
+			</If>
+
+			<!--  Well-wishing at the Wishing Well -->
+			<If Condition="not IsQuestCompleted(70710)">
+				<If Condition="not HasQuest(70710)">
+					<GetTo ZoneId="1192" XYZ="-630.4926, 2.4387654E-07, 498.8973" />
+					<If Condition="IsQuestAcceptQualified(70710)">
+						<PickupQuest QuestId="70710" NpcId="1050617" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70710) == 1">
+					<GetTo ZoneId="1192" XYZ="-447.52734, -0.81529194, 480.22733" />
+					<TalkTo NpcId="1050618" XYZ="-444.0833, -0.815298, 482.10876" QuestId="70710" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70710) == 2">
+					<GetTo ZoneId="1192" XYZ="-291.9888, 0, 578.1516" />
+					<TalkTo NpcId="1050619" XYZ="-288.1361, -6.1998426E-13, 580.1632" QuestId="70710" StepId="2" />
+				</If>
+				<If Condition="GetQuestStep(70710) == 3">
+					<GetTo ZoneId="1192" XYZ="-288.76758, 0, 582.4691" />
+					<UseItem ItemId="2003566" NpcId="2013899" XYZ="-287.31213, 1.4190674, 582.7573" QuestId="70710" StepId="3" />
+				</If>
+				<If Condition="GetQuestStep(70710) == 255">
+					<GetTo ZoneId="1192" XYZ="-288.76758, 0, 582.4691" />
+					<TurnIn QuestId="70710" NpcId="1050619" XYZ="-288.1361, -6.1998426E-13, 580.1632" />
+				</If>
+			</If>
+
+
+			<!--  Blueprint Protocol -->
+			<If Condition="not IsQuestCompleted(70715)">
+				<If Condition="not HasQuest(70715)">
+					<GetTo ZoneId="1192" XYZ="536.617, 24.9978, -194.28505" />
+					<If Condition="IsQuestAcceptQualified(70715)">
+						<PickupQuest QuestId="70715" NpcId="1050632" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70715) == 1">
+					<GetTo ZoneId="1192" XYZ="228.83418, 35.76435, -226.26495" />
+					<UseObject NpcId="2013913" XYZ="226.00134, 35.75183, -225.97089" QuestId="70715" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70715) == 255">
+					<GetTo ZoneId="1192" XYZ="616.3043, 27.724144, -171.03665" />
+					<TurnIn QuestId="70715" NpcId="1050633" XYZ="619.5315, 27.724146, -172.01501" />
+				</If>
+			</If>
+
+			<!--  Volcanic Disruptions -->
+			<If Condition="not IsQuestCompleted(70714)">
+				<If Condition="not HasQuest(70714)">
+					<GetTo ZoneId="1192" XYZ="631.70233, 24.999489, -281.65497" />
+					<If Condition="IsQuestAcceptQualified(70714)">
+						<PickupQuest QuestId="70714" NpcId="1050625" />
+					</If>
+				</If>
+				<If Condition="GetQuestStep(70714) == 1">
+					<GetTo ZoneId="1192" XYZ="354.82034, 48.931255, -727.1183" />
+					<TalkTo NpcId="1050626" XYZ="351.27795, 48.949432, -726.4973" QuestId="70714" StepId="1" />
+				</If>
+				<If Condition="GetQuestStep(70714) == 2">
+					<GetTo ZoneId="1192" XYZ="299.9503, 44.086674, -579.4948" />
+					<WaitWhile Condition="GetQuestStep(70714) == 2" />
+				</If>
+				<If Condition="GetQuestStep(70714) == 3">
+					<GetTo ZoneId="1192" XYZ="301.45505, 44.064274, -576.90594" />
+					<TalkTo NpcId="1050627" XYZ="302.90674, 43.98048, -574.67004" QuestId="70714" StepId="3" />
+				</If>
+				<If Condition="GetQuestStep(70714) == 255">
+					<GetTo ZoneId="1192" XYZ="352.4479, 48.952427, -725.5694" />
+					<TurnIn QuestId="70714" NpcId="1050631" XYZ="354.4823, 48.940357, -726.1311" />
+				</If>
+			</If>
+
+			<If Condition="not IsAetherCurrentCompleted(1192, 14)">
+				<GetTo ZoneId="1192" XYZ="-698.848, 1.00028, 472.007" />
+				<UseObject NpcId="2013974" XYZ="-698.848, 1.00028, 472.007" Condition="not IsAetherCurrentCompleted(1192, 14)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 13)">
+				<GetTo ZoneId="1192" XYZ="753.37, 45.0924, 347.051" />
+				<UseObject NpcId="2013975" XYZ="753.37, 45.0924, 347.051" Condition="not IsAetherCurrentCompleted(1192, 13)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 12)">
+				<GetTo ZoneId="1192" XYZ="509.7, 36.9993, -648.81" />
+				<UseObject NpcId="2013979" XYZ="509.7, 36.9993, -648.81" Condition="not IsAetherCurrentCompleted(1192, 12)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 11)">
+				<GetTo ZoneId="1192" XYZ="-559.59, -6.00049, -508.52" />
+				<UseObject NpcId="2013980" XYZ="-559.59, -6.00049, -508.52" Condition="not IsAetherCurrentCompleted(1192, 11)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 10)">
+				<GetTo ZoneId="1192" XYZ="-516.675, 0.0500011, 681.003" />
+				<UseObject NpcId="2013976" XYZ="-516.675, 0.0500011, 681.003" Condition="not IsAetherCurrentCompleted(1192, 10)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 9)">
+				<GetTo ZoneId="1192" XYZ="232.36, 0.000501633, 544.51" />
+				<UseObject NpcId="2013977" XYZ="232.36, 0.000501633, 544.51" Condition="not IsAetherCurrentCompleted(1192, 9)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 8)">
+				<GetTo ZoneId="1192" XYZ="627.534, 9.05097, 637.736" />
+				<UseObject NpcId="2013978" XYZ="627.534, 9.05097, 637.736" Condition="not IsAetherCurrentCompleted(1192, 8)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 7)">
+				<GetTo ZoneId="1192" XYZ="315.229, 43.7318, -539.307" />
+				<UseObject NpcId="2013981" XYZ="315.229, 43.7318, -539.307" Condition="not IsAetherCurrentCompleted(1192, 7)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 6)">
+				<GetTo ZoneId="1192" XYZ="169.581, 29.2416, -308.061" />
+				<UseObject NpcId="2013982" XYZ="169.581, 29.2416, -308.061" Condition="not IsAetherCurrentCompleted(1192, 6)" />
+			</If>
+			<If Condition="not IsAetherCurrentCompleted(1192, 5)">
+				<GetTo ZoneId="1192" XYZ="-484.18, 38, -49.99" />
+				<UseObject NpcId="2013983" XYZ="-484.18, 38, -49.99" Condition="not IsAetherCurrentCompleted(1192, 5)" />
+			</If>
     </If>
 
     <If Condition="not IsQuestCompleted(70431)">
@@ -463,7 +1000,7 @@ Author: Angles24, Manta
       <LLToast message="Congrats on Dawntrail Flying."/>
     </If>
 
-	<ALoadProfile Path="../Start.xml"/>
+	<ALoadProfile Path="../Start.xml"/> 
 
   </Order>
   <GrindAreas>

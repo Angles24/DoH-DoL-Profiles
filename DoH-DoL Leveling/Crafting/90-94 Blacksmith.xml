@@ -30,12 +30,12 @@ Authors:  Kayla / Angles24
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
-			<BuyInclusionShopItem ItemId="33927" Count="0"/>
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
 		</While>
 	</While>
 
 	<!-- 92-94  -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 81) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 94)">
+	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 91) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 94)">
 		<If Condition="ClassName != ClassJobType.Blacksmith">
 			<ChangeClass Job="Blacksmith"/>
 		</If>
