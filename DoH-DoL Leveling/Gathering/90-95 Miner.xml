@@ -74,7 +74,7 @@ Angles24
 		<!-- Level 94-95 -->
 		<If Condition="Core.Player.ClassLevel &lt; 95">
 			<LogMessage Message="Starting the Grind to Level 95."/>
-			<Lisbeth Json="[{'Group':0, 'Item':44004, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':95, 'ConditionalJob':'Miner'}]"/> <!-- Raw Pink Beryl -->
+			<Lisbeth Json="[{'Group':0, 'Item':44003, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':95, 'ConditionalJob':'Miner'}]"/> <!-- Raw Pink Beryl (44004) -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 95">
 			<LogMessage Message="Congrats on Level 95, moving on."/>
