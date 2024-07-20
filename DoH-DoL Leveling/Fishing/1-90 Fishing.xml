@@ -266,7 +266,7 @@ Angles24
 
 	
 	<!--Start - Level 20 Grind-->
-	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 20">
+	<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 23">
 		<If Condition="&EXPManuals; == 1">
 			<While Condition="not HasAtLeast(26553,1)">
 				<Lisbeth Json="[{'Id':1,'Group':1,'Item':26553,'Amount':3,'Enabled':true,'Type':'Exchange'}]"/>
@@ -290,7 +290,7 @@ Angles24
 				<BuyItem ItemId="29717" ItemCount="15" DialogOption="0" InteractDistance="3.0" NpcId="1005422" XYZ="-397.6349, 3.099996, 80.97961"/>
 			</If>
 		</While>
-		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 20 and HasAtLeast(29717,5)">
+		<While Condition="Core.Me.Levels[ClassJobType.Fisher] &lt; 23 and HasAtLeast(29717,5)">
 			<While Condition="WorldManager.ZoneId != 901">
 				<LisbethTravel Area="The Diadem" Position="-553.6511, 329.8265, 562.2562"/>
 			</While>
@@ -309,7 +309,7 @@ Angles24
 	</While>
 	<!--End - Level 20 Grind-->
 	
-	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 20">
+	<If Condition="Core.Me.Levels[ClassJobType.Fisher] == 23">
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
 	</If>
@@ -389,7 +389,7 @@ Angles24
 	<!--End Every Fish Has a Silver Lining-->
 	
 	<!--Level 20 - A Fish in Hot Water-->
-		<While Condition="not IsQuestCompleted(66648) and Core.Me.Levels[ClassJobType.Fisher] &gt; 19 and IsQuestCompleted(66647)">
+		<While Condition="not IsQuestCompleted(66648) and Core.Me.Levels[ClassJobType.Fisher] &gt; 23 and IsQuestCompleted(66647)">
 			<!-- Leave Diadem -->
 			<If Condition="(WorldManager.ZoneId == 901)">
 				<RunCode Name="Leave"/>
@@ -1610,27 +1610,9 @@ Angles24
 					<RunCode Name="TruthOfOceans"/>
 					<RunCode Name="Fathom"/>
 					<While Condition="not HasAtLeast(17951,3) and Core.Me.HasAura(1166) and Core.Me.HasAura(1173)">
-						<ExSpearFish VeteranTradeDepth="2" GigId="2" GatherStrategy="FishAndGo">
-							<Items>
-								<SpearFish Name="Ichthyosaur"/>
-							</Items>
-							<HotSpots>
-								<HotSpot Radius="50" XYZ="-501.376, -86.98293, 661.8317"/>
-								<HotSpot Radius="50" XYZ="-606.0972, -110.2269, 725.136"/>
-								<HotSpot Radius="50" XYZ="-611.7751, -101.363, 533.0427"/>
-							</HotSpots>
-						</ExSpearFish>
-						<WaitTimer WaitTime="2"/>
-						<ExSpearFish Loops ="1" VeteranTradeDepth="6" BountifulCatch="True" BountifulCatchDepth="6" BountifulCatchAfterVeteranTrade="True" GigId="1">
-							<Items>
-								<SpearFish Name="Dafangshi"/>
-							</Items>
-							<HotSpots>
-								<HotSpot Radius="50" XYZ="-483.2769, -103.8036, 792.8977"/>
-							</HotSpots>
-						</ExSpearFish>
-						<WaitTimer WaitTime="2"/>
+						<Lisbeth Json="[{'Group':1,'Item':17951,'Amount':3,'Enabled':true,'Type':'Gather'}]"/>
 					</While>
+
 					<If Condition="HasAtLeast(17951,3)">
 						<LisbethTravel Zone="614" Position="703.4661, 2.646878, 514.4102"/>
 						<LLHandOver ItemIds="17951" NpcId="1021409" XYZ="703.1814, 2.949344, 513.6339" QuestId="68434" StepId="5"/>
