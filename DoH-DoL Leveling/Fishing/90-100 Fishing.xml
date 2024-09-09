@@ -8,6 +8,9 @@
 
   <!ENTITY Desynth "True"> <!-- Should we desynth the fish we caught when we're done? True/False-->
 
+  <!ENTITY UseRevisedSurvivalManual "True"> <!-- Should we use the Revised Survival Manuals? True/False-->
+
+  <!ENTITY GatherersGrace "46">
   <!ENTITY GoldfinCavalli "43674">
   <!ENTITY KingPuffer "43903">
   <!ENTITY BluePurse "43673">
@@ -25,6 +28,9 @@
       <WaitTimer WaitTime="3" />
     </While>
 
+    <If condition="&UseRevisedSurvivalManual; == True and not Core.Me.HasAura(&GatherersGrace;)">
+      <UseInventoryItem ItemId="26553" />
+    </If>
 
     <If condition="Core.Player.ClassLevel &lt; 90">
       <UserDialog IsBotContinueAllowed="False" DialogText="You must be 90 to run this profile." />
