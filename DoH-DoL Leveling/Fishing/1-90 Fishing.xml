@@ -1749,7 +1749,7 @@ Angles24
 	</While>
 	<!--End - Level 80 Grind-->
 	
-		<If Condition="ExBuddy.Windows.GuildLeve.Allowances &lt; 3">
+		<If Condition="LlamaLibrary.RemoteWindows.GuildLeve.Allowances &lt; 3">
 	  <LLToast message="80-90 FSH is recommended to have at least 3 leves per level please"/>
 	  <LogMessage Message="80-90 FSH is recommended to have at least 3 leves per level please wait for more before starting the profile."/>
 	  <LLToast message="wait for more before starting the profile."/>
@@ -1758,7 +1758,7 @@ Angles24
 	</If>
 
     <!-- Level 80 - 82 -->
-	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 79) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 82)">
+	<While Condition="(LlamaLibrary.RemoteWindows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 79) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 82)">
 	  <While Condition="not ItemCount(36395) &gt; 8">	    
 		<If Condition="&EXPManuals; == 1">				
 	      <While Condition="not HasAtLeast(26553,1)">
@@ -1804,7 +1804,7 @@ Angles24
 	</While>
 
     <!-- Level 82 - 84 -->
-	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 81) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 84)">
+	<While Condition="(LlamaLibrary.RemoteWindows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 81) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 84)">
 	  <While Condition="not ItemCount(36409) &gt; 8">	    
 		<If Condition="&EXPManuals; == 1">	
 	      <While Condition="not HasAtLeast(26553,1)">
@@ -1855,7 +1855,7 @@ Angles24
 	</While>
 
     <!-- Level 84 - 86 -->
-	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 83) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 86)">
+	<While Condition="(LlamaLibrary.RemoteWindows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 83) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 86)">
 	  <While Condition="not ItemCount(36434) &gt; 8">	    
 		<If Condition="&EXPManuals; == 1">	
 	      <While Condition="not HasAtLeast(26553,1)">
@@ -1907,7 +1907,7 @@ Angles24
 	</While>
 
     <!-- Level 86 - 90 -->
-	<While Condition="(ExBuddy.Windows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 85) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)">
+	<While Condition="(LlamaLibrary.RemoteWindows.GuildLeve.Allowances &gt; 2) and (Core.Me.Levels[ClassJobType.Fisher] &gt; 85) and (Core.Me.Levels[ClassJobType.Fisher] &lt; 90)">
 	  <While Condition="not ItemCount(36471) &gt; 8">	    
 		<If Condition="&EXPManuals; == 1">	
 	      <While Condition="not HasAtLeast(26553,1)">
