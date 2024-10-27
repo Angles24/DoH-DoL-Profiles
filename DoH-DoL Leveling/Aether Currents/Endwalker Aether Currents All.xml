@@ -13,9 +13,7 @@ Author: Angles24, Manta
 
     <If Condition="IsQuestCompleted(69984) and not (IsAetherCurrentCompleted(956,0) and IsAetherCurrentCompleted(956,1) and IsAetherCurrentCompleted(956,2)
 				and IsAetherCurrentCompleted(956,3) and IsAetherCurrentCompleted(956,4) and IsAetherCurrentCompleted(956,5)
-				and IsAetherCurrentCompleted(956,6)	and IsAetherCurrentCompleted(956,7) and IsAetherCurrentCompleted(956,8)
-				and IsAetherCurrentCompleted(956,9) and IsAetherCurrentCompleted(956,10) and IsAetherCurrentCompleted(956,11)
-				and IsAetherCurrentCompleted(956,12) and IsAetherCurrentCompleted(956,13) and IsAetherCurrentCompleted(956,14))">
+				and IsAetherCurrentCompleted(956,6)	and IsAetherCurrentCompleted(956,7) and IsAetherCurrentCompleted(956,8))">
       <LogMessage Message="Going to unlock Labyrinthos Flying."/>
       <LLToast message="Going to unlock Labyrinthos Flying."/>
 
@@ -137,47 +135,23 @@ Author: Angles24, Manta
         <LLTurnIn QuestId="69865" NpcId="1041129" XYZ="-23.57526, -31.53021, 1.846313"/>
         <LLSmallTalk/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 14)">
-        <GetTo ZoneId="956" XYZ="346.529, 209.352, -767.739" />
-        <UseObject NpcId="2011980" XYZ="346.529, 209.352, -767.739" Condition="not IsAetherCurrentCompleted(956, 14)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 13)">
-        <GetTo ZoneId="956" XYZ="748.562, 106.712, 66.7589" />
-        <UseObject NpcId="2011981" XYZ="748.562, 106.712, 66.7589" Condition="not IsAetherCurrentCompleted(956, 13)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 12)">
-        <GetTo ZoneId="956" XYZ="-547.726, -18.0226, 661.873" />
-        <UseObject NpcId="2011985" XYZ="-547.726, -18.0226, 661.873" Condition="not IsAetherCurrentCompleted(956, 12)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 11)">
+      <If Condition="not IsAetherCurrentCompleted(956, 5)">
         <GetTo ZoneId="956" XYZ="-141.4134, -25.05096, 713.8115" />
         <LLClimbHill Start="-141.4134, -25.05096, 713.8115" End="-136.0235, -19.54328, 697.3575" Distance="2.5" />
-        <UseObject NpcId="2011986" XYZ="-128.069, -20.5234, 676.722" Condition="not IsAetherCurrentCompleted(956, 11)" />
+        <UseObject NpcId="2011986" XYZ="-128.069, -20.5234, 676.722" Condition="not IsAetherCurrentCompleted(956, 5)" />
         <LLClimbHill Start="-128.069, -20.5234, 676.722" End="-114.2654, -30.44403, 669.1144" Distance="2.5" />
       </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 10)">
-        <GetTo ZoneId="956" XYZ="-316.276, 79.7614, -395.312" />
-        <UseObject NpcId="2011982" XYZ="-316.276, 79.7614, -395.312" Condition="not IsAetherCurrentCompleted(956, 10)" />
+      <If Condition="not IsAetherCurrentCompleted(956, 6)">
+        <GetTo ZoneId="956" XYZ="-547.726, -18.0226, 661.873" />
+        <UseObject NpcId="2011985" XYZ="-547.726, -18.0226, 661.873" Condition="not IsAetherCurrentCompleted(956, 6)" />
       </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 9)">
-        <GetTo ZoneId="956" XYZ="32.3334, 72.8314, -286.272" />
-        <UseObject NpcId="2011983" XYZ="32.3334, 72.8314, -286.272" Condition="not IsAetherCurrentCompleted(956, 9)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 8)">
-        <GetTo ZoneId="956" XYZ="497.115, 73.4197, -267.231" />
-        <UseObject NpcId="2011984" XYZ="497.115, 73.4197, -267.231" Condition="not IsAetherCurrentCompleted(956, 8)" />
+	  <If Condition="not IsAetherCurrentCompleted(956, 8)">
+        <GetTo ZoneId="956" XYZ="346.529, 209.352, -767.739" />
+        <UseObject NpcId="2011980" XYZ="346.529, 209.352, -767.739" Condition="not IsAetherCurrentCompleted(956, 8)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(956, 7)">
-        <GetTo ZoneId="956" XYZ="-176.381, -10.101, -242.245" />
-        <UseObject NpcId="2011987" XYZ="-176.381, -10.101, -242.245" Condition="not IsAetherCurrentCompleted(956, 7)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 6)">
-        <GetTo ZoneId="956" XYZ="-505.14, -21.8212, -122.596" />
-        <UseObject NpcId="2011988" XYZ="-505.14, -21.8212, -122.596" Condition="not IsAetherCurrentCompleted(956, 6)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(956, 5)">
-        <GetTo ZoneId="956" XYZ="46.2823, -29.7999, 178.875" />
-        <UseObject NpcId="2011989" XYZ="46.2823, -29.7999, 178.875" Condition="not IsAetherCurrentCompleted(956, 5)" />
+        <GetTo ZoneId="956" XYZ="748.562, 106.712, 66.7589" />
+        <UseObject NpcId="2011981" XYZ="748.562, 106.712, 66.7589" Condition="not IsAetherCurrentCompleted(956, 7)" />
       </If>
     </If>
 
@@ -185,9 +159,7 @@ Author: Angles24, Manta
 
     <If Condition="IsQuestCompleted(69952) and not (IsAetherCurrentCompleted(957,0) and IsAetherCurrentCompleted(957,1) and IsAetherCurrentCompleted(957,2)
 				and IsAetherCurrentCompleted(957,3) and IsAetherCurrentCompleted(957,4) and IsAetherCurrentCompleted(957,5)
-				and IsAetherCurrentCompleted(957,6) and IsAetherCurrentCompleted(957,7) and IsAetherCurrentCompleted(957,8)
-				and IsAetherCurrentCompleted(957,9) and IsAetherCurrentCompleted(957,10) and IsAetherCurrentCompleted(957,11)
-				and IsAetherCurrentCompleted(957,12) and IsAetherCurrentCompleted(957,13) and IsAetherCurrentCompleted(957,14))">
+				and IsAetherCurrentCompleted(957,6) and IsAetherCurrentCompleted(957,7) and IsAetherCurrentCompleted(957,8))">
       <LogMessage Message="Going to unlock Thavnair Flying."/>
       <LLToast message="Going to unlock Thavnair Flying."/>
 
@@ -362,47 +334,23 @@ Author: Angles24, Manta
         <LLTurnIn QuestId="69793" NpcId="1040864" XYZ="462.5162, 14.3201, -219.8673"/>
         <LLSmallTalk/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(957, 14)">
-        <GetTo ZoneId="957" XYZ="-176.104, 21.5304, 537.835" />
-        <UseObject NpcId="2011990" XYZ="-176.104, 21.5304, 537.835" Condition="not IsAetherCurrentCompleted(957, 14)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(957, 13)">
-        <GetTo ZoneId="957" XYZ="-43.1, 99.5, -713.7" />
-        <ClimbHill Start="-43.1, 99.5, -713.7" End="-49.2675, 94.0719, -710.757" />
-        <UseObject NpcId="2011991" XYZ="-49.2675, 94.0719, -710.757" Condition="not IsAetherCurrentCompleted(957, 13)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(957, 12)">
-        <GetTo ZoneId="957" XYZ="118.474, 4.9335, -343.866" />
-        <UseObject NpcId="2011995" XYZ="118.474, 4.9335, -343.866" Condition="not IsAetherCurrentCompleted(957, 12)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(957, 11)">
-        <GetTo ZoneId="957" XYZ="542.8, 15.1, -149.3" />
-        <ClimbHill Start="542.8, 15.1, -149.3" End="550.018, 25.4763, -159.076" />
-        <UseObject NpcId="2011996" XYZ="550.018, 25.4763, -159.076" Condition="not IsAetherCurrentCompleted(957, 11)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(957, 10)">
-        <GetTo ZoneId="957" XYZ="303.921, 0.280689, 473.656" />
-        <UseObject NpcId="2011992" XYZ="303.921, 0.280689, 473.656" Condition="not IsAetherCurrentCompleted(957, 10)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(957, 9)">
-        <GetTo ZoneId="957" XYZ="-479.439, 72.9045, -561.809" />
-        <UseObject NpcId="2011993" XYZ="-479.439, 72.9045, -561.809" Condition="not IsAetherCurrentCompleted(957, 9)" />
-      </If>
       <If Condition="not IsAetherCurrentCompleted(957, 8)">
-        <GetTo ZoneId="957" XYZ="-114.46, 87.0873, -288.29" />
-        <UseObject NpcId="2011994" XYZ="-114.46, 87.0873, -288.29" Condition="not IsAetherCurrentCompleted(957, 8)" />
+        <GetTo ZoneId="957" XYZ="-176.104, 21.5304, 537.835" />
+        <UseObject NpcId="2011990" XYZ="-176.104, 21.5304, 537.835" Condition="not IsAetherCurrentCompleted(957, 8)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(957, 7)">
-        <GetTo ZoneId="957" XYZ="93.1188, 36.6839, -447.865" />
-        <UseObject NpcId="2011997" XYZ="93.1188, 36.6839, -447.865" Condition="not IsAetherCurrentCompleted(957, 7)" />
+        <GetTo ZoneId="957" XYZ="-43.1, 99.5, -713.7" />
+        <LLClimbHill Distance="2.5" Start="-43.1, 99.5, -713.7" End="-49.2675, 94.0719, -710.757" />
+        <UseObject NpcId="2011991" XYZ="-49.2675, 94.0719, -710.757" Condition="not IsAetherCurrentCompleted(957, 7)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(957, 6)">
-        <GetTo ZoneId="957" XYZ="294.402, 4.0999, 425.122" />
-        <UseObject NpcId="2011998" XYZ="294.402, 4.0999, 425.122" Condition="not IsAetherCurrentCompleted(957, 6)" />
+        <GetTo ZoneId="957" XYZ="118.474, 4.9335, -343.866" />
+        <UseObject NpcId="2011995" XYZ="118.474, 4.9335, -343.866" Condition="not IsAetherCurrentCompleted(957, 6)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(957, 5)">
-        <GetTo ZoneId="957" XYZ="53.1891, 11.3868, 187.406" />
-        <UseObject NpcId="2011999" XYZ="53.1891, 11.3868, 187.406" Condition="not IsAetherCurrentCompleted(957, 5)" />
+        <GetTo ZoneId="957" XYZ="542.8, 15.1, -149.3" />
+        <LLClimbHill Distance="2.5" Start="542.8, 15.1, -149.3" End="550.018, 25.4763, -159.076" />
+        <UseObject NpcId="2011996" XYZ="550.018, 25.4763, -159.076" Condition="not IsAetherCurrentCompleted(957, 5)" />
       </If>
     </If>
 
@@ -410,9 +358,7 @@ Author: Angles24, Manta
 
     <If Condition="IsQuestCompleted(69931) and not (IsAetherCurrentCompleted(958,0) and IsAetherCurrentCompleted(958,1) and IsAetherCurrentCompleted(958,2)
 				and IsAetherCurrentCompleted(958,3) and IsAetherCurrentCompleted(958,4) and IsAetherCurrentCompleted(958,5)
-				and IsAetherCurrentCompleted(958,6) and IsAetherCurrentCompleted(958,7) and IsAetherCurrentCompleted(958,8)
-				and IsAetherCurrentCompleted(958,9) and IsAetherCurrentCompleted(958,10) and IsAetherCurrentCompleted(958,11)
-				and IsAetherCurrentCompleted(958,12) and IsAetherCurrentCompleted(958,13) and IsAetherCurrentCompleted(958,14))">
+				and IsAetherCurrentCompleted(958,6) and IsAetherCurrentCompleted(958,7) and IsAetherCurrentCompleted(958,8))">
       <LogMessage Message="Going to unlock Garlemald Flying."/>
       <LLToast message="Going to unlock Garlemald Flying."/>
 
@@ -573,64 +519,21 @@ Author: Angles24, Manta
         <LLTurnIn QuestId="69768" NpcId="1040633" XYZ="497.5773, 10.88766, -417.5886"/>
         <LLSmallTalk/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(958, 14)">
-        <GetTo ZoneId="958" XYZ="-184.222, 31.9371, 423.606" />
-        <UseObject NpcId="2012000" XYZ="-184.222, 31.9371, 423.606" Condition="not IsAetherCurrentCompleted(958, 14)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(958, 13)">
-        <GetTo ZoneId="958" XYZ="194.816, -12.8414, 644.311" />
-        <UseObject NpcId="2012001" XYZ="194.816, -12.8414, 644.311" Condition="not IsAetherCurrentCompleted(958, 13)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(958, 12)">
-        <GetTo ZoneId="958" XYZ="83.094, 1.52583, 102.017" />
-        <UseObject NpcId="2012002" XYZ="83.094, 1.52583, 102.017" Condition="not IsAetherCurrentCompleted(958, 12)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(958, 11)">
-        <GetTo ZoneId="958" XYZ="397.9, -1.7, 263.3" />
-        <ClimbHill Start="397.2496, -0.8995048, 262.1581" End="402.5, -2.9, 265.6" />
-        <ClimbHill Start="402.5, -2.9, 265.6" End="405.295, -2.24316, 520.317" />
-        <UseObject NpcId="2012003" XYZ="405.295, -2.24316, 520.317" Condition="not IsAetherCurrentCompleted(958, 11)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(958, 10)">
-        <GetTo ZoneId="958" XYZ="-516.088, 42.4699, 67.8378" />
-        <UseObject NpcId="2012004" XYZ="-516.088, 42.4699, 67.8378" Condition="not IsAetherCurrentCompleted(958, 10)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(958, 9)">
-        <GetTo ZoneId="958" XYZ="382.184, 25.9005, -482.196" />
-        <UseObject NpcId="2012005" XYZ="382.184, 25.9005, -482.196" Condition="not IsAetherCurrentCompleted(958, 9)" />
-      </If>
       <If Condition="not IsAetherCurrentCompleted(958, 8)">
-        <GetTo ZoneId="958" XYZ="-602.03, 34.3171, -325.853" />
-        <UseObject NpcId="2012006" XYZ="-602.03, 34.3171, -325.853" Condition="not IsAetherCurrentCompleted(958, 8)" />
+        <GetTo ZoneId="958" XYZ="-184.222, 31.9371, 423.606" />
+        <UseObject NpcId="2012000" XYZ="-184.222, 31.9371, 423.606" Condition="not IsAetherCurrentCompleted(958, 8)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 7)">
-        <GetTo ZoneId="958" XYZ="84.92862, 10.5, -340.66" />
-        <RunCode name="TurnOffMount"/> 
-		<Dismount/>
-        <LLClimbHill Distance="2.5" Start="84.92862, 10.5, -340.66" End="72.78697, 14.01106, -349.8062" />
-        <LLClimbHill Distance="2.5" Start="72.78697, 14.01106, -349.8062" End="73.35172, 15.69851, -356.3765" />
-        <RunCode name="TurnOnMount"/>
-        <GetTo ZoneId="958" XYZ="79.9136, 37.8851, -518.181" />
-        <UseObject NpcId="2012007" XYZ="79.9136, 37.8851, -518.181" Condition="not IsAetherCurrentCompleted(958, 7)" />
-        <LLClimbHill Distance="2.5" Start="79.9136, 37.8851, -518.181" End="95.63257, 10.8, -535.3679" />
+        <GetTo ZoneId="958" XYZ="194.816, -12.8414, 644.311" />
+        <UseObject NpcId="2012001" XYZ="194.816, -12.8414, 644.311" Condition="not IsAetherCurrentCompleted(958, 7)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 6)">
-        <GetTo ZoneId="958" XYZ="131.6041, 10.8146, -162.225" />
-        <RunCode name="TurnOffMount"/> 
-		<Dismount/>
-        <LLClimbHill Distance="2.5" Start="131.6041, 10.8146, -162.225" End="134.928, 14.3984, -172.249" />
-        <UseObject NpcId="2012008" XYZ="134.928, 14.3984, -172.249" Condition="not IsAetherCurrentCompleted(958, 6)" />
-        <LLClimbHill Distance="2.5" SpamJump="True" Start="134.928, 14.3984, -172.249" End="139.4676, 10.8, -161.884" />
-        <RunCode name="TurnOnMount"/>
+        <GetTo ZoneId="958" XYZ="382.184, 25.9005, -482.196" />
+        <UseObject NpcId="2012005" XYZ="382.184, 25.9005, -482.196" Condition="not IsAetherCurrentCompleted(958, 6)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 5)">
-        <GetTo ZoneId="958" XYZ="-155.4925, 11.38934, -400.2436" />
-        <RunCode name="TurnOffMount"/> 
-		<Dismount/>
-        <LLClimbHill Distance="2.5" Start="-155.4925, 11.38934, -400.2436" End="-151.0025, 16.15989, -420.5258"/>
-        <UseObject NpcId="2012009" XYZ="-144.924, 17.5785, -420.515" Condition="not IsAetherCurrentCompleted(958, 5)" />
-        <LLClimbHill Distance="2.5" Start="-144.924, 17.5785, -420.515" End="-133.8798, 11.38934, -403.0633" />
-        <RunCode name="TurnOnMount"/>
+        <GetTo ZoneId="958" XYZ="-602.03, 34.3171, -325.853" />
+        <UseObject NpcId="2012006" XYZ="-602.03, 34.3171, -325.853" Condition="not IsAetherCurrentCompleted(958, 5)" />
       </If>
     </If>
 
@@ -639,9 +542,7 @@ Author: Angles24, Manta
 
     <If Condition="IsQuestCompleted(69943) and not (IsAetherCurrentCompleted(959,0) and IsAetherCurrentCompleted(959,1) and IsAetherCurrentCompleted(959,2)
 				and IsAetherCurrentCompleted(959,3) and IsAetherCurrentCompleted(959,4) and IsAetherCurrentCompleted(959,5)
-				and IsAetherCurrentCompleted(959,6) and IsAetherCurrentCompleted(959,7) and IsAetherCurrentCompleted(959,8)
-				and IsAetherCurrentCompleted(959,9) and IsAetherCurrentCompleted(959,10) and IsAetherCurrentCompleted(959,11)
-				and IsAetherCurrentCompleted(959,12) and IsAetherCurrentCompleted(959,13) and IsAetherCurrentCompleted(959,14))">
+				and IsAetherCurrentCompleted(959,6) and IsAetherCurrentCompleted(959,7) and IsAetherCurrentCompleted(959,8))">
       <LogMessage Message="Going to unlock Mare Lamentorum Flying."/>
       <LLToast message="Going to unlock Mare Lamentorum Flying."/>
 
@@ -809,67 +710,34 @@ Author: Angles24, Manta
         <LLTurnIn ItemId="2003261" QuestId="69789" NpcId="1041123" XYZ="-81.86469, -132.7433, -521.6602"/>
         <LLSmallTalk/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 14)">
-        <GetTo ZoneId="959" XYZ="42.5905, 124.015, -167.03" />
-        <UseObject NpcId="2012010" XYZ="42.5905, 124.015, -167.03" Condition="not IsAetherCurrentCompleted(959, 14)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 13)">
+      <If Condition="not IsAetherCurrentCompleted(959, 7)">
         <GetTo ZoneId="959" XYZ="-450.3835, -168, -621.6236" />
         <RunCode name="TurnOffMount"/> 
 		<Dismount/>
-        <!--<ClimbSpiral XYZ="-449.92, -168, -623.87" StepNum="7" StartHeading="2.79" Radians="0.125" StepDistance="6.1" StepHeight="1.468" Timeout="15000" />-->
-        <LLClimbHill Distance="2.5" Start="-450.3835, -168, -621.6236" End="-443.5604, -158.9644, -652.9686" SpamJump="true" />
         <LLClimbHill Distance="2.5" Start="-443.5604, -158.9644, -652.9686" End="-450.20, -155.36, -663.61" SpamJump="true" />
         <LLClimbHill Distance="2.5" Start="-450.20, -155.36, -663.61" End="-459.73, -155.57, -659.69" SpamJump="true" />
         <GetTo ZoneId="959" XYZ="-482.744, -154.954, -595.709" />
-        <UseObject NpcId="2012011" XYZ="-482.744, -154.954, -595.709" Condition="not IsAetherCurrentCompleted(959, 13)" />
+        <UseObject NpcId="2012011" XYZ="-482.744, -154.954, -595.709" Condition="not IsAetherCurrentCompleted(959, 7)" />
         <LLClimbHill Distance="2.5" Start="-480.96, -154.95, -601.64" End="-471.15, -168.00, -600.00" SpamJump="true" />
         <RunCode name="TurnOnMount"/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 12)">
+      <If Condition="not IsAetherCurrentCompleted(959, 6)">
         <GetTo ZoneId="959" XYZ="302.1018, -144, -557.6024" />
         <RunCode name="TurnOffMount"/> 
 		<Dismount/>
         <LLClimbHill Distance="2.5" Start="302.1018, -144, -557.6024" End="319.1552, -156.2334, -574.8775" />
         <LLClimbHill Distance="2.5" Start="313.8791, -156.2261, -589.9079" End="316.401, -154.978, -595.519" />
-        <UseObject NpcId="2012012" XYZ="316.401, -154.978, -595.519" Condition="not IsAetherCurrentCompleted(959, 12)" />
+        <UseObject NpcId="2012012" XYZ="316.401, -154.978, -595.519" Condition="not IsAetherCurrentCompleted(959, 6)" />
         <LLClimbHill Distance="2.5" Start="316.401, -154.978, -595.519" End="340.8135, -168, -607.7444" />
         <RunCode name="TurnOnMount"/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 11)">
-        <GetTo ZoneId="959" XYZ="29.1046, -47.739, -550.408" />
-        <UseObject NpcId="2012013" XYZ="29.1046, -47.739, -550.408" Condition="not IsAetherCurrentCompleted(959, 11)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 10)">
-        <GetTo ZoneId="959" XYZ="-128.002, 66.3504, -68.2408" />
-        <UseObject NpcId="2012014" XYZ="-128.002, 66.3504, -68.2408" Condition="not IsAetherCurrentCompleted(959, 10)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 9)">
-        <GetTo ZoneId="959" XYZ="597.6567, 147.3868, 114.9026" />
-        <ClimbHill Start="597.6567, 147.3868, 114.9026" End="591.378, 149.356, 114.936" />
-        <UseObject NpcId="2012015" XYZ="591.378, 149.356, 114.936" Condition="not IsAetherCurrentCompleted(959, 9)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 8)">
-        <GetTo ZoneId="959" XYZ="388.358, 99.9167, 306.071" />
-        <UseObject NpcId="2012016" XYZ="388.358, 99.9167, 306.071" Condition="not IsAetherCurrentCompleted(959, 8)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 7)">
-        <GetTo ZoneId="959" XYZ="652.979, -160.693, -405.081" />
-        <UseObject NpcId="2012017" XYZ="652.979, -160.693, -405.081" Condition="not IsAetherCurrentCompleted(959, 7)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(959, 6)">
-        <GetTo ZoneId="959" XYZ="-716.4567, -152.9037, -805.4945" />
-        <ClimbSpiral XYZ="-718.3214, -152.9037, -804.8604" StepNum="7" StartHeading="5.24" Radians="0.125" StepDistance="6.1" StepHeight="1.468" Timeout="15000" />
-        <LLClimbHill Start="-743.4, -140.6, -774.1" End="-733.86, -140.35, -770.46" SpamJump="true" />
-        <GetTo ZoneId="959" XYZ="-733.617, -139.662, -733.28" />
-        <UseObject NpcId="2012018" XYZ="-733.617, -139.662, -733.28" Condition="not IsAetherCurrentCompleted(959, 6)" />
-        <LLClimbHill Start="-733.617, -139.662, -733.28" End="-738.13, -152.90, -711.31" SpamJump="true" />
-      </If>
       <If Condition="not IsAetherCurrentCompleted(959, 5)">
-        <GetTo ZoneId="959" XYZ="13.22206, -107.6184, -401.0022" />
-        <LLClimbHill Start="13, -108, -402" End="26, -133.5, -394.6" SpamJump="true" />
-        <UseObject NpcId="2012019" XYZ="21.7081, -133.5, -385.731" Condition="not IsAetherCurrentCompleted(959, 5)" />
-        <LLClimbHill Start="21.7081, -133.5, -385.731" End="22.92, -137.42, -410.68" SpamJump="true" />
+        <GetTo ZoneId="959" XYZ="29.1046, -47.739, -550.408" />
+        <UseObject NpcId="2012013" XYZ="29.1046, -47.739, -550.408" Condition="not IsAetherCurrentCompleted(959, 5)" />
+      </If>
+	  <If Condition="not IsAetherCurrentCompleted(959, 8)">
+        <GetTo ZoneId="959" XYZ="42.5905, 124.015, -167.03" />
+        <UseObject NpcId="2012010" XYZ="42.5905, 124.015, -167.03" Condition="not IsAetherCurrentCompleted(959, 8)" />
       </If>
     </If>
 
@@ -878,9 +746,7 @@ Author: Angles24, Manta
 
     <If Condition="IsQuestCompleted(69973) and not (IsAetherCurrentCompleted(961,0) and IsAetherCurrentCompleted(961,1) and IsAetherCurrentCompleted(961,2)
 				and IsAetherCurrentCompleted(961,3) and IsAetherCurrentCompleted(961,4) and IsAetherCurrentCompleted(961,5)
-				and IsAetherCurrentCompleted(961,6) and IsAetherCurrentCompleted(961,7) and IsAetherCurrentCompleted(961,8)
-				and IsAetherCurrentCompleted(961,9) and IsAetherCurrentCompleted(961,10) and IsAetherCurrentCompleted(961,11)
-				and IsAetherCurrentCompleted(961,12) and IsAetherCurrentCompleted(961,13) and IsAetherCurrentCompleted(961,14))">
+				and IsAetherCurrentCompleted(961,6) and IsAetherCurrentCompleted(961,7) and IsAetherCurrentCompleted(961,8))">
       <LogMessage Message="Going to unlock Elpis Flying."/>
       <LLToast message="Going to unlock Elpis Flying."/>
 
@@ -1042,49 +908,21 @@ Author: Angles24, Manta
         <LLTurnIn QuestId="69849" NpcId="1041847" XYZ="-484.2146, 141.8679, -97.21527"/>
         <LLSmallTalk/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(961, 14)">
-        <GetTo ZoneId="961" XYZ="628.239, 8.31683, 107.902" />
-        <UseObject NpcId="2012020" XYZ="628.239, 8.31683, 107.902" Condition="not IsAetherCurrentCompleted(961, 14)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(961, 13)">
-        <GetTo ZoneId="961" XYZ="-754.753, -36.0114, 411.134" />
-        <UseObject NpcId="2012021" XYZ="-754.753, -36.0114, 411.134" Condition="not IsAetherCurrentCompleted(961, 13)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(961, 12)">
-        <GetTo ZoneId="961" XYZ="151.667, 7.66582, 2.548" />
-        <UseObject NpcId="2012022" XYZ="151.667, 7.66582, 2.548" Condition="not IsAetherCurrentCompleted(961, 12)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(961, 11)">
-        <GetTo ZoneId="961" XYZ="-144.4908, -27.83071, 544.2012" />
-        <ClimbHill Start="-144.4908, -27.83071, 544.2012" End="-144.539, -26.2298, 551.52" />
-        <UseObject NpcId="2012023" XYZ="-144.539, -26.2298, 551.52" Condition="not IsAetherCurrentCompleted(961, 11)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(961, 10)">
-        <GetTo ZoneId="961" XYZ="-481.407, -28.5802, 490.562" />
-        <UseObject NpcId="2012024" XYZ="-481.407, -28.5802, 490.562" Condition="not IsAetherCurrentCompleted(961, 10)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(961, 9)">
-        <GetTo ZoneId="961" XYZ="-482.1349, 157.9294, -365.1474" />
-        <!-- Passage to Ethoseletikos Boreas -->
-        <LLUseObject NpcId="2012536" XYZ="-481.8952, 157.3662, -367.5135" />
-        <GetTo ZoneId="961" XYZ="-402.921, 327.757, -691.323" />
-        <UseObject NpcId="2012025" XYZ="-402.921, 327.757, -691.323" Condition="not IsAetherCurrentCompleted(961, 9)" />
-      </If>
       <If Condition="not IsAetherCurrentCompleted(961, 8)">
-        <GetTo ZoneId="961" XYZ="-555.623, 158.118, 172.429" />
-        <UseObject NpcId="2012026" XYZ="-555.623, 158.118, 172.429" Condition="not IsAetherCurrentCompleted(961, 8)" />
+        <GetTo ZoneId="961" XYZ="628.239, 8.31683, 107.902" />
+        <UseObject NpcId="2012020" XYZ="628.239, 8.31683, 107.902" Condition="not IsAetherCurrentCompleted(961, 8)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(961, 7)">
-        <GetTo ZoneId="961" XYZ="-392.05, 173.724, -293.599" />
-        <UseObject NpcId="2012027" XYZ="-392.05, 173.724, -293.599" Condition="not IsAetherCurrentCompleted(961, 7)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(961, 6)">
-        <GetTo ZoneId="961" XYZ="-761.711, 160.011, -108.987" />
-        <UseObject NpcId="2012028" XYZ="-761.711, 160.011, -108.987" Condition="not IsAetherCurrentCompleted(961, 6)" />
+        <GetTo ZoneId="961" XYZ="-754.753, -36.0114, 411.134" />
+        <UseObject NpcId="2012021" XYZ="-754.753, -36.0114, 411.134" Condition="not IsAetherCurrentCompleted(961, 7)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(961, 5)">
-        <GetTo ZoneId="961" XYZ="-255.512, 143.079, -36.9727" />
-        <UseObject NpcId="2012029" XYZ="-255.512, 143.079, -36.9727" Condition="not IsAetherCurrentCompleted(961, 5)" />
+        <GetTo ZoneId="961" XYZ="-555.623, 158.118, 172.429" />
+        <UseObject NpcId="2012026" XYZ="-555.623, 158.118, 172.429" Condition="not IsAetherCurrentCompleted(961, 5)" />
+      </If>
+      <If Condition="not IsAetherCurrentCompleted(961, 6)">
+        <GetTo ZoneId="961" XYZ="-402.921, 327.757, -691.323" />
+        <UseObject NpcId="2012025" XYZ="-402.921, 327.757, -691.323" Condition="not IsAetherCurrentCompleted(961, 6)" />
       </If>
     </If>
 
@@ -1093,9 +931,7 @@ Author: Angles24, Manta
 
     <If Condition="IsQuestCompleted(69999) and not (IsAetherCurrentCompleted(960,0) and IsAetherCurrentCompleted(960,1) and IsAetherCurrentCompleted(960,2)
 				and IsAetherCurrentCompleted(960,3) and IsAetherCurrentCompleted(960,4) and IsAetherCurrentCompleted(960,5)
-				and IsAetherCurrentCompleted(960,6)	and IsAetherCurrentCompleted(960,7) and IsAetherCurrentCompleted(960,8)
-				and IsAetherCurrentCompleted(960,9) and IsAetherCurrentCompleted(960,10) and IsAetherCurrentCompleted(960,11)
-				and IsAetherCurrentCompleted(960,12) and IsAetherCurrentCompleted(960,13) and IsAetherCurrentCompleted(960,14))">
+				and IsAetherCurrentCompleted(960,6)	and IsAetherCurrentCompleted(960,7) and IsAetherCurrentCompleted(960,8))">
       <LogMessage Message="Going to unlock Ultima Thule Flying."/>
       <LLToast message="Going to unlock Ultima Thule Flying."/>
 
@@ -1205,47 +1041,21 @@ Author: Angles24, Manta
         <LLTurnIn ItemId="2003274" QuestId="69890" NpcId="1038043" XYZ="470.4203, 437.0018, 315.8159"/>
         <LLSmallTalk/>
       </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 14)">
-        <GetTo ZoneId="960" XYZ="-333.54, 270.851, -361.487" />
-        <UseObject NpcId="2012030" XYZ="-333.54, 270.851, -361.487" Condition="not IsAetherCurrentCompleted(960, 14)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 13)">
+      <If Condition="not IsAetherCurrentCompleted(960, 7)">
         <GetTo ZoneId="960" XYZ="13.118, 275.566, -756.396" />
-        <UseObject NpcId="2012031" XYZ="13.118, 275.566, -756.396" Condition="not IsAetherCurrentCompleted(960, 13)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 12)">
-        <GetTo ZoneId="960" XYZ="661.785, 439.977, 411.757" />
-        <UseObject NpcId="2012032" XYZ="661.785, 439.977, 411.757" Condition="not IsAetherCurrentCompleted(960, 12)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 11)">
-        <GetTo ZoneId="960" XYZ="539.271, 438.001, 239.404" />
-        <UseObject NpcId="2012033" XYZ="539.271, 438.001, 239.404" Condition="not IsAetherCurrentCompleted(960, 11)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 10)">
-        <GetTo ZoneId="960" XYZ="424.573, 283.384, -679.755" />
-        <UseObject NpcId="2012034" XYZ="424.573, 283.384, -679.755" Condition="not IsAetherCurrentCompleted(960, 10)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 9)">
-        <GetTo ZoneId="960" XYZ="-238.789, 320.386, -295.141" />
-        <UseObject NpcId="2012035" XYZ="-238.789, 320.386, -295.141" Condition="not IsAetherCurrentCompleted(960, 9)" />
+        <UseObject NpcId="2012031" XYZ="13.118, 275.566, -756.396" Condition="not IsAetherCurrentCompleted(960, 7)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(960, 8)">
-        <GetTo ZoneId="960" XYZ="-385.221, 262.517, -629.85" />
-        <UseObject NpcId="2012036" XYZ="-385.221, 262.517, -629.85" Condition="not IsAetherCurrentCompleted(960, 8)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 7)">
         <GetTo ZoneId="960" XYZ="751.878, 439.977, 357.899" />
-        <UseObject NpcId="2012037" XYZ="751.878, 439.977, 357.899" Condition="not IsAetherCurrentCompleted(960, 7)" />
-      </If>
-      <If Condition="not IsAetherCurrentCompleted(960, 6)">
-        <GetTo ZoneId="960" XYZ="628.9454, 438.6276, 293.3263" />
-        <LLClimbHill Start="628.9454, 438.6276, 293.3263" End="637.195, 439.241, 289.665" Distance="2.5" SpamJump="true" />
-        <UseObject NpcId="2012038" XYZ="637.195, 439.241, 289.665" Condition="not IsAetherCurrentCompleted(960, 6)" />
-        <LLClimbHill Start="637.195, 439.241, 289.665" End="628.9454, 438.6276, 293.3263" Distance="2.5" />
+        <UseObject NpcId="2012037" XYZ="751.878, 439.977, 357.899" Condition="not IsAetherCurrentCompleted(960, 8)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(960, 5)">
-        <GetTo ZoneId="960" XYZ="567.498, 440.93, 402.135" />
-        <UseObject NpcId="2012039" XYZ="567.498, 440.93, 402.135" Condition="not IsAetherCurrentCompleted(960, 5)" />
+        <GetTo ZoneId="960" XYZ="539.271, 438.001, 239.404" />
+        <UseObject NpcId="2012033" XYZ="539.271, 438.001, 239.404" Condition="not IsAetherCurrentCompleted(960, 5)" />
+      </If>
+      <If Condition="not IsAetherCurrentCompleted(960, 6)">
+        <GetTo ZoneId="960" XYZ="661.785, 439.977, 411.757" />
+        <UseObject NpcId="2012032" XYZ="661.785, 439.977, 411.757" Condition="not IsAetherCurrentCompleted(960, 6)" />
       </If>
     </If>
 
@@ -1283,33 +1093,21 @@ Author: Angles24, Manta
     <If Condition="(IsAetherCurrentCompleted(956,0) and IsAetherCurrentCompleted(956,1) and IsAetherCurrentCompleted(956,2)
 				and IsAetherCurrentCompleted(956,3) and IsAetherCurrentCompleted(956,4) and IsAetherCurrentCompleted(956,5)
 				and IsAetherCurrentCompleted(956,6)	and IsAetherCurrentCompleted(956,7) and IsAetherCurrentCompleted(956,8)
-				and IsAetherCurrentCompleted(956,9) and IsAetherCurrentCompleted(956,10) and IsAetherCurrentCompleted(956,11)
-				and IsAetherCurrentCompleted(956,12) and IsAetherCurrentCompleted(956,13) and IsAetherCurrentCompleted(956,14)
 				and IsAetherCurrentCompleted(957,0) and IsAetherCurrentCompleted(957,1) and IsAetherCurrentCompleted(957,2)
 				and IsAetherCurrentCompleted(957,3) and IsAetherCurrentCompleted(957,4) and IsAetherCurrentCompleted(957,5)
 				and IsAetherCurrentCompleted(957,6) and IsAetherCurrentCompleted(957,7) and IsAetherCurrentCompleted(957,8)
-				and IsAetherCurrentCompleted(957,9) and IsAetherCurrentCompleted(957,10) and IsAetherCurrentCompleted(957,11)
-				and IsAetherCurrentCompleted(957,12) and IsAetherCurrentCompleted(957,13) and IsAetherCurrentCompleted(957,14)
 				and IsAetherCurrentCompleted(958,0) and IsAetherCurrentCompleted(958,1) and IsAetherCurrentCompleted(958,2)
 				and IsAetherCurrentCompleted(958,3) and IsAetherCurrentCompleted(958,4) and IsAetherCurrentCompleted(958,5)
 				and IsAetherCurrentCompleted(958,6) and IsAetherCurrentCompleted(958,7) and IsAetherCurrentCompleted(958,8)
-				and IsAetherCurrentCompleted(958,9) and IsAetherCurrentCompleted(958,10) and IsAetherCurrentCompleted(958,11)
-				and IsAetherCurrentCompleted(958,12) and IsAetherCurrentCompleted(958,13) and IsAetherCurrentCompleted(958,14)
 				and IsAetherCurrentCompleted(959,0) and IsAetherCurrentCompleted(959,1) and IsAetherCurrentCompleted(959,2)
 				and IsAetherCurrentCompleted(959,3) and IsAetherCurrentCompleted(959,4) and IsAetherCurrentCompleted(959,5)
 				and IsAetherCurrentCompleted(959,6) and IsAetherCurrentCompleted(959,7) and IsAetherCurrentCompleted(959,8)
-				and IsAetherCurrentCompleted(959,9) and IsAetherCurrentCompleted(959,10) and IsAetherCurrentCompleted(959,11)
-				and IsAetherCurrentCompleted(959,12) and IsAetherCurrentCompleted(959,13) and IsAetherCurrentCompleted(959,14)
 				and IsAetherCurrentCompleted(961,0) and IsAetherCurrentCompleted(961,1) and IsAetherCurrentCompleted(961,2)
 				and IsAetherCurrentCompleted(961,3) and IsAetherCurrentCompleted(961,4) and IsAetherCurrentCompleted(961,5)
 				and IsAetherCurrentCompleted(961,6) and IsAetherCurrentCompleted(961,7) and IsAetherCurrentCompleted(961,8)
-				and IsAetherCurrentCompleted(961,9) and IsAetherCurrentCompleted(961,10) and IsAetherCurrentCompleted(961,11)
-				and IsAetherCurrentCompleted(961,12) and IsAetherCurrentCompleted(961,13) and IsAetherCurrentCompleted(961,14)
 				and IsAetherCurrentCompleted(960,0) and IsAetherCurrentCompleted(960,1) and IsAetherCurrentCompleted(960,2)
 				and IsAetherCurrentCompleted(960,3) and IsAetherCurrentCompleted(960,4) and IsAetherCurrentCompleted(960,5)
-				and IsAetherCurrentCompleted(960,6)	and IsAetherCurrentCompleted(960,7) and IsAetherCurrentCompleted(960,8)
-				and IsAetherCurrentCompleted(960,9) and IsAetherCurrentCompleted(960,10) and IsAetherCurrentCompleted(960,11)
-				and IsAetherCurrentCompleted(960,12) and IsAetherCurrentCompleted(960,13) and IsAetherCurrentCompleted(960,14))">
+				and IsAetherCurrentCompleted(960,6)	and IsAetherCurrentCompleted(960,7) and IsAetherCurrentCompleted(960,8))">
       <LogMessage Message="Congrats on Endwalker Flying."/>
       <LLToast message="Congrats on Endwalker Flying."/>
     </If>
