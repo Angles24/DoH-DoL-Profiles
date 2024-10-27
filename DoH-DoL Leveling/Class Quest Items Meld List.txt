@@ -8,22 +8,22 @@ BSM
 
 ARM 
 - Iron Hoplon (Materia-Enhanced) 
-- HQ Cobalt Haubergeon (Melded with: Heaven’s Eye III Materia)
+- HQ Cobalt Haubergeon (Melded with: Heavens' Eye Materia III)
 
 GSM 
 - Staghorn Staff (Materia Enhanced) 
-- HQ Black Pearl Ring (Melded with: Piety III Materia)
+- HQ Black Pearl Ring (Melded with: Piety Materia III)
 
 LTW 
 - Goatskin Leggings (Materia-Enhanced)
-- Raptorskin Jerkin (Melded with: Gatherers Grasp III Materia)
+- Raptorskin Jerkin (Melded with: Gatherer's Grasp Materia III)
 
 WVR 
 - Cotton Acton (Materia-enhanced)
 
 ALC 
 - Engraved Hard Leather Grimoire (Materia Enhanced) 
-- HQ Budding Rosewood Wand (Melded with: Quicktongue III Materia)
+- HQ Budding Rosewood Wand (Melded with: Quicktongue Materia III)
 
 CUL 
 - None
