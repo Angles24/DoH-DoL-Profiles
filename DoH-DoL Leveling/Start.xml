@@ -182,7 +182,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		
 		<!-- Heavensward Aether Currents -->
-		<!--<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
+		<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
 				and IsAetherCurrentCompleted(397,3) and IsAetherCurrentCompleted(397,4) and IsAetherCurrentCompleted(397,5)
 				and IsAetherCurrentCompleted(397,6)	and IsAetherCurrentCompleted(397,7) and IsAetherCurrentCompleted(397,8)
 				and IsAetherCurrentCompleted(398,0) and IsAetherCurrentCompleted(398,1) and IsAetherCurrentCompleted(398,2)
@@ -198,7 +198,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(399,3) and IsAetherCurrentCompleted(399,4) and IsAetherCurrentCompleted(399,5)
 				and IsAetherCurrentCompleted(399,6) and IsAetherCurrentCompleted(399,7) and IsAetherCurrentCompleted(399,8))">
 			<LLoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
-		</If>-->
+		</If>
 		
 		
 		<!-- Craft Gathering and Crafting Gear 51 -->
@@ -720,9 +720,9 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		<!-- Dreamtrail MSQ Check -->
-		<If Condition="not IsQuestCompleted(70495)">
-			<LogMessage Message="Please finish the MSQ quest 'Dawntrail' before continuing."/>
-			<UserDialog DialogText="Please finish the Dreamtrail MSQ quest 'Dawntrail' before continuing."/>	
+		<If Condition="not IsQuestCompleted(70494)">
+			<LogMessage Message="Please finish the MSQ quest 'A Journey Never-ending' before continuing."/>
+			<UserDialog DialogText="Please finish the Dreamtrail MSQ quest 'A Journey Never-ending' before continuing."/>	
 		</If>
 		
 		<!-- Dreamtrail's Aether Currents -->
