@@ -350,7 +350,7 @@ Angles24
 				<If Condition="not IsOnMap(399)">
 					<LisbethTravel Zone="399" Position="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
 				</If>
-				<NoCombatMoveTo Name="Haimirich" XYZ="116.0448, 206.9609, 80.15564"/>
+				<LisbethTravel ZoneId="399" XYZ="169.6345, 202.7997, 494.8042"/>
 				<LLTalkTo QuestId="67620" StepId="5" NpcId="1013959" XYZ="169.6345, 202.7997, 494.8042"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
