@@ -21,7 +21,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
 			<LisbethTravel Zone="141" Position="96.27642, 27.04044, -352.4858"/>
-			<LLTurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
+			<TurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Learnt Desynth!"/>
 		</If>
@@ -36,7 +36,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(67631) and not IsQuestCompleted(67631) and GetQuestStep(67631) == 255">
 			<LisbethTravel Zone="156" Position="45.60925, 31.19533, -732.9061"/>
-			<LLTurnIn QuestId="67631" NpcId="1013395" ItemId="2001784" XYZ="45.60925, 31.19533, -732.9061"/>
+			<TurnIn QuestId="67631" NpcId="1013395" ItemId="2001784" XYZ="45.60925, 31.19533, -732.9061"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Learnt Collectables!"/>
 		</If>
@@ -59,7 +59,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(66959) and not IsQuestCompleted(66959) and GetQuestStep(66959) == 255">
 			<LisbethTravel Zone="156" Position="24.42652, 28.99997, -729.7811"/>
-			<LLTurnIn QuestId="66959" NpcId="1006971" XYZ="24.42652, 28.99997, -729.7811"/>
+			<TurnIn QuestId="66959" NpcId="1006971" XYZ="24.42652, 28.99997, -729.7811"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Tooling Around!"/>
 		</If>
@@ -85,7 +85,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(66957) and not IsQuestCompleted(66957) and GetQuestStep(66957) == 255">
 			<LisbethTravel Zone="156" Position="32.37394, 28.99997, -736.4222"/>
-			<LLTurnIn QuestId="66957" NpcId="1006969" XYZ="32.37394, 28.99997, -736.4222"/>
+			<TurnIn QuestId="66957" NpcId="1006969" XYZ="32.37394, 28.99997, -736.4222"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - A Self-improving Man!"/>
 		</If>
@@ -105,7 +105,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(66958) and not IsQuestCompleted(66958) and GetQuestStep(66958) == 255">
 			<LisbethTravel Zone="156" Position="32.37394, 28.99997, -736.4222"/>
-			<LLTurnIn QuestId="66958" NpcId="1006969" XYZ="32.37394, 28.99997, -736.4222"/>
+			<TurnIn QuestId="66958" NpcId="1006969" XYZ="32.37394, 28.99997, -736.4222"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Submission Impossible!"/>
 		</If>
@@ -120,7 +120,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(67632) and not IsQuestCompleted(67632) and GetQuestStep(67632) == 255">
 			<GetTo ZoneId="419" XYZ="172.2491, -12.53903, -26.55138"/>
-			<LLTurnIn QuestId="67632" NpcId="1012179" ItemId="2001785" XYZ="172.2491, -12.53903, -26.55138"/>
+			<TurnIn QuestId="67632" NpcId="1012179" ItemId="2001785" XYZ="172.2491, -12.53903, -26.55138"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Beloved of the Builder!"/>
 		</If>
@@ -135,7 +135,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(67634) and not IsQuestCompleted(67634) and GetQuestStep(67634) == 255">
 			<GetTo ZoneId="478" XYZ="-16.45746, 206.4994, 47.3041"/>
-			<LLTurnIn QuestId="67634" NpcId="1012299" ItemId="2001787" XYZ="-16.45746, 206.4994, 47.3041"/>
+			<TurnIn QuestId="67634" NpcId="1012299" ItemId="2001787" XYZ="-16.45746, 206.4994, 47.3041"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Go West, Craftsman!"/>
 		</If>
@@ -174,7 +174,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(67633) and not IsQuestCompleted(67633) and GetQuestStep(67633) == 255">
 			<LisbethTravel Zone="141" Position="115.89, 30.76108, -359.7155"/>
-			<LLTurnIn QuestId="67633" NpcId="1001428" ItemId="2001786" XYZ="115.89, 30.76108, -359.7155"/>
+			<TurnIn QuestId="67633" NpcId="1001428" ItemId="2001786" XYZ="115.89, 30.76108, -359.7155"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - No Longer a Collectable!"/>
 		</If>
@@ -189,7 +189,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(66999) and not IsQuestCompleted(66999) and GetQuestStep(66999) == 255">
 			<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
-			<LLTurnIn QuestId="66999" NpcId="1001425" XYZ="115.5356, 31, -390.4169"/>
+			<TurnIn QuestId="66999" NpcId="1001425" XYZ="115.5356, 31, -390.4169"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Marvelously Mutable Materia!"/>
 		</If>
@@ -204,7 +204,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(66174) and not IsQuestCompleted(66174) and GetQuestStep(66174) == 255">
 			<LisbethTravel Zone="141" Position="123.1886, 30.99999, -383.7392"/>
-			<LLTurnIn QuestId="66174" NpcId="1001426" XYZ="123.1886, 30.99999, -383.7392"/>
+			<TurnIn QuestId="66174" NpcId="1001426" XYZ="123.1886, 30.99999, -383.7392"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Forging the Spirit!"/>
 		</If>
@@ -225,7 +225,7 @@ Kayla / Angles24
 		</If>
 		<If Condition="HasQuest(66175) and not IsQuestCompleted(66175) and GetQuestStep(66175) == 255">
 			<LisbethTravel Zone="141" Position="104.0803, 30.92101, -378.1381"/>
-			<LLTurnIn QuestId="66175" NpcId="1001427" XYZ="104.0803, 30.92101, -378.1381"/>
+			<TurnIn QuestId="66175" NpcId="1001427" XYZ="104.0803, 30.92101, -378.1381"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - Waking the Spirit!"/>
 		</If>
@@ -272,4 +272,3 @@ Kayla / Angles24
 		</CodeChunk>
 	</CodeChunks>
 </Profile>
-

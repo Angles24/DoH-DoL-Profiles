@@ -41,7 +41,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="397" XYZ="474.8097, 212.5399, 721.9003"/><!-- Falcon's Nest -->
 					</If>
 					<NoCombatMoveTo Name="Ingaret" XYZ="493.1563, 200.2377, 663.0197"/>
-					<LLTurnIn QuestId="67280" NpcId="1011240" XYZ="493.1563, 200.2377, 663.0197"/>
+					<TurnIn QuestId="67280" NpcId="1011240" XYZ="493.1563, 200.2377, 663.0197"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -80,7 +80,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="397" XYZ="474.8097, 212.5399, 721.9003"/><!-- Falcon's Nest -->
 					</If>
 					<NoCombatMoveTo Name="Wealdtheow" XYZ="-279.5605, 127.0813, 13.59576"/>
-					<LLTurnIn QuestId="67647" NpcId="1011911" ItemId="2001883" XYZ="-279.5605, 127.0813, 13.59576"/>
+					<TurnIn QuestId="67647" NpcId="1011911" ItemId="2001883" XYZ="-279.5605, 127.0813, 13.59576"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -114,7 +114,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="397" XYZ="474.8097, 212.5399, 721.9003"/><!-- Falcon's Nest -->
 					</If>
 					<NoCombatMoveTo Name="Jantellot" XYZ="-288.8686, 127.0664, 13.19904"/>
-					<LLTurnIn QuestId="67296" NpcId="1011907" XYZ="-288.8686, 127.0664, 13.19904"/>
+					<TurnIn QuestId="67296" NpcId="1011907" XYZ="-288.8686, 127.0664, 13.19904"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -148,7 +148,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="397" XYZ="474.8097, 212.5399, 721.9003"/><!-- Falcon's Nest -->
 					</If>
 					<NoCombatMoveTo Name="Luciae" XYZ="-298.2681, 126.6705, -1.419189"/>
-					<LLTurnIn QuestId="67295" NpcId="1011910" XYZ="-298.2681, 126.6705, -1.419189"/>
+					<TurnIn QuestId="67295" NpcId="1011910" XYZ="-298.2681, 126.6705, -1.419189"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -216,7 +216,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="398" XYZ="527.918, -51.27571, 41.3532"/><!-- Tailfeather -->
 					</If>
 					<NoCombatMoveTo Name="Marcechamp" XYZ="470.0236, -49.89133, 20.37079"/>
-					<LLTurnIn QuestId="67307" NpcId="1011916" XYZ="470.0236, -49.89133, 20.37079"/>
+					<TurnIn QuestId="67307" NpcId="1011916" XYZ="470.0236, -49.89133, 20.37079"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -285,7 +285,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="398" XYZ="-300.4373, -21.13108, 37.52076"/><!-- Anyx Trine -->
 					</If>
 					<MoveTo Name="Ess Khas" XYZ="-305.562, 39.04307, 22.9953"/>
-					<LLTurnIn QuestId="67338" NpcId="1011937" XYZ="-305.562, 39.04307, 22.9953"/>
+					<TurnIn QuestId="67338" NpcId="1011937" XYZ="-305.562, 39.04307, 22.9953"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -318,7 +318,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="398" XYZ="527.918, -51.27571, 41.3532"/><!-- Tailfeather -->
 					</If>
 					<NoCombatMoveTo Name="Vath Fleetfoot" XYZ="72.31982, -49.153, -142.5694"/>
-					<LLTurnIn QuestId="67326" NpcId="1011929" ItemId="2001614" XYZ="72.31982, -49.153, -142.5694"/>
+					<TurnIn QuestId="67326" NpcId="1011929" ItemId="2001614" XYZ="72.31982, -49.153, -142.5694"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -358,7 +358,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="398" XYZ="527.918, -51.27571, 41.3532"/><!-- Tailfeather -->
 					</If>
 					<NoCombatMoveTo Name="Marcechamp" XYZ="470.1163, -49.89133, 22.38989"/>
-					<LLTurnIn QuestId="67333" NpcId="1011916" XYZ="470.1163, -49.89133, 22.38989"/>
+					<TurnIn QuestId="67333" NpcId="1011916" XYZ="470.1163, -49.89133, 22.38989"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -411,7 +411,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="400" XYZ="252.6177, -42.16244, 590.2133"/><!-- Moghome -->
 					</If>
 					<NoCombatMoveTo Name="Mogret" XYZ="363.241, -73.25598, 678.4314"/>
-					<LLTurnIn QuestId="67355" NpcId="1012284" XYZ="363.241, -73.25598, 678.4314"/>
+					<TurnIn QuestId="67355" NpcId="1012284" XYZ="363.241, -73.25598, 678.4314"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -445,7 +445,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="400" XYZ="252.6177, -42.16244, 590.2133"/><!-- Moghome -->
 					</If>
 					<NoCombatMoveTo Name="Moon-eyed Moogle" XYZ="517.9064, -1.191711, -354.6349"/>
-					<LLTurnIn QuestId="67371" NpcId="1013434" XYZ="517.9064, -1.191711, -354.6349"/>
+					<TurnIn QuestId="67371" NpcId="1013434" XYZ="517.9064, -1.191711, -354.6349"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -479,7 +479,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="400" XYZ="-575.8106, 48.80803, 319.44"/><!-- Zenith -->
 					</If>
 					<NoCombatMoveTo Name="Mogmont" XYZ="-47.04364, -8.866012, 165.9418"/>
-					<LLTurnIn QuestId="67359" NpcId="1012288" XYZ="-47.04364, -8.866012, 165.9418"/>
+					<TurnIn QuestId="67359" NpcId="1012288" XYZ="-47.04364, -8.866012, 165.9418"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -522,7 +522,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="400" XYZ="-575.8106, 48.80803, 319.44"/><!-- Zenith -->
 					</If>
 					<NoCombatMoveTo Name="Maundering Moogle" XYZ="-511.6354, 50, 348.9565"/>
-					<LLTurnIn QuestId="67364" NpcId="1013420" XYZ="-511.6354, 50, 348.9565"/>
+					<TurnIn QuestId="67364" NpcId="1013420" XYZ="-511.6354, 50, 348.9565"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -579,7 +579,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="401" XYZ="-626.617, -122.5, 539.8152"/><!-- Camp Cloudtop -->
 					</If>
 					<NoCombatMoveTo Name="Laniaitte" XYZ="-277.6379, -184.5974, 741.6038"/>
-					<LLTurnIn QuestId="67284" NpcId="1011952" ItemId="2001599" XYZ="-277.6379, -184.5974, 741.6038"/>
+					<TurnIn QuestId="67284" NpcId="1011952" ItemId="2001599" XYZ="-277.6379, -184.5974, 741.6038"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -611,7 +611,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="401" XYZ="-635.6771, -122.7834, 534.4002"/><!-- Camp Cloudtop -->
 					</If>
 					<NoCombatMoveTo Name="Laniaitte" XYZ="-278.5767, -184.589, 740.3099"/>
-					<LLTurnIn QuestId="67410" ItemId="2001807" NpcId="1011952" XYZ="-278.5767, -184.589, 740.3099"/>
+					<TurnIn QuestId="67410" ItemId="2001807" NpcId="1011952" XYZ="-278.5767, -184.589, 740.3099"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -669,7 +669,7 @@ Profile and fixes by Anges
 					</If>
 					<TeleportTo Name="Ok' Zundu" AetheryteId="73" Force="True"/>
 					<NoCombatMoveTo Name="Ganu Vali" XYZ="-647.0283, -51.05719, -417.7463"/>
-					<LLTurnIn QuestId="67445" NpcId="1012069" ItemId="2001670" XYZ="-647.0283, -51.05719, -417.7463"/>
+					<TurnIn QuestId="67445" NpcId="1012069" ItemId="2001670" XYZ="-647.0283, -51.05719, -417.7463"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -823,7 +823,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="399" XYZ="-216.0735, 103.1677, -584.981"/><!-- The Dravanian Hinterlands (East) -->
 					</If>
 					<NoCombatMoveTo Name="Tapklix" XYZ="-28.39703, 100.9697, -186.4195"/>
-					<LLTurnIn QuestId="67472" NpcId="1012287" XYZ="-28.39703, 100.9697, -186.4195"/>
+					<TurnIn QuestId="67472" NpcId="1012287" XYZ="-28.39703, 100.9697, -186.4195"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -864,7 +864,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="478" XYZ="68.67902, 207.3838, -6.457279"/><!-- Idyllshire -->
 					</If>
 					<MoveTo Name="Halfsix" XYZ="72.40405, 205.6816, 31.63196"/>
-					<LLTurnIn QuestId="67481" NpcId="1012102" ItemId="2001696" XYZ="72.40405, 205.6816, 31.63196"/>
+					<TurnIn QuestId="67481" NpcId="1012102" ItemId="2001696" XYZ="72.40405, 205.6816, 31.63196"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -912,7 +912,7 @@ Profile and fixes by Anges
 						<GetTo ZoneId="399" XYZ="-529.9246, 150.2556, -467.4438"/><!-- The Dravanian Hinterlands (West) -->
 					</If>
 					<NoCombatMoveTo Name="Midnight Dew" XYZ="-475.761, 155.8605, -209.7658"/>
-					<LLTurnIn QuestId="67499" NpcId="1013651" ItemId="2001699" XYZ="-475.761, 155.8605, -209.7658"/>
+					<TurnIn QuestId="67499" NpcId="1013651" ItemId="2001699" XYZ="-475.761, 155.8605, -209.7658"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>
@@ -963,7 +963,7 @@ Profile and fixes by Anges
 						<UseTransport Name="Cave Entrance" InteractDistance="2.5" NpcId="2005336" XYZ="-488.7923, 138.9333, 741.0543"/>
 					</If>
 					<MoveTo Name="Saro Roggo" XYZ="35.6908, 38.43, 12.98535"/>
-					<LLTurnIn QuestId="67502" NpcId="1012141" XYZ="35.6908, 38.43, 12.98535"/>
+					<TurnIn QuestId="67502" NpcId="1012141" XYZ="35.6908, 38.43, 12.98535"/>
 					<LLSmallTalk/>
 					<AutoInventoryEquip/>
 				</If>

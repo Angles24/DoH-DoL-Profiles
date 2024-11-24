@@ -45,7 +45,7 @@ Angles24
 		</If>
 		<While Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
 			<LisbethTravel Zone="141" Position="96.27642, 27.04044, -352.4858"/>
-			<LLTurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
+			<TurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Learnt Desynth!"/>
 		</While>
@@ -71,7 +71,7 @@ Angles24
 		<If Condition="HasQuest(66643)">
 			<If Condition="GetQuestStep(66643) == 255">
 				<GetTo ZoneId="129" XYZ="-166.1612, 4.550006, 165.4742"/>
-				<LLTurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
+				<TurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<If Condition="ClassName != ClassJobType.Fisher">
@@ -113,7 +113,7 @@ Angles24
 				</If>
 				<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/>
 				<MoveTo Name="Sisipu" XYZ="-165.2705, 5.250006, 164.2938"/>
-				<LLTurnIn ItemId="4870" QuestId="66644" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<TurnIn ItemId="4870" QuestId="66644" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -153,7 +153,7 @@ Angles24
 				</If>
 				<If Condition="NqHasAtLeast(4874,3)">
 					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
-					<LLTurnIn ItemId="4874" QuestId="66645" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<TurnIn ItemId="4874" QuestId="66645" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -183,7 +183,7 @@ Angles24
 				</If>
 				<If Condition="HasAtLeast(4930,1)">
 					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
-					<LLTurnIn ItemId="4930" QuestId="66646" StepId="255" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<TurnIn ItemId="4930" QuestId="66646" StepId="255" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -253,7 +253,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(66647) == 255">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
-				<LLTurnIn QuestId="66647" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<TurnIn QuestId="66647" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -288,7 +288,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(4955,5) or HasAtLeast(4955,5)">
 					<GetTo ZoneId="129" XYZ="-185.8396, 4, 169.604"/>
-					<LLTurnIn ItemId="4955" QuestId="66648" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
+					<TurnIn ItemId="4955" QuestId="66648" NpcId="1003516" XYZ="-185.8396, 4, 169.604"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -359,7 +359,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(4963,1)">
 					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
-					<LLTurnIn ItemId="4963" QuestId="66649" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<TurnIn ItemId="4963" QuestId="66649" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -428,7 +428,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(66650) == 255">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
-				<LLTurnIn QuestId="66650" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<TurnIn QuestId="66650" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -485,7 +485,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(5033,1)">
 					<GetTo ZoneId="129" XYZ="-184.7715, 4, 169.2683"/>
-					<LLTurnIn ItemId="5033" QuestId="66651" StepId="255" NpcId="1003628" XYZ="-184.7715, 4, 169.2683"/>
+					<TurnIn ItemId="5033" QuestId="66651" StepId="255" NpcId="1003628" XYZ="-184.7715, 4, 169.2683"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -543,7 +543,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(4905,5)">
 					<GetTo ZoneId="129" XYZ="-171.8929, 4, 175.3108"/>
-					<LLTurnIn ItemId="4905" QuestId="66652" NpcId="1003629" XYZ="-171.8929, 4, 175.3108"/>
+					<TurnIn ItemId="4905" QuestId="66652" NpcId="1003629" XYZ="-171.8929, 4, 175.3108"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -624,7 +624,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(5040,5)">
 					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
-					<LLTurnIn ItemId="5040" QuestId="66653" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<TurnIn ItemId="5040" QuestId="66653" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -692,7 +692,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(4917,1)">
 					<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
-					<LLTurnIn ItemId="4917" QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+					<TurnIn ItemId="4917" QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -701,7 +701,7 @@ Angles24
 			<If Condition="GetQuestStep(66654) == 255">
 				<GetTo ZoneId="129" XYZ="-165.2705, 5.250006, 164.2938"/>
 				<NoCombatMoveTo Name="Sisipu" XYZ="-165.2705, 5.250006, 164.2938"/>
-				<LLTurnIn QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
+				<TurnIn QuestId="66654" NpcId="1000857" XYZ="-165.2705, 5.250006, 164.2938"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -739,7 +739,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(67621) == 255">
 				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
-				<LLTurnIn QuestId="67621" NpcId="1013250" ItemId="2001886" XYZ="100.3585, 15.00001, 24.3075"/>
+				<TurnIn QuestId="67621" NpcId="1013250" ItemId="2001886" XYZ="100.3585, 15.00001, 24.3075"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -812,7 +812,7 @@ Angles24
 				</While>
 				<If Condition="HasAtLeast(12713,3)">
 					<LisbethTravel Zone="397" Position="456.0768, 200.2136, 668.635"/>
-					<LLTurnIn ItemId="12713" QuestId="67622" NpcId="1013252" XYZ="459.6169, 200.2377, 665.8884"/>
+					<TurnIn ItemId="12713" QuestId="67622" NpcId="1013252" XYZ="459.6169, 200.2377, 665.8884"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -875,14 +875,14 @@ Angles24
 				</While>
 				<If Condition="HasAtLeast(12769,3)">
 					<LisbethTravel Zone="398" Position="523.6133, -51.424, 62.54675"/>
-					<LLTurnIn ItemId="12769" StepId="3" QuestId="67623" NpcId="1013254" XYZ="523.6133, -51.424, 62.54675"/>
+					<TurnIn ItemId="12769" StepId="3" QuestId="67623" NpcId="1013254" XYZ="523.6133, -51.424, 62.54675"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67623) == 255">
 				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
-				<LLTurnIn QuestId="67623" StepId="255" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
+				<TurnIn QuestId="67623" StepId="255" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -950,14 +950,14 @@ Angles24
 				</While>
 				<If Condition="HasAtLeast(12793,1)">
 					<LisbethTravel Zone="400" Position="441.306, -29.3383, 218.1277"/>
-					<LLTurnIn ItemId="12793" StepId="4" QuestId="67624" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
+					<TurnIn ItemId="12793" StepId="4" QuestId="67624" NpcId="1013824" XYZ="441.306, -29.3383, 218.1277"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 				</If>
 			</If>
 			<If Condition="GetQuestStep(67624) == 255">
 				<GetTo ZoneId="418" XYZ="100.3585, 15.00001, 24.3075"/>
-				<LLTurnIn ItemId="12793" StepId="255" QuestId="67624" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
+				<TurnIn ItemId="12793" StepId="255" QuestId="67624" NpcId="1013250" XYZ="100.3585, 15.00001, 24.3075"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -1029,7 +1029,7 @@ Angles24
 				</While>
 				<If Condition="HasAtLeast(12829,1)">
 					<LisbethTravel Zone="401" Position="400.7477, -123.263, 674.9523"/>
-					<LLTurnIn ItemId="12829" StepId="255" QuestId="67625" NpcId="1013830" XYZ="400.7477, -123.263, 674.9523"/>
+					<TurnIn ItemId="12829" StepId="255" QuestId="67625" NpcId="1013830" XYZ="400.7477, -123.263, 674.9523"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>
@@ -1076,7 +1076,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68431) == 255">
 				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
-				<LLTurnIn ItemId="12829" StepId="255" QuestId="68431" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
+				<TurnIn ItemId="12829" StepId="255" QuestId="68431" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -1111,7 +1111,7 @@ Angles24
 		<RunCode Name="Move_Forward"/>
 		<WaitTimer WaitTime="5"/>-->
 		<LisbethTravel ZoneId="613" XYZ="294.2591, -98.5356, -412.8039"/>
-		<LLTurnIn QuestId="68458" NpcId="1023621" XYZ="294.1786, -98.43597, -413.3516"/>
+		<TurnIn QuestId="68458" NpcId="1023621" XYZ="294.1786, -98.43597, -413.3516"/>
 		<LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -1170,7 +1170,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68432) == 255">
 				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
-				<LLTurnIn StepId="255" QuestId="68432" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
+				<TurnIn StepId="255" QuestId="68432" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -1264,7 +1264,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68433) == 255">
 				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
-				<LLTurnIn StepId="255" QuestId="68433" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
+				<TurnIn StepId="255" QuestId="68433" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -1367,7 +1367,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(68434) == 255">
 				<GetTo ZoneId="129" XYZ="-155.108, 4.070978, 202.7161"/>
-				<LLTurnIn StepId="255" QuestId="68434" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
+				<TurnIn StepId="255" QuestId="68434" NpcId="1000856" XYZ="-155.108, 4.070978, 202.7161"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<AutoInventoryEquip/>
@@ -1423,7 +1423,7 @@ Angles24
 				</While>
 				<If Condition="HasAtLeast(17952,5)">
 					<LisbethTravel Zone="613" Position="-749.6351, 1.559595, -456.9331"/>
-					<LLTurnIn ItemIds="17952" QuestId="68435" NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977"/>
+					<TurnIn ItemIds="17952" QuestId="68435" NpcId="1021416" XYZ="-751.0033, 1.581719, -457.2977"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<AutoInventoryEquip/>

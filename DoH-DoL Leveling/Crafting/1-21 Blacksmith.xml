@@ -37,7 +37,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5056,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <LLTurnIn QuestId="65828" ItemId="5056" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <TurnIn QuestId="65828" ItemId="5056" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -62,7 +62,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 2341,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <LLTurnIn QuestId="65829" ItemIds="2341, 2341, 2341" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <TurnIn QuestId="65829" ItemIds="2341, 2341, 2341" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -87,7 +87,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <LLTurnIn QuestId="65830" ItemId="5091" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <TurnIn QuestId="65830" ItemId="5091" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -120,7 +120,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 1753,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <LLTurnIn QuestId="65831" ItemIds="1605,1753" AllowHq="True" NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968"/>
+        <TurnIn QuestId="65831" ItemIds="1605,1753" AllowHq="True" NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>

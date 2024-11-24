@@ -59,7 +59,7 @@ Angles24
           <WaitWhile Condition="GetQuestStep(66151) == 255"/>
         </If>
 		</If>
-        <LLTurnIn QuestId="66151" ItemId="2111" NpcId="1004093" AllowHq="True" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <TurnIn QuestId="66151" ItemId="2111" NpcId="1004093" AllowHq="True" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -78,7 +78,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':5064,'Amount':1,'Enabled':true,'Type':'Goldsmith','Hq':true}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66152" ItemId="5064" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <TurnIn QuestId="66152" ItemId="5064" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -110,7 +110,7 @@ Angles24
       </If>
       <If Condition="HasQuest(66153) and not IsQuestCompleted(66153) and GetQuestStep(66153) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn ItemId="2000509" QuestId="66153" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <TurnIn ItemId="2000509" QuestId="66153" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -129,7 +129,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':2078,'Amount':1,'Enabled':true,'Type':'Goldsmith','Hq':true}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66191" ItemId="2078" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <TurnIn QuestId="66191" ItemId="2078" RequiresHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -161,7 +161,7 @@ Angles24
       </If>
       <If Condition="HasQuest(66192) and not IsQuestCompleted(66192) and GetQuestStep(66192) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66192" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <TurnIn QuestId="66192" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -210,7 +210,7 @@ Angles24
       </If>
       <If Condition="HasQuest(66193) and not IsQuestCompleted(66193) and GetQuestStep(66193) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <LLTurnIn QuestId="66193" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <TurnIn QuestId="66193" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -251,7 +251,7 @@ Angles24
       <If Condition="HasQuest(66194) and not IsQuestCompleted(66194) and GetQuestStep(66194) == 255">
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
 		
-        <LLTurnIn QuestId="66194" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <TurnIn QuestId="66194" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -285,7 +285,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67606) and not IsQuestCompleted(67606) and GetQuestStep(67606) == 255">
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" QuestId="67606" XYZ="-57.406, 18.5041, 66.5633"/>
+        <TurnIn NpcId="1012528" QuestId="67606" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -314,7 +314,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':11068,'Amount':1,'Enabled':true,'Type':'Goldsmith','QuickSynth':true}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" ItemId="11068" QuestId="67607" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
+        <TurnIn NpcId="1012528" ItemId="11068" QuestId="67607" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -353,7 +353,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67608) and not IsQuestCompleted(67608) and GetQuestStep(67608) == 255">
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" ItemId="2001722" QuestId="67608" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
+        <TurnIn NpcId="1012528" ItemId="2001722" QuestId="67608" XYZ="-57.406, 18.5041, 66.5633" RewardSlot="4"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -387,7 +387,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67609) and not IsQuestCompleted(67609) and GetQuestStep(67609) == 255">
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" QuestId="67609" XYZ="-57.406, 18.5041, 66.5633"/>
+        <TurnIn NpcId="1012528" QuestId="67609" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -424,7 +424,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67610) and not IsQuestCompleted(67610) and GetQuestStep(67610) == 255">
         <GetTo ZoneId="131" XYZ="-57.406, 18.5041, 66.5633"/>
-        <LLTurnIn NpcId="1012528" QuestId="67610" XYZ="-57.406, 18.5041, 66.5633"/>
+        <TurnIn NpcId="1012528" QuestId="67610" XYZ="-57.406, 18.5041, 66.5633"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -460,7 +460,7 @@ Angles24
       </If>
       <If Condition="HasQuest(68135) and not IsQuestCompleted(68135) and GetQuestStep(68135) == 255">
         <GetTo ZoneId="131" XYZ="-33.10773, 13.59999, 98.55938"/>
-        <LLTurnIn QuestId="68135" NpcId="1002280" XYZ="-35.38574, 13.59997, 97.24573"/>
+        <TurnIn QuestId="68135" NpcId="1002280" XYZ="-35.38574, 13.59997, 97.24573"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -516,7 +516,7 @@ Angles24
         </If>
         </While>
         <GetTo ZoneId="635" XYZ="-76.9677, 0.01000077, 46.56393"/>
-        <LLTurnIn ItemIds="17902" QuestId="68136" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
+        <TurnIn ItemIds="17902" QuestId="68136" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -567,7 +567,7 @@ Angles24
         </If>
         </While>
         <GetTo ZoneId="635" XYZ="-77.05145, 0.01000082, 46.10489"/>
-        <LLTurnIn ItemIds="17904" QuestId="68137" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
+        <TurnIn ItemIds="17904" QuestId="68137" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481" RewardSlot="4"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -627,7 +627,7 @@ Angles24
         </If>
         </While>
         <GetTo ZoneId="635" XYZ="-76.95066, 0.01000094, 45.4845"/>
-        <LLTurnIn ItemIds="17906" QuestId="68138" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
+        <TurnIn ItemIds="17906" QuestId="68138" NpcId="1021131" XYZ="-77.95837, 0.01000099, 45.5481"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -683,7 +683,7 @@ Angles24
       </If>
       <If Condition="HasQuest(68139) and not IsQuestCompleted(68139) and GetQuestStep(68139) == 255">
         <GetTo ZoneId="131" XYZ="-38.23554, 13.5, 111.0385"/>
-        <LLTurnIn QuestId="68139" NpcId="1021158" XYZ="-38.65112, 13.5, 111.4366"/>
+        <TurnIn QuestId="68139" NpcId="1021158" XYZ="-38.65112, 13.5, 111.4366"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>

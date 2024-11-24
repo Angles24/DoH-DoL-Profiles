@@ -53,7 +53,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4730,'Amount':1,'Enabled':true,'Type':'Culinarian','QuickSynth':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
-        <LLTurnIn QuestId="65795" ItemId="4730" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235" RewardSlot="3"/>
+        <TurnIn QuestId="65795" ItemId="4730" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -72,7 +72,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4644,'Amount':1,'Enabled':true,'Type':'Culinarian','QuickSynth':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-52.65894, 42.69984, -160.235"/>
-        <LLTurnIn QuestId="65796" ItemId="4644" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235" RewardSlot="3"/>
+        <TurnIn QuestId="65796" ItemId="4644" NpcId="1000956" AllowHq="True" XYZ="-52.65894, 42.69984, -160.235" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -106,7 +106,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65802) and not IsQuestCompleted(65802) and GetQuestStep(65802) == 255">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
-        <LLTurnIn QuestId="65802" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322" RewardSlot="3"/>
+        <TurnIn QuestId="65802" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -130,7 +130,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4677,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
         </While>
         <LisbethTravel Zone="128" Subzone="708" Position="-58.27702, 42.3, -161.5924"/>
-        <LLTurnIn QuestId="65803" ItemId="4677" RequiresHq="True" NpcId="1001537" XYZ="-58.27702, 42.3, -161.5924" RewardSlot="3"/>
+        <TurnIn QuestId="65803" ItemId="4677" RequiresHq="True" NpcId="1001537" XYZ="-58.27702, 42.3, -161.5924" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -160,7 +160,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4749,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-58.27702, 42.3, -161.5924"/>
-        <LLTurnIn QuestId="65804" ItemId="4712,4733,4749" RequiresHq="true,true,true" NpcId="1001537" XYZ="-58.27702, 42.3, -161.5924" RewardSlot="3"/>
+        <TurnIn QuestId="65804" ItemId="4712,4733,4749" RequiresHq="true,true,true" NpcId="1001537" XYZ="-58.27702, 42.3, -161.5924" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -184,7 +184,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':4679,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-58.27702, 42.3, -161.5924"/>
-        <LLTurnIn QuestId="65805" ItemId="4679" RequiresHq="True" NpcId="1001537" XYZ="-58.27702, 42.3, -161.5924" RewardSlot="3"/>
+        <TurnIn QuestId="65805" ItemId="4679" RequiresHq="True" NpcId="1001537" XYZ="-58.27702, 42.3, -161.5924" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -274,7 +274,7 @@ Angles24
       </If>
       <If Condition="HasQuest(65806) and not IsQuestCompleted(65806) and GetQuestStep(65806) == 255">
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
-        <LLTurnIn QuestId="65806" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322" RewardSlot="3"/>
+        <TurnIn QuestId="65806" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -300,7 +300,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67579) and not IsQuestCompleted(67579) and GetQuestStep(67579) == 255">
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
-        <LLTurnIn QuestId="67579" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
+        <TurnIn QuestId="67579" NpcId="1012568" XYZ="69.7248, 44.3999, 135.967"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -342,7 +342,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12846,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
-        <LLTurnIn NpcId="1012568" ItemId="12842, 12846" RequiresHq="True, False" QuestId="67580" XYZ="69.7248, 44.3999, 135.967" RewardSlot="4"/>
+        <TurnIn NpcId="1012568" ItemId="12842, 12846" RequiresHq="True, False" QuestId="67580" XYZ="69.7248, 44.3999, 135.967" RewardSlot="4"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -387,7 +387,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12855,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
-        <LLTurnIn NpcId="1012568" ItemId="12849, 12862, 12855" RequiresHq="True, True, True" QuestId="67581" XYZ="69.7248, 44.3999, 135.967" RewardSlot="3"/>
+        <TurnIn NpcId="1012568" ItemId="12849, 12862, 12855" RequiresHq="True, True, True" QuestId="67581" XYZ="69.7248, 44.3999, 135.967" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -411,7 +411,7 @@ Angles24
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':12858,'Amount':1,'Enabled':true,'Type':'Culinarian','Hq':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-54.6426, 43.9917, -151.202"/>
-        <LLTurnIn NpcId="1000947" ItemId="12858" RequiresHq="True" QuestId="67582" XYZ="-54.6426, 43.9917, -151.202"/>
+        <TurnIn NpcId="1000947" ItemId="12858" RequiresHq="True" QuestId="67582" XYZ="-54.6426, 43.9917, -151.202"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -451,7 +451,7 @@ Angles24
       </If>
       <If Condition="HasQuest(67583) and not IsQuestCompleted(67583) and GetQuestStep(67583) == 255">
         <GetTo ZoneId="128" XYZ="69.7248, 44.3999, 135.967"/>
-        <LLTurnIn NpcId="1012568" QuestId="67583" XYZ="69.7248, 44.3999, 135.967"/>
+        <TurnIn NpcId="1012568" QuestId="67583" XYZ="69.7248, 44.3999, 135.967"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -472,7 +472,7 @@ Angles24
       </If>
       <If Condition="HasQuest(68140) and not IsQuestCompleted(68140) and GetQuestStep(68140) == 255">
         <LisbethTravel Zone="156" Position="31.90068, 50.99996, -819.4875"/>
-        <LLTurnIn QuestId="68140" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        <TurnIn QuestId="68140" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -523,7 +523,7 @@ Angles24
       </If>
       <If Condition="HasQuest(68141) and not IsQuestCompleted(68141) and GetQuestStep(68141) == 255">
         <LisbethTravel Zone="156" Position="32.3839, 50.99997, -820.7322"/>
-        <LLTurnIn QuestId="68141" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" RewardSlot="4"/>
+        <TurnIn QuestId="68141" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" RewardSlot="4"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -574,7 +574,7 @@ Angles24
       </If>
       <If Condition="HasQuest(68142) and not IsQuestCompleted(68142) and GetQuestStep(68142) == 255">
         <LisbethTravel Zone="156" Position="32.37473, 50.99997, -821.4847"/>
-        <LLTurnIn QuestId="68142" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" RewardSlot="4"/>
+        <TurnIn QuestId="68142" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798" RewardSlot="4"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -635,7 +635,7 @@ Angles24
       </If>
       <If Condition="HasQuest(68143) and not IsQuestCompleted(68143) and GetQuestStep(68143) == 255">
         <LisbethTravel Zone="156" Position="34.23852, 50.99996, -821.674"/>
-        <LLTurnIn QuestId="68143" NpcId="1020161" XYZ="33.98181, 50.99997, -823.0869"/>
+        <TurnIn QuestId="68143" NpcId="1020161" XYZ="33.98181, 50.99997, -823.0869"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>
@@ -708,7 +708,7 @@ Angles24
         </If>
         </While>
         <LisbethTravel Zone="156" Position="32.38362, 50.99997, -820.6827"/>
-        <LLTurnIn ItemIds="17940" QuestId="68144" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
+        <TurnIn ItemIds="17940" QuestId="68144" NpcId="1020144" XYZ="30.65527, 50.99997, -822.0798"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
         <AutoInventoryEquip/>

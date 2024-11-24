@@ -37,7 +37,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="65741" ItemId="5361" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <TurnIn QuestId="65741" ItemId="5361" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -62,7 +62,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 2219,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="65675" ItemIds="2219, 2219, 2219" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <TurnIn QuestId="65675" ItemIds="2219, 2219, 2219" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -87,7 +87,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="65676" ItemId="5364" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <TurnIn QuestId="65676" ItemId="5364" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -130,7 +130,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 255">
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <LLTurnIn QuestId="65677" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <TurnIn QuestId="65677" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
