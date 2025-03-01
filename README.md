@@ -1,4 +1,4 @@
-# DoH80-DoL80
+# DoH-DoL-Profiles
 **Profiles to get 100 in all Crafters and BTN/MIN with Standalone FSH**
 
 These profiles require the installation of LLamaLibrary, Lisbeth, and ExBuddy. Below are the necessary steps before you can start.
