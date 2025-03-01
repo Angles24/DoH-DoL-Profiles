@@ -11,16 +11,15 @@ These profiles require the installation of LLamaLibrary, Lisbeth, and ExBuddy. B
 
 ### 1. Download & Install LlamaLibrary
 - [__LlamaLibrary](https://github.com/nt153133/__LlamaLibrary) is required to run these profiles.
-  - It will be auto-installed by using **repoBuddy** (recommended).
-  - For manual installation, see the [ReadMe](https://github.com/nt153133/__LlamaLibrary/blob/main/README.md).
+  - For installation, see the [ReadMe](https://github.com/nt153133/__LlamaLibrary/blob/main/README.md).
 
-### 2. Download & Download Lisbeth
+### 2. Download & Install Lisbeth
 - Download Lisbeth:
   - [Lisbeth (Global)](https://lisbeth.io/downloads/EN/Lisbeth.zip)
   - [Lisbeth (Chinese)](https://lisbeth.io/downloads/CN/Lisbeth.zip)
 - After downloading right click zip folder and Unlock it then extract it to **Botbases** and rename the folder to **Lisbeth**.
 
-### 3. Download & Download ExBuddy
+### 3. Download & Install ExBuddy
 - Download ExBuddy from [here](https://github.com/Entrax643/ExBuddy).
 - Extract it to **Plugins** and rename the folder to **ExBuddy**.
 
