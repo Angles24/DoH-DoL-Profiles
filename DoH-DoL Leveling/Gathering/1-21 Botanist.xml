@@ -35,7 +35,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(5509,10)">
 					<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-					<LLTurnIn ItemId="5509" QuestId="65744" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+					<TurnIn ItemId="5509" QuestId="65744" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 1 - My First Hatchet - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -75,7 +75,7 @@ Angles24
 				</While>
 				<If Condition="NqHasAtLeast(5498,10)">
 					<GetTo ZoneId="133" XYZ="-236.451, 8.000312, -155.7238"/>
-					<LLTurnIn ItemId="5498" QuestId="65540" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
+					<TurnIn ItemId="5498" QuestId="65540" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 5 - Sap for Smiles - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -115,7 +115,7 @@ Angles24
 			<If Condition="NqHasAtLeast(5352,10)">
 				<If Condition="GetQuestStep(65541) == 255">
 					<GetTo ZoneId="133" XYZ="-236.451, 8.000312, -155.7238"/>
-						<LLTurnIn ItemId="5352" QuestId="65541" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
+						<TurnIn ItemId="5352" QuestId="65541" StepId="255" NpcId="1000295" InteractDistance="2.0" XYZ="-236.451, 8.000312, -155.7238"/>
 						<LLSmallTalk WaitTime="1500"/>
 						<LogMessage Message="Level 10 - Weapons of a Feather - Completed."/>
 						<WaitTimer WaitTime="2"/>
@@ -166,7 +166,7 @@ Angles24
 			</If>
 			<If Condition="GetQuestStep(65542) == 255">
 				<GetTo ZoneId="133" XYZ="-232.9017, 6.263501, -169.7613"/>
-				<LLTurnIn QuestId="65542" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
+				<TurnIn QuestId="65542" StepId="255" NpcId="1000815" InteractDistance="2.0" XYZ="-232.9017, 6.263501, -169.7613"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 15 - Haste Makes Waste - Completed."/>
 				<WaitTimer WaitTime="2"/>

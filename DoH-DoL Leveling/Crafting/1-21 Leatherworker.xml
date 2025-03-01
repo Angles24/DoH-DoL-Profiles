@@ -37,7 +37,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5275,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <LLTurnIn QuestId="65745" ItemId="5275" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
+        <TurnIn QuestId="65745" ItemId="5275" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -62,7 +62,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 4304,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <LLTurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
+        <TurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -90,7 +90,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <LLTurnIn QuestId="65671" ItemId="5276" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
+        <TurnIn QuestId="65671" ItemId="5276" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -118,12 +118,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 4308,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
         </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <LLTurnIn ItemIds="3772, 4308" AllowHq="True" NpcId="1000691" XYZ="71.97681, 8, -166.5217" QuestId="65672" StepId="1"/>
+        <TurnIn ItemIds="3772, 4308" AllowHq="True" NpcId="1000691" XYZ="71.97681, 8, -166.5217" QuestId="65672" StepId="1"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
       <If Condition="HasQuest(65672) and not IsQuestCompleted(65672) and GetQuestStep(65672) == 255">
         <GetTo ZoneId="133" XYZ="59.30462, 8, -141.0205"/>
-        <LLTurnIn QuestId="65672" NpcId="1000681" XYZ="58.73193, 7.980469, -138.5672" Emote="kneel"/>
+        <TurnIn QuestId="65672" NpcId="1000681" XYZ="58.73193, 7.980469, -138.5672" Emote="kneel"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>

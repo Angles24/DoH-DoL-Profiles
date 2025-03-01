@@ -56,7 +56,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(70016) == 255">
         <GetTo ZoneId="956" XYZ="284.2419, 185.7067, -729.4481"/>
         <!-- Subzone="3839" Area="Labyrinthos (North)" -->
-        <LLTurnIn QuestId="70016" NpcId="1041670" XYZ="285.2368, 185.6545, -729.6711"/>
+        <TurnIn QuestId="70016" NpcId="1041670" XYZ="285.2368, 185.6545, -729.6711"/>
         <LLSmallTalk/>
       </If>
       <!-- The Lad in Labyrinthos -->
@@ -120,19 +120,19 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(70020) == 255">
         <GetTo ZoneId="956" XYZ="155.6672, -17.53038, -66.24559"/>
         <!-- Subzone="3850" Area="Labyrinthos" -->
-        <LLTurnIn QuestId="70020" NpcId="1041685" XYZ="154.8943, -17.53038, -66.2395"/>
+        <TurnIn QuestId="70020" NpcId="1041685" XYZ="154.8943, -17.53038, -66.2395"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69856) == 255">
         <GetTo ZoneId="956" XYZ="90.0263, -17.53038, -75.20781"/>
         <!-- Subzone="3850" Area="Labyrinthos" -->
-        <LLTurnIn ItemId="2003309" QuestId="69856" NpcId="1041313" XYZ="89.28052, -17.53038, -74.90656"/>
+        <TurnIn ItemId="2003309" QuestId="69856" NpcId="1041313" XYZ="89.28052, -17.53038, -74.90656"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69865) == 255">
         <GetTo ZoneId="956" XYZ="-23.4536, -31.53022, 1.715406"/>
         <!-- Subzone="3850" Area="Labyrinthos" -->
-        <LLTurnIn QuestId="69865" NpcId="1041129" XYZ="-23.57526, -31.53021, 1.846313"/>
+        <TurnIn QuestId="69865" NpcId="1041129" XYZ="-23.57526, -31.53021, 1.846313"/>
         <LLSmallTalk/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(956, 5)">
@@ -207,7 +207,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(70025) == 255">
         <GetTo ZoneId="957" XYZ="194.0885, 14.1186, 487.1321"/>
         <!-- Subzone="3880" Area="Thavnair (West)" -->
-        <LLTurnIn QuestId="70025" NpcId="1041332" XYZ="194.6898, 14.1186, 485.9845"/>
+        <TurnIn QuestId="70025" NpcId="1041332" XYZ="194.6898, 14.1186, 485.9845"/>
         <LLSmallTalk/>
       </If>
       <!-- Alchemist or Dancer -->
@@ -249,7 +249,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69739) == 255">
         <GetTo ZoneId="957" XYZ="-508.0005, -3.409386E-05, -19.92097"/>
         <!-- Subzone="3886" Area="Thavnair (West)" -->
-        <LLTurnIn QuestId="69739" NpcId="1037670" XYZ="-508.8426, -3.710991E-05, -20.76758"/>
+        <TurnIn QuestId="69739" NpcId="1037670" XYZ="-508.8426, -3.710991E-05, -20.76758"/>
         <LLSmallTalk/>
       </If>
       <!-- Radiant Patrol -->
@@ -325,13 +325,13 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69795) == 255">
         <GetTo ZoneId="957" XYZ="381.6828, 3.164383, -206.7914"/>
         <!-- Subzone="3894" Area="Thavnair" -->
-        <LLTurnIn ItemId="2003248" QuestId="69795" NpcId="1040669" XYZ="381.6434, 3.189177, -207.2023"/>
+        <TurnIn ItemId="2003248" QuestId="69795" NpcId="1040669" XYZ="381.6434, 3.189177, -207.2023"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69793) == 255">
         <GetTo ZoneId="957" XYZ="462.101, 14.42547, -220.0066"/>
         <!-- Subzone="3894" Area="Thavnair" -->
-        <LLTurnIn QuestId="69793" NpcId="1040864" XYZ="462.5162, 14.3201, -219.8673"/>
+        <TurnIn QuestId="69793" NpcId="1040864" XYZ="462.5162, 14.3201, -219.8673"/>
         <LLSmallTalk/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(957, 8)">
@@ -422,7 +422,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(70034) == 255">
         <GetTo ZoneId="958" XYZ="-341.6592, 22, 501.8206"/>
         <!-- Subzone="3903" Area="Garlemald" -->
-        <LLTurnIn QuestId="70034" NpcId="1041755" XYZ="-340.3525, 22, 502.037"/>
+        <TurnIn QuestId="70034" NpcId="1041755" XYZ="-340.3525, 22, 502.037"/>
         <LLSmallTalk/>
         <RunCode name="TurnOnMount"/>
       </If>
@@ -454,7 +454,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69752) == 255">
         <GetTo ZoneId="958" XYZ="135.0165, -13.28034, 649.3398"/>
         <!-- Subzone="3908" Area="Garlemald" -->
-        <LLTurnIn QuestId="69752" NpcId="1041122" XYZ="134.844, -13.28632, 649.8054"/>
+        <TurnIn QuestId="69752" NpcId="1041122" XYZ="134.844, -13.28632, 649.8054"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(70038) == 1">
@@ -510,13 +510,13 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(70038) == 255">
         <GetTo ZoneId="958" XYZ="541.2048, -36.65, -132.9475"/>
         <!-- Subzone="3915" Area="Garlemald" -->
-        <LLTurnIn QuestId="70038" NpcId="1041767" XYZ="541.0391, -36.65, -132.4636"/>
+        <TurnIn QuestId="70038" NpcId="1041767" XYZ="541.0391, -36.65, -132.4636"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69768) == 255">
         <GetTo ZoneId="958" XYZ="497.5773, 10.88766, -417.5886"/>
         <!-- Subzone="3915" Area="Garlemald" -->
-        <LLTurnIn QuestId="69768" NpcId="1040633" XYZ="497.5773, 10.88766, -417.5886"/>
+        <TurnIn QuestId="69768" NpcId="1040633" XYZ="497.5773, 10.88766, -417.5886"/>
         <LLSmallTalk/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(958, 8)">
@@ -656,19 +656,19 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69776) == 255">
         <GetTo ZoneId="959" XYZ="-300.8365, -144, -491.9566"/>
         <!-- Subzone="3968" Area="" -->
-        <LLTurnIn QuestId="69776" NpcId="1037867" XYZ="-301.6251, -144, -491.1422"/>
+        <TurnIn QuestId="69776" NpcId="1037867" XYZ="-301.6251, -144, -491.1422"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69777) == 255">
         <GetTo ZoneId="959" XYZ="-284.5599, -143.5, -520.0661"/>
         <!-- Subzone="3968" Area="" -->
-        <LLTurnIn QuestId="69777" NpcId="1039520" XYZ="-287.8615, -143.5, -520.2869"/>
+        <TurnIn QuestId="69777" NpcId="1039520" XYZ="-287.8615, -143.5, -520.2869"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(70052) == 255">
         <GetTo ZoneId="959" XYZ="111.7244, -133.0735, -465.2448"/>
         <!-- Subzone="3966" Area="" -->
-        <LLTurnIn QuestId="70052" NpcId="1041556" XYZ="113.1456, -133.0735, -465.1713"/>
+        <TurnIn QuestId="70052" NpcId="1041556" XYZ="113.1456, -133.0735, -465.1713"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69789) == 1">
@@ -707,7 +707,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69789) == 255">
         <GetTo ZoneId="959" XYZ="-80.21399, -132.7897, -521.5502"/>
         <!-- Subzone="3966" Area="" -->
-        <LLTurnIn ItemId="2003261" QuestId="69789" NpcId="1041123" XYZ="-81.86469, -132.7433, -521.6602"/>
+        <TurnIn ItemId="2003261" QuestId="69789" NpcId="1041123" XYZ="-81.86469, -132.7433, -521.6602"/>
         <LLSmallTalk/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(959, 7)">
@@ -792,7 +792,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(70043) == 255">
         <GetTo ZoneId="961" XYZ="165.2296, 9.457411, 235.5636"/>
         <!-- Subzone="3928" Area="" -->
-        <LLTurnIn QuestId="70043" NpcId="1041328" XYZ="166.3995, 9.457411, 236.3469"/>
+        <TurnIn QuestId="70043" NpcId="1041328" XYZ="166.3995, 9.457411, 236.3469"/>
         <LLSmallTalk/>
         <RunCode name="TurnOnMount"/>
       </If>
@@ -837,7 +837,7 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69824) == 255">
         <GetTo ZoneId="961" XYZ="-612.846, -22.39482, 510.5675"/>
         <!-- Subzone="3929" Area="" -->
-        <LLTurnIn QuestId="69824" NpcId="1037969" XYZ="-611.902, -22.39482, 510.4294"/>
+        <TurnIn QuestId="69824" NpcId="1037969" XYZ="-611.902, -22.39482, 510.4294"/>
         <LLSmallTalk/>
       </If>
       <!-- An Expected Guest -->
@@ -899,13 +899,13 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(70047) == 255">
         <GetTo ZoneId="961" XYZ="-638.0696, 162.3051, -189.1916"/>
         <!-- Subzone="3938" Area="" -->
-        <LLTurnIn QuestId="70047" NpcId="1041369" XYZ="-639.8566, 162.3041, -189.4714"/>
+        <TurnIn QuestId="70047" NpcId="1041369" XYZ="-639.8566, 162.3041, -189.4714"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69849) == 255">
         <GetTo ZoneId="961" XYZ="-483.2541, 141.5188, -99.38105"/>
         <!-- Subzone="3934" Area="" -->
-        <LLTurnIn QuestId="69849" NpcId="1041847" XYZ="-484.2146, 141.8679, -97.21527"/>
+        <TurnIn QuestId="69849" NpcId="1041847" XYZ="-484.2146, 141.8679, -97.21527"/>
         <LLSmallTalk/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(961, 8)">
@@ -980,13 +980,13 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69882) == 255">
         <GetTo ZoneId="960" XYZ="105.7343, 269.3008, -456.0127"/>
         <!-- Subzone="3978" Area="" -->
-        <LLTurnIn QuestId="69882" NpcId="1038016" XYZ="105.4246, 269.2958, -454.3069"/>
+        <TurnIn QuestId="69882" NpcId="1038016" XYZ="105.4246, 269.2958, -454.3069"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69878) == 255">
         <GetTo ZoneId="960" XYZ="50.9125, 269.3516, -524.6407"/>
         <!-- Subzone="3978" Area="" -->
-        <LLTurnIn QuestId="69878" NpcId="1040876" XYZ="49.42395, 269.2568, -523.2472"/>
+        <TurnIn QuestId="69878" NpcId="1040876" XYZ="49.42395, 269.2568, -523.2472"/>
         <LLSmallTalk/>
       </If>
       <!-- Learn to Love -->
@@ -1032,13 +1032,13 @@ Author: Angles24, Manta
       <If Condition="GetQuestStep(69891) == 255">
         <GetTo ZoneId="960" XYZ="508.8484, 436.9996, 307.6553"/>
         <!-- Subzone="3983" Area="" -->
-        <LLTurnIn ItemId="2003331" QuestId="69891" NpcId="1041656" XYZ="510.3075, 436.9997, 307.1793"/>
+        <TurnIn ItemId="2003331" QuestId="69891" NpcId="1041656" XYZ="510.3075, 436.9997, 307.1793"/>
         <LLSmallTalk/>
       </If>
       <If Condition="GetQuestStep(69890) == 255">
         <GetTo ZoneId="960" XYZ="469.6725, 437.0018, 316.5699"/>
         <!-- Subzone="3983" Area="" -->
-        <LLTurnIn ItemId="2003274" QuestId="69890" NpcId="1038043" XYZ="470.4203, 437.0018, 315.8159"/>
+        <TurnIn ItemId="2003274" QuestId="69890" NpcId="1038043" XYZ="470.4203, 437.0018, 315.8159"/>
         <LLSmallTalk/>
       </If>
       <If Condition="not IsAetherCurrentCompleted(960, 7)">

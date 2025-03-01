@@ -28,7 +28,7 @@ Required: LLamaLibrary BotBase
 			</If>
 			<If Condition="HasQuest(69384) and not IsQuestCompleted(69384) and GetQuestStep(69384) == 255">
 				<GetTo ZoneId="418" XYZ="-163.47, 16.97958, -29.31262"/>
-				<LLTurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+				<TurnIn QuestId="69384" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<WaitTimer WaitTime="2"/>
 				<RunCode Name="Coffer"/>
@@ -98,7 +98,7 @@ Required: LLamaLibrary BotBase
 			</While>
 			<If Condition="HasQuest(69385) and not IsQuestCompleted(69385) and GetQuestStep(69385) == 255">
 				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
-				<LLTurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<TurnIn QuestId="69385" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
@@ -119,7 +119,7 @@ Required: LLamaLibrary BotBase
 			</If>
 			<If Condition="HasQuest(69428) and not IsQuestCompleted(69428) and GetQuestStep(69428) == 255">
 				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
-				<LLTurnIn QuestId="69428" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<TurnIn QuestId="69428" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
@@ -142,7 +142,7 @@ Required: LLamaLibrary BotBase
 			<If Condition="HasAtLeast(30327,90)">
 				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<ChangeClass Job="Alchemist" force="True"/>
-				<LLTurnIn QuestId="69429" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<TurnIn QuestId="69429" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
@@ -165,7 +165,7 @@ Required: LLamaLibrary BotBase
 			<If Condition="HasAtLeast(30328,105)">
 				<GetTo ZoneId="418" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<ChangeClass Job="Alchemist" force="True"/>
-				<LLTurnIn QuestId="69430" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
+				<TurnIn QuestId="69430" NpcId="1032899" XYZ="-165.3315, 16.97958, -30.53339"/>
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 		</If>
@@ -186,7 +186,7 @@ Required: LLamaLibrary BotBase
 		</If>
 		<If Condition="GetQuestStep(69518) == 255">
 		  <LisbethTravel Zone="886" Subzone="3526" Position="-71.72174, -10, 167.9565"/>
-		  <LLTurnIn NpcId="1035012" XYZ="-72.67877, -10, 169.1157" QuestId="69518" StepId="255"/>
+		  <TurnIn NpcId="1035012" XYZ="-72.67877, -10, 169.1157" QuestId="69518" StepId="255"/>
 		</If>
 
 		<If Condition="HasItem(30299)"><!-- Skysung Alembic -->
@@ -216,7 +216,7 @@ Required: LLamaLibrary BotBase
 						<WaitTimer WaitTime="3" />
 					</While>				  
 				  <LisbethTravel Zone="886" Subzone="3526" Position="-74.0461, -10, 168.7935"/>
-				  <LLTurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
+				  <TurnIn QuestId="69519" NpcId="1035012" XYZ="-72.67877, -10, 169.1157"/>
 				  <LLSmallTalk/>				  
 				</While>	
 			</While>			
@@ -243,7 +243,7 @@ Required: LLamaLibrary BotBase
 			</If>
 			<If Condition="GetQuestStep(69520) == 255">
 			  <LisbethTravel Zone="418" Subzone="0" Position="-161.2474, 16.97958, -29.26642"/>
-			  <LLTurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
+			  <TurnIn QuestId="69520" NpcId="1032898" XYZ="-163.47, 16.97958, -29.31262"/>
 			  <LLSmallTalk/>
 			</If>		
 		</If>

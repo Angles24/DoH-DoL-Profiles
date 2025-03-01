@@ -38,7 +38,7 @@ Authors:  Sodimm
           </If>
         </If>
         <If Condition="GetQuestStep(68916) == 255">
-          <LLTurnIn QuestId="68916" NpcId="1028280" XYZ="784.0542, 21.41485, -9.414856"/>
+          <TurnIn QuestId="68916" NpcId="1028280" XYZ="784.0542, 21.41485, -9.414856"/>
         </If>
       </If>
       <!-- Imperative Repairs -->
@@ -53,7 +53,7 @@ Authors:  Sodimm
           <UseItem ItemId="2002831" NpcIds="2010613,2010618,2010619,2010620" XYZ="-794.7357, 115.1598, -310.3228" UseDistance="2" QuestId="68920" StepId="1"/>
         </If>
         <If Condition="GetQuestStep(68920) == 255">
-          <LLTurnIn QuestId="68920" NpcId="1027382" XYZ="-765.9266, 61.72048, -304.1886"/>
+          <TurnIn QuestId="68920" NpcId="1027382" XYZ="-765.9266, 61.72048, -304.1886"/>
         </If>
       </If>
       <!-- The Astute Amaro -->
@@ -77,7 +77,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(68921) == 255">
           <GetTo ZoneId="813" XYZ="-674.8223, 51.20982, -219.2895"/>
-          <LLTurnIn QuestId="68921" NpcId="1031212" XYZ="-673.0907, 51.15794, -219.501"/>
+          <TurnIn QuestId="68921" NpcId="1031212" XYZ="-673.0907, 51.15794, -219.501"/>
         </If>
       </If>
       <!-- An Unreasonable Request -->
@@ -104,7 +104,7 @@ Authors:  Sodimm
           </If>
         </If>
         <If Condition="GetQuestStep(68922) == 255">
-          <LLTurnIn QuestId="68922" NpcId="1027353" XYZ="-146.3188, 28.47206, -128.832"/>
+          <TurnIn QuestId="68922" NpcId="1027353" XYZ="-146.3188, 28.47206, -128.832"/>
         </If>
       </If>
       <If Condition="not IsAetherCurrentCompleted(813,8)">
@@ -147,7 +147,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(68931) == 255">
           <GetTo ZoneId="816" XYZ="-366.2805, 67.34469, 555.5678"/>
-          <LLTurnIn QuestId="68931" NpcId="1030266" XYZ="-367.6661, 66.86359, 557.1526"/>
+          <TurnIn QuestId="68931" NpcId="1030266" XYZ="-367.6661, 66.86359, 557.1526"/>
         </If>
       </If>
       <!-- Delightful Decorations -->
@@ -170,7 +170,7 @@ Authors:  Sodimm
           <UseItem ItemId="2002637" NpcIds="2010162, 2010163, 2010164" XYZ="-664.0269, 40.66516, -225.0859" BlacklistAfter="True" QuestId="68934" StepId="3"/>
         </If>
         <If Condition="GetQuestStep(68934) == 255">
-          <LLTurnIn QuestId="68934" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
+          <TurnIn QuestId="68934" NpcId="1030618" XYZ="-613.3975, 36.54754, -215.4117"/>
         </If>
       </If>
       <!-- The Path to Popularity -->
@@ -193,7 +193,7 @@ Authors:  Sodimm
           <LLTalkTo NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188" QuestId="68940" StepId="3"/>
         </If>
         <If Condition="GetQuestStep(68940) == 255">
-          <LLTurnIn QuestId="68940" NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188"/>
+          <TurnIn QuestId="68940" NpcId="1030838" XYZ="-285.9083, 40.32404, 444.4188"/>
         </If>
       </If>
       <!-- A New Amaro -->
@@ -218,7 +218,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(68963) == 255">
           <GetTo ZoneId="816" XYZ="-77.7541, 38.15496, -532.3476"/>
-          <LLTurnIn QuestId="68963" NpcId="1031025" XYZ="-79.75891, 37.96834, -531.8532"/>
+          <TurnIn QuestId="68963" NpcId="1031025" XYZ="-79.75891, 37.96834, -531.8532"/>
         </If>
       </If>
       <If Condition="not IsAetherCurrentCompleted(816,8)">
@@ -262,7 +262,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(68980) == 255">
           <GetTo ZoneId="817" XYZ="-303.813, 8.348971, 709.9684"/>
-          <LLTurnIn ItemId="2002519" QuestId="68980" NpcId="1029024" XYZ="-301.5335, 8.681433, 711.2992"/>
+          <TurnIn ItemId="2002519" QuestId="68980" NpcId="1029024" XYZ="-301.5335, 8.681433, 711.2992"/>
         </If>
       </If>
       <!-- The Great Deceiver -->
@@ -282,7 +282,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69192) == 255">
           <GetTo ZoneId="817" XYZ="-521.203, 0.3112338, 229.0744"/>
-          <LLTurnIn QuestId="69192" NpcId="1030821" XYZ="-524.4679, 0.08425587, 227.0084"/>
+          <TurnIn QuestId="69192" NpcId="1030821" XYZ="-524.4679, 0.08425587, 227.0084"/>
         </If>
       </If>
       <!-- Suit Up -->
@@ -313,7 +313,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69003) == 255">
           <GetTo ZoneId="817" XYZ="394.6198, 20.42252, -181.0416"/>
-          <LLTurnIn QuestId="69003" NpcId="1027736" XYZ="396.3835, 20.42252, -179.1257"/>
+          <TurnIn QuestId="69003" NpcId="1027736" XYZ="396.3835, 20.42252, -179.1257"/>
         </If>
       </If>
       <!-- Stand on Ceremony -->
@@ -337,7 +337,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69014) == 255">
           <GetTo ZoneId="817" XYZ="493.7979, -6.555339, -227.7605"/>
-          <LLTurnIn QuestId="69014" NpcId="1027716" XYZ="494.9873, -6.555339, -224.9333"/>
+          <TurnIn QuestId="69014" NpcId="1027716" XYZ="494.9873, -6.555339, -224.9333"/>
         </If>
       </If>
       <If Condition="not IsAetherCurrentCompleted(817,8)">
@@ -375,7 +375,7 @@ Authors:  Sodimm
           <UseObject NpcIds="2010010,2010011,2010012" XYZ="677.1434, -59.56755, -570.633" QuestId="68911" StepId="2"/>
         </If>
         <If Condition="GetQuestStep(68911) == 255">
-          <LLTurnIn ItemId="2002584" QuestId="68911" NpcId="1030391" XYZ="579.9801, -46.38523, -684.9012"/>
+          <TurnIn ItemId="2002584" QuestId="68911" NpcId="1030391" XYZ="579.9801, -46.38523, -684.9012"/>
         </If>
       </If>
       <!-- Scavengers Assemble -->
@@ -402,7 +402,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69039) == 255">
           <GetTo ZoneId="815" XYZ="15.38471, -47.52571, 168.71"/>
-          <LLTurnIn QuestId="69039" NpcId="1030982" XYZ="13.96191, -47.88784, 169.7871"/>
+          <TurnIn QuestId="69039" NpcId="1030982" XYZ="13.96191, -47.88784, 169.7871"/>
         </If>
       </If>
       <!-- Charmless Man -->
@@ -418,7 +418,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69047) == 255">
           <GetTo ZoneId="815" XYZ="-336.9016, 19.2985, 77.47129"/>
-          <LLTurnIn ItemId="2002733" QuestId="69047" NpcId="1030807" XYZ="-336.6903, 19.24816, 75.91357"/>
+          <TurnIn ItemId="2002733" QuestId="69047" NpcId="1030807" XYZ="-336.6903, 19.24816, 75.91357"/>
         </If>
       </If>
       <!-- A Vein Pursuit -->
@@ -437,7 +437,7 @@ Authors:  Sodimm
           <WaitWhile Condition="not GetQuestStep(69061) == 255"/>
         </If>
         <If Condition="GetQuestStep(69061) == 255">
-          <LLTurnIn QuestId="69061" NpcId="1030718" XYZ="-478.2025, 10.54953, 193.1334"/>
+          <TurnIn QuestId="69061" NpcId="1030718" XYZ="-478.2025, 10.54953, 193.1334"/>
         </If>
       </If>
       <If Condition="not IsAetherCurrentCompleted(815,8)">
@@ -488,7 +488,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(68896) == 255">
           <GetTo ZoneId="814" XYZ="-309.364, 19.39425, 407.1985"/>
-          <LLTurnIn QuestId="68896" NpcId="1027452" XYZ="-310.6279, 19.40518, 405.2948"/>
+          <TurnIn QuestId="68896" NpcId="1027452" XYZ="-310.6279, 19.40518, 405.2948"/>
         </If>
       </If>
       <!-- Village of Woe -->
@@ -519,7 +519,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(68907) == 255">
           <GetTo ZoneId="814" XYZ="-283.3589, 35.30619, 205.8826"/>
-          <LLTurnIn QuestId="68907" NpcId="1030766" XYZ="-284.2299, 35.37314, 204.6692"/>
+          <TurnIn QuestId="68907" NpcId="1030766" XYZ="-284.2299, 35.37314, 204.6692"/>
         </If>
       </If>
       <!-- A Disagreeable Dwarf -->
@@ -540,7 +540,7 @@ Authors:  Sodimm
           <LLTalkTo NpcId="1030780" XYZ="-493.2479, 417.1531, -610.9866" QuestId="69092" StepId="3"/>
         </If>
         <If Condition="GetQuestStep(69092) == 255">
-          <LLTurnIn ItemId="2002701" QuestId="69092" NpcId="1030800" XYZ="-396.6888, 417.5182, -657.9232"/>
+          <TurnIn ItemId="2002701" QuestId="69092" NpcId="1030800" XYZ="-396.6888, 417.5182, -657.9232"/>
         </If>
       </If>
       <!-- Fugitive of Fear -->
@@ -570,7 +570,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69073) == 255">
           <GetTo ZoneId="814" XYZ="-130.435, 354.3582, -178.799"/>
-          <LLTurnIn QuestId="69073" NpcId="1027956" XYZ="-128.7709, 354.3582, -179.1868"/>
+          <TurnIn QuestId="69073" NpcId="1027956" XYZ="-128.7709, 354.3582, -179.1868"/>
         </If>
       </If>
       <If Condition="not IsAetherCurrentCompleted(814,8)">
@@ -624,7 +624,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69124) == 255">
           <GetTo ZoneId="818" XYZ="505.6281, 370.8383, -339.8196"/>
-          <LLTurnIn QuestId="69124" NpcId="1031019" XYZ="505.8823, 371.189, -342.7939"/>
+          <TurnIn QuestId="69124" NpcId="1031019" XYZ="505.8823, 371.189, -342.7939"/>
         </If>
       </If>
       <!-- Responsible Creation -->
@@ -650,7 +650,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69128) == 255">
           <GetTo ZoneId="818" XYZ="-389.6642, -260.1766, 288.5068"/>
-          <LLTurnIn QuestId="69128" NpcId="1030474" XYZ="-390.9209, -260.1766, 284.9316"/>
+          <TurnIn QuestId="69128" NpcId="1030474" XYZ="-390.9209, -260.1766, 284.9316"/>
         </If>
       </If>
       <!-- Debate and Discourse -->
@@ -676,7 +676,7 @@ Authors:  Sodimm
           <LLTalkTo NpcId="1027778" XYZ="-713.283, -245.368, 498.4968" QuestId="69129" StepId="4"/>
         </If>
         <If Condition="GetQuestStep(69129) == 255">
-          <LLTurnIn QuestId="69129" NpcId="1027778" XYZ="-713.283, -245.368, 498.4968"/>
+          <TurnIn QuestId="69129" NpcId="1027778" XYZ="-713.283, -245.368, 498.4968"/>
         </If>
       </If>
       <!-- Community Cohesion -->
@@ -701,7 +701,7 @@ Authors:  Sodimm
         </If>
         <If Condition="GetQuestStep(69130) == 255">
           <GetTo ZoneId="818" XYZ="-360.2177, -260.1766, 280.8086"/>
-          <LLTurnIn ItemId="2002614" QuestId="69130" NpcId="1027777" XYZ="-355.2453, -260.1766, 278.6754" InteractDistance="8.0"/>
+          <TurnIn ItemId="2002614" QuestId="69130" NpcId="1027777" XYZ="-355.2453, -260.1766, 278.6754" InteractDistance="8.0"/>
         </If>
       </If>
       <If Condition="not IsAetherCurrentCompleted(818,8)">

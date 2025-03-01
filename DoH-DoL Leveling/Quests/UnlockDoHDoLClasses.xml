@@ -29,7 +29,7 @@
 			<If Condition="HasQuest(66643)">
 				<If Condition="GetQuestStep(66643) == 255">
 					<GetTo ZoneId="129" XYZ="-166.1612, 4.550006, 165.4742"/>
-					<LLTurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
+					<TurnIn QuestId="66643" StepId="255" NpcId="1000857" InteractDistance="1.0" XYZ="-166.1612, 4.550006, 165.4742"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 					<If Condition="ClassName != ClassJobType.Fisher">
@@ -64,7 +64,7 @@
 			<If Condition="HasQuest(65807)">
 				<If Condition="GetQuestStep(65807) == 255">
 					<GetTo ZoneId="128" XYZ="-54.52119, 44.17484, -149.4378"/>
-					<LLTurnIn QuestId="65807" StepId="255" NpcId="1000947" InteractDistance="1.0" XYZ="-54.52119, 44.17484, -149.4378"/>
+					<TurnIn QuestId="65807" StepId="255" NpcId="1000947" InteractDistance="1.0" XYZ="-54.52119, 44.17484, -149.4378"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Culinarian">
@@ -101,7 +101,7 @@
 			<If Condition="HasQuest(65809)">
 				<If Condition="GetQuestStep(65809) == 255">
 					<GetTo ZoneId="128" XYZ="-32.81106, 41.49998, 207.5591"/>
-					<LLTurnIn QuestId="65809" StepId="255" NpcId="1001000" InteractDistance="1.0" XYZ="-32.81106, 41.49998, 207.5591"/>
+					<TurnIn QuestId="65809" StepId="255" NpcId="1001000" InteractDistance="1.0" XYZ="-32.81106, 41.49998, 207.5591"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Armorer">
@@ -138,7 +138,7 @@
 			<If Condition="HasQuest(65827)">
 				<If Condition="GetQuestStep(65827) == 255">
 					<GetTo ZoneId="128" XYZ="-32.22669, 44.6637, 184.621"/>
-					<LLTurnIn QuestId="65827" StepId="255" NpcId="1000997" InteractDistance="1.0" XYZ="-32.22669, 44.6637, 184.621"/>
+					<TurnIn QuestId="65827" StepId="255" NpcId="1000997" InteractDistance="1.0" XYZ="-32.22669, 44.6637, 184.621"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Blacksmith">
@@ -175,7 +175,7 @@
 			<If Condition="HasQuest(65674)">
 				<If Condition="GetQuestStep(65674) == 255">
 					<GetTo ZoneId="132" XYZ="-45.85313, -1.250001, 57.11108"/>
-					<LLTurnIn QuestId="65674" StepId="255" NpcId="1000153" InteractDistance="1.0" XYZ="-45.85313, -1.250001, 57.11108"/>
+					<TurnIn QuestId="65674" StepId="255" NpcId="1000153" InteractDistance="1.0" XYZ="-45.85313, -1.250001, 57.11108"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Carpenter">
@@ -212,7 +212,7 @@
 			<If Condition="HasQuest(65641)">
 				<If Condition="GetQuestStep(65641) == 255">
 					<GetTo ZoneId="133" XYZ="71.08187, 8, -165.4199"/>
-					<LLTurnIn QuestId="65641" StepId="255" NpcId="1000691" InteractDistance="1.0" XYZ="71.08187, 8, -165.4199"/>
+					<TurnIn QuestId="65641" StepId="255" NpcId="1000691" InteractDistance="1.0" XYZ="71.08187, 8, -165.4199"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Leatherworker">
@@ -249,7 +249,7 @@
 			<If Condition="HasQuest(65539)">
 				<If Condition="GetQuestStep(65539) == 255">
 					<GetTo ZoneId="133" XYZ="-233.4313, 6.248232, -168.6552"/>
-					<LLTurnIn QuestId="65539" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-233.4313, 6.248232, -168.6552"/>
+					<TurnIn QuestId="65539" StepId="255" NpcId="1000815" InteractDistance="1.0" XYZ="-233.4313, 6.248232, -168.6552"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Botanist">
@@ -285,7 +285,7 @@
 			<If Condition="HasQuest(66144)">
 				<If Condition="GetQuestStep(66144) == 255">
 					<GetTo ZoneId="131" XYZ="-25.54107, 12.2, 109.7778"/>
-					<LLTurnIn QuestId="66144" StepId="255" NpcId="1004093" InteractDistance="1.0" XYZ="-25.54107, 12.2, 109.7778"/>
+					<TurnIn QuestId="66144" StepId="255" NpcId="1004093" InteractDistance="1.0" XYZ="-25.54107, 12.2, 109.7778"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Goldsmith">
@@ -323,7 +323,7 @@
 			<If Condition="HasQuest(66070)">
 				<If Condition="GetQuestStep(66070) == 255">
 					<GetTo ZoneId="131" XYZ="156.6901, 7.792007, 100.3423"/>
-					<LLTurnIn QuestId="66070" StepId="255" NpcId="1003818" InteractDistance="1.0" XYZ="156.6901, 7.792007, 100.3423"/>
+					<TurnIn QuestId="66070" StepId="255" NpcId="1003818" InteractDistance="1.0" XYZ="156.6901, 7.792007, 100.3423"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Weaver">
@@ -361,7 +361,7 @@
 			<If Condition="HasQuest(66111)">
 				<If Condition="GetQuestStep(66111) == 255">
 					<GetTo ZoneId="131" XYZ="-98.68385, 40.2, 122.3508"/>
-					<LLTurnIn QuestId="66111" StepId="255" NpcId="1002299" InteractDistance="1.0" XYZ="-98.68385, 40.2, 122.3508"/>
+					<TurnIn QuestId="66111" StepId="255" NpcId="1002299" InteractDistance="1.0" XYZ="-98.68385, 40.2, 122.3508"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Alchemist">
@@ -399,7 +399,7 @@
 			<If Condition="HasQuest(66133)">
 				<If Condition="GetQuestStep(66133) == 255">
 					<GetTo ZoneId="131" XYZ="-16.52736, 6.2, 157.8005"/>
-					<LLTurnIn QuestId="66133" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.52736, 6.2, 157.8005"/>
+					<TurnIn QuestId="66133" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.52736, 6.2, 157.8005"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<WaitTimer WaitTime="2"/>
 						<If Condition="ClassName != ClassJobType.Miner">

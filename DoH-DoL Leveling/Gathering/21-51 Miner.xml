@@ -39,7 +39,7 @@ Angles24
 					<If Condition="ClassName != ClassJobType.Miner">
 						<ChangeClass Job="Miner"/>
 					</If>
-					<LLTurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+					<TurnIn ItemId="5599" QuestId="66140" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 20 - Old Wisdom, New Ways - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -81,7 +81,7 @@ Angles24
 					<If Condition="GetQuestStep(66141) == 255">
 						<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/>
 						<!-- Ul'dah - Steps of Thal -->
-						<LLTurnIn ItemId="5491" QuestId="66141" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+						<TurnIn ItemId="5491" QuestId="66141" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 						<LLSmallTalk WaitTime="1500"/>
 						<LogMessage Message="Level 25 - Water From Stone - Completed."/>
 						<WaitTimer WaitTime="2"/>
@@ -139,7 +139,7 @@ Angles24
 					</If>
 				</If>
 				<If Condition="GetQuestStep(66142) == 255">
-					<LLTurnIn QuestId="66142" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+					<TurnIn QuestId="66142" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 30 - Obsidian Race - Completed."/>
 					<WaitTimer WaitTime="2"/>
@@ -185,7 +185,7 @@ Angles24
 					<If Condition="GetQuestStep(66179) == 255">
 						<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/>
 						<!-- Ul'dah - Steps of Thal -->
-						<LLTurnIn ItemId="5138" QuestId="66179" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
+						<TurnIn ItemId="5138" QuestId="66179" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 						<LLSmallTalk WaitTime="1500"/>
 						<LogMessage Message="Level 35 - Amethysts Are Forever - Completed."/>
 						<WaitTimer WaitTime="2"/>
@@ -231,7 +231,7 @@ Angles24
 			<If Condition="HasAtLeast(5168,20)">
 				<If Condition="GetQuestStep(66180) == 255">
 					<GetTo ZoneId="131" XYZ="-16.45324, 6.2, 157.4644"/><!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5168" QuestId="66180" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+					<TurnIn ItemId="5168" QuestId="66180" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 40 - To Die For - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -276,7 +276,7 @@ Angles24
 			<If Condition="HasAtLeast(5115,20)">
 				<If Condition="GetQuestStep(66181) == 255">
 					<GetTo ZoneId="131" XYZ="-5.622513, 6.2, 165.3229"/><!-- Ul'dah - Steps of Thal -->
-					<LLTurnIn ItemId="5115" QuestId="66181" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
+					<TurnIn ItemId="5115" QuestId="66181" StepId="255" NpcId="1003910" InteractDistance="1.0" XYZ="-5.622513, 6.2, 165.3229"/>
 					<LLSmallTalk WaitTime="1500"/>
 					<LogMessage Message="Level 45 - Gulley of Woes - Completed."/>
 				<WaitTimer WaitTime="2"/>
@@ -341,7 +341,7 @@ Angles24
 				</If>
 			</If>
 			<If Condition="GetQuestStep(66182) == 255">
-				<LLTurnIn QuestId="66182" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
+				<TurnIn QuestId="66182" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.45324, 6.2, 157.4644"/>
 				<LLSmallTalk WaitTime="1500"/>
 				<LogMessage Message="Level 50 - Canyon of Regret - Completed."/>
 				<AutoInventoryEquip/>

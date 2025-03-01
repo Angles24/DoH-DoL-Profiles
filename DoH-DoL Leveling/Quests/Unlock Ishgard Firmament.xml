@@ -45,7 +45,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 		</If>
 		<If Condition="HasQuest(69208) and not IsQuestCompleted(69208) and GetQuestStep(69208) == 255"><!-- Hand in Quest to Francel -->
 			<MoveTo ZoneId="886" XYZ="-7.472548, -16, 162.5581"/>
-			<LLTurnIn QuestId="69208" NpcId="1031684" XYZ="-7.472548, -16, 162.5581" UseMesh="False"/>
+			<TurnIn QuestId="69208" NpcId="1031684" XYZ="-7.472548, -16, 162.5581" UseMesh="False"/>
 			<LLSmallTalk WaitTime="1500"/>
 			<WaitTimer WaitTime="3"/>
 			<MoveTo ZoneId="886" XYZ="8.266967, -16, 147.535"/>
@@ -120,7 +120,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 		</If>
 		<If Condition="GetQuestStep(69708) == 255">
 		  <GetTo ZoneId="418" XYZ="-64.07493, 8.113304, 30.37012"/> 
-		  <LLTurnIn QuestId="69708" NpcId="1012155" XYZ="-63.21814, 8.25915, 28.73267"/>
+		  <TurnIn QuestId="69708" NpcId="1012155" XYZ="-63.21814, 8.25915, 28.73267"/>
 		  <LLSmallTalk/>
 		</If>		
 		

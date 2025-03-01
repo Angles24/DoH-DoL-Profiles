@@ -32,7 +32,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68209) and not IsQuestCompleted(68209) and GetQuestStep(68209) == 255">
 		  <GetTo ZoneId="613" XYZ="828.8051, 5.923008, 857.5446"/>
-		  <LLTurnIn QuestId="68209" NpcId="1019154" XYZ="828.8051, 5.923008, 857.5446"/>
+		  <TurnIn QuestId="68209" NpcId="1019154" XYZ="828.8051, 5.923008, 857.5446"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -57,7 +57,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68223) and not IsQuestCompleted(68223) and GetQuestStep(68223) == 255">
 		  <GetTo ZoneId="613" XYZ="-47.80473, 2.769715, -634.8738"/>
-		  <LLTurnIn QuestId="68223" ItemIds="2002223,2002224" NpcId="1022117" XYZ="-47.80473, 2.769715, -634.8738"/>
+		  <TurnIn QuestId="68223" ItemIds="2002223,2002224" NpcId="1022117" XYZ="-47.80473, 2.769715, -634.8738"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -95,7 +95,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68229) and not IsQuestCompleted(68229) and GetQuestStep(68229) == 255">
 		  <GetTo ZoneId="613" XYZ="608.9202, -2.84076, -91.35365"/>
-		  <LLTurnIn QuestId="68229" NpcId="1023358" XYZ="608.9202, -2.84076, -91.35365"/>
+		  <TurnIn QuestId="68229" NpcId="1023358" XYZ="608.9202, -2.84076, -91.35365"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -136,7 +136,7 @@ Profile and fixes by Angles
 		<If Condition="HasQuest(68168) and not IsQuestCompleted(68168) and GetQuestStep(68168) == 255">
 		  <GetTo ZoneId="613" XYZ="325.959, -120.3188, -308.8289"/>
 		  <RunCode Name="SuiNoSato"/>
-		  <LLTurnIn QuestId="68168" NpcId="1023280" XYZ="-63.31102, -198.991, -65.69412"/>
+		  <TurnIn QuestId="68168" NpcId="1023280" XYZ="-63.31102, -198.991, -65.69412"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -199,7 +199,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68260) and not IsQuestCompleted(68260) and GetQuestStep(68260) == 255">
 		  <GetTo ZoneId="614" XYZ="421.8271, -0.3000133, -292.9956"/>
-		  <LLTurnIn QuestId="68260" NpcId="1019314" XYZ="421.8271, -0.3000133, -292.9956"/>
+		  <TurnIn QuestId="68260" NpcId="1019314" XYZ="421.8271, -0.3000133, -292.9956"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -244,7 +244,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68264) and not IsQuestCompleted(68264) and GetQuestStep(68264) == 255">
 		  <GetTo ZoneId="614" XYZ="452.3793, 58.73328, -187.5235"/>
-		  <LLTurnIn QuestId="68264" NpcId="1019263" XYZ="452.3793, 58.73328, -187.5235"/>
+		  <TurnIn QuestId="68264" NpcId="1019263" XYZ="452.3793, 58.73328, -187.5235"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -261,7 +261,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68266) and not IsQuestCompleted(68266) and GetQuestStep(68266) == 255">
 		  <GetTo ZoneId="614" XYZ="758.0844, 98.22374, -230.6801"/>
-		  <LLTurnIn ItemIds="2002239" QuestId="68266" NpcId="1019295" XYZ="758.0844, 98.22374, -230.6801"/>
+		  <TurnIn ItemIds="2002239" QuestId="68266" NpcId="1019295" XYZ="758.0844, 98.22374, -230.6801"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -299,7 +299,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68269) and not IsQuestCompleted(68269) and GetQuestStep(68269) == 255">
 		  <GetTo ZoneId="614" XYZ="434.9989, 67.98668, -123.4497"/>
-		  <LLTurnIn QuestId="68269" NpcId="1019316" XYZ="434.9989, 67.98668, -123.4497"/>
+		  <TurnIn QuestId="68269" NpcId="1019316" XYZ="434.9989, 67.98668, -123.4497"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -339,7 +339,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68296) and not IsQuestCompleted(68296) and GetQuestStep(68296) == 255">
 		  <GetTo ZoneId="622" XYZ="586.4434, -19.50565, 316.261"/>
-		  <LLTurnIn QuestId="68296" NpcId="1022128" XYZ="586.4434, -19.50565, 316.261"/>
+		  <TurnIn QuestId="68296" NpcId="1022128" XYZ="586.4434, -19.50565, 316.261"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -356,7 +356,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68307) and not IsQuestCompleted(68307) and GetQuestStep(68307) == 255">
 		  <GetTo ZoneId="622" XYZ="343.7481, 26.26795, -325.4355"/>
-		  <LLTurnIn QuestId="68307" ItemId="2002173" NpcId="1019405" XYZ="343.7481, 26.26795, -325.4355"/>
+		  <TurnIn QuestId="68307" ItemId="2002173" NpcId="1019405" XYZ="343.7481, 26.26795, -325.4355"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -377,7 +377,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68318) and not IsQuestCompleted(68318) and GetQuestStep(68318) == 255">
 		  <GetTo ZoneId="622" XYZ="78.9364, 114.905, 94.25043"/>
-		  <LLTurnIn QuestId="68318" ItemId="2002380" NpcId="1023348" XYZ="78.9364, 114.905, 94.25043"/>
+		  <TurnIn QuestId="68318" ItemId="2002380" NpcId="1023348" XYZ="78.9364, 114.905, 94.25043"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -402,7 +402,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68327) and not IsQuestCompleted(68327) and GetQuestStep(68327) == 255">
 		  <GetTo ZoneId="622" XYZ="-432.391, 2.668097, 651.086"/>
-		  <LLTurnIn QuestId="68327" NpcId="1023193" XYZ="-432.391, 2.668097, 651.086"/>
+		  <TurnIn QuestId="68327" NpcId="1023193" XYZ="-432.391, 2.668097, 651.086"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -459,7 +459,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68175) and not IsQuestCompleted(68175) and GetQuestStep(68175) == 255">
 		  <GetTo ZoneId="612" XYZ="-651.3646, 130.0019, -510.5701"/>
-		  <LLTurnIn QuestId="68175" NpcId="1019517" XYZ="-651.3646, 130.0019, -510.5701"/>
+		  <TurnIn QuestId="68175" NpcId="1019517" XYZ="-651.3646, 130.0019, -510.5701"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -489,7 +489,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68197) and not IsQuestCompleted(68197) and GetQuestStep(68197) == 255">
 		  <GetTo ZoneId="612" XYZ="-430.6048, 75.29801, -123.5903"/>
-		  <LLTurnIn QuestId="68197" NpcId="1023147" XYZ="-430.6048, 75.29801, -123.5903"/>
+		  <TurnIn QuestId="68197" NpcId="1023147" XYZ="-430.6048, 75.29801, -123.5903"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -506,7 +506,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68357) and not IsQuestCompleted(68357) and GetQuestStep(68357) == 255">
 		  <GetTo ZoneId="612" XYZ="432.8989, 114.5068, 233.9212"/>
-		  <LLTurnIn ItemId="2002325" NpcId="1020807" XYZ="432.8989, 114.5068, 233.9212" QuestId="68357" StepId="255"/>
+		  <TurnIn ItemId="2002325" NpcId="1020807" XYZ="432.8989, 114.5068, 233.9212" QuestId="68357" StepId="255"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -531,7 +531,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68352) and not IsQuestCompleted(68352) and GetQuestStep(68352) == 255">
 		  <GetTo ZoneId="612" XYZ="277.8148, 76.97218, -25.63755"/>
-		  <LLTurnIn QuestId="68352" NpcId="1020821" XYZ="277.8148, 76.97218, -25.63755"/>
+		  <TurnIn QuestId="68352" NpcId="1020821" XYZ="277.8148, 76.97218, -25.63755"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -578,7 +578,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68191) and not IsQuestCompleted(68191) and GetQuestStep(68191) == 255">
 		  <GetTo ZoneId="620" XYZ="16.50958, 118.0358, -776.7533"/>
-		  <LLTurnIn ItemId="2002205" QuestId="68191" NpcId="1021752" XYZ="16.50958, 118.0358, -776.7533"/>
+		  <TurnIn ItemId="2002205" QuestId="68191" NpcId="1021752" XYZ="16.50958, 118.0358, -776.7533"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -607,7 +607,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68378) and not IsQuestCompleted(68378) and GetQuestStep(68378) == 255">
 		  <GetTo ZoneId="620" XYZ="-232.4997, 258.9065, 801.3919"/>
-		  <LLTurnIn QuestId="68378" NpcId="1023258" XYZ="-232.4997, 258.9065, 801.3919"/>
+		  <TurnIn QuestId="68378" NpcId="1023258" XYZ="-232.4997, 258.9065, 801.3919"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -632,7 +632,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68387) and not IsQuestCompleted(68387) and GetQuestStep(68387) == 255">
 		  <GetTo ZoneId="620" XYZ="312.1086, 324.3033, 361.0327"/>
-		  <LLTurnIn QuestId="68387" NpcId="1023167" XYZ="312.1086, 324.3033, 361.0327"/>
+		  <TurnIn QuestId="68387" NpcId="1023167" XYZ="312.1086, 324.3033, 361.0327"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -661,7 +661,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68396) and not IsQuestCompleted(68396) and GetQuestStep(68396) == 255">
 		  <GetTo ZoneId="620" XYZ="283.6925, 322.8716, 750.7115"/>
-		  <LLTurnIn QuestId="68396" NpcId="1020893" XYZ="283.6925, 322.8716, 750.7115"/>
+		  <TurnIn QuestId="68396" NpcId="1020893" XYZ="283.6925, 322.8716, 750.7115"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -699,7 +699,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68413) and not IsQuestCompleted(68413) and GetQuestStep(68413) == 255">
 		  <GetTo ZoneId="621" XYZ="-506.307, 8.7, -40.12613"/>
-		  <LLTurnIn QuestId="68413" NpcId="1022992" XYZ="-506.307, 8.7, -40.12613"/>
+		  <TurnIn QuestId="68413" NpcId="1022992" XYZ="-506.307, 8.7, -40.12613"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -716,7 +716,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68416) and not IsQuestCompleted(68416) and GetQuestStep(68416) == 255">
 		  <GetTo ZoneId="621" XYZ="-524.5329, 8.68931, -19.4433"/>
-		  <LLTurnIn QuestId="68416" NpcId="1022990" XYZ="-524.5329, 8.68931, -19.4433"/>
+		  <TurnIn QuestId="68416" NpcId="1022990" XYZ="-524.5329, 8.68931, -19.4433"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -741,7 +741,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68417) and not IsQuestCompleted(68417) and GetQuestStep(68417) == 255">
 		  <GetTo ZoneId="621" XYZ="-661.8531, 49.9998, -48.9227"/>
-		  <LLTurnIn QuestId="68417" NpcId="1022987" XYZ="-661.8531, 49.9998, -48.9227"/>
+		  <TurnIn QuestId="68417" NpcId="1022987" XYZ="-661.8531, 49.9998, -48.9227"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
@@ -758,7 +758,7 @@ Profile and fixes by Angles
 		</If>
 		<If Condition="HasQuest(68419) and not IsQuestCompleted(68419) and GetQuestStep(68419) == 255">
 		  <GetTo ZoneId="621" XYZ="-539.7079, 7.611982, 52.32739"/>
-		  <LLTurnIn QuestId="68419" ItemId="2002316" NpcId="1022991" XYZ="-539.7079, 7.611982, 52.32739"/>
+		  <TurnIn QuestId="68419" ItemId="2002316" NpcId="1022991" XYZ="-539.7079, 7.611982, 52.32739"/>
 		  <LLSmallTalk/>
 		  <AutoInventoryEquip/>
 		</If>
