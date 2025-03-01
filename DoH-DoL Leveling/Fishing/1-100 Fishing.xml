@@ -29,7 +29,7 @@ Angles24
 		<WaitWhile Condition="not GameObjectManager.GetObjectByNPCId(1031694)"/>
 	</If>
 			
-	<While Condition="not IsQuestCompleted(65688)">
+	<If Condition="not IsQuestCompleted(65688)">
 		<If Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian) and (not Core.Player.ClassLevel &gt; 29)">
 			<WaitTimer WaitTime="2"/>
 			<RunCode Name="SwitchDoHJob"/>
@@ -37,7 +37,7 @@ Angles24
 		</If>
 	
 		<!-- Gone to Pieces -->
-		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
+		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688) and Core.Me.ClassLevel &gt; 29">
 			<LogMessage Message="Going to Learn Desynth!"/>
 			<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789"/>
 			<LLPickupQuest NpcId="1001679" QuestId="65688"/>
@@ -50,7 +50,7 @@ Angles24
 			<LogMessage Message="Learnt Desynth!"/>
 		</While>
 		<!-- End - Gone to Pieces -->
-	</While>
+	</If>
 	
 	<!--Unlocking Fisher-->
 	<While Condition="not IsQuestCompleted(66670)">
