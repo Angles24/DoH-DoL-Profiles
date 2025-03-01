@@ -1046,15 +1046,15 @@ Author: Angles24, Manta
         <UseObject NpcId="2012031" XYZ="13.118, 275.566, -756.396" Condition="not IsAetherCurrentCompleted(960, 7)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(960, 8)">
-        <GetTo ZoneId="960" XYZ="751.878, 439.977, 357.899" />
-        <UseObject NpcId="2012037" XYZ="751.878, 439.977, 357.899" Condition="not IsAetherCurrentCompleted(960, 8)" />
+        <GetTo ZoneId="960" XYZ="-333.547, 270.83228, -361.50153" />
+        <UseObject NpcId="2012030" XYZ="-333.547, 270.83228, -361.50153" Condition="not IsAetherCurrentCompleted(960, 8)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(960, 5)">
         <GetTo ZoneId="960" XYZ="539.271, 438.001, 239.404" />
         <UseObject NpcId="2012033" XYZ="539.271, 438.001, 239.404" Condition="not IsAetherCurrentCompleted(960, 5)" />
       </If>
       <If Condition="not IsAetherCurrentCompleted(960, 6)">
-        <GetTo ZoneId="960" XYZ="661.785, 439.977, 411.757" />
+        <GetTo ZoneId="960" XYZ="661.2582, 440.4633, 408.09735" />
         <UseObject NpcId="2012032" XYZ="661.785, 439.977, 411.757" Condition="not IsAetherCurrentCompleted(960, 6)" />
       </If>
     </If>
