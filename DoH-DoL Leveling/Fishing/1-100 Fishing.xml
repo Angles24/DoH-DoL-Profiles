@@ -30,26 +30,22 @@ Angles24
 	</If>
 			
 	<If Condition="not IsQuestCompleted(65688)">
-		<If Condition="ClassName != (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian) and (not Core.Player.ClassLevel &gt; 29)">
-			<WaitTimer WaitTime="2"/>
-			<RunCode Name="SwitchDoHJob"/>
-			<WaitTimer WaitTime="2"/>
-		</If>
-	
-		<!-- Gone to Pieces -->
-		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688) and Core.Me.ClassLevel &gt; 29">
-			<LogMessage Message="Going to Learn Desynth!"/>
-			<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789"/>
-			<LLPickupQuest NpcId="1001679" QuestId="65688"/>
-			<LLSmallTalk WaitTime="1500"/>
-		</If>
-		<While Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
-			<LisbethTravel Zone="141" Position="96.27642, 27.04044, -352.4858"/>
-			<TurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
-			<LLSmallTalk WaitTime="1500"/>
-			<LogMessage Message="Learnt Desynth!"/>
-		</While>
-		<!-- End - Gone to Pieces -->
+		<If Condition="(ClassName == ClassJobType.Carpenter or ClassJobType.Blacksmith or ClassJobType.Armorer or ClassJobType.Goldsmith or ClassJobType.Leatherworker or ClassJobType.Weaver or ClassJobType.Alchemist or ClassJobType.Culinarian)">
+			<!-- Gone to Pieces -->
+			<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688) and Core.Me.ClassLevel &gt; 29">
+				<LogMessage Message="Going to Learn Desynth!"/>
+				<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789"/>
+				<LLPickupQuest NpcId="1001679" QuestId="65688"/>
+				<LLSmallTalk WaitTime="1500"/>
+			</If>
+			<While Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
+				<LisbethTravel Zone="141" Position="96.27642, 27.04044, -352.4858"/>
+				<LLTurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
+				<LLSmallTalk WaitTime="1500"/>
+				<LogMessage Message="Learnt Desynth!"/>
+			</While>
+			<!-- End - Gone to Pieces -->
+		</If>	
 	</If>
 	
 	<!--Unlocking Fisher-->
@@ -1024,8 +1020,22 @@ Angles24
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(67625) == 255">
-				<While Condition="not HasAtLeast(12829,1)">
-					<Lisbeth Json="[{'Group':1,'Item':12829,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
+				<!--<While Condition="not HasAtLeast(12829,1)">
+					<Lisbeth Json="[{'Group':1,'Item':12829,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>-->
+				<While Condition="not HasAtLeast(12829,1)"> 
+					<If Condition="not HasAtLeast(12711,10)">
+						<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
+					</If>
+					<If Condition="ClassName != ClassJobType.Fisher">
+						<ChangeClass Job="Fisher" />
+					</If> 
+					<LisbethTravel ZoneId="401" XYZ="404.9829, -186.4827, 830.9991" /> 
+					<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Snagging="true" Bait="Brute Leech" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HasAtLeast(12829,1) and HasAtLeast(12711,10)"> <!-- Catkiller -->
+						<FishSpots>
+							<FishSpot XYZ="404.9829, -186.4827, 830.9991" Heading="6.278952" />
+							<FishSpot XYZ="420.9894, -186.4232, 818.8319" Heading="1.183289" />
+						</FishSpots>
+					</ExFish>
 				</While>
 				<If Condition="HasAtLeast(12829,1)">
 					<LisbethTravel Zone="401" Position="400.7477, -123.263, 674.9523"/>
