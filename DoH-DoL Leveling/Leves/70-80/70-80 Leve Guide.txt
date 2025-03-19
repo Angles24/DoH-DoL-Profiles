@@ -1,7 +1,0 @@
-70-80 Leves are based off the spreadsheet linked in this document.
-
-You are required to EXBUDDY plugin installed and the items on you before running this (AKA craft items on a max toon already or buy on MB)
-
-There is a lisbeth json file which you can import into lisbeth which has the correct amount extracted from the spreadsheet.
-
-https://docs.google.com/spreadsheets/d/1N9xuu58vLTMyfMgucL7dWGZYcIPlET6nBw3msVg9wdg
