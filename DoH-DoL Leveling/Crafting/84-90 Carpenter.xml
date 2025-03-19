@@ -8,7 +8,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
-		<TurnInCollectables/>
+		<LLLLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 		</While>
@@ -28,7 +28,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
-		<TurnInCollectables/>
+		<LLLLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 		</While>
@@ -48,7 +48,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
-		<TurnInCollectables/>
+		<LLLLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 		</While>

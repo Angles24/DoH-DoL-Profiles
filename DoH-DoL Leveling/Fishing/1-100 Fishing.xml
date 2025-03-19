@@ -1020,22 +1020,8 @@ Angles24
 				<LLSmallTalk WaitTime="1500"/>
 			</If>
 			<If Condition="GetQuestStep(67625) == 255">
-				<!--<While Condition="not HasAtLeast(12829,1)">
-					<Lisbeth Json="[{'Group':1,'Item':12829,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>-->
-				<While Condition="not HasAtLeast(12829,1)"> 
-					<If Condition="not HasAtLeast(12711,10)">
-						<Lisbeth Json="[{'Id':1,'Group':1,'Item':12711,'Amount':99,'Enabled':true,'Type':'Exchange'}]"/>
-					</If>
-					<If Condition="ClassName != ClassJobType.Fisher">
-						<ChangeClass Job="Fisher" />
-					</If> 
-					<LisbethTravel ZoneId="401" XYZ="404.9829, -186.4827, 830.9991" /> 
-					<ExFish Patience="Patience" MinimumGPPatience="600" Stealth="True" Mooch="1" Snagging="true" Bait="Brute Leech" MinFish="24" MaxFish="24" ShuffleFishSpots="True" Condition="not HasAtLeast(12829,1) and HasAtLeast(12711,10)"> <!-- Catkiller -->
-						<FishSpots>
-							<FishSpot XYZ="404.9829, -186.4827, 830.9991" Heading="6.278952" />
-							<FishSpot XYZ="420.9894, -186.4232, 818.8319" Heading="1.183289" />
-						</FishSpots>
-					</ExFish>
+				<While Condition="not HasAtLeast(12829,1)">
+					<Lisbeth Json="[{'Group':1,'Item':12829,'Amount':1,'Enabled':true,'Type':'Fisher','AmountMode':'Restock'}]"/>
 				</While>
 				<If Condition="HasAtLeast(12829,1)">
 					<LisbethTravel Zone="401" Position="400.7477, -123.263, 674.9523"/>
@@ -1497,7 +1483,7 @@ Angles24
 		</If>
 		<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Amount':10,'Enabled':true,'Type':'FishingExpedition','FishingExpeditionSpotId':296,'FishingExpeditionBaitId':29717}]" />
 	</While>
-	<!--End - Level 90 Grind-->
+	<!--End - Level 100 Grind-->
 	
 	<LLoadProfile Path="../Start.xml"/>
 
