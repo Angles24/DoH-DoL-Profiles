@@ -19,10 +19,6 @@ These profiles require the installation of LLamaLibrary, Lisbeth, and ExBuddy. B
   - [Lisbeth (Chinese)](https://lisbeth.io/downloads/CN/Lisbeth.zip)
 - After downloading right click zip folder and Unlock it then extract it to **Botbases** and rename the folder to **Lisbeth**.
 
-### 3. Download & Install ExBuddy
-- Download ExBuddy from [here](https://github.com/Entrax643/ExBuddy).
-- Extract it to **Plugins** and rename the folder to **ExBuddy**.
-
 ---
 
 **Important:** You will need to purchase a Lisbeth key if you haven’t already.
